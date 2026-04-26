@@ -1,0 +1,166 @@
+---
+import Layout from '../layouts/Layout.astro';
+import PRBadge from '../components/PRBadge.astro';
+import BannerAB from '../components/BannerAB.astro';
+
+const title = '30-50代男性向け 転職エージェント業種別整理 (A8.net 提携案件)';
+const description = '30代・40代・50代の男性に関連性のある転職エージェントを業種別 (IT / コンサル / 士業) に整理。A8.net 提携可能な案件のみを取り上げ、各社公式サイトの公開情報を引用しています。市場全体の比較ではありません。';
+---
+
+<Layout title={title} description={description}>
+  <main class="max-w-3xl mx-auto px-4 py-8">
+    <PRBadge />
+
+    <h1 class="text-2xl md:text-3xl font-bold mb-4 leading-tight">
+      30-50代男性向け 転職エージェント業種別整理
+    </h1>
+
+    <div class="bg-yellow-50 border-2 border-yellow-300 rounded p-3 mb-4 text-sm">
+      <strong>📢 PR表示</strong>: 本ページはアフィリエイト広告を含みます。
+      本サイト経由でリンク先転職エージェントへお申込みが成立した場合、運営者は提携先 (A8.net 等) より報酬を受け取ります。
+      順位・推奨は公開情報・公式の専門性表記に基づくものであり、報酬額により内容を変えることはしていません。
+    </div>
+
+    <p class="text-sm text-gray-600 mb-6">
+      最終確認日: 2026-04-25 / 公開情報の整理であり、求人紹介・採用判断は各エージェントが行います。<br />
+      運営者: <a href="/operator-info/" class="underline">NY-squared (個人事業)</a> /
+      <a href="/editorial-policy/" class="underline">編集ポリシー</a> /
+      <a href="/privacy-policy/" class="underline">プライバシーポリシー</a>
+    </p>
+
+    <section class="mb-8 bg-blue-50 border-l-4 border-blue-400 p-4 text-sm">
+      <p class="font-semibold mb-2">本ガイドの方針</p>
+      <ul class="list-disc pl-5 space-y-1">
+        <li>30-50代男性の転職ニーズ（年収維持・キャリアアップ・専門性活用）に焦点</li>
+        <li>各社公式サイトで公開されている情報のみを記載</li>
+        <li>「絶対」「必ず」「保証」等の断定表現は使用しません</li>
+        <li>個人の状況（年収・職歴・業界）により結果は異なります</li>
+      </ul>
+      <p class="text-xs text-gray-600 mt-2">
+        ※「30-50代男性の転職ニーズ」は厚生労働省「職業紹介事業報告書」「労働経済動向調査」等の公開統計および
+        各転職エージェント公式サイトの対象者記載を参考に整理した一般傾向です。個別事情とは異なる場合があります。
+      </p>
+    </section>
+
+    <BannerAB pageSlug="hub" position="hero" />
+
+    <h2 class="text-xl font-bold mt-8 mb-3">本記事で扱う転職エージェント (A8.net 提携案件のみ)</h2>
+
+    <p class="text-sm text-gray-600 mb-3">
+      ※本記事は A8.net で運営者が提携可能な案件 (TechGo / MyVision / ツインプロ / ユニゾンキャリア) を業種別に整理したもので、市場全体の網羅的比較ではありません。掲載順は業種別並列で、報酬額・確定率は順位に影響していません。
+    </p>
+
+    <div class="overflow-x-auto mb-6">
+      <table class="min-w-full text-sm border-collapse">
+        <thead class="bg-gray-100">
+          <tr>
+            <th class="border px-3 py-2 text-left">エージェント</th>
+            <th class="border px-3 py-2 text-left">特徴</th>
+            <th class="border px-3 py-2 text-left">主な対象</th>
+            <th class="border px-3 py-2 text-left">詳細</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="border px-3 py-2 font-semibold">TechGo</td>
+            <td class="border px-3 py-2">ITエンジニア向けハイクラス特化</td>
+            <td class="border px-3 py-2">経験者・管理職層</td>
+            <td class="border px-3 py-2"><a href="/techgo/" class="text-blue-700 underline">解説ページ</a></td>
+          </tr>
+          <tr>
+            <td class="border px-3 py-2 font-semibold">MyVision</td>
+            <td class="border px-3 py-2">コンサル業界専門</td>
+            <td class="border px-3 py-2">コンサル志望・第二新卒以上</td>
+            <td class="border px-3 py-2"><a href="/myvision/" class="text-blue-700 underline">解説ページ</a></td>
+          </tr>
+          <tr>
+            <td class="border px-3 py-2 font-semibold">ツインプロ</td>
+            <td class="border px-3 py-2">会計士・税理士特化</td>
+            <td class="border px-3 py-2">士業有資格者</td>
+            <td class="border px-3 py-2"><a href="/twin-pro/" class="text-blue-700 underline">解説ページ</a></td>
+          </tr>
+          <tr>
+            <td class="border px-3 py-2 font-semibold">ユニゾンキャリア</td>
+            <td class="border px-3 py-2">IT・Web業界 / 未経験〜経験者</td>
+            <td class="border px-3 py-2">公式サイトで対象年齢を要確認 (本サイト主ターゲット 30-50代男性とは対象が異なる場合あり)</td>
+            <td class="border px-3 py-2"><a href="/unizon-it/" class="text-blue-700 underline">解説ページ</a></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="text-xs text-gray-600 mb-8 bg-gray-50 p-3 rounded">
+      <p class="mb-1"><strong>選定基準</strong>: A8.net 提携可能な転職エージェントのうち、30-50代男性ターゲットに合致する案件を業種別 (IT / コンサル / 士業) で網羅的に整理。</p>
+      <p class="mb-1"><strong>掲載順</strong>: アフィリエイト報酬額・確定率は順位に影響していません。業種別の典型例として並列に紹介しています。</p>
+      <p class="mb-1"><strong>更新方法</strong>: 各エージェントの公開情報を四半期に一度確認し、変更があれば本ページ・各 Spoke ページの「最終確認日」を更新します。</p>
+      <p><strong>出典</strong>: 各社公式サイト (TechGo / MyVision / ツインプロ / ユニゾンキャリア)。最新情報・詳細条件は必ず公式サイトでご確認ください。</p>
+    </div>
+
+    <BannerAB pageSlug="hub" position="middle" />
+
+    <h2 class="text-xl font-bold mt-8 mb-3">業種別の整理（公開情報のみ）</h2>
+
+    <h3 class="text-lg font-bold mt-6 mb-2">IT・エンジニア系</h3>
+    <p class="mb-3">
+      <a href="/techgo/" class="text-blue-700 underline">TechGo</a>は公式サイトで「ITエンジニアハイクラス層向け」と案内されています。
+      <a href="/unizon-it/" class="text-blue-700 underline">ユニゾンキャリア</a>は公式サイトで「IT・Web業界の転職/就活」と案内されています。
+      対象者の詳細は各公式サイトでご確認ください。
+    </p>
+
+    <h3 class="text-lg font-bold mt-6 mb-2">コンサルティング業界</h3>
+    <p class="mb-3">
+      <a href="/myvision/" class="text-blue-700 underline">MyVision</a>は公式サイトで「コンサルティング業界専門」と案内されています。
+      対象者・サポート内容は公式サイトでご確認ください。
+    </p>
+
+    <h3 class="text-lg font-bold mt-6 mb-2">会計士・税理士などの士業</h3>
+    <p class="mb-3">
+      <a href="/twin-pro/" class="text-blue-700 underline">ツインプロ</a>は公式サイトで「会計士・税理士特化」と案内されています。
+      対象資格・サポート内容は公式サイトでご確認ください。
+    </p>
+
+    <h2 class="text-xl font-bold mt-8 mb-3">よくある質問</h2>
+
+    <h3 class="text-lg font-bold mt-6 mb-2">Q. 転職エージェントの利用料金は？</h3>
+    <p class="mb-3">
+      多くの転職エージェントは求職者側の利用料は無料です（料金は採用側企業が負担）。
+      ただし、有料職業紹介事業の枠組みは事業者により異なるため、初回面談時に確認することが推奨されます。
+    </p>
+
+    <h3 class="text-lg font-bold mt-6 mb-2">Q. 在職中でも利用できますか？</h3>
+    <p class="mb-3">
+      多くのエージェントは在職中の利用に対応しています。夜間・休日のオンライン面談を案内する事業者もあります。
+      在職中であることを伝えれば、現職への配慮（連絡時間帯の調整等）に配慮してもらえるケースが一般的です。
+    </p>
+
+    <h3 class="text-lg font-bold mt-6 mb-2">Q. 紹介された求人は必ず応募する必要がありますか？</h3>
+    <p class="mb-3">
+      紹介求人への応募は強制ではありません。希望と異なる場合は理由を伝えて見送ることができ、
+      その情報をもとに次回以降の紹介精度を高めてもらう運用が一般的です。
+    </p>
+
+    <h2 class="text-xl font-bold mt-8 mb-3">本サイトの情報源と編集方針</h2>
+    <p class="mb-3">
+      本サイトの記載内容は、各転職エージェント公式サイトの公開情報、一般的な転職市場の慣行、
+      公開されている統計資料を参考に整理したものです。最新情報・正確な条件は必ず各社公式サイトでご確認ください。
+    </p>
+    <p class="mb-3">
+      本サイトはアフィリエイト広告を含みます（PR記事）。運営者は本サイト経由のお申込みにより各エージェントから報酬を受け取りますが、
+      個別エージェントの推奨度は公開情報・公式の専門性表記に基づくものであり、報酬額により順位を変えることはしていません。
+    </p>
+
+    <BannerAB pageSlug="hub" position="footer" />
+
+    <h2 class="text-xl font-bold mt-8 mb-3">関連ページ</h2>
+    <ul class="list-disc pl-5 space-y-1">
+      <li><a href="/techgo/" class="text-blue-700 underline">TechGo｜ITエンジニア向け転職エージェント解説</a></li>
+      <li><a href="/myvision/" class="text-blue-700 underline">MyVision｜コンサル業界専門転職エージェント解説</a></li>
+      <li><a href="/twin-pro/" class="text-blue-700 underline">ツインプロ｜会計士・税理士特化転職エージェント解説</a></li>
+      <li><a href="/unizon-it/" class="text-blue-700 underline">ユニゾンキャリア｜IT・Web業界 転職/就活解説</a></li>
+    </ul>
+
+    <p class="text-xs text-gray-500 mt-8">
+      ※本ページの内容は2026-04-25時点の公開情報をもとにしています。各エージェントの最新サービス内容・対象範囲は公式サイトでご確認ください。
+    </p>
+  </main>
+</Layout>

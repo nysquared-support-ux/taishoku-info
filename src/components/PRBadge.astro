@@ -1,0 +1,24 @@
+---
+// CTA直近のPR表示・打消し表示
+// ★273/景表法・ステマ規制対応
+interface Props {
+  href?: string;
+  label?: string;
+}
+const { href = '#', label = '転職エージェント公式サイトで無料相談する（PR）' } = Astro.props;
+---
+
+<div class="my-6 p-4 border-2 border-blue-200 rounded-lg bg-blue-50">
+  <a
+    href={href}
+    target="_blank"
+    rel="noopener nofollow sponsored"
+    data-cta={label}
+    class="block text-center bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded transition"
+  >
+    {label}
+  </a>
+  <p class="text-xs text-gray-700 mt-2 text-center">
+    PR / 公式サイトへ遷移 / 利用料は転職エージェントにより異なります / 在職中相談可 / 退会自由（公式利用規約参照）
+  </p>
+</div>

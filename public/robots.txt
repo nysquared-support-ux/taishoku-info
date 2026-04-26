@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://tenshoku-compare-info.pages.dev/sitemap.xml
+Sitemap: https://taishoku-info.pages.dev/sitemap.xml

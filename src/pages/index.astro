@@ -3,8 +3,8 @@ import Layout from '../layouts/Layout.astro';
 import PRBadge from '../components/PRBadge.astro';
 import BannerAB from '../components/BannerAB.astro';
 
-const title = '30-50代男性向け 転職エージェント業種別整理 (A8.net 提携案件)';
-const description = '30代・40代・50代の男性に関連性のある転職エージェントを業種別 (IT / コンサル / 士業) に整理。A8.net 提携可能な案件のみを取り上げ、各社公式サイトの公開情報を引用しています。市場全体の比較ではありません。';
+const title = '退職代行サービスの選び方ガイド｜運営主体タイプ別の比較情報と判断軸（2026年4月編集部調べ）';
+const description = '退職代行サービスを「弁護士／労働組合／民間」の運営主体タイプ別に整理した比較情報ガイドです。料金目安・対応範囲の違いと、契約前に確認すべき判断軸をまとめました（PR・アフィリエイト広告を含みます）。';
 ---
 
 <Layout title={title} description={description}>
@@ -12,17 +12,17 @@ const description = '30代・40代・50代の男性に関連性のある転職�
     <PRBadge />
 
     <h1 class="text-2xl md:text-3xl font-bold mb-4 leading-tight">
-      30-50代男性向け 転職エージェント業種別整理
+      退職代行サービスの選び方ガイド｜運営主体タイプ別の比較情報と判断軸
     </h1>
 
     <div class="bg-yellow-50 border-2 border-yellow-300 rounded p-3 mb-4 text-sm">
-      <strong>📢 PR表示</strong>: 本ページはアフィリエイト広告を含みます。
-      本サイト経由でリンク先転職エージェントへお申込みが成立した場合、運営者は提携先 (A8.net 等) より報酬を受け取ります。
-      順位・推奨は公開情報・公式の専門性表記に基づくものであり、報酬額により内容を変えることはしていません。
+      <strong>📢 PR表示</strong>: 本ページはアフィリエイト広告（PR）を含みます。
+      本記事内のリンクからサービス契約に至った場合、運営者（NY-squared）に成果報酬が支払われる場合があります。
+      各サービスの料金・保証・対応範囲は、必ず<strong>遷移先の公式サイトで最新情報をご確認</strong>ください。
     </div>
 
     <p class="text-sm text-gray-600 mb-6">
-      最終確認日: 2026-04-25 / 公開情報の整理であり、求人紹介・採用判断は各エージェントが行います。<br />
+      最終確認日: 2026-04-26 / 公開情報の整理であり、特定サービスを推奨・順位付けするものではありません。<br />
       運営者: <a href="/operator-info/" class="underline">NY-squared (個人事業)</a> /
       <a href="/editorial-policy/" class="underline">編集ポリシー</a> /
       <a href="/privacy-policy/" class="underline">プライバシーポリシー</a>
@@ -31,136 +31,129 @@ const description = '30代・40代・50代の男性に関連性のある転職�
     <section class="mb-8 bg-blue-50 border-l-4 border-blue-400 p-4 text-sm">
       <p class="font-semibold mb-2">本ガイドの方針</p>
       <ul class="list-disc pl-5 space-y-1">
-        <li>30-50代男性の転職ニーズ（年収維持・キャリアアップ・専門性活用）に焦点</li>
-        <li>各社公式サイトで公開されている情報のみを記載</li>
+        <li>退職代行サービスの仕組み・運営主体タイプ別の業務範囲を編集部が整理</li>
+        <li>各社公式サイトで公開されている情報・一般論のみを記載</li>
         <li>「絶対」「必ず」「保証」等の断定表現は使用しません</li>
-        <li>個人の状況（年収・職歴・業界）により結果は異なります</li>
+        <li>個別事情（退職理由・契約内容・会社対応）により結果は異なります</li>
+        <li>本記事は法律相談・労務相談の代替ではありません</li>
       </ul>
-      <p class="text-xs text-gray-600 mt-2">
-        ※「30-50代男性の転職ニーズ」は厚生労働省「職業紹介事業報告書」「労働経済動向調査」等の公開統計および
-        各転職エージェント公式サイトの対象者記載を参考に整理した一般傾向です。個別事情とは異なる場合があります。
-      </p>
+    </section>
+
+    <section class="mb-8 bg-orange-50 border-l-4 border-orange-400 p-4 text-sm">
+      <p class="font-semibold mb-2">⚠️ 心身の不調を伴う場合</p>
+      <p>退職代行の前に、まず<strong>医療機関の受診</strong>を優先してください。労務トラブル・ハラスメントへの対応は、<strong>労働基準監督署・労働局・弁護士・社会保険労務士</strong>等の公的・専門窓口への直接相談を推奨します。</p>
     </section>
 
     <BannerAB pageSlug="hub" position="hero" />
 
-    <h2 class="text-xl font-bold mt-8 mb-3">本記事で扱う転職エージェント (A8.net 提携案件のみ)</h2>
+    <h2 class="text-xl font-bold mt-8 mb-3">退職代行の運営主体は3タイプ（基礎知識）</h2>
 
     <p class="text-sm text-gray-600 mb-3">
-      ※本記事は A8.net で運営者が提携可能な案件 (TechGo / MyVision / ツインプロ / ユニゾンキャリア) を業種別に整理したもので、市場全体の網羅的比較ではありません。掲載順は業種別並列で、報酬額・確定率は順位に影響していません。
+      退職代行サービスは「誰が運営しているか」で、できる業務範囲が法令上変わります。以下は一般論であり、個別サービスの提供範囲は各公式サイトをご確認ください。
     </p>
 
     <div class="overflow-x-auto mb-6">
       <table class="min-w-full text-sm border-collapse">
         <thead class="bg-gray-100">
           <tr>
-            <th class="border px-3 py-2 text-left">エージェント</th>
-            <th class="border px-3 py-2 text-left">特徴</th>
-            <th class="border px-3 py-2 text-left">主な対象</th>
-            <th class="border px-3 py-2 text-left">詳細</th>
+            <th class="border px-3 py-2 text-left">運営主体</th>
+            <th class="border px-3 py-2 text-left">料金目安</th>
+            <th class="border px-3 py-2 text-left">主な対応範囲（一般論）</th>
+            <th class="border px-3 py-2 text-left">検討候補</th>
           </tr>
         </thead>
         <tbody>
           <tr>
-            <td class="border px-3 py-2 font-semibold">TechGo</td>
-            <td class="border px-3 py-2">ITエンジニア向けハイクラス特化</td>
-            <td class="border px-3 py-2">経験者・管理職層</td>
-            <td class="border px-3 py-2"><a href="/techgo/" class="text-blue-700 underline">解説ページ</a></td>
+            <td class="border px-3 py-2 font-semibold">民間企業タイプ</td>
+            <td class="border px-3 py-2">¥20,000〜¥30,000程度</td>
+            <td class="border px-3 py-2">退職意思の伝達中心。会社との交渉行為は非弁行為に該当する可能性があるため、一般に対応できないとされています</td>
+            <td class="border px-3 py-2">シンプルな退職意思伝達のみで足りる場合</td>
           </tr>
           <tr>
-            <td class="border px-3 py-2 font-semibold">MyVision</td>
-            <td class="border px-3 py-2">コンサル業界専門</td>
-            <td class="border px-3 py-2">コンサル志望・第二新卒以上</td>
-            <td class="border px-3 py-2"><a href="/myvision/" class="text-blue-700 underline">解説ページ</a></td>
+            <td class="border px-3 py-2 font-semibold">労働組合タイプ</td>
+            <td class="border px-3 py-2">¥25,000〜¥30,000程度</td>
+            <td class="border px-3 py-2">団体交渉権に基づき有給消化・給与等の交渉に対応する場合あり（労働組合法）</td>
+            <td class="border px-3 py-2">有給消化・未払い給与の交渉も併せて希望する場合</td>
           </tr>
           <tr>
-            <td class="border px-3 py-2 font-semibold">ツインプロ</td>
-            <td class="border px-3 py-2">会計士・税理士特化</td>
-            <td class="border px-3 py-2">士業有資格者</td>
-            <td class="border px-3 py-2"><a href="/twin-pro/" class="text-blue-700 underline">解説ページ</a></td>
-          </tr>
-          <tr>
-            <td class="border px-3 py-2 font-semibold">ユニゾンキャリア</td>
-            <td class="border px-3 py-2">IT・Web業界 / 未経験〜経験者</td>
-            <td class="border px-3 py-2">公式サイトで対象年齢を要確認 (本サイト主ターゲット 30-50代男性とは対象が異なる場合あり)</td>
-            <td class="border px-3 py-2"><a href="/unizon-it/" class="text-blue-700 underline">解説ページ</a></td>
+            <td class="border px-3 py-2 font-semibold">弁護士タイプ</td>
+            <td class="border px-3 py-2">¥50,000〜¥100,000+程度</td>
+            <td class="border px-3 py-2">弁護士法に基づき訴訟・損害賠償等の法的代理に対応する場合あり</td>
+            <td class="border px-3 py-2">パワハラ訴訟・損害賠償リスクが具体的に懸念される場合</td>
           </tr>
         </tbody>
       </table>
     </div>
 
     <div class="text-xs text-gray-600 mb-8 bg-gray-50 p-3 rounded">
-      <p class="mb-1"><strong>選定基準</strong>: A8.net 提携可能な転職エージェントのうち、30-50代男性ターゲットに合致する案件を業種別 (IT / コンサル / 士業) で網羅的に整理。</p>
-      <p class="mb-1"><strong>掲載順</strong>: アフィリエイト報酬額・確定率は順位に影響していません。業種別の典型例として並列に紹介しています。</p>
-      <p class="mb-1"><strong>更新方法</strong>: 各エージェントの公開情報を四半期に一度確認し、変更があれば本ページ・各 Spoke ページの「最終確認日」を更新します。</p>
-      <p><strong>出典</strong>: 各社公式サイト (TechGo / MyVision / ツインプロ / ユニゾンキャリア)。最新情報・詳細条件は必ず公式サイトでご確認ください。</p>
+      <p class="mb-1"><strong>選定基準（編集部）</strong>: 1. 運営主体（法人格・労組登記・弁護士登録）が公式サイトで明示 / 2. 料金体系と返金条件の有無 / 3. 連絡手段（LINE・電話等）と対応時間 / 4. 一定期間の運営実績</p>
+      <p class="mb-1"><strong>調査時点</strong>: 2026年4月（編集部調べ・各公式サイト公開情報を参照）</p>
+      <p><strong>本表は参考目安</strong>です。料金・保証・対応範囲は各社の改定により変動します。<strong>契約前に必ず各公式サイトで最新情報を直接ご確認ください。</strong></p>
     </div>
 
     <BannerAB pageSlug="hub" position="middle" />
 
-    <h2 class="text-xl font-bold mt-8 mb-3">業種別の整理（公開情報のみ）</h2>
+    <h2 class="text-xl font-bold mt-8 mb-3">本サイトの記事一覧（Spoke）</h2>
 
-    <h3 class="text-lg font-bold mt-6 mb-2">IT・エンジニア系</h3>
-    <p class="mb-3">
-      <a href="/techgo/" class="text-blue-700 underline">TechGo</a>は公式サイトで「ITエンジニアハイクラス層向け」と案内されています。
-      <a href="/unizon-it/" class="text-blue-700 underline">ユニゾンキャリア</a>は公式サイトで「IT・Web業界の転職/就活」と案内されています。
-      対象者の詳細は各公式サイトでご確認ください。
+    <ul class="list-disc pl-5 space-y-2 mb-6">
+      <li><a href="/lp-a/" class="text-blue-700 underline font-semibold">退職代行の仕組み・費用・選び方ガイド（シンプル訴求版）</a> — 「辞めたい」と感じている方への基本情報</li>
+      <li><a href="/unemployment-insurance/" class="text-blue-700 underline font-semibold">退職代行利用後の失業保険ガイド</a> — 自己都合・会社都合・特定理由別の受給期間と給付制限（2025年4月改正反映）</li>
+      <li><a href="/faq/" class="text-blue-700 underline font-semibold">退職代行 よくある質問FAQ 15問</a> — 違法性・即日退職・家族にバレる可能性等の Q&A</li>
+      <li><a href="/damage-risk/" class="text-blue-700 underline font-semibold">退職代行の損害賠償リスクと一般的な対策</a> — 一般論として整理</li>
+    </ul>
+
+    <h2 class="text-xl font-bold mt-8 mb-3">5つの判断軸（公式サイトで確認することが望ましい項目）</h2>
+
+    <ol class="list-decimal pl-5 space-y-2 mb-6 text-sm">
+      <li><strong>運営主体の明示</strong>: 「弁護士法人○○」「○○労働組合」など、運営母体が公式サイトで明確に記載されているか</li>
+      <li><strong>料金の総額</strong>: 基本料金だけでなく、追加費用（深夜・急ぎ対応・弁護士介入時）が発生する条件を含めた実質総額</li>
+      <li><strong>返金保証の条件</strong>: 「退職できなかった場合の返金」のような保証は、適用範囲・期間・例外条件を公式サイトで明示しているか</li>
+      <li><strong>連絡手段と対応時間</strong>: LINE・電話・メールのうちどの手段で対応可能か、対応時間帯はいつか</li>
+      <li><strong>運営実績</strong>: 運営期間や対応件数の公開情報。<strong>運営期間が短いことが直ちにリスクとは限りません</strong>。複数の判断軸を組み合わせて総合的に確認</li>
+    </ol>
+
+    <h2 class="text-xl font-bold mt-8 mb-3">困ったときの公的相談窓口（無料）</h2>
+
+    <p class="text-sm text-gray-600 mb-3">
+      退職にまつわる不安・トラブル・ハラスメントに関する相談は、以下の公的窓口が無料で利用できます。
     </p>
 
-    <h3 class="text-lg font-bold mt-6 mb-2">コンサルティング業界</h3>
-    <p class="mb-3">
-      <a href="/myvision/" class="text-blue-700 underline">MyVision</a>は公式サイトで「コンサルティング業界専門」と案内されています。
-      対象者・サポート内容は公式サイトでご確認ください。
-    </p>
-
-    <h3 class="text-lg font-bold mt-6 mb-2">会計士・税理士などの士業</h3>
-    <p class="mb-3">
-      <a href="/twin-pro/" class="text-blue-700 underline">ツインプロ</a>は公式サイトで「会計士・税理士特化」と案内されています。
-      対象資格・サポート内容は公式サイトでご確認ください。
-    </p>
-
-    <h2 class="text-xl font-bold mt-8 mb-3">よくある質問</h2>
-
-    <h3 class="text-lg font-bold mt-6 mb-2">Q. 転職エージェントの利用料金は？</h3>
-    <p class="mb-3">
-      多くの転職エージェントは求職者側の利用料は無料です（料金は採用側企業が負担）。
-      ただし、有料職業紹介事業の枠組みは事業者により異なるため、初回面談時に確認することが推奨されます。
-    </p>
-
-    <h3 class="text-lg font-bold mt-6 mb-2">Q. 在職中でも利用できますか？</h3>
-    <p class="mb-3">
-      多くのエージェントは在職中の利用に対応しています。夜間・休日のオンライン面談を案内する事業者もあります。
-      在職中であることを伝えれば、現職への配慮（連絡時間帯の調整等）に配慮してもらえるケースが一般的です。
-    </p>
-
-    <h3 class="text-lg font-bold mt-6 mb-2">Q. 紹介された求人は必ず応募する必要がありますか？</h3>
-    <p class="mb-3">
-      紹介求人への応募は強制ではありません。希望と異なる場合は理由を伝えて見送ることができ、
-      その情報をもとに次回以降の紹介精度を高めてもらう運用が一般的です。
-    </p>
+    <ul class="list-disc pl-5 space-y-1 mb-6 text-sm">
+      <li><strong>総合労働相談コーナー</strong>（厚生労働省）— 労働問題全般</li>
+      <li><strong>法テラス</strong>（日本司法支援センター）— 経済的に余裕がない方への無料法律相談</li>
+      <li><strong>みんなの人権110番</strong>（法務省）— ハラスメント・人権侵害</li>
+      <li><strong>こころの健康相談統一ダイヤル</strong>（厚生労働省）— 精神的不調を感じる場合</li>
+      <li><strong>ハローワーク</strong>（厚生労働省）— 失業保険・離職票・離職理由</li>
+      <li><strong>全国社会保険労務士会連合会</strong>— 労務・社会保険手続</li>
+    </ul>
 
     <h2 class="text-xl font-bold mt-8 mb-3">本サイトの情報源と編集方針</h2>
-    <p class="mb-3">
-      本サイトの記載内容は、各転職エージェント公式サイトの公開情報、一般的な転職市場の慣行、
-      公開されている統計資料を参考に整理したものです。最新情報・正確な条件は必ず各社公式サイトでご確認ください。
+    <p class="mb-3 text-sm">
+      本サイトの記載内容は、各退職代行サービス公式サイトの公開情報、一般的な労働法令・実務慣行を参考に整理した参考記事です。最新情報・正確な条件は必ず各社公式サイトでご確認ください。
     </p>
-    <p class="mb-3">
-      本サイトはアフィリエイト広告を含みます（PR記事）。運営者は本サイト経由のお申込みにより各エージェントから報酬を受け取りますが、
-      個別エージェントの推奨度は公開情報・公式の専門性表記に基づくものであり、報酬額により順位を変えることはしていません。
+    <p class="mb-3 text-sm">
+      本サイトはアフィリエイト広告を含みます（PR記事）。運営者は本サイト経由のお申込みにより各事業者から報酬を受け取りますが、特定業者を推奨・順位付けするものではありません。
+    </p>
+    <p class="mb-3 text-sm">
+      <strong>本記事は社労士・弁護士監修ではありません</strong>（公開情報整理・アフィリエイト広告）。具体的な法的・労務的判断が必要な場合は、必ず専門家（弁護士・社会保険労務士等）にご相談ください。
     </p>
 
     <BannerAB pageSlug="hub" position="footer" />
 
-    <h2 class="text-xl font-bold mt-8 mb-3">関連ページ</h2>
-    <ul class="list-disc pl-5 space-y-1">
-      <li><a href="/techgo/" class="text-blue-700 underline">TechGo｜ITエンジニア向け転職エージェント解説</a></li>
-      <li><a href="/myvision/" class="text-blue-700 underline">MyVision｜コンサル業界専門転職エージェント解説</a></li>
-      <li><a href="/twin-pro/" class="text-blue-700 underline">ツインプロ｜会計士・税理士特化転職エージェント解説</a></li>
-      <li><a href="/unizon-it/" class="text-blue-700 underline">ユニゾンキャリア｜IT・Web業界 転職/就活解説</a></li>
-    </ul>
+    <h2 class="text-xl font-bold mt-8 mb-3">まとめ：判断のための3ステップ</h2>
+
+    <ol class="list-decimal pl-5 space-y-2 mb-6 text-sm">
+      <li><strong>運営主体タイプを検討する</strong>（民間企業・労働組合・弁護士）</li>
+      <li><strong>料金・保証条件・対応範囲を公式サイトで確認</strong></li>
+      <li><strong>複数社の公式情報を並行確認のうえ判断</strong></li>
+    </ol>
+
+    <p class="text-sm">
+      退職は重要な判断です。<strong>特定の業者を「最適」と断定する情報に頼らず、複数社の公式情報を比較したうえで、必要に応じて公的相談窓口や弁護士相談も併用する</strong>ことを推奨します。
+    </p>
 
     <p class="text-xs text-gray-500 mt-8">
-      ※本ページの内容は2026-04-25時点の公開情報をもとにしています。各エージェントの最新サービス内容・対象範囲は公式サイトでご確認ください。
+      ※本ページの内容は2026-04-26時点の公開情報をもとに編集部が整理したものです。各サービスの最新条件は公式サイトでご確認ください。
     </p>
   </main>
 </Layout>

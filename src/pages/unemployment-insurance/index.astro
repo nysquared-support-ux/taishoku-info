@@ -3,129 +3,162 @@ import Layout from '../../layouts/Layout.astro';
 import PRBadge from '../../components/PRBadge.astro';
 import BannerAB from '../../components/BannerAB.astro';
 
-const title = 'TechGo｜ITエンジニア向け転職エージェント徹底解説 (公開情報)';
-const description = 'TechGo (テックゴー) はITエンジニアハイクラス層向けの転職エージェント。公開情報をもとに対象者・サポート内容・利用の流れを整理。';
+const title = '退職代行利用後の失業保険ガイド｜自己都合・会社都合・特定理由別の受給期間（2026年4月編集部調べ）';
+const description = '退職代行を利用した後の失業保険受給について、自己都合・会社都合・特定理由ごとの給付制限期間と受給日数を整理しました（PR・アフィリエイト広告を含みます）。2025年4月改正反映。';
 ---
 
 <Layout title={title} description={description}>
   <main class="max-w-3xl mx-auto px-4 py-8">
     <PRBadge />
 
+    <nav class="text-sm text-gray-500 mb-4">
+      <a href="/" class="underline">トップ</a> &gt; 退職代行と失業保険
+    </nav>
+
     <h1 class="text-2xl md:text-3xl font-bold mb-4 leading-tight">
-      TechGo｜ITエンジニア向け転職エージェント解説
+      退職代行利用後の失業保険ガイド｜自己都合・会社都合・特定理由別の受給期間
     </h1>
 
     <div class="bg-yellow-50 border-2 border-yellow-300 rounded p-3 mb-4 text-sm">
-      <strong>📢 PR表示</strong>: 本ページはアフィリエイト広告を含みます。
-      本サイト経由でリンク先 TechGo 公式へお申込みが成立した場合、運営者は提携先 (A8.net) より報酬を受け取ります。
-      本サイトは TechGo 公式サイトではありません。順位・推奨は公開情報・公式の専門性表記に基づくものであり、報酬額により内容を変えることはしていません。
+      <strong>📢 PR表示</strong>: 本ページはアフィリエイト広告（PR）を含みます。失業保険制度の正式な判断は、必ず<strong>所轄ハローワーク</strong>または<strong>社会保険労務士</strong>にご相談ください。
     </div>
 
     <p class="text-sm text-gray-600 mb-6">
-      最終確認日: 2026-04-25 / 出典: TechGo 公式サイト・公開情報<br />
+      最終確認日: 2026-04-26（出典: <a href="https://www.hellowork.mhlw.go.jp/" target="_blank" rel="noopener" class="underline">ハローワーク公式</a> / <a href="https://www.mhlw.go.jp/" target="_blank" rel="noopener" class="underline">厚生労働省</a>）<br />
       運営者: <a href="/operator-info/" class="underline">NY-squared (個人事業)</a> /
       <a href="/editorial-policy/" class="underline">編集ポリシー</a> /
       <a href="/privacy-policy/" class="underline">プライバシーポリシー</a>
     </p>
 
-    <section class="mb-8 bg-blue-50 border-l-4 border-blue-400 p-4 text-sm">
-      <p class="font-semibold mb-2">本ページの位置付け</p>
-      <ul class="list-disc pl-5 space-y-1">
-        <li>TechGo の公開情報を整理した解説ページ（公式サイトではありません）</li>
-        <li>記載内容は2026-04-25時点。最新情報は公式サイトでご確認ください</li>
-        <li>転職結果は個別状況により異なります</li>
-      </ul>
+    <section class="mb-6 bg-orange-50 border-l-4 border-orange-500 p-4 text-sm">
+      <p class="font-bold mb-2">⚠️ 重要なお知らせ</p>
+      <p>本記事は退職代行業者・ハローワーク公式サイトではなく、公開情報を編集部が整理した<strong>非公式のアフィリエイト広告情報サイト</strong>による記事です。失業保険の受給可否・金額・期間・給付制限期間は<strong>個別状況・離職日・離職理由・ハローワーク判断により異なります</strong>。正確な判断は<strong>所轄ハローワークに直接ご確認ください</strong>。</p>
     </section>
 
-    <BannerAB pageSlug="techgo" position="hero" />
+    <BannerAB pageSlug="unemployment-insurance" position="hero" />
 
-    <h2 class="text-xl font-bold mt-8 mb-3">TechGo の特徴（公開情報ベース）</h2>
-    <p class="mb-3">
-      TechGo (テックゴー) は、ITエンジニアハイクラス層向けに特化した転職エージェントとして公式サイトで案内されています。
-      経験者・管理職・スペシャリスト向けの非公開求人を扱うとされており、IT業界出身のキャリアアドバイザーが在籍しているのが特徴です。
+    <h2 class="text-xl font-bold mt-8 mb-3">1. 退職代行と失業保険の関係（一般論）</h2>
+    <p class="mb-3 text-sm">
+      失業保険（雇用保険の基本手当）の受給資格は、<strong>雇用保険の加入期間と離職理由</strong>等を基にハローワークが判断するとされています。退職代行を利用したかどうかは、一般論として受給資格の判定要素には含まれないと整理されていますが、<strong>具体的な認定はハローワークが個別事情を確認して行います</strong>。
     </p>
 
-    <h2 class="text-xl font-bold mt-8 mb-3">主な対象者（公式サイト記載）</h2>
-    <ul class="list-disc pl-5 mb-4 space-y-1">
-      <li>IT業界経験者（エンジニア・PM・PdM・ITコンサル等）</li>
-      <li>ハイクラス層（年収レンジは公式サイトで確認推奨）</li>
-      <li>30-50代のキャリアアップ志望者</li>
-      <li>マネジメント経験を活かしたい方</li>
+    <h3 class="text-lg font-bold mt-4 mb-2">1-1. 受給資格の基本要件</h3>
+    <ul class="list-disc pl-5 space-y-1 text-sm mb-3">
+      <li><strong>自己都合退職</strong>: 離職前2年間に被保険者期間が通算12か月以上（一般的な要件）</li>
+      <li><strong>会社都合退職・特定理由</strong>: 離職前1年間に被保険者期間が通算6か月以上（一般的な要件）</li>
+      <li><strong>離職票の提出</strong>: ハローワークでの申請に必要</li>
     </ul>
 
-    <h2 class="text-xl font-bold mt-8 mb-3">サポート内容の概要（公開情報）</h2>
-    <ul class="list-disc pl-5 mb-4 space-y-1">
-      <li>キャリア相談（業界経験者がヒアリング）</li>
-      <li>非公開求人の紹介</li>
-      <li>書類添削・面接対策</li>
-      <li>年収交渉の代行</li>
-      <li>入社後のフォローアップ</li>
-    </ul>
-    <p class="text-xs text-gray-600 mb-6">※詳細なサポート範囲は公式サイトでご確認ください。</p>
+    <h2 class="text-xl font-bold mt-8 mb-3">2. 自己都合・会社都合・特定理由 早見表（2026年4月時点）</h2>
 
-    <h2 class="text-xl font-bold mt-8 mb-3">利用の流れ（一般的なエージェント利用フロー）</h2>
-    <ol class="list-decimal pl-5 mb-4 space-y-1">
-      <li>公式サイトから無料登録（キャリア情報・希望条件を入力）</li>
-      <li>キャリアアドバイザーとの初回面談（オンライン対応）</li>
-      <li>非公開求人の紹介を受ける</li>
-      <li>応募・書類選考・面接</li>
-      <li>内定・条件交渉・入社</li>
+    <p class="text-sm text-gray-600 mb-2">⚠️ 以下は2026年4月時点で編集部が公開情報を参考に整理した目安です。<strong>2025年4月1日以降に離職された自己都合退職者については給付制限期間の取扱いが見直されています</strong>。</p>
+
+    <div class="overflow-x-auto mb-4">
+      <table class="min-w-full text-sm border-collapse">
+        <thead class="bg-gray-100">
+          <tr>
+            <th class="border px-3 py-2 text-left">区分</th>
+            <th class="border px-3 py-2 text-left">給付制限の一般的目安</th>
+            <th class="border px-3 py-2 text-left">受給日数（参考）</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="border px-3 py-2">自己都合（一般・2025年4月以降の改正対象者）</td>
+            <td class="border px-3 py-2">原則1か月程度（離職時期・回数等により異なる）</td>
+            <td class="border px-3 py-2">90-150日</td>
+          </tr>
+          <tr>
+            <td class="border px-3 py-2">自己都合（5年以内に3回目以上の離職等）</td>
+            <td class="border px-3 py-2">原則3か月程度（個別判断）</td>
+            <td class="border px-3 py-2">90-150日</td>
+          </tr>
+          <tr>
+            <td class="border px-3 py-2">会社都合（解雇等）</td>
+            <td class="border px-3 py-2">給付制限なしとされるケース</td>
+            <td class="border px-3 py-2">90-330日</td>
+          </tr>
+          <tr>
+            <td class="border px-3 py-2">特定理由（病気・パワハラ等）</td>
+            <td class="border px-3 py-2">給付制限なしとされるケース</td>
+            <td class="border px-3 py-2">90-330日</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <p class="text-xs text-gray-600 mb-6">
+      ※給付制限期間・受給開始時期は離職日・離職理由・個別事情により異なります。<strong>「退職代行を利用すると給付制限が短くなる」「会社都合に変更できる」といった効果は、退職代行の利用そのものから生じるものではなく、離職理由の事実関係・証拠資料・ハローワーク判断によります</strong>。詳細は<a href="https://www.hellowork.mhlw.go.jp/" target="_blank" rel="noopener" class="underline">ハローワーク公式</a>でご確認ください。
+    </p>
+
+    <h2 class="text-xl font-bold mt-8 mb-3">3. 退職代行利用後の失業保険 申請手順</h2>
+
+    <BannerAB pageSlug="unemployment-insurance" position="middle" />
+
+    <h3 class="text-lg font-bold mt-4 mb-2">Step 1: 離職票の受領（一般的目安: 退職後10日程度）</h3>
+    <ul class="list-disc pl-5 space-y-1 text-sm mb-3">
+      <li>会社から離職票が送付される</li>
+      <li>退職代行業者を経由した場合でも、離職票の発行義務は会社にある（一般論）</li>
+      <li>10日経過しても届かない場合はハローワークに相談可能</li>
+    </ul>
+
+    <h3 class="text-lg font-bold mt-4 mb-2">Step 2: ハローワーク窓口で申請</h3>
+    <ul class="list-disc pl-5 space-y-1 text-sm mb-3">
+      <li>住所地を管轄するハローワークに来所</li>
+      <li>必要書類: 離職票、本人確認書類、印鑑、写真2枚、預金通帳、マイナンバー確認書類</li>
+      <li>受給資格の決定（離職理由の区分判定はハローワークが行う）</li>
+    </ul>
+
+    <h3 class="text-lg font-bold mt-4 mb-2">Step 3: 雇用保険受給説明会への参加</h3>
+    <ul class="list-disc pl-5 space-y-1 text-sm mb-3">
+      <li>申請後の待期期間後、説明会の案内</li>
+      <li>受給資格者証の交付・初回認定日の決定</li>
+    </ul>
+
+    <h3 class="text-lg font-bold mt-4 mb-2">Step 4: 求職活動・認定日来所</h3>
+    <ul class="list-disc pl-5 space-y-1 text-sm mb-3">
+      <li>4週間ごとの認定日にハローワーク来所</li>
+      <li>求職活動実績の報告（一般的に2回以上/4週間）</li>
+    </ul>
+
+    <h2 class="text-xl font-bold mt-8 mb-3">4. 注意点チェックリスト</h2>
+    <ol class="list-decimal pl-5 space-y-1 text-sm mb-6">
+      <li>離職票の離職理由欄に異議がある場合はハローワーク窓口に相談可能</li>
+      <li>給付制限期間中はアルバイト等が基本手当に影響する場合があるため、必ずハローワークに事前確認</li>
+      <li>受給期間中に再就職した場合は再就職手当の対象となる可能性あり</li>
+      <li>受給期間延長制度（病気・出産・介護・60歳以上等）の活用を検討</li>
+      <li>マイナンバー確認書類の事前準備</li>
+      <li>求職活動実績の記録・保管</li>
+      <li>不正受給は厳罰対象</li>
     </ol>
 
-    <h2 class="text-xl font-bold mt-8 mb-3">30-50代男性が利用を検討する際のポイント</h2>
+    <h2 class="text-xl font-bold mt-8 mb-3">5. 退職代行業者の運営主体と業務範囲（一般論）</h2>
+    <div class="bg-yellow-50 border-l-4 border-yellow-500 p-3 my-4 text-sm">
+      <p>退職代行業者には「民間運営」「労働組合運営」「弁護士運営」がありますが、各業者が行える業務範囲は弁護士法・労働組合法等の関連法令により異なります。具体的な業務範囲は<strong>各業者の公式サイトと初回相談</strong>でご確認ください。<strong>離職票の記載内容は最終的に会社・ハローワークが決定するため、業者の関与による変更可否は個別事情・案件・関連法令により異なります</strong>。</p>
+    </div>
 
-    <h3 class="text-lg font-bold mt-6 mb-2">1. ハイクラス層中心の求人傾向</h3>
-    <p class="mb-3">
-      TechGo はハイクラス特化を打ち出しており、未経験者や若手向けの求人は少ない可能性があります。
-      経験5年以上、年収レンジが一定以上の方が登録対象として想定されているとみられます。
-    </p>
+    <BannerAB pageSlug="unemployment-insurance" position="footer" />
 
-    <h3 class="text-lg font-bold mt-6 mb-2">2. IT業界経験者の担当者と話せる</h3>
-    <p class="mb-3">
-      公式サイトでは業界経験者の在籍が訴求されています。技術用語が通じる担当者と話したい方には合致しやすい特徴です。
-    </p>
-
-    <h3 class="text-lg font-bold mt-6 mb-2">3. 在職中の利用</h3>
-    <p class="mb-3">
-      多くの転職エージェントと同様、在職中の利用に対応していると一般的に想定されます。
-      具体的な面談時間帯（夜間・週末対応）は初回登録時に確認することが推奨されます。
-    </p>
-
-    <h2 class="text-xl font-bold mt-8 mb-3">よくある質問</h2>
-
-    <h3 class="text-lg font-bold mt-6 mb-2">Q. 利用料金はかかりますか？</h3>
-    <p class="mb-3">
-      転職エージェントの一般的な慣行として、求職者側の利用料は無料の場合が多いです。
-      正確な条件は公式サイトの利用規約・FAQをご確認ください。
-    </p>
-
-    <h3 class="text-lg font-bold mt-6 mb-2">Q. 紹介された求人を断れますか？</h3>
-    <p class="mb-3">
-      多くのエージェントでは紹介求人への応募は強制ではありません。希望と異なれば見送ることができるのが一般的です。
-    </p>
-
-    <h3 class="text-lg font-bold mt-6 mb-2">Q. 退会は可能ですか？</h3>
-    <p class="mb-3">
-      退会・サービス停止は可能です。具体的な手続きは公式サイトのプライバシーポリシー・利用規約をご確認ください。
-    </p>
-
-    <h2 class="text-xl font-bold mt-8 mb-3">公式サイトで詳細を確認する</h2>
-    <p class="mb-3">
-      最新のサービス内容・登録方法・対象求人の傾向は、TechGo公式サイトの最新情報をご確認ください。
-      無料登録は数分で完了する場合が一般的です。
-    </p>
-
-    <BannerAB pageSlug="techgo" position="middle" />
+    <h2 class="text-xl font-bold mt-8 mb-3">6. 困ったときの公的相談窓口（無料）</h2>
+    <ul class="list-disc pl-5 space-y-1 text-sm mb-6">
+      <li><strong>ハローワーク</strong>（厚生労働省）— 失業保険の受給可否・金額・期間に関する個別相談</li>
+      <li><strong>総合労働相談コーナー</strong>（厚生労働省）— 労働問題全般</li>
+      <li><strong>法テラス</strong>（日本司法支援センター）— 経済的に余裕がない方への無料法律相談</li>
+      <li><strong>みんなの人権110番</strong>（法務省）— ハラスメント・人権侵害</li>
+      <li><strong>こころの健康相談統一ダイヤル</strong>（厚生労働省）— 精神的不調を感じる場合</li>
+      <li><strong>全国社会保険労務士会連合会</strong>— 労務・社会保険手続</li>
+    </ul>
 
     <h2 class="text-xl font-bold mt-8 mb-3">関連ページ</h2>
-    <ul class="list-disc pl-5 space-y-1">
-      <li><a href="/" class="text-blue-700 underline">30-50代男性向け 転職エージェント比較ガイド (Hub)</a></li>
-      <li><a href="/myvision/" class="text-blue-700 underline">MyVision｜コンサル業界専門</a></li>
-      <li><a href="/unizon-it/" class="text-blue-700 underline">ユニゾンキャリア｜IT・Web業界</a></li>
+    <ul class="list-disc pl-5 space-y-1 text-sm">
+      <li><a href="/" class="text-blue-700 underline">退職代行 総合ガイド Hub</a></li>
+      <li><a href="/lp-a/" class="text-blue-700 underline">退職代行の仕組み・費用・選び方</a></li>
+      <li><a href="/faq/" class="text-blue-700 underline">よくある質問FAQ 15問</a></li>
+      <li><a href="/damage-risk/" class="text-blue-700 underline">損害賠償リスクと対策</a></li>
     </ul>
 
     <p class="text-xs text-gray-500 mt-8">
-      ※本ページの内容は2026-04-25時点の公開情報をもとにしています。最新の対象範囲・サポート内容は TechGo 公式サイトで必ずご確認ください。
+      ※本ページは2026-04-26時点の公開情報をもとに編集部が整理した参考記事です。<strong>2025年4月1日以降の自己都合離職者については給付制限期間の取扱いが見直されているため、必ずハローワーク公式または所轄窓口で最新情報をご確認ください。</strong>
     </p>
   </main>
 </Layout>

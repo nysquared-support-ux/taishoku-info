@@ -3,8 +3,42 @@ import Layout from '../../layouts/Layout.astro';
 import PRBadge from '../../components/PRBadge.astro';
 import BannerAB from '../../components/BannerAB.astro';
 
-const title = '退職代行 よくある質問FAQ 15問｜違法性・即日退職・家族にバレる可能性等';
-const description = '退職代行サービスの違法性・即日退職・家族にバレる可能性・転職への影響など、よくある質問15問を編集部が公開情報をもとに整理しました（PR・アフィリエイト広告を含みます）。';
+const title = '退職代行 よくある質問FAQ 20問｜違法性・即日退職・業者選び方等';
+const description = '退職代行サービスの違法性・即日退職・家族にバレる可能性・転職への影響・業者選び方など、よくある質問20問を編集部が公開情報をもとに整理しました（PR・アフィリエイト広告を含みます）。';
+
+// FAQPage schema.org JSON-LD (Round V Phase 2・SEO rich snippet 対応)
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    { "@type": "Question", "name": "Q1. 退職代行は違法ですか？合法ですか？",
+      "acceptedAnswer": { "@type": "Answer", "text": "本人の退職意思を会社に伝達する行為自体は直ちに違法ではないとされていますが、運営主体（民間企業・労働組合・弁護士）により対応可能な業務範囲が法令上異なります。民間企業運営は交渉行為が非弁行為に該当する可能性があるため一般に対応できないとされ、労働組合は団体交渉権、弁護士は弁護士法に基づく代理に対応する場合があります。" } },
+    { "@type": "Question", "name": "Q2. 即日退職は本当に可能ですか？",
+      "acceptedAnswer": { "@type": "Answer", "text": "民法上の原則は「2週間前申出」（民法627条）であり、即日退職が可能かどうかは労働契約の内容・就業規則・会社の対応により異なります。「翌日から出社不要」を断定的に保証するものではありません。" } },
+    { "@type": "Question", "name": "Q3. 退職代行を使うと転職で不利になりますか？",
+      "acceptedAnswer": { "@type": "Answer", "text": "退職代行の利用が転職活動で不利に作用するかは個別事情・業界・採用側の判断により異なります。退職理由の説明準備が一般的に推奨されます。" } },
+    { "@type": "Question", "name": "Q4. 会社から「損害賠償する」と言われたら？",
+      "acceptedAnswer": { "@type": "Answer", "text": "損害賠償の成立には民法709条の要件（故意・過失・違法性・損害・因果関係）の立証が必要とされ、実際の請求は限定的なケースが多いとされています。個別事案は弁護士・法テラス等の専門窓口にご相談ください。詳細は損害賠償リスクページをご確認ください。" } },
+    { "@type": "Question", "name": "Q5. 家族にバレずに退職できますか？",
+      "acceptedAnswer": { "@type": "Answer", "text": "退職代行業者から家族への直接連絡は通常ありませんが、会社からの郵送物・健康保険・税金等の手続で家族に知られる可能性が個別事情によりあります。" } },
+    { "@type": "Question", "name": "Q8. 退職代行の費用相場は？",
+      "acceptedAnswer": { "@type": "Answer", "text": "公開情報の一般論として、民間企業運営は ¥20,000〜¥30,000 程度、労働組合運営は ¥25,000〜¥30,000 程度、弁護士運営は ¥50,000〜¥100,000+ 程度の料金目安が公表されています。詳細は各業者公式サイトでご確認ください。" } },
+    { "@type": "Question", "name": "Q13. 失業保険（雇用保険）はもらえますか？",
+      "acceptedAnswer": { "@type": "Answer", "text": "失業保険の受給資格は離職前の被保険者期間・離職理由により異なります。自己都合退職は給付制限期間が原則あり（2025年4月以降は短縮の傾向）、会社都合退職は待期7日後に給付。詳細はハローワークでご確認ください。" } },
+    { "@type": "Question", "name": "Q15. 失敗・後悔しない業者の選び方は？",
+      "acceptedAnswer": { "@type": "Answer", "text": "業者選び 5 軸: ① 運営主体タイプ（業務範囲）② 料金・追加費用 ③ 連絡手段・対応時間 ④ 返金保証条件 ⑤ 運営実績、が一般的です。Hub の比較表もご参照ください。" } },
+    { "@type": "Question", "name": "Q16. 退職代行の運営主体タイプは何種類ありますか？",
+      "acceptedAnswer": { "@type": "Answer", "text": "一般に「民間企業」「労働組合」「弁護士」の 3 タイプに分類されます。それぞれ業務範囲・料金が異なります。" } },
+    { "@type": "Question", "name": "Q17. 民間企業タイプと弁護士タイプの料金差は？",
+      "acceptedAnswer": { "@type": "Answer", "text": "一般に民間企業 ¥20,000〜¥30,000、弁護士 ¥50,000〜¥100,000+ 程度の差があります。料金差は対応範囲（交渉可否）に対応します。" } },
+    { "@type": "Question", "name": "Q18. 「弁護士提携」と「弁護士監修」の違いは？",
+      "acceptedAnswer": { "@type": "Answer", "text": "「弁護士提携」は実際に弁護士が業務を担当する場合があり、「弁護士監修」は記事内容のチェックに留まる場合があります。業務範囲は必ず公式サイトでご確認ください。" } },
+    { "@type": "Question", "name": "Q19. 業者選びで重視すべき軸は？",
+      "acceptedAnswer": { "@type": "Answer", "text": "① 運営主体タイプ（業務範囲）② 料金・追加費用の有無 ③ 連絡手段・対応時間 ④ 返金保証条件 ⑤ 運営実績、の 5 軸が一般的です。" } },
+    { "@type": "Question", "name": "Q20. 公的相談窓口はどこに相談できますか？",
+      "acceptedAnswer": { "@type": "Answer", "text": "総合労働相談コーナー（厚生労働省）、法テラス（日本司法支援センター）、都道府県労働局などが無料で相談を受け付けています。" } }
+  ]
+};
 ---
 
 <Layout title={title} description={description}>
@@ -142,4 +176,7 @@ const description = '退職代行サービスの違法性・即日退職・家�
       ※本ページは2026-04-26時点の公開情報をもとに編集部が整理した参考FAQです。<strong>社労士・弁護士監修ではありません</strong>。
     </p>
   </main>
+
+  <!-- FAQPage schema.org JSON-LD (Round V Phase 2 [kzPklZSdFu] 2026-04-29) -->
+  <script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
 </Layout>

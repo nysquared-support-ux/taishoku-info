@@ -1,25 +1,33 @@
 ---
 /**
- * BannerAB.astro - TechGo (ITエンジニアハイクラス転職) A/Bテスト対応CTAコンポーネント
- * ★299 適用: A8 sitemicros パラメータで EPC 個別計測
+ * BannerAB.astro - 退職代行Jobs アクセストレード A/Bテスト対応CTAコンポーネント
+ *
+ * Round U-2 [kzPklZSdFu] 2026-04-29: TechGo (A8.net・転職特化) → 退職代行Jobs (アクセストレード・退職検討者直接訴求) に置換
+ * 理由: ★356 候補「サイト×案件×ターゲット 3 軸マトリクス」適用
+ *   - taishoku-info LP: 退職検討者向け → 退職代行Jobs (CVR 9.95%/EPC ¥736.47/承認率 93.33%) が最適
+ *   - TechGo は tenshoku-compare-info (転職比較ガイド) で展開予定
  *
  * 4条件ランダム表示:
- *  A (25%): テキストリンク (素材001 - 「ITエンジニアの転職なら【TechGO】」)
- *  B (25%): バナー 300×250 (素材003 - 「転職時年収UP額平均138万円」)
- *  C (25%): バナー 100×60 (素材004 - Tech-Go ロゴ)
- *  D (25%): バナー 300×250 + スクロール連動フローティング (素材003)
+ *  A (25%): テキストリンク (素材1215838 - 「サービス料金 24,000 円」価格訴求)
+ *  B (25%): バナー 300×250 (素材1215856 - 退職代行Jobs ロゴ大)
+ *  C (25%): バナー 250×250 (素材1215855 - 退職代行Jobs ロゴ正方形)
+ *  D (25%): バナー 120×60 (素材1215854) + テキスト 1216763 のスクロール連動フローティング
  *
  * localStorage で訪問者単位の決定固定（再訪でも同じバリアント）
- * page_slug プロパティで記事別 sitemicros 識別子を生成
+ * page_slug プロパティで記事別識別子を生成
  *
- * 作成: 2026-04-25 [ZquFwWImON] / TechGo プログラムID s00000024757003
- * 提携承認状況: TechGo ✅ 承認済 / MyVision/ツインプロ/ユニゾン 申請中
+ * 案件: 退職代行Jobs (株式会社アレス・アクセストレード ID 1146802)
+ * 報酬: ¥12,000 / 新規入会 (定額報酬)
+ * リンクコード形式: https://h.accesstrade.net/sp/cc?rk=...
+ *
+ * 重要: リスティング条件あり (Google 広告で「退職代行Jobs」キーワード直接ターゲティング NG)
+ *      自社 LP オーガニック流入 / 一般キーワード「退職代行」「退職」/ TikTok 等は OK
  */
 interface Props {
-  pageSlug?: string;  // 記事別識別子 (例: 'techgo', 'myvision-comparison')
+  pageSlug?: string;  // 記事別識別子 (例: 'lp-a', 'damage-risk')
   position?: 'hero' | 'middle' | 'footer' | 'sticky';
-  label?: string;  // 明示指定する場合の文言（未指定なら10パターン自動ローテーション）
-  ctaRotate?: boolean;  // 10パターンABローテーション有効化（default: true）
+  label?: string;  // 明示指定する場合の文言（未指定なら 10 パターン自動ローテーション）
+  ctaRotate?: boolean;  // 10 パターンABローテーション有効化（default: true）
 }
 const {
   pageSlug = 'unknown',
@@ -28,25 +36,20 @@ const {
   ctaRotate = true,
 } = Astro.props;
 
-// CTA 14パターン（退職→転職 funnel 整合・★299 第二軸ABテスト・[kzPklZSdFu] Round U 強化）
-// 設計方針: 法務セーフ + 体験感・共感 + 行動明示 の3軸ブレンド
-// 0-9: IT エンジニア転職向け (汎用) / 10-13: 退職代行ユーザー特化 (Round U 追加)
+// CTA 10パターン（退職代行Jobs 訴求・★354 教訓反映の中立表現）
+// 設計方針: 法務セーフ + 価格訴求 + 行動明示 の 3 軸ブレンド
+// ★354 反映: 「3 日で退職完了」等の数値保証 NG・「全部代行」等の弁護士法非弁誤認 NG
 const CTA_PATTERNS = [
-  '無料カウンセリングで自分の市場価値を確認する（PR）',                            // 0: コントロール
-  '転職の悩みを、専門家に相談してみる（無料・PR）',                                // 1: 共感型
-  '求人をまだ見ない方が良い 3つの理由（PR）',                                      // 2: 疑問解消型
-  '一人で悩まず、まずプロに相談（PR）',                                            // 3: 背中押し型
-  '30代以降の転職、何が変わるのか（PR）',                                          // 4: 事実訴求型
-  '当日契約は不要・話だけ聞いて持ち帰り可（PR）',                                  // 5: 安心訴求型
-  '年収・働き方・キャリアパスを質問する（PR）',                                    // 6: 具体質問型
-  '同じ業界からのキャリアチェンジ事例（PR）',                                      // 7: 共感連帯型
-  '30-50代の相談多数。プロのサポートを確認（PR）',                                 // 8: ターゲット明示型
-  '後悔しない選択のために、まずプロに相談（PR）',                                  // 9: 決断支援型
-  // === Round U 追加 (退職→転職 funnel 整合・[kzPklZSdFu] 2026-04-28) ===
-  '退職後の次のキャリアを、いま考えはじめる（PR）',                                // 10: 退職→転職 橋渡し型
-  '退職前から動いた方が選択肢が広がる理由（PR）',                                  // 11: タイミング訴求型
-  'IT 業界・在職中相談 OK・退職後も継続支援（PR）',                                // 12: 継続性訴求型
-  '辞める前に、次の道を一緒に整理する（無料相談・PR）',                            // 13: 整理支援型
+  '退職代行Jobs サービス料金 24,000 円 (PR)',                        // 0: 価格訴求 (コントロール)
+  '退職代行を相談する - 退職代行Jobs 公式サイト (PR)',                  // 1: 直接行動
+  '退職検討中の方へ - 退職代行Jobs (PR)',                            // 2: ターゲット明示
+  '退職代行サービスの詳細を見る (PR)',                               // 3: 中立情報誘導
+  '24,000 円の退職代行サービスを確認 (PR)',                          // 4: 価格 + 行動
+  '退職代行Jobs の対応範囲を確認 (PR)',                              // 5: 対応範囲訴求
+  '退職代行 公式サイト - 詳細を確認 (PR)',                           // 6: 公式訴求
+  '相談から退職まで - 退職代行Jobs (PR)',                            // 7: フロー訴求
+  '退職をプロに依頼する - 退職代行Jobs (PR)',                        // 8: 専門家訴求
+  '退職代行Jobs を検討する (PR・個別事情により異なります)',             // 9: 慎重訴求
 ];
 
 const defaultLabel = label || CTA_PATTERNS[0];
@@ -55,18 +58,18 @@ const defaultLabel = label || CTA_PATTERNS[0];
 <div class="banner-ab-root my-6" data-page-slug={pageSlug} data-position={position} data-label={defaultLabel} data-cta-rotate={ctaRotate ? '1' : '0'}>
   <!-- デフォルト表示（JS実行前/JS無効/JSエラー時のフォールバック） -->
   <div class="banner-ab-slot">
-    <a href={`https://px.a8.net/svt/ejp?a8mat=4B1LPN+E39C6Q+5B0Y+HV7V6&sitemicros=fallback_${pageSlug}_${position}`}
+    <a href="https://h.accesstrade.net/sp/cc?rk=0100q25a00ormk"
        target="_blank" rel="noopener nofollow sponsored"
        class="block text-center bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded transition"
-       data-variant="fallback" data-material="txt_001">
+       data-variant="fallback" data-material="txt_1215838">
       {defaultLabel}
     </a>
     <img border="0" width="1" height="1"
-         src="https://www16.a8.net/0.gif?a8mat=4B1LPN+E39C6Q+5B0Y+HV7V6"
+         src="https://h.accesstrade.net/sp/rr?rk=0100q25a00ormk"
          alt="" loading="lazy" style="position:absolute;left:-9999px" />
   </div>
   <p class="text-xs text-gray-700 mt-2 text-center">
-    PR / TechGo (ITエンジニアハイクラス転職) 公式サイトへ遷移 / カウンセリング無料 / 在職中・退職検討中も相談可 / 退会自由
+    PR / 退職代行Jobs (株式会社アレス) 公式サイトへ遷移 / アフィリエイト広告 / 個別事情により結果は異なります
   </p>
 </div>
 
@@ -88,12 +91,13 @@ const defaultLabel = label || CTA_PATTERNS[0];
     if (forcedVariant && ['A', 'B', 'C', 'D'].includes(forcedVariant.toUpperCase())) {
       variant = forcedVariant.toUpperCase();
     } else {
-      variant = localStorage.getItem('ab_variant_v1');
+      // ★Round U-2: TechGo→退職代行Jobs 切替で variant_v1 をリセット
+      variant = localStorage.getItem('ab_variant_v2_jobs');
       if (!variant || !['A', 'B', 'C', 'D'].includes(variant)) {
         const r = Math.random();
         variant = r < 0.25 ? 'A' : r < 0.50 ? 'B' : r < 0.75 ? 'C' : 'D';
-        localStorage.setItem('ab_variant_v1', variant);
-        localStorage.setItem('ab_variant_v1_set_at', new Date().toISOString());
+        localStorage.setItem('ab_variant_v2_jobs', variant);
+        localStorage.setItem('ab_variant_v2_jobs_set_at', new Date().toISOString());
       }
     }
     root.setAttribute('data-variant', variant);
@@ -107,101 +111,95 @@ const defaultLabel = label || CTA_PATTERNS[0];
       }
     }
     if (ctaIdx === undefined) {
-      ctaIdx = parseInt(localStorage.getItem('ab_cta_v1') || '-1', 10);
+      ctaIdx = parseInt(localStorage.getItem('ab_cta_v2_jobs') || '-1', 10);
       if (ctaRotate && (isNaN(ctaIdx) || ctaIdx < 0 || ctaIdx >= CTA_PATTERNS.length)) {
         ctaIdx = Math.floor(Math.random() * CTA_PATTERNS.length);
-        localStorage.setItem('ab_cta_v1', String(ctaIdx));
-        localStorage.setItem('ab_cta_v1_set_at', new Date().toISOString());
+        localStorage.setItem('ab_cta_v2_jobs', String(ctaIdx));
+        localStorage.setItem('ab_cta_v2_jobs_set_at', new Date().toISOString());
       }
     }
     const label = (ctaRotate && ctaIdx >= 0) ? CTA_PATTERNS[ctaIdx] : defaultLabel;
     root.setAttribute('data-cta-idx', ctaRotate ? String(ctaIdx) : 'fixed');
 
-    // === sitemicros 識別子生成 ===
-    const ctaSuffix = ctaRotate ? `_cta${ctaIdx}` : '_ctafix';
-    const sitemicros = `v${variant}_${pageSlug}_${position}${ctaSuffix}`;
-
-    // === バリアント別HTML定義（TechGo 素材 001/003/004） ===
+    // === バリアント別HTML定義（退職代行Jobs 素材 1215838/1215856/1215855/1215854） ===
     const variants = {
       A: {
-        // 素材001: テキストリンク (「ITエンジニアの転職なら【TechGO】」訴求軸)
-        material: 'txt_001',
+        // 素材 1215838: テキストリンク (「サービス料金 24,000 円」価格訴求)
+        material: 'txt_1215838_24000yen',
+        rk: '0100q25a00ormk',
         html: `
-          <a href="https://px.a8.net/svt/ejp?a8mat=4B1LPN+E39C6Q+5B0Y+HV7V6&sitemicros=${encodeURIComponent(sitemicros)}"
+          <a href="https://h.accesstrade.net/sp/cc?rk=0100q25a00ormk"
              target="_blank" rel="noopener nofollow sponsored"
              class="block text-center bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded transition"
-             data-variant="A" data-material="txt_001">
+             data-variant="A" data-material="txt_1215838">
             ${label}
           </a>
           <img border="0" width="1" height="1"
-               src="https://www16.a8.net/0.gif?a8mat=4B1LPN+E39C6Q+5B0Y+HV7V6"
+               src="https://h.accesstrade.net/sp/rr?rk=0100q25a00ormk"
                alt="" loading="lazy" style="position:absolute;left:-9999px" />
         `,
       },
       B: {
-        // 素材003: バナー 300×250 (「転職時年収UP額平均138万円」訴求軸)
-        material: 'banner_003_300x250',
+        // 素材 1215856: バナー 300×250 (退職代行Jobs ロゴ大)
+        material: 'banner_1215856_300x250',
+        rk: '0100q25s00ormk',
         html: `
           <div class="text-center">
-            <a href="https://px.a8.net/svt/ejp?a8mat=4B1LPN+E39C6Q+5B0Y+HVNAP&sitemicros=${encodeURIComponent(sitemicros)}"
+            <a href="https://h.accesstrade.net/sp/cc?rk=0100q25s00ormk"
                target="_blank" rel="noopener nofollow sponsored"
-               data-variant="B" data-material="banner_003_300x250">
-              <img border="0" width="300" height="250" alt="TechGo - ITエンジニアハイクラス転職"
-                   src="https://www28.a8.net/svt/bgt?aid=260415275852&wid=001&eno=01&mid=s00000024757003003000&mc=1"
+               data-variant="B" data-material="banner_1215856_300x250">
+              <img border="0" width="300" height="250" alt="退職代行Jobs"
+                   src="https://h.accesstrade.net/sp/rr?rk=0100q25s00ormk"
                    loading="lazy" style="max-width:100%;height:auto;" />
             </a>
-            <img border="0" width="1" height="1"
-                 src="https://www14.a8.net/0.gif?a8mat=4B1LPN+E39C6Q+5B0Y+HVNAP"
-                 alt="" loading="lazy" style="position:absolute;left:-9999px" />
-            <a href="https://px.a8.net/svt/ejp?a8mat=4B1LPN+E39C6Q+5B0Y+HVNAP&sitemicros=${encodeURIComponent(sitemicros)}_text"
+            <a href="https://h.accesstrade.net/sp/cc?rk=0100q2uz00ormk"
                target="_blank" rel="noopener nofollow sponsored"
-               class="block mt-2 text-sm text-blue-700 underline">
+               class="block mt-2 text-sm text-blue-700 underline"
+               data-variant="B-text" data-material="txt_1216763">
               ${label}
             </a>
           </div>
         `,
       },
       C: {
-        // 素材004: ミニバナー 100×60 (Tech-Go ロゴのみ)
-        material: 'banner_004_100x60',
+        // 素材 1215855: バナー 250×250 (退職代行Jobs ロゴ正方形)
+        material: 'banner_1215855_250x250',
+        rk: '0100q25r00ormk',
         html: `
           <div class="text-center">
-            <a href="https://px.a8.net/svt/ejp?a8mat=4B1LPN+E39C6Q+5B0Y+HVV0H&sitemicros=${encodeURIComponent(sitemicros)}"
+            <a href="https://h.accesstrade.net/sp/cc?rk=0100q25r00ormk"
                target="_blank" rel="noopener nofollow sponsored"
-               data-variant="C" data-material="banner_004_100x60">
-              <img border="0" width="100" height="60" alt="TechGo"
-                   src="https://www22.a8.net/svt/bgt?aid=260415275852&wid=001&eno=01&mid=s00000024757003004000&mc=1"
+               data-variant="C" data-material="banner_1215855_250x250">
+              <img border="0" width="250" height="250" alt="退職代行Jobs"
+                   src="https://h.accesstrade.net/sp/rr?rk=0100q25r00ormk"
                    loading="lazy" style="max-width:100%;height:auto;" />
             </a>
-            <img border="0" width="1" height="1"
-                 src="https://www14.a8.net/0.gif?a8mat=4B1LPN+E39C6Q+5B0Y+HVV0H"
-                 alt="" loading="lazy" style="position:absolute;left:-9999px" />
-            <a href="https://px.a8.net/svt/ejp?a8mat=4B1LPN+E39C6Q+5B0Y+HVV0H&sitemicros=${encodeURIComponent(sitemicros)}_text"
+            <a href="https://h.accesstrade.net/sp/cc?rk=0100q2uz00ormk"
                target="_blank" rel="noopener nofollow sponsored"
-               class="block mt-2 text-sm text-blue-700 underline">
+               class="block mt-2 text-sm text-blue-700 underline"
+               data-variant="C-text" data-material="txt_1216763">
               ${label}
             </a>
           </div>
         `,
       },
       D: {
-        // 素材003: バナー 300×250 + スクロール連動フローティング (位置最適化版)
-        material: 'banner_003_floating',
+        // 素材 1215856 (300×250) + スクロール連動フローティング (素材 1215854 120×60 を float)
+        material: 'banner_1215856_floating',
+        rk: '0100q25s00ormk',
         html: `
           <div class="text-center">
-            <a href="https://px.a8.net/svt/ejp?a8mat=4B1LPN+E39C6Q+5B0Y+HVNAP&sitemicros=${encodeURIComponent(sitemicros)}"
+            <a href="https://h.accesstrade.net/sp/cc?rk=0100q25s00ormk"
                target="_blank" rel="noopener nofollow sponsored"
-               data-variant="D" data-material="banner_003_floating">
-              <img border="0" width="300" height="250" alt="TechGo - ITエンジニアハイクラス転職"
-                   src="https://www28.a8.net/svt/bgt?aid=260415275852&wid=001&eno=01&mid=s00000024757003003000&mc=1"
+               data-variant="D" data-material="banner_1215856_floating">
+              <img border="0" width="300" height="250" alt="退職代行Jobs"
+                   src="https://h.accesstrade.net/sp/rr?rk=0100q25s00ormk"
                    loading="lazy" style="max-width:100%;height:auto;" />
             </a>
-            <img border="0" width="1" height="1"
-                 src="https://www14.a8.net/0.gif?a8mat=4B1LPN+E39C6Q+5B0Y+HVNAP"
-                 alt="" loading="lazy" style="position:absolute;left:-9999px" />
-            <a href="https://px.a8.net/svt/ejp?a8mat=4B1LPN+E39C6Q+5B0Y+HVNAP&sitemicros=${encodeURIComponent(sitemicros)}_text"
+            <a href="https://h.accesstrade.net/sp/cc?rk=0100q2uz00ormk"
                target="_blank" rel="noopener nofollow sponsored"
-               class="block mt-2 text-sm text-blue-700 underline">
+               class="block mt-2 text-sm text-blue-700 underline"
+               data-variant="D-text" data-material="txt_1216763">
               ${label}
             </a>
           </div>
@@ -209,11 +207,11 @@ const defaultLabel = label || CTA_PATTERNS[0];
         // スクロール連動フローティングは 'hero' position 時のみ追加表示
         floatingHtml: position === 'hero' ? `
           <div id="floating-cta-${pageSlug}" class="floating-cta" style="display:none;">
-            <a href="https://px.a8.net/svt/ejp?a8mat=4B1LPN+E39C6Q+5B0Y+HVV0H&sitemicros=${encodeURIComponent('vD_' + pageSlug + '_floating')}"
+            <a href="https://h.accesstrade.net/sp/cc?rk=0100q25q00ormk"
                target="_blank" rel="noopener nofollow sponsored"
-               data-variant="D-float" data-material="banner_004_sticky"
+               data-variant="D-float" data-material="banner_1215854_120x60_sticky"
                class="floating-cta-link">
-              <span class="floating-cta-text">退職後のキャリア相談を見る（PR・無料）</span>
+              <span class="floating-cta-text">退職代行Jobs に相談する (PR)</span>
             </a>
           </div>
         ` : '',
@@ -252,10 +250,12 @@ const defaultLabel = label || CTA_PATTERNS[0];
       window.gtag('event', 'ab_test_impression', {
         variant: variant,
         material: chosen.material,
+        rk: chosen.rk,
         page_slug: pageSlug,
         position: position,
         cta_idx: ctaRotate ? ctaIdx : -1,
-        sitemicros: sitemicros,
+        program_id: '1146802',
+        program_name: 'taishoku_jobs',
       });
     }
 
@@ -266,10 +266,12 @@ const defaultLabel = label || CTA_PATTERNS[0];
           window.gtag('event', 'ab_test_click', {
             variant: variant,
             material: chosen.material,
+            rk: chosen.rk,
             page_slug: pageSlug,
             position: position,
             cta_idx: ctaRotate ? ctaIdx : -1,
-            sitemicros: sitemicros,
+            program_id: '1146802',
+            program_name: 'taishoku_jobs',
           });
         }
       });

@@ -3,8 +3,8 @@ import Layout from '../../layouts/Layout.astro';
 import PRBadge from '../../components/PRBadge.astro';
 import BannerAB from '../../components/BannerAB.astro';
 
-const title = '退職代行 よくある質問FAQ 20問｜違法性・即日退職・業者選び方等';
-const description = '退職代行サービスの違法性・即日退職・家族にバレる可能性・転職への影響・業者選び方など、よくある質問20問を編集部が公開情報をもとに整理しました（PR・アフィリエイト広告を含みます）。';
+const title = '退職代行 よくある質問FAQ 25問｜違法性・即日退職・業者選び方・法務関連';
+const description = '退職代行サービスの違法性・即日退職・家族にバレる可能性・転職への影響・業者選び方・民法627条・弁護士法72条など、よくある質問25問を編集部が公開情報をもとに整理しました（PR・アフィリエイト広告を含みます）。';
 
 // FAQPage schema.org JSON-LD (Round V Phase 2・SEO rich snippet 対応)
 const faqSchema = {
@@ -36,7 +36,17 @@ const faqSchema = {
     { "@type": "Question", "name": "Q19. 業者選びで重視すべき軸は？",
       "acceptedAnswer": { "@type": "Answer", "text": "① 運営主体タイプ（業務範囲）② 料金・追加費用の有無 ③ 連絡手段・対応時間 ④ 返金保証条件 ⑤ 運営実績、の 5 軸が一般的です。" } },
     { "@type": "Question", "name": "Q20. 公的相談窓口はどこに相談できますか？",
-      "acceptedAnswer": { "@type": "Answer", "text": "総合労働相談コーナー（厚生労働省）、法テラス（日本司法支援センター）、都道府県労働局などが無料で相談を受け付けています。" } }
+      "acceptedAnswer": { "@type": "Answer", "text": "総合労働相談コーナー（厚生労働省）、法テラス（日本司法支援センター）、都道府県労働局などが無料で相談を受け付けています。" } },
+    { "@type": "Question", "name": "Q21. 退職代行の法的根拠は何ですか？",
+      "acceptedAnswer": { "@type": "Answer", "text": "退職の意思表示は民法627条（雇用契約の解除）に基づき、原則として2週間前までの申出により雇用契約を解除できるとされています。退職代行はこの「意思表示の伝達」を本人に代わって行うサービスです。" } },
+    { "@type": "Question", "name": "Q22. 弁護士法72条（非弁行為）と退職代行の関係は？",
+      "acceptedAnswer": { "@type": "Answer", "text": "弁護士法72条は、弁護士でない者が「報酬を得て法律事務を取り扱うこと」を原則禁止しています。退職代行のうち会社との交渉行為は法律事務に該当する可能性があるため、民間企業運営は対応できないとされています。" } },
+    { "@type": "Question", "name": "Q23. 退職届の法的有効性は？",
+      "acceptedAnswer": { "@type": "Answer", "text": "一般論として、退職届の法的有効性は到達主義（民法97条）に基づき、会社に到達した時点で効力が発生するとされています。書留郵便等の到達証明手段を使用することが推奨される場合があります。" } },
+    { "@type": "Question", "name": "Q24. 退職を会社に拒否されたら？",
+      "acceptedAnswer": { "@type": "Answer", "text": "民法627条に基づく退職の意思表示は、原則として会社の承諾を必要としないとされています。会社が引き留めても、2週間経過後は雇用契約終了の効力が発生する場合があります。個別事案は弁護士・労働基準監督署にご相談ください。" } },
+    { "@type": "Question", "name": "Q25. 損害賠償の時効は？",
+      "acceptedAnswer": { "@type": "Answer", "text": "民法724条等に基づき、損害賠償請求権の消滅時効は権利行使可能と知った時から3年（人身は5年）、不法行為から20年とされています。具体的時効計算は個別事案により異なるため、弁護士にご相談ください。" } }
   ]
 };
 ---
@@ -158,11 +168,52 @@ const faqSchema = {
         <p class="font-semibold text-sm mb-1">Q20. 公的相談窓口はどこに相談できますか？</p>
         <p class="text-sm text-gray-700">A. <strong>総合労働相談コーナー（厚労省）</strong>、<strong>法テラス（日本司法支援センター）</strong>、<strong>都道府県労働局</strong>などが無料で相談を受け付けています。詳細は <a href="/" class="underline">Hub の公的相談窓口セクション</a> をご確認ください。</p>
       </div>
+
+      <div>
+        <p class="font-semibold text-sm mb-1">Q21. 退職代行の法的根拠は何ですか？</p>
+        <p class="text-sm text-gray-700">A. 退職の意思表示は <strong>民法 627 条</strong>（雇用契約の解除）に基づき、原則として 2 週間前までの申出により雇用契約を解除できるとされています。退職代行はこの「意思表示の伝達」を本人に代わって行うサービスです。</p>
+      </div>
+
+      <div>
+        <p class="font-semibold text-sm mb-1">Q22. 弁護士法 72 条（非弁行為）と退職代行の関係は？</p>
+        <p class="text-sm text-gray-700">A. <strong>弁護士法 72 条</strong>は、弁護士でない者が「報酬を得て法律事務を取り扱うこと」を原則禁止しています。退職代行のうち会社との交渉行為（有給消化・退職金・損害賠償等）は法律事務に該当する可能性があるため、民間企業運営は対応できないとされています。</p>
+      </div>
+
+      <div>
+        <p class="font-semibold text-sm mb-1">Q23. 退職届の法的有効性は？</p>
+        <p class="text-sm text-gray-700">A. 一般論として、退職届の法的有効性は <strong>到達主義</strong>（民法 97 条）に基づき、会社に到達した時点で効力が発生するとされています。書留郵便等の到達証明手段を使用することが推奨される場合があります。</p>
+      </div>
+
+      <div>
+        <p class="font-semibold text-sm mb-1">Q24. 退職を会社に拒否されたら？</p>
+        <p class="text-sm text-gray-700">A. 民法 627 条に基づく退職の意思表示は、原則として会社の承諾を必要としないとされています。会社が引き留めても、2 週間経過後は雇用契約終了の効力が発生する場合があります。個別事案は弁護士・労働基準監督署にご相談ください。</p>
+      </div>
+
+      <div>
+        <p class="font-semibold text-sm mb-1">Q25. 損害賠償の時効は？</p>
+        <p class="text-sm text-gray-700">A. 民法 724 条等に基づき、損害賠償請求権の消滅時効は<strong>権利行使可能と知った時から 3 年（人身は 5 年）、不法行為から 20 年</strong>とされています。具体的時効計算は個別事案により異なるため、弁護士にご相談ください。</p>
+      </div>
     </div>
 
     <p class="text-xs text-gray-500 mb-6">
       ※本 FAQ は公開情報を編集部が整理した参考情報です。<strong>社労士・弁護士監修ではありません</strong>。最新・正確な情報は各業者公式サイト・公的窓口でご確認ください。
     </p>
+
+    <h2 class="text-xl font-bold mt-8 mb-3">📌 次のアクション 3 選</h2>
+    <div class="grid md:grid-cols-3 gap-3 mb-6">
+      <a href="/" class="block border rounded p-3 hover:bg-blue-50 text-sm">
+        <strong>① 業者を比較したい</strong><br />
+        <span class="text-xs text-gray-600">運営主体 3 タイプ比較表 + 選び方 5 軸</span>
+      </a>
+      <a href="https://www.mhlw.go.jp/" target="_blank" rel="noopener" class="block border rounded p-3 hover:bg-blue-50 text-sm">
+        <strong>② 公的窓口に相談したい</strong><br />
+        <span class="text-xs text-gray-600">総合労働相談コーナー（厚労省）無料</span>
+      </a>
+      <a href="/lp-a/" class="block border rounded p-3 hover:bg-blue-50 text-sm">
+        <strong>③ 利用フローを確認</strong><br />
+        <span class="text-xs text-gray-600">退職代行の仕組み・費用・選び方</span>
+      </a>
+    </div>
 
     <h2 class="text-xl font-bold mt-8 mb-3">関連ページ</h2>
     <ul class="list-disc pl-5 space-y-1 text-sm">

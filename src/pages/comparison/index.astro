@@ -13,15 +13,16 @@ const description = '退職代行 6 業者の運営主体・料金・対応範�
 
 <main>
   <article>
-    <!-- 1. ファーストビュー -->
-    <div class="alert alert-warning" role="alert">
+    <!-- 1. ファーストビュー (★Round X Tailwind 化 [sdKG2oTfY8]) -->
+    <div class="bg-yellow-50 border-l-4 border-yellow-400 text-yellow-800 p-3 mb-4 rounded text-sm" role="alert">
       本ページはアフィリエイト広告 (PR) を含みます
     </div>
 
-    <nav aria-label="breadcrumb">
-      <ol class="breadcrumb">
-        <li class="breadcrumb-item"><a href="/">トップ</a></li>
-        <li class="breadcrumb-item active" aria-current="page">主要 6 業者比較</li>
+    <nav aria-label="breadcrumb" class="mb-4 text-sm">
+      <ol class="flex flex-wrap gap-2 text-gray-600">
+        <li><a href="/" class="text-blue-700 underline hover:text-blue-900">トップ</a></li>
+        <li class="text-gray-400">/</li>
+        <li class="text-gray-800 font-medium" aria-current="page">主要 6 業者比較</li>
       </ol>
     </nav>
 
@@ -80,7 +81,7 @@ const description = '退職代行 6 業者の運営主体・料金・対応範�
       <h2>主要 6 業者 比較表</h2>
       <p>ここでは、代表的な退職代行サービス 6 社の情報を運営主体別にまとめました。料金やサービス内容は変更される可能性があるため、利用前に公式サイトで最新の情報をご確認ください（本記事の情報は 2026-04 時点の調査結果に基づく推定です）。</p>
       <div class="table-responsive">
-        <table class="table table-bordered">
+        <table class="min-w-full border-collapse border border-gray-300 text-sm">
           <thead>
             <tr>
               <th>業者名</th>

@@ -5,9 +5,22 @@ import BannerAB from '../../components/BannerAB.astro';
 
 const title = '看護師の退職代行｜特有の事情と業者選び3軸を整理（2026年版・PR）';
 const description = '看護師が退職代行を使う際の特有の事情（夜勤・人手不足・引き止め）と業者選び3軸を整理した情報提供記事です（PR・アフィリエイト広告を含みます）。法的判断は弁護士へ、個別対応は各業者へ直接ご相談ください。';
+
+const breadcrumb = [
+  { name: 'ホーム', url: 'https://taishoku-info.pages.dev/' },
+  { name: '退職代行', url: 'https://taishoku-info.pages.dev/' },
+  { name: '看護師', url: 'https://taishoku-info.pages.dev/kangoshi/' },
+];
+
+const faq = [
+  { q: '夜勤中や緊急時でも対応可能ですか？', a: '24時間対応を公表している業者であれば、夜勤帯にも LINE 等で受付可能とされています。実際の対応開始時間は業者の業務時間に依存するため、依頼前に確認推奨です。' },
+  { q: '師長や同僚にバレずに退職できますか？', a: '退職代行を使った場合、退職の事実は最終的に職場に伝わりますが、いつ・どのように伝えるかを業者と相談することで、対面で告げる必要を回避できるとされています。' },
+  { q: '看護師は損害賠償リスクが高い？', a: '一般論として、通常の退職手続きに沿って退職した場合、損害賠償が成立するケースは限定的とされています。ただし、契約形態（有期雇用・奨学金返還契約等）により判断が分かれる場合があるため、不安な場合は弁護士にご相談ください。' },
+  { q: '引き止めが強い病院でも対応可能？', a: '労働組合運営または弁護士運営の業者であれば、交渉権を持って病院側と直接やりとりできるため、強い引き止めにも対応可能とされています。' },
+];
 ---
 
-<Layout title={title} description={description}>
+<Layout title={title} description={description} publishedDate="2026-05-02" modifiedDate="2026-05-02" breadcrumb={breadcrumb} faq={faq}>
   <main class="max-w-3xl mx-auto px-4 py-8">
     <PRBadge />
 

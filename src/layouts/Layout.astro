@@ -2,14 +2,32 @@
 import CookieBanner from '../components/CookieBanner.astro';
 import Analytics from '../components/Analytics.astro';
 
+interface BreadcrumbItem {
+  name: string;
+  url: string;
+}
+
+interface FAQItem {
+  q: string;
+  a: string;
+}
+
 interface Props {
   title: string;
   description?: string;
+  publishedDate?: string;
+  modifiedDate?: string;
+  breadcrumb?: BreadcrumbItem[];
+  faq?: FAQItem[];
 }
 
 const {
   title,
   description = '30-50代男性向けの転職エージェントを公開情報で比較。コンサル・IT・士業・建設施工管理など業種別に整理。',
+  publishedDate = '2026-04-25',
+  modifiedDate = '2026-05-02',
+  breadcrumb = [],
+  faq = [],
 } = Astro.props;
 
 const siteUrl = import.meta.env.PUBLIC_SITE_URL || 'https://tenshoku-compare-info.pages.dev';
@@ -33,23 +51,52 @@ const gscVerification = import.meta.env.PUBLIC_GSC_VERIFICATION || 'HRlkPakHcDHZ
   <meta property="og:type" content="article" />
   <meta property="og:site_name" content="30-50代男性向け転職比較情報サイト（PR）" />
 
-  <!-- 構造化データ: Article -->
-  <script type="application/ld+json" set:html={JSON.stringify({
-    '@context': 'https://schema.org',
-    '@type': 'Article',
-    'headline': title,
-    'description': description,
-    'datePublished': '2026-04-25',
-    'dateModified': '2026-04-25',
-    'author': {
+  <!-- 構造化データ (★384 Stage 4・[RhVeAQqb5S] 4種フル対応) -->
+  <script type="application/ld+json" set:html={JSON.stringify([
+    {
+      '@context': 'https://schema.org',
+      '@type': 'Article',
+      'headline': title,
+      'description': description,
+      'url': Astro.url.href,
+      'datePublished': publishedDate,
+      'dateModified': modifiedDate,
+      'author': { '@type': 'Organization', 'name': 'NY-squared' },
+      'publisher': {
+        '@type': 'Organization',
+        'name': 'NY-squared',
+        'logo': { '@type': 'ImageObject', 'url': `${siteUrl}/logo.png` },
+      },
+      'mainEntityOfPage': { '@type': 'WebPage', '@id': Astro.url.href },
+    },
+    ...(faq.length >= 2 ? [{
+      '@context': 'https://schema.org',
+      '@type': 'FAQPage',
+      'mainEntity': faq.map((item) => ({
+        '@type': 'Question',
+        'name': item.q,
+        'acceptedAnswer': { '@type': 'Answer', 'text': item.a },
+      })),
+    }] : []),
+    ...(breadcrumb.length > 0 ? [{
+      '@context': 'https://schema.org',
+      '@type': 'BreadcrumbList',
+      'itemListElement': breadcrumb.map((item, i) => ({
+        '@type': 'ListItem',
+        'position': i + 1,
+        'name': item.name,
+        'item': item.url,
+      })),
+    }] : []),
+    {
+      '@context': 'https://schema.org',
       '@type': 'Organization',
       'name': 'NY-squared',
+      'url': siteUrl,
+      'logo': `${siteUrl}/logo.png`,
+      'sameAs': ['https://x.com/NYsquaredAI'],
     },
-    'publisher': {
-      '@type': 'Organization',
-      'name': 'NY-squared',
-    },
-  })} />
+  ])} />
 
   <title>{title}</title>
 

@@ -1,0 +1,93 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import PRBadge from '../../components/PRBadge.astro';
+import BannerAB from '../../components/BannerAB.astro';
+
+const title = '退職代行で有給消化｜全日数取得の手順と業者選び3軸（2026年版・PR）';
+const description = '退職代行を使って有給休暇を全日数消化したい方へ。労働基準法の権利・交渉できる業者の選び方・実際のフローを整理した情報提供記事です（PR・アフィリエイト広告を含みます）。';
+
+const breadcrumb = [
+  { name: 'ホーム', url: 'https://taishoku-info.pages.dev/' },
+  { name: '有給消化', url: 'https://taishoku-info.pages.dev/yukyu-shouka/' },
+];
+
+const faq = [
+  { q: '退職代行で有給を全日数消化できますか？', a: '労働基準法第39条で有給休暇取得は労働者の権利とされており、業者の交渉次第で全日消化可能なケースがあると公開情報で説明されています。' },
+  { q: '民間運営でも有給交渉できる？', a: '民間運営は団体交渉権がなく、有給交渉自体は労働組合運営または弁護士運営での対応が一般的とされています。' },
+  { q: '会社が拒否したらどうなる？', a: '労働基準法上、会社は有給取得を「時季変更権」でしか拒否できないとされており、退職時は時季変更権の行使範囲が限定されると説明されています。' },
+];
+---
+
+<Layout title={title} description={description} publishedDate="2026-05-02" modifiedDate="2026-05-02" breadcrumb={breadcrumb} faq={faq}>
+  <main class="max-w-3xl mx-auto px-4 py-8">
+    <PRBadge />
+
+    <nav class="text-sm text-gray-500 mb-4">
+      <a href="/" class="underline">トップ</a> &gt; 退職代行と有給消化
+    </nav>
+
+    <h1 class="text-2xl md:text-3xl font-bold mb-4 leading-tight">
+      退職代行で有給消化｜全日数取得の手順と業者選び3軸を整理
+    </h1>
+
+    <div class="bg-yellow-50 border-2 border-yellow-300 rounded p-3 mb-4 text-sm">
+      <strong>📢 PR表示</strong>: 本ページはアフィリエイト広告（PR）を含みます。本サイトは法律事務所・退職代行業者公式サイトではなく、公開情報を整理した一般論ベースの情報提供サイトです。本記事は法的助言・効果保証ではなく、個別案件の判断は<strong>必ず弁護士・各業者にご相談ください</strong>。
+    </div>
+
+    <p class="text-sm text-gray-600 mb-6">
+      最終確認日: 2026-05-02 / 公開情報の整理であり、特定サービスを推奨するものではありません。<br />
+      運営者: <a href="/operator-info/" class="underline">NY-squared (個人事業)</a> /
+      <a href="/editorial-policy/" class="underline">編集ポリシー</a> /
+      <a href="/privacy-policy/" class="underline">プライバシーポリシー</a>
+    </p>
+
+    <section class="mb-6 bg-blue-50 border-l-4 border-blue-400 p-4 text-sm">
+      <p><strong>結論</strong>: 労働基準法第39条で有給休暇取得は労働者の権利。退職代行で交渉権を持つ業者 (労組・弁護士運営) を選ぶことで全日消化交渉が可能とされています。</p>
+    </section>
+
+    <BannerAB pageSlug="yukyu-shouka" position="hero" />
+
+    <h2 class="text-xl font-bold mt-8 mb-3">1. 有給消化の法的根拠</h2>
+    <p class="mb-3 text-sm">
+      労働基準法第39条で、労働者には有給休暇取得の権利が認められています (<a href="https://elaws.e-gov.go.jp/document?lawid=322AC0000000049" target="_blank" rel="noopener" class="underline">労働基準法 e-Gov</a>)。会社の「時季変更権」は退職時には実質的に行使できないと一般論で説明されています。
+    </p>
+
+    <h2 class="text-xl font-bold mt-8 mb-3">2. 業者選び3軸 (有給交渉対応)</h2>
+
+    <ul class="list-disc pl-5 mb-4 text-sm space-y-2">
+      <li><strong>労働組合運営</strong>: 団体交渉権で有給交渉可能 (推奨)</li>
+      <li><strong>弁護士運営</strong>: 法的代理権で確実な交渉可能 (高額)</li>
+      <li><strong>民間運営</strong>: 交渉権なし → 連絡代行のみ・有給交渉不可</li>
+    </ul>
+
+    <h2 class="text-xl font-bold mt-8 mb-3">3. 全日数消化のフロー</h2>
+
+    <ol class="list-decimal pl-5 mb-4 text-sm space-y-2">
+      <li>残有給日数を給与明細・勤怠管理システムで確認</li>
+      <li>労組または弁護士運営の退職代行に相談</li>
+      <li>業者が会社に「退職日 + 有給全日消化」を伝達</li>
+      <li>会社が了承 → 即日から有給消化開始 → 退職完了</li>
+      <li>会社が拒否 → 業者が交渉 (法的根拠を提示)</li>
+    </ol>
+
+    <BannerAB pageSlug="yukyu-shouka" position="middle" />
+
+    <h2 class="text-xl font-bold mt-8 mb-3">4. よくある質問（FAQ）</h2>
+
+    <h3 class="text-lg font-bold mt-4 mb-2">Q1. 全日消化できないケースは？</h3>
+    <p class="mb-3 text-sm">
+      就業規則で「退職前の有給取得制限」が明記されているケース等、個別事情により異なるとされています。詳細は弁護士にご相談ください。
+    </p>
+
+    <h3 class="text-lg font-bold mt-4 mb-2">Q2. 有給消化中は給与が出る？</h3>
+    <p class="mb-3 text-sm">
+      労働基準法上、有給休暇は給与支払対象とされています。会社が支払を拒否した場合は労働基準監督署への相談が可能です。
+    </p>
+
+    <h2 class="text-xl font-bold mt-8 mb-3">出典・参考情報</h2>
+    <ul class="list-disc pl-5 mb-4 text-sm space-y-1">
+      <li><a href="https://elaws.e-gov.go.jp/document?lawid=322AC0000000049" target="_blank" rel="noopener" class="underline">労働基準法 (e-Gov)</a></li>
+      <li><a href="https://www.mhlw.go.jp/" target="_blank" rel="noopener" class="underline">厚生労働省</a> (有給休暇制度ガイドライン)</li>
+    </ul>
+  </main>
+</Layout>

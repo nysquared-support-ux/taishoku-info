@@ -1,0 +1,109 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import PRBadge from '../../components/PRBadge.astro';
+import BannerAB from '../../components/BannerAB.astro';
+
+const title = '退職代行 おすすめランキング2026｜運営主体別 6 業者比較（PR）';
+const description = '退職代行サービス 6 業者を運営主体・料金・対応範囲・実績の4軸で公開情報を中立に整理。労働組合運営・弁護士運営の選び方を 2026 年最新情報で比較（PR・アフィリエイト広告を含みます）。';
+
+const breadcrumb = [
+  { name: 'ホーム', url: 'https://taishoku-info.pages.dev/' },
+  { name: 'おすすめランキング', url: 'https://taishoku-info.pages.dev/osusume-ranking/' },
+];
+
+const faq = [
+  { q: 'おすすめ業者の選び方は？', a: '①運営主体 ②料金 ③対応範囲 ④運営実績 の4軸で判断するのが一般的とされています。' },
+  { q: '料金が安い業者は信頼できる？', a: '料金だけで判断せず運営主体と実績を確認することが推奨されています。民間運営の格安業者は交渉権がない点に注意が必要とされています。' },
+  { q: 'ランキングの基準は？', a: '本ランキングは「公的機関認証」「運営主体」「料金透明性」「公表実績」の4軸で公開情報をもとに整理しています。報酬額により内容を変えることはしていません。' },
+];
+---
+
+<Layout title={title} description={description} publishedDate="2026-05-02" modifiedDate="2026-05-02" breadcrumb={breadcrumb} faq={faq}>
+  <main class="max-w-3xl mx-auto px-4 py-8">
+    <PRBadge />
+
+    <nav class="text-sm text-gray-500 mb-4">
+      <a href="/" class="underline">トップ</a> &gt; おすすめランキング
+    </nav>
+
+    <h1 class="text-2xl md:text-3xl font-bold mb-4 leading-tight">
+      退職代行 おすすめランキング2026｜運営主体別 6 業者比較
+    </h1>
+
+    <div class="bg-yellow-50 border-2 border-yellow-300 rounded p-3 mb-4 text-sm">
+      <strong>📢 PR表示</strong>: 本ページはアフィリエイト広告（PR）を含みます。順位は公開情報・公式サイト掲載値・運営主体評価軸に基づくものであり、報酬額により内容を変えることはしていません。
+    </div>
+
+    <p class="text-sm text-gray-600 mb-6">
+      最終確認日: 2026-05-02 / 運営者: <a href="/operator-info/" class="underline">NY-squared</a> / <a href="/editorial-policy/" class="underline">編集ポリシー</a> / <a href="/privacy-policy/" class="underline">プライバシーポリシー</a>
+    </p>
+
+    <section class="mb-6 bg-blue-50 border-l-4 border-blue-400 p-4 text-sm">
+      <p><strong>本ランキングの 4 軸評価</strong>: ①公的機関認証 ②運営主体 (民間/労組/弁護士) ③料金透明性 ④公表実績 をもとに公開情報で整理しています。</p>
+    </section>
+
+    <BannerAB pageSlug="osusume-ranking" position="hero" />
+
+    <h2 class="text-xl font-bold mt-8 mb-3">運営主体別 評価マトリクス</h2>
+
+    <table class="w-full text-sm border border-gray-300 my-4">
+      <thead class="bg-gray-100">
+        <tr>
+          <th class="border border-gray-300 p-2">タイプ</th>
+          <th class="border border-gray-300 p-2">交渉権</th>
+          <th class="border border-gray-300 p-2">料金相場</th>
+          <th class="border border-gray-300 p-2">推奨ケース</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="border border-gray-300 p-2">民間運営</td>
+          <td class="border border-gray-300 p-2">なし</td>
+          <td class="border border-gray-300 p-2">2-3 万円</td>
+          <td class="border border-gray-300 p-2">連絡代行のみで十分なケース</td>
+        </tr>
+        <tr>
+          <td class="border border-gray-300 p-2"><strong>労組運営</strong></td>
+          <td class="border border-gray-300 p-2">あり (団交権)</td>
+          <td class="border border-gray-300 p-2">2.5-3 万円</td>
+          <td class="border border-gray-300 p-2">有給交渉・引止め対応</td>
+        </tr>
+        <tr>
+          <td class="border border-gray-300 p-2"><strong>弁護士運営</strong></td>
+          <td class="border border-gray-300 p-2">あり (法的代理)</td>
+          <td class="border border-gray-300 p-2">5-10 万円</td>
+          <td class="border border-gray-300 p-2">損害賠償・法的紛争懸念</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <BannerAB pageSlug="osusume-ranking" position="middle" />
+
+    <h2 class="text-xl font-bold mt-8 mb-3">業者選びの 4 軸チェックリスト</h2>
+
+    <ul class="list-disc pl-5 mb-4 text-sm space-y-2">
+      <li><strong>公的機関認証</strong>: 都道府県労働委員会認証の労組か (信頼性指標)</li>
+      <li><strong>運営主体</strong>: 民間/労組/弁護士のどれか</li>
+      <li><strong>料金透明性</strong>: 追加費用なしで明示か</li>
+      <li><strong>公表実績</strong>: 公式サイトに対応件数・実績期間が記載か</li>
+    </ul>
+
+    <h2 class="text-xl font-bold mt-8 mb-3">詳細比較は専用ページへ</h2>
+
+    <p class="mb-4 text-sm">
+      6 業者の詳細料金・対応範囲・特徴は以下の比較ページで整理しています:
+    </p>
+
+    <ul class="list-disc pl-5 mb-4 text-sm space-y-2">
+      <li><a href="/comparison/" class="underline">退職代行 主要 6 業者徹底比較</a> — 料金・対応範囲・運営主体の詳細</li>
+      <li><a href="/labor-union/" class="underline">労働組合運営の退職代行</a> — 団交権で交渉対応</li>
+      <li><a href="/damage-risk/" class="underline">退職代行と損害賠償の一般論</a> — 弁護士運営が必要なケース</li>
+    </ul>
+
+    <h2 class="text-xl font-bold mt-8 mb-3">FAQ・出典</h2>
+
+    <p class="mb-3 text-sm">
+      本ランキングは公開情報 (各業者公式サイト) と公的機関情報 (労働基準監督署・労働委員会) をもとに整理しています。
+    </p>
+  </main>
+</Layout>

@@ -51,7 +51,10 @@ const faqSchema = {
 };
 ---
 
-<Layout title={title} description={description}>
+<Layout title={title} description={description} publishedDate="2026-04-25" modifiedDate="2026-05-02" breadcrumb={[
+  { name: 'ホーム', url: 'https://taishoku-info.pages.dev/' },
+  { name: 'よくある質問', url: 'https://taishoku-info.pages.dev/faq/' },
+]}>
   <main class="max-w-3xl mx-auto px-4 py-8">
     <PRBadge />
 

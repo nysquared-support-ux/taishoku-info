@@ -5,9 +5,20 @@ import BannerAB from '../../components/BannerAB.astro';
 
 const title = '退職代行と損害賠償の一般論｜議論される5つのケースを整理（2026年版・PR）';
 const description = '退職代行を使うと損害賠償を請求されるか不安な方へ。民法・労働関連法の一般論として、損害賠償が議論される傾向がある5つのケースを整理した情報提供記事です（PR・アフィリエイト広告を含みます）。法的判断は弁護士へご相談ください。';
+
+const breadcrumb = [
+  { name: 'ホーム', url: 'https://taishoku-info.pages.dev/' },
+  { name: '損害賠償リスク', url: 'https://taishoku-info.pages.dev/damage-risk/' },
+];
+
+const faq = [
+  { q: '退職代行を使うと損害賠償を請求されますか？', a: '一般論として、通常の退職手続きに沿って退職した場合、労働者が損害賠償を負うケースは限定的と説明されることがあります。ただし、個別事情により判断が分かれるため、不安がある場合は弁護士・専門家への相談が推奨されます。' },
+  { q: '損害賠償の法的根拠は？', a: '損害賠償が成立するには、労働者側に故意または過失による違法行為があり、それによって会社に具体的な損害が発生したことが立証される必要があるとされています（民法709条）。' },
+  { q: '即日退職は損害賠償リスクが高い？', a: '民法627条で2週間前の意思表示が原則とされていますが、契約形態や就業規則により判断が異なります。個別案件は弁護士にご相談ください。' },
+];
 ---
 
-<Layout title={title} description={description}>
+<Layout title={title} description={description} publishedDate="2026-04-26" modifiedDate="2026-05-02" breadcrumb={breadcrumb} faq={faq}>
   <main class="max-w-3xl mx-auto px-4 py-8">
     <PRBadge />
 

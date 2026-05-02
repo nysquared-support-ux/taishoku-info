@@ -5,9 +5,20 @@ import BannerAB from '../../components/BannerAB.astro';
 
 const title = '労働組合運営の退職代行とは？仕組み・選び方・編集部選定 3 サービス比較';
 const description = '労働組合運営の退職代行の仕組み・団体交渉権・弁護士運営との違い・編集部選定 3 サービスの料金と特徴を中立的に整理（PR・アフィリエイト広告を含みます）。';
+
+const breadcrumb = [
+  { name: 'ホーム', url: 'https://taishoku-info.pages.dev/' },
+  { name: '労働組合型', url: 'https://taishoku-info.pages.dev/labor-union/' },
+];
+
+const faq = [
+  { q: '労働組合運営の退職代行とは？', a: '労働組合が運営する退職代行サービスで、団体交渉権に基づいて有給消化や未払賃金の交渉が可能とされる業者形態です。' },
+  { q: '弁護士運営との違いは？', a: '労働組合は団体交渉権による交渉、弁護士は法的代理権による訴訟対応まで可能とされています。料金は労働組合が 2.5-3 万円、弁護士が 5-10 万円が目安です。' },
+  { q: '労働組合運営は信頼できますか？', a: '都道府県労働委員会認証の組合が運営する場合、公的機関認証の信頼性があるとされています。各業者の運営主体は公式サイトで確認できます。' },
+];
 ---
 
-<Layout title={title} description={description}>
+<Layout title={title} description={description} publishedDate="2026-04-25" modifiedDate="2026-05-02" breadcrumb={breadcrumb} faq={faq}>
   <div class="max-w-3xl mx-auto px-4 py-8">
     <PRBadge />
 

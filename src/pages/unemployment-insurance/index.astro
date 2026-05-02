@@ -5,9 +5,20 @@ import BannerAB from '../../components/BannerAB.astro';
 
 const title = '退職代行利用後の失業保険ガイド｜自己都合・会社都合・特定理由別の受給期間（2026年4月編集部調べ）';
 const description = '退職代行を利用した後の失業保険受給について、自己都合・会社都合・特定理由ごとの給付制限期間と受給日数を整理しました（PR・アフィリエイト広告を含みます）。2025年4月改正反映。';
+
+const breadcrumb = [
+  { name: 'ホーム', url: 'https://taishoku-info.pages.dev/' },
+  { name: '失業保険', url: 'https://taishoku-info.pages.dev/unemployment-insurance/' },
+];
+
+const faq = [
+  { q: '退職代行を使うと失業保険はもらえますか？', a: '退職代行の利用自体は失業保険の受給可否に直接影響しないとされています。受給資格は離職前の被保険者期間と離職理由により判定されます。詳細はハローワークでご確認ください。' },
+  { q: '自己都合と会社都合で何が違う？', a: '自己都合退職は給付制限期間（2025年4月以降は短縮傾向）あり、会社都合退職は待期7日後に給付開始とされています。受給日数も離職理由により異なります。' },
+  { q: '特定理由離職者とは？', a: '会社都合に準じる扱いで、給付制限なしで受給可能とされる区分です。心身の不調による退職等が該当する場合があります。詳細はハローワークでご確認ください。' },
+];
 ---
 
-<Layout title={title} description={description}>
+<Layout title={title} description={description} publishedDate="2026-04-25" modifiedDate="2026-05-02" breadcrumb={breadcrumb} faq={faq}>
   <main class="max-w-3xl mx-auto px-4 py-8">
     <PRBadge />
 

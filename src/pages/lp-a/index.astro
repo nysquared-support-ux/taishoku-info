@@ -5,9 +5,20 @@ import BannerAB from '../../components/BannerAB.astro';
 
 const title = '「辞めたい」と感じている方へ｜退職代行の仕組み・費用・選び方ガイド';
 const description = '「辞めたいけど言い出せない」「上司に切り出せない」とお感じの方へ。退職代行サービスの仕組み・費用目安・選び方をわかりやすく整理しました（PR・アフィリエイト広告を含みます）。';
+
+const breadcrumb = [
+  { name: 'ホーム', url: 'https://taishoku-info.pages.dev/' },
+  { name: '退職代行ガイド', url: 'https://taishoku-info.pages.dev/lp-a/' },
+];
+
+const faq = [
+  { q: '退職代行とはどんなサービスですか？', a: '退職代行は、本人に代わって業者が会社へ退職の意思を伝えるサービスです。運営主体（民間・労働組合・弁護士）により対応範囲が異なります。' },
+  { q: '退職代行の費用相場は？', a: '民間企業 2-3 万円、労働組合運営 2.5-3 万円、弁護士運営 5-10 万円が公表値の目安とされています。' },
+  { q: 'どの業者を選べばいい？', a: '運営主体（業務範囲）・料金・対応時間・実績の 4 軸で判断するのが一般的です。詳細は本ページの選び方ガイドをご覧ください。' },
+];
 ---
 
-<Layout title={title} description={description}>
+<Layout title={title} description={description} publishedDate="2026-04-25" modifiedDate="2026-05-02" breadcrumb={breadcrumb} faq={faq}>
   <main class="max-w-3xl mx-auto px-4 py-8">
     <PRBadge />
 

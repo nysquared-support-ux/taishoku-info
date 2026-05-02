@@ -5,9 +5,20 @@ import BannerAB from '../../components/BannerAB.astro';
 
 const title = '退職代行 主要 6 業者徹底比較 2026 年版｜運営主体別の料金・対応範囲を整理';
 const description = '退職代行 6 業者の運営主体・料金・対応範囲を中立的に比較。労働組合運営・弁護士運営の違いと選び方を 2026 年最新情報で整理（PR・アフィリエイト広告を含みます）。';
+
+const breadcrumb = [
+  { name: 'ホーム', url: 'https://taishoku-info.pages.dev/' },
+  { name: '退職代行 比較', url: 'https://taishoku-info.pages.dev/comparison/' },
+];
+
+const faq = [
+  { q: '退職代行で最も信頼できる業者はどう選びますか？', a: '運営主体（労働組合運営・弁護士運営）と公開実績で判断するのが推奨されています。本記事では 6 業者を中立的に比較しています。' },
+  { q: '労働組合運営と弁護士運営の違いは？', a: '労働組合運営は団体交渉権で有給交渉等が可能、弁護士運営は法的代理権で損害賠償等の法的対応が可能とされています。' },
+  { q: '料金相場はいくらですか？', a: '民間業者は 2-3 万円、労働組合運営は 2.5-3 万円、弁護士運営は 5-10 万円が公表値の目安とされています。' },
+];
 ---
 
-<Layout title={title} description={description}>
+<Layout title={title} description={description} publishedDate="2026-04-25" modifiedDate="2026-05-02" breadcrumb={breadcrumb} faq={faq}>
   <div class="max-w-3xl mx-auto px-4 py-8">
     <PRBadge />
 

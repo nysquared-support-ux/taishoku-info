@@ -5,9 +5,21 @@ import BannerAB from '../../components/BannerAB.astro';
 
 const title = '退職代行で親にバレるか｜バレない仕組みと例外3パターン（2026年版・PR）';
 const description = '退職代行を使うと親にバレるか不安な方へ。個人情報保護法に基づく守秘義務と、バレうる例外パターン（緊急連絡先・社会保険・SNS）を整理した情報提供記事です（PR・アフィリエイト広告を含みます）。個別判断は弁護士・各業者へご相談ください。';
+
+const breadcrumb = [
+  { name: 'ホーム', url: 'https://taishoku-info.pages.dev/' },
+  { name: '退職代行', url: 'https://taishoku-info.pages.dev/' },
+  { name: '親バレ', url: 'https://taishoku-info.pages.dev/oyabare/' },
+];
+
+const faq = [
+  { q: '退職代行を使ったことは親にわかりますか？', a: '通常の利用範囲では、業者から親に連絡されることはないとされています。ただし、緊急連絡先・社会保険・SNS の3つの例外パターンに該当する場合は、間接的に伝わる可能性があります。' },
+  { q: '離職票や源泉徴収票が実家に届く場合は？', a: '送付先住所を会社に登録している場合は、退職時に住所変更を申請するか、会社へ直接送付先指定を依頼することで対処可能とされています。' },
+  { q: '親が保証人になっている場合は影響する？', a: '雇用契約の保証人として親が登録されている場合、退職時に保証人通知が行く可能性があります。事前に契約書を確認し、業者へ相談することを推奨します。' },
+];
 ---
 
-<Layout title={title} description={description}>
+<Layout title={title} description={description} publishedDate="2026-05-02" modifiedDate="2026-05-02" breadcrumb={breadcrumb} faq={faq}>
   <main class="max-w-3xl mx-auto px-4 py-8">
     <PRBadge />
 

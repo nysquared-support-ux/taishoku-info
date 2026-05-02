@@ -1,0 +1,85 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import PRBadge from '../../components/PRBadge.astro';
+import BannerAB from '../../components/BannerAB.astro';
+
+const title = '退職代行の失敗例7パターン｜事前回避と業者選び5軸（2026年版・PR）';
+const description = '退職代行を使って失敗した7つのパターン (連絡途絶・交渉失敗・違法業者等) と回避策・業者選び5軸を整理した情報提供記事です（PR・アフィリエイト広告を含みます）。';
+
+const breadcrumb = [
+  { name: 'ホーム', url: 'https://taishoku-info.pages.dev/' },
+  { name: '失敗例', url: 'https://taishoku-info.pages.dev/shippai/' },
+];
+
+const faq = [
+  { q: '退職代行の失敗で最も多いケースは？', a: '公開情報では「業者と連絡が取れなくなった」「交渉ができなかった」が代表的とされています。事業継続困難な業者の選別が回避策とされています。' },
+  { q: '失敗回避のための業者選びは？', a: '①運営主体 (労組/弁護士運営優先) ②運営実績 ③料金透明性 ④返金保証条件 ⑤レビュー の5軸が一般的とされています。' },
+  { q: '失敗した場合のリカバリー方法は？', a: '労働基準監督署・法テラスへの相談が公的な選択肢として案内されています。' },
+];
+---
+
+<Layout title={title} description={description} publishedDate="2026-05-02" modifiedDate="2026-05-02" breadcrumb={breadcrumb} faq={faq}>
+  <main class="max-w-3xl mx-auto px-4 py-8">
+    <PRBadge />
+
+    <nav class="text-sm text-gray-500 mb-4">
+      <a href="/" class="underline">トップ</a> &gt; 退職代行 失敗例
+    </nav>
+
+    <h1 class="text-2xl md:text-3xl font-bold mb-4 leading-tight">
+      退職代行の失敗例7パターン｜事前回避と業者選び5軸を整理
+    </h1>
+
+    <div class="bg-yellow-50 border-2 border-yellow-300 rounded p-3 mb-4 text-sm">
+      <strong>📢 PR表示</strong>: 本ページはアフィリエイト広告（PR）を含みます。情報提供を目的とし、特定サービスの推奨ではありません。個別案件は弁護士・各業者へご相談ください。
+    </div>
+
+    <p class="text-sm text-gray-600 mb-6">
+      最終確認日: 2026-05-02 / 運営者: <a href="/operator-info/" class="underline">NY-squared</a> / <a href="/editorial-policy/" class="underline">編集ポリシー</a> / <a href="/privacy-policy/" class="underline">プライバシーポリシー</a>
+    </p>
+
+    <section class="mb-6 bg-blue-50 border-l-4 border-blue-400 p-4 text-sm">
+      <p><strong>結論</strong>: 退職代行の失敗は「業者選び」で大半が回避可能とされています。本記事では7パターンの失敗事例と業者選び5軸を整理します。</p>
+    </section>
+
+    <BannerAB pageSlug="shippai" position="hero" />
+
+    <h2 class="text-xl font-bold mt-8 mb-3">1. 退職代行の失敗例7パターン</h2>
+
+    <ol class="list-decimal pl-5 mb-4 text-sm space-y-2">
+      <li><strong>業者と連絡が取れなくなった</strong>: 事業継続困難な業者の場合のリスク</li>
+      <li><strong>有給交渉ができなかった</strong>: 民間運営は交渉権なし</li>
+      <li><strong>会社から損害賠償を請求された</strong>: 弁護士運営でない業者は対応不可</li>
+      <li><strong>退職日が会社の希望日になった</strong>: 即日退職を希望していたのに後日に</li>
+      <li><strong>返金保証が適用されなかった</strong>: 規約の細則を未確認</li>
+      <li><strong>追加費用を請求された</strong>: 料金体系の不透明さ</li>
+      <li><strong>違法業者だった</strong>: 弁護士法72条違反 (非弁行為) のリスク</li>
+    </ol>
+
+    <h2 class="text-xl font-bold mt-8 mb-3">2. 業者選び5軸 (失敗回避)</h2>
+
+    <ul class="list-disc pl-5 mb-4 text-sm space-y-2">
+      <li><strong>運営主体タイプ</strong>: 労組 or 弁護士運営優先</li>
+      <li><strong>運営実績</strong>: 公式サイト掲載の対応件数・年数を確認</li>
+      <li><strong>料金透明性</strong>: 追加費用の有無を事前確認</li>
+      <li><strong>返金保証条件</strong>: 適用除外の細則を確認</li>
+      <li><strong>レビュー・口コミ</strong>: 複数のサイトで第三者評価を確認</li>
+    </ul>
+
+    <BannerAB pageSlug="shippai" position="middle" />
+
+    <h2 class="text-xl font-bold mt-8 mb-3">3. よくある質問（FAQ）</h2>
+
+    <h3 class="text-lg font-bold mt-4 mb-2">Q1. 失敗した場合の相談窓口は？</h3>
+    <p class="mb-3 text-sm">
+      労働基準監督署・法テラス (日本司法支援センター)・都道府県労働局などの公的窓口が無料で相談を受け付けているとされています。
+    </p>
+
+    <h2 class="text-xl font-bold mt-8 mb-3">出典・参考情報</h2>
+    <ul class="list-disc pl-5 mb-4 text-sm space-y-1">
+      <li><a href="https://www.mhlw.go.jp/" target="_blank" rel="noopener" class="underline">厚生労働省</a> (労働相談窓口情報)</li>
+      <li><a href="https://www.houterasu.or.jp/" target="_blank" rel="noopener" class="underline">法テラス</a> (法律相談窓口)</li>
+      <li>各退職代行業者公式サイト (運営実績・料金・返金保証条件)</li>
+    </ul>
+  </main>
+</Layout>

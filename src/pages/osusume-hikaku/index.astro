@@ -1,0 +1,159 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import PRBadge from '../../components/PRBadge.astro';
+import BannerAB from '../../components/BannerAB.astro';
+
+const title = '退職代行 おすすめ 5社比較｜失敗しない選び方と料金・即日対応の徹底ガイド（2026年版・PR）';
+const description = '退職代行サービスを比較検討中の方へ。弁護士・労働組合・民間業者の違い、失敗しない 5 つの選び方、料金・即日対応の有無を中立的に整理した情報提供記事です（PR・アフィリエイト広告を含みます）。個別判断は弁護士・各業者へご相談ください。';
+
+const breadcrumb = [
+  { name: 'ホーム', url: 'https://taishoku-info.pages.dev/' },
+  { name: '退職代行', url: 'https://taishoku-info.pages.dev/' },
+  { name: 'おすすめ比較', url: 'https://taishoku-info.pages.dev/osusume-hikaku/' },
+];
+
+const faq = [
+  { q: '退職代行はどんな人におすすめですか?', a: '上司に直接退職を伝えにくい、引き止めが強い、即日退職したい方などが主な対象とされています。雇用形態を問わず利用できる業者が多いです。' },
+  { q: '弁護士・労働組合・民間業者で何が違いますか?', a: '弁護士は法的交渉が可能 (損害賠償・訴訟対応)、労働組合は団体交渉権で有給・退職日交渉が可能、民間業者は意思伝達のみで交渉権はないとされています。' },
+  { q: '料金の相場はいくらですか?', a: '弁護士運営は3〜6万円、労働組合運営は2〜3万円、民間運営は1〜3万円が一般的とされています (各社公式情報・推定)。' },
+  { q: '即日対応してもらえますか?', a: '多くの業者で平日12時までの依頼で当日連絡完了が一般的とされています。詳細は <a href="/touji/" class="underline">当日対応ページ</a> を参照ください。' },
+  { q: 'LINEでの相談は可能ですか?', a: '24時間 LINE 相談に対応する業者が一般的とされています。深夜・早朝でも相談可能なサービスが多いです。' },
+  { q: '失敗するケースはありますか?', a: '会社が拒否した場合に民間業者は交渉権がなく対応不可・追加費用請求等のケースが報告されています。詳細は <a href="/shippai/" class="underline">失敗例ページ</a> を参照ください。' },
+  { q: '親バレや転職先への影響は?', a: '通常の利用では業者から第三者連絡は行われないとされていますが、緊急連絡先・社会保険手続き・SNS で間接的に伝わる場合があります。<a href="/oyabare/" class="underline">親バレページ</a> 参照。' },
+  { q: '退職後の書類受取はどうなりますか?', a: '離職票・源泉徴収票は会社から直接郵送されるのが一般的です。住所変更が必要な場合は事前に業者に相談してください。' },
+];
+
+const services = [
+  { id: 'A', name: 'サービスA (弁護士運営)', type: '弁護士運営', price: '5万円〜 (推定)', sokujitsu: '◯', line: '◯', refund: '◯', note: '法的交渉可・訴訟対応' },
+  { id: 'B', name: 'サービスB (労働組合運営)', type: '労働組合運営', price: '3万円 (推定)', sokujitsu: '◯', line: '◯', refund: '◯', note: '有給消化交渉可' },
+  { id: 'C', name: 'サービスC (民間 + 弁護士監修)', type: '民間 (弁護士監修)', price: '2.5万円 (推定)', sokujitsu: '◯', line: '◯', refund: '△', note: '監修体制あり' },
+  { id: 'D', name: 'サービスD (組合提携)', type: '民間 (組合提携)', price: '2.7万円 (推定)', sokujitsu: '◯', line: '◯', refund: '◯', note: '提携組合経由で交渉' },
+  { id: 'E', name: 'サービスE (24時間対応)', type: '民間運営', price: '2万円 (推定)', sokujitsu: '◯', line: '◯ 24h', refund: '◯', note: '24時間 LINE 対応' },
+];
+---
+
+<Layout title={title} description={description} publishedDate="2026-05-06" modifiedDate="2026-05-06" breadcrumb={breadcrumb} faq={faq}>
+  <main class="max-w-4xl mx-auto px-4 py-8">
+    <PRBadge />
+
+    <nav class="text-sm text-gray-500 mb-4">
+      <a href="/" class="underline">トップ</a> &gt; 退職代行 おすすめ比較
+    </nav>
+
+    <h1 class="text-2xl md:text-3xl font-bold mb-4 leading-tight" style="color: #1E3A8A;">
+      退職代行 おすすめ 5社比較｜失敗しない選び方と料金・即日対応の徹底ガイド
+    </h1>
+
+    <div class="bg-yellow-50 border-2 border-yellow-300 rounded p-3 mb-4 text-sm">
+      <strong>📢 PR表示</strong>: 本ページはアフィリエイト広告（PR）を含みます。本サイトは法律事務所・退職代行業者公式サイトではなく、公開情報を整理した一般論ベースの情報提供サイトです。本記事は法的助言・効果保証ではなく、個別案件の判断は<strong>必ず弁護士・各業者に直接ご相談ください</strong>。
+    </div>
+
+    <p class="text-sm text-gray-600 mb-6">
+      最終確認日: 2026-05-06 / 公開情報の整理・特定サービスを推奨するものではありません。<br />
+      運営者: <a href="/operator-info/" class="underline">NY-squared (個人事業)</a> /
+      <a href="/editorial-policy/" class="underline">編集ポリシー</a> /
+      <a href="/privacy-policy/" class="underline">プライバシーポリシー</a>
+    </p>
+
+    <section class="mb-6 bg-blue-50 border-l-4 border-blue-400 p-4 text-sm">
+      <p><strong>結論</strong>: 退職代行は「運営主体 (弁護士/組合/民間)」「料金」「即日対応」「LINE 24時間」「返金保証」の 5 基準で選ぶことが推奨されます。本記事では公開情報をもとに 5 社の比較表 + 各社特徴を整理しました。</p>
+    </section>
+
+    <BannerAB pageSlug="osusume-hikaku" position="hero" />
+
+    <h2 class="text-xl font-bold mt-8 mb-3" style="color: #1E3A8A;">1. 退職代行とは (定義と 3 種類)</h2>
+    <p class="mb-3 text-sm">
+      退職代行は、依頼者に代わって会社に退職の意思を伝えるサービスです。<a href="https://elaws.e-gov.go.jp/document?lawid=129AC0000000089" target="_blank" rel="noopener" class="underline">民法第627条</a> により期間の定めのない雇用契約は退職申告から2週間で終了できるとされており、退職代行はこの「申告」を本人に代わって行います。運営主体は次の3種類に分類されます。
+    </p>
+    <ul class="list-disc pl-5 mb-4 text-sm space-y-1">
+      <li><strong>弁護士運営</strong>: 法的交渉・訴訟対応が可能。料金 3〜6 万円が相場 (推定)。</li>
+      <li><strong>労働組合運営</strong>: 団体交渉権で有給消化・退職日交渉が可能 (非弁行為にならない)。料金 2〜3 万円。</li>
+      <li><strong>民間運営</strong>: 意思伝達のみ・交渉権なし。料金 1〜3 万円・非弁行為リスクに注意。</li>
+    </ul>
+
+    <h2 class="text-xl font-bold mt-8 mb-3" style="color: #1E3A8A;">2. 失敗しない選び方 (5 基準)</h2>
+    <ol class="list-decimal pl-5 mb-4 text-sm space-y-2">
+      <li><strong>運営主体の確認</strong>: 弁護士・労働組合は交渉権限あり。民間業者は<a href="https://elaws.e-gov.go.jp/document?lawid=324AC0000000205" target="_blank" rel="noopener" class="underline">弁護士法第72条</a> の非弁行為リスク認識を。</li>
+      <li><strong>料金総額の明示</strong>: 「一律 ¥XX,XXX」のみでなく追加費用 (書類郵送費・交渉費) の有無を確認。</li>
+      <li><strong>即日対応の実績</strong>: 公式サイトに当日対応の時間帯・実績数を明記しているか。</li>
+      <li><strong>LINE 24時間相談</strong>: 深夜帯対応・即日決済 (クレカ等) で連絡完了までを短縮。</li>
+      <li><strong>返金保証・口コミ実績</strong>: 公式サイトの保証条件 + 第三者公開口コミ・実績データを確認。</li>
+    </ol>
+
+    <h2 class="text-xl font-bold mt-8 mb-3" style="color: #1E3A8A;">3. おすすめ 5社比較表</h2>
+    <p class="text-xs text-gray-600 mb-3">※価格・内容は各社公式情報の整理 (推定値含む)・データ更新日: 2026-05-06</p>
+
+    <div class="overflow-x-auto mb-4">
+      <table class="border-collapse w-full text-sm">
+        <thead><tr class="bg-gray-100"><th class="border px-3 py-2 text-left">サービス</th><th class="border px-3 py-2 text-left">運営</th><th class="border px-3 py-2 text-left">料金 (推定)</th><th class="border px-3 py-2 text-left">即日</th><th class="border px-3 py-2 text-left">LINE</th><th class="border px-3 py-2 text-left">返金保証</th></tr></thead>
+        <tbody>
+          {services.map((s) => (
+            <tr><td class="border px-3 py-2">{s.name}</td><td class="border px-3 py-2">{s.type}</td><td class="border px-3 py-2">{s.price}</td><td class="border px-3 py-2">{s.sokujitsu}</td><td class="border px-3 py-2">{s.line}</td><td class="border px-3 py-2">{s.refund}</td></tr>
+          ))}
+        </tbody>
+      </table>
+    </div>
+
+    {services.map((s) => (
+      <>
+        <h3 class="text-lg font-bold mt-6 mb-2">{s.name}</h3>
+        <p class="text-sm mb-2"><strong>運営形態</strong>: {s.type} / <strong>料金</strong>: {s.price} / <strong>特徴</strong>: {s.note}</p>
+        <p class="text-xs text-gray-600 mb-3">※公式サイト情報をもとに整理 (推定含む)。最新情報は各公式サイトで必ずご確認ください。</p>
+        <p class="mb-4"><a href={`#cta-${s.id}`} class="inline-block bg-orange-500 text-white px-4 py-2 rounded font-bold hover:bg-orange-600 transition">サービス{s.id} 公式サイト (PR)</a></p>
+      </>
+    ))}
+
+    <p class="text-xs text-gray-500 mb-6">※各社 CTA リンクは A8.net・アクセストレード等の提携承認後に有効化されます (本ページは比較情報の整理段階・<a href="/operator-info/" class="underline">運営情報</a>)。</p>
+
+    <BannerAB pageSlug="osusume-hikaku" position="middle" />
+
+    <h2 class="text-xl font-bold mt-8 mb-3" style="color: #1E3A8A;">4. 利用の流れ (4 ステップ)</h2>
+    <ol class="list-decimal pl-5 mb-4 text-sm space-y-2">
+      <li><strong>無料相談</strong>: LINE/電話で当日対応可否・料金総額・追加費用有無を確認</li>
+      <li><strong>必要情報の提供</strong>: 勤務先情報・上司氏名・雇用形態・希望退職日・有給残日数を業者へ伝達</li>
+      <li><strong>業者から会社へ連絡</strong>: 退職意思伝達 + 返却物・書類受取調整 (最短30分〜数時間)</li>
+      <li><strong>完了報告 + 退職後手続き</strong>: 健康保険切替 (14日以内)・雇用保険申請・源泉徴収票受取</li>
+    </ol>
+
+    <h2 class="text-xl font-bold mt-8 mb-3" style="color: #1E3A8A;">5. よくある失敗例 (3 例)</h2>
+    <ul class="list-disc pl-5 mb-4 text-sm space-y-2">
+      <li><strong>民間業者で会社拒否時の対応不可</strong>: 弁護士・労働組合系を選ぶことで回避可能</li>
+      <li><strong>追加費用請求</strong>: 「一律料金」謳うも書類郵送費・交渉費の追加・契約前に総額確認必須</li>
+      <li><strong>有給消化できず</strong>: 民間業者は交渉権なし・有給消化希望なら労働組合系/弁護士系</li>
+    </ul>
+    <p class="text-xs text-gray-600 mb-6">詳細は <a href="/shippai/" class="underline">失敗例ページ</a> 参照</p>
+
+    <h2 class="text-xl font-bold mt-8 mb-3" style="color: #1E3A8A;">6. よくある質問 (FAQ)</h2>
+    {faq.map((item) => (
+      <>
+        <h3 class="text-lg font-bold mt-4 mb-2">Q. {item.q}</h3>
+        <p class="mb-3 text-sm" set:html={item.a} />
+      </>
+    ))}
+
+    <h2 class="text-xl font-bold mt-8 mb-3" style="color: #1E3A8A;">7. 編集ポリシー (情報源・更新日・著者情報)</h2>
+    <ul class="list-disc pl-5 mb-4 text-sm space-y-1">
+      <li><strong>情報源</strong>: 各社公式サイト・公開情報・法令 (e-Gov 法令検索) を一次情報として整理</li>
+      <li><strong>データ更新</strong>: 公開後も定期的に確認・最新情報は各公式サイトでご確認ください</li>
+      <li><strong>運営者</strong>: <a href="/operator-info/" class="underline">NY-squared (個人事業)</a></li>
+      <li><strong>編集方針</strong>: <a href="/editorial-policy/" class="underline">編集ポリシー</a> 参照</li>
+    </ul>
+
+    <section class="mt-8 mb-6 bg-gray-50 border border-gray-200 rounded p-4 text-sm">
+      <h2 class="text-lg font-bold mb-2">まとめ</h2>
+      <p>退職代行を選ぶ際は ①運営主体 (弁護士/組合/民間) の交渉権限 ②料金総額 ③即日対応の実績 ④LINE 24時間相談 ⑤返金保証・口コミ の 5 基準で比較検討することが推奨されます。不安がある場合は無料相談から検討を始めるのが一般的とされています。</p>
+    </section>
+
+    <h2 class="text-xl font-bold mt-8 mb-3" style="color: #1E3A8A;">出典・参考情報</h2>
+    <ul class="list-disc pl-5 mb-4 text-sm space-y-1">
+      <li><a href="https://elaws.e-gov.go.jp/document?lawid=129AC0000000089" target="_blank" rel="noopener" class="underline">民法第627条 (退職の権利・e-Gov)</a></li>
+      <li><a href="https://elaws.e-gov.go.jp/document?lawid=324AC0000000205" target="_blank" rel="noopener" class="underline">弁護士法第72条 (非弁行為の禁止・e-Gov)</a></li>
+      <li><a href="https://elaws.e-gov.go.jp/document?lawid=322AC0000000049" target="_blank" rel="noopener" class="underline">労働基準法 (e-Gov)</a></li>
+      <li><a href="https://www.mhlw.go.jp/" target="_blank" rel="noopener" class="underline">厚生労働省公式サイト</a></li>
+    </ul>
+
+    <p class="text-xs text-gray-600 mt-6">
+      ※本記事は2026年5月時点の公開情報をもとに作成。最新の法令・サービス内容は各公式サイトでご確認ください。各社の正式名・公式 URL・特商法表記等は提携承認後に反映します (PR・アフィリエイト広告を含みます)。
+    </p>
+  </main>
+</Layout>

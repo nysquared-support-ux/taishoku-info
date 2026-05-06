@@ -1,0 +1,145 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import PRBadge from '../../components/PRBadge.astro';
+import BannerAB from '../../components/BannerAB.astro';
+
+const title = '退職代行で当日退職できるか｜即日対応の現実と民法627条・業者選び3条件（2026年版・PR）';
+const description = '退職代行の「当日対応」を検討中の方へ。民法627条と即日退職の関係、当日連絡可能な時間帯、弁護士・労働組合・民間業者の違いを公開情報ベースで整理した情報提供記事です（PR・アフィリエイト広告を含みます）。個別判断は弁護士・各業者へご相談ください。';
+
+const breadcrumb = [
+  { name: 'ホーム', url: 'https://taishoku-info.pages.dev/' },
+  { name: '退職代行', url: 'https://taishoku-info.pages.dev/' },
+  { name: '当日対応', url: 'https://taishoku-info.pages.dev/touji/' },
+];
+
+const faq = [
+  { q: '退職代行に当日依頼すれば、本当にその日に退職できますか?', a: '「当日対応」は依頼当日に会社へ退職意思が伝達されることを指し、雇用契約の終了日とは異なります。民法627条により期間の定めのない雇用は退職申告から2週間で終了できるとされていますが、会社側が合意すれば即日終了も可能とされています。' },
+  { q: '何時までに依頼すれば当日対応してもらえますか?', a: '会社の就業時間内 (一般に9-17時) に業者が連絡できるかが鍵です。多くのサービスでは平日12時までの依頼で当日連絡完了が一般的とされています。深夜・休日対応を公式に明記している業者もあります。' },
+  { q: '当日依頼すると追加料金がかかりますか?', a: '基本料金内で当日対応する業者が多いとされていますが、深夜帯・休日対応で追加料金が発生する場合もあります。依頼前に料金総額・追加費用の有無を必ず確認してください。' },
+  { q: '弁護士・労働組合・民間業者で何が違いますか?', a: '弁護士は法的交渉が可能 (損害賠償リスクや訴訟対応に強い)、労働組合は団体交渉権で有給消化・退職日交渉が可能 (非弁行為にならない)、民間業者は意思伝達のみで交渉権はないとされています。当日対応の可否は3形態とも可能ですが、対応範囲が異なります。' },
+  { q: '退職代行を使うと親や転職先にバレますか?', a: '通常の利用範囲では業者から第三者への連絡は行われないとされていますが、緊急連絡先・社会保険手続き・SNS投稿などで間接的に伝わるケースもあります。詳細は <a href="/oyabare/" class="underline">親バレページ</a> を参照ください。' },
+  { q: '損害賠償を請求されるリスクはありますか?', a: '退職を理由とした損害賠償請求が認められた事例は判例上ごく稀とされています (退職は労働者の権利)。ただし不安がある場合は弁護士運営の業者を選ぶことが推奨されます。' },
+];
+---
+
+<Layout title={title} description={description} publishedDate="2026-05-06" modifiedDate="2026-05-06" breadcrumb={breadcrumb} faq={faq}>
+  <main class="max-w-3xl mx-auto px-4 py-8">
+    <PRBadge />
+
+    <nav class="text-sm text-gray-500 mb-4">
+      <a href="/" class="underline">トップ</a> &gt; 退職代行の当日対応について
+    </nav>
+
+    <h1 class="text-2xl md:text-3xl font-bold mb-4 leading-tight">
+      退職代行で当日退職できるか｜即日対応の現実と民法627条・業者選び3条件
+    </h1>
+
+    <div class="bg-yellow-50 border-2 border-yellow-300 rounded p-3 mb-4 text-sm">
+      <strong>📢 PR表示</strong>: 本ページはアフィリエイト広告（PR）を含みます。本サイトは法律事務所・退職代行業者公式サイトではなく、公開情報を整理した一般論ベースの情報提供サイトです。本記事は法的助言・効果保証ではなく、個別案件の判断は<strong>必ず弁護士・各業者に直接ご相談ください</strong>。
+    </div>
+
+    <p class="text-sm text-gray-600 mb-6">
+      最終確認日: 2026-05-06 / 公開情報の整理であり、特定サービスを推奨するものではありません。<br />
+      運営者: <a href="/operator-info/" class="underline">NY-squared (個人事業)</a> /
+      <a href="/editorial-policy/" class="underline">編集ポリシー</a> /
+      <a href="/privacy-policy/" class="underline">プライバシーポリシー</a>
+    </p>
+
+    <section class="mb-6 bg-blue-50 border-l-4 border-blue-400 p-4 text-sm">
+      <p><strong>結論</strong>: 退職代行の「当日対応」は、依頼当日に会社へ退職意思が伝達されることを指し、雇用契約の終了日とは別の概念です。民法627条 (期間の定めのない雇用は退職申告から2週間で終了) を前提に、会社合意・有給消化・即日合意退職などの組み合わせで実質的な即日退職が成立するケースが多いとされています。</p>
+      <p class="mt-2">ただし、当日対応の可否は<strong>業者形態 (弁護士・労働組合・民間)</strong> と<strong>依頼時刻</strong>で異なります。本記事ではそれぞれの違いと業者選び3条件を整理します。</p>
+    </section>
+
+    <BannerAB pageSlug="touji" position="hero" />
+
+    <h2 class="text-xl font-bold mt-8 mb-3">1. 退職代行「当日対応」の定義と現実</h2>
+
+    <h3 class="text-lg font-bold mt-4 mb-2">1-1. 「当日対応」と「即日退職」は別物</h3>
+    <p class="mb-3 text-sm">
+      「当日対応」は依頼当日に業者が会社へ退職意思を伝達することを指します。一方「即日退職」は雇用契約終了 (出社義務消滅) を指し、両者は法的には別概念です。会社側が合意すれば即日退職可能ですが、合意なしの場合は民法627条の2週間ルールが適用されるとされています。
+    </p>
+
+    <h3 class="text-lg font-bold mt-4 mb-2">1-2. 民法627条と退職の権利</h3>
+    <p class="mb-3 text-sm">
+      <a href="https://elaws.e-gov.go.jp/document?lawid=129AC0000000089" target="_blank" rel="noopener" class="underline">民法第627条</a> は「期間の定めのない雇用契約は、解約申告から2週間後に終了する」と定めています。退職は労働者の権利であり、会社の承認は法的に不要とされています。退職代行はこの「解約申告」を本人に代わって行うサービスです。
+    </p>
+
+    <h3 class="text-lg font-bold mt-4 mb-2">1-3. 当日連絡可能な時間帯の目安</h3>
+    <table class="border-collapse w-full text-sm mb-4">
+      <thead><tr class="bg-gray-100"><th class="border px-3 py-2 text-left">依頼時刻</th><th class="border px-3 py-2 text-left">当日対応の可能性</th></tr></thead>
+      <tbody>
+        <tr><td class="border px-3 py-2">平日 朝〜12:00</td><td class="border px-3 py-2">高 (多くの業者で当日連絡完了)</td></tr>
+        <tr><td class="border px-3 py-2">平日 12:00〜17:00</td><td class="border px-3 py-2">中 (業者・会社の就業時間次第)</td></tr>
+        <tr><td class="border px-3 py-2">平日 17:00以降</td><td class="border px-3 py-2">低 (翌営業日対応が一般的・一部業者は深夜対応)</td></tr>
+        <tr><td class="border px-3 py-2">土日祝</td><td class="border px-3 py-2">受付可・会社連絡は翌営業日が多い</td></tr>
+      </tbody>
+    </table>
+
+    <h2 class="text-xl font-bold mt-8 mb-3">2. 業者形態別の当日対応 (弁護士・労働組合・民間)</h2>
+
+    <table class="border-collapse w-full text-sm mb-4">
+      <thead><tr class="bg-gray-100"><th class="border px-3 py-2 text-left">形態</th><th class="border px-3 py-2 text-left">当日対応</th><th class="border px-3 py-2 text-left">交渉権限</th><th class="border px-3 py-2 text-left">料金目安</th></tr></thead>
+      <tbody>
+        <tr><td class="border px-3 py-2">弁護士運営</td><td class="border px-3 py-2">可</td><td class="border px-3 py-2">法的交渉・訴訟対応可</td><td class="border px-3 py-2">3〜6万円</td></tr>
+        <tr><td class="border px-3 py-2">労働組合運営</td><td class="border px-3 py-2">可</td><td class="border px-3 py-2">団体交渉権 (有給消化・退職日交渉)</td><td class="border px-3 py-2">2〜3万円</td></tr>
+        <tr><td class="border px-3 py-2">民間運営</td><td class="border px-3 py-2">可 (連絡のみ)</td><td class="border px-3 py-2">交渉権なし (非弁行為リスク)</td><td class="border px-3 py-2">1〜3万円</td></tr>
+      </tbody>
+    </table>
+
+    <p class="text-sm mb-3">
+      <strong>選び方の批判的観点</strong>: 民間業者は安価ですが、会社側が「拒否」と回答した場合の交渉ができないため、別途弁護士に依頼が必要となるケースがあります。費用対効果は弁護士・組合系のほうが結果的に高くなることがあるとされています。
+    </p>
+
+    <h2 class="text-xl font-bold mt-8 mb-3">3. 当日対応 業者選び 3条件</h2>
+
+    <ul class="list-disc pl-5 mb-4 text-sm space-y-2">
+      <li><strong>当日対応の実績明示</strong>: 公式サイトで「即日・当日対応」の実績数や具体的な時間帯を明記している業者を選ぶ</li>
+      <li><strong>LINE 24時間相談 + 即日決済</strong>: 深夜帯でも相談可能・クレカ即日払い対応で依頼から連絡完了までの時間短縮</li>
+      <li><strong>業者形態の確認</strong>: 弁護士・労働組合運営なら交渉権限あり (民間業者は非弁行為リスクを念頭に)</li>
+    </ul>
+
+    <p class="text-xs text-gray-600 mb-6">※上記は一般論の整理です。個別案件の判断は弁護士・各業者にご相談ください。</p>
+
+    <BannerAB pageSlug="touji" position="middle" />
+
+    <h2 class="text-xl font-bold mt-8 mb-3">4. 当日依頼の手順 (4 step)</h2>
+
+    <h3 class="text-lg font-bold mt-4 mb-2">Step 1: LINE/電話で無料相談</h3>
+    <p class="mb-3 text-sm">公式サイトまたはLINEで無料相談・当日対応可否確認、料金総額、追加費用有無を確認。</p>
+
+    <h3 class="text-lg font-bold mt-4 mb-2">Step 2: 必要情報の提供</h3>
+    <p class="mb-3 text-sm">勤務先情報、上司氏名、雇用形態、希望退職日、有給残日数、貸与品の返却方法を業者に伝達。</p>
+
+    <h3 class="text-lg font-bold mt-4 mb-2">Step 3: 業者が会社へ連絡</h3>
+    <p class="mb-3 text-sm">業者が依頼者に代わって会社の人事・上司に退職の意思を伝達。電話・メール・FAX等で通知し、返却物・書類受取の方法を調整。最短30分〜数時間が一般的とされています。</p>
+
+    <h3 class="text-lg font-bold mt-4 mb-2">Step 4: 完了報告と退職後手続き</h3>
+    <p class="mb-3 text-sm">連絡完了後、LINEまたはメールで報告。退職後は健康保険切替 (14日以内)、雇用保険申請、住民税確認、源泉徴収票受取確認、私物返却を順次対応。</p>
+
+    <h2 class="text-xl font-bold mt-8 mb-3">5. よくある質問 (FAQ)</h2>
+
+    {faq.map((item) => (
+      <>
+        <h3 class="text-lg font-bold mt-4 mb-2">Q. {item.q}</h3>
+        <p class="mb-3 text-sm" set:html={item.a} />
+      </>
+    ))}
+
+    <section class="mt-8 mb-6 bg-gray-50 border border-gray-200 rounded p-4 text-sm">
+      <h2 class="text-lg font-bold mb-2">まとめ</h2>
+      <p>退職代行の「当日対応」は、①民法627条による退職の権利を前提に、②業者形態 (弁護士・組合・民間) を理解し、③当日対応実績明示 + LINE 即日決済 + 適切な業者形態の3条件を満たす業者を選ぶことで、最短で安全に進められるとされています。不安がある場合は無料相談から検討することが推奨されます。</p>
+    </section>
+
+    <h2 class="text-xl font-bold mt-8 mb-3">出典・参考情報</h2>
+    <ul class="list-disc pl-5 mb-4 text-sm space-y-1">
+      <li><a href="https://elaws.e-gov.go.jp/document?lawid=129AC0000000089" target="_blank" rel="noopener" class="underline">民法第627条 (退職の権利・e-Gov 法令検索)</a></li>
+      <li><a href="https://elaws.e-gov.go.jp/document?lawid=322AC0000000049" target="_blank" rel="noopener" class="underline">労働基準法 (e-Gov)</a></li>
+      <li><a href="https://elaws.e-gov.go.jp/document?lawid=324AC0000000205" target="_blank" rel="noopener" class="underline">弁護士法 第72条 (非弁行為の禁止・e-Gov)</a></li>
+      <li><a href="https://www.mhlw.go.jp/" target="_blank" rel="noopener" class="underline">厚生労働省公式サイト</a></li>
+    </ul>
+
+    <p class="text-xs text-gray-600 mt-6">
+      ※本記事は2026年5月時点の公開情報をもとに作成しています。最新の法令・サービス内容は各公式サイトでご確認ください。
+    </p>
+  </main>
+</Layout>

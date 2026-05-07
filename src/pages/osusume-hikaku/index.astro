@@ -24,6 +24,7 @@ const faq = [
 ];
 
 // ★T-M4 [0yAVu8WAXu] 2026-05-07: 10 軸拡張 + filter 用属性
+// ★T-A14c [0yAVu8WAXu] 2026-05-07: affiliateUrl 追加 (★418 そのまま使用厳守・退職代行Jobs のみ実 ASP 提携)
 // ★273 + ★322 厳守: 社名は抽象記述 (No.1 等の絶対表現は使用しない)・推定値注記必須
 const services = [
   {
@@ -40,6 +41,7 @@ const services = [
     union: '×', unionKey: false,
     atobarai: '△', atobaraiKey: false,
     publicSector: '◯', publicSectorKey: true,
+    affiliateUrl: null,  // ★T-A14c: ASP 未提携・CTA は表示しない
     note: '法的交渉・訴訟対応が可能とされる運営形態。料金は高めだが交渉権限が広い。',
   },
   {
@@ -56,6 +58,7 @@ const services = [
     union: '◯', unionKey: true,
     atobarai: '◯', atobaraiKey: true,
     publicSector: '△', publicSectorKey: false,
+    affiliateUrl: 'https://h.accesstrade.net/sp/cc?rk=0100q2uz00ormk',  // ★T-A14c: 退職代行Jobs (アクセストレード rk・★418 そのまま)
     note: '団体交渉権で有給消化・退職日交渉が可能 (非弁行為にならないとされる) 。料金は中位帯。',
   },
   {
@@ -72,6 +75,7 @@ const services = [
     union: '×', unionKey: false,
     atobarai: '◯', atobaraiKey: true,
     publicSector: '×', publicSectorKey: false,
+    affiliateUrl: null,  // ★T-A14c: ASP 未提携
     note: '弁護士監修体制で意思伝達+周辺サポート。料金は低価格帯。交渉権限は限定。',
   },
   {
@@ -88,6 +92,7 @@ const services = [
     union: '◯', unionKey: true,
     atobarai: '△', atobaraiKey: false,
     publicSector: '×', publicSectorKey: false,
+    affiliateUrl: null,  // ★T-A14c: ASP 未提携
     note: '提携組合経由で交渉対応・料金中位帯・後払い対応は要確認。',
   },
   {
@@ -104,6 +109,7 @@ const services = [
     union: '×', unionKey: false,
     atobarai: '◯', atobaraiKey: true,
     publicSector: '×', publicSectorKey: false,
+    affiliateUrl: null,  // ★T-A14c: ASP 未提携
     note: '24時間 LINE 対応・低価格帯・交渉権限は限定的とされる。',
   },
 ];
@@ -214,7 +220,13 @@ const services = [
               <td class="border px-2 py-2 text-center">{s.union}</td>
               <td class="border px-2 py-2 text-center">{s.atobarai}</td>
               <td class="border px-2 py-2 text-center">{s.publicSector}</td>
-              <td class="border px-2 py-2 text-center"><a href={`#cta-${s.id}`} class="inline-block bg-orange-500 text-white px-3 py-1 rounded text-xs font-bold hover:bg-orange-600">公式</a></td>
+              <td class="border px-2 py-2 text-center">
+                {s.affiliateUrl ? (
+                  <a href={s.affiliateUrl} rel="nofollow sponsored" referrerpolicy="no-referrer-when-downgrade" target="_blank" class="inline-block bg-orange-500 text-white px-3 py-1 rounded text-xs font-bold hover:bg-orange-600">公式 (PR)</a>
+                ) : (
+                  <span class="text-xs text-gray-400">公式要検索</span>
+                )}
+              </td>
             </tr>
           ))}
         </tbody>
@@ -242,7 +254,11 @@ const services = [
             {s.atobaraiKey && <span class="px-2 py-0.5 bg-yellow-100 text-yellow-900 rounded">後払い</span>}
             {s.refundKey && <span class="px-2 py-0.5 bg-pink-100 text-pink-900 rounded">返金保証</span>}
           </div>
-          <a href={`#cta-${s.id}`} class="block text-center bg-orange-500 text-white py-2 rounded font-bold hover:bg-orange-600 transition text-sm">サービス{s.id} 公式サイト (PR)</a>
+          {s.affiliateUrl ? (
+            <a href={s.affiliateUrl} rel="nofollow sponsored" referrerpolicy="no-referrer-when-downgrade" target="_blank" class="block text-center bg-orange-500 text-white py-2 rounded font-bold hover:bg-orange-600 transition text-sm">サービス{s.id} 公式サイト (PR)</a>
+          ) : (
+            <p class="block text-center text-xs text-gray-500 py-2 border border-dashed border-gray-300 rounded">公式要検索 (ASP 未提携)</p>
+          )}
           <p class="text-xs text-gray-500 mt-2">※公式情報をもとに整理 (推定含む)。最新は各公式サイト確認</p>
         </div>
       ))}

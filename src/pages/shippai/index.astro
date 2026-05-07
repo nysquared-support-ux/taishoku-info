@@ -68,7 +68,64 @@ const faq = [
 
     <BannerAB pageSlug="shippai" position="middle" />
 
-    <h2 class="text-xl font-bold mt-8 mb-3">3. よくある質問（FAQ）</h2>
+    <!-- ★T-A13 [0yAVu8WAXu] 2026-05-07: Codex review REVISE 58 主要指摘反映・業者形態別比較表追加 -->
+    <h2 class="text-xl font-bold mt-8 mb-3">3. 業者形態別の比較 (失敗回避軸)</h2>
+    <p class="text-xs text-gray-600 mb-3">※公開情報の整理 (推定値含む)・データ更新日: 2026-05-07・最新情報は各公式サイトで必ずご確認ください</p>
+
+    <div class="overflow-x-auto mb-4">
+      <table class="border-collapse w-full text-xs sm:text-sm">
+        <thead>
+          <tr class="bg-gray-100">
+            <th class="border px-2 py-2 text-left">運営形態</th>
+            <th class="border px-2 py-2 text-left">交渉権限</th>
+            <th class="border px-2 py-2 text-left">料金 (推定)</th>
+            <th class="border px-2 py-2 text-center">即日対応</th>
+            <th class="border px-2 py-2 text-center">返金保証</th>
+            <th class="border px-2 py-2 text-left">失敗リスク傾向</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="border px-2 py-2 font-semibold">弁護士運営</td>
+            <td class="border px-2 py-2">法的交渉・訴訟対応可</td>
+            <td class="border px-2 py-2 whitespace-nowrap">5万円〜 (推定)</td>
+            <td class="border px-2 py-2 text-center">◯</td>
+            <td class="border px-2 py-2 text-center">◯</td>
+            <td class="border px-2 py-2">追加費用が発生する場合あり</td>
+          </tr>
+          <tr>
+            <td class="border px-2 py-2 font-semibold">労働組合運営</td>
+            <td class="border px-2 py-2">団体交渉権 (有給・退職日)</td>
+            <td class="border px-2 py-2 whitespace-nowrap">2.5〜3万円</td>
+            <td class="border px-2 py-2 text-center">◯</td>
+            <td class="border px-2 py-2 text-center">◯</td>
+            <td class="border px-2 py-2">交渉対象外項目に注意</td>
+          </tr>
+          <tr>
+            <td class="border px-2 py-2 font-semibold">民間運営 (弁護士監修)</td>
+            <td class="border px-2 py-2">意思伝達のみ (監修体制あり)</td>
+            <td class="border px-2 py-2 whitespace-nowrap">2〜2.5万円</td>
+            <td class="border px-2 py-2 text-center">◯</td>
+            <td class="border px-2 py-2 text-center">△</td>
+            <td class="border px-2 py-2">交渉案件で対応不可となるリスク</td>
+          </tr>
+          <tr>
+            <td class="border px-2 py-2 font-semibold">民間運営 (監修なし)</td>
+            <td class="border px-2 py-2">意思伝達のみ・非弁行為リスク</td>
+            <td class="border px-2 py-2 whitespace-nowrap">1〜2万円</td>
+            <td class="border px-2 py-2 text-center">△</td>
+            <td class="border px-2 py-2 text-center">×</td>
+            <td class="border px-2 py-2">違法業者・連絡途絶のリスクあり</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <p class="text-sm mb-4">
+      失敗回避の観点では <strong>労働組合運営または弁護士運営</strong> が交渉権限の点で安全とされています。詳細な業者比較は <a href="/osusume-hikaku/" class="underline">退職代行 おすすめ比較</a> ページを参照ください。
+    </p>
+
+    <h2 class="text-xl font-bold mt-8 mb-3">4. よくある質問（FAQ）</h2>
 
     <h3 class="text-lg font-bold mt-4 mb-2">Q1. 失敗した場合の相談窓口は？</h3>
     <p class="mb-3 text-sm">
@@ -79,7 +136,13 @@ const faq = [
     <ul class="list-disc pl-5 mb-4 text-sm space-y-1">
       <li><a href="https://www.mhlw.go.jp/" target="_blank" rel="noopener" class="underline">厚生労働省</a> (労働相談窓口情報)</li>
       <li><a href="https://www.houterasu.or.jp/" target="_blank" rel="noopener" class="underline">法テラス</a> (法律相談窓口)</li>
-      <li>各退職代行業者公式サイト (運営実績・料金・返金保証条件)</li>
+      <li><a href="https://elaws.e-gov.go.jp/document?lawid=324AC0000000205" target="_blank" rel="noopener" class="underline">弁護士法第72条 (非弁行為の禁止・e-Gov)</a></li>
+      <li><a href="https://elaws.e-gov.go.jp/document?lawid=129AC0000000089" target="_blank" rel="noopener" class="underline">民法第627条 (退職の権利・e-Gov)</a></li>
+      <li>各退職代行業者公式サイト (運営実績・料金・返金保証条件)・最新情報は各公式サイトでご確認ください</li>
     </ul>
+
+    <p class="text-xs text-gray-500 mt-4">
+      ※本記事は2026年5月時点の公開情報をもとに作成。最新の法令・サービス内容は各公式サイトでご確認ください。失敗例・リスク評価は一般的傾向を整理したもので、個別案件の判断は弁護士・各業者へご相談ください。
+    </p>
   </main>
 </Layout>

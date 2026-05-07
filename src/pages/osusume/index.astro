@@ -1,0 +1,411 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import PRBadge from '../../components/PRBadge.astro';
+import BannerAB from '../../components/BannerAB.astro';
+
+// ★T-A30c-impl [0yAVu8WAXu] 2026-05-07: 「退職代行 おすすめ」Hub LP 新規 (sv 22,200・★T-A30 大発見・★326 DRY osusume-hikaku 流用)
+const title = '退職代行 おすすめ｜選び方 5 ステップ + 5 社比較 + ランキング 完全ガイド（2026年版・PR）';
+const description = '退職代行を初めて検討する方へ。選び方 5 ステップ・5 社比較表・ランキング・利用フローを 1 ページに統合した包括ガイド。料金・運営形態・即日対応・返金保証・口コミの 5 軸で中立的に整理した情報提供記事です（PR・アフィリエイト広告を含みます）。個別判断は弁護士・各業者へご相談ください。';
+
+const breadcrumb = [
+  { name: 'ホーム', url: 'https://taishoku-info.pages.dev/' },
+  { name: '退職代行', url: 'https://taishoku-info.pages.dev/' },
+  { name: 'おすすめガイド', url: 'https://taishoku-info.pages.dev/osusume/' },
+];
+
+const faq = [
+  { q: '退職代行はどんな人におすすめですか?', a: '上司に直接退職を伝えにくい、引き止めが強い、即日退職したい方などが主な対象とされています。雇用形態を問わず利用できる業者が多いです。' },
+  { q: '弁護士・労働組合・民間業者で何が違いますか?', a: '弁護士は法的交渉が可能 (損害賠償・訴訟対応)、労働組合は団体交渉権で有給・退職日交渉が可能、民間業者は意思伝達のみで交渉権はないとされています。' },
+  { q: '料金の相場はいくらですか?', a: '弁護士運営は3〜6万円、労働組合運営は2〜3万円、民間運営は1〜3万円が一般的とされています (各社公式情報・推定)。' },
+  { q: '即日対応してもらえますか?', a: '多くの業者で平日12時までの依頼で当日連絡完了が一般的とされています。詳細は <a href="/touji/" class="underline">当日対応ページ</a> を参照ください。' },
+  { q: 'LINEでの相談は可能ですか?', a: '24時間 LINE 相談に対応する業者が一般的とされています。深夜・早朝でも相談可能なサービスが多いです。' },
+  { q: '失敗するケースはありますか?', a: '会社が拒否した場合に民間業者は交渉権がなく対応不可・追加費用請求等のケースが報告されています。詳細は <a href="/shippai/" class="underline">失敗例ページ</a> を参照ください。' },
+  { q: '親バレや転職先への影響は?', a: '通常の利用では業者から第三者連絡は行われないとされていますが、緊急連絡先・社会保険手続き・SNS で間接的に伝わる場合があります。<a href="/oyabare/" class="underline">親バレページ</a> 参照。' },
+  { q: '退職後の書類受取はどうなりますか?', a: '離職票・源泉徴収票は会社から直接郵送されるのが一般的です。住所変更が必要な場合は事前に業者に相談してください。' },
+];
+
+// ★T-M4 [0yAVu8WAXu] 2026-05-07: 10 軸拡張 + filter 用属性
+// ★T-A14c [0yAVu8WAXu] 2026-05-07: affiliateUrl 追加 (★418 そのまま使用厳守・退職代行Jobs のみ実 ASP 提携)
+// ★273 + ★322 厳守: 社名は抽象記述 (No.1 等の絶対表現は使用しない)・推定値注記必須
+const services = [
+  {
+    id: 'A',
+    name: 'サービスA (弁護士運営)',
+    type: '弁護士運営',
+    typeKey: 'lawyer',  // filter key
+    price: '5万円〜 (推定)',
+    priceMin: 50000,    // filter 用数値
+    sokujitsu: '◯', sokujitsuKey: true,
+    line: '◯', lineKey: true,
+    line24h: '△', line24hKey: false,
+    refund: '◯', refundKey: true,
+    union: '×', unionKey: false,
+    atobarai: '△', atobaraiKey: false,
+    publicSector: '◯', publicSectorKey: true,
+    affiliateUrl: null,  // ★T-A14c: ASP 未提携・CTA は表示しない
+    note: '法的交渉・訴訟対応が可能とされる運営形態。料金は高めだが交渉権限が広い。',
+  },
+  {
+    id: 'B',
+    name: 'サービスB (労働組合運営)',
+    type: '労働組合運営',
+    typeKey: 'union',
+    price: '3万円 (推定)',
+    priceMin: 30000,
+    sokujitsu: '◯', sokujitsuKey: true,
+    line: '◯', lineKey: true,
+    line24h: '◯', line24hKey: true,
+    refund: '◯', refundKey: true,
+    union: '◯', unionKey: true,
+    atobarai: '◯', atobaraiKey: true,
+    publicSector: '△', publicSectorKey: false,
+    affiliateUrl: 'https://h.accesstrade.net/sp/cc?rk=0100q2uz00ormk',  // ★T-A14c: 退職代行Jobs (アクセストレード rk・★418 そのまま)
+    note: '団体交渉権で有給消化・退職日交渉が可能 (非弁行為にならないとされる) 。料金は中位帯。',
+  },
+  {
+    id: 'C',
+    name: 'サービスC (民間 + 弁護士監修)',
+    type: '民間 (弁護士監修)',
+    typeKey: 'private-lawyer',
+    price: '2.5万円 (推定)',
+    priceMin: 25000,
+    sokujitsu: '◯', sokujitsuKey: true,
+    line: '◯', lineKey: true,
+    line24h: '◯', line24hKey: true,
+    refund: '△', refundKey: false,
+    union: '×', unionKey: false,
+    atobarai: '◯', atobaraiKey: true,
+    publicSector: '×', publicSectorKey: false,
+    affiliateUrl: null,  // ★T-A14c: ASP 未提携
+    note: '弁護士監修体制で意思伝達+周辺サポート。料金は低価格帯。交渉権限は限定。',
+  },
+  {
+    id: 'D',
+    name: 'サービスD (組合提携)',
+    type: '民間 (組合提携)',
+    typeKey: 'private-union',
+    price: '2.7万円 (推定)',
+    priceMin: 27000,
+    sokujitsu: '◯', sokujitsuKey: true,
+    line: '◯', lineKey: true,
+    line24h: '◯', line24hKey: true,
+    refund: '◯', refundKey: true,
+    union: '◯', unionKey: true,
+    atobarai: '△', atobaraiKey: false,
+    publicSector: '×', publicSectorKey: false,
+    affiliateUrl: null,  // ★T-A14c: ASP 未提携
+    note: '提携組合経由で交渉対応・料金中位帯・後払い対応は要確認。',
+  },
+  {
+    id: 'E',
+    name: 'サービスE (24時間対応)',
+    type: '民間運営',
+    typeKey: 'private',
+    price: '2万円 (推定)',
+    priceMin: 20000,
+    sokujitsu: '◯', sokujitsuKey: true,
+    line: '◯ 24h', lineKey: true,
+    line24h: '◯', line24hKey: true,
+    refund: '◯', refundKey: true,
+    union: '×', unionKey: false,
+    atobarai: '◯', atobaraiKey: true,
+    publicSector: '×', publicSectorKey: false,
+    affiliateUrl: null,  // ★T-A14c: ASP 未提携
+    note: '24時間 LINE 対応・低価格帯・交渉権限は限定的とされる。',
+  },
+];
+---
+
+<Layout title={title} description={description} publishedDate="2026-05-06" modifiedDate="2026-05-07" breadcrumb={breadcrumb} faq={faq}>
+  <!-- ★T-M4 [0yAVu8WAXu]: sticky filter UI -->
+  <div id="filter-bar" class="sticky top-0 z-40 bg-white border-b-2 border-blue-200 shadow-md">
+    <div class="max-w-4xl mx-auto px-4 py-3">
+      <div class="flex flex-wrap items-center gap-2 text-xs sm:text-sm">
+        <span class="font-bold text-blue-900 mr-1">🔎 絞込:</span>
+        <button data-filter-type="all" class="filter-btn-type px-2 py-1 rounded border border-blue-400 bg-blue-100 text-blue-900 font-semibold" aria-pressed="true">全件</button>
+        <button data-filter-type="lawyer" class="filter-btn-type px-2 py-1 rounded border border-gray-300 hover:bg-blue-50">弁護士運営</button>
+        <button data-filter-type="union" class="filter-btn-type px-2 py-1 rounded border border-gray-300 hover:bg-blue-50">労働組合</button>
+        <button data-filter-type="private-lawyer,private-union,private" class="filter-btn-type px-2 py-1 rounded border border-gray-300 hover:bg-blue-50">民間</button>
+        <span class="border-l mx-2 h-5"></span>
+        <label class="inline-flex items-center gap-1 cursor-pointer"><input type="checkbox" id="filter-line24h" class="filter-cb" /><span>24時間 LINE</span></label>
+        <label class="inline-flex items-center gap-1 cursor-pointer"><input type="checkbox" id="filter-union" class="filter-cb" /><span>有給交渉可</span></label>
+        <label class="inline-flex items-center gap-1 cursor-pointer"><input type="checkbox" id="filter-atobarai" class="filter-cb" /><span>後払い対応</span></label>
+        <label class="inline-flex items-center gap-1 cursor-pointer"><input type="checkbox" id="filter-public" class="filter-cb" /><span>公務員対応</span></label>
+        <span class="ml-auto text-xs text-gray-500" id="filter-count" aria-live="polite">5/5 件表示中</span>
+      </div>
+    </div>
+  </div>
+
+  <main class="max-w-4xl mx-auto px-4 py-8">
+    <PRBadge />
+
+    <nav class="text-sm text-gray-500 mb-4">
+      <a href="/" class="underline">トップ</a> &gt; 退職代行 おすすめガイド
+    </nav>
+
+    <h1 class="text-2xl md:text-3xl font-bold mb-4 leading-tight" style="color: #1E3A8A;">
+      退職代行 おすすめ｜選び方 5 ステップ + 5 社比較 + ランキング 完全ガイド
+    </h1>
+
+    <div class="bg-yellow-50 border-2 border-yellow-300 rounded p-3 mb-4 text-sm">
+      <strong>📢 PR表示</strong>: 本ページはアフィリエイト広告（PR）を含みます。本サイトは法律事務所・退職代行業者公式サイトではなく、公開情報を整理した一般論ベースの情報提供サイトです。本記事は法的助言・効果保証ではなく、個別案件の判断は<strong>必ず弁護士・各業者に直接ご相談ください</strong>。
+    </div>
+
+    <p class="text-sm text-gray-600 mb-6">
+      最終確認日: 2026-05-06 / 公開情報の整理・特定サービスを推奨するものではありません。<br />
+      運営者: <a href="/operator-info/" class="underline">NY-squared (個人事業)</a> /
+      <a href="/editorial-policy/" class="underline">編集ポリシー</a> /
+      <a href="/privacy-policy/" class="underline">プライバシーポリシー</a>
+    </p>
+
+    <section class="mb-6 bg-blue-50 border-l-4 border-blue-400 p-4 text-sm">
+      <p><strong>結論 (5 ステップで選ぶ)</strong>:</p>
+      <ol class="list-decimal pl-5 mt-2 space-y-1">
+        <li><strong>運営主体を絞る</strong>: 弁護士運営 (法的交渉可) / 労働組合運営 (有給・退職日交渉可) / 民間運営 (意思伝達のみ) の 3 種類</li>
+        <li><strong>料金 + 追加費用を確認</strong>: 「一律料金」だけでなく書類郵送費・交渉費の有無</li>
+        <li><strong>即日対応の実績</strong>: 平日 12 時までの依頼で当日連絡可否</li>
+        <li><strong>LINE 24時間相談</strong>: 深夜・早朝の対応可否</li>
+        <li><strong>返金保証 + 口コミ</strong>: 公式保証条件 + 第三者公開口コミ</li>
+      </ol>
+      <p class="mt-2">本記事は<strong>包括ガイド</strong>です。詳細な比較表は <a href="/osusume-hikaku/" class="underline font-bold">5 社比較ページ</a>・ランキング詳細は <a href="/osusume-ranking/" class="underline font-bold">ランキングページ</a> もご参照ください。</p>
+    </section>
+
+    <BannerAB pageSlug="osusume" position="hero" />
+
+    <h2 class="text-xl font-bold mt-8 mb-3" style="color: #1E3A8A;">1. 退職代行とは (定義と 3 種類)</h2>
+    <p class="mb-3 text-sm">
+      退職代行は、依頼者に代わって会社に退職の意思を伝えるサービスです。<a href="https://elaws.e-gov.go.jp/document?lawid=129AC0000000089" target="_blank" rel="noopener" class="underline">民法第627条</a> により期間の定めのない雇用契約は退職申告から2週間で終了できるとされており、退職代行はこの「申告」を本人に代わって行います。運営主体は次の3種類に分類されます。
+    </p>
+    <ul class="list-disc pl-5 mb-4 text-sm space-y-1">
+      <li><strong>弁護士運営</strong>: 法的交渉・訴訟対応が可能。料金 3〜6 万円が相場 (推定)。</li>
+      <li><strong>労働組合運営</strong>: 団体交渉権で有給消化・退職日交渉が可能 (非弁行為にならない)。料金 2〜3 万円。</li>
+      <li><strong>民間運営</strong>: 意思伝達のみ・交渉権なし。料金 1〜3 万円・非弁行為リスクに注意。</li>
+    </ul>
+
+    <h2 class="text-xl font-bold mt-8 mb-3" style="color: #1E3A8A;">2. 失敗しない選び方 (5 基準)</h2>
+    <ol class="list-decimal pl-5 mb-4 text-sm space-y-2">
+      <li><strong>運営主体の確認</strong>: 弁護士・労働組合は交渉権限あり。民間業者は<a href="https://elaws.e-gov.go.jp/document?lawid=324AC0000000205" target="_blank" rel="noopener" class="underline">弁護士法第72条</a> の非弁行為リスク認識を。</li>
+      <li><strong>料金総額の明示</strong>: 「一律 ¥XX,XXX」のみでなく追加費用 (書類郵送費・交渉費) の有無を確認。</li>
+      <li><strong>即日対応の実績</strong>: 公式サイトに当日対応の時間帯・実績数を明記しているか。</li>
+      <li><strong>LINE 24時間相談</strong>: 深夜帯対応・即日決済 (クレカ等) で連絡完了までを短縮。</li>
+      <li><strong>返金保証・口コミ実績</strong>: 公式サイトの保証条件 + 第三者公開口コミ・実績データを確認。</li>
+    </ol>
+
+    <h2 class="text-xl font-bold mt-8 mb-3" style="color: #1E3A8A;">3. おすすめ 5社比較表 (10 軸・絞込対応)</h2>
+    <p class="text-xs text-gray-600 mb-3">※価格・内容は各社公式情報の整理 (推定値含む)・データ更新日: 2026-05-07・上部フィルタで絞込可能</p>
+
+    <div class="overflow-x-auto mb-4">
+      <table class="border-collapse w-full text-xs sm:text-sm" id="comparison-table">
+        <thead>
+          <tr class="bg-gray-100">
+            <th class="border px-2 py-2 text-left">サービス</th>
+            <th class="border px-2 py-2 text-left">運営</th>
+            <th class="border px-2 py-2 text-left">料金</th>
+            <th class="border px-2 py-2 text-center">即日</th>
+            <th class="border px-2 py-2 text-center">24h LINE</th>
+            <th class="border px-2 py-2 text-center">返金</th>
+            <th class="border px-2 py-2 text-center">有給交渉</th>
+            <th class="border px-2 py-2 text-center">後払い</th>
+            <th class="border px-2 py-2 text-center">公務員</th>
+            <th class="border px-2 py-2 text-center">CTA</th>
+          </tr>
+        </thead>
+        <tbody>
+          {services.map((s) => (
+            <tr
+              class="comparison-row"
+              data-type={s.typeKey}
+              data-line24h={String(s.line24hKey)}
+              data-union={String(s.unionKey)}
+              data-atobarai={String(s.atobaraiKey)}
+              data-public={String(s.publicSectorKey)}
+            >
+              <td class="border px-2 py-2 font-semibold">{s.name}</td>
+              <td class="border px-2 py-2">{s.type}</td>
+              <td class="border px-2 py-2 whitespace-nowrap">{s.price}</td>
+              <td class="border px-2 py-2 text-center">{s.sokujitsu}</td>
+              <td class="border px-2 py-2 text-center">{s.line24h}</td>
+              <td class="border px-2 py-2 text-center">{s.refund}</td>
+              <td class="border px-2 py-2 text-center">{s.union}</td>
+              <td class="border px-2 py-2 text-center">{s.atobarai}</td>
+              <td class="border px-2 py-2 text-center">{s.publicSector}</td>
+              <td class="border px-2 py-2 text-center">
+                {s.affiliateUrl ? (
+                  <a href={s.affiliateUrl} rel="nofollow sponsored" referrerpolicy="no-referrer-when-downgrade" target="_blank" class="inline-block bg-orange-500 text-white px-3 py-1 rounded text-xs font-bold hover:bg-orange-600">公式 (PR)</a>
+                ) : (
+                  <span class="text-xs text-gray-400">公式要検索</span>
+                )}
+              </td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+      <p id="empty-state" class="hidden text-center text-gray-500 py-6 text-sm">該当するサービスがありません。フィルタを緩めてください。</p>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-6">
+      {services.map((s) => (
+        <div
+          class="service-card border-2 border-gray-200 rounded-lg p-4 hover:shadow-md transition"
+          data-type={s.typeKey}
+          data-line24h={String(s.line24hKey)}
+          data-union={String(s.unionKey)}
+          data-atobarai={String(s.atobaraiKey)}
+          data-public={String(s.publicSectorKey)}
+        >
+          <h3 class="text-base font-bold mb-1" style="color: #1E3A8A;">{s.name}</h3>
+          <p class="text-xs text-gray-500 mb-2">{s.type} / {s.price}</p>
+          <p class="text-sm mb-3">{s.note}</p>
+          <div class="flex flex-wrap gap-1 mb-3 text-xs">
+            {s.sokujitsuKey && <span class="px-2 py-0.5 bg-blue-100 text-blue-900 rounded">即日</span>}
+            {s.line24hKey && <span class="px-2 py-0.5 bg-blue-100 text-blue-900 rounded">24h LINE</span>}
+            {s.unionKey && <span class="px-2 py-0.5 bg-green-100 text-green-900 rounded">有給交渉</span>}
+            {s.atobaraiKey && <span class="px-2 py-0.5 bg-yellow-100 text-yellow-900 rounded">後払い</span>}
+            {s.refundKey && <span class="px-2 py-0.5 bg-pink-100 text-pink-900 rounded">返金保証</span>}
+          </div>
+          {s.affiliateUrl ? (
+            <a href={s.affiliateUrl} rel="nofollow sponsored" referrerpolicy="no-referrer-when-downgrade" target="_blank" class="block text-center bg-orange-500 text-white py-2 rounded font-bold hover:bg-orange-600 transition text-sm">サービス{s.id} 公式サイト (PR)</a>
+          ) : (
+            <p class="block text-center text-xs text-gray-500 py-2 border border-dashed border-gray-300 rounded">公式要検索 (ASP 未提携)</p>
+          )}
+          <p class="text-xs text-gray-500 mt-2">※公式情報をもとに整理 (推定含む)。最新は各公式サイト確認</p>
+        </div>
+      ))}
+    </div>
+
+    <p class="text-xs text-gray-500 mb-6">※各社 CTA リンクは A8.net・アクセストレード等の提携承認後に有効化されます (本ページは比較情報の整理段階・<a href="/operator-info/" class="underline">運営情報</a>)。</p>
+
+    <BannerAB pageSlug="osusume" position="middle" />
+
+    <h2 class="text-xl font-bold mt-8 mb-3" style="color: #1E3A8A;">4. 利用の流れ (4 ステップ)</h2>
+    <ol class="list-decimal pl-5 mb-4 text-sm space-y-2">
+      <li><strong>無料相談</strong>: LINE/電話で当日対応可否・料金総額・追加費用有無を確認</li>
+      <li><strong>必要情報の提供</strong>: 勤務先情報・上司氏名・雇用形態・希望退職日・有給残日数を業者へ伝達</li>
+      <li><strong>業者から会社へ連絡</strong>: 退職意思伝達 + 返却物・書類受取調整 (最短30分〜数時間)</li>
+      <li><strong>完了報告 + 退職後手続き</strong>: 健康保険切替 (14日以内)・雇用保険申請・源泉徴収票受取</li>
+    </ol>
+
+    <h2 class="text-xl font-bold mt-8 mb-3" style="color: #1E3A8A;">5. よくある失敗例 (3 例)</h2>
+    <ul class="list-disc pl-5 mb-4 text-sm space-y-2">
+      <li><strong>民間業者で会社拒否時の対応不可</strong>: 弁護士・労働組合系を選ぶことで回避可能</li>
+      <li><strong>追加費用請求</strong>: 「一律料金」謳うも書類郵送費・交渉費の追加・契約前に総額確認必須</li>
+      <li><strong>有給消化できず</strong>: 民間業者は交渉権なし・有給消化希望なら労働組合系/弁護士系</li>
+    </ul>
+    <p class="text-xs text-gray-600 mb-6">詳細は <a href="/shippai/" class="underline">失敗例ページ</a> 参照</p>
+
+    <h2 class="text-xl font-bold mt-8 mb-3" style="color: #1E3A8A;">6. よくある質問 (FAQ)</h2>
+    {faq.map((item) => (
+      <>
+        <h3 class="text-lg font-bold mt-4 mb-2">Q. {item.q}</h3>
+        <p class="mb-3 text-sm" set:html={item.a} />
+      </>
+    ))}
+
+    <h2 class="text-xl font-bold mt-8 mb-3" style="color: #1E3A8A;">7. 編集ポリシー (情報源・更新日・著者情報)</h2>
+    <ul class="list-disc pl-5 mb-4 text-sm space-y-1">
+      <li><strong>情報源</strong>: 各社公式サイト・公開情報・法令 (e-Gov 法令検索) を一次情報として整理</li>
+      <li><strong>データ更新</strong>: 公開後も定期的に確認・最新情報は各公式サイトでご確認ください</li>
+      <li><strong>運営者</strong>: <a href="/operator-info/" class="underline">NY-squared (個人事業)</a></li>
+      <li><strong>編集方針</strong>: <a href="/editorial-policy/" class="underline">編集ポリシー</a> 参照</li>
+    </ul>
+
+    <section class="mt-8 mb-6 bg-gray-50 border border-gray-200 rounded p-4 text-sm">
+      <h2 class="text-lg font-bold mb-2">まとめ</h2>
+      <p>退職代行を選ぶ際は ①運営主体 (弁護士/組合/民間) の交渉権限 ②料金総額 ③即日対応の実績 ④LINE 24時間相談 ⑤返金保証・口コミ の 5 基準で比較検討することが推奨されます。不安がある場合は無料相談から検討を始めるのが一般的とされています。</p>
+    </section>
+
+    <h2 class="text-xl font-bold mt-8 mb-3" style="color: #1E3A8A;">出典・参考情報</h2>
+    <ul class="list-disc pl-5 mb-4 text-sm space-y-1">
+      <li><a href="https://elaws.e-gov.go.jp/document?lawid=129AC0000000089" target="_blank" rel="noopener" class="underline">民法第627条 (退職の権利・e-Gov)</a></li>
+      <li><a href="https://elaws.e-gov.go.jp/document?lawid=324AC0000000205" target="_blank" rel="noopener" class="underline">弁護士法第72条 (非弁行為の禁止・e-Gov)</a></li>
+      <li><a href="https://elaws.e-gov.go.jp/document?lawid=322AC0000000049" target="_blank" rel="noopener" class="underline">労働基準法 (e-Gov)</a></li>
+      <li><a href="https://www.mhlw.go.jp/" target="_blank" rel="noopener" class="underline">厚生労働省公式サイト</a></li>
+    </ul>
+
+    <p class="text-xs text-gray-600 mt-6">
+      ※本記事は2026年5月時点の公開情報をもとに作成。最新の法令・サービス内容は各公式サイトでご確認ください。各社の正式名・公式 URL・特商法表記等は提携承認後に反映します (PR・アフィリエイト広告を含みます)。
+    </p>
+  </main>
+
+  <!-- ★T-M4 [0yAVu8WAXu]: Filter UI JS (vanilla・Astro <script> client side) -->
+  <script is:inline>
+    (function () {
+      const state = {
+        type: 'all', // 'all' | 'lawyer' | 'union' | 'private-lawyer,private-union,private'
+        line24h: false,
+        union: false,
+        atobarai: false,
+        public: false,
+      };
+
+      const typeBtns = document.querySelectorAll('.filter-btn-type');
+      const cbLine24h = document.getElementById('filter-line24h');
+      const cbUnion = document.getElementById('filter-union');
+      const cbAtobarai = document.getElementById('filter-atobarai');
+      const cbPublic = document.getElementById('filter-public');
+      const rows = document.querySelectorAll('.comparison-row');
+      const cards = document.querySelectorAll('.service-card');
+      const countEl = document.getElementById('filter-count');
+      const emptyEl = document.getElementById('empty-state');
+
+      function matches(el) {
+        const type = el.getAttribute('data-type');
+        const allowedTypes = state.type === 'all' ? null : state.type.split(',');
+        if (allowedTypes && !allowedTypes.includes(type)) return false;
+        if (state.line24h && el.getAttribute('data-line24h') !== 'true') return false;
+        if (state.union && el.getAttribute('data-union') !== 'true') return false;
+        if (state.atobarai && el.getAttribute('data-atobarai') !== 'true') return false;
+        if (state.public && el.getAttribute('data-public') !== 'true') return false;
+        return true;
+      }
+
+      function applyFilter() {
+        let visibleCount = 0;
+        rows.forEach((r) => {
+          const ok = matches(r);
+          r.style.display = ok ? '' : 'none';
+          if (ok) visibleCount++;
+        });
+        cards.forEach((c) => {
+          c.style.display = matches(c) ? '' : 'none';
+        });
+        const total = rows.length;
+        if (countEl) countEl.textContent = visibleCount + '/' + total + ' 件表示中';
+        if (emptyEl) emptyEl.classList.toggle('hidden', visibleCount > 0);
+      }
+
+      typeBtns.forEach((btn) => {
+        btn.addEventListener('click', () => {
+          const t = btn.getAttribute('data-filter-type') || 'all';
+          state.type = t;
+          typeBtns.forEach((b) => {
+            const active = b === btn;
+            b.classList.toggle('bg-blue-100', active);
+            b.classList.toggle('text-blue-900', active);
+            b.classList.toggle('font-semibold', active);
+            b.classList.toggle('border-blue-400', active);
+            b.classList.toggle('border-gray-300', !active);
+            b.setAttribute('aria-pressed', active ? 'true' : 'false');
+          });
+          applyFilter();
+        });
+      });
+
+      [
+        [cbLine24h, 'line24h'],
+        [cbUnion, 'union'],
+        [cbAtobarai, 'atobarai'],
+        [cbPublic, 'public'],
+      ].forEach(([el, key]) => {
+        if (!el) return;
+        el.addEventListener('change', () => {
+          state[key] = el.checked;
+          applyFilter();
+        });
+      });
+
+      // 初期表示
+      applyFilter();
+    })();
+  </script>
+</Layout>

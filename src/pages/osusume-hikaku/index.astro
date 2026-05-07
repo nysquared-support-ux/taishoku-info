@@ -176,28 +176,77 @@ const services = [
       <li><strong>返金保証・口コミ実績</strong>: 公式サイトの保証条件 + 第三者公開口コミ・実績データを確認。</li>
     </ol>
 
-    <h2 class="text-xl font-bold mt-8 mb-3" style="color: #1E3A8A;">3. おすすめ 5社比較表</h2>
-    <p class="text-xs text-gray-600 mb-3">※価格・内容は各社公式情報の整理 (推定値含む)・データ更新日: 2026-05-06</p>
+    <h2 class="text-xl font-bold mt-8 mb-3" style="color: #1E3A8A;">3. おすすめ 5社比較表 (10 軸・絞込対応)</h2>
+    <p class="text-xs text-gray-600 mb-3">※価格・内容は各社公式情報の整理 (推定値含む)・データ更新日: 2026-05-07・上部フィルタで絞込可能</p>
 
     <div class="overflow-x-auto mb-4">
-      <table class="border-collapse w-full text-sm">
-        <thead><tr class="bg-gray-100"><th class="border px-3 py-2 text-left">サービス</th><th class="border px-3 py-2 text-left">運営</th><th class="border px-3 py-2 text-left">料金 (推定)</th><th class="border px-3 py-2 text-left">即日</th><th class="border px-3 py-2 text-left">LINE</th><th class="border px-3 py-2 text-left">返金保証</th></tr></thead>
+      <table class="border-collapse w-full text-xs sm:text-sm" id="comparison-table">
+        <thead>
+          <tr class="bg-gray-100">
+            <th class="border px-2 py-2 text-left">サービス</th>
+            <th class="border px-2 py-2 text-left">運営</th>
+            <th class="border px-2 py-2 text-left">料金</th>
+            <th class="border px-2 py-2 text-center">即日</th>
+            <th class="border px-2 py-2 text-center">24h LINE</th>
+            <th class="border px-2 py-2 text-center">返金</th>
+            <th class="border px-2 py-2 text-center">有給交渉</th>
+            <th class="border px-2 py-2 text-center">後払い</th>
+            <th class="border px-2 py-2 text-center">公務員</th>
+            <th class="border px-2 py-2 text-center">CTA</th>
+          </tr>
+        </thead>
         <tbody>
           {services.map((s) => (
-            <tr><td class="border px-3 py-2">{s.name}</td><td class="border px-3 py-2">{s.type}</td><td class="border px-3 py-2">{s.price}</td><td class="border px-3 py-2">{s.sokujitsu}</td><td class="border px-3 py-2">{s.line}</td><td class="border px-3 py-2">{s.refund}</td></tr>
+            <tr
+              class="comparison-row"
+              data-type={s.typeKey}
+              data-line24h={String(s.line24hKey)}
+              data-union={String(s.unionKey)}
+              data-atobarai={String(s.atobaraiKey)}
+              data-public={String(s.publicSectorKey)}
+            >
+              <td class="border px-2 py-2 font-semibold">{s.name}</td>
+              <td class="border px-2 py-2">{s.type}</td>
+              <td class="border px-2 py-2 whitespace-nowrap">{s.price}</td>
+              <td class="border px-2 py-2 text-center">{s.sokujitsu}</td>
+              <td class="border px-2 py-2 text-center">{s.line24h}</td>
+              <td class="border px-2 py-2 text-center">{s.refund}</td>
+              <td class="border px-2 py-2 text-center">{s.union}</td>
+              <td class="border px-2 py-2 text-center">{s.atobarai}</td>
+              <td class="border px-2 py-2 text-center">{s.publicSector}</td>
+              <td class="border px-2 py-2 text-center"><a href={`#cta-${s.id}`} class="inline-block bg-orange-500 text-white px-3 py-1 rounded text-xs font-bold hover:bg-orange-600">公式</a></td>
+            </tr>
           ))}
         </tbody>
       </table>
+      <p id="empty-state" class="hidden text-center text-gray-500 py-6 text-sm">該当するサービスがありません。フィルタを緩めてください。</p>
     </div>
 
-    {services.map((s) => (
-      <>
-        <h3 class="text-lg font-bold mt-6 mb-2">{s.name}</h3>
-        <p class="text-sm mb-2"><strong>運営形態</strong>: {s.type} / <strong>料金</strong>: {s.price} / <strong>特徴</strong>: {s.note}</p>
-        <p class="text-xs text-gray-600 mb-3">※公式サイト情報をもとに整理 (推定含む)。最新情報は各公式サイトで必ずご確認ください。</p>
-        <p class="mb-4"><a href={`#cta-${s.id}`} class="inline-block bg-orange-500 text-white px-4 py-2 rounded font-bold hover:bg-orange-600 transition">サービス{s.id} 公式サイト (PR)</a></p>
-      </>
-    ))}
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-6">
+      {services.map((s) => (
+        <div
+          class="service-card border-2 border-gray-200 rounded-lg p-4 hover:shadow-md transition"
+          data-type={s.typeKey}
+          data-line24h={String(s.line24hKey)}
+          data-union={String(s.unionKey)}
+          data-atobarai={String(s.atobaraiKey)}
+          data-public={String(s.publicSectorKey)}
+        >
+          <h3 class="text-base font-bold mb-1" style="color: #1E3A8A;">{s.name}</h3>
+          <p class="text-xs text-gray-500 mb-2">{s.type} / {s.price}</p>
+          <p class="text-sm mb-3">{s.note}</p>
+          <div class="flex flex-wrap gap-1 mb-3 text-xs">
+            {s.sokujitsuKey && <span class="px-2 py-0.5 bg-blue-100 text-blue-900 rounded">即日</span>}
+            {s.line24hKey && <span class="px-2 py-0.5 bg-blue-100 text-blue-900 rounded">24h LINE</span>}
+            {s.unionKey && <span class="px-2 py-0.5 bg-green-100 text-green-900 rounded">有給交渉</span>}
+            {s.atobaraiKey && <span class="px-2 py-0.5 bg-yellow-100 text-yellow-900 rounded">後払い</span>}
+            {s.refundKey && <span class="px-2 py-0.5 bg-pink-100 text-pink-900 rounded">返金保証</span>}
+          </div>
+          <a href={`#cta-${s.id}`} class="block text-center bg-orange-500 text-white py-2 rounded font-bold hover:bg-orange-600 transition text-sm">サービス{s.id} 公式サイト (PR)</a>
+          <p class="text-xs text-gray-500 mt-2">※公式情報をもとに整理 (推定含む)。最新は各公式サイト確認</p>
+        </div>
+      ))}
+    </div>
 
     <p class="text-xs text-gray-500 mb-6">※各社 CTA リンクは A8.net・アクセストレード等の提携承認後に有効化されます (本ページは比較情報の整理段階・<a href="/operator-info/" class="underline">運営情報</a>)。</p>
 
@@ -252,4 +301,86 @@ const services = [
       ※本記事は2026年5月時点の公開情報をもとに作成。最新の法令・サービス内容は各公式サイトでご確認ください。各社の正式名・公式 URL・特商法表記等は提携承認後に反映します (PR・アフィリエイト広告を含みます)。
     </p>
   </main>
+
+  <!-- ★T-M4 [0yAVu8WAXu]: Filter UI JS (vanilla・Astro <script> client side) -->
+  <script is:inline>
+    (function () {
+      const state = {
+        type: 'all', // 'all' | 'lawyer' | 'union' | 'private-lawyer,private-union,private'
+        line24h: false,
+        union: false,
+        atobarai: false,
+        public: false,
+      };
+
+      const typeBtns = document.querySelectorAll('.filter-btn-type');
+      const cbLine24h = document.getElementById('filter-line24h');
+      const cbUnion = document.getElementById('filter-union');
+      const cbAtobarai = document.getElementById('filter-atobarai');
+      const cbPublic = document.getElementById('filter-public');
+      const rows = document.querySelectorAll('.comparison-row');
+      const cards = document.querySelectorAll('.service-card');
+      const countEl = document.getElementById('filter-count');
+      const emptyEl = document.getElementById('empty-state');
+
+      function matches(el) {
+        const type = el.getAttribute('data-type');
+        const allowedTypes = state.type === 'all' ? null : state.type.split(',');
+        if (allowedTypes && !allowedTypes.includes(type)) return false;
+        if (state.line24h && el.getAttribute('data-line24h') !== 'true') return false;
+        if (state.union && el.getAttribute('data-union') !== 'true') return false;
+        if (state.atobarai && el.getAttribute('data-atobarai') !== 'true') return false;
+        if (state.public && el.getAttribute('data-public') !== 'true') return false;
+        return true;
+      }
+
+      function applyFilter() {
+        let visibleCount = 0;
+        rows.forEach((r) => {
+          const ok = matches(r);
+          r.style.display = ok ? '' : 'none';
+          if (ok) visibleCount++;
+        });
+        cards.forEach((c) => {
+          c.style.display = matches(c) ? '' : 'none';
+        });
+        const total = rows.length;
+        if (countEl) countEl.textContent = visibleCount + '/' + total + ' 件表示中';
+        if (emptyEl) emptyEl.classList.toggle('hidden', visibleCount > 0);
+      }
+
+      typeBtns.forEach((btn) => {
+        btn.addEventListener('click', () => {
+          const t = btn.getAttribute('data-filter-type') || 'all';
+          state.type = t;
+          typeBtns.forEach((b) => {
+            const active = b === btn;
+            b.classList.toggle('bg-blue-100', active);
+            b.classList.toggle('text-blue-900', active);
+            b.classList.toggle('font-semibold', active);
+            b.classList.toggle('border-blue-400', active);
+            b.classList.toggle('border-gray-300', !active);
+            b.setAttribute('aria-pressed', active ? 'true' : 'false');
+          });
+          applyFilter();
+        });
+      });
+
+      [
+        [cbLine24h, 'line24h'],
+        [cbUnion, 'union'],
+        [cbAtobarai, 'atobarai'],
+        [cbPublic, 'public'],
+      ].forEach(([el, key]) => {
+        if (!el) return;
+        el.addEventListener('change', () => {
+          state[key] = el.checked;
+          applyFilter();
+        });
+      });
+
+      // 初期表示
+      applyFilter();
+    })();
+  </script>
 </Layout>

@@ -72,16 +72,56 @@ const faq = [
     <h2 class="text-xl font-bold mt-8 mb-3" style="color: #1E3A8A;">2. 業者形態別の交渉力比較</h2>
     <p class="text-sm mb-3">対応できる範囲は業者の種類によって異なります。確実な有給消化を希望する場合、業者形態の選択が決定的です。</p>
 
+    <!-- ★T-A13 [0yAVu8WAXu] 2026-05-07: Codex review REVISE 58 主要指摘反映・比較軸 4→6 拡張 -->
     <div class="overflow-x-auto mb-4">
-      <table class="border-collapse w-full text-sm">
-        <thead><tr class="bg-gray-100"><th class="border px-3 py-2 text-left">業者タイプ</th><th class="border px-3 py-2 text-left">交渉力</th><th class="border px-3 py-2 text-left">有給消化拒否時の対応</th><th class="border px-3 py-2 text-left">料金 (推定)</th></tr></thead>
+      <table class="border-collapse w-full text-xs sm:text-sm">
+        <thead>
+          <tr class="bg-gray-100">
+            <th class="border px-2 py-2 text-left">業者タイプ</th>
+            <th class="border px-2 py-2 text-left">交渉力</th>
+            <th class="border px-2 py-2 text-left">有給拒否時対応</th>
+            <th class="border px-2 py-2 text-left">料金 (推定)</th>
+            <th class="border px-2 py-2 text-center">即日対応</th>
+            <th class="border px-2 py-2 text-center">返金保証</th>
+          </tr>
+        </thead>
         <tbody>
-          <tr><td class="border px-3 py-2"><strong>弁護士運営</strong></td><td class="border px-3 py-2">◎ 最高</td><td class="border px-3 py-2">法的措置 (損害賠償請求等) まで対応可</td><td class="border px-3 py-2">3〜6 万円</td></tr>
-          <tr><td class="border px-3 py-2"><strong>労働組合運営</strong></td><td class="border px-3 py-2">◯ 高い</td><td class="border px-3 py-2">団体交渉権で会社に圧力をかけられる</td><td class="border px-3 py-2">2〜3 万円</td></tr>
-          <tr><td class="border px-3 py-2">民間運営</td><td class="border px-3 py-2">△ 低い</td><td class="border px-3 py-2">「伝達」のみ・拒否時の交渉は困難</td><td class="border px-3 py-2">1〜3 万円</td></tr>
+          <tr>
+            <td class="border px-2 py-2"><strong>弁護士運営</strong></td>
+            <td class="border px-2 py-2">◎ 最高</td>
+            <td class="border px-2 py-2">法的措置 (損害賠償請求等) まで対応可</td>
+            <td class="border px-2 py-2 whitespace-nowrap">3〜6 万円</td>
+            <td class="border px-2 py-2 text-center">◯</td>
+            <td class="border px-2 py-2 text-center">◯</td>
+          </tr>
+          <tr>
+            <td class="border px-2 py-2"><strong>労働組合運営</strong></td>
+            <td class="border px-2 py-2">◯ 高い</td>
+            <td class="border px-2 py-2">団体交渉権で会社に圧力をかけられる</td>
+            <td class="border px-2 py-2 whitespace-nowrap">2〜3 万円</td>
+            <td class="border px-2 py-2 text-center">◯</td>
+            <td class="border px-2 py-2 text-center">◯</td>
+          </tr>
+          <tr>
+            <td class="border px-2 py-2">民間運営 (弁護士監修)</td>
+            <td class="border px-2 py-2">△ 限定</td>
+            <td class="border px-2 py-2">「伝達」+ 監修体制経由・交渉権なし</td>
+            <td class="border px-2 py-2 whitespace-nowrap">2〜2.5 万円</td>
+            <td class="border px-2 py-2 text-center">◯</td>
+            <td class="border px-2 py-2 text-center">△</td>
+          </tr>
+          <tr>
+            <td class="border px-2 py-2">民間運営 (監修なし)</td>
+            <td class="border px-2 py-2">× 弱い</td>
+            <td class="border px-2 py-2">「伝達」のみ・拒否時の交渉は困難・非弁行為リスク</td>
+            <td class="border px-2 py-2 whitespace-nowrap">1〜2 万円</td>
+            <td class="border px-2 py-2 text-center">△</td>
+            <td class="border px-2 py-2 text-center">×</td>
+          </tr>
         </tbody>
       </table>
     </div>
+    <p class="text-xs text-gray-600 mb-2">※公開情報の整理 (推定値含む)・データ更新日: 2026-05-07・最新情報は各公式サイトで必ずご確認ください</p>
     <p class="text-sm mb-3">
       有給消化を確実にしたい場合は、<strong>労働組合型または弁護士型</strong>を選ぶことが重要です。詳細な業者比較は <a href="/osusume-hikaku/" class="underline">退職代行 おすすめ比較</a> ページを参照ください。
     </p>

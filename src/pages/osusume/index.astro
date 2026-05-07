@@ -296,12 +296,27 @@ const services = [
 
     <BannerAB pageSlug="osusume" position="middle" />
 
-    <h2 class="text-xl font-bold mt-8 mb-3" style="color: #1E3A8A;">4. 利用の流れ (4 ステップ)</h2>
-    <ol class="list-decimal pl-5 mb-4 text-sm space-y-2">
-      <li><strong>無料相談</strong>: LINE/電話で当日対応可否・料金総額・追加費用有無を確認</li>
-      <li><strong>必要情報の提供</strong>: 勤務先情報・上司氏名・雇用形態・希望退職日・有給残日数を業者へ伝達</li>
-      <li><strong>業者から会社へ連絡</strong>: 退職意思伝達 + 返却物・書類受取調整 (最短30分〜数時間)</li>
-      <li><strong>完了報告 + 退職後手続き</strong>: 健康保険切替 (14日以内)・雇用保険申請・源泉徴収票受取</li>
+    <h2 class="text-xl font-bold mt-8 mb-3" style="color: #1E3A8A;">4. 利用の流れ (4 ステップ・深化版)</h2>
+    <p class="mb-3 text-sm">
+      退職代行の利用は一般的に次の 4 ステップで進行します。各ステップの所要時間と確認事項を理解しておくことで、想定外のトラブルを回避できます。
+    </p>
+    <ol class="list-decimal pl-5 mb-4 text-sm space-y-3">
+      <li>
+        <strong>STEP 1: 無料相談</strong> (5-30 分)<br />
+        LINE または電話で、①当日対応可否 ②料金総額 (基本料金 + 追加費用の有無) ③即日連絡可能な時間帯 ④返金保証条件 ⑤有給消化交渉対応の可否を確認。多くの業者が無料相談を提供しており、複数業者を比較した上で契約することが推奨されます。深夜帯・休日も LINE で 24 時間相談可能な業者を選ぶことで心理的限界に達した状態でも即時相談可能とされています。
+      </li>
+      <li>
+        <strong>STEP 2: 必要情報の提供</strong> (10-30 分・契約後)<br />
+        勤務先名・本社住所・上司氏名 (直属 + 人事担当)・雇用形態 (正社員/契約/派遣/アルバイト)・希望退職日・有給残日数・退職理由 (一般的な「一身上の都合」で可)・返却物 (社員証・PC・制服等) を業者へ伝達。料金支払いは多くの業者でクレジットカード決済・銀行振込・後払い (一部業者) に対応しています。
+      </li>
+      <li>
+        <strong>STEP 3: 業者から会社へ連絡</strong> (最短 30 分〜数時間・依頼当日)<br />
+        業者が会社の担当部署 (人事・直属上司) へ電話または書面で連絡。退職意思の伝達 + 返却物の郵送調整 + 書類 (離職票・源泉徴収票・年金手帳) の受取方法を調整。労働組合運営・弁護士運営の場合はこの段階で有給消化・退職日交渉も実施されます。会社側が拒否した場合の対応は運営形態により大きく異なるため、★T-A13 体現の業者選定が重要です。
+      </li>
+      <li>
+        <strong>STEP 4: 完了報告 + 退職後手続き</strong> (退職日まで + 退職後 14-30 日)<br />
+        業者から「会社対応完了」の報告。退職日までは有給消化期間 (残日数による) で自宅待機。退職後は ①健康保険切替 (退職日翌日から 14 日以内・任意継続 or 国民健康保険 or 家族扶養) ②雇用保険 (失業給付) 申請 ③源泉徴収票受取・転職先提出 (一般的に退職日後 1-2 週間で郵送) ④年金手帳受取 ⑤住民税の精算 (12 月迄の所得分は会社の特別徴収から普通徴収へ切替) の手続きが必要とされています。
+      </li>
     </ol>
 
     <h2 class="text-xl font-bold mt-8 mb-3" style="color: #1E3A8A;">5. よくある失敗例 + 回避策 (5 例・★T-A30c-impl-full 拡張)</h2>
@@ -351,7 +366,64 @@ const services = [
     </div>
     <p class="text-xs text-gray-600 mb-6">※詳細は <a href="/shippai/" class="underline">失敗例ページ</a> で 7 パターン全件を解説しています。</p>
 
-    <h2 class="text-xl font-bold mt-8 mb-3" style="color: #1E3A8A;">6. よくある質問 (FAQ)</h2>
+    <!-- ★T-A30c-impl-full 完全版 [0yAVu8WAXu] 2026-05-07: 新規 h2 6 業者形態別比較表 (★T-A13 体現) -->
+    <h2 class="text-xl font-bold mt-8 mb-3" style="color: #1E3A8A;">6. 業者形態別の比較 (運営主体 4 形態 × 6 軸)</h2>
+    <p class="mb-3 text-sm">
+      退職代行業者の運営形態は法的根拠と交渉権限が大きく異なり、選択がそのまま「失敗回避度」に直結します。本セクションでは 4 形態 × 6 軸の比較表で、各形態の強み・弱み・推奨利用シーンを整理します。
+    </p>
+    <div class="overflow-x-auto mb-4">
+      <table class="border-collapse w-full text-xs sm:text-sm">
+        <thead>
+          <tr class="bg-gray-100">
+            <th class="border px-2 py-2 text-left">運営形態</th>
+            <th class="border px-2 py-2 text-left">交渉権限</th>
+            <th class="border px-2 py-2 text-left">料金 (推定)</th>
+            <th class="border px-2 py-2 text-center">即日対応</th>
+            <th class="border px-2 py-2 text-center">返金保証</th>
+            <th class="border px-2 py-2 text-left">推奨利用シーン</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="border px-2 py-2 font-semibold">弁護士運営</td>
+            <td class="border px-2 py-2">法的交渉・訴訟対応可</td>
+            <td class="border px-2 py-2 whitespace-nowrap">5万円〜</td>
+            <td class="border px-2 py-2 text-center">◯</td>
+            <td class="border px-2 py-2 text-center">◯</td>
+            <td class="border px-2 py-2">未払い賃金請求・損害賠償交渉・パワハラ慰謝料請求が必要なケース</td>
+          </tr>
+          <tr>
+            <td class="border px-2 py-2 font-semibold">労働組合運営</td>
+            <td class="border px-2 py-2">団体交渉権 (有給・退職日)</td>
+            <td class="border px-2 py-2 whitespace-nowrap">2.5〜3万円</td>
+            <td class="border px-2 py-2 text-center">◯</td>
+            <td class="border px-2 py-2 text-center">◯</td>
+            <td class="border px-2 py-2">有給消化・退職日交渉が必要 + 費用対効果重視 (最普及)</td>
+          </tr>
+          <tr>
+            <td class="border px-2 py-2 font-semibold">民間運営 (弁護士監修)</td>
+            <td class="border px-2 py-2">意思伝達のみ + 監修体制</td>
+            <td class="border px-2 py-2 whitespace-nowrap">2〜2.5万円</td>
+            <td class="border px-2 py-2 text-center">◯</td>
+            <td class="border px-2 py-2 text-center">△</td>
+            <td class="border px-2 py-2">退職拒否リスク低 + 周辺サポート希望時</td>
+          </tr>
+          <tr>
+            <td class="border px-2 py-2 font-semibold">民間運営 (監修なし)</td>
+            <td class="border px-2 py-2">意思伝達のみ・非弁リスク</td>
+            <td class="border px-2 py-2 whitespace-nowrap">1〜2万円</td>
+            <td class="border px-2 py-2 text-center">△</td>
+            <td class="border px-2 py-2 text-center">×</td>
+            <td class="border px-2 py-2">単純退職のみ・違法業者リスク警戒必須</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="text-sm mb-4">
+      <strong>失敗回避の観点では <a href="/shippai/" class="underline">労働組合運営または弁護士運営</a></strong> が交渉権限の点で安全とされ、特に「会社が退職を拒否する可能性」「有給消化を全日確実に取りたい」「未払い残業代を請求したい」等のニーズがある場合は弁護士運営または労働組合運営を選ぶことが推奨されます。一方、民間運営 (監修なし) は最安だが、<a href="https://elaws.e-gov.go.jp/document?lawid=324AC0000000205" target="_blank" rel="noopener" class="underline">弁護士法第72条</a> の非弁行為リスクがあり、トラブル発生時の対応力に大きな差が出るケースが報告されています。
+    </p>
+
+    <h2 class="text-xl font-bold mt-8 mb-3" style="color: #1E3A8A;">7. よくある質問 (FAQ)</h2>
     {faq.map((item) => (
       <>
         <h3 class="text-lg font-bold mt-4 mb-2">Q. {item.q}</h3>
@@ -359,7 +431,7 @@ const services = [
       </>
     ))}
 
-    <h2 class="text-xl font-bold mt-8 mb-3" style="color: #1E3A8A;">7. 編集ポリシー (情報源・更新日・著者情報)</h2>
+    <h2 class="text-xl font-bold mt-8 mb-3" style="color: #1E3A8A;">8. 編集ポリシー (情報源・更新日・著者情報)</h2>
     <ul class="list-disc pl-5 mb-4 text-sm space-y-1">
       <li><strong>情報源</strong>: 各社公式サイト・公開情報・法令 (e-Gov 法令検索) を一次情報として整理</li>
       <li><strong>データ更新</strong>: 公開後も定期的に確認・最新情報は各公式サイトでご確認ください</li>

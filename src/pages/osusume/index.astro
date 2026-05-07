@@ -285,13 +285,52 @@ const services = [
       <li><strong>完了報告 + 退職後手続き</strong>: 健康保険切替 (14日以内)・雇用保険申請・源泉徴収票受取</li>
     </ol>
 
-    <h2 class="text-xl font-bold mt-8 mb-3" style="color: #1E3A8A;">5. よくある失敗例 (3 例)</h2>
-    <ul class="list-disc pl-5 mb-4 text-sm space-y-2">
-      <li><strong>民間業者で会社拒否時の対応不可</strong>: 弁護士・労働組合系を選ぶことで回避可能</li>
-      <li><strong>追加費用請求</strong>: 「一律料金」謳うも書類郵送費・交渉費の追加・契約前に総額確認必須</li>
-      <li><strong>有給消化できず</strong>: 民間業者は交渉権なし・有給消化希望なら労働組合系/弁護士系</li>
-    </ul>
-    <p class="text-xs text-gray-600 mb-6">詳細は <a href="/shippai/" class="underline">失敗例ページ</a> 参照</p>
+    <h2 class="text-xl font-bold mt-8 mb-3" style="color: #1E3A8A;">5. よくある失敗例 + 回避策 (5 例・★T-A30c-impl-full 拡張)</h2>
+    <div class="overflow-x-auto mb-4">
+      <table class="border-collapse w-full text-xs sm:text-sm">
+        <thead>
+          <tr class="bg-gray-100">
+            <th class="border px-2 py-2 text-left">#</th>
+            <th class="border px-2 py-2 text-left">失敗パターン</th>
+            <th class="border px-2 py-2 text-left">原因 (一般的とされる)</th>
+            <th class="border px-2 py-2 text-left">回避策</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="border px-2 py-2 font-semibold">1</td>
+            <td class="border px-2 py-2">民間業者で会社拒否時の対応不可</td>
+            <td class="border px-2 py-2">民間業者は<a href="https://elaws.e-gov.go.jp/document?lawid=324AC0000000205" target="_blank" rel="noopener" class="underline">弁護士法第72条</a>により交渉権なし・「伝達」のみ</td>
+            <td class="border px-2 py-2">弁護士運営または労働組合運営を選択</td>
+          </tr>
+          <tr>
+            <td class="border px-2 py-2 font-semibold">2</td>
+            <td class="border px-2 py-2">追加費用請求</td>
+            <td class="border px-2 py-2">「一律料金」謳う業者でも書類郵送費・交渉費・出張費等の追加</td>
+            <td class="border px-2 py-2">契約前に総額確認・見積もり書面取得</td>
+          </tr>
+          <tr>
+            <td class="border px-2 py-2 font-semibold">3</td>
+            <td class="border px-2 py-2">有給消化できず</td>
+            <td class="border px-2 py-2">民間業者は<a href="https://elaws.e-gov.go.jp/document?lawid=322AC0000000049" target="_blank" rel="noopener" class="underline">労働基準法第39条</a>の有給消化交渉権なし</td>
+            <td class="border px-2 py-2">労働組合運営 (団体交渉権あり) or 弁護士運営を選択</td>
+          </tr>
+          <tr>
+            <td class="border px-2 py-2 font-semibold">4</td>
+            <td class="border px-2 py-2">親バレ・会社からの連絡</td>
+            <td class="border px-2 py-2">緊急連絡先・社会保険手続きで間接的に伝わるケース</td>
+            <td class="border px-2 py-2">事前に緊急連絡先変更を会社に申請・<a href="/oyabare/" class="underline">親バレページ</a>参照</td>
+          </tr>
+          <tr>
+            <td class="border px-2 py-2 font-semibold">5</td>
+            <td class="border px-2 py-2">即日対応できず</td>
+            <td class="border px-2 py-2">平日 12 時以降の依頼・休日依頼で会社営業時間外に当たる</td>
+            <td class="border px-2 py-2">平日午前中の依頼推奨・<a href="/touji/" class="underline">即日・当日対応ページ</a>参照</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="text-xs text-gray-600 mb-6">※詳細は <a href="/shippai/" class="underline">失敗例ページ</a> で 7 パターン全件を解説しています。</p>
 
     <h2 class="text-xl font-bold mt-8 mb-3" style="color: #1E3A8A;">6. よくある質問 (FAQ)</h2>
     {faq.map((item) => (

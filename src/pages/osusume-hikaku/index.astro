@@ -23,16 +23,112 @@ const faq = [
   { q: '退職後の書類受取はどうなりますか?', a: '離職票・源泉徴収票は会社から直接郵送されるのが一般的です。住所変更が必要な場合は事前に業者に相談してください。' },
 ];
 
+// ★T-M4 [0yAVu8WAXu] 2026-05-07: 10 軸拡張 + filter 用属性
+// ★273 + ★322 厳守: 社名は抽象記述 (No.1 等の絶対表現は使用しない)・推定値注記必須
 const services = [
-  { id: 'A', name: 'サービスA (弁護士運営)', type: '弁護士運営', price: '5万円〜 (推定)', sokujitsu: '◯', line: '◯', refund: '◯', note: '法的交渉可・訴訟対応' },
-  { id: 'B', name: 'サービスB (労働組合運営)', type: '労働組合運営', price: '3万円 (推定)', sokujitsu: '◯', line: '◯', refund: '◯', note: '有給消化交渉可' },
-  { id: 'C', name: 'サービスC (民間 + 弁護士監修)', type: '民間 (弁護士監修)', price: '2.5万円 (推定)', sokujitsu: '◯', line: '◯', refund: '△', note: '監修体制あり' },
-  { id: 'D', name: 'サービスD (組合提携)', type: '民間 (組合提携)', price: '2.7万円 (推定)', sokujitsu: '◯', line: '◯', refund: '◯', note: '提携組合経由で交渉' },
-  { id: 'E', name: 'サービスE (24時間対応)', type: '民間運営', price: '2万円 (推定)', sokujitsu: '◯', line: '◯ 24h', refund: '◯', note: '24時間 LINE 対応' },
+  {
+    id: 'A',
+    name: 'サービスA (弁護士運営)',
+    type: '弁護士運営',
+    typeKey: 'lawyer',  // filter key
+    price: '5万円〜 (推定)',
+    priceMin: 50000,    // filter 用数値
+    sokujitsu: '◯', sokujitsuKey: true,
+    line: '◯', lineKey: true,
+    line24h: '△', line24hKey: false,
+    refund: '◯', refundKey: true,
+    union: '×', unionKey: false,
+    atobarai: '△', atobaraiKey: false,
+    publicSector: '◯', publicSectorKey: true,
+    note: '法的交渉・訴訟対応が可能とされる運営形態。料金は高めだが交渉権限が広い。',
+  },
+  {
+    id: 'B',
+    name: 'サービスB (労働組合運営)',
+    type: '労働組合運営',
+    typeKey: 'union',
+    price: '3万円 (推定)',
+    priceMin: 30000,
+    sokujitsu: '◯', sokujitsuKey: true,
+    line: '◯', lineKey: true,
+    line24h: '◯', line24hKey: true,
+    refund: '◯', refundKey: true,
+    union: '◯', unionKey: true,
+    atobarai: '◯', atobaraiKey: true,
+    publicSector: '△', publicSectorKey: false,
+    note: '団体交渉権で有給消化・退職日交渉が可能 (非弁行為にならないとされる) 。料金は中位帯。',
+  },
+  {
+    id: 'C',
+    name: 'サービスC (民間 + 弁護士監修)',
+    type: '民間 (弁護士監修)',
+    typeKey: 'private-lawyer',
+    price: '2.5万円 (推定)',
+    priceMin: 25000,
+    sokujitsu: '◯', sokujitsuKey: true,
+    line: '◯', lineKey: true,
+    line24h: '◯', line24hKey: true,
+    refund: '△', refundKey: false,
+    union: '×', unionKey: false,
+    atobarai: '◯', atobaraiKey: true,
+    publicSector: '×', publicSectorKey: false,
+    note: '弁護士監修体制で意思伝達+周辺サポート。料金は低価格帯。交渉権限は限定。',
+  },
+  {
+    id: 'D',
+    name: 'サービスD (組合提携)',
+    type: '民間 (組合提携)',
+    typeKey: 'private-union',
+    price: '2.7万円 (推定)',
+    priceMin: 27000,
+    sokujitsu: '◯', sokujitsuKey: true,
+    line: '◯', lineKey: true,
+    line24h: '◯', line24hKey: true,
+    refund: '◯', refundKey: true,
+    union: '◯', unionKey: true,
+    atobarai: '△', atobaraiKey: false,
+    publicSector: '×', publicSectorKey: false,
+    note: '提携組合経由で交渉対応・料金中位帯・後払い対応は要確認。',
+  },
+  {
+    id: 'E',
+    name: 'サービスE (24時間対応)',
+    type: '民間運営',
+    typeKey: 'private',
+    price: '2万円 (推定)',
+    priceMin: 20000,
+    sokujitsu: '◯', sokujitsuKey: true,
+    line: '◯ 24h', lineKey: true,
+    line24h: '◯', line24hKey: true,
+    refund: '◯', refundKey: true,
+    union: '×', unionKey: false,
+    atobarai: '◯', atobaraiKey: true,
+    publicSector: '×', publicSectorKey: false,
+    note: '24時間 LINE 対応・低価格帯・交渉権限は限定的とされる。',
+  },
 ];
 ---
 
-<Layout title={title} description={description} publishedDate="2026-05-06" modifiedDate="2026-05-06" breadcrumb={breadcrumb} faq={faq}>
+<Layout title={title} description={description} publishedDate="2026-05-06" modifiedDate="2026-05-07" breadcrumb={breadcrumb} faq={faq}>
+  <!-- ★T-M4 [0yAVu8WAXu]: sticky filter UI -->
+  <div id="filter-bar" class="sticky top-0 z-40 bg-white border-b-2 border-blue-200 shadow-md">
+    <div class="max-w-4xl mx-auto px-4 py-3">
+      <div class="flex flex-wrap items-center gap-2 text-xs sm:text-sm">
+        <span class="font-bold text-blue-900 mr-1">🔎 絞込:</span>
+        <button data-filter-type="all" class="filter-btn-type px-2 py-1 rounded border border-blue-400 bg-blue-100 text-blue-900 font-semibold" aria-pressed="true">全件</button>
+        <button data-filter-type="lawyer" class="filter-btn-type px-2 py-1 rounded border border-gray-300 hover:bg-blue-50">弁護士運営</button>
+        <button data-filter-type="union" class="filter-btn-type px-2 py-1 rounded border border-gray-300 hover:bg-blue-50">労働組合</button>
+        <button data-filter-type="private-lawyer,private-union,private" class="filter-btn-type px-2 py-1 rounded border border-gray-300 hover:bg-blue-50">民間</button>
+        <span class="border-l mx-2 h-5"></span>
+        <label class="inline-flex items-center gap-1 cursor-pointer"><input type="checkbox" id="filter-line24h" class="filter-cb" /><span>24時間 LINE</span></label>
+        <label class="inline-flex items-center gap-1 cursor-pointer"><input type="checkbox" id="filter-union" class="filter-cb" /><span>有給交渉可</span></label>
+        <label class="inline-flex items-center gap-1 cursor-pointer"><input type="checkbox" id="filter-atobarai" class="filter-cb" /><span>後払い対応</span></label>
+        <label class="inline-flex items-center gap-1 cursor-pointer"><input type="checkbox" id="filter-public" class="filter-cb" /><span>公務員対応</span></label>
+        <span class="ml-auto text-xs text-gray-500" id="filter-count" aria-live="polite">5/5 件表示中</span>
+      </div>
+    </div>
+  </div>
+
   <main class="max-w-4xl mx-auto px-4 py-8">
     <PRBadge />
 

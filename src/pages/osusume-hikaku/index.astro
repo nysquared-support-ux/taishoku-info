@@ -292,29 +292,46 @@ const services = [
       </>
     ))}
 
-    <h2 class="text-xl font-bold mt-8 mb-3" style="color: #1E3A8A;">7. 編集ポリシー (情報源・更新日・著者情報)</h2>
-    <ul class="list-disc pl-5 mb-4 text-sm space-y-1">
-      <li><strong>情報源</strong>: 各社公式サイト・公開情報・法令 (e-Gov 法令検索) を一次情報として整理</li>
-      <li><strong>データ更新</strong>: 公開後も定期的に確認・最新情報は各公式サイトでご確認ください</li>
-      <li><strong>運営者</strong>: <a href="/operator-info/" class="underline">NY-squared (個人事業)</a></li>
-      <li><strong>編集方針</strong>: <a href="/editorial-policy/" class="underline">編集ポリシー</a> 参照</li>
+    <h2 class="text-xl font-bold mt-8 mb-3" style="color: #1E3A8A;">7. 編集ポリシー (情報源・更新日・E-E-A-T)</h2>
+    <ul class="list-disc pl-5 mb-4 text-sm space-y-2">
+      <li><strong>情報源</strong>: 政府公式 e-Gov 法令検索 (民法・労働基準法・弁護士法) ・厚生労働省公式サイト ・各退職代行業者公式サイト ・退職代行関連の公開統計情報</li>
+      <li><strong>編集方針</strong>: 一次情報優先 (法令は e-Gov 直接リンク・運営形態は公式サイト確認) ・断定表現を避け推定値・公開情報の整理として記述</li>
+      <li><strong>更新頻度</strong>: 月次レビュー (法令改正・サービス内容変更時は随時更新)</li>
+      <li><strong>運営者</strong>: NY-squared (個人事業) <a href="/operator-info/" class="underline">運営情報ページ</a> 参照</li>
+      <li><strong>E-E-A-T 4 原則</strong>: Experience (退職代行関連の公開情報整理) ・Expertise (法令引用 + 業界公開統計) ・Authoritativeness (政府公式 + 業者公式の一次情報のみ) ・Trustworthiness (PR 表記 + 推定値明示 + 法的助言ではない注記)</li>
     </ul>
 
     <section class="mt-8 mb-6 bg-gray-50 border border-gray-200 rounded p-4 text-sm">
       <h2 class="text-lg font-bold mb-2">まとめ</h2>
-      <p>退職代行を選ぶ際は ①運営主体 (弁護士/組合/民間) の交渉権限 ②料金総額 ③即日対応の実績 ④LINE 24時間相談 ⑤返金保証・口コミ の 5 基準で比較検討することが推奨されます。不安がある場合は無料相談から検討を始めるのが一般的とされています。</p>
+      <p class="mb-3">
+        退職代行を選ぶ際は ①運営主体 (弁護士/組合/民間) の交渉権限 ②料金総額 (追加費用含む) ③即日対応の実績 ④LINE 24 時間相談 ⑤返金保証・口コミ の 5 基準で比較検討することが推奨されます。会社からの拒否リスク・有給消化交渉の必要性・心理的限界の度合いに応じて、弁護士運営・労働組合運営・民間運営から最適な形態を選ぶことが重要です。
+      </p>
+      <p class="mb-3">
+        <strong>状況別の推奨形態</strong>: ① <strong>会社拒否リスク高 (パワハラ等)</strong> → 弁護士運営または労働組合運営 (交渉権限あり) ② <strong>有給消化必須</strong> → 労働組合運営 (労基法 39 条交渉可) ③ <strong>料金優先・トラブル少なめ</strong> → 民間運営 (¥10,000-30,000 帯) ④ <strong>即日対応希望</strong> → 24h LINE + 即日実績明示業者。判断軸を絞ることで業者選定の効率が大きく向上します。
+      </p>
+      <p class="mb-3">
+        <strong>失敗回避の行動 3 ステップ</strong>: <strong>STEP 1</strong> 自分の状況確認 (運営形態の優先度・必要な権限・予算上限) → <strong>STEP 2</strong> 上記比較表で 2-3 社に絞込 → <strong>STEP 3</strong> 各社の無料相談 (LINE/電話) で対応可否を確認し、見積書面取得後に最終決定。複数社の無料相談を並行活用することで、選定の確実性が高まります。
+      </p>
+      <p class="text-xs text-gray-600">
+        ※即日対応は <a href="/touji/" class="underline">即日・当日対応ページ</a> ・親バレ回避は <a href="/oyabare/" class="underline">親バレページ</a> ・有給消化は <a href="/yukyu-shouka/" class="underline">有給消化ページ</a> ・失敗例は <a href="/shippai/" class="underline">失敗例ページ</a> もあわせてご参照ください。本記事は法的助言ではなく、特定業者を推奨するものでもありません。
+      </p>
     </section>
 
-    <h2 class="text-xl font-bold mt-8 mb-3" style="color: #1E3A8A;">出典・参考情報</h2>
-    <ul class="list-disc pl-5 mb-4 text-sm space-y-1">
-      <li><a href="https://elaws.e-gov.go.jp/document?lawid=129AC0000000089" target="_blank" rel="noopener" class="underline">民法第627条 (退職の権利・e-Gov)</a></li>
-      <li><a href="https://elaws.e-gov.go.jp/document?lawid=324AC0000000205" target="_blank" rel="noopener" class="underline">弁護士法第72条 (非弁行為の禁止・e-Gov)</a></li>
-      <li><a href="https://elaws.e-gov.go.jp/document?lawid=322AC0000000049" target="_blank" rel="noopener" class="underline">労働基準法 (e-Gov)</a></li>
-      <li><a href="https://www.mhlw.go.jp/" target="_blank" rel="noopener" class="underline">厚生労働省公式サイト</a></li>
+    <h2 class="text-xl font-bold mt-8 mb-3" style="color: #1E3A8A;">出典・参考情報 (法令・公的機関・公開情報)</h2>
+    <p class="mb-3 text-sm">
+      本記事の信頼性確保のため、以下の一次情報を出典として参照しています。法令引用は政府公式 e-Gov 法令検索データベースから直接リンク、公的機関情報は各省庁公式サイトのみを採用しています。
+    </p>
+    <ul class="list-disc pl-5 mb-4 text-sm space-y-2">
+      <li><a href="https://elaws.e-gov.go.jp/document?lawid=129AC0000000089" target="_blank" rel="noopener" class="underline">民法第 627 条 (退職の権利・e-Gov)</a> — 期間の定めのない雇用契約の解約・本記事の退職権利の根拠</li>
+      <li><a href="https://elaws.e-gov.go.jp/document?lawid=324AC0000000205" target="_blank" rel="noopener" class="underline">弁護士法第 72 条 (非弁行為の禁止・e-Gov)</a> — 民間業者の交渉権限制限の根拠</li>
+      <li><a href="https://elaws.e-gov.go.jp/document?lawid=322AC0000000049" target="_blank" rel="noopener" class="underline">労働基準法 (e-Gov)</a> — 第 39 条 (有給休暇の権利) ・退職時の手続き等</li>
+      <li><a href="https://www.mhlw.go.jp/" target="_blank" rel="noopener" class="underline">厚生労働省公式サイト</a> — 労働相談窓口・労働基準監督署情報</li>
+      <li><a href="https://www.houterasu.or.jp/" target="_blank" rel="noopener" class="underline">法テラス (日本司法支援センター)</a> — 無料法律相談・退職トラブル相談窓口</li>
+      <li>各退職代行業者公式サイト — 料金・対応範囲・運営形態・返金保証条件の一次情報</li>
     </ul>
 
     <p class="text-xs text-gray-600 mt-6">
-      ※本記事は2026年5月時点の公開情報をもとに作成。最新の法令・サービス内容は各公式サイトでご確認ください。各社の正式名・公式 URL・特商法表記等は提携承認後に反映します (PR・アフィリエイト広告を含みます)。
+      ※本記事は 2026 年 5 月時点の公開情報をもとに作成。最新の法令・サービス内容は各公式サイトでご確認ください。各社の正式名・公式 URL・特商法表記等は提携承認後に順次反映します (PR・アフィリエイト広告を含みます)。本記事は法的助言・効果保証ではなく、特定業者を推奨するものでもありません。具体的な利用判断は無料相談などを活用し、複数業者を比較した上でご自身の責任において選択してください。
     </p>
   </main>
 

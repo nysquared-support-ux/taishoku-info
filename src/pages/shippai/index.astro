@@ -15,10 +15,29 @@ const faq = [
   { q: '退職代行の失敗で最も多いケースは？', a: '公開情報では「業者と連絡が取れなくなった」「交渉ができなかった」が代表的とされています。事業継続困難な業者の選別が回避策とされています。' },
   { q: '失敗回避のための業者選びは？', a: '①運営主体 (労組/弁護士運営優先) ②運営実績 ③料金透明性 ④返金保証条件 ⑤レビュー の5軸が一般的とされています。' },
   { q: '失敗した場合のリカバリー方法は？', a: '労働基準監督署・法テラスへの相談が公的な選択肢として案内されています。' },
+  // ★382 80+ 改善 [x0b5HWxE2f] 2026-05-11: FAQ +3 件追加 (★443 Cx-aff < 70 ゾーン効果期待)
+  { q: '退職代行の違法業者の見分け方は？', a: '一般的に ①弁護士法 72 条 (非弁行為) 違反の疑い ②運営主体不明確 ③料金体系不透明 ④返金保証なし ⑤実績年数 1 年未満 等が違法業者の典型的特徴とされています。労組運営 (合同労組経由で団体交渉権あり) または弁護士運営 (法律事務所) を選ぶことが安全とされています。' },
+  { q: '退職代行で失敗したら損害賠償請求されますか？', a: '一般的に正当な退職権 (民法 627 条) の行使は損害賠償対象外とされています。ただし業務上の重大な引継ぎ放棄・機密情報持出し等は別問題です。詳細は <a href="/damage-risk/" class="underline">退職代行 損害賠償ページ</a> をご参照ください。' },
+  { q: '失敗事例から学ぶおすすめ業者は？', a: '一般的に運営主体 (労組/弁護士運営) + 料金透明性 + 返金保証 + 実績 5 年以上で選ぶことが推奨されます。比較は <a href="/osusume-hikaku/" class="underline">退職代行 5 社比較</a> ・ランキングは <a href="/osusume-ranking/" class="underline">おすすめランキング</a> をご参照ください。' },
 ];
+
+// ★382 80+ 改善 [x0b5HWxE2f] 2026-05-11: FAQPage + BreadcrumbList JSON-LD (NEW-12 で +2.63pt 実証)
+const breadcrumbSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  'itemListElement': breadcrumb.map((b, i) => ({ '@type': 'ListItem', 'position': i + 1, 'name': b.name, 'item': b.url })),
+};
+
+const faqSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  'mainEntity': faq.map(f => ({ '@type': 'Question', 'name': f.q, 'acceptedAnswer': { '@type': 'Answer', 'text': f.a.replace(/<[^>]+>/g, '') } })),
+};
 ---
 
-<Layout title={title} description={description} publishedDate="2026-05-02" modifiedDate="2026-05-02" breadcrumb={breadcrumb} faq={faq}>
+<Layout title={title} description={description} publishedDate="2026-05-02" modifiedDate="2026-05-11" breadcrumb={breadcrumb} faq={faq}>
+  <script type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)}></script>
+  <script type="application/ld+json" set:html={JSON.stringify(faqSchema)}></script>
   <main class="max-w-3xl mx-auto px-4 py-8">
     <PRBadge />
 

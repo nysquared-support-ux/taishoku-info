@@ -22,9 +22,23 @@ const faq = [
   { q: '料金以外で重視すべき点は何ですか?', a: '一般的に ①運営形態(労組/弁護士監修) ②対応スピード(即日対応の有無) ③成功実績(公表されている件数・確率) ④追加料金の透明性 ⑤24時間対応の有無 が選び方のポイントとされています。' },
   { q: '支払方法は何が選べますか?', a: '一般的にクレジットカード(VISA/Master/JCB/AMEX)・銀行振込・LINE Pay・PayPay等の選択肢があるケースが多いとされています。後払い対応の業者も増加傾向ですが、業者により対応が異なります。' },
 ];
+// ★441-EXT 強化: 3 タイプ料金体系 Service 構造化 (A3 改善期待)
+const itemListSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'ItemList',
+  'name': '退職代行 3 タイプ料金体系比較',
+  'description': '弁護士運営・労働組合運営・民間運営の 3 タイプ料金体系比較 (公開情報整理)',
+  'itemListOrder': 'https://schema.org/ItemListOrderAscending',
+  'itemListElement': [
+    {'@type': 'ListItem', 'position': 1, 'item': {'@type': 'Service', 'name': '民間運営退職代行', 'serviceType': '民間退職代行 (退職意思伝達のみ)', 'description': '料金 1〜3 万円・団体交渉権なし・シンプル退職向け', 'audience': {'@type': 'Audience', 'audienceType': '料金重視・有給/残業代交渉不要なユーザー'}}},
+    {'@type': 'ListItem', 'position': 2, 'item': {'@type': 'Service', 'name': '労働組合運営退職代行', 'serviceType': '労組退職代行 (団体交渉権あり)', 'description': '料金 2〜3 万円・有給/残業代交渉対応・バランス型', 'audience': {'@type': 'Audience', 'audienceType': '有給消化・残業代交渉が必要なユーザー'}}},
+    {'@type': 'ListItem', 'position': 3, 'item': {'@type': 'Service', 'name': '弁護士運営退職代行', 'serviceType': '弁護士退職代行 (法的代理権・全範囲対応)', 'description': '料金 3〜6 万円 + 成功報酬・訴訟対応可・複雑案件向け', 'audience': {'@type': 'Audience', 'audienceType': '損害賠償リスク・訴訟リスクが予想されるユーザー'}}},
+  ],
+};
 ---
 
 <Layout title={title} description={description} publishedDate="2026-05-12" modifiedDate="2026-05-12" breadcrumb={breadcrumb} faq={faq}>
+  <script type="application/ld+json" set:html={JSON.stringify(itemListSchema)}></script>
   <main class="max-w-3xl mx-auto px-4 py-8">
     <PRBadge />
 

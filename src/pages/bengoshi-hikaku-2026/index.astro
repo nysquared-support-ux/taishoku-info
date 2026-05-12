@@ -22,9 +22,24 @@ const faq = [
   { q: '弁護士運営なら必ず会社からお金が取れますか?', a: '一般的に未払い残業代・退職金の客観的証拠 (タイムカード・給与明細) がある場合に回収可能性が高いとされていますが、証拠なしでは回収困難なケースもあるとされています。事前の相談時に弁護士の見立てを確認することが推奨されます。' },
   { q: '弁護士運営の選び方は?', a: '一般的に ① 労働問題の実績数 ② 着手金 + 成功報酬の合計試算の透明性 ③ 初回相談無料の有無 ④ 24 時間対応の有無 ⑤ オンライン完結対応の有無、の 5 点が選び方のポイントとされています。' },
 ];
+
+// ★441-EXT 強化: 弁護士退職代行 主要サービス Service 構造化 (A3 改善期待)
+const itemListSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'ItemList',
+  'name': '弁護士運営 退職代行 主要サービス比較',
+  'description': '弁護士運営の退職代行サービス (法的代理権・損害賠償/訴訟対応・全範囲対応)',
+  'itemListOrder': 'https://schema.org/ItemListUnordered',
+  'itemListElement': [
+    {'@type': 'ListItem', 'position': 1, 'item': {'@type': 'Service', 'name': '弁護士法人みやび', 'serviceType': '弁護士退職代行 (法的代理権 + 残業代/退職金回収)', 'description': '料金 ¥27,500〜77,000・弁護士直接対応・損害賠償対応可', 'audience': {'@type': 'Audience', 'audienceType': '損害賠償リスク・残業代回収が必要なユーザー'}}},
+    {'@type': 'ListItem', 'position': 2, 'item': {'@type': 'Service', 'name': '退職代行Jobs', 'serviceType': '合同労組 + 弁護士監修退職代行 (バランス型)', 'description': '料金 ¥27,000・有給/残業代交渉対応・LINE 24h・全額返金保証', 'audience': {'@type': 'Audience', 'audienceType': '有給消化・残業代交渉が必要な正社員'}}},
+    {'@type': 'ListItem', 'position': 3, 'item': {'@type': 'Service', 'name': '退職代行EXIT', 'serviceType': '民間 + 弁護士監修退職代行', 'description': '料金 ¥25,000 (初回) / ¥15,000 (2 回目以降)・全額返金保証', 'audience': {'@type': 'Audience', 'audienceType': '初回退職 / 料金重視ユーザー'}}},
+  ],
+};
 ---
 
 <Layout title={title} description={description} publishedDate="2026-05-12" modifiedDate="2026-05-12" breadcrumb={breadcrumb} faq={faq}>
+  <script type="application/ld+json" set:html={JSON.stringify(itemListSchema)}></script>
   <main class="max-w-3xl mx-auto px-4 py-8">
     <PRBadge />
 

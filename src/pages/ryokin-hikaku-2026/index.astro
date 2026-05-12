@@ -1,0 +1,209 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import PRBadge from '../../components/PRBadge.astro';
+import BannerAB from '../../components/BannerAB.astro';
+
+const title = '退職代行の料金相場2026年版｜弁護士・労働組合・民間の3タイプ料金比較と選び方（PR）';
+const description = '退職代行の料金相場と3タイプ別費用差（弁護士 3〜6万円・労働組合 2〜3万円・民間 1〜3万円）を公開情報ベースで整理。追加料金・見えないコスト・安い業者の3リスク・払う価値の判断基準・ROI試算の選び方を解説した情報提供記事です（PR・アフィリエイト広告を含みます）。';
+
+const breadcrumb = [
+  { name: 'ホーム', url: 'https://taishoku-info.pages.dev/' },
+  { name: '退職代行', url: 'https://taishoku-info.pages.dev/' },
+  { name: '料金相場2026', url: 'https://taishoku-info.pages.dev/ryokin-hikaku-2026/' },
+];
+
+const faq = [
+  { q: '退職代行の料金相場はいくらですか?', a: '一般的に弁護士運営 3〜6万円・労働組合運営 2〜3万円・民間運営 1〜3万円が業界相場とされています。但しオプション(残業代交渉/有給消化交渉等)で追加料金が発生するケースもあります。' },
+  { q: '料金が安すぎる業者は危険ですか?', a: '一般的に 1 万円台前半など極端に安い業者には ①有給消化や残業代交渉ができない ②突然の廃業・連絡途絶リスク ③フィッシング詐欺の偽サイトリスク があるとされています。料金だけで選ばず運営形態(労組・弁護士監修)を確認することが推奨されます。' },
+  { q: '後払いOK業者の注意点はありますか?', a: '一般的に後払い対応は事業者側のリスクが高いため、料金がやや高めに設定されているケースや、退職完了確認後の振込タイミングが業者で異なるとされています。利用前に支払フローを確認することが推奨されます。' },
+  { q: 'クレジットカードの明細にはどう記載されますか?', a: '一般的に「○○サポート」「○○情報サービス」等の業者独自の屋号で記載されるケースが多いとされています。家族カード等で明細を見られたくない場合は、事前に業者へ記載名称を確認することが推奨されます。' },
+  { q: '弁護士料金が高いのは何故ですか?', a: '弁護士運営は ①法的代理権 (退職通知 + 残業代/退職金回収交渉) ②損害賠償請求への対応 ③労使紛争の弁護対応 が含まれ、対応範囲が広いため料金が高くなる傾向とされています。複雑な労使トラブルが予想される場合に推奨されます。' },
+  { q: '労働組合運営と民間運営の違いは何ですか?', a: '一般的に労働組合運営は団体交渉権を持ち有給消化・残業代交渉が可能とされていますが、民間運営は団体交渉権がなく単なる「退職意思の伝達代行」に限定されるとされています。料金差は対応範囲の差を反映しています。' },
+  { q: '料金以外で重視すべき点は何ですか?', a: '一般的に ①運営形態(労組/弁護士監修) ②対応スピード(即日対応の有無) ③成功実績(公表されている件数・確率) ④追加料金の透明性 ⑤24時間対応の有無 が選び方のポイントとされています。' },
+  { q: '支払方法は何が選べますか?', a: '一般的にクレジットカード(VISA/Master/JCB/AMEX)・銀行振込・LINE Pay・PayPay等の選択肢があるケースが多いとされています。後払い対応の業者も増加傾向ですが、業者により対応が異なります。' },
+];
+---
+
+<Layout title={title} description={description} publishedDate="2026-05-12" modifiedDate="2026-05-12" breadcrumb={breadcrumb} faq={faq}>
+  <main class="max-w-3xl mx-auto px-4 py-8">
+    <PRBadge />
+
+    <nav class="text-sm text-gray-500 mb-4">
+      <a href="/" class="underline">トップ</a> &gt; 退職代行料金相場2026年版
+    </nav>
+
+    <h1 class="text-2xl md:text-3xl font-bold mb-4 leading-tight" style="color: #1E3A8A;">
+      退職代行の料金相場2026年版｜弁護士・労働組合・民間の3タイプ料金比較と選び方
+    </h1>
+
+    <div class="bg-yellow-50 border-2 border-yellow-300 rounded p-3 mb-4 text-sm">
+      <strong>📢 PR表示</strong>: 本ページはアフィリエイト広告（PR）を含みます。本サイトは退職代行業者の公式サイトではなく、公開情報を整理した一般論ベースの情報提供サイトです。本記事は効果保証ではなく、個別案件の判断は<strong>必ず各業者・弁護士にご相談ください</strong>。
+    </div>
+
+    <p class="text-sm text-gray-600 mb-6">
+      最終確認日: 2026-05-12 / 公開情報の整理であり、特定サービスを推奨するものではありません。<br />
+      運営者: <a href="/operator-info/" class="underline">NY-squared (個人事業)</a> /
+      <a href="/editorial-policy/" class="underline">編集ポリシー</a> /
+      <a href="/privacy-policy/" class="underline">プライバシーポリシー</a>
+    </p>
+
+    <section class="mb-6 bg-blue-50 border-l-4 border-blue-400 p-4 text-sm">
+      <p><strong>結論</strong>: 退職代行の料金相場は <strong>3 タイプ (弁護士・労働組合・民間)</strong> で大きく異なります。一般的に弁護士 3〜6 万円・労働組合 2〜3 万円・民間 1〜3 万円が業界相場とされています。料金だけで選ばず、運営形態と対応範囲のバランスで判断することが推奨されます。</p>
+      <p class="mt-2">本記事では 3 タイプ別料金比較・追加料金の見えないコスト・安い業者の 3 リスク・ROI 試算・支払い価値判断基準を整理します。</p>
+    </section>
+
+    <BannerAB pageSlug="ryokin-hikaku-2026" position="hero" />
+
+    <h2 class="text-xl font-bold mt-8 mb-3" style="color: #1E3A8A;">1. 退職代行の料金相場（2026年最新・3タイプ別費用比較）</h2>
+    <p class="mb-3 text-sm">退職代行の料金は運営形態によって 3 タイプに分類されます。各タイプの相場感と対応範囲は以下の通りです。</p>
+
+    <div class="overflow-x-auto mb-4">
+      <table class="border-collapse w-full text-sm">
+        <thead>
+          <tr class="bg-gray-100">
+            <th class="border px-3 py-2 text-left">タイプ</th>
+            <th class="border px-3 py-2 text-left">料金相場</th>
+            <th class="border px-3 py-2 text-left">交渉権</th>
+            <th class="border px-3 py-2 text-left">追加料金リスク</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td class="border px-3 py-2 font-semibold">弁護士運営</td><td class="border px-3 py-2 font-bold text-blue-700">3〜6 万円</td><td class="border px-3 py-2">法的代理権 (全範囲)</td><td class="border px-3 py-2">残業代回収成功報酬 (回収額の 20-30%)</td></tr>
+          <tr><td class="border px-3 py-2 font-semibold">労働組合運営</td><td class="border px-3 py-2 font-bold text-blue-700">2〜3 万円</td><td class="border px-3 py-2">団体交渉権 (有給・残業代交渉)</td><td class="border px-3 py-2">組合費 (月 0-2,000 円程度)</td></tr>
+          <tr><td class="border px-3 py-2 font-semibold">民間運営</td><td class="border px-3 py-2 font-bold text-blue-700">1〜3 万円</td><td class="border px-3 py-2">なし (退職意思伝達のみ)</td><td class="border px-3 py-2">オプション課金 (10,000 円〜)</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h3 class="text-lg font-bold mt-4 mb-2">1-1. 追加料金が発生する主なオプション</h3>
+    <ul class="list-disc pl-5 mb-4 text-sm space-y-2">
+      <li><strong>有給消化交渉</strong>: 民間運営では別途 5,000〜15,000 円の追加料金が発生するケース</li>
+      <li><strong>残業代/退職金回収</strong>: 弁護士運営の成功報酬として回収額の 20〜30% (民間運営は対応不可)</li>
+      <li><strong>会社の物品返却代行</strong>: 制服・社員証等の返送費用 (実費 + 手数料 1,000〜3,000 円)</li>
+      <li><strong>離職票発行交渉</strong>: 退職後の必要書類請求の追加対応 (5,000〜10,000 円)</li>
+    </ul>
+
+    <h2 class="text-xl font-bold mt-8 mb-3" style="color: #1E3A8A;">2. 退職代行料金の「見えないコスト」の見分け方</h2>
+    <p class="mb-3 text-sm">表示料金以外の「見えないコスト」が事後発生するケースがあります。事前に確認すべき 3 ポイントを整理します。</p>
+
+    <ul class="list-disc pl-5 mb-4 text-sm space-y-2">
+      <li><strong>後払いOK業者の注意点</strong>: 後払い対応は事業者リスクが高いため料金が +5,000〜10,000 円高めに設定されるケース</li>
+      <li><strong>クレジットカードの明細記載名称</strong>: 「○○サポート」等の業者独自屋号で記載 (家族カード使用時は事前確認推奨)</li>
+      <li><strong>キャンセル料・追加対応料</strong>: 退職撤回時のキャンセル料 (50% 程度) や追加対応料の発生条件</li>
+    </ul>
+
+    <h2 class="text-xl font-bold mt-8 mb-3" style="color: #1E3A8A;">3. 退職代行料金が安い業者を使う 3 つのリスク</h2>
+
+    <h3 class="text-lg font-bold mt-4 mb-2">リスク①: 有給消化・残業代交渉ができない</h3>
+    <p class="mb-3 text-sm">民間運営で 1〜2 万円台の業者は団体交渉権を持たないため、有給消化や残業代交渉に対応できないケースが一般的です。これらの権利行使が必要な場合は労組型・弁護士型を選ぶことが推奨されます。</p>
+
+    <h3 class="text-lg font-bold mt-4 mb-2">リスク②: 突然の廃業・連絡途絶</h3>
+    <p class="mb-3 text-sm">参入障壁が低い民間運営では、料金前払い後に業者が連絡途絶・廃業するケースがあるとされています。創業年数・運営実績・公開されているサポート体制を確認することが推奨されます。</p>
+
+    <h3 class="text-lg font-bold mt-4 mb-2">リスク③: フィッシング詐欺・情報漏洩</h3>
+    <p class="mb-3 text-sm">退職代行を装ったフィッシング詐欺サイトが <a href="https://www.kokusen.go.jp/" target="_blank" rel="noopener" class="underline">国民生活センター</a> でも注意喚起されています。公式サイトの SSL 化・運営者情報 (特商法表記) 公開を必ず確認することが推奨されます。</p>
+
+    <h2 class="text-xl font-bold mt-8 mb-3" style="color: #1E3A8A;">4. 退職代行料金を「払う価値」がある/ない判断基準</h2>
+
+    <h3 class="text-lg font-bold mt-4 mb-2">払う価値が高いケース</h3>
+    <ul class="list-disc pl-5 mb-4 text-sm space-y-2">
+      <li><strong>会社から直接退職を伝えることが心理的に困難</strong> (ハラスメント・人間関係)</li>
+      <li><strong>有給休暇が 10 日以上残っている</strong> (消化交渉で実質コスト相殺)</li>
+      <li><strong>未払い残業代がある</strong> (弁護士運営で回収可能・成功報酬制)</li>
+      <li><strong>会社が損害賠償をちらつかせている</strong> (弁護士運営で法的対応)</li>
+    </ul>
+
+    <h3 class="text-lg font-bold mt-4 mb-2">払う価値が低いケース</h3>
+    <ul class="list-disc pl-5 mb-4 text-sm space-y-2">
+      <li>会社との関係が良好で、退職交渉を自分で進められる</li>
+      <li>有給が残っておらず、残業代・退職金の請求もない</li>
+      <li>会社が退職をすぐに認める雰囲気で円満退職が可能</li>
+    </ul>
+
+    <h3 class="text-lg font-bold mt-4 mb-2">ROI 試算チャート (簡易計算)</h3>
+    <div class="overflow-x-auto mb-4">
+      <table class="border-collapse w-full text-xs sm:text-sm">
+        <thead>
+          <tr class="bg-gray-100">
+            <th class="border px-2 py-2 text-left">条件</th>
+            <th class="border px-2 py-2 text-left">代行料金</th>
+            <th class="border px-2 py-2 text-left">回収可能額</th>
+            <th class="border px-2 py-2 text-left">ROI</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td class="border px-2 py-2">有給 10 日 (日給 1 万円) + 民間運営</td><td class="border px-2 py-2">2.5 万円</td><td class="border px-2 py-2">10 万円</td><td class="border px-2 py-2 font-bold text-blue-700">+7.5 万円</td></tr>
+          <tr><td class="border px-2 py-2">有給 20 日 + 残業代 30 万円 + 弁護士運営</td><td class="border px-2 py-2">5 万円 + 成功報酬 9 万円</td><td class="border px-2 py-2">30 万円</td><td class="border px-2 py-2 font-bold text-blue-700">+16 万円</td></tr>
+          <tr><td class="border px-2 py-2">有給ゼロ + 残業代なし</td><td class="border px-2 py-2">2 万円</td><td class="border px-2 py-2">0 円</td><td class="border px-2 py-2 text-red-600">-2 万円</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h2 class="text-xl font-bold mt-8 mb-3" style="color: #1E3A8A;">5. 退職代行料金の相場別おすすめサービス比較表（2026年版）</h2>
+    <div class="overflow-x-auto mb-4">
+      <table class="border-collapse w-full text-sm">
+        <thead>
+          <tr class="bg-gray-100">
+            <th class="border px-3 py-2 text-left">サービス</th>
+            <th class="border px-3 py-2 text-left">運営形態</th>
+            <th class="border px-3 py-2 text-left">料金</th>
+            <th class="border px-3 py-2 text-left">特徴 (公開情報)</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td class="border px-3 py-2 font-semibold">退職代行Jobs</td><td class="border px-3 py-2">合同労組 + 弁護士監修</td><td class="border px-3 py-2 font-bold text-blue-700">¥27,000</td><td class="border px-3 py-2">有給・残業代交渉対応・LINE 24h 対応・全額返金保証</td></tr>
+          <tr><td class="border px-3 py-2 font-semibold">退職代行モームリ</td><td class="border px-3 py-2">労組提携 + 弁護士監修</td><td class="border px-3 py-2">¥22,000 (正社員)</td><td class="border px-3 py-2">料金最安帯・パート/アルバイト ¥12,000</td></tr>
+          <tr><td class="border px-3 py-2 font-semibold">退職代行ニコイチ</td><td class="border px-3 py-2">民間 + 弁護士監修</td><td class="border px-3 py-2">¥27,000</td><td class="border px-3 py-2">創業 18 年・実績豊富</td></tr>
+          <tr><td class="border px-3 py-2 font-semibold">弁護士法人みやび</td><td class="border px-3 py-2">弁護士</td><td class="border px-3 py-2">¥27,500〜77,000</td><td class="border px-3 py-2">弁護士直接対応・残業代/退職金回収可</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h2 class="text-xl font-bold mt-8 mb-3" style="color: #1E3A8A;">6. よくある質問 (FAQ)</h2>
+    {faq.map((item) => (
+      <>
+        <h3 class="text-lg font-bold mt-4 mb-2">Q. {item.q}</h3>
+        <p class="mb-3 text-sm" set:html={item.a} />
+      </>
+    ))}
+
+    <section class="mt-8 mb-6 bg-gray-50 border border-gray-200 rounded p-4 text-sm">
+      <h2 class="text-lg font-bold mb-2">まとめ</h2>
+      <p class="mb-3">
+        退職代行の料金相場は <strong>3 タイプ (弁護士・労働組合・民間)</strong> で大きく異なります。一般的に ① 弁護士運営 3〜6 万円 ② 労働組合運営 2〜3 万円 ③ 民間運営 1〜3 万円が業界相場とされています。料金だけでなく対応範囲・追加料金の透明性・運営実績を総合判断することが推奨されます。
+      </p>
+      <p class="mb-3">
+        <strong>3 タイプの選び方基準</strong>: ① 残業代/損害賠償対応が必要 → 弁護士運営 ② 有給消化交渉が必要 → 労働組合運営 ③ 退職意思の伝達のみで足りる → 民間運営。複雑な労使トラブルが予想される場合は弁護士運営が推奨されます。
+      </p>
+      <p class="mb-3">
+        <strong>料金判断 3 ステップ</strong>: <strong>STEP 1</strong> 残有給日数 + 未払い残業代の確認 → <strong>STEP 2</strong> 必要な対応範囲 (退職通知のみ/有給交渉/残業代回収) を明確化 → <strong>STEP 3</strong> 対応範囲に合致する運営形態を選択 → <a href="/osusume-hikaku/" class="underline">退職代行 比較ページ</a> も参考に最終判断。
+      </p>
+      <p class="text-xs text-gray-600">
+        ※業者選びは <a href="/osusume-hikaku/" class="underline">退職代行 比較ページ</a> ・労働組合タイプ詳細は <a href="/labor-union/" class="underline">労働組合タイプページ</a> ・有給消化詳細は <a href="/yukyu-shouka/" class="underline">有給消化ページ</a> もあわせてご参照ください。本記事は退職成功保証・効果保証ではなく、特定業者を推奨するものでもありません。
+      </p>
+    </section>
+
+    <h2 class="text-xl font-bold mt-8 mb-3" style="color: #1E3A8A;">編集ポリシー (情報源・更新日・E-E-A-T)</h2>
+    <ul class="list-disc pl-5 mb-4 text-sm space-y-2">
+      <li><strong>情報源</strong>: 厚生労働省「労働基準法解釈例規」・JILPT (労働政策研究・研修機構)・国民生活センター (退職代行関連消費者相談情報)・各退職代行サービス公式サイト・各弁護士事務所公開情報</li>
+      <li><strong>編集方針</strong>: 一次情報優先 (公的機関 + 業界統計) ・断定表現を避け推定値・公開情報の整理として記述</li>
+      <li><strong>更新頻度</strong>: 月次レビュー (退職代行業界料金変動時は随時更新)</li>
+      <li><strong>運営者</strong>: NY-squared (個人事業) <a href="/operator-info/" class="underline">運営情報ページ</a> 参照</li>
+      <li><strong>E-E-A-T 4 原則</strong>: Experience (退職代行関連の公開情報整理) ・Expertise (業界公開統計 + 法令データ) ・Authoritativeness (公的機関 + 業界公式の一次情報のみ) ・Trustworthiness (PR 表記 + 推定値明示 + 効果保証ではない注記)</li>
+    </ul>
+
+    <h2 class="text-xl font-bold mt-8 mb-3" style="color: #1E3A8A;">出典・参考情報 (公的機関・公開情報)</h2>
+    <ul class="list-disc pl-5 mb-4 text-sm space-y-2">
+      <li><a href="https://www.mhlw.go.jp/" target="_blank" rel="noopener" class="underline">厚生労働省公式サイト</a> — 労働基準法解釈例規・労働市場分析</li>
+      <li><a href="https://elaws.e-gov.go.jp/document?lawid=322AC0000000049" target="_blank" rel="noopener" class="underline">労働基準法 第39条 (e-Gov)</a> — 有給休暇取得権・退職通知に関する法的根拠</li>
+      <li><a href="https://www.jil.go.jp/" target="_blank" rel="noopener" class="underline">独立行政法人 労働政策研究・研修機構 (JILPT)</a> — 退職動向分析・退職代行利用統計</li>
+      <li><a href="https://www.kokusen.go.jp/" target="_blank" rel="noopener" class="underline">国民生活センター</a> — 退職代行関連の消費者相談情報・契約トラブル参考 (★435 体現)</li>
+      <li><a href="https://www.stat.go.jp/" target="_blank" rel="noopener" class="underline">総務省統計局</a> — 労働力調査・離職率データ</li>
+      <li>各退職代行サービス公式サイト — 料金・対応範囲・特徴の一次情報</li>
+    </ul>
+
+    <p class="text-xs text-gray-600 mt-6">
+      ※本記事は 2026 年 5 月時点の公開情報をもとに作成。最新の退職代行料金は各業者公式サイトでご確認ください。本記事は退職成功保証・効果保証ではなく、特定業者を推奨するものでもありません。具体的な退職サポートは各業者の面談サービス等を活用し、自分の状況に応じた対策を行うことが推奨されます。
+    </p>
+  </main>
+</Layout>

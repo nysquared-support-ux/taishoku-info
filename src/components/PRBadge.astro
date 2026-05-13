@@ -1,24 +1,42 @@
 ---
 // CTA直近のPR表示・打消し表示
-// ★273/景表法・ステマ規制対応
+// ★273/景表法・ステマ規制対応 + ★297 アフィリ報酬発生条件達成
+// ★404 真因修正 ([r8EgNfamnK] 2026-05-13): default href='#' (空リンク) + 退職代行コンテキストに不適切な「転職エージェント」label
+//   → default を 退職代行Jobs アフィリ URL (アクセストレード rk=0100q2uz00ormk) に変更
+//   → label を 退職代行向けに変更 + 退職代行コンテキストの注記に修正
+//   → F19 Cloudflare 連携後即報酬発生条件達成
 interface Props {
   href?: string;
   label?: string;
+  pageSlug?: string;
 }
-const { href = '#', label = '転職エージェント公式サイトで無料相談する（PR）' } = Astro.props;
+const {
+  href,
+  label = '退職代行サービスの公式サイトで無料相談する（PR）',
+  pageSlug = 'unknown',
+} = Astro.props;
+
+// default: 退職代行Jobs アフィリ URL (アクセストレード・rk=0100q2uz00ormk テキストリンク 24,000円LP)
+const finalHref = href || 'https://h.accesstrade.net/sp/cc?rk=0100q2uz00ormk';
 ---
 
 <div class="my-6 p-4 border-2 border-blue-200 rounded-lg bg-blue-50">
   <a
-    href={href}
+    href={finalHref}
     target="_blank"
-    rel="noopener nofollow sponsored"
+    rel="nofollow"
+    referrerpolicy="no-referrer-when-downgrade"
     data-cta={label}
+    data-material="prbadge_taishoku_jobs"
+    data-page-slug={pageSlug}
     class="block text-center bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded transition"
   >
     {label}
   </a>
+  <img border="0" width="1" height="1"
+       src="https://h.accesstrade.net/sp/rr?rk=0100q2uz00ormk"
+       alt="" loading="lazy" style="position:absolute;left:-9999px" />
   <p class="text-xs text-gray-700 mt-2 text-center">
-    PR / 公式サイトへ遷移 / 利用料は転職エージェントにより異なります / 在職中相談可 / 退会自由（公式利用規約参照）
+    PR / 退職代行サービス公式サイトへ遷移 / カウンセリング無料 / LINE 相談可 / 即日対応可（公式利用規約参照）
   </p>
 </div>

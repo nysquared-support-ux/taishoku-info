@@ -1,5 +1,5 @@
 ---
-import Layout from '../../layouts/Layout.astro';
+import RichLayout from '../../layouts/RichLayout.astro';
 import PRBadge from '../../components/PRBadge.astro';
 import BannerAB from '../../components/BannerAB.astro';
 
@@ -7,9 +7,9 @@ const title = '看護師の退職代行｜特有の事情と業者選び3軸を�
 const description = '看護師が退職代行を使う際の特有の事情（夜勤・人手不足・引き止め）と業者選び3軸を整理した情報提供記事です（PR・アフィリエイト広告を含みます）。法的判断は弁護士へ、個別対応は各業者へ直接ご相談ください。';
 
 const breadcrumb = [
-  { name: 'ホーム', url: 'https://taishoku-info.pages.dev/' },
-  { name: '退職代行', url: 'https://taishoku-info.pages.dev/' },
-  { name: '看護師', url: 'https://taishoku-info.pages.dev/kangoshi/' },
+  { name: 'ホーム', url: '/' },
+  { name: '退職代行', url: '/' },
+  { name: '看護師' },
 ];
 
 const faq = [
@@ -20,155 +20,113 @@ const faq = [
 ];
 ---
 
-<Layout title={title} description={description} publishedDate="2026-05-02" modifiedDate="2026-05-02" breadcrumb={breadcrumb} faq={faq}>
-  <main class="max-w-3xl mx-auto px-4 py-8">
-    <PRBadge pageSlug="kangoshi" />
-
-    <nav class="text-sm text-gray-500 mb-4">
-      <a href="/" class="underline">トップ</a> &gt; 看護師の退職代行について
-    </nav>
-
-    <h1 class="text-2xl md:text-3xl font-bold mb-4 leading-tight">
-      看護師が退職代行を選ぶ｜特有の事情と業者選び3軸の整理
-    </h1>
-
-    <div class="bg-yellow-50 border-2 border-yellow-300 rounded p-3 mb-4 text-sm">
-      <strong>📢 PR表示</strong>: 本ページはアフィリエイト広告（PR）を含みます。本サイトは法律事務所・退職代行業者公式サイトではなく、公開情報を整理した一般論ベースの情報提供サイトです。本記事は法的助言・効果保証ではなく、個別案件の判断は<strong>必ず弁護士・各業者に直接ご相談ください</strong>。
+<RichLayout title={title} description={description} publishedDate="2026-05-02" modifiedDate="2026-05-18" breadcrumb={breadcrumb} faq={faq}>
+  <section class="fv" aria-labelledby="fv-h1">
+    <div class="container">
+      <span class="fv-pill">退職代行 / 看護師</span>
+      <h1 id="fv-h1"><span class="accent">看護師が退職代行を選ぶ</span><br />特有の事情と業者選び3軸の整理</h1>
+      <p class="lede">看護師の方が退職代行を検討する背景には、夜勤・シフト制・人手不足下での強い引き止めなど、一般職には少ない事情があるとされています。本記事では看護師特有の退職事情と、業者選びで重要視すべき3つの軸を整理します。個別案件の最終判断は弁護士・各業者へご相談ください。</p>
+      <ul class="fv-bullets">
+        <li>看護師が検討する4つの典型事情</li>
+        <li>退職代行業者の3タイプ比較</li>
+        <li>業者選び3軸(24h/交渉力/業界実績)</li>
+        <li>確認すべき法的根拠(民法627条/労基法)</li>
+      </ul>
+      <PRBadge pageSlug="kangoshi" />
+      <div class="fv-meta">
+        <span><b>公開日</b> 2026-05-02</span><span><b>最終更新</b> 2026-05-18</span>
+        <span><b>編集</b> NY-squared 編集部</span><span><b>所要</b> 約 5 分</span>
+      </div>
     </div>
+  </section>
 
-    <p class="text-sm text-gray-600 mb-6">
-      最終確認日: 2026-05-02 / 公開情報の整理であり、特定サービスを推奨するものではありません。<br />
-      運営者: <a href="/operator-info/" class="underline">NY-squared (個人事業)</a> /
-      <a href="/editorial-policy/" class="underline">編集ポリシー</a> /
-      <a href="/privacy-policy/" class="underline">プライバシーポリシー</a>
-    </p>
-
-    <section class="mb-6 bg-blue-50 border-l-4 border-blue-400 p-4 text-sm">
-      <p>看護師の方が退職代行を検討する背景には、夜勤・シフト制・人手不足下での強い引き止めなど、一般職には少ない事情があるとされています。</p>
-      <p class="mt-2">本記事では、看護師特有の退職事情と、業者選びで重要視すべき<strong>3つの軸</strong>を整理します。個別案件の最終判断は弁護士・各業者へご相談ください。</p>
-    </section>
-
-    <BannerAB pageSlug="kangoshi" position="hero" />
-
-    <h2 class="text-xl font-bold mt-8 mb-3">1. 看護師が退職代行を検討する4つの典型事情</h2>
-
-    <ul class="list-disc pl-5 mb-4 text-sm space-y-2">
-      <li><strong>夜勤・変則シフト</strong>: 上司との対面相談タイミングが限定される</li>
-      <li><strong>人手不足下の引き止め</strong>: 「あなたが辞めると現場が回らない」という心理的圧力</li>
-      <li><strong>慢性的疲労・精神的限界</strong>: 退職交渉自体がストレスになる</li>
-      <li><strong>師長・同僚との関係維持希望</strong>: 円満退職へのこだわり</li>
-    </ul>
-
-    <p class="text-sm mb-3">
-      これらの事情に対し、退職代行は「業者が会社（病院・施設）と直接やりとりする」ことで、本人の心理的負担を軽減する手段の1つとされています。
-    </p>
-
-    <h2 class="text-xl font-bold mt-8 mb-3">2. 退職代行業者の3タイプ比較</h2>
-
-    <div class="overflow-x-auto mb-4">
-      <table class="w-full text-sm border border-gray-300">
-        <thead class="bg-gray-100">
-          <tr>
-            <th class="border border-gray-300 p-2">タイプ</th>
-            <th class="border border-gray-300 p-2">交渉権</th>
-            <th class="border border-gray-300 p-2">費用相場</th>
-            <th class="border border-gray-300 p-2">特徴</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td class="border border-gray-300 p-2">民間業者</td>
-            <td class="border border-gray-300 p-2">なし (連絡代行のみ)</td>
-            <td class="border border-gray-300 p-2">2-3 万円</td>
-            <td class="border border-gray-300 p-2">費用が手頃・交渉発生時は弁護士紹介</td>
-          </tr>
-          <tr>
-            <td class="border border-gray-300 p-2">労働組合運営</td>
-            <td class="border border-gray-300 p-2">あり (団体交渉権)</td>
-            <td class="border border-gray-300 p-2">2.5-3 万円</td>
-            <td class="border border-gray-300 p-2">有給交渉・未払賃金交渉が可能</td>
-          </tr>
-          <tr>
-            <td class="border border-gray-300 p-2">弁護士運営</td>
-            <td class="border border-gray-300 p-2">あり (法的代理権)</td>
-            <td class="border border-gray-300 p-2">5-10 万円</td>
-            <td class="border border-gray-300 p-2">損害賠償等の法的トラブルにも対応可</td>
-          </tr>
-        </tbody>
-      </table>
+  <section class="lp-section" id="sec-1">
+    <div class="container">
+      <p class="section-num">SECTION / 01</p>
+      <h2>看護師が退職代行を検討する4つの典型事情</h2>
+      <ul>
+        <li><strong>夜勤・変則シフト</strong>: 上司との対面相談タイミングが限定される</li>
+        <li><strong>人手不足下の引き止め</strong>: 「あなたが辞めると現場が回らない」という心理的圧力</li>
+        <li><strong>慢性的疲労・精神的限界</strong>: 退職交渉自体がストレスになる</li>
+        <li><strong>師長・同僚との関係維持希望</strong>: 円満退職へのこだわり</li>
+      </ul>
+      <p>これらの事情に対し、退職代行は「業者が会社（病院・施設）と直接やりとりする」ことで、本人の心理的負担を軽減する手段の1つとされています。</p>
+      <BannerAB pageSlug="kangoshi" position="hero" />
     </div>
+  </section>
 
-    <p class="text-xs text-gray-600 mb-6">※費用は各業者公式サイトの公表値を基に整理。弁護士法72条の対応可能範囲は業者により異なります。</p>
+  <section class="lp-section alt" id="sec-2">
+    <div class="container">
+      <p class="section-num">SECTION / 02</p>
+      <h2>退職代行業者の3タイプ比較</h2>
+      <div class="compare-wrap">
+        <table class="compare">
+          <thead><tr><th>タイプ</th><th>交渉権</th><th>費用相場</th><th>特徴</th></tr></thead>
+          <tbody>
+            <tr><td>民間業者</td><td>なし (連絡代行のみ)</td><td>2-3 万円</td><td>費用が手頃・交渉発生時は弁護士紹介</td></tr>
+            <tr><td>労働組合運営</td><td>あり (団体交渉権)</td><td>2.5-3 万円</td><td>有給交渉・未払賃金交渉が可能</td></tr>
+            <tr><td>弁護士運営</td><td>あり (法的代理権)</td><td>5-10 万円</td><td>損害賠償等の法的トラブルにも対応可</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="compare-note">※費用は各業者公式サイトの公表値を基に整理。弁護士法72条の対応可能範囲は業者により異なります。</p>
+    </div>
+  </section>
 
-    <h2 class="text-xl font-bold mt-8 mb-3">3. 看護師が業者選びで重要視すべき3軸</h2>
+  <section class="lp-section" id="sec-3">
+    <div class="container">
+      <p class="section-num">SECTION / 03</p>
+      <h2>看護師が業者選びで重要視すべき3軸</h2>
+      <h3>3-1. 24時間・夜勤帯対応</h3>
+      <p>看護師は夜勤・早朝勤務が一般的なため、業者の受付時間が「24時間 365日」または「LINE 即時対応」であることが実用上重要とされています。日中限定対応の業者は、シフトと合わない場合があります。</p>
+      <h3>3-2. 引き止め交渉への対応力</h3>
+      <p>人手不足下の医療現場では強い引き止めが想定されるため、<strong>労働組合運営または弁護士運営</strong>の交渉権を持つ業者を選ぶことが推奨されます (民間業者は連絡代行のみで交渉不可)。</p>
+      <h3>3-3. 看護師業界の実績件数</h3>
+      <p>看護師業界の退職代行実績を公式サイトで公表している業者を優先することで、業界特有の事情 (シフト・人手不足・引き止めパターン) への対応経験を確認できるとされています。</p>
+      <BannerAB pageSlug="kangoshi" position="middle" />
+    </div>
+  </section>
 
-    <h3 class="text-lg font-bold mt-4 mb-2">3-1. 24時間・夜勤帯対応</h3>
-    <p class="mb-3 text-sm">
-      看護師は夜勤・早朝勤務が一般的なため、業者の受付時間が「24時間 365日」または「LINE 即時対応」であることが実用上重要とされています。日中限定対応の業者は、シフトと合わない場合があります。
-    </p>
+  <section class="lp-section alt" id="sec-4">
+    <div class="container">
+      <p class="section-num">SECTION / 04</p>
+      <h2>看護師が確認しておきたい法的根拠</h2>
+      <p>看護師であっても、退職の自由は労働者の基本権利として認められる傾向があるとされています。</p>
+      <ul>
+        <li><strong>民法 627条</strong>: 期間の定めのない雇用契約は2週間前に申入れで解除可能 (<a href="https://elaws.e-gov.go.jp/document?lawid=129AC0000000089" target="_blank" rel="noopener">e-Gov 法令検索</a>)</li>
+        <li><strong>労働基準法</strong>: 退職の意思表示は労働者の権利として尊重される枠組み (<a href="https://elaws.e-gov.go.jp/document?lawid=322AC0000000049" target="_blank" rel="noopener">e-Gov 法令検索</a>)</li>
+        <li><strong>有期雇用</strong>: 病院との契約形態が有期 (試用期間・契約看護師等) の場合、契約解除条件は契約書を確認が必要</li>
+      </ul>
+      <p class="compare-note">※上記は一般論の整理です。個別案件 (損害賠償・違約金等) の判断は弁護士にご相談ください。</p>
+    </div>
+  </section>
 
-    <h3 class="text-lg font-bold mt-4 mb-2">3-2. 引き止め交渉への対応力</h3>
-    <p class="mb-3 text-sm">
-      人手不足下の医療現場では強い引き止めが想定されるため、<strong>労働組合運営または弁護士運営</strong>の交渉権を持つ業者を選ぶことが推奨されます (民間業者は連絡代行のみで交渉不可)。
-    </p>
+  <section class="lp-section" id="sec-faq">
+    <div class="container">
+      <p class="section-num">SECTION / 05</p>
+      <h2>よくある質問（FAQ）</h2>
+      <div class="faq">
+        <details><summary>Q1. 夜勤中や緊急時でも対応可能ですか？</summary><div><p>24時間対応を公表している業者であれば、夜勤帯にも LINE 等で受付可能とされています。実際の対応開始時間は業者の業務時間に依存するため、依頼前に確認推奨です。</p></div></details>
+        <details><summary>Q2. 師長や同僚にバレずに退職できますか？</summary><div><p>退職代行を使った場合、退職の事実は最終的に職場に伝わりますが、「いつ・どのように伝えるか」を業者と相談することで、対面で告げる必要を回避できるとされています。</p></div></details>
+        <details><summary>Q3. 看護師は損害賠償リスクが高い？</summary><div><p>一般論として、通常の退職手続きに沿って退職した場合、損害賠償が成立するケースは限定的とされています。ただし、契約形態 (有期雇用・奨学金返還契約等) により判断が分かれる場合があるため、不安な場合は弁護士にご相談ください。</p></div></details>
+        <details><summary>Q4. 引き止めが強い病院でも対応可能？</summary><div><p>労働組合運営または弁護士運営の業者であれば、交渉権を持って病院側と直接やりとりできるため、強い引き止めにも対応可能とされています。</p></div></details>
+      </div>
+    </div>
+  </section>
 
-    <h3 class="text-lg font-bold mt-4 mb-2">3-3. 看護師業界の実績件数</h3>
-    <p class="mb-3 text-sm">
-      看護師業界の退職代行実績を公式サイトで公表している業者を優先することで、業界特有の事情 (シフト・人手不足・引き止めパターン) への対応経験を確認できるとされています。
-    </p>
-
-    <BannerAB pageSlug="kangoshi" position="middle" />
-
-    <h2 class="text-xl font-bold mt-8 mb-3">4. 看護師が確認しておきたい法的根拠</h2>
-
-    <p class="mb-3 text-sm">
-      看護師であっても、退職の自由は労働者の基本権利として認められる傾向があるとされています。
-    </p>
-
-    <ul class="list-disc pl-5 mb-4 text-sm space-y-2">
-      <li><strong>民法 627条</strong>: 期間の定めのない雇用契約は2週間前に申入れで解除可能 (<a href="https://elaws.e-gov.go.jp/document?lawid=129AC0000000089" target="_blank" rel="noopener" class="underline">e-Gov 法令検索</a>)</li>
-      <li><strong>労働基準法</strong>: 退職の意思表示は労働者の権利として尊重される枠組み (<a href="https://elaws.e-gov.go.jp/document?lawid=322AC0000000049" target="_blank" rel="noopener" class="underline">e-Gov 法令検索</a>)</li>
-      <li><strong>有期雇用</strong>: 病院との契約形態が有期 (試用期間・契約看護師等) の場合、契約解除条件は契約書を確認が必要</li>
-    </ul>
-
-    <p class="text-xs text-gray-600 mb-6">※上記は一般論の整理です。個別案件 (損害賠償・違約金等) の判断は弁護士にご相談ください。</p>
-
-    <h2 class="text-xl font-bold mt-8 mb-3">5. よくある質問（FAQ）</h2>
-
-    <h3 class="text-lg font-bold mt-4 mb-2">Q1. 夜勤中や緊急時でも対応可能ですか？</h3>
-    <p class="mb-3 text-sm">
-      24時間対応を公表している業者であれば、夜勤帯にも LINE 等で受付可能とされています。実際の対応開始時間は業者の業務時間に依存するため、依頼前に確認推奨です。
-    </p>
-
-    <h3 class="text-lg font-bold mt-4 mb-2">Q2. 師長や同僚にバレずに退職できますか？</h3>
-    <p class="mb-3 text-sm">
-      退職代行を使った場合、退職の事実は最終的に職場に伝わりますが、「いつ・どのように伝えるか」を業者と相談することで、対面で告げる必要を回避できるとされています。
-    </p>
-
-    <h3 class="text-lg font-bold mt-4 mb-2">Q3. 看護師は損害賠償リスクが高い？</h3>
-    <p class="mb-3 text-sm">
-      一般論として、通常の退職手続きに沿って退職した場合、損害賠償が成立するケースは限定的とされています。ただし、契約形態 (有期雇用・奨学金返還契約等) により判断が分かれる場合があるため、不安な場合は弁護士にご相談ください。
-    </p>
-
-    <h3 class="text-lg font-bold mt-4 mb-2">Q4. 引き止めが強い病院でも対応可能？</h3>
-    <p class="mb-3 text-sm">
-      労働組合運営または弁護士運営の業者であれば、交渉権を持って病院側と直接やりとりできるため、強い引き止めにも対応可能とされています。
-    </p>
-
-    <section class="mt-8 mb-6 bg-gray-50 border border-gray-200 rounded p-4 text-sm">
-      <h2 class="text-lg font-bold mb-2">まとめ</h2>
+  <section class="lp-section alt" id="sec-summary">
+    <div class="container">
+      <p class="section-num">SECTION / 06</p>
+      <h2>まとめ</h2>
       <p>看護師の退職代行は、①24時間対応 ②交渉権 (労組/弁護士運営) ③看護師業界実績 の3軸で業者を選ぶことが推奨されています。不安がある場合は無料相談から始めることが可能とされています。</p>
-    </section>
-
-    <h2 class="text-xl font-bold mt-8 mb-3">出典・参考情報</h2>
-    <ul class="list-disc pl-5 mb-4 text-sm space-y-1">
-      <li><a href="https://elaws.e-gov.go.jp/document?lawid=129AC0000000089" target="_blank" rel="noopener" class="underline">民法 第627条 (退職の自由・e-Gov)</a></li>
-      <li><a href="https://elaws.e-gov.go.jp/document?lawid=322AC0000000049" target="_blank" rel="noopener" class="underline">労働基準法 (e-Gov)</a></li>
-      <li>各退職代行業者公式サイト (料金・対応時間・実績件数)</li>
-    </ul>
-
-    <p class="text-xs text-gray-600 mt-6">
-      ※本記事は2026年5月時点の情報をもとに作成しています。最新の法令・サービス内容は各公式サイトでご確認ください。
-    </p>
-  </main>
-</Layout>
+      <PRBadge pageSlug="kangoshi" label="退職代行サービスの公式サイトで無料相談する（PR）" />
+      <h2>出典・参考情報</h2>
+      <ul>
+        <li><a href="https://elaws.e-gov.go.jp/document?lawid=129AC0000000089" target="_blank" rel="noopener">民法 第627条 (退職の自由・e-Gov)</a></li>
+        <li><a href="https://elaws.e-gov.go.jp/document?lawid=322AC0000000049" target="_blank" rel="noopener">労働基準法 (e-Gov)</a></li>
+        <li>各退職代行業者公式サイト (料金・対応時間・実績件数)</li>
+      </ul>
+      <p style="font-size:12px;color:var(--c-text-mute,#6b7280);margin-top:16px;">※本記事は2026年5月時点の情報をもとに作成しています。最新の法令・サービス内容は各公式サイトでご確認ください。本記事は法的助言・効果保証ではなく、特定業者を推奨するものでもありません。</p>
+    </div>
+  </section>
+</RichLayout>

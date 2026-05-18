@@ -80,6 +80,13 @@ const defaultLabel = label || CTA_PATTERNS[0];
     const slot = root.querySelector('.banner-ab-slot');
     if (!slot) return;
 
+    // ★363/Codex#4 [fFHYHvUqIu]: localStorage 安全ラッパ
+    //   Safari Private / storage 制限環境で getItem/setItem が SecurityError を投げると
+    //   CTA スクリプトが即死し CTA 非表示=収益損失。try/catch で graceful degradation
+    //   (失敗時 lsGet→null で既存の random 割当 fallback が機能・behavior 保存)
+    function lsGet(k) { try { return window.localStorage.getItem(k); } catch (e) { return null; } }
+    function lsSet(k, v) { try { window.localStorage.setItem(k, v); } catch (e) { /* storage 不可: A/B 固定を諦め表示は継続 */ } }
+
     // === URLパラメータによる強制指定（テスト用・★302 検証ツール） ===
     // ?ab=A|B|C|D で variant 強制、?cta=0-9 で CTA 強制
     const urlParams = new URLSearchParams(window.location.search);
@@ -92,12 +99,12 @@ const defaultLabel = label || CTA_PATTERNS[0];
       variant = forcedVariant.toUpperCase();
     } else {
       // ★Round U-2: TechGo→退職代行Jobs 切替で variant_v1 をリセット
-      variant = localStorage.getItem('ab_variant_v2_jobs');
+      variant = lsGet('ab_variant_v2_jobs');
       if (!variant || !['A', 'B', 'C', 'D'].includes(variant)) {
         const r = Math.random();
         variant = r < 0.25 ? 'A' : r < 0.50 ? 'B' : r < 0.75 ? 'C' : 'D';
-        localStorage.setItem('ab_variant_v2_jobs', variant);
-        localStorage.setItem('ab_variant_v2_jobs_set_at', new Date().toISOString());
+        lsSet('ab_variant_v2_jobs', variant);
+        lsSet('ab_variant_v2_jobs_set_at', new Date().toISOString());
       }
     }
     root.setAttribute('data-variant', variant);
@@ -111,11 +118,11 @@ const defaultLabel = label || CTA_PATTERNS[0];
       }
     }
     if (ctaIdx === undefined) {
-      ctaIdx = parseInt(localStorage.getItem('ab_cta_v2_jobs') || '-1', 10);
+      ctaIdx = parseInt(lsGet('ab_cta_v2_jobs') || '-1', 10);
       if (ctaRotate && (isNaN(ctaIdx) || ctaIdx < 0 || ctaIdx >= CTA_PATTERNS.length)) {
         ctaIdx = Math.floor(Math.random() * CTA_PATTERNS.length);
-        localStorage.setItem('ab_cta_v2_jobs', String(ctaIdx));
-        localStorage.setItem('ab_cta_v2_jobs_set_at', new Date().toISOString());
+        lsSet('ab_cta_v2_jobs', String(ctaIdx));
+        lsSet('ab_cta_v2_jobs_set_at', new Date().toISOString());
       }
     }
     const label = (ctaRotate && ctaIdx >= 0) ? CTA_PATTERNS[ctaIdx] : defaultLabel;
@@ -246,7 +253,7 @@ const defaultLabel = label || CTA_PATTERNS[0];
     }
 
     // === GA4 インプレッションイベント送信（Cookie同意済の場合のみ） ===
-    if (typeof window.gtag === 'function' && localStorage.getItem('cookie_consent') === 'granted') {
+    if (typeof window.gtag === 'function' && lsGet('cookie_consent') === 'granted') {
       window.gtag('event', 'ab_test_impression', {
         variant: variant,
         material: chosen.material,
@@ -262,7 +269,7 @@ const defaultLabel = label || CTA_PATTERNS[0];
     // === クリック時イベント送信 ===
     slot.querySelectorAll('a[data-variant]').forEach(function(link) {
       link.addEventListener('click', function() {
-        if (typeof window.gtag === 'function' && localStorage.getItem('cookie_consent') === 'granted') {
+        if (typeof window.gtag === 'function' && lsGet('cookie_consent') === 'granted') {
           window.gtag('event', 'ab_test_click', {
             variant: variant,
             material: chosen.material,

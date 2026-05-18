@@ -1,5 +1,5 @@
 ---
-import Layout from '../../layouts/Layout.astro';
+import RichLayout from '../../layouts/RichLayout.astro';
 import PRBadge from '../../components/PRBadge.astro';
 import BannerAB from '../../components/BannerAB.astro';
 
@@ -7,8 +7,8 @@ const title = '「辞めたい」と感じている方へ｜退職代行の仕�
 const description = '「辞めたいけど言い出せない」「上司に切り出せない」とお感じの方へ。退職代行サービスの仕組み・費用目安・選び方をわかりやすく整理しました（PR・アフィリエイト広告を含みます）。';
 
 const breadcrumb = [
-  { name: 'ホーム', url: 'https://taishoku-info.pages.dev/' },
-  { name: '退職代行ガイド', url: 'https://taishoku-info.pages.dev/lp-a/' },
+  { name: 'ホーム', url: '/' },
+  { name: '退職代行ガイド' },
 ];
 
 const faq = [
@@ -18,211 +18,177 @@ const faq = [
 ];
 ---
 
-<Layout title={title} description={description} publishedDate="2026-04-25" modifiedDate="2026-05-02" breadcrumb={breadcrumb} faq={faq}>
-  <main class="max-w-3xl mx-auto px-4 py-8">
-    <PRBadge pageSlug="lp-a" />
-
-    <nav class="text-sm text-gray-500 mb-4">
-      <a href="/" class="underline">トップ</a> &gt; 退職代行の仕組み・費用・選び方
-    </nav>
-
-    <h1 class="text-2xl md:text-3xl font-bold mb-4 leading-tight">
-      「辞めたい」と感じている方へ｜退職代行の仕組み・費用・選び方ガイド
-    </h1>
-
-    <div class="bg-yellow-50 border-2 border-yellow-300 rounded p-3 mb-4 text-sm">
-      <strong>📢 PR表示</strong>: 本ページはアフィリエイト広告（PR）を含みます。本記事内のリンクからサービス契約に至った場合、運営者に成果報酬が支払われる場合があります。各サービスの正式な料金・条件は、必ず<strong>遷移先の公式サイトで最新情報をご確認</strong>ください。
+<RichLayout title={title} description={description} publishedDate="2026-04-25" modifiedDate="2026-05-18" breadcrumb={breadcrumb} faq={faq}>
+  <section class="fv" aria-labelledby="fv-h1">
+    <div class="container">
+      <span class="fv-pill">退職代行 / 仕組み・費用・選び方</span>
+      <h1 id="fv-h1"><span class="accent">「辞めたい」と感じている方へ</span><br />退職代行の仕組み・費用・選び方ガイド</h1>
+      <p class="lede">「自分から会社に辞めますと言い出せない」と感じている人は、想像以上に多くいます。退職代行は、会社への退職意思を<strong>第三者経由で伝えてもらう選択肢</strong>です。一人で抱え込まず、まずは「どんな仕組みなのか」を知ってみることから始めませんか？</p>
+      <ul class="fv-bullets">
+        <li>退職代行とは？仕組みの基本</li>
+        <li>費用の目安（運営主体別）</li>
+        <li>業者選びの判断軸4つ</li>
+        <li>よくある質問 + 公的相談窓口</li>
+      </ul>
+      <PRBadge pageSlug="lp-a" />
+      <div class="fv-meta">
+        <span><b>公開日</b> 2026-04-25</span><span><b>最終更新</b> 2026-05-18</span>
+        <span><b>編集</b> NY-squared 編集部</span><span><b>所要</b> 約 6 分</span>
+      </div>
     </div>
+  </section>
 
-    <p class="text-sm text-gray-600 mb-6">
-      最終確認日: 2026-04-26 / 公開情報の整理であり、特定サービスを推奨するものではありません。<br />
-      運営者: <a href="/operator-info/" class="underline">NY-squared (個人事業)</a> /
-      <a href="/editorial-policy/" class="underline">編集ポリシー</a> /
-      <a href="/privacy-policy/" class="underline">プライバシーポリシー</a>
-    </p>
-
-    <section class="mb-6 bg-blue-50 border-l-4 border-blue-400 p-4 text-sm">
-      <p class="mb-2">朝、目が覚めた瞬間に「今日も会社か…」と気分が重くなる。</p>
-      <p class="mb-2">上司や職場のことを考えると気持ちが沈む。</p>
+  <section class="lp-section" id="sec-intro">
+    <div class="container">
+      <p class="section-num">SECTION / 00</p>
+      <h2>はじめに (PR表示・前提)</h2>
+      <p><strong>📢 PR表示</strong>: 本ページはアフィリエイト広告（PR）を含みます。本記事内のリンクからサービス契約に至った場合、運営者に成果報酬が支払われる場合があります。各サービスの正式な料金・条件は、必ず<strong>遷移先の公式サイトで最新情報をご確認</strong>ください。</p>
+      <p style="font-size:13px;color:var(--c-text-sub,#4a5568);">最終確認日: 2026-04-26 / 公開情報の整理であり、特定サービスを推奨するものではありません。<br />運営者: <a href="/operator-info/">NY-squared (個人事業)</a> / <a href="/editorial-policy/">編集ポリシー</a> / <a href="/privacy-policy/">プライバシーポリシー</a></p>
+      <p>朝、目が覚めた瞬間に「今日も会社か…」と気分が重くなる。</p>
+      <p>上司や職場のことを考えると気持ちが沈む。</p>
       <p>出勤の準備が手につかない日が続いている。</p>
-      <p class="mt-3">そんな状態が続いている方へ。「<strong>自分から会社に辞めますと言い出せない</strong>」と感じている人は、想像以上に多くいます。</p>
-      <p class="mt-3">退職代行は、会社への退職意思を<strong>第三者経由で伝えてもらう選択肢</strong>です。一人で抱え込まず、まずは「どんな仕組みなのか」を知ってみることから始めませんか？</p>
-    </section>
-
-    <section class="mb-6 bg-orange-50 border-l-4 border-orange-400 p-4 text-sm">
-      <p>⚠️ 心身の不調を伴う場合は、退職代行の前に<strong>医療機関の受診</strong>を優先してください。</p>
-    </section>
-
-    <BannerAB pageSlug="lp-a" position="hero" />
-
-    <h2 class="text-xl font-bold mt-8 mb-3">退職代行とは？</h2>
-    <p class="mb-3 text-sm">
-      退職代行は、利用者の代わりに会社へ退職の意思を伝達するサービスです。具体的に行える業務範囲は、<strong>運営主体（民間企業・労働組合・弁護士）により法令上異なります</strong>。
-    </p>
-
-    <p class="mb-3 text-sm">退職代行は<strong>選択肢の一つ</strong>であり、即日退職を保証するものではありません。実際の退職可否・完了時期は契約内容・就業規則・会社の対応により異なります。</p>
-
-    <BannerAB pageSlug="lp-a" position="middle" />
-
-    <h2 class="text-xl font-bold mt-8 mb-3">費用の目安（運営主体別）</h2>
-
-    <div class="overflow-x-auto mb-4">
-      <table class="min-w-full text-sm border-collapse">
-        <thead class="bg-gray-100">
-          <tr>
-            <th class="border px-3 py-2 text-left">運営主体</th>
-            <th class="border px-3 py-2 text-left">費用目安</th>
-            <th class="border px-3 py-2 text-left">主な対応範囲</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td class="border px-3 py-2 font-semibold">民間企業</td>
-            <td class="border px-3 py-2">¥20,000〜¥30,000程度</td>
-            <td class="border px-3 py-2">退職意思の伝達中心。会社との交渉行為は非弁行為に該当する可能性があるため、一般に対応不可とされています</td>
-          </tr>
-          <tr>
-            <td class="border px-3 py-2 font-semibold">労働組合</td>
-            <td class="border px-3 py-2">¥25,000〜¥30,000程度</td>
-            <td class="border px-3 py-2">団体交渉権に基づき有給・給与等の交渉に対応する場合あり</td>
-          </tr>
-          <tr>
-            <td class="border px-3 py-2 font-semibold">弁護士法人</td>
-            <td class="border px-3 py-2">¥50,000〜¥100,000程度〜</td>
-            <td class="border px-3 py-2">訴訟・損害賠償等の法的代理に対応する場合あり</td>
-          </tr>
-        </tbody>
-      </table>
+      <p>そんな状態が続いている方へ。「<strong>自分から会社に辞めますと言い出せない</strong>」と感じている人は、想像以上に多くいます。</p>
+      <p>退職代行は、会社への退職意思を<strong>第三者経由で伝えてもらう選択肢</strong>です。一人で抱え込まず、まずは「どんな仕組みなのか」を知ってみることから始めませんか？</p>
+      <div class="counter-box">
+        <h3>⚠️ 心身の不調を伴う場合</h3>
+        <div class="row"><b>医療機関の受診を優先</b><span>心身の不調を伴う場合は、退職代行の前に医療機関の受診を優先してください。</span></div>
+      </div>
+      <BannerAB pageSlug="lp-a" position="hero" />
     </div>
+  </section>
 
-    <p class="text-xs text-gray-600 mb-6">
-      ⚠️ 上記は<strong>目安</strong>であり、各業者の正式料金・対応範囲は<strong>遷移先の公式サイトでご確認ください</strong>。
-    </p>
-
-    <h2 class="text-xl font-bold mt-8 mb-3">業者選びの判断軸4つ</h2>
-    <ol class="list-decimal pl-5 space-y-2 text-sm mb-6">
-      <li><strong>運営主体が公式サイトで明示されているか</strong>: 民間企業/労働組合/弁護士法人のどれか</li>
-      <li><strong>料金体系が透明か</strong>: 基本料金（税込）と追加費用が発生するケースが公式サイトに明記されているか</li>
-      <li><strong>連絡手段と対応時間</strong>: 「24時間対応」「無料相談」の有無は事業者により異なるため、各公式サイトで直接ご確認ください</li>
-      <li><strong>返金保証の条件</strong>: 適用範囲・期間・例外条件が公式サイトに明示されているか</li>
-    </ol>
-
-    <h2 class="text-xl font-bold mt-8 mb-3">よくある質問</h2>
-    <h3 class="text-lg font-bold mt-4 mb-2">Q1. 会社からの連絡は止められますか？</h3>
-    <p class="mb-3 text-sm">業者が「会社からの直接連絡を控えてほしい」旨を伝達するのが一般的とされていますが、<strong>完全に連絡を遮断することを保証するものではありません</strong>。</p>
-
-    <h3 class="text-lg font-bold mt-4 mb-2">Q2. 退職代行を使うと転職に不利ですか？</h3>
-    <p class="mb-3 text-sm"><strong>採用選考における扱いは個別事情により異なり、一律に断定することはできません</strong>。</p>
-
-    <h3 class="text-lg font-bold mt-4 mb-2">Q3. 家族にバレますか？</h3>
-    <p class="mb-3 text-sm"><strong>「絶対にバレない」と保証するものではありません</strong>。離職票等が自宅郵送される場合があるため、個別事情により家族が知る可能性があります。</p>
-
-    <h3 class="text-lg font-bold mt-4 mb-2">Q4. LINE 相談だけで料金を請求されますか？</h3>
-    <p class="mb-3 text-sm"><strong>各業者の相談料の有無・契約に至らなかった場合の費用扱いはサービスごとに条件が異なります</strong>。各公式サイトでご確認ください。</p>
-
-    <h2 class="text-xl font-bold mt-8 mb-3">困ったときの公的相談窓口（無料）</h2>
-    <ul class="list-disc pl-5 space-y-1 text-sm mb-6">
-      <li><strong>総合労働相談コーナー</strong>（厚生労働省）— 労働問題全般</li>
-      <li><strong>法テラス</strong>（日本司法支援センター）— 経済的に余裕がない方への無料法律相談</li>
-      <li><strong>みんなの人権110番</strong>（法務省）— ハラスメント・人権侵害</li>
-      <li><strong>こころの健康相談統一ダイヤル</strong>（厚生労働省）— 精神的不調を感じる場合</li>
-      <li><strong>ハローワーク</strong>（厚生労働省）— 失業保険・離職票・離職理由</li>
-    </ul>
-
-    <BannerAB pageSlug="lp-a" position="footer" />
-
-    <h2 class="text-xl font-bold mt-8 mb-3">まとめ</h2>
-    <p class="mb-3 text-sm">
-      「辞めたい」と思った瞬間が、情報を集め始めるタイミングです。一人で抱え込まず、退職代行という選択肢の仕組み・費用・選び方を知っておくだけでも、心の余裕が変わるかもしれません。
-    </p>
-    <p class="mb-3 text-sm">
-      LINE 相談に対応する業者もあります。<strong>まずは公式サイトで条件を確認し、複数社の情報を比較</strong>してご判断ください。
-    </p>
-
-    <h2 class="text-xl font-bold mt-8 mb-3">退職代行業者の中立比較</h2>
-
-    <p class="text-sm text-gray-600 mb-3">
-      退職代行業者を選ぶ際の参考として、運営主体タイプ別の一般論を整理します。<strong>個別サービスの提供範囲は各公式サイトでご確認ください</strong>。
-    </p>
-
-    <div class="overflow-x-auto mb-4">
-      <table class="min-w-full text-sm border-collapse">
-        <thead class="bg-gray-100">
-          <tr>
-            <th class="border px-3 py-2 text-left">運営主体タイプ</th>
-            <th class="border px-3 py-2 text-left">料金目安</th>
-            <th class="border px-3 py-2 text-left">主な対応範囲（一般論）</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td class="border px-3 py-2">民間企業</td>
-            <td class="border px-3 py-2">¥20,000〜¥30,000程度</td>
-            <td class="border px-3 py-2">退職意思の伝達中心。交渉行為は非弁行為に該当する可能性</td>
-          </tr>
-          <tr>
-            <td class="border px-3 py-2">労働組合</td>
-            <td class="border px-3 py-2">¥25,000〜¥30,000程度</td>
-            <td class="border px-3 py-2">団体交渉権に基づき有給消化等の交渉対応の場合あり</td>
-          </tr>
-          <tr>
-            <td class="border px-3 py-2">弁護士</td>
-            <td class="border px-3 py-2">¥50,000〜¥100,000+程度</td>
-            <td class="border px-3 py-2">法律事務全般。未払い給与請求・損害賠償対応など</td>
-          </tr>
-        </tbody>
-      </table>
+  <section class="lp-section alt" id="sec-1">
+    <div class="container">
+      <p class="section-num">SECTION / 01</p>
+      <h2>退職代行とは？</h2>
+      <p>退職代行は、利用者の代わりに会社へ退職の意思を伝達するサービスです。具体的に行える業務範囲は、<strong>運営主体（民間企業・労働組合・弁護士）により法令上異なります</strong>。</p>
+      <p>退職代行は<strong>選択肢の一つ</strong>であり、即日退職を保証するものではありません。実際の退職可否・完了時期は契約内容・就業規則・会社の対応により異なります。</p>
+      <BannerAB pageSlug="lp-a" position="middle" />
     </div>
+  </section>
 
-    <p class="text-xs text-gray-500 mb-6">
-      ※料金・対応範囲は 2026-04-26 時点の公開情報を編集部が整理。詳細は各業者公式サイトでご確認ください。<a href="/" class="underline">Hub の比較表</a> も併せて参照ください。
-    </p>
-
-    <h2 class="text-xl font-bold mt-8 mb-3">📌 次のアクション 3 選</h2>
-    <div class="grid md:grid-cols-3 gap-3 mb-6">
-      <a href="/" class="block border rounded p-3 hover:bg-blue-50 text-sm">
-        <strong>① 業者を比較したい</strong><br />
-        <span class="text-xs text-gray-600">運営主体 3 タイプ比較表 + 料金目安</span>
-      </a>
-      <a href="https://www.mhlw.go.jp/" target="_blank" rel="noopener" class="block border rounded p-3 hover:bg-blue-50 text-sm">
-        <strong>② 公的窓口に相談したい</strong><br />
-        <span class="text-xs text-gray-600">総合労働相談コーナー（厚労省）無料</span>
-      </a>
-      <a href="/faq/" class="block border rounded p-3 hover:bg-blue-50 text-sm">
-        <strong>③ よくある疑問を確認</strong><br />
-        <span class="text-xs text-gray-600">FAQ 25 問（業者選び・法務含む）</span>
-      </a>
+  <section class="lp-section" id="sec-2">
+    <div class="container">
+      <p class="section-num">SECTION / 02</p>
+      <h2>費用の目安（運営主体別）</h2>
+      <div class="compare-wrap">
+        <table class="compare">
+          <thead>
+            <tr><th>運営主体</th><th>費用目安</th><th>主な対応範囲</th></tr>
+          </thead>
+          <tbody>
+            <tr><td><b>民間企業</b></td><td>¥20,000〜¥30,000程度</td><td>退職意思の伝達中心。会社との交渉行為は非弁行為に該当する可能性があるため、一般に対応不可とされています</td></tr>
+            <tr><td><b>労働組合</b></td><td>¥25,000〜¥30,000程度</td><td>団体交渉権に基づき有給・給与等の交渉に対応する場合あり</td></tr>
+            <tr><td><b>弁護士法人</b></td><td>¥50,000〜¥100,000程度〜</td><td>訴訟・損害賠償等の法的代理に対応する場合あり</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="compare-note">⚠️ 上記は<strong>目安</strong>であり、各業者の正式料金・対応範囲は<strong>遷移先の公式サイトでご確認ください</strong>。</p>
     </div>
+  </section>
 
-    <h2 class="text-xl font-bold mt-8 mb-3">関連ページ</h2>
-    <ul class="list-disc pl-5 space-y-1 text-sm">
-      <li><a href="/" class="text-blue-700 underline">退職代行 総合ガイド Hub</a></li>
-      <li><a href="/unemployment-insurance/" class="text-blue-700 underline">退職代行利用後の失業保険ガイド</a></li>
-      <li><a href="/faq/" class="text-blue-700 underline">よくある質問FAQ 25問</a></li>
-      <li><a href="/damage-risk/" class="text-blue-700 underline">損害賠償リスクと対策</a></li>
-    </ul>
+  <section class="lp-section alt" id="sec-3">
+    <div class="container">
+      <p class="section-num">SECTION / 03</p>
+      <h2>業者選びの判断軸4つ</h2>
+      <ol>
+        <li><strong>運営主体が公式サイトで明示されているか</strong>: 民間企業/労働組合/弁護士法人のどれか</li>
+        <li><strong>料金体系が透明か</strong>: 基本料金（税込）と追加費用が発生するケースが公式サイトに明記されているか</li>
+        <li><strong>連絡手段と対応時間</strong>: 「24時間対応」「無料相談」の有無は事業者により異なるため、各公式サイトで直接ご確認ください</li>
+        <li><strong>返金保証の条件</strong>: 適用範囲・期間・例外条件が公式サイトに明示されているか</li>
+      </ol>
+    </div>
+  </section>
 
-    <p class="text-xs text-gray-500 mt-8">
-      ※本ページは2026-04-26時点の公開情報をもとに編集部が整理した参考記事です。法律相談・医療相談の代替ではありません。
-    </p>
-  </main>
+  <section class="lp-section" id="sec-faq">
+    <div class="container">
+      <p class="section-num">SECTION / 04</p>
+      <h2>よくある質問（FAQ）</h2>
+      <div class="faq">
+        <details><summary>Q1. 会社からの連絡は止められますか？</summary><div><p>業者が「会社からの直接連絡を控えてほしい」旨を伝達するのが一般的とされていますが、<strong>完全に連絡を遮断することを保証するものではありません</strong>。</p></div></details>
+        <details><summary>Q2. 退職代行を使うと転職に不利ですか？</summary><div><p><strong>採用選考における扱いは個別事情により異なり、一律に断定することはできません</strong>。</p></div></details>
+        <details><summary>Q3. 家族にバレますか？</summary><div><p><strong>「絶対にバレない」と保証するものではありません</strong>。離職票等が自宅郵送される場合があるため、個別事情により家族が知る可能性があります。</p></div></details>
+        <details><summary>Q4. LINE 相談だけで料金を請求されますか？</summary><div><p><strong>各業者の相談料の有無・契約に至らなかった場合の費用扱いはサービスごとに条件が異なります</strong>。各公式サイトでご確認ください。</p></div></details>
+        {faq.map((item) => (
+          <details><summary>{item.q}</summary><div><p set:html={item.a} /></div></details>
+        ))}
+      </div>
+    </div>
+  </section>
 
-  <!-- BreadcrumbList + Article schema (Round V Phase 2 [kzPklZSdFu] 2026-04-29) -->
-  <script type="application/ld+json" set:html={JSON.stringify({
-    "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    "itemListElement": [
-      { "@type": "ListItem", "position": 1, "name": "退職代行 総合ガイド Hub", "item": "https://taishoku-info.pages.dev/" },
-      { "@type": "ListItem", "position": 2, "name": "退職代行の仕組み・費用・選び方" }
-    ]
-  })} />
-  <script type="application/ld+json" set:html={JSON.stringify({
-    "@context": "https://schema.org",
-    "@type": "Article",
-    "headline": "退職代行の仕組み・費用・選び方ガイド",
-    "datePublished": "2026-04-26",
-    "dateModified": "2026-04-29",
-    "author": { "@type": "Organization", "name": "NY-squared (個人事業)" },
-    "publisher": { "@type": "Organization", "name": "NY-squared" }
-  })} />
-</Layout>
+  <section class="lp-section alt" id="sec-4">
+    <div class="container">
+      <p class="section-num">SECTION / 05</p>
+      <h2>困ったときの公的相談窓口（無料）</h2>
+      <ul>
+        <li><strong>総合労働相談コーナー</strong>（厚生労働省）— 労働問題全般</li>
+        <li><strong>法テラス</strong>（日本司法支援センター）— 経済的に余裕がない方への無料法律相談</li>
+        <li><strong>みんなの人権110番</strong>（法務省）— ハラスメント・人権侵害</li>
+        <li><strong>こころの健康相談統一ダイヤル</strong>（厚生労働省）— 精神的不調を感じる場合</li>
+        <li><strong>ハローワーク</strong>（厚生労働省）— 失業保険・離職票・離職理由</li>
+      </ul>
+      <BannerAB pageSlug="lp-a" position="footer" />
+    </div>
+  </section>
+
+  <section class="lp-section" id="sec-5">
+    <div class="container">
+      <p class="section-num">SECTION / 06</p>
+      <h2>退職代行業者の中立比較</h2>
+      <p>退職代行業者を選ぶ際の参考として、運営主体タイプ別の一般論を整理します。<strong>個別サービスの提供範囲は各公式サイトでご確認ください</strong>。</p>
+      <div class="compare-wrap">
+        <table class="compare">
+          <thead>
+            <tr><th>運営主体タイプ</th><th>料金目安</th><th>主な対応範囲（一般論）</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>民間企業</td><td>¥20,000〜¥30,000程度</td><td>退職意思の伝達中心。交渉行為は非弁行為に該当する可能性</td></tr>
+            <tr><td>労働組合</td><td>¥25,000〜¥30,000程度</td><td>団体交渉権に基づき有給消化等の交渉対応の場合あり</td></tr>
+            <tr><td>弁護士</td><td>¥50,000〜¥100,000+程度</td><td>法律事務全般。未払い給与請求・損害賠償対応など</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="compare-note">※料金・対応範囲は 2026-04-26 時点の公開情報を編集部が整理。詳細は各業者公式サイトでご確認ください。<a href="/">Hub の比較表</a> も併せて参照ください。</p>
+    </div>
+  </section>
+
+  <section class="lp-section alt" id="sec-summary">
+    <div class="container">
+      <p class="section-num">SECTION / 07</p>
+      <h2>まとめ・次のアクション</h2>
+      <p>「辞めたい」と思った瞬間が、情報を集め始めるタイミングです。一人で抱え込まず、退職代行という選択肢の仕組み・費用・選び方を知っておくだけでも、心の余裕が変わるかもしれません。</p>
+      <p>LINE 相談に対応する業者もあります。<strong>まずは公式サイトで条件を確認し、複数社の情報を比較</strong>してご判断ください。</p>
+      <div class="counter-box">
+        <h3>📌 次のアクション 3 選</h3>
+        <div class="row"><b>① 業者を比較したい</b><span><a href="/">運営主体 3 タイプ比較表 + 料金目安</a></span></div>
+        <div class="row"><b>② 公的窓口に相談したい</b><span><a href="https://www.mhlw.go.jp/" target="_blank" rel="noopener">総合労働相談コーナー（厚労省）無料</a></span></div>
+        <div class="row"><b>③ よくある疑問を確認</b><span><a href="/faq/">FAQ 25 問（業者選び・法務含む）</a></span></div>
+      </div>
+      <p><strong>関連ページ</strong></p>
+      <ul>
+        <li><a href="/">退職代行 総合ガイド Hub</a></li>
+        <li><a href="/unemployment-insurance/">退職代行利用後の失業保険ガイド</a></li>
+        <li><a href="/faq/">よくある質問FAQ 25問</a></li>
+        <li><a href="/damage-risk/">損害賠償リスクと対策</a></li>
+      </ul>
+      <PRBadge pageSlug="lp-a" label="退職代行サービスの公式サイトで無料相談する（PR）" />
+    </div>
+  </section>
+
+  <section class="lp-section" id="sec-policy">
+    <div class="container">
+      <p class="section-num">SECTION / 08</p>
+      <h2>編集ポリシー (情報源・更新日・E-E-A-T)</h2>
+      <ul>
+        <li><strong>情報源</strong>: 政府公式 e-Gov 法令検索 (民法・労働基準法・弁護士法) ・厚生労働省公式サイト ・各退職代行業者公式サイト ・退職代行関連の公開統計情報</li>
+        <li><strong>編集方針</strong>: 一次情報優先 (法令は e-Gov 直接リンク・運営形態は公式サイト確認) ・断定表現を避け推定値・公開情報の整理として記述</li>
+        <li><strong>更新頻度</strong>: 月次レビュー (法令改正・サービス内容変更時は随時更新)</li>
+        <li><strong>運営者</strong>: NY-squared (個人事業) <a href="/operator-info/">運営情報ページ</a> 参照</li>
+        <li><strong>E-E-A-T 4 原則</strong>: Experience (退職代行関連の公開情報整理) ・Expertise (法令引用 + 業界公開統計) ・Authoritativeness (政府公式 + 業者公式の一次情報のみ) ・Trustworthiness (PR 表記 + 推定値明示 + 法的助言ではない注記)</li>
+      </ul>
+      <p style="font-size:12px;color:var(--c-text-mute,#6b7280);margin-top:16px;">
+        ※本ページは2026-04-26時点の公開情報をもとに編集部が整理した参考記事です。法律相談・医療相談の代替ではありません。本ページはアフィリエイト広告（PR）を含みます。
+      </p>
+    </div>
+  </section>
+</RichLayout>

@@ -258,7 +258,7 @@ const services = [
             {s.refundKey && <span class="px-2 py-0.5 bg-pink-100 text-pink-900 rounded">返金保証</span>}
           </div>
           {s.affiliateUrl ? (
-            <a href={s.affiliateUrl} rel="nofollow sponsored" referrerpolicy="no-referrer-when-downgrade" target="_blank" class="block text-center bg-orange-500 text-white py-2 rounded font-bold hover:bg-orange-600 transition text-sm">サービス{s.id} 公式サイト (PR)</a>
+            <a href={s.affiliateUrl} rel="nofollow sponsored" referrerpolicy="no-referrer-when-downgrade" target="_blank" class="block text-center bg-orange-500 text-white py-2 rounded font-bold hover:bg-orange-600 transition text-sm">{s.name.split(' (')[0]} 公式サイト (PR)</a>
           ) : (
             <p class="block text-center text-xs text-gray-500 py-2 border border-dashed border-gray-300 rounded">公式要検索 (ASP 未提携)</p>
           )}

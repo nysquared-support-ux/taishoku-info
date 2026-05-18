@@ -5,6 +5,8 @@
 //   → default を 退職代行Jobs アフィリ URL (アクセストレード rk=0100q2uz00ormk) に変更
 //   → label を 退職代行向けに変更 + 退職代行コンテキストの注記に修正
 //   → F19 Cloudflare 連携後即報酬発生条件達成
+// ★508 RichLayout 統合 ([fFHYHvUqIu] 2026-05-18): Tailwind class → ti-pr-badge__ 名前空間 self-contained CSS
+//   (Codex #7 名前空間化 / #8 a11y状態 反映・ASP rk/img/rel/referrerpolicy/PR文言は verbatim 不変・★480)
 interface Props {
   href?: string;
   label?: string;
@@ -20,7 +22,7 @@ const {
 const finalHref = href || 'https://h.accesstrade.net/sp/cc?rk=0100q2uz00ormk';
 ---
 
-<div class="my-6 p-4 border-2 border-blue-200 rounded-lg bg-blue-50">
+<div class="ti-pr-badge__box">
   <a
     href={finalHref}
     target="_blank"
@@ -29,14 +31,59 @@ const finalHref = href || 'https://h.accesstrade.net/sp/cc?rk=0100q2uz00ormk';
     data-cta={label}
     data-material="prbadge_taishoku_jobs"
     data-page-slug={pageSlug}
-    class="block text-center bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded transition"
+    class="ti-pr-badge__btn"
   >
     {label}
   </a>
   <img border="0" width="1" height="1"
        src="https://h.accesstrade.net/sp/rr?rk=0100q2uz00ormk"
        alt="" loading="lazy" style="position:absolute;left:-9999px" />
-  <p class="text-xs text-gray-700 mt-2 text-center">
+  <p class="ti-pr-badge__note">
     PR / 退職代行サービス公式サイトへ遷移 / カウンセリング無料 / LINE 相談可 / 即日対応可（公式利用規約参照）
   </p>
 </div>
+
+<style is:global>
+  /* ★508 self-contained: rich-techgo.css 変数 + fallback で old Layout/RichLayout 両対応 (Codex #7 名前空間 / #8 a11y) */
+  .ti-pr-badge__box {
+    background: #fff;
+    border: 1px solid var(--c-border, #d9e2ec);
+    border-radius: var(--r-lg, 16px);
+    padding: 20px;
+    box-shadow: var(--shadow-sm, 0 1px 2px rgba(15,23,42,.06));
+    margin: 24px 0;
+  }
+  .ti-pr-badge__btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    gap: 8px;
+    width: 100%;
+    box-sizing: border-box;
+    background: var(--c-primary, #0b4d8c);
+    color: #fff !important;
+    text-decoration: none !important;
+    padding: 16px 20px;
+    border-radius: var(--r-md, 10px);
+    font-weight: 700;
+    font-size: 15px;
+    line-height: 1.4;
+    transition: background .15s ease, transform .05s ease;
+    box-shadow: 0 1px 0 rgba(255,255,255,.2) inset, 0 2px 0 var(--c-primary-dark, #083866);
+  }
+  .ti-pr-badge__btn:hover { background: var(--c-primary-dark, #083866); color: #fff !important; }
+  .ti-pr-badge__btn:active { transform: translateY(1px); }
+  .ti-pr-badge__btn:focus-visible { outline: 3px solid var(--c-accent, #f6a623); outline-offset: 2px; }
+  .ti-pr-badge__btn:visited { color: #fff !important; }
+  .ti-pr-badge__note {
+    font-size: 12px;
+    color: var(--c-text-mute, #6b7280);
+    margin: 10px 0 0;
+    text-align: center;
+    line-height: 1.6;
+  }
+  @media (max-width: 640px) {
+    .ti-pr-badge__btn { font-size: 14px; padding: 14px 16px; }
+  }
+</style>

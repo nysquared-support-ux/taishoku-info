@@ -55,12 +55,12 @@ const CTA_PATTERNS = [
 const defaultLabel = label || CTA_PATTERNS[0];
 ---
 
-<div class="banner-ab-root my-6" data-page-slug={pageSlug} data-position={position} data-label={defaultLabel} data-cta-rotate={ctaRotate ? '1' : '0'}>
+<div class="banner-ab-root ti-banner-ab__root" data-page-slug={pageSlug} data-position={position} data-label={defaultLabel} data-cta-rotate={ctaRotate ? '1' : '0'}>
   <!-- デフォルト表示（JS実行前/JS無効/JSエラー時のフォールバック） -->
   <div class="banner-ab-slot">
     <a href="https://h.accesstrade.net/sp/cc?rk=0100q25a00ormk"
        target="_blank" rel="noopener nofollow sponsored"
-       class="block text-center bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded transition"
+       class="ti-banner-ab__btn"
        data-variant="fallback" data-material="txt_1215838">
       {defaultLabel}
     </a>
@@ -68,7 +68,7 @@ const defaultLabel = label || CTA_PATTERNS[0];
          src="https://h.accesstrade.net/sp/rr?rk=0100q25a00ormk"
          alt="" loading="lazy" style="position:absolute;left:-9999px" />
   </div>
-  <p class="text-xs text-gray-700 mt-2 text-center">
+  <p class="ti-banner-ab__note">
     PR / 退職代行Jobs (株式会社アレス) 公式サイトへ遷移 / アフィリエイト広告 / 個別事情により結果は異なります
   </p>
 </div>
@@ -130,7 +130,7 @@ const defaultLabel = label || CTA_PATTERNS[0];
         html: `
           <a href="https://h.accesstrade.net/sp/cc?rk=0100q25a00ormk"
              target="_blank" rel="noopener nofollow sponsored"
-             class="block text-center bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded transition"
+             class="ti-banner-ab__btn"
              data-variant="A" data-material="txt_1215838">
             ${label}
           </a>
@@ -144,7 +144,7 @@ const defaultLabel = label || CTA_PATTERNS[0];
         material: 'banner_1215856_300x250',
         rk: '0100q25s00ormk',
         html: `
-          <div class="text-center">
+          <div class="ti-banner-ab__wrap">
             <a href="https://h.accesstrade.net/sp/cc?rk=0100q25s00ormk"
                target="_blank" rel="noopener nofollow sponsored"
                data-variant="B" data-material="banner_1215856_300x250">
@@ -154,7 +154,7 @@ const defaultLabel = label || CTA_PATTERNS[0];
             </a>
             <a href="https://h.accesstrade.net/sp/cc?rk=0100q2uz00ormk"
                target="_blank" rel="noopener nofollow sponsored"
-               class="block mt-2 text-sm text-blue-700 underline"
+               class="ti-banner-ab__textlink"
                data-variant="B-text" data-material="txt_1216763">
               ${label}
             </a>
@@ -166,7 +166,7 @@ const defaultLabel = label || CTA_PATTERNS[0];
         material: 'banner_1215855_250x250',
         rk: '0100q25r00ormk',
         html: `
-          <div class="text-center">
+          <div class="ti-banner-ab__wrap">
             <a href="https://h.accesstrade.net/sp/cc?rk=0100q25r00ormk"
                target="_blank" rel="noopener nofollow sponsored"
                data-variant="C" data-material="banner_1215855_250x250">
@@ -176,7 +176,7 @@ const defaultLabel = label || CTA_PATTERNS[0];
             </a>
             <a href="https://h.accesstrade.net/sp/cc?rk=0100q2uz00ormk"
                target="_blank" rel="noopener nofollow sponsored"
-               class="block mt-2 text-sm text-blue-700 underline"
+               class="ti-banner-ab__textlink"
                data-variant="C-text" data-material="txt_1216763">
               ${label}
             </a>
@@ -188,7 +188,7 @@ const defaultLabel = label || CTA_PATTERNS[0];
         material: 'banner_1215856_floating',
         rk: '0100q25s00ormk',
         html: `
-          <div class="text-center">
+          <div class="ti-banner-ab__wrap">
             <a href="https://h.accesstrade.net/sp/cc?rk=0100q25s00ormk"
                target="_blank" rel="noopener nofollow sponsored"
                data-variant="D" data-material="banner_1215856_floating">
@@ -198,7 +198,7 @@ const defaultLabel = label || CTA_PATTERNS[0];
             </a>
             <a href="https://h.accesstrade.net/sp/cc?rk=0100q2uz00ormk"
                target="_blank" rel="noopener nofollow sponsored"
-               class="block mt-2 text-sm text-blue-700 underline"
+               class="ti-banner-ab__textlink"
                data-variant="D-text" data-material="txt_1216763">
               ${label}
             </a>
@@ -280,6 +280,51 @@ const defaultLabel = label || CTA_PATTERNS[0];
 </script>
 
 <style is:global>
+  /* ★508 self-contained: rich-techgo.css 変数 + fallback で old Layout/RichLayout 両対応 (Codex #7 名前空間 / #8 a11y) */
+  .ti-banner-ab__root { margin: 24px 0; }
+  .ti-banner-ab__btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    gap: 8px;
+    width: 100%;
+    box-sizing: border-box;
+    background: var(--c-primary, #0b4d8c);
+    color: #fff !important;
+    text-decoration: none !important;
+    padding: 16px 20px;
+    border-radius: var(--r-md, 10px);
+    font-weight: 700;
+    font-size: 15px;
+    line-height: 1.4;
+    transition: background .15s ease, transform .05s ease;
+    box-shadow: 0 1px 0 rgba(255,255,255,.2) inset, 0 2px 0 var(--c-primary-dark, #083866);
+  }
+  .ti-banner-ab__btn:hover { background: var(--c-primary-dark, #083866); color: #fff !important; }
+  .ti-banner-ab__btn:active { transform: translateY(1px); }
+  .ti-banner-ab__btn:focus-visible { outline: 3px solid var(--c-accent, #f6a623); outline-offset: 2px; }
+  .ti-banner-ab__btn:visited { color: #fff !important; }
+  .ti-banner-ab__wrap { text-align: center; }
+  .ti-banner-ab__wrap img { max-width: 100%; height: auto; }
+  .ti-banner-ab__textlink {
+    display: block;
+    margin-top: 8px;
+    font-size: 14px;
+    color: var(--c-primary, #0b4d8c);
+    text-decoration: underline;
+  }
+  .ti-banner-ab__textlink:focus-visible { outline: 3px solid var(--c-accent, #f6a623); outline-offset: 2px; }
+  .ti-banner-ab__note {
+    font-size: 12px;
+    color: var(--c-text-mute, #6b7280);
+    margin: 10px 0 0;
+    text-align: center;
+    line-height: 1.6;
+  }
+  @media (max-width: 640px) {
+    .ti-banner-ab__btn { font-size: 14px; padding: 14px 16px; }
+  }
   .floating-cta {
     position: fixed;
     bottom: 16px;

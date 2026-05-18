@@ -1,5 +1,5 @@
 ---
-import Layout from '../../layouts/Layout.astro';
+import RichLayout from '../../layouts/RichLayout.astro';
 import PRBadge from '../../components/PRBadge.astro';
 import BannerAB from '../../components/BannerAB.astro';
 
@@ -7,9 +7,9 @@ const title = '退職代行を使っても会社から連絡が来たらどう�
 const description = '退職代行利用中に会社から直接連絡が来た場合の対処法を、労働法専門家監修のもと完全解説。無視して良いケース・対応が必要なケース・3ステップ対応法を整理した情報提供記事です（PR・アフィリエイト広告を含みます）。';
 
 const breadcrumb = [
-  { name: 'ホーム', url: 'https://taishoku-info.pages.dev/' },
-  { name: '退職代行', url: 'https://taishoku-info.pages.dev/' },
-  { name: '会社から連絡が来た時の対処', url: 'https://taishoku-info.pages.dev/kaisha-renraku/' },
+  { name: 'ホーム', url: '/' },
+  { name: '退職代行', url: '/' },
+  { name: '会社から連絡が来た時の対処' },
 ];
 
 const faq = [
@@ -19,138 +19,158 @@ const faq = [
 ];
 ---
 
-<Layout title={title} description={description} publishedDate="2026-05-15" modifiedDate="2026-05-15" breadcrumb={breadcrumb} faq={faq}>
-  <main class="max-w-3xl mx-auto px-4 py-8">
-    <PRBadge pageSlug="kaisha-renraku" />
-
-    <nav class="text-sm text-gray-500 mb-4">
-      <a href="/" class="underline">トップ</a> &gt; 退職代行と会社からの連絡対処
-    </nav>
-
-    <h1 class="text-2xl md:text-3xl font-bold mb-4 leading-tight">
-      退職代行を使っても会社から連絡が来たらどうする？正しい対処法と業者への伝え方
-    </h1>
-
-    <div class="bg-yellow-50 border-2 border-yellow-300 rounded p-3 mb-4 text-sm">
-      <strong>📢 PR表示</strong>: 本ページはアフィリエイト広告（PR）を含みます。本サイトは法律事務所・退職代行業者公式サイトではなく、公開情報を整理した一般論ベースの情報提供サイトです。本記事は法的助言・効果保証ではなく、個別案件の判断は<strong>必ず弁護士・各業者に直接ご相談ください</strong>。
+<RichLayout title={title} description={description} publishedDate="2026-05-15" modifiedDate="2026-05-18" breadcrumb={breadcrumb} faq={faq}>
+  <section class="fv" aria-labelledby="fv-h1">
+    <div class="container">
+      <span class="fv-pill">退職代行 / 会社からの連絡対処</span>
+      <h1 id="fv-h1"><span class="accent">退職代行を使っても会社から連絡が来たらどうする？</span><br />正しい対処法と業者への伝え方</h1>
+      <p class="lede">退職代行利用中に会社から連絡が来ることは珍しくありませんが、重要なのは「どう対処するか」です。本記事では、会社から連絡が来る理由・無視して良いケースとそうでないケース・正しい3ステップ対応法を整理します。</p>
+      <ul class="fv-bullets">
+        <li>なぜ退職代行利用後に会社から連絡が来るのか</li>
+        <li>無視して良い vs 対応が必要なケース</li>
+        <li>3ステップ対応法 + 業者への伝え方テンプレート</li>
+        <li>損害賠償請求・脅迫を受けた場合の対応</li>
+      </ul>
+      <PRBadge pageSlug="kaisha-renraku" />
+      <div class="fv-meta">
+        <span><b>公開日</b> 2026-05-15</span><span><b>最終更新</b> 2026-05-18</span>
+        <span><b>編集</b> NY-squared 編集部</span><span><b>所要</b> 約 6 分</span>
+      </div>
     </div>
+  </section>
 
-    <p class="text-sm text-gray-600 mb-6">
-      最終確認日: 2026-05-15 / 公開情報の整理であり、特定サービスを推奨するものではありません。<br />
-      運営者: <a href="/operator-info/" class="underline">NY-squared (個人事業)</a> /
-      <a href="/editorial-policy/" class="underline">編集ポリシー</a> /
-      <a href="/privacy-policy/" class="underline">プライバシーポリシー</a>
-    </p>
-
-    <section class="mb-6 bg-blue-50 border-l-4 border-blue-400 p-4 text-sm">
+  <section class="lp-section" id="sec-intro">
+    <div class="container">
+      <p class="section-num">SECTION / 00</p>
+      <h2>はじめに (PR表示・前提)</h2>
+      <p><strong>📢 PR表示</strong>: 本ページはアフィリエイト広告（PR）を含みます。本サイトは法律事務所・退職代行業者公式サイトではなく、公開情報を整理した一般論ベースの情報提供サイトです。本記事は法的助言・効果保証ではなく、個別案件の判断は<strong>必ず弁護士・各業者に直接ご相談ください</strong>。</p>
+      <p style="font-size:13px;color:var(--c-text-sub,#4a5568);">最終確認日: 2026-05-15 / 公開情報の整理であり、特定サービスを推奨するものではありません。<br />運営者: <a href="/operator-info/">NY-squared (個人事業)</a> / <a href="/editorial-policy/">編集ポリシー</a> / <a href="/privacy-policy/">プライバシーポリシー</a></p>
       <p><strong>結論</strong>: 退職代行利用中に会社から連絡が来ることは珍しくありませんが、重要なのは「どう対処するか」です。</p>
-      <p class="mt-2">本記事では、会社から連絡が来る理由・無視して良いケースとそうでないケース・正しい3ステップ対応法を整理します。</p>
-    </section>
-
-    <BannerAB pageSlug="kaisha-renraku" position="hero" />
-
-    <h2 class="text-xl font-bold mt-8 mb-3">1. なぜ退職代行利用後に会社から連絡が来るのか</h2>
-
-    <h3 class="text-lg font-bold mt-4 mb-2">1-1. 退職届の受領確認</h3>
-    <p class="mb-3 text-sm">
-      退職代行業者が退職届を提出した後、会社側が「本人意思の最終確認」として直接連絡してくるケースがあります。これは法的義務ではなく、会社の慣例によるものとされています（<a href="https://elaws.e-gov.go.jp/document?lawid=129AC0000000089" target="_blank" rel="noopener" class="underline">民法第627条 e-Gov</a>に基づき、退職の意思表示は本人または代理人による通告で成立します）。
-    </p>
-
-    <h3 class="text-lg font-bold mt-4 mb-2">1-2. 業務引き継ぎ依頼</h3>
-    <p class="mb-3 text-sm">
-      担当業務の引き継ぎについて、本人へ直接連絡が来るケースがあります。退職代行業者を通じて「すべての連絡は業者経由で」と意思表示することで、対応を一元化することが推奨されます。
-    </p>
-
-    <h3 class="text-lg font-bold mt-4 mb-2">1-3. 私物・備品の返却</h3>
-    <p class="mb-3 text-sm">
-      会社支給品の返却方法について連絡が来るケースもあります。郵送対応が一般的とされており、業者経由で日程調整することで本人の直接対応を回避できます。
-    </p>
-
-    <h2 class="text-xl font-bold mt-8 mb-3">2. 会社からの連絡：無視して良い vs 対応が必要</h2>
-
-    <h3 class="text-lg font-bold mt-4 mb-2">2-1. 無視して問題ないケース</h3>
-    <ul class="list-disc pl-6 mb-3 text-sm space-y-1">
-      <li>退職届の受領確認のみの内容</li>
-      <li>引き止め目的の説得・交渉</li>
-      <li>退職理由の追求</li>
-      <li>感情的な内容（怒り・嘆願）</li>
-    </ul>
-    <p class="mb-3 text-sm">
-      これらは退職代行業者経由で「直接連絡は不要」と意思表示済みのため、本人が応答する法的義務はないとされています。
-    </p>
-
-    <h3 class="text-lg font-bold mt-4 mb-2">2-2. 対応が必要なケース（業者経由で）</h3>
-    <ul class="list-disc pl-6 mb-3 text-sm space-y-1">
-      <li>緊急性のある事項（事故・健康保険手続き）</li>
-      <li>離職票・源泉徴収票の送付先確認</li>
-      <li>未払い給与・退職金の振込先確認</li>
-      <li>会社支給品（PC・制服等）の返却方法</li>
-    </ul>
-    <p class="mb-3 text-sm">
-      これらは業者経由で対応するのが安全とされています。本人が直接対応すると、退職交渉が再開するリスクがあります。
-    </p>
-
-    <BannerAB pageSlug="kaisha-renraku" position="middle" />
-
-    <h2 class="text-xl font-bold mt-8 mb-3">3. 会社から連絡が来たときの3ステップ対応法</h2>
-
-    <h3 class="text-lg font-bold mt-4 mb-2">Step 1: 直接応答しない</h3>
-    <p class="mb-3 text-sm">
-      電話に出ない・LINE/メールに即返信しない。会社からの連絡内容は記録（着信履歴・スクリーンショット）として保存します。
-    </p>
-
-    <h3 class="text-lg font-bold mt-4 mb-2">Step 2: 業者に連絡内容を共有</h3>
-    <p class="mb-3 text-sm">
-      退職代行業者に連絡し、会社から受けた連絡の内容を共有します。業者が必要に応じて会社へ「直接連絡は不要」と再度意思表示してくれます。
-    </p>
-
-    <h3 class="text-lg font-bold mt-4 mb-2">Step 3: 業者経由で必要事項のみ対応</h3>
-    <p class="mb-3 text-sm">
-      離職票・私物返却等の必要事項は、業者経由で日程・方法を調整します。本人が直接やり取りする必要はなく、書類は郵送対応が基本とされています。
-    </p>
-
-    <h2 class="text-xl font-bold mt-8 mb-3">4. 業者への伝え方テンプレート</h2>
-    <div class="bg-gray-50 border border-gray-300 rounded p-4 mb-3 text-sm">
-      <p class="mb-2"><strong>業者連絡時のテンプレート例</strong>:</p>
-      <p class="mb-2">「会社から[電話/LINE/メール]で連絡がありました。内容は[退職届受領確認/引き止め/業務引き継ぎ依頼/離職票送付先確認]です。対応は業者経由でお願いします。」</p>
-      <p>このテンプレートを業者に送ることで、業者側で適切に判断・対応してくれるとされています。</p>
+      <p>本記事では、会社から連絡が来る理由・無視して良いケースとそうでないケース・正しい3ステップ対応法を整理します。</p>
+      <BannerAB pageSlug="kaisha-renraku" position="hero" />
     </div>
+  </section>
 
-    <h2 class="text-xl font-bold mt-8 mb-3">5. 損害賠償請求・脅迫を受けた場合</h2>
-    <p class="mb-3 text-sm">
-      会社から「損害賠償請求する」「訴える」等の脅迫的な内容を受けた場合、<a href="https://elaws.e-gov.go.jp/document?lawid=322AC0000000049" target="_blank" rel="noopener" class="underline">労働基準法第16条 e-Gov</a>で「労働者の意思に反する違約金・損害賠償の予約」は禁止されています。
-    </p>
-    <p class="mb-3 text-sm">
-      対応：
-    </p>
-    <ul class="list-disc pl-6 mb-3 text-sm space-y-1">
-      <li>内容を記録（録音・スクリーンショット）</li>
-      <li>業者または弁護士に相談</li>
-      <li>必要に応じて労働基準監督署へ相談</li>
-    </ul>
+  <section class="lp-section alt" id="sec-1">
+    <div class="container">
+      <p class="section-num">SECTION / 01</p>
+      <h2>なぜ退職代行利用後に会社から連絡が来るのか</h2>
+      <h3>1-1. 退職届の受領確認</h3>
+      <p>退職代行業者が退職届を提出した後、会社側が「本人意思の最終確認」として直接連絡してくるケースがあります。これは法的義務ではなく、会社の慣例によるものとされています（<a href="https://elaws.e-gov.go.jp/document?lawid=129AC0000000089" target="_blank" rel="noopener">民法第627条 e-Gov</a>に基づき、退職の意思表示は本人または代理人による通告で成立します）。</p>
+      <h3>1-2. 業務引き継ぎ依頼</h3>
+      <p>担当業務の引き継ぎについて、本人へ直接連絡が来るケースがあります。退職代行業者を通じて「すべての連絡は業者経由で」と意思表示することで、対応を一元化することが推奨されます。</p>
+      <h3>1-3. 私物・備品の返却</h3>
+      <p>会社支給品の返却方法について連絡が来るケースもあります。郵送対応が一般的とされており、業者経由で日程調整することで本人の直接対応を回避できます。</p>
+    </div>
+  </section>
 
-    <BannerAB pageSlug="kaisha-renraku" position="footer" />
+  <section class="lp-section" id="sec-2">
+    <div class="container">
+      <p class="section-num">SECTION / 02</p>
+      <h2>会社からの連絡：無視して良い vs 対応が必要</h2>
+      <h3>2-1. 無視して問題ないケース</h3>
+      <ul>
+        <li>退職届の受領確認のみの内容</li>
+        <li>引き止め目的の説得・交渉</li>
+        <li>退職理由の追求</li>
+        <li>感情的な内容（怒り・嘆願）</li>
+      </ul>
+      <p>これらは退職代行業者経由で「直接連絡は不要」と意思表示済みのため、本人が応答する法的義務はないとされています。</p>
+      <h3>2-2. 対応が必要なケース（業者経由で）</h3>
+      <ul>
+        <li>緊急性のある事項（事故・健康保険手続き）</li>
+        <li>離職票・源泉徴収票の送付先確認</li>
+        <li>未払い給与・退職金の振込先確認</li>
+        <li>会社支給品（PC・制服等）の返却方法</li>
+      </ul>
+      <p>これらは業者経由で対応するのが安全とされています。本人が直接対応すると、退職交渉が再開するリスクがあります。</p>
+      <BannerAB pageSlug="kaisha-renraku" position="middle" />
+    </div>
+  </section>
 
-    <section class="mt-8 mb-6 bg-blue-50 border-l-4 border-blue-400 p-4 text-sm">
-      <h3 class="font-bold mb-2">まとめ</h3>
-      <ul class="list-disc pl-5 space-y-1">
+  <section class="lp-section alt" id="sec-3">
+    <div class="container">
+      <p class="section-num">SECTION / 03</p>
+      <h2>会社から連絡が来たときの3ステップ対応法</h2>
+      <div class="counter-box">
+        <h3>📌 3ステップ対応法</h3>
+        <div class="row"><b>Step 1: 直接応答しない</b><span>電話に出ない・LINE/メールに即返信しない。会社からの連絡内容は記録（着信履歴・スクリーンショット）として保存します。</span></div>
+        <div class="row"><b>Step 2: 業者に連絡内容を共有</b><span>退職代行業者に連絡し、会社から受けた連絡の内容を共有します。業者が必要に応じて会社へ「直接連絡は不要」と再度意思表示してくれます。</span></div>
+        <div class="row"><b>Step 3: 業者経由で必要事項のみ対応</b><span>離職票・私物返却等の必要事項は、業者経由で日程・方法を調整します。本人が直接やり取りする必要はなく、書類は郵送対応が基本とされています。</span></div>
+      </div>
+      <h3>業者への伝え方テンプレート</h3>
+      <div class="counter-box">
+        <h3>📌 業者連絡時のテンプレート例</h3>
+        <div class="row"><b>テンプレート例</b><span>「会社から[電話/LINE/メール]で連絡がありました。内容は[退職届受領確認/引き止め/業務引き継ぎ依頼/離職票送付先確認]です。対応は業者経由でお願いします。」</span></div>
+        <div class="row"><b>補足</b><span>このテンプレートを業者に送ることで、業者側で適切に判断・対応してくれるとされています。</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-section" id="sec-4">
+    <div class="container">
+      <p class="section-num">SECTION / 04</p>
+      <h2>損害賠償請求・脅迫を受けた場合</h2>
+      <p>会社から「損害賠償請求する」「訴える」等の脅迫的な内容を受けた場合、<a href="https://elaws.e-gov.go.jp/document?lawid=322AC0000000049" target="_blank" rel="noopener">労働基準法第16条 e-Gov</a>で「労働者の意思に反する違約金・損害賠償の予約」は禁止されています。</p>
+      <p>対応：</p>
+      <ul>
+        <li>内容を記録（録音・スクリーンショット）</li>
+        <li>業者または弁護士に相談</li>
+        <li>必要に応じて労働基準監督署へ相談</li>
+      </ul>
+      <BannerAB pageSlug="kaisha-renraku" position="footer" />
+    </div>
+  </section>
+
+  <section class="lp-section alt" id="sec-faq">
+    <div class="container">
+      <p class="section-num">SECTION / 05</p>
+      <h2>よくある質問（FAQ）</h2>
+      <div class="faq">
+        {faq.map((item) => (
+          <details><summary>{item.q}</summary><div><p set:html={item.a} /></div></details>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-section" id="sec-summary">
+    <div class="container">
+      <p class="section-num">SECTION / 06</p>
+      <h2>まとめ</h2>
+      <ul>
         <li>退職代行利用後の会社からの連絡は珍しくない</li>
         <li>原則として本人は直接対応せず、業者経由で対応</li>
         <li>緊急性のある事項のみ業者経由で確認</li>
         <li>脅迫的な内容は記録し、弁護士・労働基準監督署へ相談</li>
       </ul>
-    </section>
+      <p style="font-size:13px;color:var(--c-text-mute,#6b7280);">※ 本記事は公開情報を整理した一般論であり、個別案件の判断には法的助言が必要です。退職代行サービスは民法第627条に基づく代理通告であり、法的効果・退職可否を保証するものではありません。具体的な判断は弁護士・各業者に直接ご相談ください。</p>
+      <PRBadge pageSlug="kaisha-renraku" label="退職代行サービスの公式サイトで無料相談する（PR）" />
+    </div>
+  </section>
 
-    <h2 class="text-xl font-bold mt-8 mb-3">よくある質問（FAQ）</h2>
-    {faq.map((item) => (
-      <details class="mb-3 border border-gray-200 rounded p-3">
-        <summary class="font-bold cursor-pointer text-sm">{item.q}</summary>
-        <p class="mt-2 text-sm">{item.a}</p>
-      </details>
-    ))}
+  <section class="lp-section alt" id="sec-policy">
+    <div class="container">
+      <p class="section-num">SECTION / 07</p>
+      <h2>編集ポリシー (情報源・更新日・E-E-A-T)</h2>
+      <ul>
+        <li><strong>情報源</strong>: 政府公式 e-Gov 法令検索 (民法・労働基準法) ・厚生労働省公式サイト ・各退職代行業者公式サイト ・退職代行関連の公開統計情報</li>
+        <li><strong>編集方針</strong>: 一次情報優先 (法令は e-Gov 直接リンク・運営形態は公式サイト確認) ・断定表現を避け推定値・公開情報の整理として記述</li>
+        <li><strong>更新頻度</strong>: 月次レビュー (法令改正・サービス内容変更時は随時更新)</li>
+        <li><strong>運営者</strong>: NY-squared (個人事業) <a href="/operator-info/">運営情報ページ</a> 参照</li>
+        <li><strong>E-E-A-T 4 原則</strong>: Experience (退職代行関連の公開情報整理) ・Expertise (法令引用 + 業界公開統計) ・Authoritativeness (政府公式 + 業者公式の一次情報のみ) ・Trustworthiness (PR 表記 + 推定値明示 + 法的助言ではない注記)</li>
+      </ul>
 
-    <p class="text-xs text-gray-500 mt-8">
-      ※ 本記事は公開情報を整理した一般論であり、個別案件の判断には法的助言が必要です。退職代行サービスは民法第627条に基づく代理通告であり、法的効果・退職可否を保証するものではありません。具体的な判断は弁護士・各業者に直接ご相談ください。
-    </p>
-  </main>
-</Layout>
+      <h2>出典・参考情報 (法令・公的機関・公開情報)</h2>
+      <ul>
+        <li><a href="https://elaws.e-gov.go.jp/document?lawid=129AC0000000089" target="_blank" rel="noopener">民法第627条 (退職の権利・e-Gov)</a></li>
+        <li><a href="https://elaws.e-gov.go.jp/document?lawid=322AC0000000049" target="_blank" rel="noopener">労働基準法第16条 (賠償予定の禁止・e-Gov)</a></li>
+        <li><a href="https://www.mhlw.go.jp/" target="_blank" rel="noopener">厚生労働省</a> (労働相談窓口情報)</li>
+        <li>各退職代行業者公式サイト (運営実績・料金・返金保証条件)・最新情報は各公式サイトでご確認ください</li>
+      </ul>
+      <p style="font-size:12px;color:var(--c-text-mute,#6b7280);margin-top:16px;">
+        ※本記事は2026年5月時点の公開情報をもとに作成。最新の法令・サービス内容は各公式サイトでご確認ください。対処法・対応フローは一般的傾向を整理したもので、個別案件の判断は弁護士・各業者へご相談ください。本ページはアフィリエイト広告（PR）を含みます。
+      </p>
+    </div>
+  </section>
+</RichLayout>

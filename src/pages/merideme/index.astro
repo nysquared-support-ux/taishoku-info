@@ -1,5 +1,5 @@
 ---
-import Layout from '../../layouts/Layout.astro';
+import RichLayout from '../../layouts/RichLayout.astro';
 import PRBadge from '../../components/PRBadge.astro';
 import BannerAB from '../../components/BannerAB.astro';
 
@@ -15,8 +15,8 @@ const title = '退職代行 メリット デメリット｜5+5 公正比較・�
 const description = '退職代行を使うべきか迷う方へ。メリット 5 (即日退職・連絡不要・有給消化サポート等) とデメリット 5 (費用・人間関係・引継ぎ等) を公開情報ベースに公正比較し、職場別の判断ポイントを整理した情報提供記事です (PR・アフィリエイト広告を含みます)。個別判断は弁護士・各業者へご相談ください。';
 
 const breadcrumb = [
-  { name: 'ホーム', url: 'https://taishoku-info.pages.dev/' },
-  { name: '退職代行 メリット デメリット', url: 'https://taishoku-info.pages.dev/merideme/' },
+  { name: 'ホーム', url: '/' },
+  { name: '退職代行 メリット デメリット' },
 ];
 
 const faq = [
@@ -25,141 +25,170 @@ const faq = [
   { q: 'メリットがデメリットを上回る職場の特徴は?', a: '一般的に ① パワハラ・モラハラがある職場 ② 退職意思を伝えても受け入れられない職場 ③ 心身の不調が出ている職場 ④ 引き止めが過度で時間がかかる職場 が挙げられます。状況によっては早期退職の方が長期的メリットが大きいとされています。' },
   { q: 'デメリットが大きい職場の特徴は?', a: '一般的に ① 同業界での再就職を強く考えている職場 ② 良好な人間関係を重視する職場 ③ 引継ぎ責任が重い職場 (顧客直接担当等) が挙げられます。退職代行を使う前に上司との 1 対 1 面談を試みることが推奨されるケースもあります。' },
   { q: '退職代行と自己退職どちらが安全ですか?', a: '一般的に状況による、と言われています。精神的負担が小さく引き止めがない職場では自己退職が安全とされ、引き止めが強い・パワハラがある職場では退職代行が安全とされています。判断は職場状況 + 自身の心身状態を総合的に評価することが推奨されます。' },
-  { q: '退職代行を使うと損害賠償請求されますか?', a: '一般的に正当な退職権 (民法 627 条) の行使は損害賠償対象外とされています。ただし業務上の重大な引継ぎ放棄・機密情報持出し等は別問題です。詳細は <a href="/damage-risk/" class="underline">退職代行 損害賠償ページ</a> をご参照ください。' },
-  { q: '失敗するリスクはどれくらいですか?', a: '一般的に運営主体 (労組・弁護士運営) + 実績 + 料金透明性で選べばリスクは限定的とされています。失敗事例の詳細は <a href="/shippai/" class="underline">退職代行 失敗例ページ</a> をご参照ください。' },
-  { q: 'おすすめの退職代行業者は?', a: '一般的に運営主体 (労組・弁護士運営) + 料金透明性 + 返金保証で選ぶことが推奨されます。比較は <a href="/osusume-hikaku/" class="underline">退職代行 5 社比較ページ</a> ・ランキングは <a href="/osusume-ranking/" class="underline">退職代行 おすすめランキング</a> をご参照ください。' },
+  { q: '退職代行を使うと損害賠償請求されますか?', a: '一般的に正当な退職権 (民法 627 条) の行使は損害賠償対象外とされています。ただし業務上の重大な引継ぎ放棄・機密情報持出し等は別問題です。詳細は <a href="/damage-risk/">退職代行 損害賠償ページ</a> をご参照ください。' },
+  { q: '失敗するリスクはどれくらいですか?', a: '一般的に運営主体 (労組・弁護士運営) + 実績 + 料金透明性で選べばリスクは限定的とされています。失敗事例の詳細は <a href="/shippai/">退職代行 失敗例ページ</a> をご参照ください。' },
+  { q: 'おすすめの退職代行業者は?', a: '一般的に運営主体 (労組・弁護士運営) + 料金透明性 + 返金保証で選ぶことが推奨されます。比較は <a href="/osusume-hikaku/">退職代行 5 社比較ページ</a> ・ランキングは <a href="/osusume-ranking/">退職代行 おすすめランキング</a> をご参照ください。' },
 ];
 ---
 
-<Layout title={title} description={description} publishedDate="2026-05-11" modifiedDate="2026-05-11" breadcrumb={breadcrumb} faq={faq}>
-  <main class="max-w-3xl mx-auto px-4 py-8">
-    <PRBadge pageSlug="merideme" />
-
-    <nav class="text-sm text-gray-500 mb-4">
-      <a href="/" class="underline">トップ</a> &gt; 退職代行 メリット デメリット
-    </nav>
-
-    <h1 class="text-2xl md:text-3xl font-bold mb-4 leading-tight">
-      退職代行 メリット デメリット｜5+5 公正比較・職場別の判断ポイント
-    </h1>
-
-    <div class="bg-yellow-50 border-2 border-yellow-300 rounded p-3 mb-4 text-sm">
-      <strong>📢 PR表示</strong>: 本ページはアフィリエイト広告 (PR) を含みます。情報提供を目的とし、特定サービスの推奨ではありません。本記事は退職保証・効果保証ではなく、個別案件は弁護士・各業者へご相談ください。
+<RichLayout title={title} description={description} publishedDate="2026-05-11" modifiedDate="2026-05-18" breadcrumb={breadcrumb} faq={faq}>
+  <section class="fv" aria-labelledby="fv-h1">
+    <div class="container">
+      <span class="fv-pill">退職代行 / メリット デメリット</span>
+      <h1 id="fv-h1"><span class="accent">退職代行 メリット デメリット</span><br />5+5 公正比較・職場別の判断ポイント</h1>
+      <p class="lede">退職代行のメリットは「即日退職」「連絡不要」「有給消化サポート」が代表的、デメリットは「費用」「人間関係断絶」「引継ぎ困難」が代表的とされています。判断は<strong>職場状況 (パワハラ/引き止め有無) + 自身の心身状態 + 同業再就職の可能性</strong>の 3 軸で行うことが推奨されます。</p>
+      <ul class="fv-bullets">
+        <li>メリット 5 (一般的に評価される利点)</li>
+        <li>デメリット 5 (一般的に指摘される欠点)</li>
+        <li>職場別 判断フレーム + デメリット最小化 5 ポイント</li>
+        <li>比較の NG パターン + FAQ 8 件</li>
+      </ul>
+      <PRBadge pageSlug="merideme" />
+      <div class="fv-meta">
+        <span><b>公開日</b> 2026-05-11</span><span><b>最終更新</b> 2026-05-18</span>
+        <span><b>編集</b> NY-squared 編集部</span><span><b>所要</b> 約 7 分</span>
+      </div>
     </div>
+  </section>
 
-    <p class="text-sm text-gray-600 mb-6">
-      最終確認日: 2026-05-11 / 運営者: <a href="/operator-info/" class="underline">NY-squared (個人事業)</a> / <a href="/editorial-policy/" class="underline">編集ポリシー</a> / <a href="/privacy-policy/" class="underline">プライバシーポリシー</a>
-    </p>
-
-    <section class="mb-6 bg-blue-50 border-l-4 border-blue-400 p-4 text-sm">
+  <section class="lp-section" id="sec-intro">
+    <div class="container">
+      <p class="section-num">SECTION / 00</p>
+      <h2>はじめに (PR表示・前提)</h2>
+      <p><strong>📢 PR表示</strong>: 本ページはアフィリエイト広告 (PR) を含みます。情報提供を目的とし、特定サービスの推奨ではありません。本記事は退職保証・効果保証ではなく、個別案件は弁護士・各業者へご相談ください。</p>
+      <p style="font-size:13px;color:var(--c-text-sub,#4a5568);">最終確認日: 2026-05-11 / 運営者: <a href="/operator-info/">NY-squared (個人事業)</a> / <a href="/editorial-policy/">編集ポリシー</a> / <a href="/privacy-policy/">プライバシーポリシー</a></p>
       <p><strong>結論</strong>: 退職代行のメリットは「即日退職」「連絡不要」「有給消化サポート」が代表的、デメリットは「費用」「人間関係断絶」「引継ぎ困難」が代表的とされています。判断は<strong>職場状況 (パワハラ/引き止め有無) + 自身の心身状態 + 同業再就職の可能性</strong>の 3 軸で行うことが推奨されます。</p>
-      <p class="mt-2">本記事ではメリット 5 + デメリット 5 の公正比較・職場別の判断フレーム・FAQ 8 件を整理します。</p>
-    </section>
-
-    <BannerAB pageSlug="merideme" position="hero" />
-
-    <h2 class="text-xl font-bold mt-8 mb-3" style="color: #1E3A8A;">1. 退職代行のメリット 5 (一般的に評価される利点)</h2>
-    <ol class="list-decimal pl-5 mb-4 text-sm space-y-2">
-      <li><strong>即日退職が可能</strong>: 民法 627 条 + 業者交渉により最短当日退職を実現するケースがあるとされています (労組・弁護士運営の場合)</li>
-      <li><strong>会社と直接連絡不要</strong>: 上司・人事との対面・電話・メールを一切経由せず退職可能。パワハラ職場で精神的負担が大きい場合に評価される利点とされています</li>
-      <li><strong>有給消化サポート</strong>: 残存有給の消化交渉を業者が代行。労組運営の場合は団体交渉権で実効性が高いとされています</li>
-      <li><strong>退職後の手続き支援</strong>: 退職届・離職票・社会保険・年金等の事務手続きのアドバイスが受けられる業者が多いとされています</li>
-      <li><strong>引き止め・脅し回避</strong>: 退職意思を伝えても受け入れない職場・過度な引き止めがある場合に有効とされています。退職代行経由なら法的根拠で退職が成立しやすい一般論があります</li>
-    </ol>
-
-    <h2 class="text-xl font-bold mt-8 mb-3" style="color: #1E3A8A;">2. 退職代行のデメリット 5 (一般的に指摘される欠点)</h2>
-    <ol class="list-decimal pl-5 mb-4 text-sm space-y-2">
-      <li><strong>費用が発生</strong>: 一般的に ¥22,000-77,000 程度 (運営主体・サービス内容により変動)。労組運営は ¥22,000-27,000・弁護士運営は ¥55,000-77,000 が目安とされています</li>
-      <li><strong>会社の人間関係が完全に途絶える</strong>: 同僚・上司との関係性は退職代行後に修復が困難になりがち。同業界での再就職時に評判リスクが懸念されるとされています</li>
-      <li><strong>業務引継ぎが困難</strong>: 顧客直接担当・専門知識が必要な業務では引継ぎ放棄が後任のリスクになる場合があるとされています。重要案件は退職代行前に業者と相談する必要があります</li>
-      <li><strong>業界での評判リスク</strong>: 一部業界 (狭い業界・特定地域) では退職代行使用が知れ渡るリスクがあるとされています。匿名性の確保は業者の運用に依存します</li>
-      <li><strong>違法業者リスク</strong>: 民間業者で弁護士法 72 条違反 (非弁行為) を疑われる業者が存在します。労組・弁護士運営の業者を選ぶことが安全とされています</li>
-    </ol>
-
-    <h2 class="text-xl font-bold mt-8 mb-3" style="color: #1E3A8A;">3. 職場別 メリット/デメリット どちらが上回るか判断フレーム</h2>
-    <div class="overflow-x-auto mb-4">
-      <table class="border-collapse w-full text-sm">
-        <thead>
-          <tr class="bg-gray-100">
-            <th class="border px-2 py-2 text-left">職場特性</th>
-            <th class="border px-2 py-2 text-left">メリット優位</th>
-            <th class="border px-2 py-2 text-left">デメリット優位</th>
-            <th class="border px-2 py-2 text-left">判断ポイント</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr><td class="border px-2 py-2">パワハラ・モラハラあり</td><td class="border px-2 py-2 font-bold text-green-700">◎</td><td class="border px-2 py-2">-</td><td class="border px-2 py-2">心身の健康優先・即時退職推奨</td></tr>
-          <tr><td class="border px-2 py-2">退職意思を受け入れない</td><td class="border px-2 py-2 font-bold text-green-700">◎</td><td class="border px-2 py-2">-</td><td class="border px-2 py-2">法的根拠で退職成立しやすい</td></tr>
-          <tr><td class="border px-2 py-2">心身の不調が出ている</td><td class="border px-2 py-2 font-bold text-green-700">◎</td><td class="border px-2 py-2">-</td><td class="border px-2 py-2">休職 → 退職の手続き含めて業者相談</td></tr>
-          <tr><td class="border px-2 py-2">同業界での再就職想定</td><td class="border px-2 py-2">△</td><td class="border px-2 py-2 font-bold text-red-700">○</td><td class="border px-2 py-2">業界評判リスク・自己退職検討推奨</td></tr>
-          <tr><td class="border px-2 py-2">良好な人間関係</td><td class="border px-2 py-2">△</td><td class="border px-2 py-2 font-bold text-red-700">○</td><td class="border px-2 py-2">関係性維持・自己退職または上司面談優先</td></tr>
-          <tr><td class="border px-2 py-2">顧客直接担当 (引継ぎ重要)</td><td class="border px-2 py-2">△</td><td class="border px-2 py-2 font-bold text-red-700">○</td><td class="border px-2 py-2">引継ぎ計画 + 業者相談で軽減策検討</td></tr>
-        </tbody>
-      </table>
+      <p>本記事ではメリット 5 + デメリット 5 の公正比較・職場別の判断フレーム・FAQ 8 件を整理します。</p>
+      <BannerAB pageSlug="merideme" position="hero" />
     </div>
-    <p class="text-xs text-gray-600 mb-6">※判断は個別状況により異なります。本表は一般的な傾向を整理したもので、最終判断は弁護士・各業者へご相談ください。</p>
+  </section>
 
-    <BannerAB pageSlug="merideme" position="middle" />
+  <section class="lp-section alt" id="sec-1">
+    <div class="container">
+      <p class="section-num">SECTION / 01</p>
+      <h2>退職代行のメリット 5 (一般的に評価される利点)</h2>
+      <ol>
+        <li><strong>即日退職が可能</strong>: 民法 627 条 + 業者交渉により最短当日退職を実現するケースがあるとされています (労組・弁護士運営の場合)</li>
+        <li><strong>会社と直接連絡不要</strong>: 上司・人事との対面・電話・メールを一切経由せず退職可能。パワハラ職場で精神的負担が大きい場合に評価される利点とされています</li>
+        <li><strong>有給消化サポート</strong>: 残存有給の消化交渉を業者が代行。労組運営の場合は団体交渉権で実効性が高いとされています</li>
+        <li><strong>退職後の手続き支援</strong>: 退職届・離職票・社会保険・年金等の事務手続きのアドバイスが受けられる業者が多いとされています</li>
+        <li><strong>引き止め・脅し回避</strong>: 退職意思を伝えても受け入れない職場・過度な引き止めがある場合に有効とされています。退職代行経由なら法的根拠で退職が成立しやすい一般論があります</li>
+      </ol>
+    </div>
+  </section>
 
-    <h2 class="text-xl font-bold mt-8 mb-3" style="color: #1E3A8A;">4. デメリットを最小化する 5 ポイント</h2>
-    <ul class="list-disc pl-5 mb-4 text-sm space-y-2">
-      <li><strong>① 業者選定厳格化</strong>: 労組運営または弁護士運営を優先 (非弁行為リスク回避)</li>
-      <li><strong>② 引継ぎ事前準備</strong>: 主要顧客リスト・進行中案件メモを退職代行使用前に整備 (口頭引継ぎは不可でも書面残せる)</li>
-      <li><strong>③ 退職届の準備</strong>: 退職代行業者経由で会社に提出する退職届を事前作成 (簡素なフォーマット OK)</li>
-      <li><strong>④ 私物・貸与品の整理</strong>: 退職代行使用前に私物回収 + 会社貸与品 (PC/カード/制服) 返却計画</li>
-      <li><strong>⑤ 失業保険・再就職準備</strong>: 退職後の失業保険手続き・<a href="/osusume/" class="underline">退職代行 おすすめ業者比較</a> + <a href="/osusume-ranking/" class="underline">ランキング</a> で業者選定後の流れを事前確認</li>
-    </ul>
+  <section class="lp-section" id="sec-2">
+    <div class="container">
+      <p class="section-num">SECTION / 02</p>
+      <h2>退職代行のデメリット 5 (一般的に指摘される欠点)</h2>
+      <ol>
+        <li><strong>費用が発生</strong>: 一般的に ¥22,000-77,000 程度 (運営主体・サービス内容により変動)。労組運営は ¥22,000-27,000・弁護士運営は ¥55,000-77,000 が目安とされています</li>
+        <li><strong>会社の人間関係が完全に途絶える</strong>: 同僚・上司との関係性は退職代行後に修復が困難になりがち。同業界での再就職時に評判リスクが懸念されるとされています</li>
+        <li><strong>業務引継ぎが困難</strong>: 顧客直接担当・専門知識が必要な業務では引継ぎ放棄が後任のリスクになる場合があるとされています。重要案件は退職代行前に業者と相談する必要があります</li>
+        <li><strong>業界での評判リスク</strong>: 一部業界 (狭い業界・特定地域) では退職代行使用が知れ渡るリスクがあるとされています。匿名性の確保は業者の運用に依存します</li>
+        <li><strong>違法業者リスク</strong>: 民間業者で弁護士法 72 条違反 (非弁行為) を疑われる業者が存在します。労組・弁護士運営の業者を選ぶことが安全とされています</li>
+      </ol>
+    </div>
+  </section>
 
-    <h2 class="text-xl font-bold mt-8 mb-3" style="color: #1E3A8A;">5. メリット・デメリット比較の NG パターン (4 例)</h2>
-    <ul class="list-disc pl-5 mb-4 text-sm space-y-2">
-      <li><strong>① メリットだけ見て即決</strong>: 同業再就職リスク・引継ぎ義務を検討せず使用 → 業界評判ダメージ可能性あり</li>
-      <li><strong>② デメリットだけ見て自己退職</strong>: パワハラ職場・心身不調を放置 → 健康被害拡大リスク</li>
-      <li><strong>③ 費用最安だけで業者選定</strong>: 民間業者の非弁行為リスク → 違法業者選択の可能性</li>
-      <li><strong>④ 1 人で判断</strong>: 状況の客観評価が困難 → 労組・法テラス・<a href="/osusume/" class="underline">業者無料相談</a> 活用推奨</li>
-    </ul>
+  <section class="lp-section alt" id="sec-3">
+    <div class="container">
+      <p class="section-num">SECTION / 03</p>
+      <h2>職場別 メリット/デメリット どちらが上回るか判断フレーム</h2>
+      <div class="compare-wrap">
+        <table class="compare">
+          <thead>
+            <tr><th>職場特性</th><th>メリット優位</th><th>デメリット優位</th><th>判断ポイント</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>パワハラ・モラハラあり</td><td><b>◎</b></td><td>-</td><td>心身の健康優先・即時退職推奨</td></tr>
+            <tr><td>退職意思を受け入れない</td><td><b>◎</b></td><td>-</td><td>法的根拠で退職成立しやすい</td></tr>
+            <tr><td>心身の不調が出ている</td><td><b>◎</b></td><td>-</td><td>休職 → 退職の手続き含めて業者相談</td></tr>
+            <tr><td>同業界での再就職想定</td><td>△</td><td><b>○</b></td><td>業界評判リスク・自己退職検討推奨</td></tr>
+            <tr><td>良好な人間関係</td><td>△</td><td><b>○</b></td><td>関係性維持・自己退職または上司面談優先</td></tr>
+            <tr><td>顧客直接担当 (引継ぎ重要)</td><td>△</td><td><b>○</b></td><td>引継ぎ計画 + 業者相談で軽減策検討</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="compare-note">※判断は個別状況により異なります。本表は一般的な傾向を整理したもので、最終判断は弁護士・各業者へご相談ください。</p>
+      <BannerAB pageSlug="merideme" position="middle" />
+    </div>
+  </section>
 
-    <h2 class="text-xl font-bold mt-8 mb-3" style="color: #1E3A8A;">6. よくある質問 (FAQ)</h2>
-    {faq.map((item) => (
-      <>
-        <h3 class="text-lg font-bold mt-4 mb-2">Q. {item.q}</h3>
-        <p class="mb-3 text-sm" set:html={item.a} />
-      </>
-    ))}
+  <section class="lp-section" id="sec-4">
+    <div class="container">
+      <p class="section-num">SECTION / 04</p>
+      <h2>デメリットを最小化する 5 ポイント</h2>
+      <ul>
+        <li><strong>① 業者選定厳格化</strong>: 労組運営または弁護士運営を優先 (非弁行為リスク回避)</li>
+        <li><strong>② 引継ぎ事前準備</strong>: 主要顧客リスト・進行中案件メモを退職代行使用前に整備 (口頭引継ぎは不可でも書面残せる)</li>
+        <li><strong>③ 退職届の準備</strong>: 退職代行業者経由で会社に提出する退職届を事前作成 (簡素なフォーマット OK)</li>
+        <li><strong>④ 私物・貸与品の整理</strong>: 退職代行使用前に私物回収 + 会社貸与品 (PC/カード/制服) 返却計画</li>
+        <li><strong>⑤ 失業保険・再就職準備</strong>: 退職後の失業保険手続き・<a href="/osusume/">退職代行 おすすめ業者比較</a> + <a href="/osusume-ranking/">ランキング</a> で業者選定後の流れを事前確認</li>
+      </ul>
+    </div>
+  </section>
 
-    <section class="mt-8 mb-6 bg-gray-50 border border-gray-200 rounded p-4 text-sm">
-      <h2 class="text-lg font-bold mb-2">まとめ</h2>
-      <p class="mb-3">
-        退職代行は「メリット 5 (即日退職/連絡不要/有給消化/手続き支援/引き止め回避)」と「デメリット 5 (費用/人間関係/引継ぎ困難/業界評判/違法業者リスク)」のバランスで判断することが推奨されます。職場特性 (パワハラ有無/退職意思受容/心身状態) でメリット優位・デメリット優位が変わるため、6 軸の判断フレームを参考にしてください。
+  <section class="lp-section alt" id="sec-5">
+    <div class="container">
+      <p class="section-num">SECTION / 05</p>
+      <h2>メリット・デメリット比較の NG パターン (4 例)</h2>
+      <ul>
+        <li><strong>① メリットだけ見て即決</strong>: 同業再就職リスク・引継ぎ義務を検討せず使用 → 業界評判ダメージ可能性あり</li>
+        <li><strong>② デメリットだけ見て自己退職</strong>: パワハラ職場・心身不調を放置 → 健康被害拡大リスク</li>
+        <li><strong>③ 費用最安だけで業者選定</strong>: 民間業者の非弁行為リスク → 違法業者選択の可能性</li>
+        <li><strong>④ 1 人で判断</strong>: 状況の客観評価が困難 → 労組・法テラス・<a href="/osusume/">業者無料相談</a> 活用推奨</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="lp-section" id="sec-faq">
+    <div class="container">
+      <p class="section-num">SECTION / 06</p>
+      <h2>よくある質問（FAQ）</h2>
+      <div class="faq">
+        {faq.map((item) => (
+          <details><summary>{item.q}</summary><div><p set:html={item.a} /></div></details>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-section alt" id="sec-summary">
+    <div class="container">
+      <p class="section-num">SECTION / 07</p>
+      <h2>まとめ</h2>
+      <p>退職代行は「メリット 5 (即日退職/連絡不要/有給消化/手続き支援/引き止め回避)」と「デメリット 5 (費用/人間関係/引継ぎ困難/業界評判/違法業者リスク)」のバランスで判断することが推奨されます。職場特性 (パワハラ有無/退職意思受容/心身状態) でメリット優位・デメリット優位が変わるため、6 軸の判断フレームを参考にしてください。</p>
+      <p><strong>判断 3 ステップ</strong>: <strong>STEP 1</strong> 自身の職場状況をメリット/デメリット 6 軸表に当てはめる → <strong>STEP 2</strong> デメリット最小化 5 ポイント (業者選定/引継ぎ準備/退職届/私物整理/再就職準備) を事前実施 → <strong>STEP 3</strong> <a href="/osusume/">退職代行 おすすめ業者</a> + <a href="/osusume-hikaku/">5 社比較</a> で運営主体 (労組/弁護士) を選定し無料相談で個別判断。</p>
+      <p style="font-size:13px;color:var(--c-text-mute,#6b7280);">※退職代行の失敗回避は <a href="/shippai/">失敗例 7 パターン</a> ・損害賠償リスクは <a href="/damage-risk/">損害賠償ページ</a> もあわせてご参照ください。本記事は退職保証・効果保証ではなく、特定業者を推奨するものでもありません。</p>
+      <PRBadge pageSlug="merideme" label="退職代行サービスの公式サイトで無料相談する（PR）" />
+    </div>
+  </section>
+
+  <section class="lp-section" id="sec-policy">
+    <div class="container">
+      <p class="section-num">SECTION / 08</p>
+      <h2>編集ポリシー (情報源・更新日・E-E-A-T)</h2>
+      <ul>
+        <li><strong>情報源</strong>: 厚生労働省「退職・解雇に関する情報」 ・JILPT (労働政策研究・研修機構) ・国民生活センター (退職代行関連消費者相談情報) ・総務省統計局「労働力調査」 ・各退職代行業者公式サイト</li>
+        <li><strong>編集方針</strong>: 一次情報優先 (公的機関 + 業界統計) ・断定表現を避け「一般的に」「とされる」表現で記述</li>
+        <li><strong>更新頻度</strong>: 月次レビュー (退職代行業界動向・法制変化時は随時更新)</li>
+        <li><strong>運営者</strong>: NY-squared (個人事業) <a href="/operator-info/">運営情報ページ</a> 参照</li>
+        <li><strong>E-E-A-T 4 原則</strong>: Experience (退職代行関連の公開情報整理) ・Expertise (業界公開統計 + 公的機関データ) ・Authoritativeness (公的機関 + 業界主要業者公式の一次情報) ・Trustworthiness (PR 表記 + 推定値明示 + 効果保証ではない注記)</li>
+      </ul>
+
+      <h2>出典・参考情報 (公的機関・公開情報)</h2>
+      <ul>
+        <li><a href="https://www.mhlw.go.jp/" target="_blank" rel="noopener">厚生労働省公式サイト</a> — 退職・解雇に関する情報・労働基準監督署案内</li>
+        <li><a href="https://www.jil.go.jp/" target="_blank" rel="noopener">独立行政法人 労働政策研究・研修機構 (JILPT)</a> — 労働市場・退職動向研究</li>
+        <li><a href="https://www.stat.go.jp/" target="_blank" rel="noopener">総務省統計局</a> — 労働力調査・離職率データ</li>
+        <li><a href="https://www.kokusen.go.jp/" target="_blank" rel="noopener">国民生活センター</a> — 退職代行関連の消費者相談情報・トラブル参考 (★435 体現)</li>
+        <li><a href="https://www.houterasu.or.jp/" target="_blank" rel="noopener">日本司法支援センター (法テラス)</a> — 退職・労働相談の無料窓口情報</li>
+        <li>各退職代行業者公式サイト — 料金・運営主体・サービス内容の一次情報</li>
+      </ul>
+      <p style="font-size:12px;color:var(--c-text-mute,#6b7280);margin-top:16px;">
+        ※本記事は 2026 年 5 月時点の公開情報をもとに作成。最新の退職代行業界動向・料金改定は各公式サイトでご確認ください。本記事は退職保証・効果保証ではなく、特定業者を推奨するものでもありません。個別判断は弁護士・労働相談窓口・各業者へご相談ください。
       </p>
-      <p class="mb-3">
-        <strong>判断 3 ステップ</strong>: <strong>STEP 1</strong> 自身の職場状況をメリット/デメリット 6 軸表に当てはめる → <strong>STEP 2</strong> デメリット最小化 5 ポイント (業者選定/引継ぎ準備/退職届/私物整理/再就職準備) を事前実施 → <strong>STEP 3</strong> <a href="/osusume/" class="underline">退職代行 おすすめ業者</a> + <a href="/osusume-hikaku/" class="underline">5 社比較</a> で運営主体 (労組/弁護士) を選定し無料相談で個別判断。
-      </p>
-      <p class="text-xs text-gray-600">
-        ※退職代行の失敗回避は <a href="/shippai/" class="underline">失敗例 7 パターン</a> ・損害賠償リスクは <a href="/damage-risk/" class="underline">損害賠償ページ</a> もあわせてご参照ください。本記事は退職保証・効果保証ではなく、特定業者を推奨するものでもありません。
-      </p>
-    </section>
-
-    <h2 class="text-xl font-bold mt-8 mb-3" style="color: #1E3A8A;">編集ポリシー (情報源・更新日・E-E-A-T)</h2>
-    <ul class="list-disc pl-5 mb-4 text-sm space-y-2">
-      <li><strong>情報源</strong>: 厚生労働省「退職・解雇に関する情報」 ・JILPT (労働政策研究・研修機構) ・国民生活センター (退職代行関連消費者相談情報) ・総務省統計局「労働力調査」 ・各退職代行業者公式サイト</li>
-      <li><strong>編集方針</strong>: 一次情報優先 (公的機関 + 業界統計) ・断定表現を避け「一般的に」「とされる」表現で記述</li>
-      <li><strong>更新頻度</strong>: 月次レビュー (退職代行業界動向・法制変化時は随時更新)</li>
-      <li><strong>運営者</strong>: NY-squared (個人事業) <a href="/operator-info/" class="underline">運営情報ページ</a> 参照</li>
-      <li><strong>E-E-A-T 4 原則</strong>: Experience (退職代行関連の公開情報整理) ・Expertise (業界公開統計 + 公的機関データ) ・Authoritativeness (公的機関 + 業界主要業者公式の一次情報) ・Trustworthiness (PR 表記 + 推定値明示 + 効果保証ではない注記)</li>
-    </ul>
-
-    <h2 class="text-xl font-bold mt-8 mb-3" style="color: #1E3A8A;">出典・参考情報 (公的機関・公開情報)</h2>
-    <ul class="list-disc pl-5 mb-4 text-sm space-y-2">
-      <li><a href="https://www.mhlw.go.jp/" target="_blank" rel="noopener" class="underline">厚生労働省公式サイト</a> — 退職・解雇に関する情報・労働基準監督署案内</li>
-      <li><a href="https://www.jil.go.jp/" target="_blank" rel="noopener" class="underline">独立行政法人 労働政策研究・研修機構 (JILPT)</a> — 労働市場・退職動向研究</li>
-      <li><a href="https://www.stat.go.jp/" target="_blank" rel="noopener" class="underline">総務省統計局</a> — 労働力調査・離職率データ</li>
-      <li><a href="https://www.kokusen.go.jp/" target="_blank" rel="noopener" class="underline">国民生活センター</a> — 退職代行関連の消費者相談情報・トラブル参考 (★435 体現)</li>
-      <li><a href="https://www.houterasu.or.jp/" target="_blank" rel="noopener" class="underline">日本司法支援センター (法テラス)</a> — 退職・労働相談の無料窓口情報</li>
-      <li>各退職代行業者公式サイト — 料金・運営主体・サービス内容の一次情報</li>
-    </ul>
-
-    <p class="text-xs text-gray-600 mt-6">
-      ※本記事は 2026 年 5 月時点の公開情報をもとに作成。最新の退職代行業界動向・料金改定は各公式サイトでご確認ください。本記事は退職保証・効果保証ではなく、特定業者を推奨するものでもありません。個別判断は弁護士・労働相談窓口・各業者へご相談ください。
-    </p>
-  </main>
-</Layout>
+    </div>
+  </section>
+</RichLayout>

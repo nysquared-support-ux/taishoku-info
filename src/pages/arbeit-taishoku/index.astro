@@ -5,168 +5,207 @@
  * 差別化軸: 学生バイト・短期バイト・掛け持ちバイト等のアルバイト特化観点
  * 関連 LP: /part-time/ (パート主体・主婦/契約中心) + /kangoshi/ (看護師) + /unemployment-insurance/ (失業保険)
  */
-import Layout from '../../layouts/Layout.astro';
+import RichLayout from '../../layouts/RichLayout.astro';
 import PRBadge from '../../components/PRBadge.astro';
 import BannerAB from '../../components/BannerAB.astro';
 
 const title = 'アルバイト退職代行 完全ガイド｜学生バイト・短期バイト・掛け持ちバイトの活用判断（2026年5月時点・公開情報整理・PR）';
-const description = '学生アルバイト・短期バイト・掛け持ちバイト等のアルバイト退職代行利用を検討中の方へ。学業との両立 + 短期契約特性 + 掛け持ち事情を踏まえたアルバイト特化観点の判断材料を公開情報ベースで整理した情報提供記事です (PR・アフィリエイト広告を含みます)。パート (主婦・契約中心) の方は <a href="/part-time/">/part-time/</a> もご参照ください。';
+const description = '学生アルバイト・短期バイト・掛け持ちバイト等のアルバイト退職代行利用を検討中の方へ。学業との両立 + 短期契約特性 + 掛け持ち事情を踏まえたアルバイト特化観点の判断材料を公開情報ベースで整理した情報提供記事です (PR・アフィリエイト広告を含みます)。パート (主婦・契約中心) の方は /part-time/ もご参照ください。';
 
 const breadcrumb = [
-  { name: 'ホーム', url: 'https://taishoku-info.pages.dev/' },
-  { name: '退職代行ガイド', url: 'https://taishoku-info.pages.dev/' },
-  { name: 'アルバイト退職代行', url: 'https://taishoku-info.pages.dev/arbeit-taishoku/' },
+  { name: 'ホーム', url: '/' },
+  { name: '退職代行ガイド', url: '/' },
+  { name: 'アルバイト退職代行' },
 ];
 
 const faq = [
   { q: '学生アルバイトでも退職代行を使えますか?', a: '一般的に学生アルバイトでも退職代行は利用可能とされています。但し料金 (一般 12,000-27,000 円) と学業負担のバランスを考慮することが推奨されます。学業継続 + 短期契約の場合は自己交渉も選択肢とされています。' },
-  { q: '短期バイト (1-3 ヶ月) でも退職代行は使えますか?', a: '一般的に短期バイトでも退職代行は利用可能とされていますが、有期契約の場合は契約期間満了まで原則継続が法的に求められる事例があるとされています (民法第 628 条「やむを得ない事由」の判断が必要)。詳細は <a href="/part-time/" class="underline">/part-time/</a> の民法解説をご参照ください。' },
+  { q: '短期バイト (1-3 ヶ月) でも退職代行は使えますか?', a: '一般的に短期バイトでも退職代行は利用可能とされていますが、有期契約の場合は契約期間満了まで原則継続が法的に求められる事例があるとされています (民法第 628 条「やむを得ない事由」の判断が必要)。詳細は <a href="/part-time/">/part-time/</a> の民法解説をご参照ください。' },
   { q: '掛け持ちバイトの片方だけ退職代行を使えますか?', a: '一般的に掛け持ちバイトの片方だけの退職代行利用は可能とされています。但し継続する側のバイト先への影響 (シフト調整等) も考慮することが推奨されます。' },
   { q: 'アルバイトでも退職代行料金は高いですか?', a: '一般的にアルバイト向け料金 (12,000-22,000 円) を設定するサービスもあり、正社員料金 (27,000-55,000 円) より安価な傾向。但しサービス内容・対応範囲を要確認とされています。' },
   { q: '高校生のアルバイトでも退職代行は使えますか?', a: '一般的に未成年 (18 歳未満) の退職代行利用は親権者の同意が必要となる事例が多いとされています。サービスにより対応可否が異なるため、利用前確認が推奨されます。' },
 ];
 ---
 
-<Layout title={title} description={description} publishedDate="2026-05-15" modifiedDate="2026-05-15" breadcrumb={breadcrumb} faq={faq}>
-  <main class="max-w-3xl mx-auto px-4 py-8">
-    <PRBadge pageSlug="arbeit-taishoku" />
-
-    <nav class="text-sm text-gray-500 mb-4">
-      <a href="/" class="underline">トップ</a> &gt; アルバイト退職代行
-    </nav>
-
-    <h1 class="text-2xl md:text-3xl font-bold mb-4 leading-tight">
-      アルバイト退職代行 完全ガイド｜学生バイト・短期バイト・掛け持ちバイトの活用判断
-    </h1>
-
-    <div class="bg-yellow-50 border-2 border-yellow-300 rounded p-3 mb-4 text-sm">
-      <strong>📢 PR表示</strong>: 本ページはアフィリエイト広告（PR）を含みます。本サイトは退職代行公式サイトではなく、公開情報を整理した一般論ベースの情報提供サイトです。
+<RichLayout title={title} description={description} publishedDate="2026-05-15" modifiedDate="2026-05-18" breadcrumb={breadcrumb} faq={faq}>
+  <section class="fv" aria-labelledby="fv-h1">
+    <div class="container">
+      <span class="fv-pill">退職代行 / アルバイト特化</span>
+      <h1 id="fv-h1"><span class="accent">アルバイト退職代行 完全ガイド</span><br />学生バイト・短期バイト・掛け持ちバイトの活用判断</h1>
+      <p class="lede">アルバイト退職代行は <strong>学生バイト・短期バイト・掛け持ちバイト</strong>の特殊事情 (学業優先・契約期間・複数雇用) を考慮した判断が推奨されます。料金面ではアルバイト向け 12,000-22,000 円のサービスもあり正社員より安価な傾向。但し有期契約・未成年・親同意等の制約があるため、利用前確認が必要とされています。</p>
+      <ul class="fv-bullets">
+        <li>アルバイト種別 (学生/短期/掛け持ち) 判断分岐</li>
+        <li>アルバイト向けサービス・料金比較</li>
+        <li>有期契約・未成年・親同意の注意点</li>
+        <li>退職代行を使わない選択肢 (反例) も整理</li>
+      </ul>
+      <PRBadge pageSlug="arbeit-taishoku" />
+      <div class="fv-meta">
+        <span><b>公開日</b> 2026-05-15</span><span><b>最終更新</b> 2026-05-18</span>
+        <span><b>編集</b> NY-squared 編集部</span><span><b>所要</b> 約 6 分</span>
+      </div>
     </div>
+  </section>
 
-    <p class="text-sm text-gray-600 mb-6">
-      最終確認日: 2026-05-15 / 運営者: <a href="/operator-info/" class="underline">NY-squared (個人事業)</a> / <a href="/editorial-policy/" class="underline">編集ポリシー</a> / <a href="/privacy-policy/" class="underline">プライバシーポリシー</a>
-    </p>
-
-    <section class="mb-6 bg-blue-50 border-l-4 border-blue-400 p-4 text-sm">
+  <section class="lp-section" id="sec-intro">
+    <div class="container">
+      <p class="section-num">SECTION / 00</p>
+      <h2>はじめに (PR表示・前提)</h2>
+      <p><strong>📢 PR表示</strong>: 本ページはアフィリエイト広告（PR）を含みます。本サイトは退職代行公式サイトではなく、公開情報を整理した一般論ベースの情報提供サイトです。</p>
+      <p style="font-size:13px;color:var(--c-text-sub,#4a5568);">最終確認日: 2026-05-15 / 運営者: <a href="/operator-info/">NY-squared (個人事業)</a> / <a href="/editorial-policy/">編集ポリシー</a> / <a href="/privacy-policy/">プライバシーポリシー</a></p>
       <p><strong>結論 (一般的傾向)</strong>: アルバイト退職代行は <strong>学生バイト・短期バイト・掛け持ちバイト</strong>の特殊事情 (学業優先・契約期間・複数雇用) を考慮した判断が推奨されます。料金面ではアルバイト向け 12,000-22,000 円のサービスもあり正社員より安価な傾向。但し有期契約・未成年・親同意等の制約があるため、利用前確認が必要とされています。</p>
-      <p class="mt-2 text-sm">パート (主婦・契約) 中心の方は <a href="/part-time/" class="underline">/part-time/</a> もご参照ください (法的根拠 + 有給消化 + 扶養手続き解説あり)。</p>
-      <p class="mt-2 text-xs text-gray-600">※ 本記事の情報は以下を整理した <strong>2026 年 5 月時点の一般論</strong>であり、断定的事実ではありません:<br />
-      ① <a href="https://www.mhlw.go.jp/stf/seisakunitsuite/bunya/koyou_roudou/roudoukijun/" target="_blank" rel="noopener" class="underline">厚生労働省 労働基準法 (2026 年 5 月確認)</a><br />
-      ② <a href="https://elaws.e-gov.go.jp/document?lawid=129AC0000000089" target="_blank" rel="noopener" class="underline">e-Gov 民法第 627 条・第 628 条 (退職の自由・有期契約解約条件)</a><br />
+      <p>パート (主婦・契約) 中心の方は <a href="/part-time/">/part-time/</a> もご参照ください (法的根拠 + 有給消化 + 扶養手続き解説あり)。</p>
+      <p style="font-size:13px;color:var(--c-text-mute,#6b7280);">※ 本記事の情報は以下を整理した <strong>2026 年 5 月時点の一般論</strong>であり、断定的事実ではありません:<br />
+      ① <a href="https://www.mhlw.go.jp/stf/seisakunitsuite/bunya/koyou_roudou/roudoukijun/" target="_blank" rel="noopener">厚生労働省 労働基準法 (2026 年 5 月確認)</a><br />
+      ② <a href="https://elaws.e-gov.go.jp/document?lawid=129AC0000000089" target="_blank" rel="noopener">e-Gov 民法第 627 条・第 628 条 (退職の自由・有期契約解約条件)</a><br />
       ③ 各退職代行サービス公式サイト公開情報 (2026 年 5 月確認)<br />
       最終確認日: 2026-05-15。
       </p>
-    </section>
+      <div class="counter-box">
+        <h3>📌 アルバイト種別 判断分岐 (公開情報整理)</h3>
+        <div class="row"><b>学生アルバイト (大学生・専門学生・高校生)</b><span>学業優先 + 時間制約 + 親権者同意 (未成年) を考慮・モームリ等のアルバイト料金サービス推奨</span></div>
+        <div class="row"><b>短期バイト (1-3 ヶ月契約)</b><span>有期契約 → 民法第 628 条「やむを得ない事由」判断必要・無期契約より制約あり</span></div>
+        <div class="row"><b>掛け持ちバイト (複数雇用)</b><span>片方だけ退職可・他方への影響 (シフト調整・社会保険) も考慮</span></div>
+        <div class="row"><b>長期アルバイト (1 年以上・社員候補)</b><span>正社員と同等扱いの退職代行料金になる傾向 (27,000-55,000 円)</span></div>
+        <div class="row"><b>派遣アルバイト</b><span>派遣会社 + 派遣先の 2 重連絡が必要・派遣特化サービス検討</span></div>
+      </div>
+      <BannerAB pageSlug="arbeit-taishoku" position="hero" />
+    </div>
+  </section>
 
-    <div class="bg-green-50 border-l-4 border-green-400 p-3 mb-4 text-sm">
-      <strong>📌 アルバイト種別 判断分岐 (公開情報整理)</strong>:
-      <ul class="list-disc pl-5 mt-1 space-y-1">
-        <li><strong>学生アルバイト (大学生・専門学生・高校生)</strong>: 学業優先 + 時間制約 + 親権者同意 (未成年) を考慮・モームリ等のアルバイト料金サービス推奨</li>
-        <li><strong>短期バイト (1-3 ヶ月契約)</strong>: 有期契約 → 民法第 628 条「やむを得ない事由」判断必要・無期契約より制約あり</li>
-        <li><strong>掛け持ちバイト (複数雇用)</strong>: 片方だけ退職可・他方への影響 (シフト調整・社会保険) も考慮</li>
-        <li><strong>長期アルバイト (1 年以上・社員候補)</strong>: 正社員と同等扱いの退職代行料金になる傾向 (27,000-55,000 円)</li>
-        <li><strong>派遣アルバイト</strong>: 派遣会社 + 派遣先の 2 重連絡が必要・派遣特化サービス検討</li>
+  <section class="lp-section alt" id="sec-1">
+    <div class="container">
+      <p class="section-num">SECTION / 01</p>
+      <h2>アルバイト向け退職代行サービス (公開情報整理)</h2>
+      <ul>
+        <li><strong>モームリ</strong>: アルバイト・パート料金 12,000 円台 (正社員 22,000 円より安価)・労働組合提携・24 時間対応</li>
+        <li><strong>退職代行ガーディアン</strong>: 正社員 / アルバイト同額 24,800 円台・労働組合提携・東京都労働委員会認証</li>
+        <li><strong>退職代行Jobs</strong>: 一律 27,000 円台・LINE 対応・労働組合提携</li>
+        <li><strong>弁護士法人みやびの退職代行</strong>: 一律 55,000 円台・弁護士直接対応・トラブル対応可</li>
       </ul>
     </div>
+  </section>
 
-    <BannerAB pageSlug="arbeit-taishoku" position="hero" />
-
-    <h2 class="text-xl font-bold mt-8 mb-3">1. アルバイト向け退職代行サービス (公開情報整理)</h2>
-    <ul class="list-disc pl-6 mb-3 text-sm space-y-2">
-      <li><strong>モームリ</strong>: アルバイト・パート料金 12,000 円台 (正社員 22,000 円より安価)・労働組合提携・24 時間対応</li>
-      <li><strong>退職代行ガーディアン</strong>: 正社員 / アルバイト同額 24,800 円台・労働組合提携・東京都労働委員会認証</li>
-      <li><strong>退職代行Jobs</strong>: 一律 27,000 円台・LINE 対応・労働組合提携</li>
-      <li><strong>弁護士法人みやびの退職代行</strong>: 一律 55,000 円台・弁護士直接対応・トラブル対応可</li>
-    </ul>
-
-    <h2 class="text-xl font-bold mt-8 mb-3">2. アルバイト退職代行の活用シーン (公開情報整理)</h2>
-    <ul class="list-disc pl-6 mb-3 text-sm space-y-1">
-      <li><strong>学業との両立困難</strong>: シフト過多 + テスト前期間の継続困難</li>
-      <li><strong>就職活動の本格化</strong>: 内定獲得 + 卒業前後の早期退職</li>
-      <li><strong>ハラスメント被害</strong>: 上司・先輩からのハラスメント・直接対面回避</li>
-      <li><strong>シフト強要</strong>: 希望シフト無視 + 強制残業</li>
-      <li><strong>給与未払い</strong>: 退職時の未払い賃金請求 (弁護士法人推奨)</li>
-      <li><strong>有期契約満了後の継続要求拒否</strong>: 契約更新を断りたい場合</li>
-    </ul>
-
-    <BannerAB pageSlug="arbeit-taishoku" position="middle" />
-
-    <h2 class="text-xl font-bold mt-8 mb-3">3. アルバイト特有の注意点</h2>
-    <ol class="list-decimal pl-6 mb-3 text-sm space-y-2">
-      <li><strong>有期契約 vs 無期契約</strong>: 短期バイト (3 ヶ月契約等) は有期契約・民法第 628 条「やむを得ない事由」が必要</li>
-      <li><strong>未成年の親同意</strong>: 18 歳未満は親権者同意が必要となる事例多数</li>
-      <li><strong>制服・備品返却</strong>: 退職代行使用時も制服・名札等の返却義務継続</li>
-      <li><strong>最終給与受取</strong>: 給与口座未変更時に最終給与受取確認</li>
-      <li><strong>離職票 (失業保険手続用)</strong>: 一般雇用保険加入時は離職票発行依頼</li>
-      <li><strong>学生の場合の社会保険</strong>: 親の扶養範囲内 (年収 130 万円) 内維持の場合は退職タイミング検討</li>
-    </ol>
-
-    <h2 class="text-xl font-bold mt-8 mb-3">4. アルバイト料金比較表 (2026 年 5 月時点)</h2>
-    <div class="overflow-x-auto mb-3">
-      <table class="border-collapse border border-gray-300 text-sm w-full">
-        <thead class="bg-gray-100">
-          <tr><th class="border border-gray-300 p-2">サービス</th><th class="border border-gray-300 p-2">アルバイト料金</th><th class="border border-gray-300 p-2">正社員料金</th><th class="border border-gray-300 p-2">特徴</th></tr>
-        </thead>
-        <tbody>
-          <tr><td class="border border-gray-300 p-2">モームリ</td><td class="border border-gray-300 p-2">12,000 円</td><td class="border border-gray-300 p-2">22,000 円</td><td class="border border-gray-300 p-2">アルバイト最安・労組</td></tr>
-          <tr><td class="border border-gray-300 p-2">退職代行ガーディアン</td><td class="border border-gray-300 p-2">24,800 円</td><td class="border border-gray-300 p-2">24,800 円</td><td class="border border-gray-300 p-2">同額・労組・認証</td></tr>
-          <tr><td class="border border-gray-300 p-2">退職代行Jobs</td><td class="border border-gray-300 p-2">27,000 円</td><td class="border border-gray-300 p-2">27,000 円</td><td class="border border-gray-300 p-2">一律・LINE 対応</td></tr>
-          <tr><td class="border border-gray-300 p-2">弁護士法人みやびの退職代行</td><td class="border border-gray-300 p-2">55,000 円</td><td class="border border-gray-300 p-2">55,000 円</td><td class="border border-gray-300 p-2">弁護士・トラブル対応</td></tr>
-        </tbody>
-      </table>
-    </div>
-    <p class="text-xs text-gray-500 mb-3">※ <strong>出典・条件</strong>: 各退職代行サービス公式サイト公開情報 (2026 年 5 月確認)。料金は変動の可能性があり最新は公式サイトをご確認ください。</p>
-
-    <BannerAB pageSlug="arbeit-taishoku" position="footer" />
-
-    <div class="bg-amber-50 border-l-4 border-amber-400 p-3 mb-4 text-xs">
-      <strong>📌 反例 (アルバイト退職代行を使わない選択肢)</strong>:
-      <ul class="list-disc pl-5 mt-1 space-y-1">
-        <li>自分でシフト調整・退職交渉: 料金ゼロ・但しシフト固定店舗では困難</li>
-        <li>LINE / メールでの退職連絡: 一部チェーン店で受理事例あり (但し就業規則確認推奨)</li>
-        <li>労働基準監督署相談: 無料・但し直接退職代行はしない</li>
-        <li>大学のキャリアセンター相談: 学生対象の無料相談あり</li>
-        <li>親同意のもとで自己退職交渉: 未成年は親同伴が効果的な事例あり</li>
+  <section class="lp-section" id="sec-2">
+    <div class="container">
+      <p class="section-num">SECTION / 02</p>
+      <h2>アルバイト退職代行の活用シーン (公開情報整理)</h2>
+      <ul>
+        <li><strong>学業との両立困難</strong>: シフト過多 + テスト前期間の継続困難</li>
+        <li><strong>就職活動の本格化</strong>: 内定獲得 + 卒業前後の早期退職</li>
+        <li><strong>ハラスメント被害</strong>: 上司・先輩からのハラスメント・直接対面回避</li>
+        <li><strong>シフト強要</strong>: 希望シフト無視 + 強制残業</li>
+        <li><strong>給与未払い</strong>: 退職時の未払い賃金請求 (弁護士法人推奨)</li>
+        <li><strong>有期契約満了後の継続要求拒否</strong>: 契約更新を断りたい場合</li>
       </ul>
+      <BannerAB pageSlug="arbeit-taishoku" position="middle" />
     </div>
+  </section>
 
-    <section class="mt-8 mb-6 bg-blue-50 border-l-4 border-blue-400 p-4 text-sm">
-      <h3 class="font-bold mb-2">まとめ (一般的傾向・個別判断はカウンセリング相談を推奨)</h3>
-      <ul class="list-disc pl-5 space-y-1">
+  <section class="lp-section alt" id="sec-3">
+    <div class="container">
+      <p class="section-num">SECTION / 03</p>
+      <h2>アルバイト特有の注意点</h2>
+      <ol>
+        <li><strong>有期契約 vs 無期契約</strong>: 短期バイト (3 ヶ月契約等) は有期契約・民法第 628 条「やむを得ない事由」が必要</li>
+        <li><strong>未成年の親同意</strong>: 18 歳未満は親権者同意が必要となる事例多数</li>
+        <li><strong>制服・備品返却</strong>: 退職代行使用時も制服・名札等の返却義務継続</li>
+        <li><strong>最終給与受取</strong>: 給与口座未変更時に最終給与受取確認</li>
+        <li><strong>離職票 (失業保険手続用)</strong>: 一般雇用保険加入時は離職票発行依頼</li>
+        <li><strong>学生の場合の社会保険</strong>: 親の扶養範囲内 (年収 130 万円) 内維持の場合は退職タイミング検討</li>
+      </ol>
+    </div>
+  </section>
+
+  <section class="lp-section" id="sec-4">
+    <div class="container">
+      <p class="section-num">SECTION / 04</p>
+      <h2>アルバイト料金比較表 (2026 年 5 月時点)</h2>
+      <div class="compare-wrap">
+        <table class="compare">
+          <thead>
+            <tr><th>サービス</th><th>アルバイト料金</th><th>正社員料金</th><th>特徴</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>モームリ</td><td>12,000 円</td><td>22,000 円</td><td>アルバイト最安・労組</td></tr>
+            <tr><td>退職代行ガーディアン</td><td>24,800 円</td><td>24,800 円</td><td>同額・労組・認証</td></tr>
+            <tr><td>退職代行Jobs</td><td>27,000 円</td><td>27,000 円</td><td>一律・LINE 対応</td></tr>
+            <tr><td>弁護士法人みやびの退職代行</td><td>55,000 円</td><td>55,000 円</td><td>弁護士・トラブル対応</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="compare-note">※ <strong>出典・条件</strong>: 各退職代行サービス公式サイト公開情報 (2026 年 5 月確認)。料金は変動の可能性があり最新は公式サイトをご確認ください。</p>
+      <BannerAB pageSlug="arbeit-taishoku" position="footer" />
+      <div class="counter-box">
+        <h3>📌 反例 (アルバイト退職代行を使わない選択肢)</h3>
+        <div class="row"><b>自分でシフト調整・退職交渉</b><span>料金ゼロ・但しシフト固定店舗では困難</span></div>
+        <div class="row"><b>LINE / メールでの退職連絡</b><span>一部チェーン店で受理事例あり (但し就業規則確認推奨)</span></div>
+        <div class="row"><b>労働基準監督署相談</b><span>無料・但し直接退職代行はしない</span></div>
+        <div class="row"><b>大学のキャリアセンター相談</b><span>学生対象の無料相談あり</span></div>
+        <div class="row"><b>親同意のもとで自己退職交渉</b><span>未成年は親同伴が効果的な事例あり</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-section alt" id="sec-faq">
+    <div class="container">
+      <p class="section-num">SECTION / 05</p>
+      <h2>よくある質問（FAQ）</h2>
+      <div class="faq">
+        {faq.map((item) => (
+          <details><summary>{item.q}</summary><div><p set:html={item.a} /></div></details>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-section" id="sec-summary">
+    <div class="container">
+      <p class="section-num">SECTION / 06</p>
+      <h2>まとめ</h2>
+      <p><strong>まとめ (一般的傾向・個別判断はカウンセリング相談を推奨)</strong></p>
+      <ul>
         <li>アルバイト退職代行は学生・短期・掛け持ち等の特殊事情を考慮した判断が必要</li>
         <li>アルバイト料金は 12,000-22,000 円台のサービスあり (正社員より安価)</li>
         <li>有期契約 (短期バイト) は民法第 628 条「やむを得ない事由」判断が必要</li>
         <li>未成年は親権者同意が必要となる事例多数</li>
         <li><strong>YMYL リスク認識</strong>: 退職は就業・学業判断に直結する重要事項です。本記事は公開情報整理であり、個別保証・成功確約ではありません</li>
       </ul>
-    </section>
+      <p><strong>関連記事・参考リンク</strong></p>
+      <ul>
+        <li><a href="/part-time/">パート退職代行 (主婦・契約中心・民法解説あり)</a></li>
+        <li><a href="/kuchikomi/">退職代行 口コミ・評判ガイド</a></li>
+        <li><a href="/osusume-hikaku/">退職代行 おすすめ比較ガイド</a></li>
+        <li><a href="/ryokin-hikaku-2026/">退職代行 料金比較ガイド</a></li>
+        <li><a href="/unemployment-insurance/">失業保険 手続きガイド</a></li>
+      </ul>
+      <p style="font-size:13px;color:var(--c-text-mute,#6b7280);">※ 本記事は公開情報を整理した一般論であり、個別判断には各サービスのカウンセリング相談が必要です。退職効果・成功は保証されません。</p>
+      <PRBadge pageSlug="arbeit-taishoku" label="退職代行サービスの公式サイトで無料相談する（PR）" />
+    </div>
+  </section>
 
-    <h2 class="text-xl font-bold mt-8 mb-3">関連記事・参考リンク</h2>
-    <ul class="list-disc pl-6 mb-3 text-sm space-y-1">
-      <li><a href="/part-time/" class="underline">パート退職代行 (主婦・契約中心・民法解説あり)</a></li>
-      <li><a href="/kuchikomi/" class="underline">退職代行 口コミ・評判ガイド</a></li>
-      <li><a href="/osusume-hikaku/" class="underline">退職代行 おすすめ比較ガイド</a></li>
-      <li><a href="/ryokin-hikaku-2026/" class="underline">退職代行 料金比較ガイド</a></li>
-      <li><a href="/unemployment-insurance/" class="underline">失業保険 手続きガイド</a></li>
-    </ul>
+  <section class="lp-section alt" id="sec-policy">
+    <div class="container">
+      <p class="section-num">SECTION / 07</p>
+      <h2>編集ポリシー (情報源・更新日・E-E-A-T)</h2>
+      <ul>
+        <li><strong>情報源</strong>: 政府公式 e-Gov 法令検索 (民法・労働基準法・弁護士法) ・厚生労働省公式サイト ・各退職代行業者公式サイト ・退職代行関連の公開統計情報</li>
+        <li><strong>編集方針</strong>: 一次情報優先 (法令は e-Gov 直接リンク・運営形態は公式サイト確認) ・断定表現を避け推定値・公開情報の整理として記述</li>
+        <li><strong>更新頻度</strong>: 月次レビュー (法令改正・サービス内容変更時は随時更新)</li>
+        <li><strong>運営者</strong>: NY-squared (個人事業) <a href="/operator-info/">運営情報ページ</a> 参照</li>
+        <li><strong>E-E-A-T 4 原則</strong>: Experience (退職代行関連の公開情報整理) ・Expertise (法令引用 + 業界公開統計) ・Authoritativeness (政府公式 + 業者公式の一次情報のみ) ・Trustworthiness (PR 表記 + 推定値明示 + 法的助言ではない注記)</li>
+      </ul>
 
-    <h2 class="text-xl font-bold mt-8 mb-3">公的相談窓口・支援機関</h2>
-    <ul class="list-disc pl-6 mb-3 text-sm space-y-1">
-      <li><a href="https://www.mhlw.go.jp/stf/seisakunitsuite/bunya/koyou_roudou/roudoukijun/" target="_blank" rel="noopener" class="underline">厚生労働省 労働基準</a> — アルバイト・パート労働法</li>
-      <li><a href="https://elaws.e-gov.go.jp/document?lawid=129AC0000000089" target="_blank" rel="noopener" class="underline">e-Gov 民法第 627 条・第 628 条</a></li>
-      <li><a href="https://www.kokusen.go.jp/" target="_blank" rel="noopener" class="underline">国民生活センター</a> — 消費者相談</li>
-    </ul>
-
-    <h2 class="text-xl font-bold mt-8 mb-3">よくある質問（FAQ）</h2>
-    {faq.map((item) => (
-      <details class="mb-3 border border-gray-200 rounded p-3">
-        <summary class="font-bold cursor-pointer text-sm">{item.q}</summary>
-        <p class="mt-2 text-sm">{item.a}</p>
-      </details>
-    ))}
-
-    <p class="text-xs text-gray-500 mt-8">
-      ※ 本記事は公開情報を整理した一般論であり、個別判断には各サービスのカウンセリング相談が必要です。退職効果・成功は保証されません。
-    </p>
-  </main>
-</Layout>
+      <h2>公的相談窓口・支援機関 / 出典・参考情報</h2>
+      <ul>
+        <li><a href="https://www.mhlw.go.jp/stf/seisakunitsuite/bunya/koyou_roudou/roudoukijun/" target="_blank" rel="noopener">厚生労働省 労働基準</a> — アルバイト・パート労働法</li>
+        <li><a href="https://elaws.e-gov.go.jp/document?lawid=129AC0000000089" target="_blank" rel="noopener">e-Gov 民法第 627 条・第 628 条</a></li>
+        <li><a href="https://www.kokusen.go.jp/" target="_blank" rel="noopener">国民生活センター</a> — 消費者相談</li>
+        <li>各退職代行業者公式サイト (運営実績・料金・返金保証条件)・最新情報は各公式サイトでご確認ください</li>
+      </ul>
+      <p style="font-size:12px;color:var(--c-text-mute,#6b7280);margin-top:16px;">
+        ※本記事は2026年5月時点の公開情報をもとに作成。最新の法令・サービス内容は各公式サイトでご確認ください。アルバイト退職代行の利用判断は一般的傾向を整理したもので、個別案件の判断は弁護士・各業者へご相談ください。本ページはアフィリエイト広告（PR）を含みます。
+      </p>
+    </div>
+  </section>
+</RichLayout>

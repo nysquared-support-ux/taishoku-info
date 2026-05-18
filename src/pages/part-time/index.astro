@@ -1,5 +1,5 @@
 ---
-import Layout from '../../layouts/Layout.astro';
+import RichLayout from '../../layouts/RichLayout.astro';
 import PRBadge from '../../components/PRBadge.astro';
 import BannerAB from '../../components/BannerAB.astro';
 
@@ -7,9 +7,9 @@ const title = 'パートも退職代行を使える｜法的根拠と注意点�
 const description = 'パート・アルバイトでも退職代行サービスを使えるかを、民法第627条・第628条の法的根拠を踏まえて解説。有給消化・有期契約のリスク・扶養手続きの注意点を整理した情報提供記事です（PR・アフィリエイト広告を含みます）。';
 
 const breadcrumb = [
-  { name: 'ホーム', url: 'https://taishoku-info.pages.dev/' },
-  { name: '退職代行', url: 'https://taishoku-info.pages.dev/' },
-  { name: 'パートの退職代行', url: 'https://taishoku-info.pages.dev/part-time/' },
+  { name: 'ホーム', url: '/' },
+  { name: '退職代行', url: '/' },
+  { name: 'パートの退職代行' },
 ];
 
 const faq = [
@@ -19,131 +19,149 @@ const faq = [
 ];
 ---
 
-<Layout title={title} description={description} publishedDate="2026-05-15" modifiedDate="2026-05-15" breadcrumb={breadcrumb} faq={faq}>
-  <main class="max-w-3xl mx-auto px-4 py-8">
-    <PRBadge pageSlug="part-time" />
-
-    <nav class="text-sm text-gray-500 mb-4">
-      <a href="/" class="underline">トップ</a> &gt; パートの退職代行
-    </nav>
-
-    <h1 class="text-2xl md:text-3xl font-bold mb-4 leading-tight">
-      パートも退職代行を使える｜法的根拠と注意点・有期契約の対処法
-    </h1>
-
-    <div class="bg-yellow-50 border-2 border-yellow-300 rounded p-3 mb-4 text-sm">
-      <strong>📢 PR表示</strong>: 本ページはアフィリエイト広告（PR）を含みます。本サイトは法律事務所・退職代行業者公式サイトではなく、公開情報を整理した一般論ベースの情報提供サイトです。個別案件の判断は<strong>必ず弁護士・各業者に直接ご相談ください</strong>。
+<RichLayout title={title} description={description} publishedDate="2026-05-15" modifiedDate="2026-05-18" breadcrumb={breadcrumb} faq={faq}>
+  <section class="fv" aria-labelledby="fv-h1">
+    <div class="container">
+      <span class="fv-pill">退職代行 / パート・アルバイト</span>
+      <h1 id="fv-h1"><span class="accent">パートも退職代行を使える</span><br />法的根拠と注意点・有期契約の対処法</h1>
+      <p class="lede">パート・アルバイトでも退職代行サービスの利用は可能とされています。民法第627条で雇用形態を問わず退職の意思表示が認められているためです。ただし、有期契約・有給消化・扶養手続き等のパート特有の注意点を理解することが重要とされています。</p>
+      <ul class="fv-bullets">
+        <li>パートでも退職代行を使える法的根拠 (民法627・628条)</li>
+        <li>パートが退職代行を使う際の3つの注意点</li>
+        <li>パートの退職代行利用フロー (4 step)</li>
+        <li>自分で対応する場合との比較</li>
+      </ul>
+      <PRBadge pageSlug="part-time" />
+      <div class="fv-meta">
+        <span><b>公開日</b> 2026-05-15</span><span><b>最終更新</b> 2026-05-18</span>
+        <span><b>編集</b> NY-squared 編集部</span><span><b>所要</b> 約 6 分</span>
+      </div>
     </div>
+  </section>
 
-    <p class="text-sm text-gray-600 mb-6">
-      最終確認日: 2026-05-15 / 公開情報の整理であり、特定サービスを推奨するものではありません。<br />
-      運営者: <a href="/operator-info/" class="underline">NY-squared (個人事業)</a> /
-      <a href="/editorial-policy/" class="underline">編集ポリシー</a> /
-      <a href="/privacy-policy/" class="underline">プライバシーポリシー</a>
-    </p>
-
-    <section class="mb-6 bg-blue-50 border-l-4 border-blue-400 p-4 text-sm">
+  <section class="lp-section" id="sec-intro">
+    <div class="container">
+      <p class="section-num">SECTION / 00</p>
+      <h2>はじめに (PR表示・前提)</h2>
+      <p><strong>📢 PR表示</strong>: 本ページはアフィリエイト広告（PR）を含みます。本サイトは法律事務所・退職代行業者公式サイトではなく、公開情報を整理した一般論ベースの情報提供サイトです。個別案件の判断は<strong>必ず弁護士・各業者に直接ご相談ください</strong>。</p>
+      <p style="font-size:13px;color:var(--c-text-sub,#4a5568);">最終確認日: 2026-05-15 / 公開情報の整理であり、特定サービスを推奨するものではありません。<br />運営者: <a href="/operator-info/">NY-squared (個人事業)</a> / <a href="/editorial-policy/">編集ポリシー</a> / <a href="/privacy-policy/">プライバシーポリシー</a></p>
       <p><strong>結論</strong>: パート・アルバイトでも退職代行サービスの利用は可能とされています。民法第627条で雇用形態を問わず退職の意思表示が認められているためです。</p>
-      <p class="mt-2">ただし、有期契約・有給消化・扶養手続き等のパート特有の注意点を理解することが重要とされています。</p>
-    </section>
-
-    <BannerAB pageSlug="part-time" position="hero" />
-
-    <h2 class="text-xl font-bold mt-8 mb-3">1. パートでも退職代行を使える法的根拠</h2>
-
-    <h3 class="text-lg font-bold mt-4 mb-2">1-1. 民法第627条（無期契約）</h3>
-    <p class="mb-3 text-sm">
-      <a href="https://elaws.e-gov.go.jp/document?lawid=129AC0000000089" target="_blank" rel="noopener" class="underline">民法第627条 e-Gov</a>では「雇用は、解約の申入れの日から2週間を経過することによって終了する」と定められており、雇用形態（正社員・パート・アルバイト）を問わず、原則として2週間前の通告で退職が可能とされています。
-    </p>
-
-    <h3 class="text-lg font-bold mt-4 mb-2">1-2. 民法第628条（有期契約）</h3>
-    <p class="mb-3 text-sm">
-      契約期間が定まっている有期契約パートの場合、<a href="https://elaws.e-gov.go.jp/document?lawid=129AC0000000089" target="_blank" rel="noopener" class="underline">民法第628条 e-Gov</a>により「やむを得ない事由」がある場合に途中解約が認められるとされています。健康問題・ハラスメント・賃金未払い等が該当する可能性があるとされています。
-    </p>
-
-    <h3 class="text-lg font-bold mt-4 mb-2">1-3. 退職代行の利用要件</h3>
-    <p class="mb-3 text-sm">
-      退職代行は代理通告サービスのため、本人の退職意思があれば雇用形態を問わず利用可能とされています。パート・アルバイトでも問題なく依頼できるとされています。
-    </p>
-
-    <h2 class="text-xl font-bold mt-8 mb-3">2. パートが退職代行を使う際の3つの注意点</h2>
-
-    <h3 class="text-lg font-bold mt-4 mb-2">⚠️ 注意点①: 有期契約のリスク</h3>
-    <p class="mb-3 text-sm">
-      契約期間が定まっている有期パートは、途中解約に「やむを得ない事由」が必要とされています。事由なしの解約は契約違反となるリスクがあるとされており、業者または弁護士への事前相談が推奨されます。
-    </p>
-
-    <h3 class="text-lg font-bold mt-4 mb-2">⚠️ 注意点②: 有給消化</h3>
-    <p class="mb-3 text-sm">
-      パートでも、雇入れ日から6ヶ月継続勤務 + 全労働日の8割以上出勤で年次有給休暇が付与されるとされています（労働基準法第39条）。退職代行を通じて有給消化を申請することが可能とされています。
-    </p>
-
-    <h3 class="text-lg font-bold mt-4 mb-2">⚠️ 注意点③: 扶養手続き・社会保険</h3>
-    <p class="mb-3 text-sm">
-      配偶者の扶養に入っているパートの場合、退職により扶養関係の変更手続きが必要となるケースがあります。源泉徴収票・離職票の取得については業者経由で会社へ依頼することが推奨されます。
-    </p>
-
-    <BannerAB pageSlug="part-time" position="middle" />
-
-    <h2 class="text-xl font-bold mt-8 mb-3">3. パートの退職代行利用フロー</h2>
-
-    <h3 class="text-lg font-bold mt-4 mb-2">Step 1: 契約形態の確認</h3>
-    <p class="mb-3 text-sm">
-      雇用契約書を確認し、無期契約か有期契約かを把握します。有期契約の場合は「やむを得ない事由」の有無を整理しておくことが推奨されます。
-    </p>
-
-    <h3 class="text-lg font-bold mt-4 mb-2">Step 2: 業者選定・相談</h3>
-    <p class="mb-3 text-sm">
-      パート対応の退職代行サービスに無料相談。料金体系・対応範囲（有給消化交渉の可否等）を確認します。
-    </p>
-
-    <h3 class="text-lg font-bold mt-4 mb-2">Step 3: 申込・退職通告</h3>
-    <p class="mb-3 text-sm">
-      業者が会社に退職の意思を通告。本人と会社の直接やり取りなしで退職手続きが進むとされています。
-    </p>
-
-    <h3 class="text-lg font-bold mt-4 mb-2">Step 4: 書類受領・手続き完了</h3>
-    <p class="mb-3 text-sm">
-      離職票・源泉徴収票等の書類を業者経由で受領。扶養関係の変更手続き等も完了させます。
-    </p>
-
-    <h2 class="text-xl font-bold mt-8 mb-3">4. パートが直接対応する場合との比較</h2>
-    <div class="overflow-x-auto mb-3">
-      <table class="border-collapse border border-gray-300 text-sm w-full">
-        <thead class="bg-gray-100">
-          <tr><th class="border border-gray-300 p-2">項目</th><th class="border border-gray-300 p-2">退職代行利用</th><th class="border border-gray-300 p-2">自分で対応</th></tr>
-        </thead>
-        <tbody>
-          <tr><td class="border border-gray-300 p-2">心理的負担</td><td class="border border-gray-300 p-2">業者が代行・低</td><td class="border border-gray-300 p-2">本人対応・高</td></tr>
-          <tr><td class="border border-gray-300 p-2">即日退職</td><td class="border border-gray-300 p-2">可能（業者により）</td><td class="border border-gray-300 p-2">原則2週間前通告</td></tr>
-          <tr><td class="border border-gray-300 p-2">費用</td><td class="border border-gray-300 p-2">2-3万円程度</td><td class="border border-gray-300 p-2">0円</td></tr>
-          <tr><td class="border border-gray-300 p-2">引き止めリスク</td><td class="border border-gray-300 p-2">業者がブロック</td><td class="border border-gray-300 p-2">本人対応必要</td></tr>
-        </tbody>
-      </table>
+      <p>ただし、有期契約・有給消化・扶養手続き等のパート特有の注意点を理解することが重要とされています。</p>
+      <BannerAB pageSlug="part-time" position="hero" />
     </div>
+  </section>
 
-    <BannerAB pageSlug="part-time" position="footer" />
+  <section class="lp-section alt" id="sec-1">
+    <div class="container">
+      <p class="section-num">SECTION / 01</p>
+      <h2>パートでも退職代行を使える法的根拠</h2>
+      <h3>1-1. 民法第627条（無期契約）</h3>
+      <p><a href="https://elaws.e-gov.go.jp/document?lawid=129AC0000000089" target="_blank" rel="noopener">民法第627条 e-Gov</a>では「雇用は、解約の申入れの日から2週間を経過することによって終了する」と定められており、雇用形態（正社員・パート・アルバイト）を問わず、原則として2週間前の通告で退職が可能とされています。</p>
+      <h3>1-2. 民法第628条（有期契約）</h3>
+      <p>契約期間が定まっている有期契約パートの場合、<a href="https://elaws.e-gov.go.jp/document?lawid=129AC0000000089" target="_blank" rel="noopener">民法第628条 e-Gov</a>により「やむを得ない事由」がある場合に途中解約が認められるとされています。健康問題・ハラスメント・賃金未払い等が該当する可能性があるとされています。</p>
+      <h3>1-3. 退職代行の利用要件</h3>
+      <p>退職代行は代理通告サービスのため、本人の退職意思があれば雇用形態を問わず利用可能とされています。パート・アルバイトでも問題なく依頼できるとされています。</p>
+    </div>
+  </section>
 
-    <section class="mt-8 mb-6 bg-blue-50 border-l-4 border-blue-400 p-4 text-sm">
-      <h3 class="font-bold mb-2">まとめ</h3>
-      <ul class="list-disc pl-5 space-y-1">
+  <section class="lp-section" id="sec-2">
+    <div class="container">
+      <p class="section-num">SECTION / 02</p>
+      <h2>パートが退職代行を使う際の3つの注意点</h2>
+      <h3>⚠️ 注意点①: 有期契約のリスク</h3>
+      <p>契約期間が定まっている有期パートは、途中解約に「やむを得ない事由」が必要とされています。事由なしの解約は契約違反となるリスクがあるとされており、業者または弁護士への事前相談が推奨されます。</p>
+      <h3>⚠️ 注意点②: 有給消化</h3>
+      <p>パートでも、雇入れ日から6ヶ月継続勤務 + 全労働日の8割以上出勤で年次有給休暇が付与されるとされています（労働基準法第39条）。退職代行を通じて有給消化を申請することが可能とされています。</p>
+      <h3>⚠️ 注意点③: 扶養手続き・社会保険</h3>
+      <p>配偶者の扶養に入っているパートの場合、退職により扶養関係の変更手続きが必要となるケースがあります。源泉徴収票・離職票の取得については業者経由で会社へ依頼することが推奨されます。</p>
+      <BannerAB pageSlug="part-time" position="middle" />
+    </div>
+  </section>
+
+  <section class="lp-section alt" id="sec-3">
+    <div class="container">
+      <p class="section-num">SECTION / 03</p>
+      <h2>パートの退職代行利用フロー</h2>
+      <div class="counter-box">
+        <h3>📌 利用フロー 4ステップ</h3>
+        <div class="row"><b>Step 1: 契約形態の確認</b><span>雇用契約書を確認し、無期契約か有期契約かを把握します。有期契約の場合は「やむを得ない事由」の有無を整理しておくことが推奨されます。</span></div>
+        <div class="row"><b>Step 2: 業者選定・相談</b><span>パート対応の退職代行サービスに無料相談。料金体系・対応範囲（有給消化交渉の可否等）を確認します。</span></div>
+        <div class="row"><b>Step 3: 申込・退職通告</b><span>業者が会社に退職の意思を通告。本人と会社の直接やり取りなしで退職手続きが進むとされています。</span></div>
+        <div class="row"><b>Step 4: 書類受領・手続き完了</b><span>離職票・源泉徴収票等の書類を業者経由で受領。扶養関係の変更手続き等も完了させます。</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-section" id="sec-4">
+    <div class="container">
+      <p class="section-num">SECTION / 04</p>
+      <h2>パートが直接対応する場合との比較</h2>
+      <div class="compare-wrap">
+        <table class="compare">
+          <thead>
+            <tr><th>項目</th><th>退職代行利用</th><th>自分で対応</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>心理的負担</td><td>業者が代行・低</td><td>本人対応・高</td></tr>
+            <tr><td>即日退職</td><td>可能（業者により）</td><td>原則2週間前通告</td></tr>
+            <tr><td>費用</td><td>2-3万円程度</td><td>0円</td></tr>
+            <tr><td>引き止めリスク</td><td>業者がブロック</td><td>本人対応必要</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <BannerAB pageSlug="part-time" position="footer" />
+    </div>
+  </section>
+
+  <section class="lp-section alt" id="sec-faq">
+    <div class="container">
+      <p class="section-num">SECTION / 05</p>
+      <h2>よくある質問（FAQ）</h2>
+      <div class="faq">
+        {faq.map((item) => (
+          <details><summary>{item.q}</summary><div><p set:html={item.a} /></div></details>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-section" id="sec-summary">
+    <div class="container">
+      <p class="section-num">SECTION / 06</p>
+      <h2>まとめ</h2>
+      <ul>
         <li>パート・アルバイトでも退職代行は使える（民法第627条・第628条）</li>
         <li>有期契約は「やむを得ない事由」要件に注意</li>
         <li>有給消化・扶養手続き・離職票受領は業者経由で対応</li>
         <li>業者選定時に料金体系と対応範囲を必ず確認</li>
       </ul>
-    </section>
+      <p style="font-size:13px;color:var(--c-text-mute,#6b7280);">※ 本記事は公開情報を整理した一般論であり、個別案件の判断には法的助言が必要です。退職代行サービスは民法第627条に基づく代理通告であり、法的効果・退職可否を保証するものではありません。具体的な判断は弁護士・各業者に直接ご相談ください。</p>
+      <PRBadge pageSlug="part-time" label="退職代行サービスの公式サイトで無料相談する（PR）" />
+    </div>
+  </section>
 
-    <h2 class="text-xl font-bold mt-8 mb-3">よくある質問（FAQ）</h2>
-    {faq.map((item) => (
-      <details class="mb-3 border border-gray-200 rounded p-3">
-        <summary class="font-bold cursor-pointer text-sm">{item.q}</summary>
-        <p class="mt-2 text-sm">{item.a}</p>
-      </details>
-    ))}
+  <section class="lp-section alt" id="sec-policy">
+    <div class="container">
+      <p class="section-num">SECTION / 07</p>
+      <h2>編集ポリシー (情報源・更新日・E-E-A-T)</h2>
+      <ul>
+        <li><strong>情報源</strong>: 政府公式 e-Gov 法令検索 (民法・労働基準法) ・厚生労働省公式サイト ・各退職代行業者公式サイト ・退職代行関連の公開統計情報</li>
+        <li><strong>編集方針</strong>: 一次情報優先 (法令は e-Gov 直接リンク・運営形態は公式サイト確認) ・断定表現を避け推定値・公開情報の整理として記述</li>
+        <li><strong>更新頻度</strong>: 月次レビュー (法令改正・サービス内容変更時は随時更新)</li>
+        <li><strong>運営者</strong>: NY-squared (個人事業) <a href="/operator-info/">運営情報ページ</a> 参照</li>
+        <li><strong>E-E-A-T 4 原則</strong>: Experience (退職代行関連の公開情報整理) ・Expertise (法令引用 + 業界公開統計) ・Authoritativeness (政府公式 + 業者公式の一次情報のみ) ・Trustworthiness (PR 表記 + 推定値明示 + 法的助言ではない注記)</li>
+      </ul>
 
-    <p class="text-xs text-gray-500 mt-8">
-      ※ 本記事は公開情報を整理した一般論であり、個別案件の判断には法的助言が必要です。退職代行サービスは民法第627条に基づく代理通告であり、法的効果・退職可否を保証するものではありません。具体的な判断は弁護士・各業者に直接ご相談ください。
-    </p>
-  </main>
-</Layout>
+      <h2>出典・参考情報 (法令・公的機関・公開情報)</h2>
+      <ul>
+        <li><a href="https://elaws.e-gov.go.jp/document?lawid=129AC0000000089" target="_blank" rel="noopener">民法第627条・第628条 (退職の権利・有期契約解約・e-Gov)</a></li>
+        <li><a href="https://elaws.e-gov.go.jp/document?lawid=322AC0000000049" target="_blank" rel="noopener">労働基準法第39条 (有給休暇の権利・e-Gov)</a></li>
+        <li><a href="https://www.mhlw.go.jp/" target="_blank" rel="noopener">厚生労働省</a> (パート・アルバイト労働法・労働相談窓口情報)</li>
+        <li>各退職代行業者公式サイト (運営実績・料金・返金保証条件)・最新情報は各公式サイトでご確認ください</li>
+      </ul>
+      <p style="font-size:12px;color:var(--c-text-mute,#6b7280);margin-top:16px;">
+        ※本記事は2026年5月時点の公開情報をもとに作成。最新の法令・サービス内容は各公式サイトでご確認ください。パート退職代行の利用判断は一般的傾向を整理したもので、個別案件の判断は弁護士・各業者へご相談ください。本ページはアフィリエイト広告（PR）を含みます。
+      </p>
+    </div>
+  </section>
+</RichLayout>

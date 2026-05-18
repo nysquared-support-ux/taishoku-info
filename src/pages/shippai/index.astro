@@ -1,5 +1,5 @@
 ---
-import Layout from '../../layouts/Layout.astro';
+import RichLayout from '../../layouts/RichLayout.astro';
 import PRBadge from '../../components/PRBadge.astro';
 import BannerAB from '../../components/BannerAB.astro';
 
@@ -7,8 +7,8 @@ const title = '退職代行の失敗例7パターン｜事前回避と業者選�
 const description = '退職代行を使って失敗した7つのパターン (連絡途絶・交渉失敗・違法業者等) と回避策・業者選び5軸を整理した情報提供記事です（PR・アフィリエイト広告を含みます）。';
 
 const breadcrumb = [
-  { name: 'ホーム', url: 'https://taishoku-info.pages.dev/' },
-  { name: '失敗例', url: 'https://taishoku-info.pages.dev/shippai/' },
+  { name: 'ホーム', url: '/' },
+  { name: '失敗例' },
 ];
 
 const faq = [
@@ -18,194 +18,149 @@ const faq = [
 ];
 ---
 
-<Layout title={title} description={description} publishedDate="2026-05-02" modifiedDate="2026-05-02" breadcrumb={breadcrumb} faq={faq}>
-  <main class="max-w-3xl mx-auto px-4 py-8">
-    <PRBadge pageSlug="shippai" />
-
-    <nav class="text-sm text-gray-500 mb-4">
-      <a href="/" class="underline">トップ</a> &gt; 退職代行 失敗例
-    </nav>
-
-    <h1 class="text-2xl md:text-3xl font-bold mb-4 leading-tight">
-      退職代行の失敗例7パターン｜事前回避と業者選び5軸を整理
-    </h1>
-
-    <div class="bg-yellow-50 border-2 border-yellow-300 rounded p-3 mb-4 text-sm">
-      <strong>📢 PR表示</strong>: 本ページはアフィリエイト広告（PR）を含みます。情報提供を目的とし、特定サービスの推奨ではありません。個別案件は弁護士・各業者へご相談ください。
+<RichLayout title={title} description={description} publishedDate="2026-05-02" modifiedDate="2026-05-18" breadcrumb={breadcrumb} faq={faq}>
+  <!-- FV: グラデ背景 (Claude Design 正式 class) -->
+  <section class="fv" aria-labelledby="fv-h1">
+    <div class="container">
+      <span class="fv-pill">退職代行 / 失敗回避</span>
+      <h1 id="fv-h1"><span class="accent">退職代行の失敗例7パターン</span><br />事前回避と業者選び5軸を整理</h1>
+      <p class="lede">退職代行の失敗は「業者選び」で大半が回避可能とされています。本記事では7パターンの失敗事例と業者選び5軸を、公開情報・公的機関データをもとに中立的に整理します。</p>
+      <ul class="fv-bullets">
+        <li>失敗7パターンと運営形態別リスク傾向</li>
+        <li>失敗回避の業者選び5軸</li>
+        <li>厚労省・国民生活センター整理の3大根本原因</li>
+        <li>契約前に確認すべき3点チェック</li>
+      </ul>
+      <PRBadge pageSlug="shippai" />
+      <div class="fv-meta">
+        <span><b>公開日</b> 2026-05-02</span><span><b>最終更新</b> 2026-05-18</span>
+        <span><b>編集</b> NY-squared 編集部</span><span><b>所要</b> 約 6 分</span>
+      </div>
     </div>
+  </section>
 
-    <p class="text-sm text-gray-600 mb-6">
-      最終確認日: 2026-05-02 / 運営者: <a href="/operator-info/" class="underline">NY-squared</a> / <a href="/editorial-policy/" class="underline">編集ポリシー</a> / <a href="/privacy-policy/" class="underline">プライバシーポリシー</a>
-    </p>
-
-    <section class="mb-6 bg-blue-50 border-l-4 border-blue-400 p-4 text-sm">
-      <p><strong>結論</strong>: 退職代行の失敗は「業者選び」で大半が回避可能とされています。本記事では7パターンの失敗事例と業者選び5軸を整理します。</p>
-    </section>
-
-    <BannerAB pageSlug="shippai" position="hero" />
-
-    <h2 class="text-xl font-bold mt-8 mb-3">1. 退職代行の失敗例7パターン</h2>
-
-    <ol class="list-decimal pl-5 mb-4 text-sm space-y-2">
-      <li><strong>業者と連絡が取れなくなった</strong>: 事業継続困難な業者の場合のリスク</li>
-      <li><strong>有給交渉ができなかった</strong>: 民間運営は交渉権なし</li>
-      <li><strong>会社から損害賠償を請求された</strong>: 弁護士運営でない業者は対応不可</li>
-      <li><strong>退職日が会社の希望日になった</strong>: 即日退職を希望していたのに後日に</li>
-      <li><strong>返金保証が適用されなかった</strong>: 規約の細則を未確認</li>
-      <li><strong>追加費用を請求された</strong>: 料金体系の不透明さ</li>
-      <li><strong>違法業者だった</strong>: 弁護士法72条違反 (非弁行為) のリスク</li>
-    </ol>
-
-    <h2 class="text-xl font-bold mt-8 mb-3">2. 業者選び5軸 (失敗回避)</h2>
-
-    <ul class="list-disc pl-5 mb-4 text-sm space-y-2">
-      <li><strong>運営主体タイプ</strong>: 労組 or 弁護士運営優先</li>
-      <li><strong>運営実績</strong>: 公式サイト掲載の対応件数・年数を確認</li>
-      <li><strong>料金透明性</strong>: 追加費用の有無を事前確認</li>
-      <li><strong>返金保証条件</strong>: 適用除外の細則を確認</li>
-      <li><strong>レビュー・口コミ</strong>: 複数のサイトで第三者評価を確認</li>
-    </ul>
-
-    <BannerAB pageSlug="shippai" position="middle" />
-
-    <!-- ★T-A13 [0yAVu8WAXu] 2026-05-07: Codex review REVISE 58 主要指摘反映・業者形態別比較表追加 -->
-    <h2 class="text-xl font-bold mt-8 mb-3">3. 業者形態別の比較 (失敗回避軸)</h2>
-    <p class="text-xs text-gray-600 mb-3">※公開情報の整理 (推定値含む)・データ更新日: 2026-05-07・最新情報は各公式サイトで必ずご確認ください</p>
-
-    <div class="overflow-x-auto mb-4">
-      <table class="border-collapse w-full text-xs sm:text-sm">
-        <thead>
-          <tr class="bg-gray-100">
-            <th class="border px-2 py-2 text-left">運営形態</th>
-            <th class="border px-2 py-2 text-left">交渉権限</th>
-            <th class="border px-2 py-2 text-left">料金 (推定)</th>
-            <th class="border px-2 py-2 text-center">即日対応</th>
-            <th class="border px-2 py-2 text-center">返金保証</th>
-            <th class="border px-2 py-2 text-left">失敗リスク傾向</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td class="border px-2 py-2 font-semibold">弁護士運営</td>
-            <td class="border px-2 py-2">法的交渉・訴訟対応可</td>
-            <td class="border px-2 py-2 whitespace-nowrap">5万円〜 (推定)</td>
-            <td class="border px-2 py-2 text-center">◯</td>
-            <td class="border px-2 py-2 text-center">◯</td>
-            <td class="border px-2 py-2">追加費用が発生する場合あり</td>
-          </tr>
-          <tr>
-            <td class="border px-2 py-2 font-semibold">労働組合運営</td>
-            <td class="border px-2 py-2">団体交渉権 (有給・退職日)</td>
-            <td class="border px-2 py-2 whitespace-nowrap">2.5〜3万円</td>
-            <td class="border px-2 py-2 text-center">◯</td>
-            <td class="border px-2 py-2 text-center">◯</td>
-            <td class="border px-2 py-2">交渉対象外項目に注意</td>
-          </tr>
-          <tr>
-            <td class="border px-2 py-2 font-semibold">民間運営 (弁護士監修)</td>
-            <td class="border px-2 py-2">意思伝達のみ (監修体制あり)</td>
-            <td class="border px-2 py-2 whitespace-nowrap">2〜2.5万円</td>
-            <td class="border px-2 py-2 text-center">◯</td>
-            <td class="border px-2 py-2 text-center">△</td>
-            <td class="border px-2 py-2">交渉案件で対応不可となるリスク</td>
-          </tr>
-          <tr>
-            <td class="border px-2 py-2 font-semibold">民間運営 (監修なし)</td>
-            <td class="border px-2 py-2">意思伝達のみ・非弁行為リスク</td>
-            <td class="border px-2 py-2 whitespace-nowrap">1〜2万円</td>
-            <td class="border px-2 py-2 text-center">△</td>
-            <td class="border px-2 py-2 text-center">×</td>
-            <td class="border px-2 py-2">違法業者・連絡途絶のリスクあり</td>
-          </tr>
-        </tbody>
-      </table>
+  <section class="lp-section" id="sec-1" aria-labelledby="h2-1">
+    <div class="container">
+      <p class="section-num">SECTION / 01</p>
+      <h2 id="h2-1">退職代行の失敗例7パターン</h2>
+      <p class="section-lede">公開情報・消費者相談データの整理として、代表的な失敗7パターンを挙げます。</p>
+      <ol>
+        <li><strong>業者と連絡が取れなくなった</strong>: 事業継続困難な業者の場合のリスク</li>
+        <li><strong>有給交渉ができなかった</strong>: 民間運営は交渉権なし</li>
+        <li><strong>会社から損害賠償を請求された</strong>: 弁護士運営でない業者は対応不可</li>
+        <li><strong>退職日が会社の希望日になった</strong>: 即日退職を希望していたのに後日に</li>
+        <li><strong>返金保証が適用されなかった</strong>: 規約の細則を未確認</li>
+        <li><strong>追加費用を請求された</strong>: 料金体系の不透明さ</li>
+        <li><strong>違法業者だった</strong>: 弁護士法72条違反 (非弁行為) のリスク</li>
+      </ol>
+      <BannerAB pageSlug="shippai" position="hero" />
     </div>
+  </section>
 
-    <p class="text-sm mb-4">
-      失敗回避の観点では <strong>労働組合運営または弁護士運営</strong> が交渉権限の点で安全とされています。詳細な業者比較は <a href="/osusume-hikaku/" class="underline">退職代行 おすすめ比較</a> ページを参照ください。
-    </p>
+  <section class="lp-section alt" id="sec-2">
+    <div class="container">
+      <p class="section-num">SECTION / 02</p>
+      <h2>業者選び5軸 (失敗回避)</h2>
+      <div class="card-grid">
+        <div class="card"><h3>① 運営主体タイプ</h3><p>労組 or 弁護士運営優先。交渉権限の有無が失敗回避の最重要軸とされています。</p></div>
+        <div class="card"><h3>② 運営実績</h3><p>公式サイト掲載の対応件数・運営年数を確認します。</p></div>
+        <div class="card"><h3>③ 料金透明性</h3><p>追加費用の有無を事前確認。見積書面取得が推奨されます。</p></div>
+        <div class="card"><h3>④ 返金保証条件</h3><p>適用除外の細則を契約前に確認します。</p></div>
+        <div class="card"><h3>⑤ レビュー・口コミ</h3><p>複数のサイトで第三者評価を確認します。</p></div>
+      </div>
+    </div>
+  </section>
 
-    <h2 class="text-xl font-bold mt-8 mb-3">3.5 失敗事例の根本原因 (3 大要因)</h2>
-    <p class="mb-3 text-sm">
-      <a href="https://www.mhlw.go.jp/" target="_blank" rel="noopener" class="underline">厚生労働省「労働相談コーナー」</a>や<a href="https://www.kokusen.go.jp/" target="_blank" rel="noopener" class="underline">国民生活センター</a>に寄せられる退職代行関連トラブル相談を整理すると、失敗の根本原因は以下 3 大要因に集約されます。
-    </p>
-    <h3 class="text-lg font-bold mt-4 mb-2">3-1. 運営主体の理解不足 (最頻出・約 40-50%)</h3>
-    <p class="mb-3 text-sm">
-      民間業者の <a href="https://elaws.e-gov.go.jp/document?lawid=324AC0000000205" target="_blank" rel="noopener" class="underline">弁護士法第 72 条</a> 制限を理解せずに依頼するケース。会社側が「拒否」と回答した場合に交渉できず、別途弁護士依頼で総額が膨らむパターンが報告されています。
-    </p>
-    <h3 class="text-lg font-bold mt-4 mb-2">3-2. 契約条件の確認漏れ (約 25-35%)</h3>
-    <p class="mb-3 text-sm">
-      「一律料金」を謳う業者でも、書類郵送費・出張費・追加交渉費等の追加料金が発生するケース。<strong>見積書面取得 + 総額明示</strong>を契約前に必須化することで予防可能とされています。
-    </p>
-    <h3 class="text-lg font-bold mt-4 mb-2">3-3. 依頼タイミングの誤り (約 15-20%)</h3>
-    <p class="mb-3 text-sm">
-      平日午後・休日依頼で会社営業時間外となり、即日対応できないケース。<strong>平日午前中</strong>の依頼が即日成立確率を最も高めるとされています。<a href="/touji/" class="underline">即日・当日対応ページ</a>で詳細解説しています。
-    </p>
-    <p class="text-xs text-gray-600 mb-6">※公開情報・消費者相談データの整理 (推定値含む)・実際の相談割合は時期・データソースで変動します。</p>
+  <!-- ★T-A13 [0yAVu8WAXu] 業者形態別比較表 -->
+  <section class="lp-section" id="sec-3">
+    <div class="container">
+      <p class="section-num">SECTION / 03</p>
+      <h2>業者形態別の比較 (失敗回避軸)</h2>
+      <p class="compare-note">※公開情報の整理 (推定値含む)・データ更新日: 2026-05-07・最新情報は各公式サイトで必ずご確認ください</p>
+      <div class="compare-wrap">
+        <table class="compare">
+          <thead>
+            <tr><th>運営形態</th><th>交渉権限</th><th>料金 (推定)</th><th>即日対応</th><th>返金保証</th><th>失敗リスク傾向</th></tr>
+          </thead>
+          <tbody>
+            <tr><td><b>弁護士運営</b></td><td>法的交渉・訴訟対応可</td><td>5万円〜 (推定)</td><td>◯</td><td>◯</td><td>追加費用が発生する場合あり</td></tr>
+            <tr><td><b>労働組合運営</b></td><td>団体交渉権 (有給・退職日)</td><td>2.5〜3万円</td><td>◯</td><td>◯</td><td>交渉対象外項目に注意</td></tr>
+            <tr><td><b>民間運営 (弁護士監修)</b></td><td>意思伝達のみ (監修体制あり)</td><td>2〜2.5万円</td><td>◯</td><td>△</td><td>交渉案件で対応不可となるリスク</td></tr>
+            <tr><td><b>民間運営 (監修なし)</b></td><td>意思伝達のみ・非弁行為リスク</td><td>1〜2万円</td><td>△</td><td>×</td><td>違法業者・連絡途絶のリスクあり</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="section-lede">失敗回避の観点では <strong>労働組合運営または弁護士運営</strong> が交渉権限の点で安全とされています。詳細な業者比較は <a href="/osusume-hikaku/">退職代行 おすすめ比較</a> ページを参照ください。</p>
+      <BannerAB pageSlug="shippai" position="middle" />
+    </div>
+  </section>
 
-    <h2 class="text-xl font-bold mt-8 mb-3">4. よくある質問（FAQ）</h2>
-
-    <h3 class="text-lg font-bold mt-4 mb-2">Q1. 失敗した場合の相談窓口は？</h3>
-    <p class="mb-3 text-sm">
-      労働基準監督署・法テラス (日本司法支援センター)・都道府県労働局などの公的窓口が無料で相談を受け付けているとされています。労働基準監督署は退職時のトラブル (給与未払い・退職拒否等) を、法テラスは法律相談全般を、労働局は労使トラブル全般を扱います。
-    </p>
-
-    <h3 class="text-lg font-bold mt-4 mb-2">Q2. 民間業者で失敗した後、弁護士に依頼し直すことは可能ですか？</h3>
-    <p class="mb-3 text-sm">
-      可能とされています。民間業者の交渉が会社側に拒否された場合、別途弁護士に依頼することで法的交渉を進められます。ただし弁護士費用が別途発生 (3〜6 万円目安) するため、最初から弁護士・労働組合運営を選んだ方が費用対効果が高くなるケースが多いとされています。
-    </p>
-
-    <h3 class="text-lg font-bold mt-4 mb-2">Q3. 退職代行で失敗する確率はどのくらいですか？</h3>
-    <p class="mb-3 text-sm">
-      公式統計はありませんが、業者の運営形態 (弁護士/労働組合/民間)・契約条件の確認・依頼タイミングの 3 点が適切であれば、失敗リスクは大きく低減されるとされています。一方、民間業者で会社拒否を想定外として依頼した場合などは、トラブル発生率が高くなる傾向があります。
-    </p>
-
-    <h3 class="text-lg font-bold mt-4 mb-2">Q4. 失敗事例で多いパターンを優先順位で教えてください</h3>
-    <p class="mb-3 text-sm">
-      公開情報の整理では ① <strong>民間業者で会社拒否時の対応不可</strong> (弁護士法 72 条による交渉権限制限) ② <strong>追加費用請求</strong> (見積書面取得漏れ) ③ <strong>有給消化交渉できず</strong> (民間業者の権限制限) の 3 パターンが頻出とされています。詳細は本ページ上部 7 パターンをご参照ください。
-    </p>
-
-    <h3 class="text-lg font-bold mt-4 mb-2">Q5. 失敗回避のために契約前に確認すべき 3 点は？</h3>
-    <p class="mb-3 text-sm">
-      ① <strong>運営主体</strong> (弁護士/労働組合/民間) の交渉権限を理解する ② <strong>料金総額</strong> (追加費用含む) を見積書面で確認する ③ <strong>即日対応</strong>の依頼条件 (平日午前中等) を事前確認する、の 3 点が一般的に推奨される確認事項です。この 3 点を満たすことで、頻出失敗パターンの大半は予防可能とされています。
-    </p>
-
-    <section class="mt-8 mb-6 bg-gray-50 border border-gray-200 rounded p-4 text-sm">
-      <h2 class="text-lg font-bold mb-2">まとめ</h2>
-      <p class="mb-3">
-        退職代行で失敗を回避するには、①運営主体の理解 ②契約条件の書面確認 ③依頼タイミングの最適化 の 3 点を基本に、業者選び 5 軸 (運営主体/料金/即日対応/LINE 24h/返金保証) で総合比較することが推奨されます。失敗パターンの大半は事前確認で予防可能とされており、契約前の見積取得・運営形態確認・無料相談での質問が回避策の中心となります。
+  <section class="lp-section alt" id="sec-4">
+    <div class="container">
+      <p class="section-num">SECTION / 04</p>
+      <h2>失敗事例の根本原因 (3 大要因)</h2>
+      <p class="section-lede">
+        <a href="https://www.mhlw.go.jp/" target="_blank" rel="noopener">厚生労働省「労働相談コーナー」</a>や<a href="https://www.kokusen.go.jp/" target="_blank" rel="noopener">国民生活センター</a>に寄せられる退職代行関連トラブル相談を整理すると、失敗の根本原因は以下 3 大要因に集約されます。
       </p>
-      <p class="mb-3">
-        <strong>状況別の推奨形態</strong>: ① <strong>会社拒否リスク高 (パワハラ・ブラック企業)</strong> → 労働組合または弁護士運営 (団体交渉権/弁護士権限あり) ② <strong>有給消化を必須にしたい</strong> → 労働組合運営 (労基法 39 条の交渉可) ③ <strong>料金優先・トラブル少なめ</strong> → 民間運営 (¥20,000-30,000 帯)。判断軸を絞ることで業者選定の効率が大きく向上します。
-      </p>
-      <p class="mb-3">
-        <strong>失敗回避の行動 3 ステップ</strong>: <strong>STEP 1</strong> 自分の状況確認 (運営形態の優先度・必要な権限・予算上限) → <strong>STEP 2</strong> <a href="/osusume-hikaku/" class="underline">5 社比較ページ</a> で 2-3 社に絞込 → <strong>STEP 3</strong> 各社の無料相談 (LINE/電話) で対応可否を確認し、見積書面取得後に最終決定。
-      </p>
-      <p class="text-xs text-gray-600">
-        ※即日対応は <a href="/touji/" class="underline">即日・当日対応ページ</a> ・親バレ回避は <a href="/oyabare/" class="underline">親バレページ</a> ・有給消化は <a href="/yukyu-shouka/" class="underline">有給消化ページ</a> もあわせてご参照ください。本記事は法的助言ではなく、特定業者を推奨するものでもありません。
-      </p>
-    </section>
+      <div class="counter-box">
+        <h3>📌 失敗の3大根本原因 (公開情報整理)</h3>
+        <div class="row"><b>3-1. 運営主体の理解不足 (約 40-50%)</b><span>民間業者の <a href="https://elaws.e-gov.go.jp/document?lawid=324AC0000000205" target="_blank" rel="noopener">弁護士法第 72 条</a> 制限を理解せず依頼。会社拒否時に交渉できず別途弁護士依頼で総額増。</span></div>
+        <div class="row"><b>3-2. 契約条件の確認漏れ (約 25-35%)</b><span>「一律料金」でも書類郵送費・出張費・追加交渉費が発生。<strong>見積書面取得 + 総額明示</strong>で予防可能。</span></div>
+        <div class="row"><b>3-3. 依頼タイミングの誤り (約 15-20%)</b><span>平日午後・休日依頼で営業時間外。<strong>平日午前中</strong>の依頼が即日成立確率を最も高める。<a href="/touji/">即日・当日対応ページ</a>で詳細解説。</span></div>
+        <p style="margin-top:12px;font-size:13px;color:var(--c-text-sub,#4a5568);">※公開情報・消費者相談データの整理 (推定値含む)・実際の相談割合は時期・データソースで変動します。</p>
+      </div>
+    </div>
+  </section>
 
-    <h2 class="text-xl font-bold mt-8 mb-3">編集ポリシー (情報源・更新日・E-E-A-T)</h2>
-    <ul class="list-disc pl-5 mb-4 text-sm space-y-2">
-      <li><strong>情報源</strong>: 政府公式 e-Gov 法令検索 (民法・労働基準法・弁護士法) ・厚生労働省公式サイト ・各退職代行業者公式サイト ・退職代行関連の公開統計情報</li>
-      <li><strong>編集方針</strong>: 一次情報優先 (法令は e-Gov 直接リンク・運営形態は公式サイト確認) ・断定表現を避け推定値・公開情報の整理として記述</li>
-      <li><strong>更新頻度</strong>: 月次レビュー (法令改正・サービス内容変更時は随時更新)</li>
-      <li><strong>運営者</strong>: NY-squared (個人事業) <a href="/operator-info/" class="underline">運営情報ページ</a> 参照</li>
-      <li><strong>E-E-A-T 4 原則</strong>: Experience (退職代行関連の公開情報整理) ・Expertise (法令引用 + 業界公開統計) ・Authoritativeness (政府公式 + 業者公式の一次情報のみ) ・Trustworthiness (PR 表記 + 推定値明示 + 法的助言ではない注記)</li>
-    </ul>
+  <section class="lp-section" id="sec-faq">
+    <div class="container">
+      <p class="section-num">SECTION / 05</p>
+      <h2>よくある質問（FAQ）</h2>
+      <div class="faq">
+        <details><summary>Q1. 失敗した場合の相談窓口は？</summary><div><p>労働基準監督署・法テラス (日本司法支援センター)・都道府県労働局などの公的窓口が無料で相談を受け付けているとされています。労働基準監督署は退職時のトラブル (給与未払い・退職拒否等) を、法テラスは法律相談全般を、労働局は労使トラブル全般を扱います。</p></div></details>
+        <details><summary>Q2. 民間業者で失敗した後、弁護士に依頼し直すことは可能ですか？</summary><div><p>可能とされています。民間業者の交渉が会社側に拒否された場合、別途弁護士に依頼することで法的交渉を進められます。ただし弁護士費用が別途発生 (3〜6 万円目安) するため、最初から弁護士・労働組合運営を選んだ方が費用対効果が高くなるケースが多いとされています。</p></div></details>
+        <details><summary>Q3. 退職代行で失敗する確率はどのくらいですか？</summary><div><p>公式統計はありませんが、業者の運営形態 (弁護士/労働組合/民間)・契約条件の確認・依頼タイミングの 3 点が適切であれば、失敗リスクは大きく低減されるとされています。一方、民間業者で会社拒否を想定外として依頼した場合などは、トラブル発生率が高くなる傾向があります。</p></div></details>
+        <details><summary>Q4. 失敗事例で多いパターンを優先順位で教えてください</summary><div><p>公開情報の整理では ① <strong>民間業者で会社拒否時の対応不可</strong> (弁護士法 72 条による交渉権限制限) ② <strong>追加費用請求</strong> (見積書面取得漏れ) ③ <strong>有給消化交渉できず</strong> (民間業者の権限制限) の 3 パターンが頻出とされています。詳細は本ページ上部 7 パターンをご参照ください。</p></div></details>
+        <details><summary>Q5. 失敗回避のために契約前に確認すべき 3 点は？</summary><div><p>① <strong>運営主体</strong> (弁護士/労働組合/民間) の交渉権限を理解する ② <strong>料金総額</strong> (追加費用含む) を見積書面で確認する ③ <strong>即日対応</strong>の依頼条件 (平日午前中等) を事前確認する、の 3 点が一般的に推奨される確認事項です。この 3 点を満たすことで、頻出失敗パターンの大半は予防可能とされています。</p></div></details>
+      </div>
+    </div>
+  </section>
 
-    <h2 class="text-xl font-bold mt-8 mb-3">出典・参考情報 (法令・公的機関・公開情報)</h2>
-    <ul class="list-disc pl-5 mb-4 text-sm space-y-1">
-      <li><a href="https://www.mhlw.go.jp/" target="_blank" rel="noopener" class="underline">厚生労働省</a> (労働相談窓口情報)</li>
-      <li><a href="https://www.houterasu.or.jp/" target="_blank" rel="noopener" class="underline">法テラス</a> (法律相談窓口)</li>
-      <li><a href="https://elaws.e-gov.go.jp/document?lawid=324AC0000000205" target="_blank" rel="noopener" class="underline">弁護士法第72条 (非弁行為の禁止・e-Gov)</a></li>
-      <li><a href="https://elaws.e-gov.go.jp/document?lawid=129AC0000000089" target="_blank" rel="noopener" class="underline">民法第627条 (退職の権利・e-Gov)</a></li>
-      <li>各退職代行業者公式サイト (運営実績・料金・返金保証条件)・最新情報は各公式サイトでご確認ください</li>
-    </ul>
+  <section class="lp-section alt" id="sec-summary">
+    <div class="container">
+      <p class="section-num">SECTION / 06</p>
+      <h2>まとめ</h2>
+        <p>退職代行で失敗を回避するには、①運営主体の理解 ②契約条件の書面確認 ③依頼タイミングの最適化 の 3 点を基本に、業者選び 5 軸 (運営主体/料金/即日対応/LINE 24h/返金保証) で総合比較することが推奨されます。失敗パターンの大半は事前確認で予防可能とされており、契約前の見積取得・運営形態確認・無料相談での質問が回避策の中心となります。</p>
+        <p><strong>状況別の推奨形態</strong>: ① <strong>会社拒否リスク高 (パワハラ・ブラック企業)</strong> → 労働組合または弁護士運営 (団体交渉権/弁護士権限あり) ② <strong>有給消化を必須にしたい</strong> → 労働組合運営 (労基法 39 条の交渉可) ③ <strong>料金優先・トラブル少なめ</strong> → 民間運営 (¥20,000-30,000 帯)。判断軸を絞ることで業者選定の効率が大きく向上します。</p>
+        <p><strong>失敗回避の行動 3 ステップ</strong>: <strong>STEP 1</strong> 自分の状況確認 (運営形態の優先度・必要な権限・予算上限) → <strong>STEP 2</strong> <a href="/osusume-hikaku/">5 社比較ページ</a> で 2-3 社に絞込 → <strong>STEP 3</strong> 各社の無料相談 (LINE/電話) で対応可否を確認し、見積書面取得後に最終決定。</p>
+        <p style="font-size:13px;color:var(--c-text-mute,#6b7280);">※即日対応は <a href="/touji/">即日・当日対応ページ</a> ・親バレ回避は <a href="/oyabare/">親バレページ</a> ・有給消化は <a href="/yukyu-shouka/">有給消化ページ</a> もあわせてご参照ください。本記事は法的助言ではなく、特定業者を推奨するものでもありません。</p>
+      <PRBadge pageSlug="shippai" label="退職代行サービスの公式サイトで無料相談する（PR）" />
+    </div>
+  </section>
 
-    <p class="text-xs text-gray-500 mt-4">
-      ※本記事は2026年5月時点の公開情報をもとに作成。最新の法令・サービス内容は各公式サイトでご確認ください。失敗例・リスク評価は一般的傾向を整理したもので、個別案件の判断は弁護士・各業者へご相談ください。
-    </p>
-  </main>
-</Layout>
+  <section class="lp-section" id="sec-policy">
+    <div class="container">
+      <p class="section-num">SECTION / 07</p>
+      <h2>編集ポリシー (情報源・更新日・E-E-A-T)</h2>
+      <ul>
+        <li><strong>情報源</strong>: 政府公式 e-Gov 法令検索 (民法・労働基準法・弁護士法) ・厚生労働省公式サイト ・各退職代行業者公式サイト ・退職代行関連の公開統計情報</li>
+        <li><strong>編集方針</strong>: 一次情報優先 (法令は e-Gov 直接リンク・運営形態は公式サイト確認) ・断定表現を避け推定値・公開情報の整理として記述</li>
+        <li><strong>更新頻度</strong>: 月次レビュー (法令改正・サービス内容変更時は随時更新)</li>
+        <li><strong>運営者</strong>: NY-squared (個人事業) <a href="/operator-info/">運営情報ページ</a> 参照</li>
+        <li><strong>E-E-A-T 4 原則</strong>: Experience (退職代行関連の公開情報整理) ・Expertise (法令引用 + 業界公開統計) ・Authoritativeness (政府公式 + 業者公式の一次情報のみ) ・Trustworthiness (PR 表記 + 推定値明示 + 法的助言ではない注記)</li>
+      </ul>
+
+      <h2>出典・参考情報 (法令・公的機関・公開情報)</h2>
+      <ul>
+        <li><a href="https://www.mhlw.go.jp/" target="_blank" rel="noopener">厚生労働省</a> (労働相談窓口情報)</li>
+        <li><a href="https://www.houterasu.or.jp/" target="_blank" rel="noopener">法テラス</a> (法律相談窓口)</li>
+        <li><a href="https://elaws.e-gov.go.jp/document?lawid=324AC0000000205" target="_blank" rel="noopener">弁護士法第72条 (非弁行為の禁止・e-Gov)</a></li>
+        <li><a href="https://elaws.e-gov.go.jp/document?lawid=129AC0000000089" target="_blank" rel="noopener">民法第627条 (退職の権利・e-Gov)</a></li>
+        <li>各退職代行業者公式サイト (運営実績・料金・返金保証条件)・最新情報は各公式サイトでご確認ください</li>
+      </ul>
+      <p style="font-size:12px;color:var(--c-text-mute,#6b7280);margin-top:16px;">
+        ※本記事は2026年5月時点の公開情報をもとに作成。最新の法令・サービス内容は各公式サイトでご確認ください。失敗例・リスク評価は一般的傾向を整理したもので、個別案件の判断は弁護士・各業者へご相談ください。本ページはアフィリエイト広告（PR）を含みます。
+      </p>
+    </div>
+  </section>
+</RichLayout>

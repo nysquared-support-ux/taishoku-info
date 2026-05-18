@@ -1,5 +1,5 @@
 ---
-import Layout from '../../layouts/Layout.astro';
+import RichLayout from '../../layouts/RichLayout.astro';
 import PRBadge from '../../components/PRBadge.astro';
 import BannerAB from '../../components/BannerAB.astro';
 
@@ -7,8 +7,8 @@ const title = '退職代行と損害賠償の一般論｜議論される5つの�
 const description = '退職代行を使うと損害賠償を請求されるか不安な方へ。民法・労働関連法の一般論として、損害賠償が議論される傾向がある5つのケースを整理した情報提供記事です（PR・アフィリエイト広告を含みます）。法的判断は弁護士へご相談ください。';
 
 const breadcrumb = [
-  { name: 'ホーム', url: 'https://taishoku-info.pages.dev/' },
-  { name: '損害賠償リスク', url: 'https://taishoku-info.pages.dev/damage-risk/' },
+  { name: 'ホーム', url: '/' },
+  { name: '損害賠償リスク' },
 ];
 
 const faq = [
@@ -18,186 +18,181 @@ const faq = [
 ];
 ---
 
-<Layout title={title} description={description} publishedDate="2026-04-26" modifiedDate="2026-05-02" breadcrumb={breadcrumb} faq={faq}>
-  <main class="max-w-3xl mx-auto px-4 py-8">
-    <PRBadge pageSlug="damage-risk" />
-
-    <nav class="text-sm text-gray-500 mb-4">
-      <a href="/" class="underline">トップ</a> &gt; 損害賠償リスクと対策
-    </nav>
-
-    <h1 class="text-2xl md:text-3xl font-bold mb-4 leading-tight">
-      退職代行と損害賠償｜一般論として議論される5つのケースを整理
-    </h1>
-
-    <div class="bg-yellow-50 border-2 border-yellow-300 rounded p-3 mb-4 text-sm">
-      <strong>📢 PR表示</strong>: 本ページはアフィリエイト広告（PR）を含みます。本サイトは法律事務所・退職代行業者公式サイトではなく、公開情報を整理した一般論ベースの情報提供サイトです。本記事は法的助言・効果保証ではなく、個別案件の判断は<strong>必ず弁護士・労働基準監督署・各業者に直接ご相談ください</strong>。
+<RichLayout title={title} description={description} publishedDate="2026-04-26" modifiedDate="2026-05-18" breadcrumb={breadcrumb} faq={faq}>
+  <section class="fv" aria-labelledby="fv-h1">
+    <div class="container">
+      <span class="fv-pill">退職代行 / 損害賠償リスク</span>
+      <h1 id="fv-h1"><span class="accent">退職代行と損害賠償</span><br />一般論として議論される5つのケースを整理</h1>
+      <p class="lede">「退職代行を使ったら損害賠償を請求されるかも…」と不安を感じる方もいらっしゃるようです。一般論として、通常の退職手続きに沿って退職した場合、労働者が損害賠償を負うケースは限定的と説明されることがあります。ただし、<strong>個別事情により判断が分かれる</strong>ため、不安がある場合は弁護士・専門家への相談が推奨されます。</p>
+      <ul class="fv-bullets">
+        <li>退職に関する法的根拠 (民法627条・労基法・民法709条)</li>
+        <li>議論される傾向がある5ケース</li>
+        <li>会社から「損害賠償」と言われた場合の対応</li>
+        <li>弁護士提携の業者を選ぶ理由</li>
+      </ul>
+      <PRBadge pageSlug="damage-risk" />
+      <div class="fv-meta">
+        <span><b>公開日</b> 2026-04-26</span><span><b>最終更新</b> 2026-05-18</span>
+        <span><b>編集</b> NY-squared 編集部</span><span><b>所要</b> 約 6 分</span>
+      </div>
     </div>
+  </section>
 
-    <div class="bg-red-50 border-l-4 border-red-400 p-3 mb-4 text-xs">
-      <strong>⚖️ 弁護士法 72 条に関する留意</strong>: 法律事務（法律相談・交渉・代理）を行えるのは原則として弁護士に限られます（弁護士法 72 条）。退職代行業者の対応範囲は事業者により異なるため、トラブル時の交渉・賠償対応が必要な場合は弁護士運営または弁護士監修の業者をご検討ください。
+  <section class="lp-section" id="sec-intro">
+    <div class="container">
+      <p class="section-num">SECTION / 00</p>
+      <h2>はじめに (PR表示・前提)</h2>
+      <p><strong>📢 PR表示</strong>: 本ページはアフィリエイト広告（PR）を含みます。本サイトは法律事務所・退職代行業者公式サイトではなく、公開情報を整理した一般論ベースの情報提供サイトです。本記事は法的助言・効果保証ではなく、個別案件の判断は<strong>必ず弁護士・労働基準監督署・各業者に直接ご相談ください</strong>。</p>
+      <div class="counter-box">
+        <h3>⚖️ 弁護士法 72 条に関する留意</h3>
+        <div class="row"><b>法律事務の取扱い制限</b><span>法律事務（法律相談・交渉・代理）を行えるのは原則として弁護士に限られます（弁護士法 72 条）。退職代行業者の対応範囲は事業者により異なるため、トラブル時の交渉・賠償対応が必要な場合は弁護士運営または弁護士監修の業者をご検討ください。</span></div>
+      </div>
+      <p style="font-size:13px;color:var(--c-text-sub,#4a5568);">最終確認日: 2026-04-26 / 公開情報の整理であり、特定サービスを推奨するものではありません。<br />運営者: <a href="/operator-info/">NY-squared (個人事業)</a> / <a href="/editorial-policy/">編集ポリシー</a> / <a href="/privacy-policy/">プライバシーポリシー</a></p>
+      <p>「退職代行を使ったら損害賠償を請求されるかも…」と不安を感じる方もいらっしゃるようです。一般論として、通常の退職手続きに沿って退職した場合、労働者が損害賠償を負うケースは限定的と説明されることがあります。ただし、<strong>個別事情により判断が分かれる</strong>ため、不安がある場合は弁護士・専門家への相談が推奨されます。</p>
+      <BannerAB pageSlug="damage-risk" position="hero" />
     </div>
+  </section>
 
-    <p class="text-sm text-gray-600 mb-6">
-      最終確認日: 2026-04-26 / 公開情報の整理であり、特定サービスを推奨するものではありません。<br />
-      運営者: <a href="/operator-info/" class="underline">NY-squared (個人事業)</a> /
-      <a href="/editorial-policy/" class="underline">編集ポリシー</a> /
-      <a href="/privacy-policy/" class="underline">プライバシーポリシー</a>
-    </p>
-
-    <section class="mb-6 bg-blue-50 border-l-4 border-blue-400 p-4 text-sm">
-      <p>「退職代行を使ったら損害賠償を請求されるかも…」と不安を感じる方もいらっしゃるようです。</p>
-      <p class="mt-2">一般論として、通常の退職手続きに沿って退職した場合、労働者が損害賠償を負うケースは限定的と説明されることがあります。ただし、<strong>個別事情により判断が分かれる</strong>ため、不安がある場合は弁護士・専門家への相談が推奨されます。</p>
-    </section>
-
-    <BannerAB pageSlug="damage-risk" position="hero" />
-
-    <h2 class="text-xl font-bold mt-8 mb-3">1. 退職に関する法的根拠（一般論）</h2>
-
-    <h3 class="text-lg font-bold mt-4 mb-2">1-1. 民法627条（期間の定めのない雇用契約）</h3>
-    <p class="mb-3 text-sm">
-      労働者は2週間前に退職の意思表示をすれば、雇用契約を解除できるとされています（<a href="https://elaws.e-gov.go.jp/document?lawid=129AC0000000089" target="_blank" rel="noopener" class="underline">民法 627 条 e-Gov 法令検索</a>）。
-    </p>
-
-    <h3 class="text-lg font-bold mt-4 mb-2">1-2. 労働基準法</h3>
-    <p class="mb-3 text-sm">
-      労働者の退職に関する一般的な解釈として、退職の意思表示そのものは労働者の権利として認められる傾向があるとされています（<a href="https://elaws.e-gov.go.jp/document?lawid=322AC0000000049" target="_blank" rel="noopener" class="underline">労働基準法 e-Gov</a>）。ただし、個別事情・契約形態（有期雇用・特約等）により判断が分かれる場合があります。
-    </p>
-
-    <h3 class="text-lg font-bold mt-4 mb-2">1-3. 損害賠償請求の一般的な要件</h3>
-    <p class="mb-3 text-sm">
-      損害賠償が成立するには、労働者側に<strong>故意または過失による違法行為</strong>があり、それによって会社に<strong>具体的な損害</strong>が発生したことが立証される必要があるとされています（<a href="https://elaws.e-gov.go.jp/document?lawid=129AC0000000089" target="_blank" rel="noopener" class="underline">民法 709 条</a>）。
-    </p>
-    <p class="text-xs text-gray-600 mb-6">※上記は一般論の整理です。個別案件の判断は弁護士にご相談ください。</p>
-
-    <BannerAB pageSlug="damage-risk" position="middle" />
-
-    <h2 class="text-xl font-bold mt-8 mb-3">2. 一般論として議論される傾向がある5ケース</h2>
-    <p class="text-xs text-gray-600 mb-4">※以下は法律解説書・弁護士事務所の公開情報をもとに「議論される傾向」を整理したものであり、損害賠償の成立を意味するものではありません。個別判断は必ず弁護士にご相談ください。</p>
-
-    <h3 class="text-lg font-bold mt-4 mb-2">ケースA: 引継ぎを一切拒否し業務停滞が発生</h3>
-    <ul class="list-disc pl-5 space-y-1 text-sm mb-3">
-      <li>引継ぎが会社の業務に深刻な損害を発生させた場合、理論的に請求可能性が議論される傾向があります</li>
-      <li>選択肢の例として、引継ぎ資料の事前作成や、弁護士運営の業者経由での対応があります</li>
-      <li><strong>個別案件の判断は弁護士にご相談ください</strong></li>
-    </ul>
-
-    <h3 class="text-lg font-bold mt-4 mb-2">ケースB: 機密情報・顧客情報の持ち出し</h3>
-    <ul class="list-disc pl-5 space-y-1 text-sm mb-3">
-      <li>不正競争防止法・個人情報保護法違反に該当する可能性が議論される傾向があります</li>
-      <li>退職前に社内資料・データを持ち出さないことが一般的に推奨されています</li>
-      <li><strong>個別案件の判断は弁護士にご相談ください</strong></li>
-    </ul>
-
-    <h3 class="text-lg font-bold mt-4 mb-2">ケースC: 特約のある契約（留学費用返還等）</h3>
-    <ul class="list-disc pl-5 space-y-1 text-sm mb-3">
-      <li>会社負担の研修・留学費用返還特約がある場合、契約書の規定確認が推奨されます</li>
-      <li>特約の有効性は個別案件により議論が分かれる傾向があります</li>
-      <li><strong>個別案件の判断は弁護士にご相談ください</strong></li>
-    </ul>
-
-    <h3 class="text-lg font-bold mt-4 mb-2">ケースD: 就業規則の退職予告期間違反</h3>
-    <ul class="list-disc pl-5 space-y-1 text-sm mb-3">
-      <li>「3ヶ月前告知」等の規定がある場合、民法627条との関係や個別事情により判断が分かれる傾向があります</li>
-      <li><strong>個別案件の判断は弁護士にご相談ください</strong></li>
-    </ul>
-
-    <h3 class="text-lg font-bold mt-4 mb-2">ケースE: 競業避止義務違反</h3>
-    <ul class="list-disc pl-5 space-y-1 text-sm mb-3">
-      <li>退職後すぐに同業他社に転職する場合、特約違反の可能性が議論される傾向があります</li>
-      <li>競業避止特約の有効性は個別案件により判断が分かれる傾向があります</li>
-      <li><strong>個別案件の判断は弁護士にご相談ください</strong></li>
-    </ul>
-
-    <h2 class="text-xl font-bold mt-8 mb-3">3. 会社から「損害賠償」と言われた場合の対応</h2>
-    <p class="mb-3 text-sm">
-      会社から損害賠償の話が出た場合、個別事情により対応方針が異なるため、早期に弁護士または労働組合・専門家への相談が選択肢となります。やり取りはメール・書面など記録が残る形で行うことが一般的に推奨されます。
-    </p>
-
-    <p class="font-semibold mt-4 mb-2 text-sm">公的相談窓口:</p>
-    <ul class="list-disc pl-5 space-y-1 text-sm mb-6">
-      <li><a href="https://www.mhlw.go.jp/kouseiroudoushou/shozaiannai/roudoukyoku/" target="_blank" rel="noopener" class="underline">労働基準監督署</a></li>
-      <li><a href="https://www.houterasu.or.jp/" target="_blank" rel="noopener" class="underline">法テラス（日本司法支援センター）</a></li>
-      <li>各都道府県弁護士会・労働組合</li>
-    </ul>
-
-    <BannerAB pageSlug="damage-risk" position="footer" />
-
-    <h2 class="text-xl font-bold mt-8 mb-3">出典</h2>
-    <ul class="list-disc pl-5 space-y-1 text-sm mb-6">
-      <li><a href="https://elaws.e-gov.go.jp/document?lawid=129AC0000000089" target="_blank" rel="noopener" class="underline">民法 e-Gov 法令検索</a></li>
-      <li><a href="https://elaws.e-gov.go.jp/document?lawid=322AC0000000049" target="_blank" rel="noopener" class="underline">労働基準法 e-Gov 法令検索</a></li>
-      <li><a href="https://elaws.e-gov.go.jp/document?lawid=324AC0000000205" target="_blank" rel="noopener" class="underline">弁護士法 e-Gov 法令検索（72条 法律事務の取扱い）</a></li>
-      <li><a href="https://elaws.e-gov.go.jp/document?lawid=405AC0000000047" target="_blank" rel="noopener" class="underline">不正競争防止法 e-Gov</a></li>
-      <li><a href="https://www.mhlw.go.jp/" target="_blank" rel="noopener" class="underline">厚生労働省</a></li>
-    </ul>
-
-    <p class="text-xs text-gray-500 mb-4">
-      🔒 <strong>個人情報・Cookie の取扱い</strong>: 本サイトは GA4・A8.net のアクセス解析・成果計測 Cookie を使用します。詳細・同意撤回方法は <a href="/privacy-policy/" class="underline">プライバシーポリシー</a> をご確認ください。
-    </p>
-
-    <h2 class="text-xl font-bold mt-8 mb-3">弁護士提携の業者を選ぶ理由</h2>
-
-    <p class="text-sm mb-3">
-      損害賠償リスクが想定される退職ケース（在職中の重大過失・競業避止義務違反等）では、<strong>弁護士提携の退職代行業者</strong>を選ぶことが選択肢の一つとして挙げられます。
-    </p>
-
-    <h3 class="text-base font-semibold mt-4 mb-2">業務範囲の違い（一般論）</h3>
-    <ul class="list-disc pl-5 space-y-1 text-sm mb-4">
-      <li><strong>民間企業タイプ</strong>: 退職意思の伝達中心。会社からの損害賠償請求への対応は<strong>非弁行為に該当する可能性</strong>があるため対応できないとされています</li>
-      <li><strong>労働組合タイプ</strong>: 団体交渉権に基づく交渉は可能ですが、<strong>個別案件の損害賠償請求への対応は弁護士法上の制限</strong>があります</li>
-      <li><strong>弁護士タイプ</strong>: 弁護士法 72 条に基づき法律事務全般に対応可能。<strong>損害賠償請求の防御・反論・和解交渉</strong>等に対応</li>
-    </ul>
-
-    <p class="text-xs text-gray-500 mb-6">
-      ※個別案件の判断は弁護士・労働組合・専門家にご相談ください。本記載は一般論であり、特定業者を推奨するものではありません。<a href="/" class="underline">Hub の運営主体 3 タイプ比較表</a> も併せてご確認ください。
-    </p>
-
-    <h2 class="text-xl font-bold mt-8 mb-3">📌 次のアクション 3 選</h2>
-    <div class="grid md:grid-cols-3 gap-3 mb-6">
-      <a href="https://www.houterasu.or.jp/" target="_blank" rel="noopener" class="block border rounded p-3 hover:bg-blue-50 text-sm">
-        <strong>① 弁護士に相談したい</strong><br />
-        <span class="text-xs text-gray-600">法テラス（日本司法支援センター）無料</span>
-      </a>
-      <a href="/" class="block border rounded p-3 hover:bg-blue-50 text-sm">
-        <strong>② 弁護士提携の業者を選びたい</strong><br />
-        <span class="text-xs text-gray-600">Hub の運営主体 3 タイプ比較</span>
-      </a>
-      <a href="/faq/" class="block border rounded p-3 hover:bg-blue-50 text-sm">
-        <strong>③ 法的疑問を確認</strong><br />
-        <span class="text-xs text-gray-600">FAQ Q21-25（民法627・弁護士法72等）</span>
-      </a>
+  <section class="lp-section alt" id="sec-1">
+    <div class="container">
+      <p class="section-num">SECTION / 01</p>
+      <h2>退職に関する法的根拠（一般論）</h2>
+      <h3>1-1. 民法627条（期間の定めのない雇用契約）</h3>
+      <p>労働者は2週間前に退職の意思表示をすれば、雇用契約を解除できるとされています（<a href="https://elaws.e-gov.go.jp/document?lawid=129AC0000000089" target="_blank" rel="noopener">民法 627 条 e-Gov 法令検索</a>）。</p>
+      <h3>1-2. 労働基準法</h3>
+      <p>労働者の退職に関する一般的な解釈として、退職の意思表示そのものは労働者の権利として認められる傾向があるとされています（<a href="https://elaws.e-gov.go.jp/document?lawid=322AC0000000049" target="_blank" rel="noopener">労働基準法 e-Gov</a>）。ただし、個別事情・契約形態（有期雇用・特約等）により判断が分かれる場合があります。</p>
+      <h3>1-3. 損害賠償請求の一般的な要件</h3>
+      <p>損害賠償が成立するには、労働者側に<strong>故意または過失による違法行為</strong>があり、それによって会社に<strong>具体的な損害</strong>が発生したことが立証される必要があるとされています（<a href="https://elaws.e-gov.go.jp/document?lawid=129AC0000000089" target="_blank" rel="noopener">民法 709 条</a>）。</p>
+      <p class="compare-note">※上記は一般論の整理です。個別案件の判断は弁護士にご相談ください。</p>
+      <BannerAB pageSlug="damage-risk" position="middle" />
     </div>
+  </section>
 
-    <h2 class="text-xl font-bold mt-8 mb-3">関連ページ</h2>
-    <ul class="list-disc pl-5 space-y-1 text-sm">
-      <li><a href="/" class="text-blue-700 underline">退職代行 総合ガイド Hub</a></li>
-      <li><a href="/lp-a/" class="text-blue-700 underline">退職代行の仕組み・費用・選び方</a></li>
-      <li><a href="/unemployment-insurance/" class="text-blue-700 underline">失業保険ガイド</a></li>
-      <li><a href="/faq/" class="text-blue-700 underline">よくある質問FAQ 25問</a></li>
-    </ul>
+  <section class="lp-section" id="sec-2">
+    <div class="container">
+      <p class="section-num">SECTION / 02</p>
+      <h2>一般論として議論される傾向がある5ケース</h2>
+      <p class="compare-note">※以下は法律解説書・弁護士事務所の公開情報をもとに「議論される傾向」を整理したものであり、損害賠償の成立を意味するものではありません。個別判断は必ず弁護士にご相談ください。</p>
+      <h3>ケースA: 引継ぎを一切拒否し業務停滞が発生</h3>
+      <ul>
+        <li>引継ぎが会社の業務に深刻な損害を発生させた場合、理論的に請求可能性が議論される傾向があります</li>
+        <li>選択肢の例として、引継ぎ資料の事前作成や、弁護士運営の業者経由での対応があります</li>
+        <li><strong>個別案件の判断は弁護士にご相談ください</strong></li>
+      </ul>
+      <h3>ケースB: 機密情報・顧客情報の持ち出し</h3>
+      <ul>
+        <li>不正競争防止法・個人情報保護法違反に該当する可能性が議論される傾向があります</li>
+        <li>退職前に社内資料・データを持ち出さないことが一般的に推奨されています</li>
+        <li><strong>個別案件の判断は弁護士にご相談ください</strong></li>
+      </ul>
+      <h3>ケースC: 特約のある契約（留学費用返還等）</h3>
+      <ul>
+        <li>会社負担の研修・留学費用返還特約がある場合、契約書の規定確認が推奨されます</li>
+        <li>特約の有効性は個別案件により議論が分かれる傾向があります</li>
+        <li><strong>個別案件の判断は弁護士にご相談ください</strong></li>
+      </ul>
+      <h3>ケースD: 就業規則の退職予告期間違反</h3>
+      <ul>
+        <li>「3ヶ月前告知」等の規定がある場合、民法627条との関係や個別事情により判断が分かれる傾向があります</li>
+        <li><strong>個別案件の判断は弁護士にご相談ください</strong></li>
+      </ul>
+      <h3>ケースE: 競業避止義務違反</h3>
+      <ul>
+        <li>退職後すぐに同業他社に転職する場合、特約違反の可能性が議論される傾向があります</li>
+        <li>競業避止特約の有効性は個別案件により判断が分かれる傾向があります</li>
+        <li><strong>個別案件の判断は弁護士にご相談ください</strong></li>
+      </ul>
+    </div>
+  </section>
 
-    <p class="text-xs text-gray-500 mt-8">
-      ※本ページは2026-04-26時点の公開情報をもとに編集部が整理した参考記事です。<strong>法律事務所・退職代行業者公式サイトではなく、法的判断は必ず弁護士または専門家にご相談ください</strong>。
-    </p>
-  </main>
+  <section class="lp-section alt" id="sec-3">
+    <div class="container">
+      <p class="section-num">SECTION / 03</p>
+      <h2>会社から「損害賠償」と言われた場合の対応</h2>
+      <p>会社から損害賠償の話が出た場合、個別事情により対応方針が異なるため、早期に弁護士または労働組合・専門家への相談が選択肢となります。やり取りはメール・書面など記録が残る形で行うことが一般的に推奨されます。</p>
+      <p><strong>公的相談窓口:</strong></p>
+      <ul>
+        <li><a href="https://www.mhlw.go.jp/kouseiroudoushou/shozaiannai/roudoukyoku/" target="_blank" rel="noopener">労働基準監督署</a></li>
+        <li><a href="https://www.houterasu.or.jp/" target="_blank" rel="noopener">法テラス（日本司法支援センター）</a></li>
+        <li>各都道府県弁護士会・労働組合</li>
+      </ul>
+      <BannerAB pageSlug="damage-risk" position="footer" />
+    </div>
+  </section>
 
-  <!-- BreadcrumbList + Article schema (Round V Phase 2 [kzPklZSdFu] 2026-04-29) -->
-  <script type="application/ld+json" set:html={JSON.stringify({
-    "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    "itemListElement": [
-      { "@type": "ListItem", "position": 1, "name": "退職代行 総合ガイド Hub", "item": "https://taishoku-info.pages.dev/" },
-      { "@type": "ListItem", "position": 2, "name": "損害賠償リスクと対策" }
-    ]
-  })} />
-  <script type="application/ld+json" set:html={JSON.stringify({
-    "@context": "https://schema.org",
-    "@type": "Article",
-    "headline": "退職代行の損害賠償リスクと対策ガイド",
-    "datePublished": "2026-04-26",
-    "dateModified": "2026-04-29",
-    "author": { "@type": "Organization", "name": "NY-squared (個人事業)" },
-    "publisher": { "@type": "Organization", "name": "NY-squared" }
-  })} />
-</Layout>
+  <section class="lp-section" id="sec-4">
+    <div class="container">
+      <p class="section-num">SECTION / 04</p>
+      <h2>弁護士提携の業者を選ぶ理由</h2>
+      <p>損害賠償リスクが想定される退職ケース（在職中の重大過失・競業避止義務違反等）では、<strong>弁護士提携の退職代行業者</strong>を選ぶことが選択肢の一つとして挙げられます。</p>
+      <h3>業務範囲の違い（一般論）</h3>
+      <ul>
+        <li><strong>民間企業タイプ</strong>: 退職意思の伝達中心。会社からの損害賠償請求への対応は<strong>非弁行為に該当する可能性</strong>があるため対応できないとされています</li>
+        <li><strong>労働組合タイプ</strong>: 団体交渉権に基づく交渉は可能ですが、<strong>個別案件の損害賠償請求への対応は弁護士法上の制限</strong>があります</li>
+        <li><strong>弁護士タイプ</strong>: 弁護士法 72 条に基づき法律事務全般に対応可能。<strong>損害賠償請求の防御・反論・和解交渉</strong>等に対応</li>
+      </ul>
+      <p class="compare-note">※個別案件の判断は弁護士・労働組合・専門家にご相談ください。本記載は一般論であり、特定業者を推奨するものではありません。<a href="/">Hub の運営主体 3 タイプ比較表</a> も併せてご確認ください。</p>
+      <h3>📌 次のアクション 3 選</h3>
+      <div class="counter-box">
+        <div class="row"><b>① 弁護士に相談したい</b><span><a href="https://www.houterasu.or.jp/" target="_blank" rel="noopener">法テラス（日本司法支援センター）無料</a></span></div>
+        <div class="row"><b>② 弁護士提携の業者を選びたい</b><span><a href="/">Hub の運営主体 3 タイプ比較</a></span></div>
+        <div class="row"><b>③ 法的疑問を確認</b><span><a href="/faq/">FAQ Q21-25（民法627・弁護士法72等）</a></span></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-section alt" id="sec-faq">
+    <div class="container">
+      <p class="section-num">SECTION / 05</p>
+      <h2>よくある質問（FAQ）</h2>
+      <div class="faq">
+        {faq.map((item) => (
+          <details><summary>{item.q}</summary><div><p set:html={item.a} /></div></details>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-section" id="sec-summary">
+    <div class="container">
+      <p class="section-num">SECTION / 06</p>
+      <h2>まとめ・関連ページ</h2>
+      <p>退職代行と損害賠償については、通常の退職手続きに沿った退職であれば労働者が損害賠償を負うケースは限定的とされていますが、引継ぎ拒否・機密持ち出し・特約・予告期間違反・競業避止義務違反の5ケースは議論される傾向があります。個別案件は必ず弁護士・専門家にご相談ください。</p>
+      <p><strong>関連ページ</strong></p>
+      <ul>
+        <li><a href="/">退職代行 総合ガイド Hub</a></li>
+        <li><a href="/lp-a/">退職代行の仕組み・費用・選び方</a></li>
+        <li><a href="/unemployment-insurance/">失業保険ガイド</a></li>
+        <li><a href="/faq/">よくある質問FAQ 25問</a></li>
+      </ul>
+      <p style="font-size:13px;color:var(--c-text-mute,#6b7280);">🔒 <strong>個人情報・Cookie の取扱い</strong>: 本サイトは GA4・A8.net のアクセス解析・成果計測 Cookie を使用します。詳細・同意撤回方法は <a href="/privacy-policy/">プライバシーポリシー</a> をご確認ください。</p>
+      <PRBadge pageSlug="damage-risk" label="退職代行サービスの公式サイトで無料相談する（PR）" />
+    </div>
+  </section>
+
+  <section class="lp-section alt" id="sec-policy">
+    <div class="container">
+      <p class="section-num">SECTION / 07</p>
+      <h2>編集ポリシー (情報源・更新日・E-E-A-T)</h2>
+      <ul>
+        <li><strong>情報源</strong>: 政府公式 e-Gov 法令検索 (民法・労働基準法・弁護士法・不正競争防止法) ・厚生労働省公式サイト ・各退職代行業者公式サイト ・退職代行関連の公開統計情報</li>
+        <li><strong>編集方針</strong>: 一次情報優先 (法令は e-Gov 直接リンク・運営形態は公式サイト確認) ・断定表現を避け推定値・公開情報の整理として記述</li>
+        <li><strong>更新頻度</strong>: 月次レビュー (法令改正・サービス内容変更時は随時更新)</li>
+        <li><strong>運営者</strong>: NY-squared (個人事業) <a href="/operator-info/">運営情報ページ</a> 参照</li>
+        <li><strong>E-E-A-T 4 原則</strong>: Experience (退職代行関連の公開情報整理) ・Expertise (法令引用 + 業界公開統計) ・Authoritativeness (政府公式 + 業者公式の一次情報のみ) ・Trustworthiness (PR 表記 + 推定値明示 + 法的助言ではない注記)</li>
+      </ul>
+
+      <h2>出典・参考情報 (法令・公的機関・公開情報)</h2>
+      <ul>
+        <li><a href="https://elaws.e-gov.go.jp/document?lawid=129AC0000000089" target="_blank" rel="noopener">民法 e-Gov 法令検索</a></li>
+        <li><a href="https://elaws.e-gov.go.jp/document?lawid=322AC0000000049" target="_blank" rel="noopener">労働基準法 e-Gov 法令検索</a></li>
+        <li><a href="https://elaws.e-gov.go.jp/document?lawid=324AC0000000205" target="_blank" rel="noopener">弁護士法 e-Gov 法令検索（72条 法律事務の取扱い）</a></li>
+        <li><a href="https://elaws.e-gov.go.jp/document?lawid=405AC0000000047" target="_blank" rel="noopener">不正競争防止法 e-Gov</a></li>
+        <li><a href="https://www.mhlw.go.jp/" target="_blank" rel="noopener">厚生労働省</a></li>
+      </ul>
+      <p style="font-size:12px;color:var(--c-text-mute,#6b7280);margin-top:16px;">
+        ※本ページは2026-04-26時点の公開情報をもとに編集部が整理した参考記事です。<strong>法律事務所・退職代行業者公式サイトではなく、法的判断は必ず弁護士または専門家にご相談ください</strong>。本ページはアフィリエイト広告（PR）を含みます。
+      </p>
+    </div>
+  </section>
+</RichLayout>

@@ -1,5 +1,5 @@
 ---
-import Layout from '../../layouts/Layout.astro';
+import RichLayout from '../../layouts/RichLayout.astro';
 import PRBadge from '../../components/PRBadge.astro';
 import BannerAB from '../../components/BannerAB.astro';
 
@@ -7,9 +7,9 @@ const title = '退職代行で親にバレるか｜バレない仕組みと例�
 const description = '退職代行を使うと親にバレるか不安な方へ。個人情報保護法に基づく守秘義務と、バレうる例外パターン（緊急連絡先・社会保険・SNS）を整理した情報提供記事です（PR・アフィリエイト広告を含みます）。個別判断は弁護士・各業者へご相談ください。';
 
 const breadcrumb = [
-  { name: 'ホーム', url: 'https://taishoku-info.pages.dev/' },
-  { name: '退職代行', url: 'https://taishoku-info.pages.dev/' },
-  { name: '親バレ', url: 'https://taishoku-info.pages.dev/oyabare/' },
+  { name: 'ホーム', url: '/' },
+  { name: '退職代行', url: '/' },
+  { name: '親バレ' },
 ];
 
 const faq = [
@@ -19,215 +19,140 @@ const faq = [
 ];
 ---
 
-<Layout title={title} description={description} publishedDate="2026-05-02" modifiedDate="2026-05-02" breadcrumb={breadcrumb} faq={faq}>
-  <main class="max-w-3xl mx-auto px-4 py-8">
-    <PRBadge pageSlug="oyabare" />
-
-    <nav class="text-sm text-gray-500 mb-4">
-      <a href="/" class="underline">トップ</a> &gt; 退職代行と親バレについて
-    </nav>
-
-    <h1 class="text-2xl md:text-3xl font-bold mb-4 leading-tight">
-      退職代行で親にバレるか｜バレない仕組みと例外3パターンを整理
-    </h1>
-
-    <div class="bg-yellow-50 border-2 border-yellow-300 rounded p-3 mb-4 text-sm">
-      <strong>📢 PR表示</strong>: 本ページはアフィリエイト広告（PR）を含みます。本サイトは法律事務所・退職代行業者公式サイトではなく、公開情報を整理した一般論ベースの情報提供サイトです。本記事は法的助言・効果保証ではなく、個別案件の判断は<strong>必ず弁護士・各業者に直接ご相談ください</strong>。
+<RichLayout title={title} description={description} publishedDate="2026-05-02" modifiedDate="2026-05-18" breadcrumb={breadcrumb} faq={faq}>
+  <section class="fv" aria-labelledby="fv-h1">
+    <div class="container">
+      <span class="fv-pill">退職代行 / 親バレ回避</span>
+      <h1 id="fv-h1"><span class="accent">退職代行で親にバレるか</span><br />バレない仕組みと例外3パターンを整理</h1>
+      <p class="lede">退職代行を使っても、通常の利用範囲では親にバレないとされています。理由は、個人情報保護法に基づく守秘義務 + 業者が連絡するのは原則「会社のみ」だからです。ただし、緊急連絡先・社会保険手続き・SNS投稿の3つの例外パターンには注意が必要とされています。本記事では各パターンと対処法を整理します。</p>
+      <ul class="fv-bullets">
+        <li>親に連絡しない3つの理由(個人情報保護法)</li>
+        <li>親バレが起きうる例外3パターン</li>
+        <li>業者形態別の親バレリスク比較</li>
+        <li>親バレ回避の業者選び + 行動3ステップ</li>
+      </ul>
+      <PRBadge pageSlug="oyabare" />
+      <div class="fv-meta">
+        <span><b>公開日</b> 2026-05-02</span><span><b>最終更新</b> 2026-05-18</span>
+        <span><b>編集</b> NY-squared 編集部</span><span><b>所要</b> 約 6 分</span>
+      </div>
     </div>
+  </section>
 
-    <p class="text-sm text-gray-600 mb-6">
-      最終確認日: 2026-05-02 / 公開情報の整理であり、特定サービスを推奨するものではありません。<br />
-      運営者: <a href="/operator-info/" class="underline">NY-squared (個人事業)</a> /
-      <a href="/editorial-policy/" class="underline">編集ポリシー</a> /
-      <a href="/privacy-policy/" class="underline">プライバシーポリシー</a>
-    </p>
-
-    <section class="mb-6 bg-blue-50 border-l-4 border-blue-400 p-4 text-sm">
-      <p><strong>結論</strong>: 退職代行を使っても、通常の利用範囲では親にバレないとされています。理由は、個人情報保護法に基づく守秘義務 + 業者が連絡するのは原則「会社のみ」だからです。</p>
-      <p class="mt-2">ただし、緊急連絡先・社会保険手続き・SNS投稿の3つの例外パターンには注意が必要とされています。本記事では、各パターンと対処法を整理します。</p>
-    </section>
-
-    <BannerAB pageSlug="oyabare" position="hero" />
-
-    <h2 class="text-xl font-bold mt-8 mb-3">1. 退職代行が親に連絡しない3つの理由</h2>
-
-    <h3 class="text-lg font-bold mt-4 mb-2">1-1. 個人情報保護法の守秘義務</h3>
-    <p class="mb-3 text-sm">
-      退職代行業者は、依頼者の個人情報を業務目的以外で使用することが法律で禁止されています（<a href="https://elaws.e-gov.go.jp/document?lawid=415AC0000000057" target="_blank" rel="noopener" class="underline">個人情報保護法 第16条・第17条 e-Gov</a>）。家族への通知は業務目的外のため、依頼者本人の同意なしでは原則行われないとされています。
-    </p>
-
-    <h3 class="text-lg font-bold mt-4 mb-2">1-2. 業者が連絡する先は「会社のみ」</h3>
-    <p class="mb-3 text-sm">
-      退職代行業者の業務フローは「依頼者 → 業者 → 会社」の3点です。家族・第三者への連絡は業務範囲外であり、依頼時に明示的に依頼しない限り、業者から親へ連絡することはないとされています。
-    </p>
-
-    <h3 class="text-lg font-bold mt-4 mb-2">1-3. 弁護士・労組型は守秘義務がより厳格</h3>
-    <p class="mb-3 text-sm">
-      弁護士運営の退職代行では弁護士法による守秘義務（<a href="https://elaws.e-gov.go.jp/document?lawid=324AC0000000205" target="_blank" rel="noopener" class="underline">弁護士法 第23条</a>）、労働組合型では団結権に基づく組合員保護の枠組みが適用されるため、守秘義務がより厳格に運用される傾向があります。
-    </p>
-
-    <h2 class="text-xl font-bold mt-8 mb-3">2. 「親バレ」が起きうる例外パターン3つ</h2>
-
-    <h3 class="text-lg font-bold mt-4 mb-2">2-1. 緊急連絡先を親にしている場合</h3>
-    <p class="mb-3 text-sm">
-      会社の緊急連絡先に親の電話番号を登録している場合、会社側から親に連絡が行く可能性があります。退職代行依頼時に、業者へ「緊急連絡先の変更」を併せて依頼することが推奨されます。
-    </p>
-
-    <h3 class="text-lg font-bold mt-4 mb-2">2-2. 社会保険・扶養手続きで気づかれるケース</h3>
-    <p class="mb-3 text-sm">
-      親の扶養に入っている場合、退職に伴う社会保険切替で扶養者（親）に書類が届く可能性があります。事前にハローワーク・市区町村窓口で手続き方法を確認しておくと安心です。
-    </p>
-
-    <h3 class="text-lg font-bold mt-4 mb-2">2-3. SNS投稿・口コミで広まるパターン</h3>
-    <p class="mb-3 text-sm">
-      自身の SNS で退職代行利用を投稿すると、親の知人経由で間接的に広まるリスクがあります。退職代行利用中は SNS 投稿を控えるか、限定公開設定の確認を推奨します。
-    </p>
-
-    <h2 class="text-xl font-bold mt-8 mb-3">3. 親バレリスクを下げる業者選びのポイント</h2>
-
-    <ul class="list-disc pl-5 mb-4 text-sm space-y-2">
-      <li><strong>プライバシーポリシー</strong>を公式サイトで公開している業者を選ぶ (個人情報の取扱・第三者提供の記載を確認)</li>
-      <li><strong>弁護士運営</strong>または<strong>労働組合運営</strong>を優先 (守秘義務がより厳格)</li>
-      <li><strong>緊急連絡先変更対応</strong>に応じる業者を選ぶ (依頼前確認推奨)</li>
-    </ul>
-
-    <p class="text-xs text-gray-600 mb-6">※上記は一般論の整理です。個別案件の判断は弁護士・各業者にご相談ください。</p>
-
-    <BannerAB pageSlug="oyabare" position="middle" />
-
-    <!-- ★T-A26 [0yAVu8WAXu] 2026-05-07: Codex REVISE 24 構造的ピボット (★345 体現)・業者形態別比較表追加 -->
-    <h2 class="text-xl font-bold mt-8 mb-3">4. 業者形態別の親バレリスク比較</h2>
-    <p class="text-xs text-gray-600 mb-3">※公開情報の整理 (推定値含む)・データ更新日: 2026-05-07・最新情報は各公式サイトで必ずご確認ください</p>
-
-    <div class="overflow-x-auto mb-4">
-      <table class="border-collapse w-full text-xs sm:text-sm">
-        <thead>
-          <tr class="bg-gray-100">
-            <th class="border px-2 py-2 text-left">運営形態</th>
-            <th class="border px-2 py-2 text-left">守秘義務</th>
-            <th class="border px-2 py-2 text-center">親連絡なし</th>
-            <th class="border px-2 py-2 text-center">緊急時対応</th>
-            <th class="border px-2 py-2 text-left">親バレリスク傾向</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td class="border px-2 py-2 font-semibold">弁護士運営</td>
-            <td class="border px-2 py-2">弁護士法上厳格</td>
-            <td class="border px-2 py-2 text-center">◎</td>
-            <td class="border px-2 py-2 text-center">◎ 法的対応可</td>
-            <td class="border px-2 py-2">最低 (守秘義務違反は懲戒対象)</td>
-          </tr>
-          <tr>
-            <td class="border px-2 py-2 font-semibold">労働組合運営</td>
-            <td class="border px-2 py-2">組合員情報保護</td>
-            <td class="border px-2 py-2 text-center">◯</td>
-            <td class="border px-2 py-2 text-center">◯ 団体交渉可</td>
-            <td class="border px-2 py-2">低 (組合運営方針に依存)</td>
-          </tr>
-          <tr>
-            <td class="border px-2 py-2 font-semibold">民間運営 (弁護士監修)</td>
-            <td class="border px-2 py-2">プライバシーポリシー依存</td>
-            <td class="border px-2 py-2 text-center">◯</td>
-            <td class="border px-2 py-2 text-center">△ 監修体制経由</td>
-            <td class="border px-2 py-2">中 (公式 PP 確認推奨)</td>
-          </tr>
-          <tr>
-            <td class="border px-2 py-2 font-semibold">民間運営 (監修なし)</td>
-            <td class="border px-2 py-2">業者規約のみ</td>
-            <td class="border px-2 py-2 text-center">△</td>
-            <td class="border px-2 py-2 text-center">× 交渉権なし</td>
-            <td class="border px-2 py-2">高 (違法業者リスクあり・要選定注意)</td>
-          </tr>
-        </tbody>
-      </table>
+  <section class="lp-section" id="sec-1">
+    <div class="container">
+      <p class="section-num">SECTION / 01</p>
+      <h2>退職代行が親に連絡しない3つの理由</h2>
+      <h3>1-1. 個人情報保護法の守秘義務</h3>
+      <p>退職代行業者は、依頼者の個人情報を業務目的以外で使用することが法律で禁止されています（<a href="https://elaws.e-gov.go.jp/document?lawid=415AC0000000057" target="_blank" rel="noopener">個人情報保護法 第16条・第17条 e-Gov</a>）。家族への通知は業務目的外のため、依頼者本人の同意なしでは原則行われないとされています。</p>
+      <h3>1-2. 業者が連絡する先は「会社のみ」</h3>
+      <p>退職代行業者の業務フローは「依頼者 → 業者 → 会社」の3点です。家族・第三者への連絡は業務範囲外であり、依頼時に明示的に依頼しない限り、業者から親へ連絡することはないとされています。</p>
+      <h3>1-3. 弁護士・労組型は守秘義務がより厳格</h3>
+      <p>弁護士運営の退職代行では弁護士法による守秘義務（<a href="https://elaws.e-gov.go.jp/document?lawid=324AC0000000205" target="_blank" rel="noopener">弁護士法 第23条</a>）、労働組合型では団結権に基づく組合員保護の枠組みが適用されるため、守秘義務がより厳格に運用される傾向があります。</p>
+      <BannerAB pageSlug="oyabare" position="hero" />
     </div>
-    <p class="text-sm mb-4">
-      親バレリスクを下げたい場合は <strong>弁護士運営または労働組合運営</strong> を優先することが推奨されます。詳細な業者比較は <a href="/osusume-hikaku/" class="underline">退職代行 おすすめ比較</a> ページを参照ください。
-    </p>
+  </section>
 
-    <h2 class="text-xl font-bold mt-8 mb-3">5. よくある質問（FAQ）</h2>
+  <section class="lp-section alt" id="sec-2">
+    <div class="container">
+      <p class="section-num">SECTION / 02</p>
+      <h2>「親バレ」が起きうる例外パターン3つ</h2>
+      <div class="counter-box">
+        <h3>📌 親バレが起きうる例外3パターン</h3>
+        <div class="row"><b>2-1. 緊急連絡先を親にしている場合</b><span>会社の緊急連絡先に親の電話番号を登録している場合、会社側から親に連絡が行く可能性があります。退職代行依頼時に、業者へ「緊急連絡先の変更」を併せて依頼することが推奨されます。</span></div>
+        <div class="row"><b>2-2. 社会保険・扶養手続きで気づかれるケース</b><span>親の扶養に入っている場合、退職に伴う社会保険切替で扶養者（親）に書類が届く可能性があります。事前にハローワーク・市区町村窓口で手続き方法を確認しておくと安心です。</span></div>
+        <div class="row"><b>2-3. SNS投稿・口コミで広まるパターン</b><span>自身の SNS で退職代行利用を投稿すると、親の知人経由で間接的に広まるリスクがあります。退職代行利用中は SNS 投稿を控えるか、限定公開設定の確認を推奨します。</span></div>
+      </div>
+    </div>
+  </section>
 
-    <h3 class="text-lg font-bold mt-4 mb-2">Q1. 退職代行を使ったことは親にわかりますか？</h3>
-    <p class="mb-3 text-sm">
-      通常の利用範囲では、業者から親に連絡されることはないとされています。ただし、上記の例外パターン3つに該当する場合は、間接的に伝わる可能性があります。
-    </p>
+  <section class="lp-section" id="sec-3">
+    <div class="container">
+      <p class="section-num">SECTION / 03</p>
+      <h2>親バレリスクを下げる業者選びのポイント</h2>
+      <ul>
+        <li><strong>プライバシーポリシー</strong>を公式サイトで公開している業者を選ぶ (個人情報の取扱・第三者提供の記載を確認)</li>
+        <li><strong>弁護士運営</strong>または<strong>労働組合運営</strong>を優先 (守秘義務がより厳格)</li>
+        <li><strong>緊急連絡先変更対応</strong>に応じる業者を選ぶ (依頼前確認推奨)</li>
+      </ul>
+      <p class="compare-note">※上記は一般論の整理です。個別案件の判断は弁護士・各業者にご相談ください。</p>
+      <BannerAB pageSlug="oyabare" position="middle" />
+    </div>
+  </section>
 
-    <h3 class="text-lg font-bold mt-4 mb-2">Q2. 離職票や源泉徴収票が実家に届く場合は？</h3>
-    <p class="mb-3 text-sm">
-      送付先住所を会社に登録している場合は、退職時に住所変更を申請するか、会社へ直接送付先指定を依頼することで対処可能とされています。
-    </p>
+  <!-- ★T-A26 [0yAVu8WAXu] 業者形態別比較表 -->
+  <section class="lp-section alt" id="sec-4">
+    <div class="container">
+      <p class="section-num">SECTION / 04</p>
+      <h2>業者形態別の親バレリスク比較</h2>
+      <p class="compare-note">※公開情報の整理 (推定値含む)・データ更新日: 2026-05-07・最新情報は各公式サイトで必ずご確認ください</p>
+      <div class="compare-wrap">
+        <table class="compare">
+          <thead><tr><th>運営形態</th><th>守秘義務</th><th>親連絡なし</th><th>緊急時対応</th><th>親バレリスク傾向</th></tr></thead>
+          <tbody>
+            <tr><td><b>弁護士運営</b></td><td>弁護士法上厳格</td><td>◎</td><td>◎ 法的対応可</td><td>最低 (守秘義務違反は懲戒対象)</td></tr>
+            <tr><td><b>労働組合運営</b></td><td>組合員情報保護</td><td>◯</td><td>◯ 団体交渉可</td><td>低 (組合運営方針に依存)</td></tr>
+            <tr><td><b>民間運営 (弁護士監修)</b></td><td>プライバシーポリシー依存</td><td>◯</td><td>△ 監修体制経由</td><td>中 (公式 PP 確認推奨)</td></tr>
+            <tr><td><b>民間運営 (監修なし)</b></td><td>業者規約のみ</td><td>△</td><td>× 交渉権なし</td><td>高 (違法業者リスクあり・要選定注意)</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p>親バレリスクを下げたい場合は <strong>弁護士運営または労働組合運営</strong> を優先することが推奨されます。詳細な業者比較は <a href="/osusume-hikaku/">退職代行 おすすめ比較</a> ページを参照ください。</p>
+    </div>
+  </section>
 
-    <h3 class="text-lg font-bold mt-4 mb-2">Q3. 親が保証人になっている場合は影響する？</h3>
-    <p class="mb-3 text-sm">
-      雇用契約の保証人として親が登録されている場合、退職時に保証人通知が行く可能性があります。事前に雇用契約書を確認し、保証人記載の有無と退職時の通知ルールを業者の無料相談で確認することを推奨します。連帯保証人ではなく身元保証人の場合、通知不要のケースも多いとされています。
-    </p>
+  <section class="lp-section" id="sec-faq">
+    <div class="container">
+      <p class="section-num">SECTION / 05</p>
+      <h2>よくある質問（FAQ）</h2>
+      <div class="faq">
+        <details><summary>Q1. 退職代行を使ったことは親にわかりますか？</summary><div><p>通常の利用範囲では、業者から親に連絡されることはないとされています。ただし、上記の例外パターン3つに該当する場合は、間接的に伝わる可能性があります。</p></div></details>
+        <details><summary>Q2. 離職票や源泉徴収票が実家に届く場合は？</summary><div><p>送付先住所を会社に登録している場合は、退職時に住所変更を申請するか、会社へ直接送付先指定を依頼することで対処可能とされています。</p></div></details>
+        <details><summary>Q3. 親が保証人になっている場合は影響する？</summary><div><p>雇用契約の保証人として親が登録されている場合、退職時に保証人通知が行く可能性があります。事前に雇用契約書を確認し、保証人記載の有無と退職時の通知ルールを業者の無料相談で確認することを推奨します。連帯保証人ではなく身元保証人の場合、通知不要のケースも多いとされています。</p></div></details>
+        <details><summary>Q4. 実家暮らしの場合に親バレを防ぐ方法は？</summary><div><p>実家暮らしの場合は、① 退職代行依頼前に住民票上の住所を変更しておく (実家以外の住所登録) ② 退職に関する書類は職場宛に送付指定する ③ 業者からの連絡は LINE のみに限定する ④ 退職金や離職票の振込口座を自分名義のみに変更する、の 4 点が有効とされています。郵便物の管理が最も親バレリスクが高いポイントです。</p></div></details>
+        <details><summary>Q5. 親に連絡されないと約束する業者はありますか？</summary><div><p>多くの退職代行業者は契約上「会社のみへの連絡」を明記しており、親への連絡は通常行いません。ただし「絶対に親に連絡しない」と保証する業者は法的根拠 (緊急連絡先記載の場合等) との関係で誤解を招きやすいため、契約書面で「連絡先は会社のみ」と明記している業者を選ぶことが推奨されます。弁護士・労働組合運営は守秘義務がより厳格です。</p></div></details>
+        <details><summary>Q6. 親バレが起きた場合の対処法は？</summary><div><p>もし退職が親に判明した場合、① 退職代行を使った理由 (心身の限界・パワハラ等) を端的に説明する ② 自立した生活基盤 (転職活動状況・住居計画等) を併せて伝える ③ 一時的な動揺は避けられないため、感情的対立を避ける、の 3 点が一般的に推奨されます。退職そのものは民法 627 条で保証された権利であり、利用は法的に問題ありません。</p></div></details>
+        <details><summary>Q7. 親バレ回避のための業者の選び方は？</summary><div><p>親バレ回避の観点では、① <strong>守秘義務の厳格な弁護士運営または労働組合運営</strong> (民間業者よりリスク低) ② <strong>LINE のみで全完結する業者</strong> (電話連絡を実家にしない) ③ <strong>連絡先は会社のみと契約書面で明記する業者</strong> ④ <strong>緊急連絡先の取扱方針が明確な業者</strong> の 4 条件で絞り込むことが推奨されます。詳細は <a href="/osusume-hikaku/">5 社比較ページ</a> で運営形態別の特徴を確認できます。</p></div></details>
+        <details><summary>Q8. 親に正直に話すか・隠すか、どちらがよいですか？</summary><div><p>最終的にはご自身の判断ですが、一般的には ① <strong>親との関係性が良好</strong>な場合は事前相談・事後説明が将来的な信頼維持に有効 ② <strong>関係性が複雑・心理的負担が大きい</strong>場合は退職完了後に状況が安定してから説明、という分岐が選ばれることが多いとされています。退職代行の利用そのものは法的に問題ない正当な権利行使です。</p></div></details>
+      </div>
+    </div>
+  </section>
 
-    <h3 class="text-lg font-bold mt-4 mb-2">Q4. 実家暮らしの場合に親バレを防ぐ方法は？</h3>
-    <p class="mb-3 text-sm">
-      実家暮らしの場合は、① 退職代行依頼前に住民票上の住所を変更しておく (実家以外の住所登録) ② 退職に関する書類は職場宛に送付指定する ③ 業者からの連絡は LINE のみに限定する ④ 退職金や離職票の振込口座を自分名義のみに変更する、の 4 点が有効とされています。郵便物の管理が最も親バレリスクが高いポイントです。
-    </p>
+  <section class="lp-section alt" id="sec-summary">
+    <div class="container">
+      <p class="section-num">SECTION / 06</p>
+      <h2>まとめ</h2>
+      <p>退職代行で親バレを完全に防ぐには、①守秘義務の厳格な業者選び (弁護士・労働組合運営) ②緊急連絡先の事前変更 ③SNS 投稿の慎重さ ④郵便物・書類の送付先指定 (実家以外) の 4 点が重要とされています。</p>
+      <p><strong>状況別の親バレリスク優先順位</strong>: ① <strong>実家暮らし</strong> → 郵便物管理が最重要 (Q4 参照) ② <strong>緊急連絡先が親</strong> → 退職前に変更必須 ③ <strong>親が保証人</strong> → 雇用契約書確認 + 業者相談 (Q3 参照) ④ <strong>SNS 利用頻度高</strong> → 退職前後 1 ヶ月の投稿控え。状況に応じて優先度を判断することが推奨されます。</p>
+      <p><strong>親バレ回避の行動 3 ステップ</strong>: <strong>STEP 1</strong> 自分の状況確認 (実家暮らし/緊急連絡先/保証人/SNS 利用) → <strong>STEP 2</strong> リスクに応じて事前準備 (連絡先変更・送付先指定・SNS 注意) → <strong>STEP 3</strong> <a href="/osusume-hikaku/">5 社比較ページ</a> で守秘義務厳格な業者を選び、無料相談で連絡方針を確認。</p>
+      <p style="font-size:13px;color:var(--c-text-mute,#6b7280);">※即日対応は <a href="/touji/">即日・当日対応ページ</a> ・有給消化は <a href="/yukyu-shouka/">有給消化ページ</a> ・失敗例は <a href="/shippai/">失敗例ページ</a> もあわせてご参照ください。本記事は法的助言ではなく、特定業者を推奨するものでもありません。</p>
+      <PRBadge pageSlug="oyabare" label="退職代行サービスの公式サイトで無料相談する（PR）" />
+    </div>
+  </section>
 
-    <h3 class="text-lg font-bold mt-4 mb-2">Q5. 親に連絡されないと約束する業者はありますか？</h3>
-    <p class="mb-3 text-sm">
-      多くの退職代行業者は契約上「会社のみへの連絡」を明記しており、親への連絡は通常行いません。ただし「絶対に親に連絡しない」と保証する業者は法的根拠 (緊急連絡先記載の場合等) との関係で誤解を招きやすいため、契約書面で「連絡先は会社のみ」と明記している業者を選ぶことが推奨されます。弁護士・労働組合運営は守秘義務がより厳格です。
-    </p>
+  <section class="lp-section" id="sec-policy">
+    <div class="container">
+      <p class="section-num">SECTION / 07</p>
+      <h2>編集ポリシー (情報源・更新日・E-E-A-T)</h2>
+      <ul>
+        <li><strong>情報源</strong>: 政府公式 e-Gov 法令検索 (個人情報保護法・弁護士法・民法) ・厚生労働省公式サイト ・各退職代行業者公式サイト ・退職代行関連の公開統計情報</li>
+        <li><strong>編集方針</strong>: 一次情報優先 (法令は e-Gov 直接リンク・親バレリスクは公開事例の整理) ・断定表現を避け推定値・公開情報の整理として記述</li>
+        <li><strong>更新頻度</strong>: 月次レビュー (法令改正・サービス内容変更時は随時更新)</li>
+        <li><strong>運営者</strong>: NY-squared (個人事業) <a href="/operator-info/">運営情報ページ</a> 参照</li>
+        <li><strong>E-E-A-T 4 原則</strong>: Experience (退職代行関連の公開情報整理) ・Expertise (法令引用 + 業界公開統計) ・Authoritativeness (政府公式 + 業者公式の一次情報のみ) ・Trustworthiness (PR 表記 + 推定値明示 + 法的助言ではない注記)</li>
+      </ul>
 
-    <h3 class="text-lg font-bold mt-4 mb-2">Q6. 親バレが起きた場合の対処法は？</h3>
-    <p class="mb-3 text-sm">
-      もし退職が親に判明した場合、① 退職代行を使った理由 (心身の限界・パワハラ等) を端的に説明する ② 自立した生活基盤 (転職活動状況・住居計画等) を併せて伝える ③ 一時的な動揺は避けられないため、感情的対立を避ける、の 3 点が一般的に推奨されます。退職そのものは民法 627 条で保証された権利であり、利用は法的に問題ありません。
-    </p>
-
-    <h3 class="text-lg font-bold mt-4 mb-2">Q7. 親バレ回避のための業者の選び方は？</h3>
-    <p class="mb-3 text-sm">
-      親バレ回避の観点では、① <strong>守秘義務の厳格な弁護士運営または労働組合運営</strong> (民間業者よりリスク低) ② <strong>LINE のみで全完結する業者</strong> (電話連絡を実家にしない) ③ <strong>連絡先は会社のみと契約書面で明記する業者</strong> ④ <strong>緊急連絡先の取扱方針が明確な業者</strong> の 4 条件で絞り込むことが推奨されます。詳細は <a href="/osusume-hikaku/" class="underline">5 社比較ページ</a> で運営形態別の特徴を確認できます。
-    </p>
-
-    <h3 class="text-lg font-bold mt-4 mb-2">Q8. 親に正直に話すか・隠すか、どちらがよいですか？</h3>
-    <p class="mb-3 text-sm">
-      最終的にはご自身の判断ですが、一般的には ① <strong>親との関係性が良好</strong>な場合は事前相談・事後説明が将来的な信頼維持に有効 ② <strong>関係性が複雑・心理的負担が大きい</strong>場合は退職完了後に状況が安定してから説明、という分岐が選ばれることが多いとされています。退職代行の利用そのものは法的に問題ない正当な権利行使です。
-    </p>
-
-    <section class="mt-8 mb-6 bg-gray-50 border border-gray-200 rounded p-4 text-sm">
-      <h2 class="text-lg font-bold mb-2">まとめ</h2>
-      <p class="mb-3">
-        退職代行で親バレを完全に防ぐには、①守秘義務の厳格な業者選び (弁護士・労働組合運営) ②緊急連絡先の事前変更 ③SNS 投稿の慎重さ ④郵便物・書類の送付先指定 (実家以外) の 4 点が重要とされています。
-      </p>
-      <p class="mb-3">
-        <strong>状況別の親バレリスク優先順位</strong>: ① <strong>実家暮らし</strong> → 郵便物管理が最重要 (Q4 参照) ② <strong>緊急連絡先が親</strong> → 退職前に変更必須 ③ <strong>親が保証人</strong> → 雇用契約書確認 + 業者相談 (Q3 参照) ④ <strong>SNS 利用頻度高</strong> → 退職前後 1 ヶ月の投稿控え。状況に応じて優先度を判断することが推奨されます。
-      </p>
-      <p class="mb-3">
-        <strong>親バレ回避の行動 3 ステップ</strong>: <strong>STEP 1</strong> 自分の状況確認 (実家暮らし/緊急連絡先/保証人/SNS 利用) → <strong>STEP 2</strong> リスクに応じて事前準備 (連絡先変更・送付先指定・SNS 注意) → <strong>STEP 3</strong> <a href="/osusume-hikaku/" class="underline">5 社比較ページ</a> で守秘義務厳格な業者を選び、無料相談で連絡方針を確認。
-      </p>
-      <p class="text-xs text-gray-600">
-        ※即日対応は <a href="/touji/" class="underline">即日・当日対応ページ</a> ・有給消化は <a href="/yukyu-shouka/" class="underline">有給消化ページ</a> ・失敗例は <a href="/shippai/" class="underline">失敗例ページ</a> もあわせてご参照ください。本記事は法的助言ではなく、特定業者を推奨するものでもありません。
-      </p>
-    </section>
-
-    <h2 class="text-xl font-bold mt-8 mb-3">編集ポリシー (情報源・更新日・E-E-A-T)</h2>
-    <ul class="list-disc pl-5 mb-4 text-sm space-y-2">
-      <li><strong>情報源</strong>: 政府公式 e-Gov 法令検索 (個人情報保護法・弁護士法・民法) ・厚生労働省公式サイト ・各退職代行業者公式サイト ・退職代行関連の公開統計情報</li>
-      <li><strong>編集方針</strong>: 一次情報優先 (法令は e-Gov 直接リンク・親バレリスクは公開事例の整理) ・断定表現を避け推定値・公開情報の整理として記述</li>
-      <li><strong>更新頻度</strong>: 月次レビュー (法令改正・サービス内容変更時は随時更新)</li>
-      <li><strong>運営者</strong>: NY-squared (個人事業) <a href="/operator-info/" class="underline">運営情報ページ</a> 参照</li>
-      <li><strong>E-E-A-T 4 原則</strong>: Experience (退職代行関連の公開情報整理) ・Expertise (法令引用 + 業界公開統計) ・Authoritativeness (政府公式 + 業者公式の一次情報のみ) ・Trustworthiness (PR 表記 + 推定値明示 + 法的助言ではない注記)</li>
-    </ul>
-
-    <h2 class="text-xl font-bold mt-8 mb-3">出典・参考情報 (法令・公的機関・公開情報)</h2>
-    <p class="mb-3 text-sm">
-      本記事の信頼性確保のため、以下の一次情報を出典として参照しています。法令引用は政府公式 e-Gov 法令検索データベースから直接リンク、公的機関情報は各省庁公式サイトのみを採用しています。
-    </p>
-    <ul class="list-disc pl-5 mb-4 text-sm space-y-2">
-      <li><a href="https://elaws.e-gov.go.jp/document?lawid=415AC0000000057" target="_blank" rel="noopener" class="underline">個人情報保護法 第 16 条・第 17 条 (e-Gov)</a> — 個人情報の利用目的の特定・制限・本記事の業者守秘義務の根拠</li>
-      <li><a href="https://elaws.e-gov.go.jp/document?lawid=324AC0000000205" target="_blank" rel="noopener" class="underline">弁護士法 第 23 条 (守秘義務・e-Gov)</a> — 弁護士の守秘義務 (民間業者より厳格)</li>
-      <li><a href="https://elaws.e-gov.go.jp/document?lawid=129AC0000000089" target="_blank" rel="noopener" class="underline">民法 第 627 条 (退職の自由・e-Gov)</a> — 期間の定めのない雇用契約の解約権</li>
-      <li><a href="https://www.mhlw.go.jp/" target="_blank" rel="noopener" class="underline">厚生労働省公式サイト</a> — 労働相談窓口・労働基準監督署情報</li>
-      <li><a href="https://www.houterasu.or.jp/" target="_blank" rel="noopener" class="underline">法テラス (日本司法支援センター)</a> — 無料法律相談・退職トラブル相談窓口</li>
-      <li>各退職代行業者公式サイト — 守秘義務方針・連絡先取扱方針の一次情報</li>
-    </ul>
-
-    <p class="text-xs text-gray-600 mt-6">
-      ※本記事は 2026 年 5 月時点の公開情報をもとに作成。最新の法令・サービス内容は各公式サイトでご確認ください。各社の正式名・公式 URL・特商法表記等は提携承認後に順次反映します (PR・アフィリエイト広告を含みます)。本記事は法的助言・効果保証ではなく、特定業者を推奨するものでもありません。具体的な利用判断は無料相談などを活用し、複数業者を比較した上でご自身の責任において選択してください。
-    </p>
-  </main>
-</Layout>
+      <h2>出典・参考情報 (法令・公的機関・公開情報)</h2>
+      <p>本記事の信頼性確保のため、以下の一次情報を出典として参照しています。法令引用は政府公式 e-Gov 法令検索データベースから直接リンク、公的機関情報は各省庁公式サイトのみを採用しています。</p>
+      <ul>
+        <li><a href="https://elaws.e-gov.go.jp/document?lawid=415AC0000000057" target="_blank" rel="noopener">個人情報保護法 第 16 条・第 17 条 (e-Gov)</a> — 個人情報の利用目的の特定・制限・本記事の業者守秘義務の根拠</li>
+        <li><a href="https://elaws.e-gov.go.jp/document?lawid=324AC0000000205" target="_blank" rel="noopener">弁護士法 第 23 条 (守秘義務・e-Gov)</a> — 弁護士の守秘義務 (民間業者より厳格)</li>
+        <li><a href="https://elaws.e-gov.go.jp/document?lawid=129AC0000000089" target="_blank" rel="noopener">民法 第 627 条 (退職の自由・e-Gov)</a> — 期間の定めのない雇用契約の解約権</li>
+        <li><a href="https://www.mhlw.go.jp/" target="_blank" rel="noopener">厚生労働省公式サイト</a> — 労働相談窓口・労働基準監督署情報</li>
+        <li><a href="https://www.houterasu.or.jp/" target="_blank" rel="noopener">法テラス (日本司法支援センター)</a> — 無料法律相談・退職トラブル相談窓口</li>
+        <li>各退職代行業者公式サイト — 守秘義務方針・連絡先取扱方針の一次情報</li>
+      </ul>
+      <p style="font-size:12px;color:var(--c-text-mute,#6b7280);margin-top:16px;">※本記事は 2026 年 5 月時点の公開情報をもとに作成。最新の法令・サービス内容は各公式サイトでご確認ください。各社の正式名・公式 URL・特商法表記等は提携承認後に順次反映します (PR・アフィリエイト広告を含みます)。本記事は法的助言・効果保証ではなく、特定業者を推奨するものでもありません。具体的な利用判断は無料相談などを活用し、複数業者を比較した上でご自身の責任において選択してください。</p>
+    </div>
+  </section>
+</RichLayout>

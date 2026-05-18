@@ -1,5 +1,5 @@
 ---
-import Layout from '../../layouts/Layout.astro';
+import RichLayout from '../../layouts/RichLayout.astro';
 import PRBadge from '../../components/PRBadge.astro';
 import BannerAB from '../../components/BannerAB.astro';
 
@@ -7,9 +7,9 @@ const title = '退職代行で有給消化はできる？残日数を全消化�
 const description = '退職代行を使って有給休暇を全日数消化したい方へ。労働基準法第39条の権利・業者形態別の交渉力比較・STEP 5段階の利用フロー・確実消化のための業者選び3条件を公開情報ベースで整理した情報提供記事です（PR・アフィリエイト広告を含みます）。個別判断は弁護士・各業者へご相談ください。';
 
 const breadcrumb = [
-  { name: 'ホーム', url: 'https://taishoku-info.pages.dev/' },
-  { name: '退職代行', url: 'https://taishoku-info.pages.dev/' },
-  { name: '有給消化', url: 'https://taishoku-info.pages.dev/yukyu-shouka/' },
+  { name: 'ホーム', url: '/' },
+  { name: '退職代行', url: '/' },
+  { name: '有給消化' },
 ];
 
 const faq = [
@@ -18,243 +18,165 @@ const faq = [
   { q: '会社が拒否したらどうなりますか?', a: '労働基準法上、会社は有給取得を「時季変更権」でしか拒否できないとされており、退職時は時季変更権の行使範囲が限定されると判例で示されています。実質的に拒否の余地は限られるとされています。' },
   { q: '有給消化中は給与は出ますか?', a: '労働基準法上、有給休暇は給与支払対象です。会社が支払を拒否した場合は労働基準監督署への相談が可能とされています。' },
   { q: '残有給日数はどう確認しますか?', a: '給与明細・勤怠管理システム・人事部門への問合せで確認可能です。退職代行業者への申し込み時に正確な日数を申告することが重要です。' },
-  { q: '即日対応と有給消化は両立しますか?', a: '可能です。即日対応で会社に退職意思を伝達し、退職日まで有給消化期間を設定する流れが一般的です。詳細は <a href="/touji/" class="underline">即日・当日対応ページ</a> を参照ください。' },
+  { q: '即日対応と有給消化は両立しますか?', a: '可能です。即日対応で会社に退職意思を伝達し、退職日まで有給消化期間を設定する流れが一般的です。詳細は <a href="/touji/">即日・当日対応ページ</a> を参照ください。' },
   { q: '弁護士・労働組合・民間で料金はどう違いますか?', a: '弁護士運営 3〜6万円・労働組合運営 2〜3万円・民間運営 1〜3万円が相場とされています。有給消化交渉なら労組・弁護士運営が推奨されます。' },
   { q: '有給消化拒否時に労基署に相談できますか?', a: '可能です。労働基準法違反として労働基準監督署への申告が選択肢としてあります。但し申告は本人が行う必要があり、退職代行業者の業務範囲外です。' },
 ];
 ---
 
-<Layout title={title} description={description} publishedDate="2026-05-06" modifiedDate="2026-05-06" breadcrumb={breadcrumb} faq={faq}>
-  <main class="max-w-3xl mx-auto px-4 py-8">
-    <PRBadge pageSlug="yukyu-shouka" />
-
-    <nav class="text-sm text-gray-500 mb-4">
-      <a href="/" class="underline">トップ</a> &gt; 退職代行で有給消化
-    </nav>
-
-    <h1 class="text-2xl md:text-3xl font-bold mb-4 leading-tight" style="color: #1E3A8A;">
-      退職代行で有給消化はできる？残日数を全消化して辞める方法を徹底解説
-    </h1>
-
-    <div class="bg-yellow-50 border-2 border-yellow-300 rounded p-3 mb-4 text-sm">
-      <strong>📢 PR表示</strong>: 本ページはアフィリエイト広告（PR）を含みます。本サイトは法律事務所・退職代行業者公式サイトではなく、公開情報を整理した一般論ベースの情報提供サイトです。本記事は法的助言・効果保証ではなく、個別案件の判断は<strong>必ず弁護士・各業者にご相談ください</strong>。
+<RichLayout title={title} description={description} publishedDate="2026-05-06" modifiedDate="2026-05-18" breadcrumb={breadcrumb} faq={faq}>
+  <section class="fv" aria-labelledby="fv-h1">
+    <div class="container">
+      <span class="fv-pill">退職代行 / 有給消化</span>
+      <h1 id="fv-h1"><span class="accent">退職代行で有給消化はできる？</span><br />残日数を全消化して辞める方法を徹底解説</h1>
+      <p class="lede">退職代行を使っても有給消化は可能です。労働基準法第39条で保障された労働者の権利であり、業者が代わりに「退職の意思表示 + 有給消化申請」を会社へ同時通知することで、退職前に残日数を全て消化できる流れが一般的です。確実な消化のためには業者形態 (弁護士・労働組合・民間) の交渉力差を理解し、適切な業者を選ぶことが重要です。</p>
+      <ul class="fv-bullets">
+        <li>有給消化の法的根拠(労基法39条)</li>
+        <li>業者形態別の交渉力比較</li>
+        <li>有給消化フロー STEP 5段階</li>
+        <li>確実消化の業者選び3条件 + 経済価値目安</li>
+      </ul>
+      <PRBadge pageSlug="yukyu-shouka" />
+      <div class="fv-meta">
+        <span><b>公開日</b> 2026-05-06</span><span><b>最終更新</b> 2026-05-18</span>
+        <span><b>編集</b> NY-squared 編集部</span><span><b>所要</b> 約 7 分</span>
+      </div>
     </div>
+  </section>
 
-    <p class="text-sm text-gray-600 mb-6">
-      最終確認日: 2026-05-06 / 公開情報の整理であり、特定サービスを推奨するものではありません。<br />
-      運営者: <a href="/operator-info/" class="underline">NY-squared (個人事業)</a> /
-      <a href="/editorial-policy/" class="underline">編集ポリシー</a> /
-      <a href="/privacy-policy/" class="underline">プライバシーポリシー</a>
-    </p>
-
-    <section class="mb-6 bg-blue-50 border-l-4 border-blue-400 p-4 text-sm">
-      <p><strong>結論</strong>: 退職代行を使っても有給消化は可能です。労働基準法第39条で保障された労働者の権利であり、業者が代わりに「退職の意思表示 + 有給消化申請」を会社へ同時通知することで、退職前に残日数を全て消化できる流れが一般的です。</p>
-      <p class="mt-2">ただし、確実な消化のためには<strong>業者形態 (弁護士・労働組合・民間)</strong> の交渉力差を理解し、適切な業者を選ぶことが重要です。本記事では業者形態別の比較・利用フロー (STEP 5 段階)・業者選び3条件を整理します。</p>
-    </section>
-
-    <BannerAB pageSlug="yukyu-shouka" position="hero" />
-
-    <h2 class="text-xl font-bold mt-8 mb-3" style="color: #1E3A8A;">1. 有給消化は「権利として」できる (法的根拠)</h2>
-    <p class="mb-3 text-sm">
-      有給休暇の取得は、<a href="https://elaws.e-gov.go.jp/document?lawid=322AC0000000049" target="_blank" rel="noopener" class="underline">労働基準法第39条</a> で保障された労働者の権利です。会社が正当な理由なく有給取得を拒否することは、同法違反となります。
-    </p>
-    <p class="mb-3 text-sm">
-      退職代行を利用する場合でも、この権利は失われません。業者は本人に代わって次の 2 点を会社へ同時に通知します:
-    </p>
-    <ul class="list-disc pl-5 mb-4 text-sm space-y-1">
-      <li><strong>退職の意思表示</strong>: 〇月〇日をもって退職したい旨の通知</li>
-      <li><strong>有給消化の申請</strong>: 退職日まで残有給日数を全て消化する旨の申請</li>
-    </ul>
-    <p class="mb-3 text-sm">
-      この通知を受けた会社は、原則として有給消化を認める義務があります。「時季変更権」(会社が有給取得時季を変更できる権利) は、退職前には行使できないことが判例で確立されており、拒否の余地は限定的とされています。
-    </p>
-
-    <h2 class="text-xl font-bold mt-8 mb-3" style="color: #1E3A8A;">2. 業者形態別の交渉力比較</h2>
-    <p class="text-sm mb-3">対応できる範囲は業者の種類によって異なります。確実な有給消化を希望する場合、業者形態の選択が決定的です。</p>
-
-    <!-- ★T-A13 [0yAVu8WAXu] 2026-05-07: Codex review REVISE 58 主要指摘反映・比較軸 4→6 拡張 -->
-    <div class="overflow-x-auto mb-4">
-      <table class="border-collapse w-full text-xs sm:text-sm">
-        <thead>
-          <tr class="bg-gray-100">
-            <th class="border px-2 py-2 text-left">業者タイプ</th>
-            <th class="border px-2 py-2 text-left">交渉力</th>
-            <th class="border px-2 py-2 text-left">有給拒否時対応</th>
-            <th class="border px-2 py-2 text-left">料金 (推定)</th>
-            <th class="border px-2 py-2 text-center">即日対応</th>
-            <th class="border px-2 py-2 text-center">返金保証</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td class="border px-2 py-2"><strong>弁護士運営</strong></td>
-            <td class="border px-2 py-2">◎ 最高</td>
-            <td class="border px-2 py-2">法的措置 (損害賠償請求等) まで対応可</td>
-            <td class="border px-2 py-2 whitespace-nowrap">3〜6 万円</td>
-            <td class="border px-2 py-2 text-center">◯</td>
-            <td class="border px-2 py-2 text-center">◯</td>
-          </tr>
-          <tr>
-            <td class="border px-2 py-2"><strong>労働組合運営</strong></td>
-            <td class="border px-2 py-2">◯ 高い</td>
-            <td class="border px-2 py-2">団体交渉権で会社に圧力をかけられる</td>
-            <td class="border px-2 py-2 whitespace-nowrap">2〜3 万円</td>
-            <td class="border px-2 py-2 text-center">◯</td>
-            <td class="border px-2 py-2 text-center">◯</td>
-          </tr>
-          <tr>
-            <td class="border px-2 py-2">民間運営 (弁護士監修)</td>
-            <td class="border px-2 py-2">△ 限定</td>
-            <td class="border px-2 py-2">「伝達」+ 監修体制経由・交渉権なし</td>
-            <td class="border px-2 py-2 whitespace-nowrap">2〜2.5 万円</td>
-            <td class="border px-2 py-2 text-center">◯</td>
-            <td class="border px-2 py-2 text-center">△</td>
-          </tr>
-          <tr>
-            <td class="border px-2 py-2">民間運営 (監修なし)</td>
-            <td class="border px-2 py-2">× 弱い</td>
-            <td class="border px-2 py-2">「伝達」のみ・拒否時の交渉は困難・非弁行為リスク</td>
-            <td class="border px-2 py-2 whitespace-nowrap">1〜2 万円</td>
-            <td class="border px-2 py-2 text-center">△</td>
-            <td class="border px-2 py-2 text-center">×</td>
-          </tr>
-        </tbody>
-      </table>
+  <section class="lp-section" id="sec-1">
+    <div class="container">
+      <p class="section-num">SECTION / 01</p>
+      <h2>有給消化は「権利として」できる (法的根拠)</h2>
+      <p>有給休暇の取得は、<a href="https://elaws.e-gov.go.jp/document?lawid=322AC0000000049" target="_blank" rel="noopener">労働基準法第39条</a> で保障された労働者の権利です。会社が正当な理由なく有給取得を拒否することは、同法違反となります。退職代行を利用する場合でも、この権利は失われません。業者は本人に代わって次の 2 点を会社へ同時に通知します:</p>
+      <ul>
+        <li><strong>退職の意思表示</strong>: 〇月〇日をもって退職したい旨の通知</li>
+        <li><strong>有給消化の申請</strong>: 退職日まで残有給日数を全て消化する旨の申請</li>
+      </ul>
+      <p>この通知を受けた会社は、原則として有給消化を認める義務があります。「時季変更権」(会社が有給取得時季を変更できる権利) は、退職前には行使できないことが判例で確立されており、拒否の余地は限定的とされています。</p>
+      <BannerAB pageSlug="yukyu-shouka" position="hero" />
     </div>
-    <p class="text-xs text-gray-600 mb-2">※公開情報の整理 (推定値含む)・データ更新日: 2026-05-07・最新情報は各公式サイトで必ずご確認ください</p>
-    <p class="text-sm mb-3">
-      有給消化を確実にしたい場合は、<strong>労働組合型または弁護士型</strong>を選ぶことが重要です。詳細な業者比較は <a href="/osusume-hikaku/" class="underline">退職代行 おすすめ比較</a> ページを参照ください。
-    </p>
+  </section>
 
-    <h2 class="text-xl font-bold mt-8 mb-3" style="color: #1E3A8A;">3. 退職代行での有給消化フロー (STEP 5 段階)</h2>
-
-    <h3 class="text-lg font-bold mt-4 mb-2">STEP 1: 業者への申込 (依頼当日)</h3>
-    <p class="mb-3 text-sm">LINE または Web フォームから申込。このとき<strong>有給残日数を必ず申告</strong>してください。業者はこの情報をもとに退職日を設定します。</p>
-
-    <h3 class="text-lg font-bold mt-4 mb-2">STEP 2: 料金支払 (即日・クレジットカード対応可)</h3>
-    <p class="mb-3 text-sm">多くのサービスがクレカ決済に対応・依頼当日に手続完了が一般的です。</p>
-
-    <h3 class="text-lg font-bold mt-4 mb-2">STEP 3: 業者から会社へ通知 (当日中)</h3>
-    <p class="mb-3 text-sm">業者が会社の担当部署 (人事・上司) へ電話またはメールで連絡。<strong>退職意思 + 有給消化申請を同時に伝達</strong>します。</p>
-
-    <h3 class="text-lg font-bold mt-4 mb-2">STEP 4: 有給消化期間 (自宅待機)</h3>
-    <p class="mb-3 text-sm">通知後、退職日まで有給扱いで自宅待機が続きます。この期間中も通常通り給与が支払われるとされています。</p>
-
-    <h3 class="text-lg font-bold mt-4 mb-2">STEP 5: 退職完了・書類受取</h3>
-    <p class="mb-3 text-sm">退職日を迎えると退職完了。離職票・源泉徴収票等の書類は郵送で受け取れる流れが一般的です。</p>
-
-    <h2 class="text-xl font-bold mt-8 mb-3" style="color: #1E3A8A;">3.5 有給消化の経済的価値の目安 (参考例)</h2>
-    <p class="mb-3 text-sm">
-      有給消化は労働者の権利の一つで、退職前の活用は転職活動や休養の機会として一般的に推奨される傾向にあります。<a href="https://www.mhlw.go.jp/stf/seisakunitsuite/bunya/koyou_roudou/roudoukijun/jikan/yuukyuukyuuka/index.html" target="_blank" rel="noopener" class="underline">厚生労働省「年次有給休暇取得促進」</a> でも有給消化率の向上が推進されており、退職時の権利行使は法令で保障されているとされています。
-    </p>
-    <div class="overflow-x-auto mb-4">
-      <table class="border-collapse w-full text-sm">
-        <thead>
-          <tr class="bg-gray-100">
-            <th class="border px-3 py-2 text-left">月給目安</th>
-            <th class="border px-3 py-2 text-right">日給換算 (参考)</th>
-            <th class="border px-3 py-2 text-right">10 日消化</th>
-            <th class="border px-3 py-2 text-right">20 日消化</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr><td class="border px-3 py-2">25 万円</td><td class="border px-3 py-2 text-right">約 11,400 円</td><td class="border px-3 py-2 text-right">約 11.4 万円</td><td class="border px-3 py-2 text-right">約 22.8 万円</td></tr>
-          <tr><td class="border px-3 py-2">35 万円</td><td class="border px-3 py-2 text-right">約 15,900 円</td><td class="border px-3 py-2 text-right">約 15.9 万円</td><td class="border px-3 py-2 text-right">約 31.8 万円</td></tr>
-          <tr><td class="border px-3 py-2">50 万円</td><td class="border px-3 py-2 text-right">約 22,700 円</td><td class="border px-3 py-2 text-right">約 22.7 万円</td><td class="border px-3 py-2 text-right">約 45.5 万円</td></tr>
-        </tbody>
-      </table>
+  <!-- ★T-A13 [0yAVu8WAXu] 比較軸 4→6 拡張 -->
+  <section class="lp-section alt" id="sec-2">
+    <div class="container">
+      <p class="section-num">SECTION / 02</p>
+      <h2>業者形態別の交渉力比較</h2>
+      <p class="section-lede">対応できる範囲は業者の種類によって異なります。確実な有給消化を希望する場合、業者形態の選択が決定的です。</p>
+      <div class="compare-wrap">
+        <table class="compare">
+          <thead><tr><th>業者タイプ</th><th>交渉力</th><th>有給拒否時対応</th><th>料金 (推定)</th><th>即日対応</th><th>返金保証</th></tr></thead>
+          <tbody>
+            <tr><td><strong>弁護士運営</strong></td><td>◎ 最高</td><td>法的措置 (損害賠償請求等) まで対応可</td><td>3〜6 万円</td><td>◯</td><td>◯</td></tr>
+            <tr><td><strong>労働組合運営</strong></td><td>◯ 高い</td><td>団体交渉権で会社に圧力をかけられる</td><td>2〜3 万円</td><td>◯</td><td>◯</td></tr>
+            <tr><td>民間運営 (弁護士監修)</td><td>△ 限定</td><td>「伝達」+ 監修体制経由・交渉権なし</td><td>2〜2.5 万円</td><td>◯</td><td>△</td></tr>
+            <tr><td>民間運営 (監修なし)</td><td>× 弱い</td><td>「伝達」のみ・拒否時の交渉は困難・非弁行為リスク</td><td>1〜2 万円</td><td>△</td><td>×</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="compare-note">※公開情報の整理 (推定値含む)・データ更新日: 2026-05-07・最新情報は各公式サイトで必ずご確認ください</p>
+      <p>有給消化を確実にしたい場合は、<strong>労働組合型または弁護士型</strong>を選ぶことが重要です。詳細な業者比較は <a href="/osusume-hikaku/">退職代行 おすすめ比較</a> ページを参照ください。</p>
     </div>
-    <p class="text-xs text-gray-600 mb-3">※月給を 22 日勤務として日給換算した参考例 (2026 年 5 月時点・税引前概算)・実際の日給・税負担は雇用契約・個別状況により大きく異なります。</p>
-    <p class="mb-3 text-sm">
-      退職代行サービスを利用される方の中には、有給消化と組み合わせて休養期間や転職準備期間を確保するケースも一般的に見られます。具体的な日数・金額・適用条件は所属企業の就業規則・個別雇用契約により異なるため、各自で確認することが推奨されます。
-    </p>
-    <p class="mb-3 text-sm">
-      <a href="https://www.mhlw.go.jp/" target="_blank" rel="noopener" class="underline">厚生労働省「就労条件総合調査」</a> によれば、日本全体の有給休暇取得率は約 56-58% と OECD 諸国の中でも低い水準で、退職時の有給消化は労働者の重要な権利行使機会と位置付けられています。
-    </p>
+  </section>
 
-    <p class="text-sm mb-3">
-      残有給が 20 日ある場合、実質的に<strong>約 1 ヶ月間、給与をもらいながら転職活動や休養に充てられる</strong>ことになり、大きな経済的メリットがあります。
-    </p>
+  <section class="lp-section" id="sec-3">
+    <div class="container">
+      <p class="section-num">SECTION / 03</p>
+      <h2>退職代行での有給消化フロー (STEP 5 段階)</h2>
+      <div class="counter-box">
+        <h3>📌 有給消化フロー 5ステップ</h3>
+        <div class="row"><b>STEP 1: 業者への申込 (依頼当日)</b><span>LINE または Web フォームから申込。このとき<strong>有給残日数を必ず申告</strong>してください。業者はこの情報をもとに退職日を設定します。</span></div>
+        <div class="row"><b>STEP 2: 料金支払 (即日・クレカ対応可)</b><span>多くのサービスがクレカ決済に対応・依頼当日に手続完了が一般的です。</span></div>
+        <div class="row"><b>STEP 3: 業者から会社へ通知 (当日中)</b><span>業者が会社の担当部署 (人事・上司) へ電話またはメールで連絡。<strong>退職意思 + 有給消化申請を同時に伝達</strong>します。</span></div>
+        <div class="row"><b>STEP 4: 有給消化期間 (自宅待機)</b><span>通知後、退職日まで有給扱いで自宅待機が続きます。この期間中も通常通り給与が支払われるとされています。</span></div>
+        <div class="row"><b>STEP 5: 退職完了・書類受取</b><span>退職日を迎えると退職完了。離職票・源泉徴収票等の書類は郵送で受け取れる流れが一般的です。</span></div>
+      </div>
+      <h3>有給消化の経済的価値の目安 (参考例)</h3>
+      <p>有給消化は労働者の権利の一つで、退職前の活用は転職活動や休養の機会として一般的に推奨される傾向にあります。<a href="https://www.mhlw.go.jp/stf/seisakunitsuite/bunya/koyou_roudou/roudoukijun/jikan/yuukyuukyuuka/index.html" target="_blank" rel="noopener">厚生労働省「年次有給休暇取得促進」</a> でも有給消化率の向上が推進されており、退職時の権利行使は法令で保障されているとされています。</p>
+      <div class="compare-wrap">
+        <table class="compare">
+          <thead><tr><th>月給目安</th><th>日給換算 (参考)</th><th>10 日消化</th><th>20 日消化</th></tr></thead>
+          <tbody>
+            <tr><td>25 万円</td><td>約 11,400 円</td><td>約 11.4 万円</td><td>約 22.8 万円</td></tr>
+            <tr><td>35 万円</td><td>約 15,900 円</td><td>約 15.9 万円</td><td>約 31.8 万円</td></tr>
+            <tr><td>50 万円</td><td>約 22,700 円</td><td>約 22.7 万円</td><td>約 45.5 万円</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="compare-note">※月給を 22 日勤務として日給換算した参考例 (2026 年 5 月時点・税引前概算)・実際の日給・税負担は雇用契約・個別状況により大きく異なります。</p>
+      <p>退職代行サービスを利用される方の中には、有給消化と組み合わせて休養期間や転職準備期間を確保するケースも一般的に見られます。具体的な日数・金額・適用条件は所属企業の就業規則・個別雇用契約により異なるため、各自で確認することが推奨されます。<a href="https://www.mhlw.go.jp/" target="_blank" rel="noopener">厚生労働省「就労条件総合調査」</a> によれば、日本全体の有給休暇取得率は約 56-58% と OECD 諸国の中でも低い水準で、退職時の有給消化は労働者の重要な権利行使機会と位置付けられています。残有給が 20 日ある場合、実質的に<strong>約 1 ヶ月間、給与をもらいながら転職活動や休養に充てられる</strong>ことになり、大きな経済的メリットがあります。</p>
+      <BannerAB pageSlug="yukyu-shouka" position="middle" />
+    </div>
+  </section>
 
-    <BannerAB pageSlug="yukyu-shouka" position="middle" />
+  <section class="lp-section alt" id="sec-4">
+    <div class="container">
+      <p class="section-num">SECTION / 04</p>
+      <h2>確実消化のための業者選び 3 条件</h2>
+      <h3>① 交渉権の有無を確認</h3>
+      <p>民間型業者は<a href="https://elaws.e-gov.go.jp/document?lawid=324AC0000000205" target="_blank" rel="noopener">弁護士法第72条</a> の非弁行為制限により、原則として「交渉行為」を行う権限がありません。会社が有給消化を拒否した場合、再交渉ができず本人対応が必要なケースがあります。<strong>労働組合型</strong>は団体交渉権を持ち組合員 (依頼者) のために会社と正式交渉できます。<strong>弁護士型</strong>はさらに強い権限を持ち訴訟まで視野に入れた対応が可能です。</p>
+      <h3>② 「有給消化サポート」の明記を確認</h3>
+      <p>サービス紹介ページに「有給消化サポート」「有給消化率〇〇%」等の記載があるか確認。実績を開示している業者は自信があると判断できる傾向があります。</p>
+      <h3>③ 料金総額・追加費用の有無を確認</h3>
+      <p>「一律料金」表記でも書類郵送費・交渉費の追加請求があるケースがあります。契約前に総額を必ず確認することが推奨されます。</p>
+    </div>
+  </section>
 
-    <h2 class="text-xl font-bold mt-8 mb-3" style="color: #1E3A8A;">4. 確実消化のための業者選び 3 条件</h2>
+  <section class="lp-section" id="sec-faq">
+    <div class="container">
+      <p class="section-num">SECTION / 05</p>
+      <h2>よくある質問（FAQ）</h2>
+      <div class="faq">
+        {faq.map((item) => (
+          <details><summary>{item.q}</summary><div><p set:html={item.a} /></div></details>
+        ))}
+      </div>
+    </div>
+  </section>
 
-    <h3 class="text-lg font-bold mt-4 mb-2">① 交渉権の有無を確認</h3>
-    <p class="mb-3 text-sm">
-      民間型業者は<a href="https://elaws.e-gov.go.jp/document?lawid=324AC0000000205" target="_blank" rel="noopener" class="underline">弁護士法第72条</a> の非弁行為制限により、原則として「交渉行為」を行う権限がありません。会社が有給消化を拒否した場合、再交渉ができず本人対応が必要なケースがあります。
-    </p>
-    <p class="mb-3 text-sm">
-      <strong>労働組合型</strong>は団体交渉権を持ち組合員 (依頼者) のために会社と正式交渉できます。<strong>弁護士型</strong>はさらに強い権限を持ち訴訟まで視野に入れた対応が可能です。
-    </p>
+  <section class="lp-section alt" id="sec-summary">
+    <div class="container">
+      <p class="section-num">SECTION / 06</p>
+      <h2>まとめ</h2>
+      <p>退職代行で有給消化を確実に成功させるには ① 業者形態 (労組型・弁護士型推奨) ② 「有給消化サポート」明記の確認 ③ 料金総額・追加費用の確認 の 3 条件が重要です。労働基準法第 39 条で保障された労働者の権利を行使し、退職前に残日数を全消化することで経済的メリットを最大化できる流れが一般的です。</p>
+      <p><strong>状況別の推奨形態</strong>: ① <strong>有給消化を絶対確保したい</strong> → 労働組合運営 (労基法 39 条の団体交渉権あり) ② <strong>会社拒否リスク高</strong> → 弁護士運営 (法的交渉・訴訟対応可) ③ <strong>料金優先</strong> → 民間運営 (¥20,000-30,000・ただし交渉権限制限の念頭に)。有給日数の経済価値 (¥20,000-50,000+/日相当) を考えると、労働組合運営の選択が費用対効果上有利になるケースが多いとされています。</p>
+      <p><strong>有給消化の行動 3 ステップ</strong>: <strong>STEP 1</strong> 残有給日数の確認 (給与明細・勤怠システム等で取得日数を把握) → <strong>STEP 2</strong> <a href="/osusume-hikaku/">5 社比較ページ</a> で労働組合運営または弁護士運営に絞込 → <strong>STEP 3</strong> 各社の無料相談で「有給消化サポート」明記を契約書面で確認後に最終決定。</p>
+      <p style="font-size:13px;color:var(--c-text-mute,#6b7280);">※即日対応は <a href="/touji/">即日・当日対応ページ</a> ・親バレ回避は <a href="/oyabare/">親バレページ</a> ・失敗例は <a href="/shippai/">失敗例ページ</a> もあわせてご参照ください。本記事は法的助言ではなく、特定業者を推奨するものでもありません。</p>
+      <h2>関連ページ</h2>
+      <ul>
+        <li><a href="/touji/">退職代行 即日・当日対応の完全ガイド</a></li>
+        <li><a href="/osusume-hikaku/">退職代行 おすすめ 5 社比較</a></li>
+        <li><a href="/oyabare/">退職代行で親バレを防ぐ方法</a></li>
+        <li><a href="/shippai/">退職代行の失敗例</a></li>
+      </ul>
+      <PRBadge pageSlug="yukyu-shouka" label="退職代行サービスの公式サイトで無料相談する（PR）" />
+    </div>
+  </section>
 
-    <h3 class="text-lg font-bold mt-4 mb-2">② 「有給消化サポート」の明記を確認</h3>
-    <p class="mb-3 text-sm">
-      サービス紹介ページに「有給消化サポート」「有給消化率〇〇%」等の記載があるか確認。実績を開示している業者は自信があると判断できる傾向があります。
-    </p>
+  <section class="lp-section" id="sec-policy">
+    <div class="container">
+      <p class="section-num">SECTION / 07</p>
+      <h2>編集ポリシー (情報源・更新日・E-E-A-T)</h2>
+      <ul>
+        <li><strong>情報源</strong>: 政府公式 e-Gov 法令検索 (労働基準法・民法・弁護士法) ・厚生労働省公式サイト (有給休暇制度ガイドライン) ・各退職代行業者公式サイト</li>
+        <li><strong>編集方針</strong>: 一次情報優先 (法令は e-Gov 直接リンク・運営形態は公式サイト確認) ・断定表現を避け推定値・公開情報の整理として記述</li>
+        <li><strong>更新頻度</strong>: 月次レビュー (法令改正・サービス内容変更時は随時更新)</li>
+        <li><strong>運営者</strong>: NY-squared (個人事業) <a href="/operator-info/">運営情報ページ</a> 参照</li>
+        <li><strong>E-E-A-T 4 原則</strong>: Experience (有給消化関連の公開情報整理) ・Expertise (法令引用 + 業界公開統計) ・Authoritativeness (政府公式 + 業者公式の一次情報のみ) ・Trustworthiness (PR 表記 + 推定値明示 + 法的助言ではない注記)</li>
+      </ul>
 
-    <h3 class="text-lg font-bold mt-4 mb-2">③ 料金総額・追加費用の有無を確認</h3>
-    <p class="mb-3 text-sm">
-      「一律料金」表記でも書類郵送費・交渉費の追加請求があるケースがあります。契約前に総額を必ず確認することが推奨されます。
-    </p>
-
-    <h2 class="text-xl font-bold mt-8 mb-3" style="color: #1E3A8A;">5. よくある質問 (FAQ)</h2>
-
-    {faq.map((item) => (
-      <>
-        <h3 class="text-lg font-bold mt-4 mb-2">Q. {item.q}</h3>
-        <p class="mb-3 text-sm" set:html={item.a} />
-      </>
-    ))}
-
-    <section class="mt-8 mb-6 bg-gray-50 border border-gray-200 rounded p-4 text-sm">
-      <h2 class="text-lg font-bold mb-2">まとめ</h2>
-      <p class="mb-3">
-        退職代行で有給消化を確実に成功させるには ① 業者形態 (労組型・弁護士型推奨) ② 「有給消化サポート」明記の確認 ③ 料金総額・追加費用の確認 の 3 条件が重要です。労働基準法第 39 条で保障された労働者の権利を行使し、退職前に残日数を全消化することで経済的メリットを最大化できる流れが一般的です。
-      </p>
-      <p class="mb-3">
-        <strong>状況別の推奨形態</strong>: ① <strong>有給消化を絶対確保したい</strong> → 労働組合運営 (労基法 39 条の団体交渉権あり) ② <strong>会社拒否リスク高</strong> → 弁護士運営 (法的交渉・訴訟対応可) ③ <strong>料金優先</strong> → 民間運営 (¥20,000-30,000・ただし交渉権限制限の念頭に)。有給日数の経済価値 (¥20,000-50,000+/日相当) を考えると、労働組合運営の選択が費用対効果上有利になるケースが多いとされています。
-      </p>
-      <p class="mb-3">
-        <strong>有給消化の行動 3 ステップ</strong>: <strong>STEP 1</strong> 残有給日数の確認 (給与明細・勤怠システム等で取得日数を把握) → <strong>STEP 2</strong> <a href="/osusume-hikaku/" class="underline">5 社比較ページ</a> で労働組合運営または弁護士運営に絞込 → <strong>STEP 3</strong> 各社の無料相談で「有給消化サポート」明記を契約書面で確認後に最終決定。
-      </p>
-      <p class="text-xs text-gray-600">
-        ※即日対応は <a href="/touji/" class="underline">即日・当日対応ページ</a> ・親バレ回避は <a href="/oyabare/" class="underline">親バレページ</a> ・失敗例は <a href="/shippai/" class="underline">失敗例ページ</a> もあわせてご参照ください。本記事は法的助言ではなく、特定業者を推奨するものでもありません。
-      </p>
-    </section>
-
-    <h2 class="text-xl font-bold mt-8 mb-3" style="color: #1E3A8A;">編集ポリシー (情報源・更新日・E-E-A-T)</h2>
-    <ul class="list-disc pl-5 mb-4 text-sm space-y-2">
-      <li><strong>情報源</strong>: 政府公式 e-Gov 法令検索 (労働基準法・民法・弁護士法) ・厚生労働省公式サイト (有給休暇制度ガイドライン) ・各退職代行業者公式サイト</li>
-      <li><strong>編集方針</strong>: 一次情報優先 (法令は e-Gov 直接リンク・運営形態は公式サイト確認) ・断定表現を避け推定値・公開情報の整理として記述</li>
-      <li><strong>更新頻度</strong>: 月次レビュー (法令改正・サービス内容変更時は随時更新)</li>
-      <li><strong>運営者</strong>: NY-squared (個人事業) <a href="/operator-info/" class="underline">運営情報ページ</a> 参照</li>
-      <li><strong>E-E-A-T 4 原則</strong>: Experience (有給消化関連の公開情報整理) ・Expertise (法令引用 + 業界公開統計) ・Authoritativeness (政府公式 + 業者公式の一次情報のみ) ・Trustworthiness (PR 表記 + 推定値明示 + 法的助言ではない注記)</li>
-    </ul>
-
-    <h2 class="text-xl font-bold mt-8 mb-3" style="color: #1E3A8A;">関連ページ</h2>
-    <ul class="list-disc pl-5 mb-4 text-sm space-y-1">
-      <li><a href="/touji/" class="underline">退職代行 即日・当日対応の完全ガイド</a></li>
-      <li><a href="/osusume-hikaku/" class="underline">退職代行 おすすめ 5 社比較</a></li>
-      <li><a href="/oyabare/" class="underline">退職代行で親バレを防ぐ方法</a></li>
-      <li><a href="/shippai/" class="underline">退職代行の失敗例 9 選</a></li>
-    </ul>
-
-    <h2 class="text-xl font-bold mt-8 mb-3" style="color: #1E3A8A;">出典・参考情報 (法令・公的機関・公開情報)</h2>
-    <p class="mb-3 text-sm">
-      本記事の信頼性確保のため、以下の一次情報を出典として参照しています。法令引用は政府公式 e-Gov 法令検索データベースから直接リンク、公的機関情報は各省庁公式サイトのみを採用しています。
-    </p>
-    <ul class="list-disc pl-5 mb-4 text-sm space-y-2">
-      <li><a href="https://elaws.e-gov.go.jp/document?lawid=322AC0000000049" target="_blank" rel="noopener" class="underline">労働基準法第 39 条 (有給休暇・e-Gov)</a> — 有給休暇取得権・退職時消化の根拠</li>
-      <li><a href="https://elaws.e-gov.go.jp/document?lawid=324AC0000000205" target="_blank" rel="noopener" class="underline">弁護士法第 72 条 (非弁行為の禁止・e-Gov)</a> — 民間業者の交渉権限制限の根拠</li>
-      <li><a href="https://elaws.e-gov.go.jp/document?lawid=129AC0000000089" target="_blank" rel="noopener" class="underline">民法第 627 条 (退職の権利・e-Gov)</a> — 期間の定めのない雇用契約の解約権</li>
-      <li><a href="https://www.mhlw.go.jp/" target="_blank" rel="noopener" class="underline">厚生労働省公式サイト</a> — 有給休暇制度ガイドライン・労働相談窓口</li>
-      <li><a href="https://www.houterasu.or.jp/" target="_blank" rel="noopener" class="underline">法テラス (日本司法支援センター)</a> — 無料法律相談・労働トラブル相談窓口</li>
-      <li>各退職代行業者公式サイト — 有給消化サポート明記・運営形態の一次情報</li>
-    </ul>
-
-    <p class="text-xs text-gray-600 mt-6">
-      ※本記事は 2026 年 5 月時点の公開情報をもとに作成。最新の法令・サービス内容は各公式サイトでご確認ください。各社の正式名・公式 URL・特商法表記等は提携承認後に順次反映します (PR・アフィリエイト広告を含みます)。本記事は法的助言・効果保証ではなく、特定業者を推奨するものでもありません。具体的な利用判断は無料相談などを活用し、複数業者を比較した上でご自身の責任において選択してください。
-    </p>
-  </main>
-</Layout>
+      <h2>出典・参考情報 (法令・公的機関・公開情報)</h2>
+      <p>本記事の信頼性確保のため、以下の一次情報を出典として参照しています。法令引用は政府公式 e-Gov 法令検索データベースから直接リンク、公的機関情報は各省庁公式サイトのみを採用しています。</p>
+      <ul>
+        <li><a href="https://elaws.e-gov.go.jp/document?lawid=322AC0000000049" target="_blank" rel="noopener">労働基準法第 39 条 (有給休暇・e-Gov)</a> — 有給休暇取得権・退職時消化の根拠</li>
+        <li><a href="https://elaws.e-gov.go.jp/document?lawid=324AC0000000205" target="_blank" rel="noopener">弁護士法第 72 条 (非弁行為の禁止・e-Gov)</a> — 民間業者の交渉権限制限の根拠</li>
+        <li><a href="https://elaws.e-gov.go.jp/document?lawid=129AC0000000089" target="_blank" rel="noopener">民法第 627 条 (退職の権利・e-Gov)</a> — 期間の定めのない雇用契約の解約権</li>
+        <li><a href="https://www.mhlw.go.jp/" target="_blank" rel="noopener">厚生労働省公式サイト</a> — 有給休暇制度ガイドライン・労働相談窓口</li>
+        <li><a href="https://www.houterasu.or.jp/" target="_blank" rel="noopener">法テラス (日本司法支援センター)</a> — 無料法律相談・労働トラブル相談窓口</li>
+        <li>各退職代行業者公式サイト — 有給消化サポート明記・運営形態の一次情報</li>
+      </ul>
+      <p style="font-size:12px;color:var(--c-text-mute,#6b7280);margin-top:16px;">※本記事は 2026 年 5 月時点の公開情報をもとに作成。最新の法令・サービス内容は各公式サイトでご確認ください。各社の正式名・公式 URL・特商法表記等は提携承認後に順次反映します (PR・アフィリエイト広告を含みます)。本記事は法的助言・効果保証ではなく、特定業者を推奨するものでもありません。具体的な利用判断は無料相談などを活用し、複数業者を比較した上でご自身の責任において選択してください。</p>
+    </div>
+  </section>
+</RichLayout>

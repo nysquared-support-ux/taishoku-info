@@ -1,236 +1,140 @@
 ---
-import Layout from '../../layouts/Layout.astro';
+import RichLayout from '../../layouts/RichLayout.astro';
 import PRBadge from '../../components/PRBadge.astro';
 import BannerAB from '../../components/BannerAB.astro';
 
 const title = '退職代行 よくある質問FAQ 25問｜違法性・即日退職・業者選び方・法務関連';
 const description = '退職代行サービスの違法性・即日退職・家族にバレる可能性・転職への影響・業者選び方・民法627条・弁護士法72条など、よくある質問25問を編集部が公開情報をもとに整理しました（PR・アフィリエイト広告を含みます）。';
 
-// FAQPage schema.org JSON-LD (Round V Phase 2・SEO rich snippet 対応)
-const faqSchema = {
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "mainEntity": [
-    { "@type": "Question", "name": "Q1. 退職代行は違法ですか？合法ですか？",
-      "acceptedAnswer": { "@type": "Answer", "text": "本人の退職意思を会社に伝達する行為自体は直ちに違法ではないとされていますが、運営主体（民間企業・労働組合・弁護士）により対応可能な業務範囲が法令上異なります。民間企業運営は交渉行為が非弁行為に該当する可能性があるため一般に対応できないとされ、労働組合は団体交渉権、弁護士は弁護士法に基づく代理に対応する場合があります。" } },
-    { "@type": "Question", "name": "Q2. 即日退職は本当に可能ですか？",
-      "acceptedAnswer": { "@type": "Answer", "text": "民法上の原則は「2週間前申出」（民法627条）であり、即日退職が可能かどうかは労働契約の内容・就業規則・会社の対応により異なります。「翌日から出社不要」を断定的に保証するものではありません。" } },
-    { "@type": "Question", "name": "Q3. 退職代行を使うと転職で不利になりますか？",
-      "acceptedAnswer": { "@type": "Answer", "text": "退職代行の利用が転職活動で不利に作用するかは個別事情・業界・採用側の判断により異なります。退職理由の説明準備が一般的に推奨されます。" } },
-    { "@type": "Question", "name": "Q4. 会社から「損害賠償する」と言われたら？",
-      "acceptedAnswer": { "@type": "Answer", "text": "損害賠償の成立には民法709条の要件（故意・過失・違法性・損害・因果関係）の立証が必要とされ、実際の請求は限定的なケースが多いとされています。個別事案は弁護士・法テラス等の専門窓口にご相談ください。詳細は損害賠償リスクページをご確認ください。" } },
-    { "@type": "Question", "name": "Q5. 家族にバレずに退職できますか？",
-      "acceptedAnswer": { "@type": "Answer", "text": "退職代行業者から家族への直接連絡は通常ありませんが、会社からの郵送物・健康保険・税金等の手続で家族に知られる可能性が個別事情によりあります。" } },
-    { "@type": "Question", "name": "Q8. 退職代行の費用相場は？",
-      "acceptedAnswer": { "@type": "Answer", "text": "公開情報の一般論として、民間企業運営は ¥20,000〜¥30,000 程度、労働組合運営は ¥25,000〜¥30,000 程度、弁護士運営は ¥50,000〜¥100,000+ 程度の料金目安が公表されています。詳細は各業者公式サイトでご確認ください。" } },
-    { "@type": "Question", "name": "Q13. 失業保険（雇用保険）はもらえますか？",
-      "acceptedAnswer": { "@type": "Answer", "text": "失業保険の受給資格は離職前の被保険者期間・離職理由により異なります。自己都合退職は給付制限期間が原則あり（2025年4月以降は短縮の傾向）、会社都合退職は待期7日後に給付。詳細はハローワークでご確認ください。" } },
-    { "@type": "Question", "name": "Q15. 失敗・後悔しない業者の選び方は？",
-      "acceptedAnswer": { "@type": "Answer", "text": "業者選び 5 軸: ① 運営主体タイプ（業務範囲）② 料金・追加費用 ③ 連絡手段・対応時間 ④ 返金保証条件 ⑤ 運営実績、が一般的です。Hub の比較表もご参照ください。" } },
-    { "@type": "Question", "name": "Q16. 退職代行の運営主体タイプは何種類ありますか？",
-      "acceptedAnswer": { "@type": "Answer", "text": "一般に「民間企業」「労働組合」「弁護士」の 3 タイプに分類されます。それぞれ業務範囲・料金が異なります。" } },
-    { "@type": "Question", "name": "Q17. 民間企業タイプと弁護士タイプの料金差は？",
-      "acceptedAnswer": { "@type": "Answer", "text": "一般に民間企業 ¥20,000〜¥30,000、弁護士 ¥50,000〜¥100,000+ 程度の差があります。料金差は対応範囲（交渉可否）に対応します。" } },
-    { "@type": "Question", "name": "Q18. 「弁護士提携」と「弁護士監修」の違いは？",
-      "acceptedAnswer": { "@type": "Answer", "text": "「弁護士提携」は実際に弁護士が業務を担当する場合があり、「弁護士監修」は記事内容のチェックに留まる場合があります。業務範囲は必ず公式サイトでご確認ください。" } },
-    { "@type": "Question", "name": "Q19. 業者選びで重視すべき軸は？",
-      "acceptedAnswer": { "@type": "Answer", "text": "① 運営主体タイプ（業務範囲）② 料金・追加費用の有無 ③ 連絡手段・対応時間 ④ 返金保証条件 ⑤ 運営実績、の 5 軸が一般的です。" } },
-    { "@type": "Question", "name": "Q20. 公的相談窓口はどこに相談できますか？",
-      "acceptedAnswer": { "@type": "Answer", "text": "総合労働相談コーナー（厚生労働省）、法テラス（日本司法支援センター）、都道府県労働局などが無料で相談を受け付けています。" } },
-    { "@type": "Question", "name": "Q21. 退職代行の法的根拠は何ですか？",
-      "acceptedAnswer": { "@type": "Answer", "text": "退職の意思表示は民法627条（雇用契約の解除）に基づき、原則として2週間前までの申出により雇用契約を解除できるとされています。退職代行はこの「意思表示の伝達」を本人に代わって行うサービスです。" } },
-    { "@type": "Question", "name": "Q22. 弁護士法72条（非弁行為）と退職代行の関係は？",
-      "acceptedAnswer": { "@type": "Answer", "text": "弁護士法72条は、弁護士でない者が「報酬を得て法律事務を取り扱うこと」を原則禁止しています。退職代行のうち会社との交渉行為は法律事務に該当する可能性があるため、民間企業運営は対応できないとされています。" } },
-    { "@type": "Question", "name": "Q23. 退職届の法的有効性は？",
-      "acceptedAnswer": { "@type": "Answer", "text": "一般論として、退職届の法的有効性は到達主義（民法97条）に基づき、会社に到達した時点で効力が発生するとされています。書留郵便等の到達証明手段を使用することが推奨される場合があります。" } },
-    { "@type": "Question", "name": "Q24. 退職を会社に拒否されたら？",
-      "acceptedAnswer": { "@type": "Answer", "text": "民法627条に基づく退職の意思表示は、原則として会社の承諾を必要としないとされています。会社が引き留めても、2週間経過後は雇用契約終了の効力が発生する場合があります。個別事案は弁護士・労働基準監督署にご相談ください。" } },
-    { "@type": "Question", "name": "Q25. 損害賠償の時効は？",
-      "acceptedAnswer": { "@type": "Answer", "text": "民法724条等に基づき、損害賠償請求権の消滅時効は権利行使可能と知った時から3年（人身は5年）、不法行為から20年とされています。具体的時効計算は個別事案により異なるため、弁護士にご相談ください。" } }
-  ]
-};
+const breadcrumb = [
+  { name: 'ホーム', url: '/' },
+  { name: 'よくある質問' },
+];
+
+// RichLayout が FAQPage schema.org JSON-LD を自動生成 (Round V Phase 2・SEO rich snippet 対応)
+const faq = [
+  { q: 'Q1. 退職代行は違法ですか？合法ですか？', a: '本人の退職意思を会社に伝達する行為自体は直ちに違法ではないとされていますが、運営主体（民間企業・労働組合・弁護士）により対応可能な業務範囲が法令上異なります。民間企業運営は交渉行為が非弁行為に該当する可能性があるため一般に対応できないとされ、労働組合は団体交渉権、弁護士は弁護士法に基づく代理に対応する場合があります。' },
+  { q: 'Q2. 即日退職は本当に可能ですか？', a: '民法上の原則は「2週間前申出」（民法627条）であり、即日退職が可能かどうかは労働契約の内容・就業規則・会社の対応により異なります。「翌日から出社不要」を断定的に保証するものではありません。' },
+  { q: 'Q3. 退職代行を使うと転職で不利になりますか？', a: '退職代行の利用が転職活動で不利に作用するかは個別事情・業界・採用側の判断により異なります。退職理由の説明準備が一般的に推奨されます。同業界内での転職・人的つながり等、個別事情により例外が生じる可能性はあります。' },
+  { q: 'Q4. 会社から「損害賠償する」と言われたら？', a: '損害賠償の成立には民法709条の要件（故意・過失・違法性・損害・因果関係）の立証が必要とされ、実際の請求は限定的なケースが多いとされています。会社からの損害賠償請求が実際に提起されるか否かは、個別事情・契約内容・退職経緯により異なります。個別事案は弁護士・法テラス等の専門窓口にご相談ください。詳細は <a href="/damage-risk/">損害賠償リスクと対策</a> ページもご参照ください。' },
+  { q: 'Q5. 家族にバレずに退職できますか？', a: '退職代行業者から家族への直接連絡は通常ありませんが、会社からの郵送物・健康保険・税金等の手続で家族に知られる可能性が個別事情によりあります。バレない対策は可能な範囲があるものの、完全に防げるものではありません。離職票が自宅郵送される場合があるなど、個別事情により家族が知る可能性があります。' },
+  { q: 'Q6. 有給休暇を全部消化してから辞めたいです', a: '業者の運営主体により、有給消化の交渉対応が法令上異なります。民間企業運営は一般に交渉行為に対応できないとされ、労働組合・弁護士運営は団体交渉権・代理権に基づき対応する場合があります。最終的な有給付与の可否は会社の判断です。' },
+  { q: 'Q7. 退職金はもらえますか？', a: '就業規則に退職金制度がある場合、退職代行を利用しても受給権そのものは制度に従います。具体的な計算・支給時期は会社の規程・人事担当に直接ご確認ください。' },
+  { q: 'Q8. 退職代行の費用相場は？', a: '公開情報の一般論として、民間企業運営は ¥20,000〜¥30,000 程度、労働組合運営は ¥25,000〜¥30,000 程度、弁護士運営は ¥50,000〜¥100,000+ 程度の料金目安が公表されています。料金には基本料金のほか、急ぎ対応・追加交渉・損害賠償リスクへの対応等で追加費用が発生する場合があります。詳細は各業者公式サイトでご確認ください。' },
+  { q: 'Q9. クレジットカードで支払えますか？', a: '決済手段は事業者により異なります。クレジットカード・銀行振込・電子決済等の対応有無は、各業者の公式サイトでご確認ください。' },
+  { q: 'Q10. 退職代行を使うとパワハラの証拠集めはできますか？', a: '退職代行単体では証拠収集行為そのものは行わないのが一般的です。パワハラ訴訟・労基署通報を視野に入れる場合は、弁護士運営の退職代行または弁護士・労基署・法テラスへの直接相談をご検討ください。証拠収集は会社の機密情報や第三者の個人情報を不適切に持ち出さない範囲で、適法に保全してください。就業規則・守秘義務・不正競争防止法との関係に注意が必要です。' },
+  { q: 'Q11. 業者が嘘の情報で会社にアプローチしてもらえますか？', a: '対応していない業者がほとんどとされています。信頼できる業者は、本人が申告した情報をそのまま会社に伝達するのが一般的です。' },
+  { q: 'Q12. バックれ（無断欠勤）との違いは？', a: '退職代行とバックれ（無断欠勤）は法的位置付けが異なります。バックれは無断欠勤・職場放棄として懲戒対象となる可能性があり、業務停滞等による損害賠償請求リスクが残る可能性があります。退職代行は退職意思を業者経由で伝達する選択肢の一つであり、適否は個別事情によります。' },
+  { q: 'Q13. 失業保険（雇用保険）はもらえますか？', a: '失業保険の受給資格は離職前の被保険者期間・離職理由により異なります。自己都合退職は給付制限期間が原則あり（2025年4月以降は短縮の傾向）、会社都合退職は待期7日後に給付。退職代行の利用は一般に受給資格判定要素には含まれないとされています。2025年4月1日以降の改正対象者の自己都合退職は給付制限期間が原則1か月程度。詳細は <a href="/unemployment-insurance/">失業保険ガイド</a> をご参照ください。' },
+  { q: 'Q14. 退職代行を使った後、会社から連絡は来ますか？', a: '業者が「会社から本人への直接連絡を控えてほしい」旨を伝達するのが一般的とされていますが、完全に連絡を遮断することを保証するものではありません。離職票・源泉徴収票の送付は会社の法令上の義務とされており、郵送で連絡が来る場合があります。' },
+  { q: 'Q15. 失敗・後悔しない業者の選び方は？', a: '業者選び 5 軸: ① 運営主体タイプ（業務範囲）② 料金・追加費用 ③ 連絡手段・対応時間 ④ 返金保証条件 ⑤ 運営実績、が一般的です。項目数の充足のみで安全性を保証するものではありません。最終判断は複数業者の公式情報を並行確認のうえ、必要に応じて公的相談窓口・弁護士相談も併用することを推奨します。Hub の比較表もご参照ください。' },
+  { q: 'Q16. 退職代行の運営主体タイプは何種類ありますか？', a: '一般に「民間企業」「労働組合」「弁護士」の 3 タイプに分類されます。それぞれ業務範囲・料金が異なります。詳細は <a href="/">Hub の比較表</a> をご確認ください。' },
+  { q: 'Q17. 民間企業タイプと弁護士タイプの料金差は？', a: '一般に民間企業 ¥20,000〜¥30,000、弁護士 ¥50,000〜¥100,000+ 程度の差があります（公開情報・編集部整理）。料金差は対応範囲（交渉可否）に対応します。' },
+  { q: 'Q18. 「弁護士提携」と「弁護士監修」の違いは？', a: '「弁護士提携」は実際に弁護士が業務を担当する場合があり、「弁護士監修」は記事内容のチェックに留まる場合があります。業務範囲は必ず公式サイトでご確認ください。' },
+  { q: 'Q19. 業者選びで重視すべき軸は？', a: '① 運営主体タイプ（業務範囲）② 料金・追加費用の有無 ③ 連絡手段・対応時間 ④ 返金保証条件 ⑤ 運営実績、の 5 軸が一般的です。' },
+  { q: 'Q20. 公的相談窓口はどこに相談できますか？', a: '総合労働相談コーナー（厚生労働省）、法テラス（日本司法支援センター）、都道府県労働局などが無料で相談を受け付けています。詳細は <a href="/">Hub の公的相談窓口セクション</a> をご確認ください。' },
+  { q: 'Q21. 退職代行の法的根拠は何ですか？', a: '退職の意思表示は民法627条（雇用契約の解除）に基づき、原則として2週間前までの申出により雇用契約を解除できるとされています。退職代行はこの「意思表示の伝達」を本人に代わって行うサービスです。' },
+  { q: 'Q22. 弁護士法72条（非弁行為）と退職代行の関係は？', a: '弁護士法72条は、弁護士でない者が「報酬を得て法律事務を取り扱うこと」を原則禁止しています。退職代行のうち会社との交渉行為（有給消化・退職金・損害賠償等）は法律事務に該当する可能性があるため、民間企業運営は対応できないとされています。' },
+  { q: 'Q23. 退職届の法的有効性は？', a: '一般論として、退職届の法的有効性は到達主義（民法97条）に基づき、会社に到達した時点で効力が発生するとされています。書留郵便等の到達証明手段を使用することが推奨される場合があります。' },
+  { q: 'Q24. 退職を会社に拒否されたら？', a: '民法627条に基づく退職の意思表示は、原則として会社の承諾を必要としないとされています。会社が引き留めても、2週間経過後は雇用契約終了の効力が発生する場合があります。個別事案は弁護士・労働基準監督署にご相談ください。' },
+  { q: 'Q25. 損害賠償の時効は？', a: '民法724条等に基づき、損害賠償請求権の消滅時効は権利行使可能と知った時から3年（人身は5年）、不法行為から20年とされています。具体的時効計算は個別事案により異なるため、弁護士にご相談ください。' },
+];
 ---
 
-<Layout title={title} description={description} publishedDate="2026-04-25" modifiedDate="2026-05-02" breadcrumb={[
-  { name: 'ホーム', url: 'https://taishoku-info.pages.dev/' },
-  { name: 'よくある質問', url: 'https://taishoku-info.pages.dev/faq/' },
-]}>
-  <main class="max-w-3xl mx-auto px-4 py-8">
-    <PRBadge pageSlug="faq" />
-
-    <nav class="text-sm text-gray-500 mb-4">
-      <a href="/" class="underline">トップ</a> &gt; よくある質問FAQ 15問
-    </nav>
-
-    <h1 class="text-2xl md:text-3xl font-bold mb-4 leading-tight">
-      退職代行 よくある質問FAQ 15問
-    </h1>
-
-    <div class="bg-yellow-50 border-2 border-yellow-300 rounded p-3 mb-4 text-sm">
-      <strong>📢 PR表示</strong>: 本ページはアフィリエイト広告（PR）を含みます。本記事は法律相談・労務相談の代替ではありません。具体的な判断は弁護士・社会保険労務士・所轄ハローワーク等の専門窓口にご相談ください。
-    </div>
-
-    <p class="text-sm text-gray-600 mb-6">
-      最終確認日: 2026-04-26 / 公開情報の整理であり、特定業者を推奨・順位付けするものではありません。<br />
-      運営者: <a href="/operator-info/" class="underline">NY-squared (個人事業)</a> /
-      <a href="/editorial-policy/" class="underline">編集ポリシー</a> /
-      <a href="/privacy-policy/" class="underline">プライバシーポリシー</a>
-    </p>
-
-    <BannerAB pageSlug="faq" position="hero" />
-
-    <h2 class="text-xl font-bold mt-8 mb-3">FAQ 15問</h2>
-
-    <h3 class="text-lg font-bold mt-6 mb-2">Q1. 退職代行は違法ですか？合法ですか？</h3>
-    <p class="mb-3 text-sm">一般論として、本人の退職意思を会社に伝達する行為自体は直ちに違法ではないとされていますが、<strong>運営主体（民間企業・労働組合・弁護士）によって対応可能な業務範囲が法令上異なります</strong>。民間企業運営は会社との交渉行為が非弁行為に該当する可能性があるため一般に対応できないとされ、労働組合は団体交渉権、弁護士は弁護士法に基づく代理に対応する場合があります。</p>
-
-    <h3 class="text-lg font-bold mt-6 mb-2">Q2. 即日退職は本当に可能ですか？</h3>
-    <p class="mb-3 text-sm">民法上の原則は「2週間前申出」（民法627条）であり、<strong>即日退職が可能かどうかは労働契約の内容・就業規則・会社の対応により異なります</strong>。「翌日から出社不要」を断定的に保証するものではありません。</p>
-
-    <h3 class="text-lg font-bold mt-6 mb-2">Q3. 退職代行を使うと転職で不利になりますか？</h3>
-    <p class="mb-3 text-sm"><strong>採用選考における扱いは個別事情により異なり、一律に断定することはできません</strong>。同業界内での転職・人的つながり等、個別事情により例外が生じる可能性はあります。</p>
-
-    <h3 class="text-lg font-bold mt-6 mb-2">Q4. 会社から「損害賠償する」と言われたら？</h3>
-    <p class="mb-3 text-sm">会社からの損害賠償請求が実際に提起されるか否かは、<strong>個別事情・契約内容・退職経緯により異なります</strong>。「実際の訴訟は稀」と一般化することはできません。詳細は <a href="/damage-risk/" class="text-blue-700 underline">損害賠償リスクと対策</a> ページもご参照ください。</p>
-
-    <h3 class="text-lg font-bold mt-6 mb-2">Q5. 家族にバレずに退職できますか？</h3>
-    <p class="mb-3 text-sm">バレない対策は可能な範囲があるものの、<strong>完全に防げるものではありません</strong>。離職票が自宅郵送される場合があるなど、個別事情により家族が知る可能性があります。</p>
-
-    <h3 class="text-lg font-bold mt-6 mb-2">Q6. 有給休暇を全部消化してから辞めたいです</h3>
-    <p class="mb-3 text-sm">業者の運営主体により、有給消化の交渉対応が法令上異なります。民間企業運営は一般に交渉行為に対応できないとされ、労働組合・弁護士運営は団体交渉権・代理権に基づき対応する場合があります。<strong>最終的な有給付与の可否は会社の判断</strong>です。</p>
-
-    <h3 class="text-lg font-bold mt-6 mb-2">Q7. 退職金はもらえますか？</h3>
-    <p class="mb-3 text-sm">就業規則に退職金制度がある場合、<strong>退職代行を利用しても受給権そのものは制度に従います</strong>。具体的な計算・支給時期は会社の規程・人事担当に直接ご確認ください。</p>
-
-    <h3 class="text-lg font-bold mt-6 mb-2">Q8. 退職代行の費用相場は？</h3>
-    <p class="mb-3 text-sm"><strong>正式な料金は各業者の公式サイトでご確認ください</strong>。各業者の料金体系は事業者ごとに異なり、運営主体により幅があるとされています。料金には基本料金のほか、急ぎ対応・追加交渉・損害賠償リスクへの対応等で<strong>追加費用が発生する場合</strong>があります。</p>
-
-    <h3 class="text-lg font-bold mt-6 mb-2">Q9. クレジットカードで支払えますか？</h3>
-    <p class="mb-3 text-sm"><strong>決済手段は事業者により異なります</strong>。クレジットカード・銀行振込・電子決済等の対応有無は、各業者の公式サイトでご確認ください。</p>
-
-    <BannerAB pageSlug="faq" position="middle" />
-
-    <h3 class="text-lg font-bold mt-6 mb-2">Q10. 退職代行を使うとパワハラの証拠集めはできますか？</h3>
-    <p class="mb-3 text-sm">退職代行単体では証拠収集行為そのものは行わないのが一般的です。パワハラ訴訟・労基署通報を視野に入れる場合は、<strong>弁護士運営の退職代行</strong>または<strong>弁護士・労基署・法テラスへの直接相談</strong>をご検討ください。証拠収集は会社の機密情報や第三者の個人情報を不適切に持ち出さない範囲で、適法に保全してください。<strong>就業規則・守秘義務・不正競争防止法</strong>との関係に注意が必要です。</p>
-
-    <h3 class="text-lg font-bold mt-6 mb-2">Q11. 業者が嘘の情報で会社にアプローチしてもらえますか？</h3>
-    <p class="mb-3 text-sm"><strong>対応していない業者がほとんど</strong>とされています。信頼できる業者は、本人が申告した情報をそのまま会社に伝達するのが一般的です。</p>
-
-    <h3 class="text-lg font-bold mt-6 mb-2">Q12. バックれ（無断欠勤）との違いは？</h3>
-    <p class="mb-3 text-sm">退職代行とバックれ（無断欠勤）は<strong>法的位置付けが異なります</strong>。バックれは無断欠勤・職場放棄として懲戒対象となる可能性があり、業務停滞等による損害賠償請求リスクが残る可能性があります。退職代行は<strong>退職意思を業者経由で伝達する選択肢の一つ</strong>であり、適否は個別事情によります。</p>
-
-    <h3 class="text-lg font-bold mt-6 mb-2">Q13. 失業保険（雇用保険）はもらえますか？</h3>
-    <p class="mb-3 text-sm"><strong>受給資格は雇用保険の加入期間・離職理由等を基にハローワークが判断します</strong>。退職代行の利用は一般に受給資格判定要素には含まれないとされています。<strong>2025年4月1日以降の改正対象者の自己都合退職は給付制限期間が原則1か月程度</strong>。詳細は <a href="/unemployment-insurance/" class="text-blue-700 underline">失業保険ガイド</a> をご参照ください。</p>
-
-    <h3 class="text-lg font-bold mt-6 mb-2">Q14. 退職代行を使った後、会社から連絡は来ますか？</h3>
-    <p class="mb-3 text-sm">業者が「会社から本人への直接連絡を控えてほしい」旨を伝達するのが一般的とされていますが、<strong>完全に連絡を遮断することを保証するものではありません</strong>。離職票・源泉徴収票の送付は会社の法令上の義務とされており、郵送で連絡が来る場合があります。</p>
-
-    <h3 class="text-lg font-bold mt-6 mb-2">Q15. 失敗・後悔しない業者の選び方は？</h3>
-    <p class="mb-3 text-sm">運営主体明示・料金透明性・連絡手段・返金保証等を<strong>判断材料の例</strong>としてご検討ください。<strong>項目数の充足のみで安全性を保証するものではありません</strong>。最終判断は<strong>複数業者の公式情報を並行確認</strong>のうえ、必要に応じて公的相談窓口・弁護士相談も併用することを推奨します。</p>
-
-    <BannerAB pageSlug="faq" position="footer" />
-
-    <h2 class="text-xl font-bold mt-8 mb-3">困ったときの公的相談窓口（無料）</h2>
-    <ul class="list-disc pl-5 space-y-1 text-sm mb-6">
-      <li><strong>総合労働相談コーナー</strong>（厚生労働省）— 労働問題全般</li>
-      <li><strong>法テラス</strong>（日本司法支援センター）— 経済的に余裕がない方への無料法律相談</li>
-      <li><strong>みんなの人権110番</strong>（法務省）— ハラスメント・人権侵害</li>
-      <li><strong>こころの健康相談統一ダイヤル</strong>（厚生労働省）— 精神的不調を感じる場合</li>
-      <li><strong>ハローワーク</strong>（厚生労働省）— 失業保険・離職票・離職理由</li>
-      <li><strong>全国社会保険労務士会連合会</strong>— 労務・社会保険手続</li>
-    </ul>
-
-    <h2 class="text-xl font-bold mt-8 mb-3">業者選び方カテゴリ Q&A 追加</h2>
-
-    <p class="text-sm text-gray-600 mb-3">
-      退職代行業者を選ぶ際によくある追加 Q&A をまとめました。<strong>個別事情により回答は異なります</strong>。
-    </p>
-
-    <div class="space-y-4 mb-6">
-      <div>
-        <p class="font-semibold text-sm mb-1">Q16. 退職代行の運営主体タイプは何種類ありますか？</p>
-        <p class="text-sm text-gray-700">A. 一般に「民間企業」「労働組合」「弁護士」の 3 タイプに分類されます。それぞれ業務範囲・料金が異なります。詳細は <a href="/" class="underline">Hub の比較表</a> をご確認ください。</p>
-      </div>
-
-      <div>
-        <p class="font-semibold text-sm mb-1">Q17. 民間企業タイプと弁護士タイプの料金差は？</p>
-        <p class="text-sm text-gray-700">A. 一般に民間企業 ¥20,000〜¥30,000、弁護士 ¥50,000〜¥100,000+ 程度の差があります（公開情報・編集部整理）。料金差は対応範囲（交渉可否）に対応します。</p>
-      </div>
-
-      <div>
-        <p class="font-semibold text-sm mb-1">Q18. 「弁護士提携」と「弁護士監修」の違いは？</p>
-        <p class="text-sm text-gray-700">A. 「弁護士提携」は実際に弁護士が業務を担当する場合があり、「弁護士監修」は記事内容のチェックに留まる場合があります。<strong>業務範囲の確認は必ず公式サイトで</strong>。</p>
-      </div>
-
-      <div>
-        <p class="font-semibold text-sm mb-1">Q19. 業者選びで重視すべき軸は？</p>
-        <p class="text-sm text-gray-700">A. ① 運営主体タイプ（業務範囲）② 料金・追加費用の有無 ③ 連絡手段・対応時間 ④ 返金保証条件 ⑤ 運営実績、の 5 軸が一般的です。</p>
-      </div>
-
-      <div>
-        <p class="font-semibold text-sm mb-1">Q20. 公的相談窓口はどこに相談できますか？</p>
-        <p class="text-sm text-gray-700">A. <strong>総合労働相談コーナー（厚労省）</strong>、<strong>法テラス（日本司法支援センター）</strong>、<strong>都道府県労働局</strong>などが無料で相談を受け付けています。詳細は <a href="/" class="underline">Hub の公的相談窓口セクション</a> をご確認ください。</p>
-      </div>
-
-      <div>
-        <p class="font-semibold text-sm mb-1">Q21. 退職代行の法的根拠は何ですか？</p>
-        <p class="text-sm text-gray-700">A. 退職の意思表示は <strong>民法 627 条</strong>（雇用契約の解除）に基づき、原則として 2 週間前までの申出により雇用契約を解除できるとされています。退職代行はこの「意思表示の伝達」を本人に代わって行うサービスです。</p>
-      </div>
-
-      <div>
-        <p class="font-semibold text-sm mb-1">Q22. 弁護士法 72 条（非弁行為）と退職代行の関係は？</p>
-        <p class="text-sm text-gray-700">A. <strong>弁護士法 72 条</strong>は、弁護士でない者が「報酬を得て法律事務を取り扱うこと」を原則禁止しています。退職代行のうち会社との交渉行為（有給消化・退職金・損害賠償等）は法律事務に該当する可能性があるため、民間企業運営は対応できないとされています。</p>
-      </div>
-
-      <div>
-        <p class="font-semibold text-sm mb-1">Q23. 退職届の法的有効性は？</p>
-        <p class="text-sm text-gray-700">A. 一般論として、退職届の法的有効性は <strong>到達主義</strong>（民法 97 条）に基づき、会社に到達した時点で効力が発生するとされています。書留郵便等の到達証明手段を使用することが推奨される場合があります。</p>
-      </div>
-
-      <div>
-        <p class="font-semibold text-sm mb-1">Q24. 退職を会社に拒否されたら？</p>
-        <p class="text-sm text-gray-700">A. 民法 627 条に基づく退職の意思表示は、原則として会社の承諾を必要としないとされています。会社が引き留めても、2 週間経過後は雇用契約終了の効力が発生する場合があります。個別事案は弁護士・労働基準監督署にご相談ください。</p>
-      </div>
-
-      <div>
-        <p class="font-semibold text-sm mb-1">Q25. 損害賠償の時効は？</p>
-        <p class="text-sm text-gray-700">A. 民法 724 条等に基づき、損害賠償請求権の消滅時効は<strong>権利行使可能と知った時から 3 年（人身は 5 年）、不法行為から 20 年</strong>とされています。具体的時効計算は個別事案により異なるため、弁護士にご相談ください。</p>
+<RichLayout title={title} description={description} publishedDate="2026-04-25" modifiedDate="2026-05-18" breadcrumb={breadcrumb} faq={faq}>
+  <section class="fv" aria-labelledby="fv-h1">
+    <div class="container">
+      <span class="fv-pill">退職代行 / よくある質問</span>
+      <h1 id="fv-h1"><span class="accent">退職代行 よくある質問FAQ 25問</span><br />違法性・即日退職・業者選び方・法務関連</h1>
+      <p class="lede">退職代行サービスの違法性・即日退職・家族にバレる可能性・転職への影響・業者選び方・民法627条・弁護士法72条など、よくある質問25問を編集部が公開情報をもとに整理しました。本記事は法律相談・労務相談の代替ではありません。具体的な判断は弁護士・社会保険労務士・所轄ハローワーク等の専門窓口にご相談ください。</p>
+      <ul class="fv-bullets">
+        <li>違法性・即日退職・転職への影響 (Q1-5)</li>
+        <li>費用相場・有給・退職金・支払い (Q6-12)</li>
+        <li>失業保険・業者選び方 (Q13-20)</li>
+        <li>法的根拠・弁護士法72条・時効 (Q21-25)</li>
+      </ul>
+      <PRBadge pageSlug="faq" />
+      <div class="fv-meta">
+        <span><b>公開日</b> 2026-04-25</span><span><b>最終更新</b> 2026-05-18</span>
+        <span><b>編集</b> NY-squared 編集部</span><span><b>所要</b> 約 9 分</span>
       </div>
     </div>
+  </section>
 
-    <p class="text-xs text-gray-500 mb-6">
-      ※本 FAQ は公開情報を編集部が整理した参考情報です。<strong>社労士・弁護士監修ではありません</strong>。最新・正確な情報は各業者公式サイト・公的窓口でご確認ください。
-    </p>
-
-    <h2 class="text-xl font-bold mt-8 mb-3">📌 次のアクション 3 選</h2>
-    <div class="grid md:grid-cols-3 gap-3 mb-6">
-      <a href="/" class="block border rounded p-3 hover:bg-blue-50 text-sm">
-        <strong>① 業者を比較したい</strong><br />
-        <span class="text-xs text-gray-600">運営主体 3 タイプ比較表 + 選び方 5 軸</span>
-      </a>
-      <a href="https://www.mhlw.go.jp/" target="_blank" rel="noopener" class="block border rounded p-3 hover:bg-blue-50 text-sm">
-        <strong>② 公的窓口に相談したい</strong><br />
-        <span class="text-xs text-gray-600">総合労働相談コーナー（厚労省）無料</span>
-      </a>
-      <a href="/lp-a/" class="block border rounded p-3 hover:bg-blue-50 text-sm">
-        <strong>③ 利用フローを確認</strong><br />
-        <span class="text-xs text-gray-600">退職代行の仕組み・費用・選び方</span>
-      </a>
+  <section class="lp-section" id="sec-intro">
+    <div class="container">
+      <p class="section-num">SECTION / 00</p>
+      <h2>はじめに (PR表示・前提)</h2>
+      <p><strong>📢 PR表示</strong>: 本ページはアフィリエイト広告（PR）を含みます。本記事は法律相談・労務相談の代替ではありません。具体的な判断は弁護士・社会保険労務士・所轄ハローワーク等の専門窓口にご相談ください。</p>
+      <p style="font-size:13px;color:var(--c-text-sub,#4a5568);">最終確認日: 2026-04-26 / 公開情報の整理であり、特定業者を推奨・順位付けするものではありません。<br />運営者: <a href="/operator-info/">NY-squared (個人事業)</a> / <a href="/editorial-policy/">編集ポリシー</a> / <a href="/privacy-policy/">プライバシーポリシー</a></p>
+      <BannerAB pageSlug="faq" position="hero" />
     </div>
+  </section>
 
-    <h2 class="text-xl font-bold mt-8 mb-3">関連ページ</h2>
-    <ul class="list-disc pl-5 space-y-1 text-sm">
-      <li><a href="/" class="text-blue-700 underline">退職代行 総合ガイド Hub</a></li>
-      <li><a href="/lp-a/" class="text-blue-700 underline">退職代行の仕組み・費用・選び方</a></li>
-      <li><a href="/unemployment-insurance/" class="text-blue-700 underline">失業保険ガイド</a></li>
-      <li><a href="/damage-risk/" class="text-blue-700 underline">損害賠償リスクと対策</a></li>
-    </ul>
+  <section class="lp-section alt" id="sec-faq">
+    <div class="container">
+      <p class="section-num">SECTION / 01</p>
+      <h2>退職代行 よくある質問FAQ 25問</h2>
+      <div class="faq">
+        {faq.map((item) => (
+          <details><summary>{item.q}</summary><div><p set:html={item.a} /></div></details>
+        ))}
+      </div>
+      <BannerAB pageSlug="faq" position="middle" />
+    </div>
+  </section>
 
-    <p class="text-xs text-gray-500 mt-8">
-      ※本ページは2026-04-26時点の公開情報をもとに編集部が整理した参考FAQです。<strong>社労士・弁護士監修ではありません</strong>。
-    </p>
-  </main>
+  <section class="lp-section" id="sec-2">
+    <div class="container">
+      <p class="section-num">SECTION / 02</p>
+      <h2>困ったときの公的相談窓口（無料）</h2>
+      <ul>
+        <li><strong>総合労働相談コーナー</strong>（厚生労働省）— 労働問題全般</li>
+        <li><strong>法テラス</strong>（日本司法支援センター）— 経済的に余裕がない方への無料法律相談</li>
+        <li><strong>みんなの人権110番</strong>（法務省）— ハラスメント・人権侵害</li>
+        <li><strong>こころの健康相談統一ダイヤル</strong>（厚生労働省）— 精神的不調を感じる場合</li>
+        <li><strong>ハローワーク</strong>（厚生労働省）— 失業保険・離職票・離職理由</li>
+        <li><strong>全国社会保険労務士会連合会</strong>— 労務・社会保険手続</li>
+      </ul>
+      <p class="compare-note">※本 FAQ は公開情報を編集部が整理した参考情報です。社労士・弁護士監修ではありません。最新・正確な情報は各業者公式サイト・公的窓口でご確認ください。</p>
+      <BannerAB pageSlug="faq" position="footer" />
+    </div>
+  </section>
 
-  <!-- FAQPage schema.org JSON-LD (Round V Phase 2 [kzPklZSdFu] 2026-04-29) -->
-  <script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
-</Layout>
+  <section class="lp-section alt" id="sec-3">
+    <div class="container">
+      <p class="section-num">SECTION / 03</p>
+      <h2>📌 次のアクション 3 選 / 関連ページ</h2>
+      <div class="counter-box">
+        <div class="row"><b>① 業者を比較したい</b><span><a href="/">運営主体 3 タイプ比較表 + 選び方 5 軸</a></span></div>
+        <div class="row"><b>② 公的窓口に相談したい</b><span><a href="https://www.mhlw.go.jp/" target="_blank" rel="noopener">総合労働相談コーナー（厚労省）無料</a></span></div>
+        <div class="row"><b>③ 利用フローを確認</b><span><a href="/lp-a/">退職代行の仕組み・費用・選び方</a></span></div>
+      </div>
+      <p><strong>関連ページ</strong></p>
+      <ul>
+        <li><a href="/">退職代行 総合ガイド Hub</a></li>
+        <li><a href="/lp-a/">退職代行の仕組み・費用・選び方</a></li>
+        <li><a href="/unemployment-insurance/">失業保険ガイド</a></li>
+        <li><a href="/damage-risk/">損害賠償リスクと対策</a></li>
+      </ul>
+      <PRBadge pageSlug="faq" label="退職代行サービスの公式サイトで無料相談する（PR）" />
+    </div>
+  </section>
+
+  <section class="lp-section" id="sec-policy">
+    <div class="container">
+      <p class="section-num">SECTION / 04</p>
+      <h2>編集ポリシー (情報源・更新日・E-E-A-T)</h2>
+      <ul>
+        <li><strong>情報源</strong>: 政府公式 e-Gov 法令検索 (民法・労働基準法・弁護士法) ・厚生労働省公式サイト ・各退職代行業者公式サイト ・退職代行関連の公開統計情報</li>
+        <li><strong>編集方針</strong>: 一次情報優先 (法令は e-Gov 直接リンク・運営形態は公式サイト確認) ・断定表現を避け推定値・公開情報の整理として記述</li>
+        <li><strong>更新頻度</strong>: 月次レビュー (法令改正・サービス内容変更時は随時更新)</li>
+        <li><strong>運営者</strong>: NY-squared (個人事業) <a href="/operator-info/">運営情報ページ</a> 参照</li>
+        <li><strong>E-E-A-T 4 原則</strong>: Experience (退職代行関連の公開情報整理) ・Expertise (法令引用 + 業界公開統計) ・Authoritativeness (政府公式 + 業者公式の一次情報のみ) ・Trustworthiness (PR 表記 + 推定値明示 + 法的助言ではない注記)</li>
+      </ul>
+      <p style="font-size:12px;color:var(--c-text-mute,#6b7280);margin-top:16px;">
+        ※本ページは2026-04-26時点の公開情報をもとに編集部が整理した参考FAQです。<strong>社労士・弁護士監修ではありません</strong>。最新の法令・サービス内容は各公式サイトでご確認ください。本ページはアフィリエイト広告（PR）を含みます。
+      </p>
+    </div>
+  </section>
+</RichLayout>

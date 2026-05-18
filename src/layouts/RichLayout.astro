@@ -1,0 +1,181 @@
+---
+/**
+ * RichLayout.astro — taishoku-info Claude Design リッチ Layout (★508 Part C 案2)
+ *
+ * ★326 DRY: public/rich-techgo.css = tenshoku-template フルコピー (md5 一致・708行・汎用プロ青系)
+ * ★365: ABC lp-implementation/RichLayout.astro 構造踏襲 + taishoku-info 固有基盤を verbatim 保持
+ *   (GSC token / Article+FAQPage+BreadcrumbList+Organization schema / CookieBanner / Analytics / OGP)
+ * ★365 訂正: 既存 Layout.astro siteUrl default の 'tenshoku-compare-info' 誤copy を
+ *   astro.config 準拠の 'taishoku-info.pages.dev' に修正 (退職代行サイト)
+ *
+ * 使用例 (各 LP の index.astro):
+ *   import RichLayout from '../../layouts/RichLayout.astro';
+ *   const breadcrumb = [{name:'ホーム',url:'/'},{name:'退職代行',url:'/'},{name:'失敗事例'}];
+ *   <RichLayout title="..." description="..." breadcrumb={breadcrumb}>
+ *     <section class="fv"> ... Claude Design class ... </section>
+ *   </RichLayout>
+ */
+import CookieBanner from '../components/CookieBanner.astro';
+import Analytics from '../components/Analytics.astro';
+
+interface BreadcrumbItem { name: string; url?: string; }
+interface FAQItem { q: string; a: string; }
+interface Props {
+  title: string;
+  description?: string;
+  publishedDate?: string;
+  modifiedDate?: string;
+  breadcrumb?: BreadcrumbItem[];
+  faq?: FAQItem[];
+}
+
+const {
+  title,
+  description = '退職代行サービスを運営主体タイプ別（弁護士／労働組合／民間）に公開情報で整理。料金目安・対応範囲・契約前の判断軸をまとめた比較情報です（PR）。',
+  publishedDate = '2026-04-25',
+  modifiedDate = '2026-05-18',
+  breadcrumb = [{ name: 'ホーム', url: '/' }],
+  faq = [],
+} = Astro.props;
+
+const siteUrl = import.meta.env.PUBLIC_SITE_URL || 'https://taishoku-info.pages.dev';
+const gscVerification = import.meta.env.PUBLIC_GSC_VERIFICATION || 'HRlkPakHcDHZPrhT1QR0bRiJrajC2-TjyqlvBl3gDsA';
+const canonical = Astro.url.href;
+---
+
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="description" content={description} />
+  <meta name="robots" content="index, follow, max-image-preview:large" />
+  {gscVerification && <meta name="google-site-verification" content={gscVerification} />}
+  <link rel="canonical" href={canonical} />
+
+  <!-- OGP -->
+  <meta property="og:title" content={title} />
+  <meta property="og:description" content={description} />
+  <meta property="og:url" content={canonical} />
+  <meta property="og:type" content="article" />
+  <meta property="og:site_name" content="退職代行サービス情報サイト（PR）" />
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <!-- 構造化データ (★384/★452・taishoku-info Layout.astro から verbatim 保持・4種フル) -->
+  <script type="application/ld+json" set:html={JSON.stringify([
+    {
+      '@context': 'https://schema.org',
+      '@type': 'Article',
+      'headline': title,
+      'description': description,
+      'url': canonical,
+      'datePublished': publishedDate,
+      'dateModified': modifiedDate,
+      'author': { '@type': 'Organization', 'name': 'NY-squared' },
+      'publisher': {
+        '@type': 'Organization',
+        'name': 'NY-squared',
+        'logo': { '@type': 'ImageObject', 'url': `${siteUrl}/logo.png` },
+      },
+      'mainEntityOfPage': { '@type': 'WebPage', '@id': canonical },
+    },
+    ...(faq.length >= 2 ? [{
+      '@context': 'https://schema.org',
+      '@type': 'FAQPage',
+      'mainEntity': faq.map((item) => ({
+        '@type': 'Question',
+        'name': item.q,
+        'acceptedAnswer': { '@type': 'Answer', 'text': item.a },
+      })),
+    }] : []),
+    ...(breadcrumb.length > 0 ? [{
+      '@context': 'https://schema.org',
+      '@type': 'BreadcrumbList',
+      'itemListElement': breadcrumb.map((item, i) => ({
+        '@type': 'ListItem',
+        'position': i + 1,
+        'name': item.name,
+        ...(item.url ? { 'item': `${siteUrl}${item.url}` } : {}),
+      })),
+    }] : []),
+    {
+      '@context': 'https://schema.org',
+      '@type': 'Organization',
+      'name': 'NY-squared',
+      'url': siteUrl,
+      'logo': `${siteUrl}/logo.png`,
+      'sameAs': ['https://x.com/NYsquaredAI'],
+    },
+  ])} />
+
+  <!-- Claude Design リッチデザイン (★508 Part C・rich-techgo.css フルコピー) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Noto+Sans+JP:wght@400;500;700;900&display=swap" />
+  <link rel="stylesheet" href="/rich-techgo.css" />
+
+  <title>{title}</title>
+  <slot name="head" />
+</head>
+<body>
+  <!-- グローバル PR表示 -->
+  <div class="pr-global-bar">
+    PR：本ページはアフィリエイト広告を利用しています | 各退職代行サービス公式サイトではありません
+  </div>
+
+  <header class="site-header">
+    <div class="container">
+      <a class="brand" href="/">NY-squared 編集部<small>taishoku-info</small></a>
+      <nav class="breadcrumb" aria-label="パンくず">
+        <ol>
+          {breadcrumb.map((b, i) => (
+            <li>
+              {b.url && i < breadcrumb.length - 1
+                ? <a href={b.url}>{b.name}</a>
+                : b.name}
+            </li>
+          ))}
+        </ol>
+      </nav>
+    </div>
+  </header>
+
+  <slot />
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <h5>NY-squared 編集部</h5>
+          <p>退職代行サービス領域の公開情報を中立的に整理する編集部です。公的機関・公開情報に基づき、特定サービスの推薦ではなく判断材料の提供を目的としています。本サイトは退職代行サービスの提供主体ではなく、相談・契約は各リンク先サービスとの間で行われます。対応範囲・結果には個別状況により差があります。</p>
+          <p>運営：NY-squared（個人事業）/ <a href="/operator-info">運営者情報</a> / <a href="/editorial-policy">編集ポリシー</a> / <a href="/privacy-policy">プライバシーポリシー</a> / <button type="button" onclick="window.showCookieSettings && window.showCookieSettings()" style="background:none;border:0;padding:0;color:inherit;text-decoration:underline;cursor:pointer;font:inherit;">🍪 Cookie設定</button></p>
+        </div>
+        <div>
+          <h5>主要 LP</h5>
+          <ul>
+            <li><a href="/osusume/">退職代行おすすめ</a></li>
+            <li><a href="/osusume-hikaku/">サービス比較</a></li>
+            <li><a href="/comparison/">運営主体タイプ別比較</a></li>
+            <li><a href="/labor-union/">労働組合型</a></li>
+            <li><a href="/bengoshi-hikaku-2026/">弁護士型比較</a></li>
+          </ul>
+        </div>
+        <div>
+          <h5>利用前の確認</h5>
+          <ul>
+            <li><a href="/shippai/">失敗事例</a></li>
+            <li><a href="/kuchikomi/">口コミの見方</a></li>
+            <li><a href="/ryokin-hikaku-2026/">料金比較</a></li>
+            <li><a href="/kangoshi/">看護師の退職代行</a></li>
+            <li><a href="/faq/">FAQ</a></li>
+          </ul>
+        </div>
+      </div>
+      <p class="copyright">© 2026 NY-squared. 本サイトはアフィリエイト広告を含む PR 記事です。運営者は本サイト経由のお申込みにより提携先より報酬を受け取ります。本サイトは退職代行サービスの提供主体ではなく、相談・契約は各リンク先サービスとの間で行われます。掲載情報は公開時点のものです。</p>
+    </div>
+  </footer>
+
+  <CookieBanner />
+  <Analytics />
+</body>
+</html>

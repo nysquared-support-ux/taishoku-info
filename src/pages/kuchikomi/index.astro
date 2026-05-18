@@ -2,8 +2,9 @@
 /**
  * 退職代行 口コミ LP (taishoku-info・★326 DRY kaisha-renraku 流用)
  * sv 推定 5,400 (★273 70+ クリア候補・A2 8.0・本日 5/15 [tPeehQZ6O7] LP 化)
+ * ★508 RichLayout 化 [fFHYHvUqIu] 2026-05-18 (content 100%保持・検証済shippaiパターン)
  */
-import Layout from '../../layouts/Layout.astro';
+import RichLayout from '../../layouts/RichLayout.astro';
 import PRBadge from '../../components/PRBadge.astro';
 import BannerAB from '../../components/BannerAB.astro';
 
@@ -11,9 +12,9 @@ const title = '退職代行 口コミ・評判完全ガイド｜主要 5 サー�
 const description = '退職代行サービス利用を検討中の方へ。主要 5 サービス (退職代行Jobs / モームリ / 弁護士法人みやびの退職代行 / 退職代行ガーディアン / 男の退職代行) の Google レビュー / みん評 / X 投稿等の公開口コミを整理した情報提供記事です (PR・アフィリエイト広告を含みます)。';
 
 const breadcrumb = [
-  { name: 'ホーム', url: 'https://taishoku-info.pages.dev/' },
-  { name: '退職代行ガイド', url: 'https://taishoku-info.pages.dev/' },
-  { name: '退職代行 口コミガイド', url: 'https://taishoku-info.pages.dev/kuchikomi/' },
+  { name: 'ホーム', url: '/' },
+  { name: '退職代行ガイド', url: '/' },
+  { name: '退職代行 口コミガイド' },
 ];
 
 const faq = [
@@ -25,156 +26,157 @@ const faq = [
 ];
 ---
 
-<Layout title={title} description={description} publishedDate="2026-05-15" modifiedDate="2026-05-15" breadcrumb={breadcrumb} faq={faq}>
-  <main class="max-w-3xl mx-auto px-4 py-8">
-    <PRBadge pageSlug="kuchikomi" />
-
-    <nav class="text-sm text-gray-500 mb-4">
-      <a href="/" class="underline">トップ</a> &gt; 退職代行 口コミガイド
-    </nav>
-
-    <h1 class="text-2xl md:text-3xl font-bold mb-4 leading-tight">
-      退職代行 口コミ・評判完全ガイド｜主要 5 サービスの実利用者口コミ整理
-    </h1>
-
-    <div class="bg-yellow-50 border-2 border-yellow-300 rounded p-3 mb-4 text-sm">
-      <strong>📢 PR表示</strong>: 本ページはアフィリエイト広告（PR）を含みます。本サイトは退職代行公式サイトではなく、公開情報を整理した一般論ベースの情報提供サイトです。本記事は退職代行効果・成功保証ではなく、個別判断は<strong>必ず各サービスの公式サイト・カウンセリング</strong>でご確認ください。
-    </div>
-
-    <p class="text-sm text-gray-600 mb-6">
-      最終確認日: 2026-05-15 / 運営者: <a href="/operator-info/" class="underline">NY-squared (個人事業)</a> / <a href="/editorial-policy/" class="underline">編集ポリシー</a> / <a href="/privacy-policy/" class="underline">プライバシーポリシー</a>
-    </p>
-
-    <section class="mb-6 bg-blue-50 border-l-4 border-blue-400 p-4 text-sm">
-      <p><strong>結論 (一般的傾向)</strong>: 退職代行サービスの口コミは <strong>Google レビュー / みん評 / X 投稿等の公開ソース複数で比較</strong>することが推奨されます。サービス選定は口コミだけでなく <strong>料金 / 弁護士法人 vs 一般 / 対応スピード / 返金保証 / アフターサポート</strong> の 6 軸で総合判断することが推奨されます。</p>
-      <p class="mt-2 text-xs text-gray-600">※ 本記事の口コミは以下を整理した <strong>2026 年 5 月時点の一般論</strong>であり、断定的事実ではありません。個別状況により大きく異なります:<br />
-      ① <a href="https://www.mhlw.go.jp/stf/seisakunitsuite/bunya/koyou_roudou/roudoukijun/zigyonushi/taishoku/index.html" target="_blank" rel="noopener" class="underline">厚生労働省「退職に関する Q&amp;A」(2026 年 5 月確認)</a><br />
-      ② <a href="https://www.nichibenren.or.jp/" target="_blank" rel="noopener" class="underline">日本弁護士連合会 (退職代行業務に関する見解)</a><br />
-      ③ 公開口コミサイト (Google レビュー・みん評・X 投稿サンプル・2026 年 5 月確認)<br />
-      ④ 各退職代行サービス公式サイト公開情報 (2026 年 5 月確認)<br />
-      最終確認日: 2026-05-15。
-      </p>
-    </section>
-
-    <div class="bg-green-50 border-l-4 border-green-400 p-3 mb-4 text-sm">
-      <strong>📌 読者別 判断分岐 (公開情報整理)</strong>:
-      <ul class="list-disc pl-5 mt-1 space-y-1">
-        <li><strong>料金重視の方</strong>: 一般退職代行 (退職代行Jobs / モームリ等) の口コミ + 料金 2-3 万円台のサービス検討推奨</li>
-        <li><strong>会社との交渉が必要な方</strong>: 弁護士法人 (弁護士法人みやびの退職代行等) の口コミ + 料金 5-7 万円台のサービス検討推奨</li>
-        <li><strong>即日退職希望の方</strong>: 24 時間対応 + 即日対応サービスの口コミ確認推奨</li>
-        <li><strong>トラブル不安な方</strong>: 返金保証 + アフターサポート充実サービスの口コミ確認推奨</li>
+<RichLayout title={title} description={description} publishedDate="2026-05-15" modifiedDate="2026-05-18" breadcrumb={breadcrumb} faq={faq}>
+  <section class="fv" aria-labelledby="fv-h1">
+    <div class="container">
+      <span class="fv-pill">退職代行 / 口コミ・評判</span>
+      <h1 id="fv-h1"><span class="accent">退職代行 口コミ・評判完全ガイド</span><br />主要 5 サービスの実利用者口コミ整理</h1>
+      <p class="lede">退職代行サービスの口コミは Google レビュー / みん評 / X 投稿等の公開ソース複数で比較することが推奨されます。サービス選定は口コミだけでなく 料金 / 弁護士法人 vs 一般 / 対応スピード / 返金保証 / アフターサポート の 6 軸で総合判断することが推奨されます。</p>
+      <ul class="fv-bullets">
+        <li>主要5サービスの公開口コミ整理</li>
+        <li>良い口コミ / 悪い口コミ (公平掲載)</li>
+        <li>口コミ評価軸 6 種</li>
+        <li>口コミ確認時の注意点5点</li>
       </ul>
-      <p class="mt-2 text-gray-600 text-xs">※ 各読者層に最適な判断軸は個別状況により大きく異なります。具体的判断は各サービスのカウンセリングへの相談を推奨します。</p>
+      <PRBadge pageSlug="kuchikomi" />
+      <p class="compare-note">※ 本記事の口コミは ① <a href="https://www.mhlw.go.jp/stf/seisakunitsuite/bunya/koyou_roudou/roudoukijun/zigyonushi/taishoku/index.html" target="_blank" rel="noopener">厚生労働省「退職に関する Q&amp;A」</a> ② <a href="https://www.nichibenren.or.jp/" target="_blank" rel="noopener">日本弁護士連合会</a> ③ 公開口コミサイト (Google レビュー・みん評・X 投稿サンプル) ④ 各退職代行サービス公式サイト公開情報 を整理した <strong>2026 年 5 月時点の一般論</strong>であり、断定的事実ではありません。最終確認日: 2026-05-15。</p>
+      <div class="fv-meta">
+        <span><b>公開日</b> 2026-05-15</span><span><b>最終更新</b> 2026-05-18</span>
+        <span><b>編集</b> NY-squared 編集部</span><span><b>所要</b> 約 5 分</span>
+      </div>
     </div>
+  </section>
 
-    <BannerAB pageSlug="kuchikomi" position="hero" />
-
-    <h2 class="text-xl font-bold mt-8 mb-3">1. 主要 5 サービスの口コミ整理 (公開情報整理)</h2>
-    <ul class="list-disc pl-6 mb-3 text-sm space-y-2">
-      <li><strong>退職代行Jobs</strong>: 料金 27,000 円台・労働組合提携で交渉可能・口コミは「対応が早い」「LINE 連絡で気軽」(Google レビュー / みん評等)</li>
-      <li><strong>モームリ</strong>: 料金 22,000 円台 (バイト・パート 12,000 円)・労働組合提携・口コミは「料金が安い」「24 時間対応」「アルバイト対応あり」</li>
-      <li><strong>弁護士法人みやびの退職代行</strong>: 料金 55,000 円台・弁護士直接対応・口コミは「トラブル対応可能」「未払い残業代請求も依頼可」</li>
-      <li><strong>退職代行ガーディアン</strong>: 料金 24,800 円台・労働組合提携・口コミは「東京都労働委員会認証」「正社員 / アルバイト同額」</li>
-      <li><strong>男の退職代行</strong>: 料金 26,800 円台・労働組合提携・男性専門・口コミは「男性視点のサポート」「業種別対応」</li>
-    </ul>
-
-    <h2 class="text-xl font-bold mt-8 mb-3">2. 良い口コミに多い評価ポイント (公開情報整理)</h2>
-    <ul class="list-disc pl-6 mb-3 text-sm space-y-1">
-      <li><strong>対応スピード</strong>: 「LINE 連絡から数時間で着手」「即日退職できた」(Google レビュー / みん評)</li>
-      <li><strong>料金透明性</strong>: 「追加費用なし」「事前見積通り」(複数サービス共通)</li>
-      <li><strong>会社との連絡不要</strong>: 「上司と顔を合わせずに退職できた」(精神的負担軽減)</li>
-      <li><strong>返金保証</strong>: 「退職できなかったら全額返金で安心」</li>
-      <li><strong>アフターサポート</strong>: 「転職支援サービス紹介あり」「失業保険手続きアドバイス」</li>
-    </ul>
-
-    <h2 class="text-xl font-bold mt-8 mb-3">3. 悪い口コミに多い指摘 (公平性のため正直掲載)</h2>
-    <ul class="list-disc pl-6 mb-3 text-sm space-y-1">
-      <li><strong>対応の機械的さ</strong>: 「マニュアル対応で温かみが薄い」(複数サービスでの口コミ)</li>
-      <li><strong>退職後のフォロー不足</strong>: 「退職完了後の連絡がない」「離職票発行確認サポートなし」</li>
-      <li><strong>料金 vs 弁護士法人差</strong>: 「一般退職代行は会社との交渉不可・追加トラブル時に弁護士法人へ依頼し直し」</li>
-      <li><strong>営業時間限定</strong>: 「24 時間と謳いつつ深夜対応が限定的」</li>
-      <li><strong>業種別対応の差</strong>: 「公務員 / 特殊業種は対応外」「正社員のみで派遣・契約社員は対象外」(一部サービス)</li>
-    </ul>
-
-    <BannerAB pageSlug="kuchikomi" position="middle" />
-
-    <h2 class="text-xl font-bold mt-8 mb-3">4. 口コミ評価軸 6 種 (公開情報整理)</h2>
-    <div class="overflow-x-auto mb-3">
-      <table class="border-collapse border border-gray-300 text-sm w-full">
-        <thead class="bg-gray-100">
-          <tr><th class="border border-gray-300 p-2">評価軸</th><th class="border border-gray-300 p-2">確認ポイント</th></tr>
-        </thead>
-        <tbody>
-          <tr><td class="border border-gray-300 p-2">料金体系</td><td class="border border-gray-300 p-2">追加費用の有無・正社員/アルバイト料金差・返金保証条件</td></tr>
-          <tr><td class="border border-gray-300 p-2">弁護士法人 vs 一般</td><td class="border border-gray-300 p-2">会社との交渉可否・未払い残業代請求可否</td></tr>
-          <tr><td class="border border-gray-300 p-2">対応スピード</td><td class="border border-gray-300 p-2">即日対応 / 翌営業日 / 24 時間対応の実体</td></tr>
-          <tr><td class="border border-gray-300 p-2">返金保証</td><td class="border border-gray-300 p-2">退職不成立時の保証範囲・条件</td></tr>
-          <tr><td class="border border-gray-300 p-2">アフターサポート</td><td class="border border-gray-300 p-2">転職支援・失業保険手続き・離職票発行サポート</td></tr>
-          <tr><td class="border border-gray-300 p-2">対応業種</td><td class="border border-gray-300 p-2">正社員/契約社員/派遣/アルバイト/公務員等の対応範囲</td></tr>
-        </tbody>
-      </table>
-    </div>
-
-    <h2 class="text-xl font-bold mt-8 mb-3">5. 口コミ確認時の注意点</h2>
-    <ol class="list-decimal pl-6 mb-3 text-sm space-y-1">
-      <li><strong>複数ソース確認</strong>: Google / みん評 / X 等の複数ソースで横断確認 (一サイトでの極端評価に依存しない)</li>
-      <li><strong>投稿時期確認</strong>: 直近 3-6 ヶ月の口コミを優先 (古い口コミはサービス内容変更可能性)</li>
-      <li><strong>サクラ口コミ識別</strong>: 投稿頻度 / 文体パターン / 過度な絶賛・批判は注意</li>
-      <li><strong>料金変動確認</strong>: 口コミ時の料金と現在料金が異なる可能性</li>
-      <li><strong>自分の業種・状況との一致</strong>: 「正社員」「アルバイト」「業種別」等の状況一致を確認</li>
-    </ol>
-
-    <BannerAB pageSlug="kuchikomi" position="footer" />
-
-    <div class="bg-amber-50 border-l-4 border-amber-400 p-3 mb-4 text-xs">
-      <strong>📌 反例 (退職代行を使わない選択肢・公開情報整理)</strong>:
-      <ul class="list-disc pl-5 mt-1 space-y-1">
-        <li>自分で退職交渉: 料金ゼロ・但し精神的負担あり</li>
-        <li>労働組合相談: 無料相談あり・但し時間かかる傾向</li>
-        <li>弁護士個別相談: 単発相談 5,000-10,000 円・但し継続対応は別途</li>
-        <li>労働基準監督署相談: 無料・但し直接退職代行はしない (情報提供のみ)</li>
+  <section class="lp-section" id="sec-1">
+    <div class="container">
+      <p class="section-num">SECTION / 01</p>
+      <h2>主要 5 サービスの口コミ整理 (公開情報整理)</h2>
+      <div class="counter-box">
+        <h3>📌 読者別 判断分岐 (公開情報整理)</h3>
+        <div class="row"><b>料金重視の方</b><span>一般退職代行 (退職代行Jobs / モームリ等) の口コミ + 料金 2-3 万円台のサービス検討推奨</span></div>
+        <div class="row"><b>会社との交渉が必要な方</b><span>弁護士法人 (弁護士法人みやびの退職代行等) の口コミ + 料金 5-7 万円台のサービス検討推奨</span></div>
+        <div class="row"><b>即日退職希望の方</b><span>24 時間対応 + 即日対応サービスの口コミ確認推奨</span></div>
+        <div class="row"><b>トラブル不安な方</b><span>返金保証 + アフターサポート充実サービスの口コミ確認推奨</span></div>
+        <p style="margin-top:12px;font-size:13px;color:var(--c-text-sub,#4a5568);">※ 各読者層に最適な判断軸は個別状況により大きく異なります。具体的判断は各サービスのカウンセリングへの相談を推奨します。</p>
+      </div>
+      <ul>
+        <li><strong>退職代行Jobs</strong>: 料金 27,000 円台・労働組合提携で交渉可能・口コミは「対応が早い」「LINE 連絡で気軽」(Google レビュー / みん評等)</li>
+        <li><strong>モームリ</strong>: 料金 22,000 円台 (バイト・パート 12,000 円)・労働組合提携・口コミは「料金が安い」「24 時間対応」「アルバイト対応あり」</li>
+        <li><strong>弁護士法人みやびの退職代行</strong>: 料金 55,000 円台・弁護士直接対応・口コミは「トラブル対応可能」「未払い残業代請求も依頼可」</li>
+        <li><strong>退職代行ガーディアン</strong>: 料金 24,800 円台・労働組合提携・口コミは「東京都労働委員会認証」「正社員 / アルバイト同額」</li>
+        <li><strong>男の退職代行</strong>: 料金 26,800 円台・労働組合提携・男性専門・口コミは「男性視点のサポート」「業種別対応」</li>
       </ul>
-      <p class="mt-2 text-gray-600">※ 退職代行は手段の一つです。状況により最適な選択肢は異なります。</p>
+      <BannerAB pageSlug="kuchikomi" position="hero" />
     </div>
+  </section>
 
-    <section class="mt-8 mb-6 bg-blue-50 border-l-4 border-blue-400 p-4 text-sm">
-      <h3 class="font-bold mb-2">まとめ (一般的傾向・個別判断はカウンセリング相談を推奨)</h3>
-      <ul class="list-disc pl-5 space-y-1">
+  <section class="lp-section alt" id="sec-2">
+    <div class="container">
+      <p class="section-num">SECTION / 02</p>
+      <h2>良い口コミに多い評価ポイント (公開情報整理)</h2>
+      <ul>
+        <li><strong>対応スピード</strong>: 「LINE 連絡から数時間で着手」「即日退職できた」(Google レビュー / みん評)</li>
+        <li><strong>料金透明性</strong>: 「追加費用なし」「事前見積通り」(複数サービス共通)</li>
+        <li><strong>会社との連絡不要</strong>: 「上司と顔を合わせずに退職できた」(精神的負担軽減)</li>
+        <li><strong>返金保証</strong>: 「退職できなかったら全額返金で安心」</li>
+        <li><strong>アフターサポート</strong>: 「転職支援サービス紹介あり」「失業保険手続きアドバイス」</li>
+      </ul>
+      <h2>悪い口コミに多い指摘 (公平性のため正直掲載)</h2>
+      <ul>
+        <li><strong>対応の機械的さ</strong>: 「マニュアル対応で温かみが薄い」(複数サービスでの口コミ)</li>
+        <li><strong>退職後のフォロー不足</strong>: 「退職完了後の連絡がない」「離職票発行確認サポートなし」</li>
+        <li><strong>料金 vs 弁護士法人差</strong>: 「一般退職代行は会社との交渉不可・追加トラブル時に弁護士法人へ依頼し直し」</li>
+        <li><strong>営業時間限定</strong>: 「24 時間と謳いつつ深夜対応が限定的」</li>
+        <li><strong>業種別対応の差</strong>: 「公務員 / 特殊業種は対応外」「正社員のみで派遣・契約社員は対象外」(一部サービス)</li>
+      </ul>
+      <BannerAB pageSlug="kuchikomi" position="middle" />
+    </div>
+  </section>
+
+  <section class="lp-section" id="sec-3">
+    <div class="container">
+      <p class="section-num">SECTION / 03</p>
+      <h2>口コミ評価軸 6 種 (公開情報整理)</h2>
+      <div class="compare-wrap">
+        <table class="compare">
+          <thead><tr><th>評価軸</th><th>確認ポイント</th></tr></thead>
+          <tbody>
+            <tr><td>料金体系</td><td>追加費用の有無・正社員/アルバイト料金差・返金保証条件</td></tr>
+            <tr><td>弁護士法人 vs 一般</td><td>会社との交渉可否・未払い残業代請求可否</td></tr>
+            <tr><td>対応スピード</td><td>即日対応 / 翌営業日 / 24 時間対応の実体</td></tr>
+            <tr><td>返金保証</td><td>退職不成立時の保証範囲・条件</td></tr>
+            <tr><td>アフターサポート</td><td>転職支援・失業保険手続き・離職票発行サポート</td></tr>
+            <tr><td>対応業種</td><td>正社員/契約社員/派遣/アルバイト/公務員等の対応範囲</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <h2>口コミ確認時の注意点</h2>
+      <ol>
+        <li><strong>複数ソース確認</strong>: Google / みん評 / X 等の複数ソースで横断確認 (一サイトでの極端評価に依存しない)</li>
+        <li><strong>投稿時期確認</strong>: 直近 3-6 ヶ月の口コミを優先 (古い口コミはサービス内容変更可能性)</li>
+        <li><strong>サクラ口コミ識別</strong>: 投稿頻度 / 文体パターン / 過度な絶賛・批判は注意</li>
+        <li><strong>料金変動確認</strong>: 口コミ時の料金と現在料金が異なる可能性</li>
+        <li><strong>自分の業種・状況との一致</strong>: 「正社員」「アルバイト」「業種別」等の状況一致を確認</li>
+      </ol>
+      <BannerAB pageSlug="kuchikomi" position="footer" />
+    </div>
+  </section>
+
+  <section class="lp-section alt" id="sec-4">
+    <div class="container">
+      <p class="section-num">SECTION / 04</p>
+      <h2>反例: 退職代行を使わない選択肢 (公開情報整理)</h2>
+      <div class="counter-box">
+        <h3>📌 退職代行を使わない選択肢</h3>
+        <div class="row"><b>自分で退職交渉</b><span>料金ゼロ・但し精神的負担あり</span></div>
+        <div class="row"><b>労働組合相談</b><span>無料相談あり・但し時間かかる傾向</span></div>
+        <div class="row"><b>弁護士個別相談</b><span>単発相談 5,000-10,000 円・但し継続対応は別途</span></div>
+        <div class="row"><b>労働基準監督署相談</b><span>無料・但し直接退職代行はしない (情報提供のみ)</span></div>
+        <p style="margin-top:12px;font-size:13px;color:var(--c-text-sub,#4a5568);">※ 退職代行は手段の一つです。状況により最適な選択肢は異なります。</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-section" id="sec-faq">
+    <div class="container">
+      <p class="section-num">SECTION / 05</p>
+      <h2>よくある質問（FAQ）</h2>
+      <div class="faq">
+        {faq.map((item) => (
+          <details><summary>{item.q}</summary><div><p>{item.a}</p></div></details>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-section alt" id="sec-summary">
+    <div class="container">
+      <p class="section-num">SECTION / 06</p>
+      <h2>まとめ (一般的傾向・個別判断はカウンセリング相談を推奨)</h2>
+      <ul>
         <li>退職代行口コミは複数ソース (Google / みん評 / X) で横断確認が推奨</li>
         <li>主要 5 サービス: 退職代行Jobs / モームリ / 弁護士法人みやび / ガーディアン / 男の退職代行</li>
         <li>判断軸 6 種: 料金 / 弁護士法人 vs 一般 / 対応スピード / 返金保証 / アフターサポート / 対応業種</li>
         <li>口コミ確認注意点: 複数ソース / 投稿時期 / サクラ識別 / 料金変動 / 状況一致</li>
         <li><strong>YMYL リスク認識</strong>: 退職は就業判断に直結する重要事項です。本記事は公開情報整理であり、個別保証・成功確約ではありません</li>
       </ul>
-    </section>
-
-    <h2 class="text-xl font-bold mt-8 mb-3">関連記事・参考リンク</h2>
-    <ul class="list-disc pl-6 mb-3 text-sm space-y-1">
-      <li><a href="/osusume-hikaku/" class="underline">退職代行 おすすめ比較ガイド</a></li>
-      <li><a href="/ryokin-hikaku-2026/" class="underline">退職代行 料金比較ガイド</a></li>
-      <li><a href="/bengoshi-hikaku-2026/" class="underline">弁護士法人 退職代行比較ガイド</a></li>
-      <li><a href="/part-time/" class="underline">パート・アルバイトの退職代行</a></li>
-      <li><a href="/kaisha-renraku/" class="underline">会社からの連絡対応ガイド</a></li>
-      <li><a href="/atobarai/" class="underline">退職代行 後払い対応ガイド</a></li>
-    </ul>
-
-    <h2 class="text-xl font-bold mt-8 mb-3">公的相談窓口・支援機関</h2>
-    <ul class="list-disc pl-6 mb-3 text-sm space-y-1">
-      <li><a href="https://www.mhlw.go.jp/stf/seisakunitsuite/bunya/koyou_roudou/roudoukijun/" target="_blank" rel="noopener" class="underline">厚生労働省 労働基準</a> — 退職に関する Q&amp;A</li>
-      <li><a href="https://www.nichibenren.or.jp/" target="_blank" rel="noopener" class="underline">日本弁護士連合会</a> — 退職代行業務に関する見解</li>
-      <li><a href="https://www.kokusen.go.jp/" target="_blank" rel="noopener" class="underline">国民生活センター</a> — 消費者相談</li>
-    </ul>
-
-    <h2 class="text-xl font-bold mt-8 mb-3">よくある質問（FAQ）</h2>
-    {faq.map((item) => (
-      <details class="mb-3 border border-gray-200 rounded p-3">
-        <summary class="font-bold cursor-pointer text-sm">{item.q}</summary>
-        <p class="mt-2 text-sm">{item.a}</p>
-      </details>
-    ))}
-
-    <p class="text-xs text-gray-500 mt-8">
-      ※ 本記事は公開情報を整理した一般論であり、個別判断には各サービスのカウンセリング相談が必要です。退職効果・成功は保証されません。
-    </p>
-  </main>
-</Layout>
+      <h2>関連記事・参考リンク</h2>
+      <ul>
+        <li><a href="/osusume-hikaku/">退職代行 おすすめ比較ガイド</a></li>
+        <li><a href="/ryokin-hikaku-2026/">退職代行 料金比較ガイド</a></li>
+        <li><a href="/bengoshi-hikaku-2026/">弁護士法人 退職代行比較ガイド</a></li>
+        <li><a href="/part-time/">パート・アルバイトの退職代行</a></li>
+        <li><a href="/kaisha-renraku/">会社からの連絡対応ガイド</a></li>
+        <li><a href="/atobarai/">退職代行 後払い対応ガイド</a></li>
+      </ul>
+      <h2>公的相談窓口・支援機関</h2>
+      <ul>
+        <li><a href="https://www.mhlw.go.jp/stf/seisakunitsuite/bunya/koyou_roudou/roudoukijun/" target="_blank" rel="noopener">厚生労働省 労働基準</a> — 退職に関する Q&amp;A</li>
+        <li><a href="https://www.nichibenren.or.jp/" target="_blank" rel="noopener">日本弁護士連合会</a> — 退職代行業務に関する見解</li>
+        <li><a href="https://www.kokusen.go.jp/" target="_blank" rel="noopener">国民生活センター</a> — 消費者相談</li>
+      </ul>
+      <PRBadge pageSlug="kuchikomi" label="退職代行サービスの公式サイトで無料相談する（PR）" />
+      <p style="font-size:12px;color:var(--c-text-mute,#6b7280);margin-top:16px;">※ 本記事は公開情報を整理した一般論であり、個別判断には各サービスのカウンセリング相談が必要です。退職効果・成功は保証されません。</p>
+    </div>
+  </section>
+</RichLayout>

@@ -30,23 +30,6 @@ const faq = [
 // ★273 + ★322 厳守: 社名は抽象記述 (No.1 等の絶対表現は使用しない)・推定値注記必須
 const services = [
   {
-    id: 'A',
-    name: 'サービスA (弁護士運営)',
-    type: '弁護士運営',
-    typeKey: 'lawyer',  // filter key
-    price: '5万円〜 (推定)',
-    priceMin: 50000,    // filter 用数値
-    sokujitsu: '◯', sokujitsuKey: true,
-    line: '◯', lineKey: true,
-    line24h: '△', line24hKey: false,
-    refund: '◯', refundKey: true,
-    union: '×', unionKey: false,
-    atobarai: '△', atobaraiKey: false,
-    publicSector: '◯', publicSectorKey: true,
-    affiliateUrl: null,  // ★T-A14c: ASP 未提携・CTA は表示しない
-    note: '法的交渉・訴訟対応が可能とされる運営形態。料金は高めだが交渉権限が広い。',
-  },
-  {
     id: 'B',
     name: '退職代行Jobs (労働組合運営)',
     type: '労働組合運営',
@@ -64,8 +47,25 @@ const services = [
     note: '退職代行Jobs (株式会社アレス・労働組合提携)。団体交渉権で有給消化・退職日交渉が可能 (非弁行為にならないとされる)。LINE 24時間相談・全国対応・返金保証ありとされる (公式情報・推定含む)。',
   },
   {
+    id: 'A',
+    name: 'サービスA (弁護士運営)',
+    type: '弁護士運営',
+    typeKey: 'lawyer',  // filter key
+    price: '5万円〜 (推定)',
+    priceMin: 50000,    // filter 用数値
+    sokujitsu: '◯', sokujitsuKey: true,
+    line: '◯', lineKey: true,
+    line24h: '△', line24hKey: false,
+    refund: '◯', refundKey: true,
+    union: '×', unionKey: false,
+    atobarai: '△', atobaraiKey: false,
+    publicSector: '◯', publicSectorKey: true,
+    affiliateUrl: null,  // ★T-A14c: ASP 未提携・CTA は表示しない
+    note: '法的交渉・訴訟対応が可能とされる運営形態。料金は高めだが交渉権限が広い。',
+  },
+  {
     id: 'C',
-    name: 'サービスC (民間 + 弁護士監修)',
+    name: 'サービスB (民間 + 弁護士監修)',
     type: '民間 (弁護士監修)',
     typeKey: 'private-lawyer',
     price: '2.5万円 (推定)',
@@ -82,7 +82,7 @@ const services = [
   },
   {
     id: 'D',
-    name: 'サービスD (組合提携)',
+    name: 'サービスC (組合提携)',
     type: '民間 (組合提携)',
     typeKey: 'private-union',
     price: '2.7万円 (推定)',
@@ -99,7 +99,7 @@ const services = [
   },
   {
     id: 'E',
-    name: 'サービスE (24時間対応)',
+    name: 'サービスD (24時間対応)',
     type: '民間運営',
     typeKey: 'private',
     price: '2万円 (推定)',

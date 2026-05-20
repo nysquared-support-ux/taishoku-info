@@ -1,0 +1,162 @@
+---
+import RichLayout from '../../layouts/RichLayout.astro';
+import PRBadge from '../../components/PRBadge.astro';
+import BannerAB from '../../components/BannerAB.astro';
+
+const title = '自分で退職 vs 退職代行｜判断の5軸とどちらを選ぶべきかの整理（2026年版・PR）';
+const description = '自分で退職を伝える場合と退職代行を使う場合の判断軸 (時間/費用/ストレス/リスク/法的権限) を5軸で整理した情報提供記事です（PR・アフィリエイト広告を含みます）。';
+
+const breadcrumb = [
+  { name: 'ホーム', url: '/' },
+  { name: '自分で退職 vs 代行' },
+];
+
+const faq = [
+  { q: '自分で退職を伝えるのと退職代行はどちらが良い？', a: '一般に「会社拒否リスク低・引き止め少・時間的余裕あり」の場合は自分で、「会社拒否リスク高・パワハラ等・即日離脱希望」の場合は退職代行が選択肢として整理されています。状況別判断が推奨されます。' },
+  { q: '退職代行の料金は自分で退職する場合に比べて高くない？', a: '一般に退職代行料金は ¥20,000-50,000 帯ですが、引き止めストレスの軽減・有給消化交渉・即日離脱の経済価値を含めると、状況によって費用対効果が高くなるケースがあるとされます。' },
+  { q: '退職代行を使うと履歴書に書く必要がある？', a: '一般に退職代行の使用は履歴書・職務経歴書に記載義務はないとされています。前職退職の事実のみが記載対象で、退職方法は次の転職活動に直接影響しないとされます。' },
+];
+---
+
+<RichLayout title={title} description={description} publishedDate="2026-05-20" modifiedDate="2026-05-20" breadcrumb={breadcrumb} faq={faq}>
+  <section class="fv" aria-labelledby="fv-h1">
+    <div class="container">
+      <span class="fv-pill">退職代行 / 判断軸</span>
+      <h1 id="fv-h1"><span class="accent">自分で退職 vs 退職代行</span><br />判断の5軸とどちらを選ぶべきかの整理</h1>
+      <p class="lede">自分で退職を伝えるか退職代行を使うかは「時間」「費用」「ストレス」「リスク」「法的権限」の 5 軸で判断することが推奨されます。本記事では公開情報・公的機関データをもとに、両者の特徴を比較し、状況別の推奨パターンを中立的に整理します。</p>
+      <ul class="fv-bullets">
+        <li>判断 5 軸 (時間/費用/ストレス/リスク/法的権限)</li>
+        <li>自分で退職する場合の進め方</li>
+        <li>退職代行を使う場合の業者選び5軸</li>
+        <li>状況別の推奨パターン</li>
+      </ul>
+      <PRBadge pageSlug="jibun-vs-daikou" />
+      <div class="fv-meta">
+        <span><b>公開日</b> 2026-05-20</span><span><b>最終更新</b> 2026-05-20</span>
+        <span><b>編集</b> NY-squared 編集部</span><span><b>所要</b> 約 6 分</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-section" id="sec-1" aria-labelledby="h2-1">
+    <div class="container">
+      <p class="section-num">SECTION / 01</p>
+      <h2 id="h2-1">判断 5 軸 (時間/費用/ストレス/リスク/法的権限)</h2>
+      <p class="section-lede">公開情報の整理として、自分で退職するか退職代行を使うかの判断軸を 5 つに整理します。</p>
+      <ol>
+        <li><strong>時間</strong>: 自分で = 退職表明 → 引継ぎ → 退職日まで連日対応必要 / 代行 = 即日意思伝達後は会社対応を業者が代理</li>
+        <li><strong>費用</strong>: 自分で = ¥0 (本人対応) / 代行 = ¥20,000-50,000 (運営形態により変動)</li>
+        <li><strong>ストレス</strong>: 自分で = 直接対面の精神的負担あり / 代行 = 対面回避でストレス軽減</li>
+        <li><strong>リスク</strong>: 自分で = 引き止め・嫌がらせ・退職拒否のリスクあり / 代行 = 業者の交渉権限に依存</li>
+        <li><strong>法的権限</strong>: 自分で = 全て本人権利として行使 / 代行 = 弁護士運営は法的交渉可・労組運営は団体交渉可・民間運営は意思伝達のみ</li>
+      </ol>
+      <BannerAB pageSlug="jibun-vs-daikou" position="hero" />
+    </div>
+  </section>
+
+  <section class="lp-section alt" id="sec-2">
+    <div class="container">
+      <p class="section-num">SECTION / 02</p>
+      <h2>自分で退職する場合の進め方</h2>
+      <div class="card-grid">
+        <div class="card"><h3>① 退職意思の表明</h3><p>民法627条で 2 週間前予告で退職可能。就業規則 (1 ヶ月前等) の遵守はマナー上推奨されます。</p></div>
+        <div class="card"><h3>② 退職届の提出</h3><p>口頭表明後、退職届を書面で提出。日付・宛名・退職理由 (「一身上の都合」)・署名押印が一般的とされます。</p></div>
+        <div class="card"><h3>③ 引き継ぎ実施</h3><p>業務マニュアル・取引先連絡先・進行案件の整理を退職日までに完了。</p></div>
+        <div class="card"><h3>④ 有給消化</h3><p>労基法39条で残有給の取得が可能。会社合意の上で消化スケジュールを調整。</p></div>
+        <div class="card"><h3>⑤ 各種書類の受領</h3><p>離職票・源泉徴収票・健康保険資格喪失証明書を退職後に受領 (郵送可)。</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-section" id="sec-3">
+    <div class="container">
+      <p class="section-num">SECTION / 03</p>
+      <h2>退職代行を使う場合 vs 自分でやる場合の比較</h2>
+      <p class="compare-note">※公開情報の整理 (推定値含む)・データ更新日: 2026-05-20・最新情報は各公式サイトで必ずご確認ください</p>
+      <div class="compare-wrap">
+        <table class="compare">
+          <thead>
+            <tr><th>判断軸</th><th>自分で退職</th><th>民間運営代行</th><th>労働組合運営代行</th><th>弁護士運営代行</th></tr>
+          </thead>
+          <tbody>
+            <tr><td><b>料金</b></td><td>¥0</td><td>¥20,000-25,000</td><td>¥25,000-30,000</td><td>¥50,000〜 (推定)</td></tr>
+            <tr><td><b>即日意思伝達</b></td><td>会社対面 (心理ハードル高)</td><td>◯</td><td>◯</td><td>◯</td></tr>
+            <tr><td><b>有給消化交渉</b></td><td>本人交渉</td><td>×</td><td>◯</td><td>◯</td></tr>
+            <tr><td><b>残業代・賠償交渉</b></td><td>本人交渉</td><td>×</td><td>△ (団体交渉範囲内)</td><td>◯ (訴訟対応可)</td></tr>
+            <tr><td><b>対面ストレス</b></td><td>高</td><td>低 (業者が代理)</td><td>低</td><td>低</td></tr>
+            <tr><td><b>引き止めリスク</b></td><td>高</td><td>中</td><td>低</td><td>低</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="section-lede">状況別の判断: <strong>引き止めリスク低・時間的余裕あり</strong> → 自分で / <strong>シンプル意思伝達のみ</strong> → 民間運営 / <strong>有給消化重視</strong> → 労組運営 / <strong>賃金未払い・損害賠償リスク</strong> → 弁護士運営。詳細な業者比較は <a href="/osusume-hikaku/">退職代行 おすすめ比較</a> ページを参照ください。</p>
+      <BannerAB pageSlug="jibun-vs-daikou" position="middle" />
+    </div>
+  </section>
+
+  <section class="lp-section alt" id="sec-4">
+    <div class="container">
+      <p class="section-num">SECTION / 04</p>
+      <h2>退職代行が選択肢になる典型 5 シーン</h2>
+      <p class="section-lede">公開情報・労務関連窓口の整理として、退職代行が選択肢として有効な典型シーンを 5 つに整理します。</p>
+      <div class="counter-box">
+        <h3>📌 退職代行が選択肢になる典型 5 シーン</h3>
+        <div class="row"><b>4-1. パワハラ・ハラスメント職場</b><span>対面意思伝達のリスクが高い場合、退職代行で即日離脱と意思伝達を実現できるとされる。詳細は <a href="/pawahara/">パワハラページ</a> も参照。</span></div>
+        <div class="row"><b>4-2. 引き止めの強い職場</b><span>過去の同僚事例で引き止めが激しいと予想される場合、業者を通した正式な意思伝達でリスク軽減できるとされる。</span></div>
+        <div class="row"><b>4-3. 即日対応希望</b><span>「明日から出社したくない」レベルの緊急性がある場合、退職代行の即日意思伝達が選択肢として整理される。詳細は <a href="/touji/">即日・当日対応ページ</a> 参照。</span></div>
+        <div class="row"><b>4-4. 有給消化を確実にしたい</b><span>労組運営・弁護士運営の退職代行で労基法39条の有給消化交渉が可能。</span></div>
+        <div class="row"><b>4-5. 残業代未払い等の交渉が必要</b><span>未払い賃金請求が必要な場合、弁護士運営の退職代行で法的交渉と退職実施を並行できる。</span></div>
+        <p style="margin-top:12px;font-size:13px;color:var(--c-text-sub,#4a5568);">※公開情報・労務関連窓口の整理 (推定値含む)・個別案件は弁護士・各業者へご相談ください。</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-section" id="sec-faq">
+    <div class="container">
+      <p class="section-num">SECTION / 05</p>
+      <h2>よくある質問（FAQ）</h2>
+      <div class="faq">
+        <details><summary>Q1. 自分で退職を伝えるのが普通では？退職代行を使うのは甘え？</summary><div><p>一般に退職代行は労働者の正当な選択肢として認められており (民法627条で代理人による意思表示も可)、「甘え」という性質のサービスではないとされます。パワハラ職場・引き止めの強い職場・即日離脱希望等の状況下では合理的な選択肢として整理されています。</p></div></details>
+        <details><summary>Q2. 退職代行を使うと会社との関係が悪くなる？</summary><div><p>一般に退職代行による意思伝達後の会社との関係は限定的になりますが、「退職」という結果は同じであり、再雇用希望でない限り影響は限定的とされます。むしろ自分で対面交渉する場合に発生する感情的対立を回避できるとされます。</p></div></details>
+        <details><summary>Q3. 自分で退職を伝えるのと退職代行、費用対効果はどう判断する？</summary><div><p>一般に「対面ストレスの軽減価値 + 即日離脱による精神衛生・残業代回避の経済価値 + 引き止めリスクの回避価値」を退職代行料金 (¥20,000-50,000) と比較する判断軸が公開情報で整理されています。短期離脱で得られる残業代回避だけでも料金を上回るケースがあるとされます。</p></div></details>
+        <details><summary>Q4. 退職代行を使った後、自分で出社しなくて済む？</summary><div><p>一般に退職代行による意思伝達後は会社対応を業者が代理するため、本人は出社不要とされる商品が多いです。ただし社内手続き (備品返却・私物回収・離職票受領等) は郵送対応が一般的とされ、依頼時に業者・会社に確認することが推奨されます。</p></div></details>
+        <details><summary>Q5. 退職代行を使うと次の転職に不利になる？</summary><div><p>一般に退職代行の使用は履歴書・職務経歴書への記載義務はなく、次の転職活動への直接的な不利益は限定的とされます。前職の在籍期間・退職理由 (「一身上の都合」) のみが転職時に問われる一般的な事項です。</p></div></details>
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-section alt" id="sec-summary">
+    <div class="container">
+      <p class="section-num">SECTION / 06</p>
+      <h2>まとめ</h2>
+      <p>自分で退職するか退職代行を使うかは ①時間 ②費用 ③ストレス ④リスク ⑤法的権限 の 5 軸で判断することが基本軸とされます。「引き止めリスク低・時間的余裕あり」の場合は自分で、「会社拒否リスク・パワハラ・即日離脱・有給消化・残業代回収」の場合は退職代行が選択肢として公開情報で整理されています。退職代行の費用 (¥20,000-50,000) は対面ストレス軽減・即日離脱・有給消化交渉・未払い賃金回収の経済価値と比較することで判断軸が明確になるとされます。</p>
+      <p><strong>状況別の推奨形態</strong>: ① <strong>引き止めリスク低・余裕あり</strong> → 自分で退職 ② <strong>シンプル意思伝達のみ</strong> → 民間運営代行 ③ <strong>有給消化重視</strong> → 労組運営代行 ④ <strong>賃金未払い・賠償交渉必要</strong> → 弁護士運営代行。</p>
+      <p style="font-size:13px;color:var(--c-text-mute,#6b7280);">※業者比較は <a href="/osusume-hikaku/">おすすめ比較</a> ・失敗回避は <a href="/shippai/">失敗例ページ</a> ・即日対応は <a href="/touji/">即日・当日対応ページ</a> もあわせてご参照ください。本記事は法的助言ではなく、特定業者を推奨するものでもありません。</p>
+      <PRBadge pageSlug="jibun-vs-daikou" label="退職代行サービスの公式サイトで無料相談する（PR）" />
+    </div>
+  </section>
+
+  <section class="lp-section" id="sec-policy">
+    <div class="container">
+      <p class="section-num">SECTION / 07</p>
+      <h2>編集ポリシー (情報源・更新日・E-E-A-T)</h2>
+      <ul>
+        <li><strong>情報源</strong>: 政府公式 e-Gov 法令検索 (民法・労働基準法・弁護士法) ・厚生労働省公式サイト ・各退職代行業者公式サイト ・退職代行関連の公開統計情報</li>
+        <li><strong>編集方針</strong>: 一次情報優先 (法令は e-Gov 直接リンク) ・断定表現を避け推定値・公開情報の整理として記述</li>
+        <li><strong>運営者</strong>: NY-squared (個人事業) <a href="/operator-info/">運営情報ページ</a> 参照</li>
+        <li><strong>E-E-A-T 4 原則</strong>: Experience (退職代行の公開情報整理) ・Expertise (法令引用 + 業界公開統計) ・Authoritativeness (政府公式 + 業者公式の一次情報のみ) ・Trustworthiness (PR 表記 + 推定値明示 + 法的助言ではない注記)</li>
+      </ul>
+
+      <h2>出典・参考情報 (法令・公的機関・公開情報)</h2>
+      <ul>
+        <li><a href="https://www.mhlw.go.jp/" target="_blank" rel="noopener">厚生労働省</a> (労働相談窓口情報)</li>
+        <li><a href="https://www.houterasu.or.jp/" target="_blank" rel="noopener">法テラス</a> (法律相談窓口)</li>
+        <li><a href="https://elaws.e-gov.go.jp/document?lawid=129AC0000000089" target="_blank" rel="noopener">民法第627条 (退職の権利・e-Gov)</a></li>
+        <li><a href="https://elaws.e-gov.go.jp/document?lawid=322AC0000000049" target="_blank" rel="noopener">労働基準法第39条 (年次有給休暇・e-Gov)</a></li>
+        <li>各退職代行業者公式サイト・最新情報は各公式サイトでご確認ください</li>
+      </ul>
+      <p style="font-size:12px;color:var(--c-text-mute,#6b7280);margin-top:16px;">
+        ※本記事は2026年5月時点の公開情報をもとに作成。最新の法令・サービス内容は各公式サイトでご確認ください。本ページはアフィリエイト広告（PR）を含みます。
+      </p>
+    </div>
+  </section>
+</RichLayout>

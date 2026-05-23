@@ -1,0 +1,116 @@
+---
+import RichLayout from '../../layouts/RichLayout.astro';
+import PRBadge from '../../components/PRBadge.astro';
+import BannerAB from '../../components/BannerAB.astro';
+
+const title = '派遣社員の退職代行ガイド｜派遣元への伝え方・契約期間の扱い・確認ポイント（2026年版・PR）';
+const description = '派遣社員 (派遣元との雇用契約) が退職代行を利用する場合の論点を、派遣元への伝達 / 派遣先との関係 / 契約期間の扱い・運営形態別の対応範囲を整理した情報提供記事です。公開情報をもとに中立に整理 (PR・アフィリエイト広告を含みます)。';
+
+const breadcrumb = [
+  { name: 'ホーム', url: '/' },
+  { name: '派遣社員の退職代行' },
+];
+
+const faq = [
+  { q: '派遣社員でも退職代行は使えますか？', a: '一般公開情報では、派遣社員も退職代行の利用対象とされる傾向。但し雇用契約は派遣元 (人材派遣会社) との間にあるため、退職の意思は派遣元に伝える形が一般的とされます。' },
+  { q: '派遣元と派遣先のどちらに連絡しますか？', a: '一般に雇用契約は派遣元との間にあるため、退職の意思は <strong>派遣元</strong> に伝えるのが一般的とされる傾向。派遣先への伝達は派遣元経由で行われるケースが多いとされます。' },
+  { q: '派遣の契約期間途中で辞められますか？', a: '派遣社員も契約社員 (有期雇用) と同様、契約期間途中の退職は <a href="https://elaws.e-gov.go.jp/document?lawid=129AC0000000089" target="_blank" rel="noopener">民法628条</a> の「やむを得ない事由」の範囲とされる傾向。事案により判断が異なるため弁護士相談が推奨されます。' },
+  { q: '派遣の更新を拒否したい場合は？', a: '更新拒否 (期間満了で契約終了) は意思伝達中心となるため民間運営でも対応可能とされる傾向。派遣元への意思伝達が中心となります。' },
+  { q: '派遣会社の登録は退職と同時に抹消されますか？', a: '一般に、特定派遣契約の終了と派遣会社の登録抹消は別の手続きとされる傾向。登録抹消を希望する場合は派遣元に別途意思表示が必要とされる傾向。' },
+  { q: '派遣の有給消化や離職票はどうなりますか？', a: '一般に有給消化は派遣元の規程により異なり、離職票は派遣元から発行されるとされる傾向。詳細は <a href="/taishokukin-uketori/">退職金受け取りガイド</a> も参考。' },
+  { q: '派遣で退職代行を使うときの料金目安は？', a: '一般的に運営形態 (弁護士 / 労働組合 / 民間) で異なり、民間 2〜2.5万円・労働組合 2.5〜3万円・弁護士 5万円〜が公開情報の目安とされる傾向。<a href="/osusume-hikaku/">おすすめ比較</a> 参照。' },
+];
+---
+
+<RichLayout title={title} description={description} publishedDate="2026-05-23" modifiedDate="2026-05-23" breadcrumb={breadcrumb} faq={faq}>
+  <section class="fv" aria-labelledby="fv-h1">
+    <div class="container">
+      <span class="fv-pill">退職代行 / 派遣社員ガイド</span>
+      <h1 id="fv-h1"><span class="accent">派遣社員の退職代行</span> ガイド<br />派遣元への伝え方・契約期間の扱い・確認ポイント</h1>
+      <p class="lede">「派遣社員でも退職代行は使えるのか」「派遣元と派遣先のどちらに連絡されるのか」と気になる方へ。本記事では、派遣社員 (派遣元との雇用契約) 特有の論点 + 退職代行の使い方 + 運営形態別の対応範囲を、公開情報をもとに中立に整理します。</p>
+      <ul class="fv-bullets">
+        <li>派遣社員の雇用契約構造 (派遣元 / 派遣先)</li>
+        <li>退職の意思伝達は派遣元が中心</li>
+        <li>契約期間途中 / 期間満了の取り扱い</li>
+        <li>運営形態別 (弁護士 / 労働組合 / 民間) の使い分け</li>
+      </ul>
+      <PRBadge pageSlug="taishoku-daikou-haken" />
+      <div class="fv-meta">
+        <span><b>公開日</b> 2026-05-23</span><span><b>最終更新</b> 2026-05-23</span>
+        <span><b>編集</b> NY-squared 編集部</span><span><b>所要</b> 約 7 分</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-section" id="sec-1">
+    <div class="container">
+      <p class="section-num">SECTION / 01</p>
+      <h2>派遣社員の雇用契約構造と退職の論点</h2>
+      <p class="section-lede">派遣社員は <strong>派遣元 (人材派遣会社) と雇用契約</strong>、派遣先 (実際の勤務先) とは指揮命令関係のみとされる構造です。退職に関する論点は派遣元との契約が主軸とされます。</p>
+      <div class="compare-wrap">
+        <table class="compare">
+          <thead><tr><th>状況</th><th>一般的な傾向 (公開情報)</th><th>選択肢の例</th></tr></thead>
+          <tbody>
+            <tr><td>契約期間満了で退職</td><td>意思伝達中心 (派遣元への通知)</td><td>民間運営でも対応可能とされる</td></tr>
+            <tr><td>契約途中 + やむを得ない事由あり</td><td>民法628条で退職余地があるとされる</td><td>弁護士 / 労働組合運営の検討</td></tr>
+            <tr><td>契約途中 + やむを得ない事由なし</td><td>派遣元との交渉 or 損害賠償リスク</td><td>弁護士相談 / 派遣元交渉</td></tr>
+            <tr><td>派遣先でのトラブル</td><td>派遣元への報告 + 別現場への移籍の選択肢</td><td>派遣元相談 → 退職判断</td></tr>
+            <tr><td>派遣登録抹消</td><td>退職とは別手続きとされる</td><td>派遣元へ別途意思表示</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="compare-note">※ 個別事案の判断は弁護士等の専門家への相談が推奨されます。<a href="https://elaws.e-gov.go.jp/document?lawid=360AC0000000088" target="_blank" rel="noopener">労働者派遣法</a>・<a href="https://elaws.e-gov.go.jp/document?lawid=129AC0000000089" target="_blank" rel="noopener">民法</a>関連参照。</p>
+      <BannerAB pageSlug="taishoku-daikou-haken" position="hero" />
+    </div>
+  </section>
+
+  <section class="lp-section alt" id="sec-2">
+    <div class="container">
+      <p class="section-num">SECTION / 02</p>
+      <h2>運営形態別の使い分け (派遣社員のケース)</h2>
+      <div class="compare-wrap">
+        <table class="compare">
+          <thead><tr><th>運営形態</th><th>対応範囲</th><th>料金 (推定)</th><th>派遣社員での目安</th></tr></thead>
+          <tbody>
+            <tr><td><b>弁護士運営</b></td><td>法的交渉・損害賠償対応も可</td><td>5万円〜 (推定)</td><td>契約途中・派遣元との法的論点あり</td></tr>
+            <tr><td><b>労働組合運営</b></td><td>団体交渉権 (有給・退職日等)</td><td>2.5〜3万円</td><td>有給消化交渉を伴う場合</td></tr>
+            <tr><td><b>民間運営 (弁護士監修)</b></td><td>意思伝達中心 (監修体制あり)</td><td>2〜2.5万円</td><td>期間満了・更新拒否で済む場合</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="section-lede">派遣社員のケースでは <strong>派遣元との契約状況 + 契約期間の段階</strong>で運営形態を選び分けるとされる傾向。詳細 <a href="/osusume-hikaku/">退職代行 おすすめ比較</a>。</p>
+    </div>
+  </section>
+
+  <section class="lp-section" id="sec-3">
+    <div class="container">
+      <p class="section-num">SECTION / 03</p>
+      <h2>利用前に確認したい 5 ポイント (派遣社員固有)</h2>
+      <div class="counter-box">
+        <h3>📌 派遣社員ケース固有のチェック</h3>
+        <div class="row"><b>3-1. 雇用契約書の確認</b><span>派遣元との契約期間・更新条件を確認します。</span></div>
+        <div class="row"><b>3-2. 退職連絡先の整理</b><span>派遣元 (人材派遣会社) への連絡が中心。派遣先 (勤務先) への伝達は派遣元経由になるケースが多いとされる傾向。</span></div>
+        <div class="row"><b>3-3. 派遣先での残務</b><span>派遣先での引継ぎ・私物・貸与物を事前に整理します。退職代行担当者と相談し対応方法を決めます。</span></div>
+        <div class="row"><b>3-4. 派遣登録の扱い</b><span>退職と派遣登録抹消は別手続き。継続登録するか抹消するかの意思を整理します。</span></div>
+        <div class="row"><b>3-5. 必要書類の受領</b><span>離職票・源泉徴収票・健康保険資格喪失証明は派遣元から発行。受領を確認します。</span></div>
+        <p style="margin-top:12px;font-size:13px;color:var(--c-text-sub,#4a5568);">※公開情報の整理です。実際の対応は派遣元・契約により異なります。</p>
+      </div>
+      <BannerAB pageSlug="taishoku-daikou-haken" position="middle" />
+    </div>
+  </section>
+
+  <section class="lp-section alt" id="sec-4">
+    <div class="container">
+      <p class="section-num">SECTION / 04</p>
+      <h2>関連ガイド</h2>
+      <div class="card-grid">
+        <div class="card"><h3>契約社員の退職代行</h3><p>有期雇用契約の論点と運営形態 (詳細 <a href="/taishoku-daikou-keiyaku-shain/">契約社員の退職代行</a>)</p></div>
+        <div class="card"><h3>正社員の退職代行</h3><p>無期雇用の論点との対比 (詳細 <a href="/seishain-taishoku-daikou/">正社員の退職代行</a>)</p></div>
+        <div class="card"><h3>退職代行の使い方</h3><p>申込みから退職完了までの 5 ステップ (詳細 <a href="/taishoku-daikou-tsukaikata/">使い方ガイド</a>)</p></div>
+        <div class="card"><h3>運営形態の比較</h3><p>弁護士 / 労働組合 / 民間 (詳細 <a href="/osusume-hikaku/">おすすめ比較</a>)</p></div>
+      </div>
+      <BannerAB pageSlug="taishoku-daikou-haken" position="footer" />
+    </div>
+  </section>
+
+</RichLayout>

@@ -1,0 +1,121 @@
+---
+import RichLayout from '../../layouts/RichLayout.astro';
+import PRBadge from '../../components/PRBadge.astro';
+import BannerAB from '../../components/BannerAB.astro';
+
+const title = '退職代行と引き止め対応｜法的根拠と回避策（2026年版・PR）';
+const description = '会社からの引き止めパターン (脅迫的説得/損害賠償示唆/有給拒否等) と法的根拠 (民法627条等)・退職代行による回避策を整理した情報提供記事です（PR・アフィリエイト広告を含みます）。';
+
+const breadcrumb = [
+  { name: 'ホーム', url: '/' },
+  { name: '退職代行と引き止め対応' },
+];
+
+const faq = [
+  { q: '会社が退職を拒否することは法律上可能ですか？', a: '一般に <strong>民法627条</strong> により期間の定めのない雇用契約は退職申入から 2 週間で雇用関係が終了する規定があるとされる傾向。会社の同意なく退職可能。但し詳細な法的判断は法テラス・弁護士相談を参照。' },
+  { q: '損害賠償を請求すると言われた場合は？', a: '一般に労働者の退職を理由とする損害賠償は認められにくいとされる傾向。具体的な業務損害と退職の因果関係の立証が必要。但し個別案件は弁護士相談が推奨される。' },
+  { q: '有給消化を拒否されたら？', a: '一般に労働基準法 39 条により有給休暇は労働者の権利とされる傾向。但し時季変更権が認められる場合がある。労組運営・弁護士運営の退職代行であれば有給交渉の余地ある業者が多いとされる。' },
+];
+---
+
+<RichLayout title={title} description={description} publishedDate="2026-05-24" modifiedDate="2026-05-24" breadcrumb={breadcrumb} faq={faq}>
+  <section class="fv" aria-labelledby="fv-h1">
+    <div class="container">
+      <span class="fv-pill">退職代行 / 引き止め対応</span>
+      <h1 id="fv-h1"><span class="accent">退職代行と引き止め対応</span><br />法的根拠と回避策の整理</h1>
+      <p class="lede">退職を申し出た際の会社からの引き止めパターン (脅迫的説得/損害賠償示唆/有給拒否等) について、<strong>民法627条・労働基準法39条</strong> 等の法的根拠を踏まえ、退職代行による回避策を中立的に整理します。</p>
+      <ul class="fv-bullets">
+        <li>引き止めパターン 5 種類</li>
+        <li>民法 627 条 (退職の自由) の整理</li>
+        <li>損害賠償請求の法的論点</li>
+        <li>運営形態別の対応可能範囲</li>
+      </ul>
+      <PRBadge pageSlug="taishoku-daikou-hikitome" />
+      <div class="fv-meta">
+        <span><b>公開日</b> 2026-05-24</span><span><b>最終更新</b> 2026-05-24</span>
+        <span><b>編集</b> NY-squared 編集部</span><span><b>所要</b> 約 6 分</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-section" id="sec-1" aria-labelledby="h2-1">
+    <div class="container">
+      <p class="section-num">SECTION / 01</p>
+      <h2 id="h2-1">引き止めパターン 5 種類</h2>
+      <p class="section-lede">退職申出時に会社が用いる代表的な引き止めパターンを公開情報の整理として紹介します。</p>
+      <ol>
+        <li><strong>感情的説得</strong>: 「人手不足」「他の人に迷惑」等の心理的プレッシャー。</li>
+        <li><strong>条件提示</strong>: 「給与アップ」「異動」「役職変更」等の条件提示で慰留。</li>
+        <li><strong>損害賠償示唆</strong>: 「会社が損する」「賠償請求」等の示唆。但し法的に認められにくい傾向。</li>
+        <li><strong>有給拒否</strong>: 「有給は使えない」「引継ぎ優先」等の拒否。労基法上の権利と矛盾。</li>
+        <li><strong>離職票発行拒否</strong>: 「離職票出さない」等の拒否。職業安定法上発行義務あり。</li>
+      </ol>
+      <BannerAB pageSlug="taishoku-daikou-hikitome" position="hero" />
+    </div>
+  </section>
+
+  <section class="lp-section alt" id="sec-2" aria-labelledby="h2-2">
+    <div class="container">
+      <p class="section-num">SECTION / 02</p>
+      <h2 id="h2-2">民法 627 条 (退職の自由) の整理</h2>
+      <div class="counter-box">
+        <h3>📌 法的根拠</h3>
+        <div class="row"><b>2-1. 民法 627 条 1 項</b><span>期間の定めのない雇用契約は当事者がいつでも解約の申入可能。申入から 2 週間で雇用関係終了。</span></div>
+        <div class="row"><b>2-2. 月給制の特例 (同条 2 項)</b><span>期間で報酬を定めた場合 (月給制等) は当期前半に解約申入することで当期末に終了。</span></div>
+        <div class="row"><b>2-3. 同意不要</b><span>退職に会社の同意は法律上不要とされる傾向。同意がなくても期間経過で雇用終了。</span></div>
+        <div class="row"><b>2-4. 詳細は弁護士相談</b><span>個別案件・期間の定めある雇用契約等は弁護士相談が推奨される。</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-section" id="sec-3" aria-labelledby="h2-3">
+    <div class="container">
+      <p class="section-num">SECTION / 03</p>
+      <h2 id="h2-3">損害賠償請求の法的論点</h2>
+      <ul>
+        <li><strong>労働者の退職は原則自由</strong>: 民法 627 条に基づく退職の自由が保障されている傾向。</li>
+        <li><strong>賠償請求の要件</strong>: 具体的な業務損害と退職の因果関係立証が必要とされる傾向。</li>
+        <li><strong>判例の一般傾向</strong>: 労働者の通常の退職を理由とする賠償請求は認められにくいとされる傾向。</li>
+        <li><strong>例外</strong>: 引継ぎ不能による具体的損害・契約違反 (期間契約中の退職等) は別途検討。</li>
+        <li><strong>個別相談</strong>: 具体的な賠償請求対応は弁護士相談・法テラスを推奨。</li>
+      </ul>
+      <BannerAB pageSlug="taishoku-daikou-hikitome" position="middle" />
+    </div>
+  </section>
+
+  <section class="lp-section alt" id="sec-4" aria-labelledby="h2-4">
+    <div class="container">
+      <p class="section-num">SECTION / 04</p>
+      <h2 id="h2-4">運営形態別の対応可能範囲</h2>
+      <div class="counter-box">
+        <h3>📌 引き止め対応の運営形態別差</h3>
+        <div class="row"><b>4-1. 民間運営</b><span>会社への退職意思伝達 (連絡代行) のみ。交渉行為は弁護士法 72 条上不可。</span></div>
+        <div class="row"><b>4-2. 労組運営</b><span>労働組合法に基づき団体交渉権あり。有給消化交渉・退職日交渉等が可能とされる傾向。</span></div>
+        <div class="row"><b>4-3. 弁護士運営</b><span>法的代理権あり。損害賠償対応・未払い請求・労働審判等の法的紛争にも対応可能。</span></div>
+        <div class="row"><b>4-4. 業者選び</b><span>引き止めリスクが高い場合 = 労組/弁護士運営優先。具体的な賠償示唆ある場合 = 弁護士運営推奨。</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-section" id="sec-5" aria-labelledby="h2-5">
+    <div class="container">
+      <p class="section-num">SECTION / 05</p>
+      <h2 id="h2-5">公的窓口・関連法令</h2>
+      <ul>
+        <li><a href="https://www.mhlw.go.jp/" target="_blank" rel="noopener">厚生労働省</a> — 労働基準監督署・労働相談窓口</li>
+        <li><a href="https://www.houterasu.or.jp/" target="_blank" rel="noopener">法テラス</a> — 法的トラブル相談 (民法 627 条等)</li>
+        <li><a href="https://www.kokusen.go.jp/" target="_blank" rel="noopener">国民生活センター</a> — 188 番</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="lp-section alt" id="sec-6" aria-labelledby="h2-6">
+    <div class="container">
+      <p class="section-num">SECTION / 06</p>
+      <h2 id="h2-6">まとめ・関連ガイド</h2>
+      <p>退職代行と引き止め対応は <strong>民法 627 条・労基法 39 条の法的根拠</strong> + 5 つの引き止めパターン理解 + 運営形態別の対応可能範囲が一般的な整理とされます。具体的な法的判断は法テラス・弁護士相談を参照してください。</p>
+      <BannerAB pageSlug="taishoku-daikou-hikitome" position="footer" />
+      <p class="compare-note">関連: <a href="/taishoku-daikou-nagare/">7ステップの流れ</a> / <a href="/taishoku-daikou-gyousha-erabikata/">業者選び方</a> / <a href="/uttaerareru/">訴えられる?</a> / <a href="/labor-union/">労組運営</a></p>
+    </div>
+  </section>
+</RichLayout>

@@ -1,0 +1,127 @@
+---
+import RichLayout from '../../layouts/RichLayout.astro';
+import PRBadge from '../../components/PRBadge.astro';
+import BannerAB from '../../components/BannerAB.astro';
+
+const title = '退職証明書の受取方法｜離職票との違いと退職代行活用（2026年版・PR）';
+const description = '退職証明書 (労働基準法22条) と離職票の違い・請求方法・退職代行を通じた受取方法を整理した情報提供記事です（PR・アフィリエイト広告を含みます）。';
+
+const breadcrumb = [
+  { name: 'ホーム', url: '/' },
+  { name: '退職証明書 受取方法' },
+];
+
+const faq = [
+  { q: '退職証明書とは何ですか？', a: '一般に <strong>労働基準法 22 条</strong> に基づき、退職者が請求した場合に会社が交付する義務がある証明書とされる傾向。記載事項は使用期間・業務種類・職位・賃金・退職理由等。' },
+  { q: '退職証明書と離職票はどう違いますか？', a: '一般に <strong>退職証明書 = 労基法 22 条 (会社発行)・離職票 = 雇用保険法 (ハローワーク経由会社発行)</strong> の違い。退職証明書は転職先提出用・離職票は失業保険申請用とされる傾向。' },
+  { q: '退職代行を使っても退職証明書はもらえますか？', a: '一般に退職代行を通じて会社に請求することで取得可能とされる傾向。多くの業者が郵送やり取りで対応。但し具体的な手続きは業者により異なるため公式公開情報で確認推奨。' },
+];
+---
+
+<RichLayout title={title} description={description} publishedDate="2026-05-24" modifiedDate="2026-05-24" breadcrumb={breadcrumb} faq={faq}>
+  <section class="fv" aria-labelledby="fv-h1">
+    <div class="container">
+      <span class="fv-pill">退職証明書 / 受取ガイド</span>
+      <h1 id="fv-h1">退職証明書の<span class="accent">受取方法</span><br />離職票との違いと退職代行活用</h1>
+      <p class="lede">退職証明書 (労働基準法 22 条) は転職先への提出等で必要となる場合がある書類です。<strong>離職票との違い・請求方法・退職代行を通じた受取</strong> を公開情報をもとに整理。</p>
+      <ul class="fv-bullets">
+        <li>退職証明書と離職票の 4 つの違い</li>
+        <li>労基法 22 条の記載事項</li>
+        <li>請求方法 3 パターン</li>
+        <li>退職代行経由の取得手順</li>
+      </ul>
+      <PRBadge pageSlug="taishoku-shoumeisho-uketori" />
+      <div class="fv-meta">
+        <span><b>公開日</b> 2026-05-24</span><span><b>最終更新</b> 2026-05-24</span>
+        <span><b>編集</b> NY-squared 編集部</span><span><b>所要</b> 約 6 分</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-section" id="sec-1" aria-labelledby="h2-1">
+    <div class="container">
+      <p class="section-num">SECTION / 01</p>
+      <h2 id="h2-1">退職証明書と離職票の 4 つの違い</h2>
+      <div class="compare-wrap">
+        <table class="compare">
+          <thead><tr><th>項目</th><th>退職証明書</th><th>離職票</th></tr></thead>
+          <tbody>
+            <tr><td>根拠法</td><td>労働基準法 22 条</td><td>雇用保険法</td></tr>
+            <tr><td>発行主体</td><td>会社 (直接)</td><td>ハローワーク経由会社</td></tr>
+            <tr><td>主用途</td><td>転職先提出・国民健康保険切替</td><td>失業保険申請</td></tr>
+            <tr><td>発行時期</td><td>退職者請求時 (時期問わず)</td><td>退職後 10-14 日が一般的</td></tr>
+            <tr><td>記載事項</td><td>使用期間/業務/職位/賃金/退職理由</td><td>賃金支払状況/離職理由等</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="compare-note">※ 公開情報の一般傾向。詳細はハローワーク・労働基準監督署で確認推奨。</p>
+      <BannerAB pageSlug="taishoku-shoumeisho-uketori" position="hero" />
+    </div>
+  </section>
+
+  <section class="lp-section alt" id="sec-2" aria-labelledby="h2-2">
+    <div class="container">
+      <p class="section-num">SECTION / 02</p>
+      <h2 id="h2-2">労基法 22 条の記載事項</h2>
+      <div class="counter-box">
+        <h3>📌 退職者が請求できる記載事項 (労基法 22 条)</h3>
+        <div class="row"><b>2-1. 使用期間</b><span>入社日〜退職日の雇用期間。</span></div>
+        <div class="row"><b>2-2. 業務の種類</b><span>担当業務・職種の記載。</span></div>
+        <div class="row"><b>2-3. その事業における地位</b><span>役職・職位の記載。</span></div>
+        <div class="row"><b>2-4. 賃金</b><span>給与額の記載。</span></div>
+        <div class="row"><b>2-5. 退職の事由 (理由含む)</b><span>退職事由 (自己都合/会社都合) ・解雇の場合はその理由。</span></div>
+        <div class="row"><b>2-6. 選択請求可</b><span>労働者が請求しない事項は記載されない (労基法 22 条 3 項)。</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-section" id="sec-3" aria-labelledby="h2-3">
+    <div class="container">
+      <p class="section-num">SECTION / 03</p>
+      <h2 id="h2-3">請求方法 3 パターン</h2>
+      <ol>
+        <li><strong>退職時に会社へ直接請求</strong>: 退職届と同時に「退職証明書交付請求書」を提出。最もスムーズ。</li>
+        <li><strong>退職後に会社へ郵送請求</strong>: 退職後でも請求可能。「退職証明書交付請求書」を郵送で送付。会社は遅滞なく交付義務 (労基法 22 条)。</li>
+        <li><strong>退職代行経由で請求</strong>: 退職代行業者を通じて会社に請求・受取。郵送やり取りで対応可能。</li>
+      </ol>
+      <BannerAB pageSlug="taishoku-shoumeisho-uketori" position="middle" />
+    </div>
+  </section>
+
+  <section class="lp-section alt" id="sec-4" aria-labelledby="h2-4">
+    <div class="container">
+      <p class="section-num">SECTION / 04</p>
+      <h2 id="h2-4">退職代行経由の取得手順</h2>
+      <div class="counter-box">
+        <h3>📌 退職代行を通じた退職証明書取得</h3>
+        <div class="row"><b>4-1. 担当者へ依頼</b><span>退職代行の打合せ時に「退職証明書も請求してほしい」と依頼。</span></div>
+        <div class="row"><b>4-2. 業者が会社へ請求</b><span>業者が退職通知と同時に退職証明書交付請求を伝達。</span></div>
+        <div class="row"><b>4-3. 記載事項の指定</b><span>転職先提出用なら退職事由・職位等の記載指定。</span></div>
+        <div class="row"><b>4-4. 郵送受取</b><span>会社から本人宛 (or 代行業者経由) で郵送送付。</span></div>
+        <div class="row"><b>4-5. 受領確認</b><span>記載内容の確認・誤記あれば再請求依頼。</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-section" id="sec-5" aria-labelledby="h2-5">
+    <div class="container">
+      <p class="section-num">SECTION / 05</p>
+      <h2 id="h2-5">公的窓口・関連法令</h2>
+      <ul>
+        <li><a href="https://www.mhlw.go.jp/" target="_blank" rel="noopener">厚生労働省</a> — 労働基準法 22 条・労働基準監督署</li>
+        <li><a href="https://www.hellowork.mhlw.go.jp/" target="_blank" rel="noopener">ハローワーク</a> — 離職票・雇用保険手続</li>
+        <li><a href="https://www.houterasu.or.jp/" target="_blank" rel="noopener">法テラス</a> — 法的トラブル相談</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="lp-section alt" id="sec-6" aria-labelledby="h2-6">
+    <div class="container">
+      <p class="section-num">SECTION / 06</p>
+      <h2 id="h2-6">まとめ・関連ガイド</h2>
+      <p>退職証明書の受取は <strong>労基法 22 条の権利</strong> + 離職票との 4 つの違い理解 + 請求方法 3 パターンが一般的とされます。退職代行経由の取得も可能とされる傾向です。詳細は労働基準監督署・ハローワークの公的窓口を参照してください。</p>
+      <BannerAB pageSlug="taishoku-shoumeisho-uketori" position="footer" />
+      <p class="compare-note">関連: <a href="/taishoku-daikou-nagare/">7ステップの流れ</a> / <a href="/taishokukin-uketori/">退職金受取</a> / <a href="/unemployment-insurance/">失業保険</a> / <a href="/taishoku-go-tenshoku/">退職後の転職</a></p>
+    </div>
+  </section>
+</RichLayout>

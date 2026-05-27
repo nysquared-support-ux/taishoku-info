@@ -15,14 +15,11 @@ const breadcrumb = [
 
 // ★T-A30c-impl-full-v2 [0yAVu8WAXu] 2026-05-07: FAQ 8 件中 4 件深化 (各 100→250 字)
 const faq = [
-  { q: '退職代行はどんな人におすすめですか?', a: '上司に直接退職を伝えにくい (パワハラ・モラハラ)、引き止めが強く何度伝えても受理されない、即日退職を希望し出社が困難な精神的・身体的状態にある方などが主な対象とされています。雇用形態 (正社員・契約・派遣・アルバイト) を問わず利用できる業者が多く、20-40 代の正社員・契約社員の利用が中心と言われています。一方、退職金・残業代等の請求が必要な方は弁護士運営、有給消化交渉が必要な方は労働組合運営を選ぶことが推奨されます。' },
-  { q: '弁護士・労働組合・民間業者で何が違いますか?', a: '弁護士運営は法的交渉が可能で、未払い賃金請求・損害賠償交渉・パワハラ慰謝料請求・訴訟対応まで広く対応可とされています (料金 3-6 万円)。労働組合運営は労働組合法に基づく団体交渉権で有給消化・退職日・退職金交渉が可能 (非弁行為にならない・料金 2-3 万円)。民間業者は意思伝達のみで交渉権はないとされ、<a href="https://elaws.e-gov.go.jp/document?lawid=324AC0000000205" target="_blank" rel="noopener" class="underline">弁護士法第72条</a> の非弁行為リスクが指摘されています (料金 1-3 万円)。' },
-  { q: '料金の相場はいくらですか?', a: '弁護士運営は 3〜6 万円、労働組合運営は 2〜3 万円、民間運営は 1〜3 万円が一般的とされています (各社公式情報・推定)。「一律料金」を謳う業者でも追加費用 (書類郵送費・出張費・オプション交渉費) が発生するケースがあるため、契約前に総額を見積書面で確認することが推奨されます。過剰に安価な業者 (1 万円以下) は、追加費用や非弁行為リスクに注意が必要とされています。' },
-  { q: '即日対応してもらえますか?', a: '多くの業者で平日 12 時までの依頼で当日連絡完了が一般的とされています。会社の営業時間 (一般に 9-17 時) 内に業者が連絡できるかが鍵となるため、平日午前中の依頼が推奨されます。深夜・休日対応を公式に明記する業者もありますが、対応条件を事前確認することが重要です。詳細は <a href="/touji/" class="underline">即日・当日対応ページ</a> を参照ください。' },
-  { q: 'LINEでの相談は可能ですか?', a: '24 時間 LINE 相談に対応する業者が一般的とされています。深夜・早朝でも相談可能なサービスが多く、心理的限界に達した状態でも即時相談が可能です。LINE 相談 + 即日決済 (クレカ等) を組み合わせることで、連絡完了までの時間を最短化できるとされています。' },
-  { q: '失敗するケースはありますか?', a: '会社が退職を拒否した場合に民間業者は交渉権がなく対応不可となるケース、追加費用請求 (書類郵送費・交渉費) で総額が想定を超えるケース、有給消化交渉ができないケース等が報告されています。回避策として労働組合運営または弁護士運営の選択、契約前の総額見積確認が推奨されます。詳細は <a href="/shippai/" class="underline">失敗例ページ</a> で 7 パターン全件を解説しています。' },
-  { q: '親バレや転職先への影響は?', a: '通常の利用では業者から第三者連絡は行われないとされていますが、①緊急連絡先 (会社登録) への会社からの連絡 ②社会保険・年金手続きで家族の保険組合に通知 ③SNS で間接的に伝わる、等のケースがあります。事前に緊急連絡先変更を申請することが回避策とされます。<a href="/oyabare/" class="underline">親バレページ</a> 参照。' },
-  { q: '退職後の書類受取はどうなりますか?', a: '離職票・源泉徴収票は会社から直接郵送されるのが一般的とされ、退職日後 1-2 週間で届くケースが多いです。住所変更が必要な場合は事前に業者経由で会社に伝達してもらうことが推奨されます。年金手帳・健康保険被保険者証等は、対面・郵送いずれかで返却・受取の調整が必要です。' },
+  { q: 'おすすめの退職代行サービスは、何を基準に選べば良いですか？', a: 'ご自身の状況に合わせて選ぶことが重要です。運営形態（弁護士、労働組合、民間企業）によって対応範囲が異なります。例えば、未払い給与の交渉を希望する場合、交渉権を持つ弁護士や労働組合が運営するサービスが適しているとされます。労働契約法に基づき、労働者の権利を適切に主張できる運営元を選ぶことが一つの基準となります。' },
+  { q: '料金が安いだけで退職代行サービスを選んでも問題ありませんか？', a: '料金の安さだけで選ぶと、必要なサービスが含まれていない可能性があります。基本料金のほか、追加料金の有無や返金保証の条件を必ず確認しましょう。消費者庁も、サービス内容や契約条件を事前に十分に確認するよう注意を促しています。総額でいくらかかるのか、事前に把握することが後悔しないためのポイントです。' },
+  { q: '「即日対応」を謳うサービスなら、本当にすぐに退職できますか？', a: '「即日対応」は「依頼したその日から業者が会社への連絡を開始する」という意味合いで使われることが一般的です。民法第627条により、退職の申し入れから2週間で雇用契約は終了するのが原則とされます。会社との合意があれば即日退職も可能ですが、法的には期間が必要となるケースがある点を理解しておく必要があります。' },
+  { q: '弁護士・労働組合・民間企業が運営する退職代行の主な違いは何ですか？', a: '最大の違いは法的に認められた業務範囲です。弁護士は交渉や訴訟代理が可能。労働組合は団体交渉権を持ちます。一方、民間企業は退職意思の「伝達」に業務が限定され、交渉は非弁行為（弁護士法違反）となる可能性があります。当サイトの比較表で、各社の運営形態とサービス範囲を詳しくご確認ください。' },
+  { q: '退職代行のおすすめランキングは、どのように活用すれば良いですか？', a: 'ランキングはあくまで参考情報として活用し、最終的にはご自身の要望と照らし合わせて判断することが賢明です。この記事では料金、運営形態、実績などの客観的な情報をもとに整理していますが、最適なサービスは個々の状況で異なります。国民生活センターへの相談事例なども参考に、複数の選択肢を比較検討することをおすすめします。' },
 ];
 
 // ★T-M4 [0yAVu8WAXu] 2026-05-07: 10 軸拡張 + filter 用属性
@@ -188,99 +185,7 @@ const services = [
     </div>
   </section>
 
-  <section class="lp-section" id="sec-3">
-    <div class="container">
-      <p class="section-num">SECTION / 03</p>
-      <h2>おすすめ 5社比較表 (10 軸・絞込対応)</h2>
-      <p class="compare-note"><strong>【広告・PR】</strong>本比較表はアフィリエイト広告を含みます。並び順・先頭表示は当編集部の総合評価および提携状況に基づくもので、客観的順位を保証するものではありません。<strong>退職代行Jobs</strong> はアクセストレード提携の実名掲載、他社は提携がないため匿名で公開情報を整理しています。比較基準: 運営主体・料金・即日対応・LINE 24h・返金保証・有給交渉・後払い・公務員対応の 10 軸 / データ更新日: 2026-05-07 / 推定値を含みます。最新・正確な情報は必ず各公式サイトでご確認ください。</p>
-      <p>退職代行サービスの選択は、料金だけでなく <strong>運営主体・即日対応・LINE 24h 対応・返金保証・有給交渉・後払い・公務員対応</strong> の複数軸を総合比較することが推奨されます。下記表は 5 社を 10 軸で整理したもので、上部フィルタにより自分の状況 (即日希望・親バレ回避・有給消化必須・公務員等) に応じて絞り込めます。<strong>料金は税込総額表示</strong>を採用していますが、追加費用 (書類郵送費・出張費・交渉費等) の有無は各社で異なるため、契約前の見積書面取得が安全です。</p>
-      <p>閲覧の推奨手順としては、まず ① 上部フィルタで運営主体 (弁護士/労働組合/民間) を絞り込み、② 料金と即日対応の有無を確認し、③ 有給交渉や返金保証の必要性に応じて再度フィルタを調整する、という 3 ステップが効率的とされています。比較表で気になる業者を 2-3 社に絞り込んだ後、各社の無料相談 (LINE/電話) で具体的な対応可否を確認するのが一般的な流れです。</p>
-      <p class="compare-note">※価格・内容は各社公式情報の整理 (推定値含む)・データ更新日: 2026-05-07・上部フィルタで絞込可能</p>
-
-    <div class="overflow-x-auto mb-4">
-      <table class="border-collapse w-full text-xs sm:text-sm" id="comparison-table">
-        <thead>
-          <tr class="bg-gray-100">
-            <th class="border px-2 py-2 text-left">サービス</th>
-            <th class="border px-2 py-2 text-left">運営</th>
-            <th class="border px-2 py-2 text-left">料金</th>
-            <th class="border px-2 py-2 text-center">即日</th>
-            <th class="border px-2 py-2 text-center">24h LINE</th>
-            <th class="border px-2 py-2 text-center">返金</th>
-            <th class="border px-2 py-2 text-center">有給交渉</th>
-            <th class="border px-2 py-2 text-center">後払い</th>
-            <th class="border px-2 py-2 text-center">公務員</th>
-            <th class="border px-2 py-2 text-center">CTA</th>
-          </tr>
-        </thead>
-        <tbody>
-          {services.map((s) => (
-            <tr
-              class="comparison-row"
-              data-type={s.typeKey}
-              data-line24h={String(s.line24hKey)}
-              data-union={String(s.unionKey)}
-              data-atobarai={String(s.atobaraiKey)}
-              data-public={String(s.publicSectorKey)}
-            >
-              <td class="border px-2 py-2 font-semibold">{s.name}</td>
-              <td class="border px-2 py-2">{s.type}</td>
-              <td class="border px-2 py-2 whitespace-nowrap">{s.price}</td>
-              <td class="border px-2 py-2 text-center">{s.sokujitsu}</td>
-              <td class="border px-2 py-2 text-center">{s.line24h}</td>
-              <td class="border px-2 py-2 text-center">{s.refund}</td>
-              <td class="border px-2 py-2 text-center">{s.union}</td>
-              <td class="border px-2 py-2 text-center">{s.atobarai}</td>
-              <td class="border px-2 py-2 text-center">{s.publicSector}</td>
-              <td class="border px-2 py-2 text-center">
-                {s.affiliateUrl ? (
-                  <a href={s.affiliateUrl} rel="nofollow sponsored" referrerpolicy="no-referrer-when-downgrade" target="_blank" class="inline-block bg-orange-500 text-white px-3 py-1 rounded text-xs font-bold hover:bg-orange-600">公式 (PR)</a>
-                ) : (
-                  <span class="text-xs text-gray-400">公式要検索</span>
-                )}
-              </td>
-            </tr>
-          ))}
-        </tbody>
-      </table>
-      <p id="empty-state" class="hidden text-center text-gray-500 py-6 text-sm">該当するサービスがありません。フィルタを緩めてください。</p>
-    </div>
-
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-6">
-      {services.map((s) => (
-        <div
-          class="service-card border-2 border-gray-200 rounded-lg p-4 hover:shadow-md transition"
-          data-type={s.typeKey}
-          data-line24h={String(s.line24hKey)}
-          data-union={String(s.unionKey)}
-          data-atobarai={String(s.atobaraiKey)}
-          data-public={String(s.publicSectorKey)}
-        >
-          <h3 class="text-base font-bold mb-1" style="color: #1E3A8A;">{s.name}</h3>
-          <p class="text-xs text-gray-500 mb-2">{s.type} / {s.price}</p>
-          <p class="text-sm mb-3">{s.note}</p>
-          <div class="flex flex-wrap gap-1 mb-3 text-xs">
-            {s.sokujitsuKey && <span class="px-2 py-0.5 bg-blue-100 text-blue-900 rounded">即日</span>}
-            {s.line24hKey && <span class="px-2 py-0.5 bg-blue-100 text-blue-900 rounded">24h LINE</span>}
-            {s.unionKey && <span class="px-2 py-0.5 bg-green-100 text-green-900 rounded">有給交渉</span>}
-            {s.atobaraiKey && <span class="px-2 py-0.5 bg-yellow-100 text-yellow-900 rounded">後払い</span>}
-            {s.refundKey && <span class="px-2 py-0.5 bg-pink-100 text-pink-900 rounded">返金保証</span>}
-          </div>
-          {s.affiliateUrl ? (
-            <a href={s.affiliateUrl} rel="nofollow sponsored" referrerpolicy="no-referrer-when-downgrade" target="_blank" class="block text-center bg-orange-500 text-white py-2 rounded font-bold hover:bg-orange-600 transition text-sm">{s.name.split(' (')[0]} 公式サイト (PR)</a>
-          ) : (
-            <p class="block text-center text-xs text-gray-500 py-2 border border-dashed border-gray-300 rounded">公式要検索 (ASP 未提携)</p>
-          )}
-          <p class="text-xs text-gray-500 mt-2">※公式情報をもとに整理 (推定含む)。最新は各公式サイト確認</p>
-        </div>
-      ))}
-    </div>
-
-      <p>各軸の意味については以下を参考にしてください: <strong>「即日」</strong>は依頼当日に会社への連絡を完了するサービス (一般的に平日午前中の依頼が条件)・<strong>「24h LINE」</strong>は深夜・早朝の相談受付対応・<strong>「返金」</strong>は退職不成立時の料金返金保証・<strong>「有給交渉」</strong>は労働基準法 39 条の有給消化を業者経由で交渉できる権利 (民間業者は不可・労働組合/弁護士のみ可)・<strong>「後払い」</strong>は退職完了後の料金支払い・<strong>「公務員」</strong>は国家/地方公務員の退職対応可否 (民法ではなく公務員法が適用されるため対応業者が限定的) です。</p>
-      <p class="compare-note">※各社 CTA リンクは A8.net・アクセストレード等の提携承認後に有効化されます (本ページは比較情報の整理段階・<a href="/operator-info/">運営情報</a>)。</p>
-      <BannerAB pageSlug="osusume" position="middle" />
-    </div>
-  </section>
+  <section class="lp-section"><h2>退職代行サービス「おすすめ」の選び方：3つの基本視点</h2><p>退職代行サービスを選ぶ際には、いくつかの基本的な視点から検討することが推奨されます。まず最も重要なのが「運営形態の理解」です。サービスは主に弁護士法人、労働組合、民間企業の3種類に大別され、それぞれ法的に可能な業務範囲が異なります。例えば、未払い給与や有給休暇取得に関する「交渉」を希望する場合、弁護士法に基づき交渉権を持つ弁護士、または労働組合法に基づき団体交渉権を持つ労働組合が運営するサービスを選ぶ必要があります。次に「料金体系の透明性」です。表示されている料金で全てのサービスが完結するのか、オプション料金や追加費用が発生しないかを確認することが不可欠です。最後に「自身の状況整理」です。単に退職の意思を伝えてほしいのか、あるいは会社と交渉してほしい事項があるのかを明確にすることで、自分に合ったサービスを効率的に絞り込むことができます。これらの基本視点を押さえることが、適切なサービス選びの第一歩とされます。</p></section>
 
   <section class="lp-section alt" id="sec-4">
     <div class="container">
@@ -297,60 +202,7 @@ const services = [
     </div>
   </section>
 
-  <section class="lp-section" id="sec-5">
-    <div class="container">
-      <p class="section-num">SECTION / 05</p>
-      <h2>よくある失敗例 + 回避策 (5 例・★T-A30c-impl-full 拡張)</h2>
-      <p>退職代行を利用する上で発生しうる失敗パターンの多くは、<strong>運営主体の理解不足・契約条件の確認漏れ・依頼タイミングの誤り</strong>の 3 種類に集約されるとされています。下記 5 例は実際に SNS や口コミで報告される代表的なパターンを整理したものですが、いずれも事前確認で予防可能なケースが多く、契約前の見積取得・運営形態確認・無料相談での質問が回避策の中心となります。</p>
-      <p>特に注意すべきは <strong>「民間業者の交渉権限制限」</strong> (#1, #3) で、これは弁護士法第 72 条 (非弁行為禁止) および労働基準法第 39 条 (有給消化権) の法的制約に基づくため、業者の努力では解消できません。会社からの拒否や有給消化交渉を必要とする場合は、運営主体を「労働組合」または「弁護士」に限定して選ぶことが推奨されます。</p>
-      <div class="compare-wrap">
-        <table class="compare">
-          <thead>
-            <tr>
-              <th>#</th>
-              <th>失敗パターン</th>
-              <th>原因 (一般的とされる)</th>
-              <th>回避策</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td><b>1</b></td>
-              <td>民間業者で会社拒否時の対応不可</td>
-              <td>民間業者は<a href="https://elaws.e-gov.go.jp/document?lawid=324AC0000000205" target="_blank" rel="noopener">弁護士法第72条</a>により交渉権なし・「伝達」のみ</td>
-              <td>弁護士運営または労働組合運営を選択</td>
-            </tr>
-            <tr>
-              <td><b>2</b></td>
-              <td>追加費用請求</td>
-              <td>「一律料金」謳う業者でも書類郵送費・交渉費・出張費等の追加</td>
-              <td>契約前に総額確認・見積もり書面取得</td>
-            </tr>
-            <tr>
-              <td><b>3</b></td>
-              <td>有給消化できず</td>
-              <td>民間業者は<a href="https://elaws.e-gov.go.jp/document?lawid=322AC0000000049" target="_blank" rel="noopener">労働基準法第39条</a>の有給消化交渉権なし</td>
-              <td>労働組合運営 (団体交渉権あり) or 弁護士運営を選択</td>
-            </tr>
-            <tr>
-              <td><b>4</b></td>
-              <td>親バレ・会社からの連絡</td>
-              <td>緊急連絡先・社会保険手続きで間接的に伝わるケース</td>
-              <td>事前に緊急連絡先変更を会社に申請・<a href="/oyabare/">親バレページ</a>参照</td>
-            </tr>
-            <tr>
-              <td><b>5</b></td>
-              <td>即日対応できず</td>
-              <td>平日 12 時以降の依頼・休日依頼で会社営業時間外に当たる</td>
-              <td>平日午前中の依頼推奨・<a href="/touji/">即日・当日対応ページ</a>参照</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-      <p>失敗を予防する上で最も重要なのは <strong>「契約前の確認 3 点セット」</strong>です: ① 運営主体 (弁護士/組合/民間) の交渉権限を理解する ② 料金総額 (追加費用含む) を見積書面で確認する ③ 即日対応の依頼条件 (平日午前中等) を事前確認する。この 3 点を満たすことで、上記 5 パターンの大半は予防可能とされています。</p>
-      <p class="compare-note">※詳細は <a href="/shippai/">失敗例ページ</a> で 7 パターン全件を解説しています。</p>
-    </div>
-  </section>
+  <section class="lp-section"><h2>後悔しないための退職代行選び 5つの具体的ステップ</h2><p>適切な退職代行サービスを選ぶための具体的な5つのステップを解説します。この手順を踏むことで、ご自身の状況に最適な選択ができる可能性が高まります。</p><ul><li><strong>ステップ1：自身の要望を明確化する</strong><br>「退職の意思を伝える」以外に何を依頼したいか（例：有給消化の交渉、未払い残業代の請求、離職票の請求など）を具体的にリストアップします。</li><li><strong>ステップ2：要望に基づき運営形態を絞り込む</strong><br>ステップ1で明確にした要望に基づき、運営形態を選びます。金銭請求などの交渉事を含む場合は、非弁行為のリスクを避けるため、弁護士または労働組合が運営するサービスに絞り込むのが一般的です。</li><li><strong>ステップ3：複数サービスを客観的に比較検討する</strong><br>料金、実績、対応スピード、口コミなどを比較します。特に、返金保証の有無や適用条件は重要な判断材料です。消費者庁も、契約前にサービス内容を十分に確認するよう呼びかけています。</li><li><strong>ステップ4：無料相談を活用して最終確認する</strong><br>多くのサービスが提供しているLINEや電話での無料相談を利用し、担当者の対応やサービスの詳細、疑問点を最終確認します。ここでの対応品質も業者選びの参考になります。</li><li><strong>ステップ5：契約内容に納得して申し込む</strong><br>全ての条件に納得できたら、正式に契約・申し込みを行います。必要な情報を正確に伝え、スムーズな手続き開始に備えましょう。</li></ul><div class="benefit-summary" style="background:#f5f5dc;padding:1rem;border-left:4px solid #d4a373;margin:1rem 0;"><strong>💡 このガイドに沿ってサービスを検討するメリット (★544 ②):</strong><ul><li>適切な手順で選ぶことで、退職手続きにかかる時間や精神的な負担を軽減できる可能性が期待されます。</li><li>自身の要望とサービスの対応範囲を事前に照合することで、追加料金などの予期せぬコスト発生リスクを抑えることにつながります。</li><li>法的根拠（弁護士法、労働組合法など）に基づいたサービスを選択することで、トラブルを避け、安心して退職手続きを進められる可能性が高まります。</li></ul></div></section>
 
   <!-- ★T-A30c-impl-full 完全版 [0yAVu8WAXu] 2026-05-07: 新規 h2 6 業者形態別比較表 (★T-A13 体現) -->
   <section class="lp-section alt" id="sec-6">

@@ -1,0 +1,203 @@
+---
+import RichLayout from '../../layouts/RichLayout.astro';
+import PRBadge from '../../components/PRBadge.astro';
+import BannerAB from '../../components/BannerAB.astro';
+
+const title = '退職代行 試用期間｜法的根拠と利用手順・即日対応の徹底ガイド (2026年版・PR)';
+const description = '試用期間中でも退職代行は使えるのか不安な方へ。民法627条と労働基準法に基づく法的根拠、試用期間特有の懸念事項の実態、業者形態別の対応比較、利用手順を整理した情報提供記事です (PR・アフィリエイト広告を含みます)。個別判断は弁護士・各業者へご相談ください。';
+
+const breadcrumb = [
+  { name: 'ホーム', url: '/' },
+  { name: '退職代行', url: '/' },
+  { name: '試用期間' },
+];
+
+const faq = [
+  { q: '試用期間中ですが、法的に退職は可能ですか？', a: 'はい、可能です。試用期間中であっても労働契約は成立しており、民法第627条に基づき、労働者には退職の自由が保障されています。原則として、退職の意思を伝えてから2週間で雇用契約は終了すると定められています。会社の合意があれば即日退職も可能です。' },
+  { q: '試用期間中に退職代行を使うと損害賠償を請求されませんか？', a: '社会通念上、労働者が退職することで会社に損害を与えたと認められるケースは極めて稀であり、請求される可能性は低いとされます。ただし、無断欠勤を続けた場合などは例外も考えられます。国民生活センターも退職代行に関する注意喚起を行っており、心配な場合は弁護士資格を持つ業者への相談が推奨されます。' },
+  { q: '試用期間開始から14日以内なら即日退職できますか？', a: '「14日以内の解雇予告不要」は会社側の都合による解雇規定（労働基準法第21条）であり、労働者からの退職申し出には適用されません。労働者側からの退職は、期間の定めのない雇用契約の場合、原則として民法第627条に基づき2週間前の告知が必要とされます。' },
+  { q: '試用期間中に退職代行を利用する際の注意点は何ですか？', a: '会社との交渉が必要になる可能性を考慮し、交渉権を持つ弁護士または労働組合が運営する代行業者を選ぶことが重要です。また、保険証や備品などの返却物を事前に準備しておくことで、手続きがスムーズに進む傾向にあります。詳細は本記事の「業者形態別の試用期間対応」もご参照ください。' },
+  { q: '結局、試用期間でも退職代行を使えば円満に辞められますか？', a: '法的な退職の権利を行使する上で、退職代行は有効な手段の一つとされます。特に、引き止めや直接対話が困難な場合に、第三者を介することでスムーズな退職が期待できます。厚生労働省も労働相談窓口を設けていますが、迅速な対応を望む場合は専門業者への相談が選択肢となります。' },
+];
+---
+
+<RichLayout title={title} description={description} publishedDate="2026-05-08" modifiedDate="2026-05-18" breadcrumb={breadcrumb} faq={faq}>
+  <section class="fv" aria-labelledby="fv-h1">
+    <div class="container">
+      <span class="fv-pill">退職代行 / 試用期間</span>
+      <h1 id="fv-h1"><span class="accent">退職代行 試用期間</span><br />法的根拠と利用手順・即日対応の徹底ガイド</h1>
+      <p class="lede">試用期間中でも退職代行は法的に問題なく利用可能とされています。試用期間も正式な雇用契約の一部であり、民法第 627 条による退職の権利が保障されているためです。本記事では法的根拠・試用期間特有の懸念事項の実態・業者形態別の対応比較・利用手順を整理します。</p>
+      <ul class="fv-bullets">
+        <li>試用期間中でも使える法的根拠 (民法627条・判例)</li>
+        <li>業者形態別の試用期間対応</li>
+        <li>利用の流れ (4 ステップ)</li>
+        <li>業者選び 3 条件 + FAQ 8 件</li>
+      </ul>
+      <PRBadge pageSlug="shiyou" />
+      <div class="fv-meta">
+        <span><b>公開日</b> 2026-05-08</span><span><b>最終更新</b> 2026-05-18</span>
+        <span><b>編集</b> NY-squared 編集部</span><span><b>所要</b> 約 7 分</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-section" id="sec-intro">
+    <div class="container">
+      <p class="section-num">SECTION / 00</p>
+      <h2>はじめに (PR表示・前提)</h2>
+      <p><strong>📢 PR表示</strong>: 本ページはアフィリエイト広告 (PR) を含みます。本サイトは法律事務所・退職代行業者公式サイトではなく、公開情報を整理した一般論ベースの情報提供サイトです。本記事は法的助言・効果保証ではなく、個別案件の判断は<strong>必ず弁護士・各業者に直接ご相談ください</strong>。</p>
+      <p style="font-size:13px;color:var(--c-text-sub,#4a5568);">最終確認日: 2026-05-08 / 公開情報の整理であり、特定サービスを推奨するものではありません。<br />運営者: <a href="/operator-info/">NY-squared (個人事業)</a> / <a href="/editorial-policy/">編集ポリシー</a> / <a href="/privacy-policy/">プライバシーポリシー</a></p>
+      <p><strong>結論</strong>: 試用期間中でも退職代行は法的に問題なく利用可能とされています。試用期間も正式な雇用契約の一部であり、民法第 627 条による退職の権利が保障されているためです。</p>
+      <p>本記事では、試用期間中の退職代行利用における法的根拠・試用期間特有の懸念事項の実態・業者形態別の対応比較・利用手順を整理します。試用期間特有のリスク (内定取消・退職金・転職影響等) も法的実態を踏まえて解説します。</p>
+      <BannerAB pageSlug="shiyou" position="hero" />
+    </div>
+  </section>
+
+  <section class="lp-section alt" id="sec-1">
+    <div class="container">
+      <p class="section-num">SECTION / 01</p>
+      <h2>試用期間中でも退職代行は使えるのか (法的根拠)</h2>
+      <h3>1-1. 試用期間も「正式な雇用契約」の期間</h3>
+      <p>試用期間とは、企業が採用した社員の適性を見極めるための期間ですが、<strong>試用期間中であっても雇用契約は正式に発生している</strong>とされています。労働基準法および民法の観点から、試用期間中の従業員は正社員と同じ法的保護を受けることが、最高裁判所判例 (三菱樹脂事件・1973 年) で確認されています。</p>
+      <p>したがって、退職代行サービスを利用して退職を申し出ることは、試用期間中であっても何ら問題ありません。雇用契約期間中の退職権の行使という意味では、試用期間中も正社員と同等の手続きで退職可能とされています。</p>
+      <h3>1-2. 民法 627 条に基づく退職の権利</h3>
+      <p><a href="https://elaws.e-gov.go.jp/document?lawid=129AC0000000089" target="_blank" rel="noopener">民法第 627 条第 1 項</a> は「当事者が雇用の期間を定めなかったときは、各当事者は、いつでも解約の申入れをすることができる。この場合において、雇用は、解約の申入れの日から 2 週間を経過することによって終了する」と定めています。</p>
+      <p>つまり、退職を申し出てから原則 2 週間で雇用契約を終了させることができ、この権利は試用期間中も同様に適用されます。退職代行サービスはこの法的根拠に基づき、依頼者に代わって退職の意思を会社に伝える役割を担います。</p>
+      <h3>1-3. 試用期間特有のリスクは実際には起きにくい</h3>
+      <p>試用期間中の退職で心配される主な懸念事項と、その法的実態を整理します。</p>
+      <div class="compare-wrap">
+        <table class="compare">
+          <thead>
+            <tr><th>懸念事項</th><th>法的実態</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>内定取り消し (次の転職先への影響)</td><td>企業が次の採用先に連絡する法的手段はなく、実例もほぼないとされる</td></tr>
+            <tr><td>違約金・損害賠償の請求</td><td><a href="https://elaws.e-gov.go.jp/document?lawid=322AC0000000049" target="_blank" rel="noopener">労働基準法第 16 条</a>により違約金契約は無効・賠償請求は限定的</td></tr>
+            <tr><td>社会保険の即時失効</td><td>退職翌日から国保・扶養への切替手続きが可能 (14 日以内)</td></tr>
+            <tr><td>退職金の不支給</td><td>就業規則による・試用期間中は対象外が一般的</td></tr>
+            <tr><td>職務経歴書への記載</td><td>試用期間中の在籍は省略・簡潔記載が一般的</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <BannerAB pageSlug="shiyou" position="middle" />
+    </div>
+  </section>
+
+  <section class="lp-section"><h2>試用期間における退職の法的根拠</h2><p>試用期間とは、法的には「解約権留保付労働契約」と解釈される期間です。<br>これは、本採用が不適格と判断された場合に会社側が契約を解約できる権利を留保している状態を指しますが、労働者側の退職の自由を制限するものではありません。<br>期間の定めのない雇用契約である限り、労働者からの退職の申し出は、民法第627条第1項により保障されています。<br>この条文では「当事者が雇用の期間を定めなかったときは、各当事者は、いつでも解約の申入れをすることができる。<br>この場合において、雇用は、解約の申入れの日から二週間を経過することによって終了する。<br>」と規定されており、試用期間中であっても、退職の意思を伝えてから最短2週間で雇用関係を終了させることが法的に可能とされています。<br>退職代行サービスは、この法的な権利に基づき、本人に代わって退職の意思表示を行う役割を担います。</p></section>
+
+  <section class="lp-section alt" id="sec-3">
+    <div class="container">
+      <p class="section-num">SECTION / 03</p>
+      <h2>試用期間中の利用の流れ (4 ステップ)</h2>
+      <div class="counter-box">
+        <h3>📌 利用の流れ 4ステップ</h3>
+        <div class="row"><b>Step 1: LINE/電話で無料相談 (試用期間の状況伝達)</b><span>公式サイトまたは LINE で無料相談・試用期間中であること・即日対応可否確認・料金総額・追加費用の有無を確認。試用期間特有の事情 (社会保険切替・退職金・転職予定等) を業者に伝達します。</span></div>
+        <div class="row"><b>Step 2: 必要情報の提供</b><span>勤務先情報・上司氏名・雇用形態 (試用期間)・希望退職日・有給残日数 (基本ゼロが多い)・貸与品の返却方法を業者に伝達。試用期間中の場合は雇用契約書・就業規則の写しを準備しておくとスムーズです。</span></div>
+        <div class="row"><b>Step 3: 業者が会社へ連絡</b><span>業者が依頼者に代わって会社の人事・上司に退職の意思を伝達。電話・メール・FAX 等で通知し、返却物・書類受取の方法を調整。最短 30 分〜数時間が一般的とされています。</span></div>
+        <div class="row"><b>Step 4: 完了報告と退職後手続き</b><span>連絡完了後、LINE またはメールで報告。退職後は健康保険切替 (14 日以内・国保 or 家族扶養)・雇用保険申請 (試用期間 6 ヶ月未満は対象外の可能性あり)・住民税確認・源泉徴収票受取確認・私物返却を順次対応します。</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-section"><h2>試用期間中に退職代行を利用する具体的な手順</h2><p>試用期間中に退職代行サービスを利用する場合、一般的な手順は以下の通りです。まず、自身の状況に対応可能か、弁護士や労働組合が運営する信頼できる業者を選び、無料相談を活用します。次に、正式に依頼契約を結び、担当者へ会社の連絡先、雇用形態、試用期間の条件などの情報を共有します。その後、退職代行業者から会社へ退職の意思が伝えられ、退職日や必要書類、貸与物の返却方法などについて調整が行われます。この際、有給休暇の消化に関する交渉も代行業者に依頼できる場合があります。最終的に、指示に従って健康保険証や制服、PCなどの貸与物を郵送で返却し、会社から離職票などの書類が届けば手続きは完了です。手続き中に万が一トラブルが発生した場合、労働基準監督署などの公的機関も相談窓口を設けていますが、業者に依頼することで迅速な対応が期待されます。<br>利用の際は、以下の点に留意することが推奨されます。</p><ul><li><strong>交渉権の有無を確認する:</strong> 未払い賃金や有給消化の交渉を希望する場合、弁護士または労働組合が運営する業者である必要があります。</li><li><strong>連絡事項を整理しておく:</strong> 業者に伝えるべき情報（雇用契約日、上司の連絡先など）を事前にまとめておくと、手続きが円滑に進みます。</li><li><strong>貸与物の準備:</strong> 返却が必要なものをリストアップし、いつでも郵送できる状態にしておくと、退職後のやり取りを最小限に抑えられます。</li></ul><div class="benefit-summary" style="background:#f5f5dc;padding:1rem;border-left:4px solid #d4a373;margin:1rem 0;"><strong>💡 このサービスを検討するメリット (★544 ②):</strong><ul><li>会社の上司や人事担当者と直接話すことなく退職手続きを進められるため、精神的な負担や時間的コストを大幅に削減できる可能性があります。</li><li>弁護士や労働組合が法的な根拠に基づいて対応するため、不当な引き止めや一方的な要求といったトラブルを未然に防ぐ効果が期待されます。</li><li>依頼した当日から出社が不要となる即日対応を掲げる業者も多く、心身の限界を感じている状況から迅速に離脱できる安心感が得られます。</li></ul></div></section>
+
+  <section class="lp-section alt" id="sec-faq">
+    <div class="container">
+      <p class="section-num">SECTION / 05</p>
+      <h2>よくある質問（FAQ）</h2>
+      <div class="faq">
+        {faq.map((item) => (
+          <details><summary>{item.q}</summary><div><p set:html={item.a} /></div></details>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-section" id="sec-summary">
+    <div class="container">
+      <p class="section-num">SECTION / 06</p>
+      <h2>まとめ</h2>
+      <p>試用期間中の退職代行利用は、①民法 627 条による退職権 ②労基法第 16 条による違約金禁止 ③最高裁判例による正社員同等の法的保護 という 3 つの法的根拠に基づき問題なく利用可能とされています。<br>試用期間特有の不安 (内定取消・違約金・転職影響等) も法的実態としては発生しにくいケースが多いです。</p>
+      <p><strong>状況別の推奨形態</strong>: ① <strong>会社が引止め強い・パワハラ等</strong> → 弁護士運営または労働組合運営 (交渉権限あり) ② <strong>会社が比較的協力的・トラブル少なめ</strong> → 民間運営 (¥10,000-30,000 帯) ③ <strong>即日退職希望</strong> → 24h LINE 対応 + 即日実績明示業者。試用期間中は経済的余裕が少ないため、料金総額の透明性が業者選定の重要軸となります。</p>
+      <p><strong>試用期間中の退職 行動 3 ステップ</strong>: <strong>STEP 1</strong> 雇用契約書・就業規則の確認 (退職金・違約金条項の有無) → <strong>STEP 2</strong> <a href="/osusume-hikaku/">5 社比較ページ</a> で 2-3 社に絞込・無料相談で試用期間対応可否確認 → <strong>STEP 3</strong> 見積書面取得後に最終決定し、Step 1-4 (本ページ上部) の手順で進行。</p>
+      <p style="font-size:13px;color:var(--c-text-mute,#6b7280);">※即日対応詳細は <a href="/touji/">即日・当日対応ページ</a> ・親バレ回避は <a href="/oyabare/">親バレページ</a> ・失敗例は <a href="/shippai/">失敗例ページ</a> もあわせてご参照ください。本記事は法的助言ではなく、特定業者を推奨するものでもありません。</p>
+      <PRBadge pageSlug="shiyou" label="退職代行サービスの公式サイトで無料相談する（PR）" />
+    </div>
+  </section>
+
+  <section class="lp-section alt" id="sec-policy">
+    <div class="container">
+      <p class="section-num">SECTION / 07</p>
+      <h2>編集ポリシー (情報源・更新日・E-E-A-T)</h2>
+      <ul>
+        <li><strong>情報源</strong>: 政府公式 e-Gov 法令検索 (民法・労働基準法・弁護士法) ・厚生労働省公式サイト ・最高裁判所判例データベース ・各退職代行業者公式サイト ・退職代行関連の公開統計情報</li>
+        <li><strong>編集方針</strong>: 一次情報優先 (法令は e-Gov 直接リンク・判例は最高裁データベース確認) ・断定表現を避け推定値・公開情報の整理として記述</li>
+        <li><strong>更新頻度</strong>: 月次レビュー (法令改正・判例変更・サービス内容変更時は随時更新)</li>
+        <li><strong>運営者</strong>: NY-squared (個人事業) <a href="/operator-info/">運営情報ページ</a> 参照</li>
+        <li><strong>E-E-A-T 4 原則</strong>: Experience (退職代行関連の公開情報整理) ・Expertise (法令引用 + 判例 + 業界公開統計) ・Authoritativeness (政府公式 + 最高裁 + 業者公式の一次情報のみ) ・Trustworthiness (PR 表記 + 推定値明示 + 法的助言ではない注記)</li>
+      </ul>
+
+      <h2>出典・参考情報 (法令・公的機関・公開情報)</h2>
+      <p>本記事の信頼性確保のため、以下の一次情報を出典として参照しています。法令引用は政府公式 e-Gov 法令検索データベースから直接リンク、公的機関情報は各省庁公式サイトのみを採用しています。</p>
+      <ul>
+        <li><a href="https://elaws.e-gov.go.jp/document?lawid=129AC0000000089" target="_blank" rel="noopener">民法第 627 条 (退職の権利・e-Gov)</a> — 期間の定めのない雇用契約の解約・本記事の試用期間中退職権の根拠</li>
+        <li><a href="https://elaws.e-gov.go.jp/document?lawid=322AC0000000049" target="_blank" rel="noopener">労働基準法 (e-Gov)</a> — 第 16 条 (違約金禁止) ・第 21 条 (試用期間 14 日内解雇の予告義務免除) ・第 39 条 (有給休暇)</li>
+        <li><a href="https://elaws.e-gov.go.jp/document?lawid=324AC0000000205" target="_blank" rel="noopener">弁護士法第 72 条 (非弁行為の禁止・e-Gov)</a> — 民間業者の交渉権限制限の根拠</li>
+        <li><a href="https://www.mhlw.go.jp/" target="_blank" rel="noopener">厚生労働省公式サイト</a> — 試用期間制度・労働相談窓口・労働基準監督署情報</li>
+        <li><a href="https://www.houterasu.or.jp/" target="_blank" rel="noopener">法テラス (日本司法支援センター)</a> — 無料法律相談・退職トラブル相談窓口</li>
+        <li>最高裁判所判例 (三菱樹脂事件・昭和 48 年 12 月 12 日) — 試用期間中の従業員も正社員と同様の法的保護を受ける根拠</li>
+        <li>各退職代行業者公式サイト — 試用期間対応実績・料金・運営形態の一次情報</li>
+      </ul>
+      <p style="font-size:12px;color:var(--c-text-mute,#6b7280);margin-top:16px;">
+        ※本記事は 2026 年 5 月時点の公開情報をもとに作成。最新の法令・判例・サービス内容は各公式サイトでご確認ください。各社の正式名・公式 URL・特商法表記等は提携承認後に順次反映します (PR・アフィリエイト広告を含みます)。本記事は法的助言・効果保証ではなく、特定業者を推奨するものでもありません。具体的な利用判断は無料相談などを活用し、複数業者を比較した上でご自身の責任において選択してください。
+      </p>
+    </div>
+  </section>
+
+  <section class="lp-section alt" id="sec-asp-pr" aria-labelledby="h2-asp-pr">
+    <div class="container">
+      <p class="section-num">SECTION / PR・広告</p>
+      <h2 id="h2-asp-pr">【PR・広告】退職代行Jobs (株式会社アレス) の公開情報整理</h2>
+      <p class="section-lede"><strong>本セクションは PR・広告枠</strong> です。アフィリエイト広告として「退職代行Jobs (株式会社アレス)」の公開情報を整理しています。他事業者との優劣判断ではなく、広告主の公開情報として参照ください。</p>
+      <div class="branch-grid">
+      <article class="branch"><span class="tag">特徴①</span><h4>退職代行Jobs</h4><p>退職代行Jobs (株式会社アレス運営) は退職代行サービスの一つとされる傾向。会社との連絡を代行する選択肢として検討対象とされています。</p></article>
+      <article class="branch"><span class="tag">特徴②</span><h4>LINE相談対応</h4><p>LINE での相談対応の傾向。気軽に相談できる選択肢とされる傾向。</p></article>
+      <article class="branch"><span class="tag">特徴③</span><h4>顧問弁護士監修</h4><p>顧問弁護士監修の傾向。法的トラブル懸念のある方の検討材料が一般的です。</p></article>
+      <article class="branch"><span class="tag">特徴④</span><h4>全国対応</h4><p>全国対応の傾向。地方在住者も利用可能な選択肢のケースが多く見られます。</p></article>
+      <article class="branch"><span class="tag">特徴⑤</span><h4>プライバシー配慮</h4><p>個人情報保護法遵守の傾向。会社・家族にバレにくい配慮があると公表されています。</p></article>
+      <article class="branch"><span class="tag">注意</span><h4>事前確認推奨事項</h4><p>具体的料金・対応範囲・成功事例は公式公開情報で確認推奨。「100%退職成功」等の断定は不可とされています。</p></article>
+      </div>
+      <div class="cta-block"><p class="cta-note"><span class="pr-tag">PR</span>退職代行Jobs (株式会社アレス) の最新の条件は公式サイトでご確認ください。</p><BannerAB pageSlug="enhance-cta" position="enhance" /><p class="btn-cta-sub">※ 公式サイトに遷移します。</p></div>
+    </div>
+  </section>
+
+  <section class="lp-section" id="sec-koteki-laws" aria-labelledby="h2-koteki-laws">
+    <div class="container">
+      <p class="section-num">SECTION / 公的窓口・関連法令</p>
+      <h2 id="h2-koteki-laws">公的窓口・関連法令</h2>
+      <p class="section-lede">トラブル時・疑問時は公的窓口の活用が推奨されます。</p>
+      <ul>
+        <li><a href="https://www.mhlw.go.jp/general/sosiki/chihou/" target="_blank" rel="noopener">総合労働相談コーナー</a> - 厚生労働省・労働相談</li>
+        <li><a href="https://www.houterasu.or.jp/" target="_blank" rel="noopener">法テラス</a> - 法律相談</li>
+        <li><a href="https://www.bengoshi.or.jp/" target="_blank" rel="noopener">日本弁護士連合会</a> - 弁護士相談</li>
+        <li><a href="https://www.mhlw.go.jp/" target="_blank" rel="noopener">厚生労働省</a> - 労働基準法監督</li>
+        <li>消費生活センター - 188 (いやや!) で最寄りセンター案内</li>
+      </ul>
+      <p class="section-lede" style="margin-top:1rem">関連法令: <strong>労働基準法</strong> (退職の自由・2週間前申告)・<strong>民法 627条</strong> (期間定めない雇用の解約)・<strong>弁護士法 72条</strong> (非弁行為禁止)・<strong>個人情報保護法</strong>。本ページは公開情報の整理であり、特定事業者の公式サイトではありません。アフィリエイト広告（PR）を含みます。</p>
+    </div>
+  </section>
+  <section class="lp-section" id="sec-related" aria-labelledby="related-h">
+    <div class="container">
+      <p class="section-num">関連記事</p>
+      <h2 id="related-h">関連する記事</h2>
+      <ul class="related-links" style="line-height:1.9;">
+        <li><a href="https://taishoku-info.pages.dev/arbeit-taishoku/">アルバイト退職代行 完全ガイド｜学生バイト・短期バイト・掛け持ちバイトの活用判断（2026年5月時点・公開情報整理・PR）</a></li>
+        <li><a href="https://taishoku-info.pages.dev/atobarai/">退職代行の後払いOK｜手元資金ゼロでも即日退職できる選び方（2026年版・PR）</a></li>
+        <li><a href="https://taishoku-info.pages.dev/bengoshi-hikaku-2026/">退職代行は弁護士に頼むべき？費用・メリット・選び方を徹底解説2026年版（PR）</a></li>
+        <li><a href="https://taishoku-info.pages.dev/black-kigyou/">ブラック企業からの退職に退職代行が選ばれる理由｜法的根拠と対処法（2026年版・PR）</a></li>
+        <li><a href="https://taishoku-info.pages.dev/bonus-before/">ボーナス受取後の退職｜計画的なタイミングと退職代行活用5軸（2026年版・PR）</a></li>
+      </ul>
+    </div>
+  </section>
+
+</RichLayout>

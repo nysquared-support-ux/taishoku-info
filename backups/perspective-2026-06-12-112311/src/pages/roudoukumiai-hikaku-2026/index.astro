@@ -1,0 +1,234 @@
+---
+import RichLayout from '../../layouts/RichLayout.astro';
+import PRBadge from '../../components/PRBadge.astro';
+import BannerAB from '../../components/BannerAB.astro';
+
+const title = '退職代行の労働組合タイプとは？弁護士・民間との違いと選び方を完全解説2026年版（PR）';
+const description = '退職代行の労働組合タイプ（団体交渉権・即日加入・即日対応）の仕組みと5ケース別の使うべき判断基準・弁護士/民間との料金/対応範囲比較・法的根拠を公開情報ベースで整理した情報提供記事です（PR・アフィリエイト広告を含みます）。';
+
+const breadcrumb = [
+  { name: 'ホーム', url: '/' },
+  { name: '退職代行', url: '/' },
+  { name: '労働組合比較2026' },
+];
+
+const faq = [
+  { q: '労働組合の退職代行は本当に合法なのですか？', a: 'はい、労働組合による退職代行は、労働組合法で保障された「団体交渉権」を根拠としており、適法な活動とされます。労働者の代理として会社と交渉することは、同法で認められた組合の正当な活動です。ただし、訴訟対応など弁護士のみに許された業務は行えません。' },
+  { q: '労働組合に即日加入して、すぐに退職代行を依頼することは可能ですか？', a: '多くの労働組合型退職代行サービスでは、オンラインで加入手続きが完結し、即日での代行依頼が可能な体制を整えています。一般的には、ウェブサイトから申し込み後、担当者との簡単なヒアリングを経て、組合への加入と同時に会社への連絡を開始する流れとなります。' },
+  { q: '労働組合の退職代行では、どこまでの交渉が可能ですか？', a: '団体交渉権に基づき、退職の意思伝達、退職日の調整、有給休暇の消化、未払い給与の請求といった交渉が可能です。しかし、会社への損害賠償請求や、交渉が決裂した場合の法廷闘争といった裁判手続きは弁護士の独占業務であり、労働組合では対応できません。' },
+  { q: '会社から労働組合への加入を理由に不利益な扱いを受けませんか？', a: '労働組合法第7条では、労働者が労働組合の組合員であることを理由として解雇その他の不利益な取扱いをすることを「不当労働行為」として禁止しています。そのため、組合加入を理由に会社が不利益な扱いをすることは法律で禁じられており、労働者は保護されます。' },
+  { q: '弁護士や民間業者と比べ、労働組合を選ぶメリットは何ですか？', a: '最大のメリットは、弁護士に依頼するより費用を抑えつつ、民間業者にはない「団体交渉権」を行使できる点です。これにより、単なる意思伝達に留まらず、有給消化や未払い賃金に関する交渉が法的な後ろ盾をもって可能になります。コストと対応範囲のバランスを重視する場合に適した選択肢と言えるでしょう。' },
+];
+
+// ★441-EXT 強化: 労働組合タイプ 3 サービス Service 構造化
+const itemListSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'ItemList',
+  'name': '退職代行 労働組合タイプ 主要サービス比較',
+  'description': '労働組合運営または提携の退職代行サービス 3 件 (公開情報整理)',
+  'itemListOrder': 'https://schema.org/ItemListUnordered',
+  'itemListElement': [
+    {'@type': 'ListItem', 'position': 1, 'item': {'@type': 'Service', 'name': '退職代行Jobs', 'serviceType': '合同労組 + 弁護士監修退職代行', 'description': '料金 ¥27,000・有給/残業代交渉対応・LINE 24h・全額返金保証', 'audience': {'@type': 'Audience', 'audienceType': '有給消化・残業代交渉が必要な正社員/契約社員'}}},
+    {'@type': 'ListItem', 'position': 2, 'item': {'@type': 'Service', 'name': '退職代行モームリ', 'serviceType': '労組提携 + 弁護士監修退職代行', 'description': '料金 ¥22,000 (正社員) / ¥12,000 (パート/アルバイト)・最安帯', 'audience': {'@type': 'Audience', 'audienceType': '料金重視・基本的な退職通知が必要なユーザー'}}},
+    {'@type': 'ListItem', 'position': 3, 'item': {'@type': 'Service', 'name': '退職代行ニコイチ', 'serviceType': '民間 + 弁護士監修退職代行', 'description': '料金 ¥27,000・創業 18 年実績豊富 (民間タイプだが比較対象)', 'audience': {'@type': 'Audience', 'audienceType': 'シンプル退職を希望するユーザー'}}},
+  ],
+};
+---
+
+<RichLayout title={title} description={description} publishedDate="2026-05-12" modifiedDate="2026-05-18" breadcrumb={breadcrumb} faq={faq}>
+  <script type="application/ld+json" set:html={JSON.stringify(itemListSchema)}></script>
+  <section class="fv" aria-labelledby="fv-h1">
+    <div class="container">
+      <span class="fv-pill">退職代行 / 労働組合比較2026</span>
+      <h1 id="fv-h1"><span class="accent">退職代行の労働組合タイプとは？</span><br />弁護士・民間との違いと選び方を完全解説2026年版</h1>
+      <p class="lede">退職代行の労働組合タイプは <strong>団体交渉権 (労組法第6条) で有給消化・残業代交渉が可能</strong>・即日加入/対応・料金 2〜3 万円が特徴です。民間運営 (1〜3 万円・交渉権なし) と弁護士運営 (3〜6 万円・全範囲対応) のバランス型として推奨されます。</p>
+      <ul class="fv-bullets">
+        <li>労働組合タイプの仕組みと法的根拠</li>
+        <li>3 タイプ比較 (労働組合・弁護士・民間)</li>
+        <li>使うべき 5 つのケース</li>
+        <li>限界とデメリット + 代表サービス比較</li>
+      </ul>
+      <PRBadge pageSlug="roudoukumiai-hikaku-2026" />
+      <div class="fv-meta">
+        <span><b>公開日</b> 2026-05-12</span><span><b>最終更新</b> 2026-05-18</span>
+        <span><b>編集</b> NY-squared 編集部</span><span><b>所要</b> 約 7 分</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-section" id="sec-intro">
+    <div class="container">
+      <p class="section-num">SECTION / 00</p>
+      <h2>はじめに (PR表示・前提)</h2>
+      <p style="font-size:13px;color:var(--c-text-sub,#4a5568);">※本記事は公的機関・各退職代行サービス公式の公開情報整理であり、特定サービスを推奨するものではありません。<br /><strong>情報源</strong>: <a href="https://www.mhlw.go.jp/" target="_blank" rel="noopener">厚生労働省</a> ・<a href="https://elaws.e-gov.go.jp/document?lawid=324AC0000000174" target="_blank" rel="noopener">労組法 (e-Gov)</a> ・<a href="https://www.kokusen.go.jp/" target="_blank" rel="noopener">国民生活センター</a> ・各退職代行サービス公式 / <strong>最終レビュー日</strong>: 2026-05-12 / <strong>編集体制</strong>: NY-squared 編集部・公的機関一次情報優先 (<a href="/editorial-policy/">編集ポリシー</a> 参照)</p>
+      <p><strong>📢 PR表示</strong>: 本ページはアフィリエイト広告（PR）を含みます。本サイトは退職代行業者の公式サイトではなく、公開情報を整理した一般論ベースの情報提供サイトです。本記事は法的助言・効果保証ではなく、個別案件の判断は<strong>必ず弁護士・各業者にご相談ください</strong>。</p>
+      <p style="font-size:13px;color:var(--c-text-sub,#4a5568);">最終確認日: 2026-05-12 / 公開情報の整理であり、特定サービスを推奨するものではありません。<br />運営者: <a href="/operator-info/">NY-squared (個人事業)</a> / <a href="/editorial-policy/">編集ポリシー</a> / <a href="/privacy-policy/">プライバシーポリシー</a></p>
+      <p><strong>結論</strong>: 退職代行の労働組合タイプは <strong>団体交渉権 (労組法第6条) で有給消化・残業代交渉が可能</strong>・即日加入/対応・料金 2〜3 万円が特徴です。民間運営 (1〜3 万円・交渉権なし) と弁護士運営 (3〜6 万円・全範囲対応) のバランス型として推奨されます。</p>
+      <p>本記事では仕組みと法的根拠・5 ケース別の使うべき判断基準・3 タイプ比較・限界とデメリットを整理します。</p>
+      <div class="counter-box">
+        <h3>🎯 労働組合タイプ 退職代行を確認</h3>
+        <div class="row"><b>サービス特性</b><span>完全無料相談 / LINE 24h 対応 / 即日加入・即日対応可</span></div>
+      </div>
+      <BannerAB pageSlug="roudoukumiai-hikaku-2026" position="hero" />
+    </div>
+  </section>
+
+  <section class="lp-section alt" id="sec-1">
+    <div class="container">
+      <p class="section-num">SECTION / 01</p>
+      <h2>退職代行「労働組合タイプ」とは何か（仕組みと法的根拠）</h2>
+      <h3>1-1. 即日加入・即日対応の仕組み</h3>
+      <p>一般的に労働組合運営または提携の退職代行サービスでは、申し込み時にユーザーが <strong>労働組合に即日加入</strong> し、組合員として団体交渉権を行使する仕組みとされています。これにより民間運営では対応不可な交渉が可能になります。</p>
+      <h3>1-2. 団体交渉権でできること・できないこと</h3>
+      <ul>
+        <li><strong>できること</strong>: 有給消化交渉・残業代未払い交渉・会社との退職条件交渉・組合員としての法的保護</li>
+        <li><strong>できないこと</strong>: 訴訟対応・損害賠償請求の法律行為・労働審判 (これらは弁護士運営必須)</li>
+      </ul>
+      <p>法的根拠は <a href="https://elaws.e-gov.go.jp/document?lawid=324AC0000000174" target="_blank" rel="noopener">労働組合法 第6条</a> の団体交渉権・<a href="https://elaws.e-gov.go.jp/document?lawid=322AC0000000049" target="_blank" rel="noopener">労働基準法 第39条</a> の有給休暇取得権に基づくとされています。</p>
+    </div>
+  </section>
+
+  <section class="lp-section"><h2>退職代行における労働組合の役割と法的根拠</h2><p>退職代行サービスにおける「労働組合タイプ」とは、労働組合法に基づき設立された労働組合が、組合員となった依頼者の代理人として会社側と退職に関する交渉を行うサービスを指します。<br>労働者が個人で会社と対等に交渉することは、心理的な負担や知識の面で困難な場合があります。<br>そこで、労働者の地位向上を目的とする労働組合が、憲法で保障された団結権や団体交渉権を背景に、本人に代わって退職手続きを進めます。<br>この「団体交渉権」が労働組合タイプの退職代行の核心であり、会社側は正当な理由なくこの交渉を拒否できないと労働組合法第7条で定められています。<br>これにより、単に退職の意思を伝えるだけでなく、有給休暇の取得や未払い賃金の支払いといった、労働条件に関する具体的な交渉を行うことが可能になると一般に解されています。<br>これは、あくまで「使者」として意思伝達を行う民間業者との大きな違いです。</p></section>
+
+  <section class="lp-section alt" id="sec-3">
+    <div class="container">
+      <p class="section-num">SECTION / 03</p>
+      <h2>労働組合タイプの退職代行を使うべき 5 つのケース</h2>
+      <h3>ケース①: 未消化有給が 5 日以上ある</h3>
+      <p>団体交渉権で有給消化交渉が可能。日給 1 万円 × 5 日 = 5 万円の実質回収可能性があり、労組料金 2〜3 万円との費用対効果が高いとされています。</p>
+      <h3>ケース②: 残業代・深夜手当の未払いがある</h3>
+      <p>タイムカード等の証拠があれば、団体交渉で未払い分の請求が可能とされています。但し訴訟対応は弁護士運営に切り替えが必要です。</p>
+      <h3>ケース③: 「損害賠償請求する」と脅されている</h3>
+      <p>団体交渉で会社に対する圧力をかけることが可能。但し本格的な訴訟対応が予想される場合は弁護士運営併用が推奨されます。</p>
+      <h3>ケース④: 民間業者の「交渉不可」に不安</h3>
+      <p>民間運営は団体交渉権がなく、会社が拒否した場合に対応できないリスクがあります。労組運営なら交渉継続が可能です。</p>
+      <h3>ケース⑤: ハラスメント加害者と直接話したくない</h3>
+      <p>団体交渉で組合員として保護されながら、加害者と直接接触せずに退職手続きを進めることが可能です。</p>
+      <BannerAB pageSlug="roudoukumiai-hikaku-2026" position="middle" />
+    </div>
+  </section>
+
+  <section class="lp-section"><h2>労働組合タイプ退職代行の選び方と具体的な交渉範囲</h2><p>労働組合が運営する退職代行サービスを選ぶ際は、いくつかの点を比較検討することが重要です。<br>まず料金体系です。<br>追加料金なしの一律価格か、交渉内容によってオプション料金が発生するかを確認しましょう。<br>次に対応速度や営業時間も重要です。<br>深夜や早朝でも相談可能か、即日対応を明言しているかなど、ご自身の状況に合ったサービスを選びましょう。<br>また、労働組合としての活動実績や、過去の退職代行事例の豊富さも信頼性を判断する材料になります。<br>国民生活センターによれば、退職代行に関する相談も寄せられているため、運営元が明確で信頼できる組合を選ぶことが不可欠です。<br>労働組合タイプは、弁護士に依頼するよりも費用を抑えられ、かつ民間業者にはない団体交渉権を持つ点が特徴です。<br>具体的に可能な交渉範囲は以下の通りです。</p><ul><li>退職届の提出代行と退職日の調整交渉</li><li>未消化の有給休暇の取得に関する交渉</li><li>未払いの給与や残業代の支払い請求に関する交渉</li><li>会社からの貸与物の返却に関する手続きの調整</li></ul><p>ただし、会社側が交渉に一切応じない場合や、損害賠償請求などの法的な紛争に発展した場合は、弁護士でなければ対応できない点も理解しておく必要があります。</p><div class="benefit-summary" style="background:#f5f5dc;padding:1rem;border-left:4px solid #d4a373;margin:1rem 0;"><strong>💡 このサービスを検討するメリット (★544 ②):</strong><ul><li>弁護士に依頼するよりも費用を抑えつつ、労働組合法に守られた形で退職交渉を進められる可能性が期待されます。</li><li>民間業者では難しいとされる未払い給与や有給消化の「交渉」を、団体交渉権を背景に行える点が特徴です。</li><li>労働組合法という明確な法的根拠に基づいて活動するため、非弁行為のリスクを避け、適法な手続きで退職を進める安心感が得られます。</li></ul></div></section>
+
+  <section class="lp-section alt" id="sec-5">
+    <div class="container">
+      <p class="section-num">SECTION / 05</p>
+      <h2>労働組合タイプ 代表サービス比較表（2026年版）</h2>
+      <div class="compare-wrap">
+        <table class="compare">
+          <thead>
+            <tr><th>サービス</th><th>運営形態</th><th>料金</th><th>特徴 (公開情報)</th></tr>
+          </thead>
+          <tbody>
+            <tr><td><b>退職代行Jobs</b></td><td>合同労組 + 弁護士監修</td><td><b>¥27,000</b></td><td>有給/残業代交渉対応・LINE 24h・全額返金保証</td></tr>
+            <tr><td><b>退職代行モームリ</b></td><td>労組提携 + 弁護士監修</td><td>¥22,000 (正社員)</td><td>最安帯・パート/アルバイト ¥12,000</td></tr>
+            <tr><td><b>退職代行ニコイチ</b></td><td>民間 + 弁護士監修</td><td>¥27,000</td><td>創業 18 年実績 (民間タイプ・比較対象)</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-section" id="sec-faq">
+    <div class="container">
+      <p class="section-num">SECTION / 06</p>
+      <h2>よくある質問（FAQ）</h2>
+      <div class="faq">
+        {faq.map((item) => (
+          <details><summary>{item.q}</summary><div><p set:html={item.a} /></div></details>
+        ))}
+      </div>
+      <div class="counter-box">
+        <h3>🎯 労働組合タイプ 退職代行を確認 (再掲)</h3>
+        <div class="row"><b>向いている人</b><span>有給消化 / 残業代交渉が必要・即日対応希望</span></div>
+        <div class="row"><b>サービス特性</b><span>完全無料相談 / LINE 24h 対応 / 即日加入・即日対応可</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-section alt" id="sec-summary">
+    <div class="container">
+      <p class="section-num">SECTION / 07</p>
+      <h2>まとめ</h2>
+      <p>退職代行の労働組合タイプは <strong>団体交渉権 (労組法第6条) で有給消化・残業代交渉が可能</strong> な点が最大の特徴です。料金 2〜3 万円で民間運営 (1〜3 万円・交渉権なし) と弁護士運営 (3〜6 万円・全範囲対応) のバランス型として推奨されます。</p>
+      <p><strong>使うべき 5 ケース</strong>: ① 未消化有給 5 日以上 ② 残業代未払い ③ 損害賠償の脅し ④ 民間の交渉不可不安 ⑤ ハラスメント加害者回避。</p>
+      <p><strong>選び方 3 ステップ</strong>: <strong>STEP 1</strong> 有給消化/残業代交渉の必要性確認 → <strong>STEP 2</strong> 訴訟リスク有無 (有なら弁護士併用) → <strong>STEP 3</strong> 料金 + 対応範囲 + サポート時間で比較 → <a href="/osusume-hikaku/">退職代行 比較ページ</a> も参考に最終判断。</p>
+      <p style="font-size:13px;color:var(--c-text-mute,#6b7280);">※業者選びは <a href="/osusume-hikaku/">退職代行 比較ページ</a> ・弁護士タイプは <a href="/bengoshi-hikaku-2026/">弁護士比較2026年版</a> ・料金相場は <a href="/ryokin-hikaku-2026/">料金相場2026年版</a> もあわせてご参照ください。本記事は退職成功保証・効果保証ではなく、特定業者を推奨するものでもありません。</p>
+      <PRBadge pageSlug="roudoukumiai-hikaku-2026" label="退職代行サービスの公式サイトで無料相談する（PR）" />
+    </div>
+  </section>
+
+  <section class="lp-section" id="sec-policy">
+    <div class="container">
+      <p class="section-num">SECTION / 08</p>
+      <h2>編集ポリシー (情報源・更新日・E-E-A-T)</h2>
+      <ul>
+        <li><strong>情報源</strong>: 厚生労働省「労働基準法解釈例規」・労働組合法・JILPT (労働政策研究・研修機構)・国民生活センター・各退職代行サービス公式サイト</li>
+        <li><strong>編集方針</strong>: 一次情報優先 (公的機関 + 業界統計)・断定表現を避け推定値・公開情報の整理として記述</li>
+        <li><strong>更新頻度</strong>: 月次レビュー (退職代行業界動向変化時は随時更新)</li>
+        <li><strong>運営者</strong>: NY-squared (個人事業) <a href="/operator-info/">運営情報ページ</a> 参照</li>
+        <li><strong>E-E-A-T 4 原則</strong>: Experience / Expertise (業界公開統計 + 法令データ) / Authoritativeness (公的機関 + 業界公式の一次情報) / Trustworthiness (PR 表記 + 推定値明示 + 効果保証ではない注記)</li>
+      </ul>
+
+      <h2>出典・参考情報 (公的機関・公開情報)</h2>
+      <ul>
+        <li><a href="https://www.mhlw.go.jp/" target="_blank" rel="noopener">厚生労働省公式サイト</a> — 労働基準法解釈例規・労働市場分析</li>
+        <li><a href="https://elaws.e-gov.go.jp/document?lawid=324AC0000000174" target="_blank" rel="noopener">労働組合法 (e-Gov)</a> — 団体交渉権の法的根拠</li>
+        <li><a href="https://elaws.e-gov.go.jp/document?lawid=322AC0000000049" target="_blank" rel="noopener">労働基準法 (e-Gov)</a> — 有給休暇取得権の法的根拠</li>
+        <li><a href="https://www.jil.go.jp/" target="_blank" rel="noopener">JILPT</a> — 退職動向分析・労使紛争統計</li>
+        <li><a href="https://www.kokusen.go.jp/" target="_blank" rel="noopener">国民生活センター</a> — 退職代行関連の消費者相談情報 (★435 体現)</li>
+        <li>各退職代行サービス公式サイト — 料金・対応範囲・サポート時間の一次情報</li>
+      </ul>
+      <p style="font-size:12px;color:var(--c-text-mute,#6b7280);margin-top:16px;">
+        ※本記事は 2026 年 5 月時点の公開情報をもとに作成。最新の退職代行サービス情報は各業者公式サイトでご確認ください。本記事は退職成功保証ではなく、特定業者を推奨するものでもありません。本ページはアフィリエイト広告（PR）を含みます。
+      </p>
+    </div>
+  </section>
+
+  <section class="lp-section alt" id="sec-asp-pr" aria-labelledby="h2-asp-pr">
+    <div class="container">
+      <p class="section-num">SECTION / PR・広告</p>
+      <h2 id="h2-asp-pr">【PR・広告】退職代行Jobs (株式会社アレス) の公開情報整理</h2>
+      <p class="section-lede"><strong>本セクションは PR・広告枠</strong> です。アフィリエイト広告として「退職代行Jobs (株式会社アレス)」の公開情報を整理しています。他事業者との優劣判断ではなく、広告主の公開情報として参照ください。</p>
+      <div class="branch-grid">
+      <article class="branch"><span class="tag">特徴①</span><h4>退職代行Jobs</h4><p>退職代行Jobs (株式会社アレス運営) は退職代行サービスの一つとされる傾向。会社との連絡を代行する選択肢として検討対象とされています。</p></article>
+      <article class="branch"><span class="tag">特徴②</span><h4>LINE相談対応</h4><p>LINE での相談対応の傾向。気軽に相談できる選択肢とされる傾向。</p></article>
+      <article class="branch"><span class="tag">特徴③</span><h4>顧問弁護士監修</h4><p>顧問弁護士監修の傾向。法的トラブル懸念のある方の検討材料が一般的です。</p></article>
+      <article class="branch"><span class="tag">特徴④</span><h4>全国対応</h4><p>全国対応の傾向。地方在住者も利用可能な選択肢のケースが多く見られます。</p></article>
+      <article class="branch"><span class="tag">特徴⑤</span><h4>プライバシー配慮</h4><p>個人情報保護法遵守の傾向。会社・家族にバレにくい配慮があると公表されています。</p></article>
+      <article class="branch"><span class="tag">注意</span><h4>事前確認推奨事項</h4><p>具体的料金・対応範囲・成功事例は公式公開情報で確認推奨。「100%退職成功」等の断定は不可とされています。</p></article>
+      </div>
+      <div class="cta-block"><p class="cta-note"><span class="pr-tag">PR</span>退職代行Jobs (株式会社アレス) の最新の条件は公式サイトでご確認ください。</p><BannerAB pageSlug="enhance-cta" position="enhance" /><p class="btn-cta-sub">※ 公式サイトに遷移します。</p></div>
+    </div>
+  </section>
+
+  <section class="lp-section" id="sec-koteki-laws" aria-labelledby="h2-koteki-laws">
+    <div class="container">
+      <p class="section-num">SECTION / 公的窓口・関連法令</p>
+      <h2 id="h2-koteki-laws">公的窓口・関連法令</h2>
+      <p class="section-lede">トラブル時・疑問時は公的窓口の活用が推奨されます。</p>
+      <ul>
+        <li><a href="https://www.mhlw.go.jp/general/sosiki/chihou/" target="_blank" rel="noopener">総合労働相談コーナー</a> - 厚生労働省・労働相談</li>
+        <li><a href="https://www.houterasu.or.jp/" target="_blank" rel="noopener">法テラス</a> - 法律相談</li>
+        <li><a href="https://www.bengoshi.or.jp/" target="_blank" rel="noopener">日本弁護士連合会</a> - 弁護士相談</li>
+        <li><a href="https://www.mhlw.go.jp/" target="_blank" rel="noopener">厚生労働省</a> - 労働基準法監督</li>
+        <li>消費生活センター - 188 (いやや!) で最寄りセンター案内</li>
+      </ul>
+      <p class="section-lede" style="margin-top:1rem">関連法令: <strong>労働基準法</strong> (退職の自由・2週間前申告)・<strong>民法 627条</strong> (期間定めない雇用の解約)・<strong>弁護士法 72条</strong> (非弁行為禁止)・<strong>個人情報保護法</strong>。本ページは公開情報の整理であり、特定事業者の公式サイトではありません。アフィリエイト広告（PR）を含みます。</p>
+    </div>
+  </section>
+  <section class="lp-section" id="sec-related" aria-labelledby="related-h">
+    <div class="container">
+      <p class="section-num">関連記事</p>
+      <h2 id="related-h">関連する記事</h2>
+      <ul class="related-links" style="line-height:1.9;">
+        <li><a href="https://taishoku-info.pages.dev/bengoshi-hikaku-2026/">退職代行は弁護士に頼むべき？費用・メリット・選び方を徹底解説2026年版（PR）</a></li>
+        <li><a href="https://taishoku-info.pages.dev/ryokin-hikaku-2026/">退職代行の料金相場2026年版｜弁護士・労働組合・民間の3タイプ料金比較と選び方（PR）</a></li>
+        <li><a href="https://taishoku-info.pages.dev/hyoban-hikaku/">退職代行の評判比較｜口コミ・料金・対応範囲から見る主要4社の選び方（2026年版・PR）</a></li>
+        <li><a href="https://taishoku-info.pages.dev/osusume-hikaku/">退職代行 おすすめ 5社比較｜失敗しない選び方と料金・即日対応の徹底ガイド（2026年版・PR）</a></li>
+        <li><a href="https://taishoku-info.pages.dev/arbeit-taishoku/">アルバイト退職代行 完全ガイド｜学生バイト・短期バイト・掛け持ちバイトの活用判断（2026年5月時点・公開情報整理・PR）</a></li>
+      </ul>
+    </div>
+  </section>
+
+</RichLayout>

@@ -1,0 +1,132 @@
+---
+import RichLayout from '../../layouts/RichLayout.astro';
+import PRBadge from '../../components/PRBadge.astro';
+import BannerAB from '../../components/BannerAB.astro';
+
+const title = '派遣社員の退職代行ガイド｜派遣元への伝え方・契約期間の扱い・確認ポイント（2026年版・PR）';
+const description = '派遣社員 (派遣元との雇用契約) が退職代行を利用する場合の論点を、派遣元への伝達 / 派遣先との関係 / 契約期間の扱い・運営形態別の対応範囲を整理した情報提供記事です。公開情報をもとに中立に整理 (PR・アフィリエイト広告を含みます)。';
+
+const breadcrumb = [
+  { name: 'ホーム', url: '/' },
+  { name: '派遣社員の退職代行' },
+];
+
+const faq = [
+  { q: '派遣社員が退職代行を使う場合、連絡は派遣元・派遣先のどちらに行きますか？', a: '退職代行サービスからの連絡は、雇用契約を結んでいる「派遣元」に対して行われるのが一般的です。労働者派遣法に基づき、労働契約の当事者は派遣元であるためです。本人から派遣先へ直接連絡する必要は基本的にないとされます。' },
+  { q: '派遣の契約期間がまだ残っていますが、退職代行で辞められますか？', a: '民法第628条に基づき「やむを得ない事由」がある場合は、契約期間中でも退職できるとされます。ただし、事由の正当性によっては損害賠償のリスクも皆無ではないため、弁護士や労働組合が運営する退職代行に相談することが推奨されます。' },
+  { q: '派遣先から借りているパソコンや制服などの備品はどうすればよいですか？', a: '退職代行業者を通じて、雇用主である派遣元の指示を確認し、それに従って返却します。多くの場合、指定された住所へ郵送での返却となります。自己判断で派遣先に直接返却するとトラブルの原因になる可能性があるため注意が必要です。' },
+  { q: '退職代行を使うと、同じ派遣会社でまた働くことはできなくなりますか？', a: '一度退職代行を利用した派遣元企業で、再度雇用契約を結ぶことは事実上難しくなる可能性が高いとされます。ただし、職業安定法で個人情報の保護が定められているため、その退職の事実が他の派遣会社に共有されることは通常ありません。' },
+  { q: '派遣社員が退職代行サービスを選ぶ上で、最も重要なポイントは何ですか？', a: '派遣特有の三者間（本人・派遣元・派遣先）の契約関係を正しく理解し、対応実績が豊富な業者を選ぶことが重要です。特に有給消化などを希望する場合、労働組合や弁護士が運営主体となっているサービスの方が、交渉の面で安心感が期待されます。' },
+];
+---
+
+<RichLayout title={title} description={description} publishedDate="2026-05-23" modifiedDate="2026-05-23" breadcrumb={breadcrumb} faq={faq}>
+  <section class="fv" aria-labelledby="fv-h1">
+    <div class="container">
+      <span class="fv-pill">退職代行 / 派遣社員ガイド</span>
+      <h1 id="fv-h1"><span class="accent">派遣社員の退職代行</span> ガイド<br />派遣元への伝え方・契約期間の扱い・確認ポイント</h1>
+      <p class="lede">「派遣社員でも退職代行は使えるのか」「派遣元と派遣先のどちらに連絡されるのか」と気になる方へ。本記事では、派遣社員 (派遣元との雇用契約) 特有の論点 + 退職代行の使い方 + 運営形態別の対応範囲を、公開情報をもとに中立に整理します。</p>
+      <ul class="fv-bullets">
+        <li>派遣社員の雇用契約構造 (派遣元 / 派遣先)</li>
+        <li>退職の意思伝達は派遣元が中心</li>
+        <li>契約期間途中 / 期間満了の取り扱い</li>
+        <li>運営形態別 (弁護士 / 労働組合 / 民間) の使い分け</li>
+      </ul>
+      <PRBadge pageSlug="taishoku-daikou-haken" />
+      <div class="fv-meta">
+        <span><b>公開日</b> 2026-05-23</span><span><b>最終更新</b> 2026-05-23</span>
+        <span><b>編集</b> NY-squared 編集部</span><span><b>所要</b> 約 7 分</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-section" id="sec-1">
+    <div class="container">
+      <p class="section-num">SECTION / 01</p>
+      <h2>派遣社員の雇用契約構造と退職の論点</h2>
+      <p class="section-lede">派遣社員は <strong>派遣元 (人材派遣会社) と雇用契約</strong>、派遣先 (実際の勤務先) とは指揮命令関係のみとされる構造です。退職に関する論点は派遣元との契約が主軸とされます。</p>
+      <div class="compare-wrap">
+        <table class="compare">
+          <thead><tr><th>状況</th><th>一般的な傾向 (公開情報)</th><th>選択肢の例</th></tr></thead>
+          <tbody>
+            <tr><td>契約期間満了で退職</td><td>意思伝達中心 (派遣元への通知)</td><td>民間運営でも対応可能とされる</td></tr>
+            <tr><td>契約途中 + やむを得ない事由あり</td><td>民法628条で退職余地があるとされる</td><td>弁護士 / 労働組合運営の検討</td></tr>
+            <tr><td>契約途中 + やむを得ない事由なし</td><td>派遣元との交渉 or 損害賠償リスク</td><td>弁護士相談 / 派遣元交渉</td></tr>
+            <tr><td>派遣先でのトラブル</td><td>派遣元への報告 + 別現場への移籍の選択肢</td><td>派遣元相談 → 退職判断</td></tr>
+            <tr><td>派遣登録抹消</td><td>退職とは別手続きとされる</td><td>派遣元へ別途意思表示</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="compare-note">※ 個別事案の判断は弁護士等の専門家への相談が推奨されます。<a href="https://elaws.e-gov.go.jp/document?lawid=360AC0000000088" target="_blank" rel="noopener">労働者派遣法</a>・<a href="https://elaws.e-gov.go.jp/document?lawid=129AC0000000089" target="_blank" rel="noopener">民法</a>関連参照。</p>
+      <BannerAB pageSlug="taishoku-daikou-haken" position="hero" />
+    </div>
+  </section>
+
+  <section class="lp-section alt" id="sec-2">
+    <div class="container">
+      <p class="section-num">SECTION / 02</p>
+      <h2>運営形態別の使い分け (派遣社員のケース)</h2>
+      <div class="compare-wrap">
+        <table class="compare">
+          <thead><tr><th>運営形態</th><th>対応範囲</th><th>料金 (推定)</th><th>派遣社員での目安</th></tr></thead>
+          <tbody>
+            <tr><td><b>弁護士運営</b></td><td>法的交渉・損害賠償対応も可</td><td>5万円〜 (推定)</td><td>契約途中・派遣元との法的論点あり</td></tr>
+            <tr><td><b>労働組合運営</b></td><td>団体交渉権 (有給・退職日等)</td><td>2.5〜3万円</td><td>有給消化交渉を伴う場合</td></tr>
+            <tr><td><b>民間運営 (弁護士監修)</b></td><td>意思伝達中心 (監修体制あり)</td><td>2〜2.5万円</td><td>期間満了・更新拒否で済む場合</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="section-lede">派遣社員のケースでは <strong>派遣元との契約状況 + 契約期間の段階</strong>で運営形態を選び分けるとされる傾向。詳細 <a href="/osusume-hikaku/">退職代行 おすすめ比較</a>。</p>
+    </div>
+  </section>
+
+  <section class="lp-section"><h2>派遣社員の退職と退職代行の基本構造</h2><p>派遣社員の雇用形態は、正社員やアルバイトとは異なる特徴を持っています。<br>まず、雇用契約は実際に勤務する「派遣先」企業ではなく、「派遣元」である派遣会社と結ばれています。<br>これは「労働者派遣法」に定められた仕組みであり、給与の支払いや社会保険の手続きも派遣元が行います。<br>そのため、派遣社員が退職する場合、その意思表示は派遣先の上司ではなく、雇用主である派遣元の担当者に対して行う必要があります。<br>退職代行サービスは、この派遣元との間で行われる退職に関する一連の連絡や手続きを、本人に代わって実行するサービスです。<br>派遣先での人間関係や、派遣元担当者への伝えにくさといった、派遣社員特有の悩みを抱える方にとって、法的な手続きを円滑に進めるための選択肢の一つとされています。<br>公開情報をもとに整理すると、退職の申し出先を誤解しないことが、円満な退職への第一歩となります。</p></section>
+
+  <section class="lp-section alt" id="sec-4">
+    <div class="container">
+      <p class="section-num">SECTION / 04</p>
+      <h2>関連ガイド</h2>
+      <div class="card-grid">
+        <div class="card"><h3>契約社員の退職代行</h3><p>有期雇用契約の論点と運営形態 (詳細 <a href="/taishoku-daikou-keiyaku-shain/">契約社員の退職代行</a>)</p></div>
+        <div class="card"><h3>正社員の退職代行</h3><p>無期雇用の論点との対比 (詳細 <a href="/seishain-taishoku-daikou/">正社員の退職代行</a>)</p></div>
+        <div class="card"><h3>退職代行の使い方</h3><p>申込みから退職完了までの 5 ステップ (詳細 <a href="/taishoku-daikou-tsukaikata/">使い方ガイド</a>)</p></div>
+        <div class="card"><h3>運営形態の比較</h3><p>弁護士 / 労働組合 / 民間 (詳細 <a href="/osusume-hikaku/">おすすめ比較</a>)</p></div>
+      </div>
+      <BannerAB pageSlug="taishoku-daikou-haken" position="footer" />
+    </div>
+  </section>
+
+
+  <section class="lp-section alt" id="sec-asp-pr" aria-labelledby="h2-asp-pr">
+    <div class="container">
+      <p class="section-num">SECTION / PR・広告</p>
+      <h2 id="h2-asp-pr">【PR・広告】退職代行Jobs (株式会社アレス) の公開情報整理</h2>
+      <p class="section-lede"><strong>本セクションは PR・広告枠</strong> です。アフィリエイト広告として「退職代行Jobs (株式会社アレス)」の公開情報を整理しています。他事業者との優劣判断ではなく、広告主の公開情報として参照ください。</p>
+      <div class="branch-grid">
+      <article class="branch"><span class="tag">特徴①</span><h4>退職代行Jobs</h4><p>退職代行Jobs (株式会社アレス運営) は退職代行サービスの一つとされる傾向。会社との連絡を代行する選択肢として検討対象とされています。</p></article>
+      <article class="branch"><span class="tag">特徴②</span><h4>LINE相談対応</h4><p>LINE での相談対応の傾向。気軽に相談できる選択肢とされる傾向。</p></article>
+      <article class="branch"><span class="tag">特徴③</span><h4>顧問弁護士監修</h4><p>顧問弁護士監修の傾向。法的トラブル懸念のある方の検討材料が一般的です。</p></article>
+      <article class="branch"><span class="tag">特徴④</span><h4>全国対応</h4><p>全国対応の傾向。地方在住者も利用可能な選択肢のケースが多く見られます。</p></article>
+      <article class="branch"><span class="tag">特徴⑤</span><h4>プライバシー配慮</h4><p>個人情報保護法遵守の傾向。会社・家族にバレにくい配慮があると公表されています。</p></article>
+      <article class="branch"><span class="tag">注意</span><h4>事前確認推奨事項</h4><p>具体的料金・対応範囲・成功事例は公式公開情報で確認推奨。「100%退職成功」等の断定は不可とされています。</p></article>
+      </div>
+      <div class="cta-block"><p class="cta-note"><span class="pr-tag">PR</span>退職代行Jobs (株式会社アレス) の最新の条件は公式サイトでご確認ください。</p><BannerAB pageSlug={"enhance-cta"} position="enhance" /><p class="btn-cta-sub">※ 公式サイトに遷移します。</p></div>
+    </div>
+  </section>
+
+  <section class="lp-section"><h2>派遣社員向け退職代行の具体的な流れと注意点</h2><p>派遣社員が退職代行を利用する場合、一般的な流れは以下のようになります。<br>まず、自身の状況（契約期間、貸与品の有無など）を伝え、派遣社員の退職に対応可能な代行サービスを選定し、依頼します。<br>依頼が完了すると、代行業者が雇用主である派遣元へ連絡し、本人の代理として退職の意思を伝えます。<br>この時点で、本人は派遣元や派遣先への直接の連絡が不要となるケースが一般的です。<br>その後は、代行業者の指示に従い、退職届や保険証、派遣先からの貸与品などを派遣元へ郵送で返却します。<br>特に注意すべきは、契約期間中の退職です。<br>民法第628条では「やむを得ない事由」があれば期間の定めがある雇用契約でも解除できるとされていますが、この「事由」の解釈は個別の状況によります。<br>そのため、契約期間が残っている場合は、弁護士や労働組合が運営する代行サービスに相談し、法的なリスクについて確認することが賢明とされます。<br>また、有給休暇の消化交渉なども、これらの専門性を持つサービスの方がスムーズに進む可能性が期待されます。</p><ul><li><strong>ステップ1: 相談と依頼:</strong> 派遣の契約状況を伝え、サービス内容を確認して正式に依頼する。</li><li><strong>ステップ2: 代行実行:</strong> 業者が派遣元へ連絡。本人は出勤や直接連絡が不要になる。</li><li><strong>ステップ3: 書類・貸与品の返却:</strong> 業者の指示に従い、必要なものを派遣元へ郵送する。</li></ul><div class="benefit-summary" style="background:#f5f5dc;padding:1rem;border-left:4px solid #d4a373;margin:1rem 0;"><strong>💡 このサービスを検討するメリット (★544 ②):</strong><ul><li>派遣元・派遣先という複雑な関係の中で、専門家が間に入ることで精神的負担を軽減し、スムーズな退職が期待できます。</li><li>即日退職の交渉が可能な場合もあり、気まずい思いをせず、次のキャリアプランへ迅速に移行できる可能性があります。</li><li>労働組合や弁護士が運営するサービスであれば、労働基準法などに基づき、有給消化や未払い賃金の交渉を任せられる可能性があり、自身の正当な権利を守りやすくなります。</li></ul></div></section>
+  <section class="lp-section" id="sec-related" aria-labelledby="related-h">
+    <div class="container">
+      <p class="section-num">関連記事</p>
+      <h2 id="related-h">関連する記事</h2>
+      <ul class="related-links" style="line-height:1.9;">
+        <li><a href="https://taishoku-info.pages.dev/seishain-taishoku-daikou/">正社員の退職代行ガイド｜利用できるか・流れ・正社員ならではの確認ポイント（2026年版・PR）</a></li>
+        <li><a href="https://taishoku-info.pages.dev/taishoku-daikou-50dai/">50代の退職代行｜退職金確保と次のキャリアの選び方を整理(2026年版・PR)</a></li>
+        <li><a href="https://taishoku-info.pages.dev/taishoku-daikou-hikitome/">退職代行と引き止め対応｜法的根拠と回避策（2026年版・PR）</a></li>
+        <li><a href="https://taishoku-info.pages.dev/taishoku-daikou-hiyo/">退職代行の費用相場と内訳整理｜価格帯別の特徴とサービス範囲の参考（2026年版・PR）</a></li>
+        <li><a href="https://taishoku-info.pages.dev/taishoku-daikou-line/">LINEで完結する退職代行｜LINE対応の範囲・メリットと留意点の整理（2026年版・PR）</a></li>
+      </ul>
+    </div>
+  </section>
+
+</RichLayout>

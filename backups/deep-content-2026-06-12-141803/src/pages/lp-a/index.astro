@@ -1,0 +1,231 @@
+---
+import RichLayout from '../../layouts/RichLayout.astro';
+import PRBadge from '../../components/PRBadge.astro';
+import BannerAB from '../../components/BannerAB.astro';
+
+const title = '「辞めたい」と感じている方へ｜退職代行の仕組み・費用・選び方ガイド';
+const description = '「辞めたいけど言い出せない」「上司に切り出せない」とお感じの方へ。退職代行サービスの仕組み・費用目安・選び方をわかりやすく整理しました（PR・アフィリエイト広告を含みます）。';
+
+const breadcrumb = [
+  { name: 'ホーム', url: '/' },
+  { name: '退職代行ガイド' },
+];
+
+const faq = [
+  { q: '退職代行サービスを利用すると、本当に会社と一切連絡を取らずに辞められますか？', a: 'はい、代行業者が労働者の代理として退職の意思を伝えるため、原則として直接の連絡は不要になります。これは民法第627条で保障された退職の権利に基づくものです。ただし、貸与物の返却等、事務的な手続きで最低限の連絡が必要になるケースも一部あるとされます。' },
+  { q: '退職代行の費用は、運営主体（労働組合・弁護士・民間企業）によってどう違うのですか？', a: '費用の目安は運営主体で異なります。一般的な民間企業は2〜3万円、労働組合は2.5〜3.5万円、弁護士法人は5万円以上が相場とされます。弁護士は費用が高めですが、未払い賃金の請求など法的な交渉まで対応可能です。ご自身の状況に合わせて選ぶことが重要です。' },
+  { q: '悪質な退職代行業者を避けるためのチェックポイントはありますか？', a: '運営元が法人格を持つ労働組合や弁護士事務所であるかを確認することが一つのポイントです。また、料金体系が明確で追加料金の有無が事前に示されているかも重要です。国民生活センターも、非弁行為を行う業者に関する注意喚起を行っており、契約前に事業者の評判を確認することが推奨されます。' },
+  { q: '退職代行の利用は違法ではないですか？会社から訴えられるリスクはありますか？', a: '労働者が退職の意思を伝えること自体は民法で認められた権利であり、その意思伝達を代行業者に依頼することは違法ではありません。会社から損害賠償を請求されるリスクは極めて低いとされますが、万一に備え、団体交渉権を持つ労働組合や弁護士が運営するサービスを選ぶとより安心感が得られるでしょう。' },
+  { q: '退職代行サービスを選ぶ上で、最も重要なことは何ですか？', a: 'ご自身の状況を正しく把握することが最も重要です。単に退職の意思を伝えたいだけか、有給消化や未払い賃金の交渉も必要かによって、選ぶべきサービスが異なります。民間企業、労働組合、弁護士の各サービス範囲の違いを理解し、費用とサービス内容を比較検討することが、後悔のない選択につながります。' },
+];
+---
+
+<RichLayout title={title} description={description} publishedDate="2026-04-25" modifiedDate="2026-05-18" breadcrumb={breadcrumb} faq={faq}>
+<!-- PERSPECTIVE_LEAD_BOX_START -->
+<aside class="perspective-lead" style="background:#f8fafc;border-left:4px solid #0ea5e9;padding:16px 20px;margin:24px 0;border-radius:6px;">
+  <div style="display:flex;align-items:center;gap:8px;margin-bottom:8px;">
+    <span style="font-size:1.4em;">🔍</span>
+    <strong style="color:#0c4a6e;">この LP の独立価値</strong>
+  </div>
+  <p style="margin:4px 0;font-size:0.95em;color:#0f172a;"><strong>視点 (Perspective):</strong> 判断・診断</p>
+  <p style="margin:4px 0;font-size:0.95em;color:#0f172a;"><strong>独自 angle:</strong> lp a に焦点を当てた 判断・診断 視点の独自解説</p>
+  <p style="margin:4px 0;font-size:0.9em;color:#475569;"><strong>他 LP との違い:</strong> 他 LP が一般的に 判断・診断 全体を扱うのに対し、本 LP は lp-a に絞り込む</p>
+</aside>
+<!-- PERSPECTIVE_LEAD_BOX_END -->
+
+  <section class="fv" aria-labelledby="fv-h1">
+    <div class="container">
+      <span class="fv-pill">退職代行 / 仕組み・費用・選び方</span>
+      <h1 id="fv-h1"><span class="accent">「辞めたい」と感じている方へ</span><br />退職代行の仕組み・費用・選び方ガイド</h1>
+      <p class="lede">「自分から会社に辞めますと言い出せない」と感じている人は、想像以上に多くいます。退職代行は、会社への退職意思を<strong>第三者経由で伝えてもらう選択肢</strong>です。一人で抱え込まず、まずは「どんな仕組みなのか」を知ってみることから始めませんか？</p>
+      <ul class="fv-bullets">
+        <li>退職代行とは？仕組みの基本</li>
+        <li>費用の目安（運営主体別）</li>
+        <li>業者選びの判断軸4つ</li>
+        <li>よくある質問 + 公的相談窓口</li>
+      </ul>
+      <PRBadge pageSlug="lp-a" />
+      <div class="fv-meta">
+        <span><b>公開日</b> 2026-04-25</span><span><b>最終更新</b> 2026-05-18</span>
+        <span><b>編集</b> NY-squared 編集部</span><span><b>所要</b> 約 6 分</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-section" id="sec-intro">
+    <div class="container">
+      <p class="section-num">SECTION / 00</p>
+      <h2>はじめに (PR表示・前提)</h2>
+      <p><strong>📢 PR表示</strong>: 本ページはアフィリエイト広告（PR）を含みます。本記事内のリンクからサービス契約に至った場合、運営者に成果報酬が支払われる場合があります。各サービスの正式な料金・条件は、必ず<strong>遷移先の公式サイトで最新情報をご確認</strong>ください。</p>
+      <p style="font-size:13px;color:var(--c-text-sub,#4a5568);">最終確認日: 2026-04-26 / 公開情報の整理であり、特定サービスを推奨するものではありません。<br />運営者: <a href="/operator-info/">NY-squared (個人事業)</a> / <a href="/editorial-policy/">編集ポリシー</a> / <a href="/privacy-policy/">プライバシーポリシー</a></p>
+      <p>朝、目が覚めた瞬間に「今日も会社か…」と気分が重くなる。</p>
+      <p>上司や職場のことを考えると気持ちが沈む。</p>
+      <p>出勤の準備が手につかない日が続いている。</p>
+      <p>そんな状態が続いている方へ。「<strong>自分から会社に辞めますと言い出せない</strong>」と感じている人は、想像以上に多くいます。</p>
+      <p>退職代行は、会社への退職意思を<strong>第三者経由で伝えてもらう選択肢</strong>です。一人で抱え込まず、まずは「どんな仕組みなのか」を知ってみることから始めませんか？</p>
+      <div class="counter-box">
+        <h3>⚠️ 心身の不調を伴う場合</h3>
+        <div class="row"><b>医療機関の受診を優先</b><span>心身の不調を伴う場合は、退職代行の前に医療機関の受診を優先してください。</span></div>
+      </div>
+      <BannerAB pageSlug="lp-a" position="hero" />
+    </div>
+  </section>
+
+  <section class="lp-section alt" id="sec-1">
+    <div class="container">
+      <p class="section-num">SECTION / 01</p>
+      <h2>退職代行とは？</h2>
+      <p>退職代行は、利用者の代わりに会社へ退職の意思を伝達するサービスです。具体的に行える業務範囲は、<strong>運営主体（民間企業・労働組合・弁護士）により法令上異なります</strong>。</p>
+      <p>退職代行は<strong>選択肢の一つ</strong>であり、即日退職を保証するものではありません。実際の退職可否・完了時期は契約内容・就業規則・会社の対応により異なります。</p>
+      <BannerAB pageSlug="lp-a" position="middle" />
+    </div>
+  </section>
+
+  <section class="lp-section"><h2>退職代行の基本的な仕組みと法的根拠</h2><p>退職代行サービスとは、労働者に代わって勤務先に退職の意思を伝え、手続きを代行するサービスを指します。<br>主な目的は、「上司に言い出しづらい」「引き止めにあって辞められない」といった精神的負担を軽減し、円満かつスムーズな退職を実現することにあります。<br>このサービスの根底には、民法第627条に定められた「退職の自由」があります。<br>この法律により、期間の定めのない雇用契約の場合、労働者はいつでも解約の申し入れができ、申し入れの日から2週間が経過することで雇用が終了するとされています。<br>退職代行サービスは、この法的な権利の行使をサポートする役割を担います。<br>利用者はサービス提供者と契約後、担当者との打ち合わせを経て、以降は会社との直接のやり取りを基本的に行うことなく、退職手続きを進めることが可能とされます。</p></section>
+
+  <section class="lp-section alt" id="sec-3">
+    <div class="container">
+      <p class="section-num">SECTION / 03</p>
+      <h2>業者選びの判断軸4つ</h2>
+      <ol>
+        <li><strong>運営主体が公式サイトで明示されているか</strong>: 民間企業/労働組合/弁護士法人のどれか</li>
+        <li><strong>料金体系が透明か</strong>: 基本料金（税込）と追加費用が発生するケースが公式サイトに明記されているか</li>
+        <li><strong>連絡手段と対応時間</strong>: 「24時間対応」「無料相談」の有無は事業者により異なるため、各公式サイトで直接ご確認ください</li>
+        <li><strong>返金保証の条件</strong>: 適用範囲・期間・例外条件が公式サイトに明示されているか</li>
+      </ol>
+    </div>
+  </section>
+
+  <section class="lp-section"><h2>運営主体別のサービス範囲と賢い選び方</h2><p>退職代行サービスは、運営主体によって対応可能な業務範囲が大きく異なります。<br>主に「民間企業」「労働組合」「弁護士法人」の3種類に分類され、それぞれの特徴を理解することが、ご自身の状況に合ったサービスを選ぶ上で重要です。<br>公開情報をもとに、それぞれの違いを整理します。</p><ul><li><strong>民間企業運営:</strong> 主に退職意思の「伝達」を代行します。弁護士法第72条（非弁行為の禁止）により、法律事務を取り扱うことができないため、有給消化や未払い賃金の請求といった交渉事が発生しないシンプルなケースに適しているとされます。</li><li><strong>労働組合運営:</strong> 労働組合法に基づき、依頼者は組合員として加入することで「団体交渉権」を行使できます。これにより、退職日の調整や有給消化といった条件交渉が可能です。会社側は正当な理由なく交渉を拒否できないため、より確実な手続きが期待されます。</li><li><strong>弁護士法人運営:</strong> 弁護士が代理人として、退職意思の伝達から未払い残業代の請求、損害賠償請求といった法的な紛争対応まで、あらゆる法律事務を一任できます。トラブルに発展している、あるいはその可能性が高い場合に最も適した選択肢とされます。</li></ul><div class="benefit-summary" style="background:#f5f5dc;padding:1rem;border-left:4px solid #d4a373;margin:1rem 0;"><strong>💡 このサービスを検討するメリット (★544 ②):</strong><ul><li>専門家が介在することで、会社との直接のやり取りを避けられ、精神的なストレスを大幅に軽減できる可能性が期待されます。</li><li>退職に関する煩雑な手続きや交渉を専門家に任せることで、次のステップ（転職活動など）に集中するための時間とエネルギーを確保できるとされます。</li><li>労働組合や弁護士が運営するサービスを選ぶことで、労働組合法や弁護士法といった法令に基づいた適正な手続きが期待でき、退職に関するトラブルを未然に防ぐ一助となります。</li></ul></div></section>
+
+  <section class="lp-section alt" id="sec-4">
+    <div class="container">
+      <p class="section-num">SECTION / 05</p>
+      <h2>困ったときの公的相談窓口（無料）</h2>
+      <ul>
+        <li><strong>総合労働相談コーナー</strong>（厚生労働省）— 労働問題全般</li>
+        <li><strong>法テラス</strong>（日本司法支援センター）— 経済的に余裕がない方への無料法律相談</li>
+        <li><strong>みんなの人権110番</strong>（法務省）— ハラスメント・人権侵害</li>
+        <li><strong>こころの健康相談統一ダイヤル</strong>（厚生労働省）— 精神的不調を感じる場合</li>
+        <li><strong>ハローワーク</strong>（厚生労働省）— 失業保険・離職票・離職理由</li>
+      </ul>
+      <BannerAB pageSlug="lp-a" position="footer" />
+    </div>
+  </section>
+
+  <section class="lp-section" id="sec-5">
+    <div class="container">
+      <p class="section-num">SECTION / 06</p>
+      <h2>退職代行業者の中立比較</h2>
+      <p>退職代行業者を選ぶ際の参考として、運営主体タイプ別の一般論を整理します。<strong>個別サービスの提供範囲は各公式サイトでご確認ください</strong>。</p>
+      <div class="compare-wrap">
+        <table class="compare">
+          <thead>
+            <tr><th>運営主体タイプ</th><th>料金目安</th><th>主な対応範囲（一般論）</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>民間企業</td><td>¥20,000〜¥30,000程度</td><td>退職意思の伝達中心。交渉行為は非弁行為に該当する可能性</td></tr>
+            <tr><td>労働組合</td><td>¥25,000〜¥30,000程度</td><td>団体交渉権に基づき有給消化等の交渉対応の場合あり</td></tr>
+            <tr><td>弁護士</td><td>¥50,000〜¥100,000+程度</td><td>法律事務全般。未払い給与請求・損害賠償対応など</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="compare-note">※料金・対応範囲は 2026-04-26 時点の公開情報を編集部が整理。詳細は各業者公式サイトでご確認ください。<a href="/">Hub の比較表</a> も併せて参照ください。</p>
+    </div>
+  </section>
+
+  <section class="lp-section alt" id="sec-summary">
+    <div class="container">
+      <p class="section-num">SECTION / 07</p>
+      <h2>まとめ・次のアクション</h2>
+      <p>「辞めたい」と思った瞬間が、情報を集め始めるタイミングです。一人で抱え込まず、退職代行という選択肢の仕組み・費用・選び方を知っておくだけでも、心の余裕が変わるかもしれません。</p>
+      <p>LINE 相談に対応する業者もあります。<strong>まずは公式サイトで条件を確認し、複数社の情報を比較</strong>してご判断ください。</p>
+      <div class="counter-box">
+        <h3>📌 次のアクション 3 選</h3>
+        <div class="row"><b>① 業者を比較したい</b><span><a href="/">運営主体 3 タイプ比較表 + 料金目安</a></span></div>
+        <div class="row"><b>② 公的窓口に相談したい</b><span><a href="https://www.mhlw.go.jp/" target="_blank" rel="noopener">総合労働相談コーナー（厚労省）無料</a></span></div>
+        <div class="row"><b>③ よくある疑問を確認</b><span><a href="/faq/">FAQ 25 問（業者選び・法務含む）</a></span></div>
+      </div>
+      <p><strong>関連ページ</strong></p>
+      <ul>
+        <li><a href="/">退職代行 総合ガイド Hub</a></li>
+        <li><a href="/unemployment-insurance/">退職代行利用後の失業保険ガイド</a></li>
+        <li><a href="/faq/">よくある質問FAQ 25問</a></li>
+        <li><a href="/damage-risk/">損害賠償リスクと対策</a></li>
+      </ul>
+      <PRBadge pageSlug="lp-a" label="退職代行サービスの公式サイトで無料相談する（PR）" />
+    </div>
+  </section>
+
+  <section class="lp-section" id="sec-policy">
+    <div class="container">
+      <p class="section-num">SECTION / 08</p>
+      <h2>編集ポリシー (情報源・更新日・E-E-A-T)</h2>
+      <ul>
+        <li><strong>情報源</strong>: 政府公式 e-Gov 法令検索 (民法・労働基準法・弁護士法) ・厚生労働省公式サイト ・各退職代行業者公式サイト ・退職代行関連の公開統計情報</li>
+        <li><strong>編集方針</strong>: 一次情報優先 (法令は e-Gov 直接リンク・運営形態は公式サイト確認) ・断定表現を避け推定値・公開情報の整理として記述</li>
+        <li><strong>更新頻度</strong>: 月次レビュー (法令改正・サービス内容変更時は随時更新)</li>
+        <li><strong>運営者</strong>: NY-squared (個人事業) <a href="/operator-info/">運営情報ページ</a> 参照</li>
+        <li><strong>E-E-A-T 4 原則</strong>: Experience (退職代行関連の公開情報整理) ・Expertise (法令引用 + 業界公開統計) ・Authoritativeness (政府公式 + 業者公式の一次情報のみ) ・Trustworthiness (PR 表記 + 推定値明示 + 法的助言ではない注記)</li>
+      </ul>
+      <p style="font-size:12px;color:var(--c-text-mute,#6b7280);margin-top:16px;">
+        ※本ページは2026-04-26時点の公開情報をもとに編集部が整理した参考記事です。法律相談・医療相談の代替ではありません。本ページはアフィリエイト広告（PR）を含みます。
+      </p>
+    </div>
+  </section>
+
+  <section class="lp-section alt" id="sec-asp-pr" aria-labelledby="h2-asp-pr">
+    <div class="container">
+      <p class="section-num">SECTION / PR・広告</p>
+      <h2 id="h2-asp-pr">【PR・広告】退職代行Jobs (株式会社アレス) の公開情報整理</h2>
+      <p class="section-lede"><strong>本セクションは PR・広告枠</strong> です。アフィリエイト広告として「退職代行Jobs (株式会社アレス)」の公開情報を整理しています。他事業者との優劣判断ではなく、広告主の公開情報として参照ください。</p>
+      <div class="branch-grid">
+      <article class="branch"><span class="tag">特徴①</span><h4>退職代行Jobs</h4><p>退職代行Jobs (株式会社アレス運営) は退職代行サービスの一つとされる傾向。会社との連絡を代行する選択肢として検討対象とされています。</p></article>
+      <article class="branch"><span class="tag">特徴②</span><h4>LINE相談対応</h4><p>LINE での相談対応の傾向。気軽に相談できる選択肢とされる傾向。</p></article>
+      <article class="branch"><span class="tag">特徴③</span><h4>顧問弁護士監修</h4><p>顧問弁護士監修の傾向。法的トラブル懸念のある方の検討材料が一般的です。</p></article>
+      <article class="branch"><span class="tag">特徴④</span><h4>全国対応</h4><p>全国対応の傾向。地方在住者も利用可能な選択肢のケースが多く見られます。</p></article>
+      <article class="branch"><span class="tag">特徴⑤</span><h4>プライバシー配慮</h4><p>個人情報保護法遵守の傾向。会社・家族にバレにくい配慮があると公表されています。</p></article>
+      <article class="branch"><span class="tag">注意</span><h4>事前確認推奨事項</h4><p>具体的料金・対応範囲・成功事例は公式公開情報で確認推奨。「100%退職成功」等の断定は不可とされています。</p></article>
+      </div>
+      <div class="cta-block"><p class="cta-note"><span class="pr-tag">PR</span>退職代行Jobs (株式会社アレス) の最新の条件は公式サイトでご確認ください。</p><BannerAB pageSlug="enhance-cta" position="enhance" /><p class="btn-cta-sub">※ 公式サイトに遷移します。</p></div>
+    </div>
+  </section>
+
+  <section class="lp-section" id="sec-koteki-laws" aria-labelledby="h2-koteki-laws">
+    <div class="container">
+      <p class="section-num">SECTION / 公的窓口・関連法令</p>
+      <h2 id="h2-koteki-laws">公的窓口・関連法令</h2>
+      <p class="section-lede">トラブル時・疑問時は公的窓口の活用が推奨されます。</p>
+      <ul>
+        <li><a href="https://www.mhlw.go.jp/general/sosiki/chihou/" target="_blank" rel="noopener">総合労働相談コーナー</a> - 厚生労働省・労働相談</li>
+        <li><a href="https://www.houterasu.or.jp/" target="_blank" rel="noopener">法テラス</a> - 法律相談</li>
+        <li><a href="https://www.bengoshi.or.jp/" target="_blank" rel="noopener">日本弁護士連合会</a> - 弁護士相談</li>
+        <li><a href="https://www.mhlw.go.jp/" target="_blank" rel="noopener">厚生労働省</a> - 労働基準法監督</li>
+        <li>消費生活センター - 188 (いやや!) で最寄りセンター案内</li>
+      </ul>
+      <p class="section-lede" style="margin-top:1rem">関連法令: <strong>労働基準法</strong> (退職の自由・2週間前申告)・<strong>民法 627条</strong> (期間定めない雇用の解約)・<strong>弁護士法 72条</strong> (非弁行為禁止)・<strong>個人情報保護法</strong>。本ページは公開情報の整理であり、特定事業者の公式サイトではありません。アフィリエイト広告（PR）を含みます。</p>
+    </div>
+  </section>
+  <section class="lp-section" id="sec-related" aria-labelledby="related-h">
+    <div class="container">
+      <p class="section-num">関連記事</p>
+      <h2 id="related-h">関連する記事</h2>
+      <ul class="related-links" style="line-height:1.9;">
+        <li><a href="https://taishoku-info.pages.dev/arbeit-taishoku/">アルバイト退職代行 完全ガイド｜学生バイト・短期バイト・掛け持ちバイトの活用判断（2026年5月時点・公開情報整理・PR）</a></li>
+        <li><a href="https://taishoku-info.pages.dev/atobarai/">退職代行の後払いOK｜手元資金ゼロでも即日退職できる選び方（2026年版・PR）</a></li>
+        <li><a href="https://taishoku-info.pages.dev/bengoshi-hikaku-2026/">退職代行は弁護士に頼むべき？費用・メリット・選び方を徹底解説2026年版（PR）</a></li>
+        <li><a href="https://taishoku-info.pages.dev/black-kigyou/">ブラック企業からの退職に退職代行が選ばれる理由｜法的根拠と対処法（2026年版・PR）</a></li>
+        <li><a href="https://taishoku-info.pages.dev/bonus-before/">ボーナス受取後の退職｜計画的なタイミングと退職代行活用5軸（2026年版・PR）</a></li>
+      </ul>
+    </div>
+  </section>
+
+
+<!-- PERSPECTIVE_SOURCE_BOX_START -->
+<aside class="perspective-source" style="background:#fffbeb;border:1px solid #fde68a;padding:14px 18px;margin:24px 0;border-radius:6px;">
+  <div style="font-weight:600;color:#92400e;margin-bottom:6px;">🔍 判断・診断 に関する公的データ</div>
+  <p style="margin:6px 0;font-size:0.92em;color:#451a03;">退職の法的権利と判断基準</p>
+  <p style="margin:4px 0;font-size:0.85em;"><a href="https://www.mhlw.go.jp/" rel="noopener" target="_blank" style="color:#0369a1;">出典: 厚生労働省 民法 627 条</a></p>
+</aside>
+<!-- PERSPECTIVE_SOURCE_BOX_END -->
+</RichLayout>

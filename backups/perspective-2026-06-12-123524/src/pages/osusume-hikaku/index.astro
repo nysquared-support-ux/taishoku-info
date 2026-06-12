@@ -1,0 +1,398 @@
+---
+import RichLayout from '../../layouts/RichLayout.astro';
+import PRBadge from '../../components/PRBadge.astro';
+import BannerAB from '../../components/BannerAB.astro';
+
+const title = '退職代行 おすすめ 5社比較｜失敗しない選び方と料金・即日対応の徹底ガイド（2026年版・PR）';
+const description = '退職代行サービスを比較検討中の方へ。弁護士・労働組合・民間業者の違い、失敗しない 5 つの選び方、料金・即日対応の有無を中立的に整理した情報提供記事です（PR・アフィリエイト広告を含みます）。個別判断は弁護士・各業者へご相談ください。';
+
+const breadcrumb = [
+  { name: 'ホーム', url: '/' },
+  { name: '退職代行', url: '/' },
+  { name: 'おすすめ比較' },
+];
+
+const faq = [
+  { q: '退職代行サービスを比較する際、料金の安さだけで選んでも大丈夫ですか？', a: '料金は重要な比較軸ですが、安さだけで選ぶと「非弁行為」を行う業者に当たるリスクも指摘されます。弁護士法72条では、弁護士以外が報酬目的で法律事務を行うことを禁じています。未払い賃金請求などの交渉が必要な場合は、弁護士または労働組合が運営するサービスを選ぶことが推奨されます。' },
+  { q: '「即日対応」を比較する際の注意点は何ですか？', a: '「即日対応」は多くのサービスが掲げていますが、相談開始日と退職実行日が同じとは限りません。深夜や早朝の相談に対応可能か、連絡手段（LINE、電話など）は何か、追加料金は発生しないか、といった点を具体的に比較することが重要です。国民生活センターも、契約内容の十分な確認を呼びかけています。' },
+  { q: '労働組合と弁護士の退職代行、どちらを選ぶべきか比較のポイントは？', a: '未払い残業代や有給消化の「交渉」を希望する場合は労働組合、損害賠償請求など「法的手続き」まで視野に入れる場合は弁護士が適するとされます。労働組合は団体交渉権を、弁護士は訴訟代理権を持ちます。ご自身の状況に合わせて、当記事の「おすすめ5社比較表」で対応範囲をご確認ください。' },
+  { q: '比較サイトのランキングやおすすめ情報は信用できますか？', a: '比較サイトの情報は参考になりますが、広告収益で運営されている場合が多く、掲載順位が客観的な評価とは限りません。消費者庁は、アフィリエイト広告に関する表示の適正化を求めています。複数の情報源を確認し、公式サイトで最新のサービス内容や料金を直接確認することが失敗しない選び方の鍵です。' },
+  { q: '失敗しない退職代行サービス選びで最も重要な比較ポイントは何ですか？', a: '最も重要なのは、ご自身の状況（交渉事の有無、予算、希望退職日など）と、サービスの提供範囲（運営主体、対応業務、料金体系）が合致しているかを確認することです。無料相談を活用し、担当者の対応や説明の丁寧さも比較検討することで、より納得のいく選択ができる可能性が高まります。' },
+];
+
+// ★T-M4 [0yAVu8WAXu] 2026-05-07: 10 軸拡張 + filter 用属性
+// ★T-A14c [0yAVu8WAXu] 2026-05-07: affiliateUrl 追加 (★418 そのまま使用厳守・退職代行Jobs のみ実 ASP 提携)
+// ★273 + ★322 厳守: 社名は抽象記述 (No.1 等の絶対表現は使用しない)・推定値注記必須
+const services = [
+  {
+    id: 'B',
+    name: '退職代行Jobs (労働組合提携)',
+    type: '労働組合提携',
+    typeKey: 'union',
+    price: '3万円 (推定)',
+    priceMin: 30000,
+    sokujitsu: '◯', sokujitsuKey: true,
+    line: '◯', lineKey: true,
+    line24h: '◯', line24hKey: true,
+    refund: '◯', refundKey: true,
+    union: '◯', unionKey: true,
+    atobarai: '◯', atobaraiKey: true,
+    publicSector: '△', publicSectorKey: false,
+    affiliateUrl: 'https://h.accesstrade.net/sp/cc?rk=0100q2uz00ormk',  // ★T-A14c: 退職代行Jobs (アクセストレード rk・★418 そのまま)
+    note: '退職代行Jobs (株式会社アレス運営・合同労働組合と提携)。労働組合が関与する形態で、対応範囲・料金・返金条件・対応時間等は契約主体や個別事情により異なるため、必ず公式サイトでご確認ください (公開情報の整理・推定含む)。',
+  },
+  {
+    id: 'A',
+    name: 'サービスA (弁護士運営)',
+    type: '弁護士運営',
+    typeKey: 'lawyer',  // filter key
+    price: '5万円〜 (推定)',
+    priceMin: 50000,    // filter 用数値
+    sokujitsu: '◯', sokujitsuKey: true,
+    line: '◯', lineKey: true,
+    line24h: '△', line24hKey: false,
+    refund: '◯', refundKey: true,
+    union: '×', unionKey: false,
+    atobarai: '△', atobaraiKey: false,
+    publicSector: '◯', publicSectorKey: true,
+    affiliateUrl: null,  // ★T-A14c: ASP 未提携・CTA は表示しない
+    note: '法的交渉・訴訟対応が可能とされる運営形態。料金は高めだが交渉権限が広い。',
+  },
+  {
+    id: 'C',
+    name: 'サービスB (民間 + 弁護士監修)',
+    type: '民間 (弁護士監修)',
+    typeKey: 'private-lawyer',
+    price: '2.5万円 (推定)',
+    priceMin: 25000,
+    sokujitsu: '◯', sokujitsuKey: true,
+    line: '◯', lineKey: true,
+    line24h: '◯', line24hKey: true,
+    refund: '△', refundKey: false,
+    union: '×', unionKey: false,
+    atobarai: '◯', atobaraiKey: true,
+    publicSector: '×', publicSectorKey: false,
+    affiliateUrl: null,  // ★T-A14c: ASP 未提携
+    note: '弁護士監修体制で意思伝達+周辺サポート。料金は低価格帯。交渉権限は限定。',
+  },
+  {
+    id: 'D',
+    name: 'サービスC (組合提携)',
+    type: '民間 (組合提携)',
+    typeKey: 'private-union',
+    price: '2.7万円 (推定)',
+    priceMin: 27000,
+    sokujitsu: '◯', sokujitsuKey: true,
+    line: '◯', lineKey: true,
+    line24h: '◯', line24hKey: true,
+    refund: '◯', refundKey: true,
+    union: '◯', unionKey: true,
+    atobarai: '△', atobaraiKey: false,
+    publicSector: '×', publicSectorKey: false,
+    affiliateUrl: null,  // ★T-A14c: ASP 未提携
+    note: '提携組合経由で交渉対応・料金中位帯・後払い対応は要確認。',
+  },
+  {
+    id: 'E',
+    name: 'サービスD (24時間対応)',
+    type: '民間運営',
+    typeKey: 'private',
+    price: '2万円 (推定)',
+    priceMin: 20000,
+    sokujitsu: '◯', sokujitsuKey: true,
+    line: '◯ 24h', lineKey: true,
+    line24h: '◯', line24hKey: true,
+    refund: '◯', refundKey: true,
+    union: '×', unionKey: false,
+    atobarai: '◯', atobaraiKey: true,
+    publicSector: '×', publicSectorKey: false,
+    affiliateUrl: null,  // ★T-A14c: ASP 未提携
+    note: '24時間 LINE 対応・低価格帯・交渉権限は限定的とされる。',
+  },
+];
+---
+
+<RichLayout title={title} description={description} publishedDate="2026-05-06" modifiedDate="2026-05-18" breadcrumb={breadcrumb} faq={faq}>
+<!-- PERSPECTIVE_LEAD_BOX_START -->
+<aside class="perspective-lead" style="background:#f8fafc;border-left:4px solid #0ea5e9;padding:16px 20px;margin:24px 0;border-radius:6px;">
+  <div style="display:flex;align-items:center;gap:8px;margin-bottom:8px;">
+    <span style="font-size:1.4em;">⚖️</span>
+    <strong style="color:#0c4a6e;">この LP の独立価値</strong>
+  </div>
+  <p style="margin:4px 0;font-size:0.95em;color:#0f172a;"><strong>視点 (Perspective):</strong> 比較・選択</p>
+  <p style="margin:4px 0;font-size:0.95em;color:#0f172a;"><strong>独自 angle:</strong> osusume hikaku に焦点を当てた 比較・選択 視点の独自解説</p>
+  <p style="margin:4px 0;font-size:0.9em;color:#475569;"><strong>他 LP との違い:</strong> 他 LP が一般的に 比較・選択 全体を扱うのに対し、本 LP は osusume-hikaku に絞り込む</p>
+</aside>
+<!-- PERSPECTIVE_LEAD_BOX_END -->
+
+  <!-- ★T-M4 [0yAVu8WAXu]: sticky filter UI (services/filter/JS 連動・verbatim 保持) -->
+  <div id="filter-bar" class="sticky top-0 z-40 bg-white border-b-2 border-blue-200 shadow-md">
+    <div class="max-w-4xl mx-auto px-4 py-3">
+      <div class="flex flex-wrap items-center gap-2 text-xs sm:text-sm">
+        <span class="font-bold text-blue-900 mr-1">🔎 絞込:</span>
+        <button data-filter-type="all" class="filter-btn-type px-2 py-1 rounded border border-blue-400 bg-blue-100 text-blue-900 font-semibold" aria-pressed="true">全件</button>
+        <button data-filter-type="lawyer" class="filter-btn-type px-2 py-1 rounded border border-gray-300 hover:bg-blue-50">弁護士運営</button>
+        <button data-filter-type="union" class="filter-btn-type px-2 py-1 rounded border border-gray-300 hover:bg-blue-50">労働組合</button>
+        <button data-filter-type="private-lawyer,private-union,private" class="filter-btn-type px-2 py-1 rounded border border-gray-300 hover:bg-blue-50">民間</button>
+        <span class="border-l mx-2 h-5"></span>
+        <label class="inline-flex items-center gap-1 cursor-pointer"><input type="checkbox" id="filter-line24h" class="filter-cb" /><span>24時間 LINE</span></label>
+        <label class="inline-flex items-center gap-1 cursor-pointer"><input type="checkbox" id="filter-union" class="filter-cb" /><span>有給交渉可</span></label>
+        <label class="inline-flex items-center gap-1 cursor-pointer"><input type="checkbox" id="filter-atobarai" class="filter-cb" /><span>後払い対応</span></label>
+        <label class="inline-flex items-center gap-1 cursor-pointer"><input type="checkbox" id="filter-public" class="filter-cb" /><span>公務員対応</span></label>
+        <span class="ml-auto text-xs text-gray-500" id="filter-count" aria-live="polite">5/5 件表示中</span>
+      </div>
+    </div>
+  </div>
+
+  <section class="fv" aria-labelledby="fv-h1">
+    <div class="container">
+      <span class="fv-pill">退職代行 / おすすめ 5 社比較</span>
+      <h1 id="fv-h1"><span class="accent">退職代行 おすすめ 5社比較</span><br />失敗しない選び方と料金・即日対応の徹底ガイド</h1>
+      <p class="lede">退職代行は「運営主体 (弁護士/組合/民間)」「料金」「即日対応」「LINE 24時間」「返金保証」の 5 基準で選ぶことが推奨されます。本記事では公開情報をもとに 5 社の比較表 + 各社特徴を整理しました。本サイトは法律事務所・退職代行業者公式サイトではなく、公開情報を整理した一般論ベースの情報提供サイトです。個別案件の判断は必ず弁護士・各業者に直接ご相談ください。</p>
+      <ul class="fv-bullets">
+        <li>退職代行の定義と 3 種類（弁護士／労働組合／民間）</li>
+        <li>失敗しない選び方 5 基準</li>
+        <li>5 社比較表（10 軸・絞込フィルタ対応）</li>
+        <li>利用の流れ・市場動向・よくある失敗例</li>
+      </ul>
+      <PRBadge pageSlug="osusume-hikaku" />
+      <div class="fv-meta">
+        <span><b>公開日</b> 2026-05-06</span><span><b>最終更新</b> 2026-05-18</span>
+        <span><b>編集</b> NY-squared 編集部</span><span><b>最終確認日</b> 2026-05-06</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-section" id="sec-1">
+    <div class="container">
+      <p class="section-num">SECTION / 01</p>
+      <h2>退職代行とは (定義と 3 種類)</h2>
+      <p>退職代行は、依頼者に代わって会社に退職の意思を伝えるサービスです。<a href="https://elaws.e-gov.go.jp/document?lawid=129AC0000000089" target="_blank" rel="noopener">民法第627条</a> により期間の定めのない雇用契約は退職申告から2週間で終了できるとされており、退職代行はこの「申告」を本人に代わって行います。運営主体は次の3種類に分類されます。</p>
+      <ul>
+        <li><strong>弁護士運営</strong>: 法的交渉・訴訟対応が可能。料金 3〜6 万円が相場 (推定)。</li>
+        <li><strong>労働組合運営</strong>: 団体交渉権で有給消化・退職日交渉が可能 (非弁行為にならない)。料金 2〜3 万円。</li>
+        <li><strong>民間運営</strong>: 意思伝達のみ・交渉権なし。料金 1〜3 万円・非弁行為リスクに注意。</li>
+      </ul>
+      <BannerAB pageSlug="osusume-hikaku" position="hero" />
+    </div>
+  </section>
+
+  <section class="lp-section alt" id="sec-2">
+    <div class="container">
+      <p class="section-num">SECTION / 02</p>
+      <h2>失敗しない選び方 (5 基準)</h2>
+      <ol>
+        <li><strong>運営主体の確認</strong>: 弁護士・労働組合は交渉権限あり。民間業者は<a href="https://elaws.e-gov.go.jp/document?lawid=324AC0000000205" target="_blank" rel="noopener">弁護士法第72条</a> の非弁行為リスク認識を。</li>
+        <li><strong>料金総額の明示</strong>: 「一律 ¥XX,XXX」のみでなく追加費用 (書類郵送費・交渉費) の有無を確認。</li>
+        <li><strong>即日対応の実績</strong>: 公式サイトに当日対応の時間帯・実績数を明記しているか。</li>
+        <li><strong>LINE 24時間相談</strong>: 深夜帯対応・即日決済 (クレカ等) で連絡完了までを短縮。</li>
+        <li><strong>返金保証・口コミ実績</strong>: 公式サイトの保証条件 + 第三者公開口コミ・実績データを確認。</li>
+      </ol>
+    </div>
+  </section>
+
+  <section class="lp-section"><h2>退職代行サービス比較の基礎知識：3つの運営主体</h2><p>退職代行サービスを比較検討する上で、まず理解すべきは「運営主体」の違いです。<br>サービスは主に「民間企業」「労働組合」「弁護士法人」の3種類に大別され、それぞれ対応可能な業務範囲が法律で定められています。<br>民間企業が運営するサービスは、本人の退職意思を会社に「伝達」する業務に限定されるのが一般的です。<br>一方で、労働組合が運営するサービスは、労働組合法に基づき団体交渉権を持つため、未払い給与や有給休暇取得に関する「交渉」が可能です。<br>さらに、弁護士法人が運営するサービスでは、弁護士が代理人として交渉事はもちろん、万が一の損害賠償請求といった訴訟対応まで、広範な法律事務を取り扱うことができます。<br>弁護士法第72条では、弁護士資格のない者が報酬を得て法律事務を行うこと（非弁行為）を禁じており、この規定がサービス範囲の違いの根拠となっています。<br>ご自身の状況に合わせて、どの運営主体のサービスが最適かを見極めることが、比較の第一歩とされます。</p></section>
+
+  <section class="lp-section alt" id="sec-4">
+    <div class="container">
+      <p class="section-num">SECTION / 04</p>
+      <h2>利用の流れ (4 ステップ)</h2>
+      <div class="counter-box">
+        <h3>📌 退職代行 利用フロー 4 ステップ</h3>
+        <div class="row"><b>1. 無料相談</b><span>LINE/電話で当日対応可否・料金総額・追加費用有無を確認</span></div>
+        <div class="row"><b>2. 必要情報の提供</b><span>勤務先情報・上司氏名・雇用形態・希望退職日・有給残日数を業者へ伝達</span></div>
+        <div class="row"><b>3. 業者から会社へ連絡</b><span>退職意思伝達 + 返却物・書類受取調整 (最短30分〜数時間)</span></div>
+        <div class="row"><b>4. 完了報告 + 退職後手続き</b><span>健康保険切替 (14日以内)・雇用保険申請・源泉徴収票受取</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-section"><h2>失敗しないための退職代行5つの比較ポイント</h2><p>数ある退職代行サービスの中から最適なものを選ぶためには、表面的な料金だけでなく、多角的な視点での比較が不可欠です。<br>ここでは、後悔しないための具体的な比較ポイントを5つに絞って解説します。<br>公開情報をもとに、ご自身の状況と照らし合わせながらご確認ください。</p><ul><li><strong>1. 交渉事の有無と運営主体の適合性:</strong> まず、未払い残業代や有給消化の交渉が必要かどうかを明確にしましょう。意思伝達のみであれば民間企業、交渉が必要なら労働組合、法的な紛争に発展する可能性があるなら弁護士が運営するサービスが適していると一般にされます。</li><li><strong>2. 料金体系の透明性:</strong> 基本料金のほかに、追加料金が発生するケースがないかを確認します。深夜対応、連絡回数の制限、会社との交渉回数などで別途費用がかかる場合があります。消費者庁も、サービス利用前の契約内容の十分な確認を呼びかけています。</li><li><strong>3. 対応実績と利用者の声:</strong> これまでの退職代行実績数や成功率は、サービスの信頼性を測る一つの指標です。公式サイトだけでなく、SNSや第三者のレビューサイトなども参考にし、多角的に情報を集めることが推奨されます。</li><li><strong>4. サポート体制の充実度:</strong> 24時間365日対応か、連絡手段はLINEや電話など自分が使いやすいものに対応しているか、相談は無料かといったサポート体制も重要な比較軸です。担当者との相性も、無料相談の段階で確認することが期待されます。</li><li><strong>5. 返金保証制度の有無と条件:</strong> 万が一、退職が完了しなかった場合に備え、返金保証制度があるかを確認しましょう。ただし、「会社からの連絡があった場合は対象外」など、保証の適用には細かい条件が設定されていることが多いため、規約を事前に確認することが重要です。</li></ul><div class="benefit-summary" style="background:#f5f5dc;padding:1rem;border-left:4px solid #d4a373;margin:1rem 0;"><strong>💡 このサービスを検討するメリット (★544 ②):</strong><ul><li>適切なサービスを比較・選択することで、退職交渉にかかる時間と精神的ストレスを軽減できる可能性が高まります。</li><li>料金体系やサービス範囲を事前に比較することで、予期せぬ追加費用を避け、計画的に退職手続きを進めることが期待されます。</li><li>ご自身の状況に合った運営主体（弁護士・労働組合等）を選ぶことで、法的なリスクを抑え、安心して手続きを任せられるという安心感が得られます。</li></ul></div></section>
+
+  <section class="lp-section faq alt" id="sec-faq">
+    <div class="container">
+      <p class="section-num">SECTION / 06</p>
+      <h2>よくある質問（FAQ）</h2>
+      <div class="faq">
+        {faq.map((item) => (
+          <details><summary>{item.q}</summary><div><p set:html={item.a} /></div></details>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-section" id="sec-summary">
+    <div class="container">
+      <p class="section-num">SECTION / 07</p>
+      <h2>まとめ</h2>
+      <p>退職代行を選ぶ際は ①運営主体 (弁護士/組合/民間) の交渉権限 ②料金総額 (追加費用含む) ③即日対応の実績 ④LINE 24 時間相談 ⑤返金保証・口コミ の 5 基準で比較検討することが推奨されます。<br>会社からの拒否リスク・有給消化交渉の必要性・心理的限界の度合いに応じて、弁護士運営・労働組合運営・民間運営から最適な形態を選ぶことが重要です。</p>
+      <p><strong>状況別の推奨形態</strong>: ① <strong>会社拒否リスク高 (パワハラ等)</strong> → 弁護士運営または労働組合運営 (交渉権限あり) ② <strong>有給消化必須</strong> → 労働組合運営 (労基法 39 条交渉可) ③ <strong>料金優先・トラブル少なめ</strong> → 民間運営 (¥10,000-30,000 帯) ④ <strong>即日対応希望</strong> → 24h LINE + 即日実績明示業者。判断軸を絞ることで業者選定の効率が大きく向上します。</p>
+      <p><strong>失敗回避の行動 3 ステップ</strong>: <strong>STEP 1</strong> 自分の状況確認 (運営形態の優先度・必要な権限・予算上限) → <strong>STEP 2</strong> 上記比較表で 2-3 社に絞込 → <strong>STEP 3</strong> 各社の無料相談 (LINE/電話) で対応可否を確認し、見積書面取得後に最終決定。複数社の無料相談を並行活用することで、選定の確実性が高まります。</p>
+      <p style="font-size:13px;color:var(--c-text-mute,#6b7280);">※即日対応は <a href="/touji/">即日・当日対応ページ</a> ・親バレ回避は <a href="/oyabare/">親バレページ</a> ・有給消化は <a href="/yukyu-shouka/">有給消化ページ</a> ・失敗例は <a href="/shippai/">失敗例ページ</a> もあわせてご参照ください。本記事は法的助言ではなく、特定業者を推奨するものでもありません。</p>
+      <PRBadge pageSlug="osusume-hikaku" label="退職代行サービスの公式サイトで無料相談する（PR）" />
+    </div>
+  </section>
+
+  <section class="lp-section alt" id="sec-policy">
+    <div class="container">
+      <p class="section-num">SECTION / 08</p>
+      <h2>編集ポリシー (情報源・更新日・E-E-A-T)</h2>
+      <ul>
+        <li><strong>情報源</strong>: 政府公式 e-Gov 法令検索 (民法・労働基準法・弁護士法) ・厚生労働省公式サイト ・各退職代行業者公式サイト ・退職代行関連の公開統計情報</li>
+        <li><strong>編集方針</strong>: 一次情報優先 (法令は e-Gov 直接リンク・運営形態は公式サイト確認) ・断定表現を避け推定値・公開情報の整理として記述</li>
+        <li><strong>更新頻度</strong>: 月次レビュー (法令改正・サービス内容変更時は随時更新)</li>
+        <li><strong>運営者</strong>: NY-squared (個人事業) <a href="/operator-info/">運営情報ページ</a> 参照</li>
+        <li><strong>E-E-A-T 4 原則</strong>: Experience (退職代行関連の公開情報整理) ・Expertise (法令引用 + 業界公開統計) ・Authoritativeness (政府公式 + 業者公式の一次情報のみ) ・Trustworthiness (PR 表記 + 推定値明示 + 法的助言ではない注記)</li>
+      </ul>
+
+      <h2>出典・参考情報 (法令・公的機関・公開情報)</h2>
+      <p>本記事の信頼性確保のため、以下の一次情報を出典として参照しています。法令引用は政府公式 e-Gov 法令検索データベースから直接リンク、公的機関情報は各省庁公式サイトのみを採用しています。</p>
+      <ul>
+        <li><a href="https://elaws.e-gov.go.jp/document?lawid=129AC0000000089" target="_blank" rel="noopener">民法第 627 条 (退職の権利・e-Gov)</a> — 期間の定めのない雇用契約の解約・本記事の退職権利の根拠</li>
+        <li><a href="https://elaws.e-gov.go.jp/document?lawid=324AC0000000205" target="_blank" rel="noopener">弁護士法第 72 条 (非弁行為の禁止・e-Gov)</a> — 民間業者の交渉権限制限の根拠</li>
+        <li><a href="https://elaws.e-gov.go.jp/document?lawid=322AC0000000049" target="_blank" rel="noopener">労働基準法 (e-Gov)</a> — 第 39 条 (有給休暇の権利) ・退職時の手続き等</li>
+        <li><a href="https://www.mhlw.go.jp/" target="_blank" rel="noopener">厚生労働省公式サイト</a> — 労働相談窓口・労働基準監督署情報</li>
+        <li><a href="https://www.houterasu.or.jp/" target="_blank" rel="noopener">法テラス (日本司法支援センター)</a> — 無料法律相談・退職トラブル相談窓口</li>
+        <li>各退職代行業者公式サイト — 料金・対応範囲・運営形態・返金保証条件の一次情報</li>
+      </ul>
+      <p style="font-size:12px;color:var(--c-text-mute,#6b7280);margin-top:16px;">※本記事は 2026 年 5 月時点の公開情報をもとに作成。最新の法令・サービス内容は各公式サイトでご確認ください。各社の正式名・公式 URL・特商法表記等は提携承認後に順次反映します (PR・アフィリエイト広告を含みます)。本記事は法的助言・効果保証ではなく、特定業者を推奨するものでもありません。具体的な利用判断は無料相談などを活用し、複数業者を比較した上でご自身の責任において選択してください。</p>
+    </div>
+  </section>
+
+  <!-- ★T-M4 [0yAVu8WAXu]: Filter UI JS (vanilla・Astro <script> client side・verbatim 保持) -->
+  <script is:inline>
+    (function () {
+      const state = {
+        type: 'all', // 'all' | 'lawyer' | 'union' | 'private-lawyer,private-union,private'
+        line24h: false,
+        union: false,
+        atobarai: false,
+        public: false,
+      };
+
+      const typeBtns = document.querySelectorAll('.filter-btn-type');
+      const cbLine24h = document.getElementById('filter-line24h');
+      const cbUnion = document.getElementById('filter-union');
+      const cbAtobarai = document.getElementById('filter-atobarai');
+      const cbPublic = document.getElementById('filter-public');
+      const rows = document.querySelectorAll('.comparison-row');
+      const cards = document.querySelectorAll('.service-card');
+      const countEl = document.getElementById('filter-count');
+      const emptyEl = document.getElementById('empty-state');
+
+      function matches(el) {
+        const type = el.getAttribute('data-type');
+        const allowedTypes = state.type === 'all' ? null : state.type.split(',');
+        if (allowedTypes && !allowedTypes.includes(type)) return false;
+        if (state.line24h && el.getAttribute('data-line24h') !== 'true') return false;
+        if (state.union && el.getAttribute('data-union') !== 'true') return false;
+        if (state.atobarai && el.getAttribute('data-atobarai') !== 'true') return false;
+        if (state.public && el.getAttribute('data-public') !== 'true') return false;
+        return true;
+      }
+
+      function applyFilter() {
+        let visibleCount = 0;
+        rows.forEach((r) => {
+          const ok = matches(r);
+          r.style.display = ok ? '' : 'none';
+          if (ok) visibleCount++;
+        });
+        cards.forEach((c) => {
+          c.style.display = matches(c) ? '' : 'none';
+        });
+        const total = rows.length;
+        if (countEl) countEl.textContent = visibleCount + '/' + total + ' 件表示中';
+        if (emptyEl) emptyEl.classList.toggle('hidden', visibleCount > 0);
+      }
+
+      typeBtns.forEach((btn) => {
+        btn.addEventListener('click', () => {
+          const t = btn.getAttribute('data-filter-type') || 'all';
+          state.type = t;
+          typeBtns.forEach((b) => {
+            const active = b === btn;
+            b.classList.toggle('bg-blue-100', active);
+            b.classList.toggle('text-blue-900', active);
+            b.classList.toggle('font-semibold', active);
+            b.classList.toggle('border-blue-400', active);
+            b.classList.toggle('border-gray-300', !active);
+            b.setAttribute('aria-pressed', active ? 'true' : 'false');
+          });
+          applyFilter();
+        });
+      });
+
+      [
+        [cbLine24h, 'line24h'],
+        [cbUnion, 'union'],
+        [cbAtobarai, 'atobarai'],
+        [cbPublic, 'public'],
+      ].forEach(([el, key]) => {
+        if (!el) return;
+        el.addEventListener('change', () => {
+          state[key] = el.checked;
+          applyFilter();
+        });
+      });
+
+      // 初期表示
+      applyFilter();
+    })();
+  </script>
+
+  <section class="lp-section alt" id="sec-asp-pr" aria-labelledby="h2-asp-pr">
+    <div class="container">
+      <p class="section-num">SECTION / PR・広告</p>
+      <h2 id="h2-asp-pr">【PR・広告】退職代行Jobs (株式会社アレス) の公開情報整理</h2>
+      <p class="section-lede"><strong>本セクションは PR・広告枠</strong> です。アフィリエイト広告として「退職代行Jobs (株式会社アレス)」の公開情報を整理しています。他事業者との優劣判断ではなく、広告主の公開情報として参照ください。</p>
+      <div class="branch-grid">
+      <article class="branch"><span class="tag">特徴①</span><h4>退職代行Jobs</h4><p>退職代行Jobs (株式会社アレス運営) は退職代行サービスの一つとされる傾向。会社との連絡を代行する選択肢として検討対象とされています。</p></article>
+      <article class="branch"><span class="tag">特徴②</span><h4>LINE相談対応</h4><p>LINE での相談対応の傾向。気軽に相談できる選択肢とされる傾向。</p></article>
+      <article class="branch"><span class="tag">特徴③</span><h4>顧問弁護士監修</h4><p>顧問弁護士監修の傾向。法的トラブル懸念のある方の検討材料が一般的です。</p></article>
+      <article class="branch"><span class="tag">特徴④</span><h4>全国対応</h4><p>全国対応の傾向。地方在住者も利用可能な選択肢のケースが多く見られます。</p></article>
+      <article class="branch"><span class="tag">特徴⑤</span><h4>プライバシー配慮</h4><p>個人情報保護法遵守の傾向。会社・家族にバレにくい配慮があると公表されています。</p></article>
+      <article class="branch"><span class="tag">注意</span><h4>事前確認推奨事項</h4><p>具体的料金・対応範囲・成功事例は公式公開情報で確認推奨。「100%退職成功」等の断定は不可とされています。</p></article>
+      </div>
+      <div class="cta-block"><p class="cta-note"><span class="pr-tag">PR</span>退職代行Jobs (株式会社アレス) の最新の条件は公式サイトでご確認ください。</p><BannerAB pageSlug="enhance-cta" position="enhance" /><p class="btn-cta-sub">※ 公式サイトに遷移します。</p></div>
+    </div>
+  </section>
+
+  <section class="lp-section" id="sec-koteki-laws" aria-labelledby="h2-koteki-laws">
+    <div class="container">
+      <p class="section-num">SECTION / 公的窓口・関連法令</p>
+      <h2 id="h2-koteki-laws">公的窓口・関連法令</h2>
+      <p class="section-lede">トラブル時・疑問時は公的窓口の活用が推奨されます。</p>
+      <ul>
+        <li><a href="https://www.mhlw.go.jp/general/sosiki/chihou/" target="_blank" rel="noopener">総合労働相談コーナー</a> - 厚生労働省・労働相談</li>
+        <li><a href="https://www.houterasu.or.jp/" target="_blank" rel="noopener">法テラス</a> - 法律相談</li>
+        <li><a href="https://www.bengoshi.or.jp/" target="_blank" rel="noopener">日本弁護士連合会</a> - 弁護士相談</li>
+        <li><a href="https://www.mhlw.go.jp/" target="_blank" rel="noopener">厚生労働省</a> - 労働基準法監督</li>
+        <li>消費生活センター - 188 (いやや!) で最寄りセンター案内</li>
+      </ul>
+      <p class="section-lede" style="margin-top:1rem">関連法令: <strong>労働基準法</strong> (退職の自由・2週間前申告)・<strong>民法 627条</strong> (期間定めない雇用の解約)・<strong>弁護士法 72条</strong> (非弁行為禁止)・<strong>個人情報保護法</strong>。本ページは公開情報の整理であり、特定事業者の公式サイトではありません。アフィリエイト広告（PR）を含みます。</p>
+    </div>
+  </section>
+  <section class="lp-section" id="sec-related" aria-labelledby="related-h">
+    <div class="container">
+      <p class="section-num">関連記事</p>
+      <h2 id="related-h">関連する記事</h2>
+      <ul class="related-links" style="line-height:1.9;">
+        <li><a href="https://taishoku-info.pages.dev/osusume/">退職代行 おすすめ｜選び方 5 ステップ + 5 社比較 + ランキング 完全ガイド（2026年版・PR）</a></li>
+        <li><a href="https://taishoku-info.pages.dev/hyoban-hikaku/">退職代行の評判比較｜口コミ・料金・対応範囲から見る主要4社の選び方（2026年版・PR）</a></li>
+        <li><a href="https://taishoku-info.pages.dev/osusume-ranking/">退職代行 おすすめランキング2026｜運営主体別 6 業者比較（PR）</a></li>
+        <li><a href="https://taishoku-info.pages.dev/bengoshi-hikaku-2026/">退職代行は弁護士に頼むべき？費用・メリット・選び方を徹底解説2026年版（PR）</a></li>
+        <li><a href="https://taishoku-info.pages.dev/roudoukumiai-hikaku-2026/">退職代行の労働組合タイプとは？弁護士・民間との違いと選び方を完全解説2026年版（PR）</a></li>
+      </ul>
+    </div>
+  </section>
+
+
+<!-- PERSPECTIVE_SOURCE_BOX_START -->
+<aside class="perspective-source" style="background:#fffbeb;border:1px solid #fde68a;padding:14px 18px;margin:24px 0;border-radius:6px;">
+  <div style="font-weight:600;color:#92400e;margin-bottom:6px;">⚖️ 比較・選択 に関する公的データ</div>
+  <p style="margin:6px 0;font-size:0.92em;color:#451a03;">退職代行業者選択時のトラブル事例</p>
+  <p style="margin:4px 0;font-size:0.85em;"><a href="https://www.kokusen.go.jp/" rel="noopener" target="_blank" style="color:#0369a1;">出典: 国民生活センター 退職代行苦情事例</a></p>
+</aside>
+<!-- PERSPECTIVE_SOURCE_BOX_END -->
+</RichLayout>

@@ -1,0 +1,252 @@
+---
+import RichLayout from '../../layouts/RichLayout.astro';
+import PRBadge from '../../components/PRBadge.astro';
+import BannerAB from '../../components/BannerAB.astro';
+
+const title = '退職代行は弁護士に頼むべき？費用・メリット・選び方を徹底解説2026年版（PR）';
+const description = '退職代行の弁護士運営と労働組合運営の違い・5ケース別の弁護士必要性・費用相場（着手金 vs 成功報酬制）を公開情報ベースで整理した情報提供記事です。損害賠償・残業代回収・ハラスメント等の複雑トラブル対応を弁護士運営で進めるべきケースを解説（PR・アフィリエイト広告を含みます）。';
+
+const breadcrumb = [
+  { name: 'ホーム', url: '/' },
+  { name: '退職代行', url: '/' },
+  { name: '弁護士比較2026' },
+];
+
+const faq = [
+  { q: '弁護士の退職代行と、労働組合や民間企業のサービスとの法的な違いは何ですか？', a: '弁護士以外の事業者が報酬を得る目的で交渉や法律相談などの「法律事務」を行うことは、弁護士法第72条で禁止されている「非弁行為」にあたる可能性があります。弁護士は唯一、未払い賃金の請求や損害賠償対応など、法律に基づいた交渉や法的手続きを代理人として行える専門家です。' },
+  { q: '弁護士に退職代行を依頼した場合の費用相場はどのくらいですか？', a: '弁護士による退職代行の費用相場は、着手金として5万円～10万円程度が一般的とされます。これに加えて、残業代請求などが成功した場合に回収額の20%前後を成功報酬として支払う形式が多く見られます。契約前に費用の内訳を詳細に確認することが重要です。' },
+  { q: '会社から「損害賠償請求する」と脅されていますが、弁護士なら対応できますか？', a: 'はい、対応が期待できます。会社からの不当な損害賠償請求に対して、法的な観点から反論し、代理人として交渉を行うことは弁護士の専門業務です。労働契約法に基づき、労働者の責任範囲が限定されるケースも多いため、まずは法律の専門家である弁護士に相談することをおすすめします。' },
+  { q: '弁護士に依頼する際、注意すべき点はありますか？', a: '弁護士を選ぶ際は、労働問題に関する実績が豊富かを確認することが重要です。また、費用体系が明確であるか、無料相談の範囲はどこまでか、担当弁護士との相性なども事前に確認しましょう。国民生活センターにも退職代行に関する相談が寄せられており、契約内容の事前確認がトラブル防止につながります。' },
+  { q: '結局、どのような場合に弁護士へ退職代行を依頼するのが最適なのでしょうか？', a: '未払い残業代や退職金の請求、有給休暇の未消化、ハラスメント問題、会社からの損害賠償請求など、会社との間に法的な交渉が必要なトラブルを抱えている場合に弁護士への依頼が最適とされます。単に退職の意思を伝えるだけでなく、法的な権利を主張したい場合に大きなメリットが期待できます。' },
+];
+
+// ★441-EXT 強化: 弁護士退職代行 主要サービス Service 構造化 (A3 改善期待)
+const itemListSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'ItemList',
+  'name': '弁護士運営 退職代行 主要サービス比較',
+  'description': '弁護士運営の退職代行サービス (法的代理権・損害賠償/訴訟対応・全範囲対応)',
+  'itemListOrder': 'https://schema.org/ItemListUnordered',
+  'itemListElement': [
+    {'@type': 'ListItem', 'position': 1, 'item': {'@type': 'Service', 'name': '弁護士法人みやび', 'serviceType': '弁護士退職代行 (法的代理権 + 残業代/退職金回収)', 'description': '料金 ¥27,500〜77,000・弁護士直接対応・損害賠償対応可', 'audience': {'@type': 'Audience', 'audienceType': '損害賠償リスク・残業代回収が必要なユーザー'}}},
+    {'@type': 'ListItem', 'position': 2, 'item': {'@type': 'Service', 'name': '退職代行Jobs', 'serviceType': '合同労組 + 弁護士監修退職代行 (バランス型)', 'description': '料金 ¥27,000・有給/残業代交渉対応・LINE 24h・全額返金保証', 'audience': {'@type': 'Audience', 'audienceType': '有給消化・残業代交渉が必要な正社員'}}},
+    {'@type': 'ListItem', 'position': 3, 'item': {'@type': 'Service', 'name': '退職代行EXIT', 'serviceType': '民間 + 弁護士監修退職代行', 'description': '料金 ¥25,000 (初回) / ¥15,000 (2 回目以降)・全額返金保証', 'audience': {'@type': 'Audience', 'audienceType': '初回退職 / 料金重視ユーザー'}}},
+  ],
+};
+---
+
+<RichLayout title={title} description={description} publishedDate="2026-05-12" modifiedDate="2026-05-18" breadcrumb={breadcrumb} faq={faq}>
+<!-- PERSPECTIVE_LEAD_BOX_START -->
+<aside class="perspective-lead" style="background:#f8fafc;border-left:4px solid #0ea5e9;padding:16px 20px;margin:24px 0;border-radius:6px;">
+  <div style="display:flex;align-items:center;gap:8px;margin-bottom:8px;">
+    <span style="font-size:1.4em;">⚖️</span>
+    <strong style="color:#0c4a6e;">この LP の独立価値</strong>
+  </div>
+  <p style="margin:4px 0;font-size:0.95em;color:#0f172a;"><strong>視点 (Perspective):</strong> 比較・選択</p>
+  <p style="margin:4px 0;font-size:0.95em;color:#0f172a;"><strong>独自 angle:</strong> bengoshi hikaku 2026 に焦点を当てた 比較・選択 視点の独自解説</p>
+  <p style="margin:4px 0;font-size:0.9em;color:#475569;"><strong>他 LP との違い:</strong> 他 LP が一般的に 比較・選択 全体を扱うのに対し、本 LP は bengoshi-hikaku-2026 に絞り込む</p>
+</aside>
+<!-- PERSPECTIVE_LEAD_BOX_END -->
+
+  <script type="application/ld+json" set:html={JSON.stringify(itemListSchema)}></script>
+  <section class="fv" aria-labelledby="fv-h1">
+    <div class="container">
+      <span class="fv-pill">退職代行 / 弁護士比較2026</span>
+      <h1 id="fv-h1"><span class="accent">退職代行は弁護士に頼むべき？</span><br />費用・メリット・選び方を徹底解説2026年版</h1>
+      <p class="lede">退職代行の弁護士運営は、<strong>複雑な労使トラブル (損害賠償・残業代回収・ハラスメント等) が予想される場合に推奨</strong>されます。法的代理権で全範囲対応可能・成功報酬制で残業代回収可。シンプルな退職には労組運営 2〜3 万円で十分なケースが多いとされています。</p>
+      <ul class="fv-bullets">
+        <li>弁護士 vs 労組の違い (法的交渉権限の差)</li>
+        <li>弁護士が必要なケース5選</li>
+        <li>費用相場と料金体系 (着手金 vs 成功報酬)</li>
+        <li>弁護士運営の選び方 5 ポイント + 比較表</li>
+      </ul>
+      <PRBadge pageSlug="bengoshi-hikaku-2026" />
+      <div class="fv-meta">
+        <span><b>公開日</b> 2026-05-12</span><span><b>最終更新</b> 2026-05-18</span>
+        <span><b>編集</b> NY-squared 編集部</span><span><b>所要</b> 約 7 分</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-section" id="sec-intro">
+    <div class="container">
+      <p class="section-num">SECTION / 00</p>
+      <h2>はじめに (PR表示・前提)</h2>
+      <p><strong>📢 PR表示</strong>: 本ページはアフィリエイト広告（PR）を含みます。本サイトは弁護士事務所・退職代行業者公式サイトではなく、公開情報を整理した一般論ベースの情報提供サイトです。本記事は法的助言・効果保証ではなく、個別案件の判断は<strong>必ず弁護士・各業者にご相談ください</strong>。</p>
+      <p style="font-size:13px;color:var(--c-text-sub,#4a5568);">最終確認日: 2026-05-12 / 公開情報の整理であり、特定弁護士事務所を推奨するものではありません。<br />運営者: <a href="/operator-info/">NY-squared (個人事業)</a> / <a href="/editorial-policy/">編集ポリシー</a> / <a href="/privacy-policy/">プライバシーポリシー</a></p>
+      <p><strong>結論</strong>: 退職代行の弁護士運営は、<strong>複雑な労使トラブル (損害賠償・残業代回収・ハラスメント等) が予想される場合に推奨</strong>されます。法的代理権で全範囲対応可能・成功報酬制で残業代回収可。シンプルな退職には労組運営 2〜3 万円で十分なケースが多いとされています。</p>
+      <p>本記事では弁護士 vs 労組の違い・5 ケース別の弁護士必要性・費用体系 (着手金 vs 成功報酬)・選び方 5 ポイントを整理します。</p>
+      <BannerAB pageSlug="bengoshi-hikaku-2026" position="hero" />
+    </div>
+  </section>
+
+  <section class="lp-section alt" id="sec-1">
+    <div class="container">
+      <p class="section-num">SECTION / 01</p>
+      <h2>弁護士退職代行と労働組合退職代行の違い</h2>
+      <h3>1-1. 法的交渉権限の差が最も重要</h3>
+      <p>一般的に弁護士運営は <strong>法的代理権</strong> (民法 第643条) を持ち、退職通知 + 残業代/退職金交渉 + 損害賠償対応 + 訴訟対応の全範囲を扱えるとされています。労組運営は <strong>団体交渉権</strong> (労組法 第6条) で有給消化・残業代交渉に限定されます。</p>
+      <h3>1-2. 費用の差と費用対効果</h3>
+      <p>一般的に弁護士運営 3〜6 万円 + 成功報酬 (回収額の 20-30%)・労組運営 2〜3 万円が相場とされています。残業代 30 万円回収のケースでは弁護士運営の方が実質コストが安くなるケースもあります。</p>
+      <h3>1-3. 対応スピードと確実性の比較</h3>
+      <p>一般的に労組運営は LINE 24h 対応・即日対応が多く、弁護士運営は営業時間内対応が多いとされています。但し複雑トラブル時の確実性は弁護士運営が優位とされています。</p>
+    </div>
+  </section>
+
+  <section class="lp-section"><h2>弁護士による退職代行の基礎：法的な位置づけと役割</h2><p>退職代行サービスは運営元によって「民間企業」「労働組合」「弁護士法人」の3つに大別されますが、法的に行える業務範囲が大きく異なります。<br>特に弁護士は、他の運営元とは一線を画す権限を持っています。<br>弁護士法第72条では、弁護士または弁護士法人でない者が、報酬を得る目的で法律事件に関して交渉などの法律事務を取り扱うことを原則として禁止しています（非弁行為）。<br>このため、未払い残業代の請求や退職金の交渉、損害賠償請求への対応といった、具体的な金銭請求や法的な紛争解決を伴う交渉は、弁護士の独占業務とされています。<br>労働組合も団体交渉権を持ちますが、個別の訴訟代理などには対応できません。<br>したがって、弁護士による退職代行は、単に「退職の意思を伝える」だけでなく、労働者が抱える法的なトラブルを包括的に解決するための、法律に基づいた正規の代理人サービスと位置づけられます。</p></section>
+
+  <section class="lp-section alt" id="sec-3">
+    <div class="container">
+      <p class="section-num">SECTION / 03</p>
+      <h2>弁護士退職代行サービスの費用相場と料金体系</h2>
+      <h3>3-1. 着手金制 vs 成功報酬制</h3>
+      <p>一般的に着手金制は依頼時の固定費用 (3〜6 万円)・成功報酬制は残業代等の回収成功時に回収額の 20-30% を支払う方式とされています。両方を併用する事務所が多く、合計試算を事前に確認することが推奨されます。</p>
+      <div class="compare-wrap">
+        <table class="compare">
+          <thead>
+            <tr><th>料金体系</th><th>着手金</th><th>成功報酬</th><th>合計試算 (残業代30万回収)</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>着手金制のみ</td><td>5 万円</td><td>なし</td><td><b>5 万円</b></td></tr>
+            <tr><td>成功報酬制のみ</td><td>0 円</td><td>回収額 25%</td><td><b>7.5 万円</b></td></tr>
+            <tr><td>着手金 + 成功報酬</td><td>3 万円</td><td>回収額 20%</td><td><b>9 万円</b></td></tr>
+          </tbody>
+        </table>
+      </div>
+      <h3>3-2. 追加費用が発生するケース</h3>
+      <ul>
+        <li><strong>訴訟対応</strong>: 着手金 + 印紙代 + 弁護士費用 (10〜30 万円程度)</li>
+        <li><strong>慰謝料請求</strong>: ハラスメント等での慰謝料請求は別途報酬</li>
+        <li><strong>遠隔地対応</strong>: 出張費 (交通費 + 日当) が発生するケース</li>
+        <li><strong>調停・労働審判</strong>: 別途報酬 (5〜20 万円程度)</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="lp-section"><h2>弁護士運営の退職代行を選ぶ具体的な手順とポイント</h2><p>弁護士に退職代行を依頼する場合、円滑に進めるためには手順と注意点を理解しておくことが重要です。<br>まず、インターネット検索などで労働問題に強い弁護士事務所を探し、無料相談を申し込みます。<br>相談時には、現在の状況、会社とのトラブルの有無、希望する解決内容（残業代請求など）を具体的に伝えましょう。<br>正式に依頼を決めたら、委任契約を締結します。<br>その後、弁護士が代理人として会社へ受任通知を送り、退職の意思伝達や必要な交渉を開始します。<br>これにより、依頼者本人が会社と直接連絡を取る必要はなくなります。<br>厚生労働省のウェブサイト「確かめよう労働条件」でも注意喚起されているように、労働者は自身の権利を正しく主張することが大切です。<br>弁護士に依頼する際は、以下のポイントを確認しましょう。</p><ul><li><strong>費用体系の明確さ：</strong>着手金、成功報酬、実費など、費用の総額がどの程度になるか事前に確認する。</li><li><strong>労働問題の実績：</strong>退職代行や未払い賃金請求など、労働問題に関する解決実績が豊富かを確認する。</li><li><strong>コミュニケーション：</strong>担当弁護士との相性や、進捗報告の方法などを確認し、安心して任せられるかを見極める。</li></ul><div class="benefit-summary" style="background:#f5f5dc;padding:1rem;border-left:4px solid #d4a373;margin:1rem 0;"><strong>💡 このサービスを検討するメリット (★544 ②):</strong><ul><li><strong>法的な安心感：</strong>弁護士が代理人となることで、会社からの不当な請求や直接連絡を遮断し、精神的な負担を大幅に軽減できる可能性が期待されます。</li><li><strong>金銭的回収の可能性：</strong>専門的な交渉により、未払いの残業代や退職金、慰謝料など、本来得られるべき金銭を回収できる可能性が高まります。</li><li><strong>包括的なトラブル解決：</strong>退職手続きだけでなく、ハラスメント問題や損害賠償請求など、複雑な労働問題を一括で相談・解決に導けることが期待されます。</li></ul></div></section>
+
+  <section class="lp-section alt" id="sec-5">
+    <div class="container">
+      <p class="section-num">SECTION / 05</p>
+      <h2>弁護士運営の代表サービス比較表（2026年版）</h2>
+      <div class="compare-wrap">
+        <table class="compare">
+          <thead>
+            <tr><th>サービス</th><th>料金体系</th><th>対応</th><th>特徴 (公開情報)</th></tr>
+          </thead>
+          <tbody>
+            <tr><td><b>弁護士法人みやび</b></td><td>¥27,500〜77,000 + 成功報酬</td><td>24h LINE 対応</td><td>弁護士直接対応・残業代/退職金回収可・全国対応</td></tr>
+            <tr><td><b>退職110番</b></td><td>¥43,800 + 成功報酬</td><td>営業時間内</td><td>弁護士法人運営・労働問題実績豊富</td></tr>
+            <tr><td><b>退職代行Jobs</b></td><td>¥27,000 (労組型)</td><td>24h LINE 対応</td><td>弁護士監修 + 合同労組・有給/残業代交渉対応</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-section" id="sec-faq">
+    <div class="container">
+      <p class="section-num">SECTION / 06</p>
+      <h2>よくある質問（FAQ）</h2>
+      <div class="faq">
+        {faq.map((item) => (
+          <details><summary>{item.q}</summary><div><p set:html={item.a} /></div></details>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-section alt" id="sec-summary">
+    <div class="container">
+      <p class="section-num">SECTION / 07</p>
+      <h2>まとめ</h2>
+      <p>退職代行の弁護士運営は <strong>複雑な労使トラブル (損害賠償・残業代回収・ハラスメント等)</strong> が予想される場合に推奨されます。一般的に料金は 3〜6 万円 + 成功報酬で労組運営の 2〜3 万円より高めですが、対応範囲の広さと法的代理権の強みが特徴です。</p>
+      <p><strong>弁護士運営を選ぶべき 5 ケース</strong>: ① 未払い残業代/退職金回収 ② 損害賠償リスク ③ ハラスメント絡み ④ 競業避止義務 ⑤ 会社が退職を認めない。これら以外のシンプル退職は労組運営 (退職代行Jobs 等 ¥27,000) で十分とされています。</p>
+      <p><strong>選び方 3 ステップ</strong>: <strong>STEP 1</strong> トラブル予想の有無を判定 → <strong>STEP 2</strong> 弁護士運営 vs 労組運営の費用対効果を試算 → <strong>STEP 3</strong> 初回無料相談で複数事務所比較 → <a href="/osusume-hikaku/">退職代行 比較ページ</a> も参考に最終判断。</p>
+      <p style="font-size:13px;color:var(--c-text-mute,#6b7280);">※業者選びは <a href="/osusume-hikaku/">退職代行 比較ページ</a> ・労働組合タイプ詳細は <a href="/labor-union/">労働組合タイプページ</a> ・料金相場は <a href="/ryokin-hikaku-2026/">料金相場2026年版</a> もあわせてご参照ください。本記事は退職成功保証・効果保証ではなく、特定弁護士事務所を推奨するものでもありません。</p>
+      <PRBadge pageSlug="bengoshi-hikaku-2026" label="退職代行サービスの公式サイトで無料相談する（PR）" />
+    </div>
+  </section>
+
+  <section class="lp-section" id="sec-policy">
+    <div class="container">
+      <p class="section-num">SECTION / 08</p>
+      <h2>編集ポリシー (情報源・更新日・E-E-A-T)</h2>
+      <ul>
+        <li><strong>情報源</strong>: 厚生労働省「労働基準法解釈例規」・日本弁護士連合会公式サイト・JILPT (労働政策研究・研修機構)・国民生活センター (退職代行関連消費者相談情報)・各弁護士事務所公開情報</li>
+        <li><strong>編集方針</strong>: 一次情報優先 (公的機関 + 業界統計) ・断定表現を避け推定値・公開情報の整理として記述</li>
+        <li><strong>更新頻度</strong>: 月次レビュー (退職代行業界動向変化時は随時更新)</li>
+        <li><strong>運営者</strong>: NY-squared (個人事業) <a href="/operator-info/">運営情報ページ</a> 参照</li>
+        <li><strong>E-E-A-T 4 原則</strong>: Experience (退職代行関連の公開情報整理) ・Expertise (業界公開統計 + 法令データ) ・Authoritativeness (公的機関 + 弁護士事務所公式の一次情報のみ) ・Trustworthiness (PR 表記 + 推定値明示 + 効果保証ではない注記)</li>
+      </ul>
+
+      <h2>出典・参考情報 (公的機関・公開情報)</h2>
+      <ul>
+        <li><a href="https://www.mhlw.go.jp/" target="_blank" rel="noopener">厚生労働省公式サイト</a> — 労働基準法解釈例規・労働市場分析</li>
+        <li><a href="https://elaws.e-gov.go.jp/document?lawid=322AC0000000049" target="_blank" rel="noopener">労働基準法 (e-Gov)</a> — 退職通知・有給休暇取得権の法的根拠</li>
+        <li><a href="https://www.nichibenren.or.jp/" target="_blank" rel="noopener">日本弁護士連合会公式サイト</a> — 弁護士事務所一覧・労働問題相談窓口</li>
+        <li><a href="https://www.jil.go.jp/" target="_blank" rel="noopener">独立行政法人 労働政策研究・研修機構 (JILPT)</a> — 退職動向分析・労使紛争統計</li>
+        <li><a href="https://www.kokusen.go.jp/" target="_blank" rel="noopener">国民生活センター</a> — 退職代行関連の消費者相談情報・契約トラブル参考 (★435 体現)</li>
+        <li>各弁護士事務所・退職代行サービス公式サイト — 料金・対応範囲・特徴の一次情報</li>
+      </ul>
+      <p style="font-size:12px;color:var(--c-text-mute,#6b7280);margin-top:16px;">
+        ※本記事は 2026 年 5 月時点の公開情報をもとに作成。最新の弁護士料金は各事務所公式サイトでご確認ください。本記事は退職成功保証・効果保証ではなく、特定弁護士事務所を推奨するものでもありません。具体的な労使トラブル対応は各弁護士事務所の面談サービス等を活用し、自分の状況に応じた対策を行うことが推奨されます。
+      </p>
+    </div>
+  </section>
+
+  <section class="lp-section alt" id="sec-asp-pr" aria-labelledby="h2-asp-pr">
+    <div class="container">
+      <p class="section-num">SECTION / PR・広告</p>
+      <h2 id="h2-asp-pr">【PR・広告】退職代行Jobs (株式会社アレス) の公開情報整理</h2>
+      <p class="section-lede"><strong>本セクションは PR・広告枠</strong> です。アフィリエイト広告として「退職代行Jobs (株式会社アレス)」の公開情報を整理しています。他事業者との優劣判断ではなく、広告主の公開情報として参照ください。</p>
+      <div class="branch-grid">
+      <article class="branch"><span class="tag">特徴①</span><h4>退職代行Jobs</h4><p>退職代行Jobs (株式会社アレス運営) は退職代行サービスの一つとされる傾向。会社との連絡を代行する選択肢として検討対象とされています。</p></article>
+      <article class="branch"><span class="tag">特徴②</span><h4>LINE相談対応</h4><p>LINE での相談対応の傾向。気軽に相談できる選択肢とされる傾向。</p></article>
+      <article class="branch"><span class="tag">特徴③</span><h4>顧問弁護士監修</h4><p>顧問弁護士監修の傾向。法的トラブル懸念のある方の検討材料が一般的です。</p></article>
+      <article class="branch"><span class="tag">特徴④</span><h4>全国対応</h4><p>全国対応の傾向。地方在住者も利用可能な選択肢のケースが多く見られます。</p></article>
+      <article class="branch"><span class="tag">特徴⑤</span><h4>プライバシー配慮</h4><p>個人情報保護法遵守の傾向。会社・家族にバレにくい配慮があると公表されています。</p></article>
+      <article class="branch"><span class="tag">注意</span><h4>事前確認推奨事項</h4><p>具体的料金・対応範囲・成功事例は公式公開情報で確認推奨。「100%退職成功」等の断定は不可とされています。</p></article>
+      </div>
+      <div class="cta-block"><p class="cta-note"><span class="pr-tag">PR</span>退職代行Jobs (株式会社アレス) の最新の条件は公式サイトでご確認ください。</p><BannerAB pageSlug="enhance-cta" position="enhance" /><p class="btn-cta-sub">※ 公式サイトに遷移します。</p></div>
+    </div>
+  </section>
+
+  <section class="lp-section" id="sec-koteki-laws" aria-labelledby="h2-koteki-laws">
+    <div class="container">
+      <p class="section-num">SECTION / 公的窓口・関連法令</p>
+      <h2 id="h2-koteki-laws">公的窓口・関連法令</h2>
+      <p class="section-lede">トラブル時・疑問時は公的窓口の活用が推奨されます。</p>
+      <ul>
+        <li><a href="https://www.mhlw.go.jp/general/sosiki/chihou/" target="_blank" rel="noopener">総合労働相談コーナー</a> - 厚生労働省・労働相談</li>
+        <li><a href="https://www.houterasu.or.jp/" target="_blank" rel="noopener">法テラス</a> - 法律相談</li>
+        <li><a href="https://www.bengoshi.or.jp/" target="_blank" rel="noopener">日本弁護士連合会</a> - 弁護士相談</li>
+        <li><a href="https://www.mhlw.go.jp/" target="_blank" rel="noopener">厚生労働省</a> - 労働基準法監督</li>
+        <li>消費生活センター - 188 (いやや!) で最寄りセンター案内</li>
+      </ul>
+      <p class="section-lede" style="margin-top:1rem">関連法令: <strong>労働基準法</strong> (退職の自由・2週間前申告)・<strong>民法 627条</strong> (期間定めない雇用の解約)・<strong>弁護士法 72条</strong> (非弁行為禁止)・<strong>個人情報保護法</strong>。本ページは公開情報の整理であり、特定事業者の公式サイトではありません。アフィリエイト広告（PR）を含みます。</p>
+    </div>
+  </section>
+  <section class="lp-section" id="sec-related" aria-labelledby="related-h">
+    <div class="container">
+      <p class="section-num">関連記事</p>
+      <h2 id="related-h">関連する記事</h2>
+      <ul class="related-links" style="line-height:1.9;">
+        <li><a href="https://taishoku-info.pages.dev/roudoukumiai-hikaku-2026/">退職代行の労働組合タイプとは？弁護士・民間との違いと選び方を完全解説2026年版（PR）</a></li>
+        <li><a href="https://taishoku-info.pages.dev/ryokin-hikaku-2026/">退職代行の料金相場2026年版｜弁護士・労働組合・民間の3タイプ料金比較と選び方（PR）</a></li>
+        <li><a href="https://taishoku-info.pages.dev/hyoban-hikaku/">退職代行の評判比較｜口コミ・料金・対応範囲から見る主要4社の選び方（2026年版・PR）</a></li>
+        <li><a href="https://taishoku-info.pages.dev/osusume-hikaku/">退職代行 おすすめ 5社比較｜失敗しない選び方と料金・即日対応の徹底ガイド（2026年版・PR）</a></li>
+        <li><a href="https://taishoku-info.pages.dev/arbeit-taishoku/">アルバイト退職代行 完全ガイド｜学生バイト・短期バイト・掛け持ちバイトの活用判断（2026年5月時点・公開情報整理・PR）</a></li>
+      </ul>
+    </div>
+  </section>
+
+
+<!-- PERSPECTIVE_SOURCE_BOX_START -->
+<aside class="perspective-source" style="background:#fffbeb;border:1px solid #fde68a;padding:14px 18px;margin:24px 0;border-radius:6px;">
+  <div style="font-weight:600;color:#92400e;margin-bottom:6px;">⚖️ 比較・選択 に関する公的データ</div>
+  <p style="margin:6px 0;font-size:0.92em;color:#451a03;">退職代行業者形態 (労組/弁護士/民間) の法的差異</p>
+  <p style="margin:4px 0;font-size:0.85em;"><a href="https://www.mhlw.go.jp/" rel="noopener" target="_blank" style="color:#0369a1;">出典: 厚生労働省 労働組合制度</a></p>
+</aside>
+<!-- PERSPECTIVE_SOURCE_BOX_END -->
+</RichLayout>

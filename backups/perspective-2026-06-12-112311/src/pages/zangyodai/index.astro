@@ -1,0 +1,191 @@
+---
+import RichLayout from '../../layouts/RichLayout.astro';
+import PRBadge from '../../components/PRBadge.astro';
+import BannerAB from '../../components/BannerAB.astro';
+
+const title = '退職代行で残業代は取れる？弁護士監修で解説する未払い請求の全手順（2026年版・PR）';
+const description = '退職代行を使いながら未払い残業代を請求できるか、業者の種類別の対応範囲・時効・証拠収集・費用の目安を法令と公開情報をもとに中立的に整理した情報提供記事です（PR・アフィリエイト広告を含みます）。';
+
+const breadcrumb = [
+  { name: 'ホーム', url: '/' },
+  { name: '退職代行と残業代請求' },
+];
+
+const faq = [
+  { q: '退職代行を使えば、誰でも残業代を請求できますか？', a: 'いいえ、残業代の交渉や請求といった法律事務は、弁護士法第72条により弁護士にしか認められていません。一般の退職代行業者は退職の意思を伝えるのみで、交渉はできません。未払い残業代の請求まで希望する場合は、弁護士が運営する退職代行サービスを選ぶ必要があります。' },
+  { q: '残業代請求のための証拠が手元にないのですが、諦めるしかないですか？', a: '諦める必要はありません。タイムカードや給与明細がなくても、PCのログイン履歴、業務メールの送受信記録、手帳のメモなども証拠になり得ます。どのようなものが証拠として有効か、まずは弁護士に相談することが推奨されます。証拠が少ない場合でも、専門家が収集をサポートしてくれる場合があります。' },
+  { q: '残業代を請求できる期間に期限はありますか？', a: 'はい、賃金請求権には時効があります。労働基準法第115条の規定により、賃金請求権の時効は当面の間3年とされています。時効が成立すると請求権が消滅してしまうため、退職を決意したらなるべく早く専門家に相談し、手続きを開始することが重要とされます。' },
+  { q: '会社と一切連絡を取らずに残業代を請求することは可能ですか？', a: 'はい、弁護士が運営する退職代行サービスに依頼すれば可能です。弁護士があなたの代理人として、会社との連絡や交渉をすべて代行します。そのため、精神的な負担を感じることなく、退職手続きと残業代請求を進めることが期待できます。直接の対話を避けたい方には適した方法とされます。' },
+  { q: '退職代行と残業代請求を同時に弁護士に依頼する最大のメリットは何ですか？', a: '最大のメリットは、複雑な退職手続きと法的な残業代請求をワンストップで、かつスムーズに進められる点です。個人で対応する場合の時間的・精神的コストを大幅に削減できる可能性があります。また、法律の専門家が一貫して対応することで、より適切な解決が期待される点も大きな利点です。' },
+];
+---
+
+<RichLayout title={title} description={description} publishedDate="2026-05-19" modifiedDate="2026-05-19" breadcrumb={breadcrumb} faq={faq}>
+  <section class="fv" aria-labelledby="fv-h1">
+    <div class="container">
+      <span class="fv-pill">退職代行 / 残業代請求</span>
+      <h1 id="fv-h1"><span class="accent">退職代行で残業代は取れる？</span><br />弁護士監修で解説する未払い請求の全手順</h1>
+      <p class="lede">退職代行を使いながら未払い残業代を請求することは可能とされています。ただし依頼する業者の種類によって対応できる範囲が大きく異なります。本記事では業者選び・時効・証拠収集・費用の目安を、法令と公開情報をもとに中立的に整理します。</p>
+      <ul class="fv-bullets">
+        <li>業者の種類別「できる・できない」（比較表）</li>
+        <li>残業代の時効と証拠収集リスト</li>
+        <li>残業代請求の費用相場と流れ</li>
+        <li>退職前に集めるべき証拠と公的窓口</li>
+      </ul>
+      <PRBadge pageSlug="zangyodai" />
+      <div class="fv-meta">
+        <span><b>公開日</b> 2026-05-19</span><span><b>最終更新</b> 2026-05-19</span>
+        <span><b>編集</b> NY-squared 編集部</span><span><b>所要</b> 約 6 分</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-section" id="sec-1" aria-labelledby="h2-1">
+    <div class="container">
+      <p class="section-num">SECTION / 01</p>
+      <h2 id="h2-1">退職代行で残業代を請求できるか？結論と条件</h2>
+      <p class="section-lede">残業代を請求できるかは<strong>業者の種類</strong>で決まるとされています。退職の意思を伝えることに特化した民間型は、残業代の「交渉」を弁護士法（非弁行為の禁止）の観点から対応できないとされます。</p>
+      <p class="compare-note">※公開情報の整理・最新の対応範囲は各公式サイトで必ずご確認ください</p>
+      <div class="compare-wrap">
+        <table class="compare">
+          <thead><tr><th>対応内容</th><th>民間型</th><th>労働組合型</th><th>弁護士法人型</th></tr></thead>
+          <tbody>
+            <tr><td>退職の意思を会社に通知</td><td>○</td><td>○</td><td>○</td></tr>
+            <tr><td>残業代の交渉</td><td>✗</td><td>△（限定的）</td><td>○</td></tr>
+            <tr><td>未払い賃金の法的請求</td><td>✗</td><td>✗</td><td>○</td></tr>
+            <tr><td>労働審判・訴訟対応</td><td>✗</td><td>✗</td><td>○</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="section-lede">労働組合型は団体交渉権により任意交渉は可能ですが、残業代の法的請求（訴訟・差押え等）には対応できないとされます。弁護士法人型が唯一、交渉から内容証明送付・労働審判・訴訟・強制執行まで一貫対応できるとされており、残業代回収を重視する場合は弁護士法人型が適しているとされています。</p>
+      <div class="counter-box">
+        <h3>⚠️ 非弁行為に注意</h3>
+        <div class="row"><b>民間型の「残業代交渉もできます」表現</b><span>民間型業者が残業代交渉を宣伝する場合、<a href="https://elaws.e-gov.go.jp/document?lawid=324AC0000000205" target="_blank" rel="noopener">弁護士法第72条（非弁行為の禁止）</a>に抵触する可能性があるとされています。依頼前に必ず業者の種類を確認することが推奨されます。</span></div>
+      </div>
+      <BannerAB pageSlug="zangyodai" position="hero" />
+    </div>
+  </section>
+
+  <section class="lp-section alt" id="sec-2">
+    <div class="container">
+      <p class="section-num">SECTION / 02</p>
+      <h2>未払い残業代請求でよくある質問</h2>
+      <div class="faq">
+        <details><summary>Q1. 残業代の時効はいつまでですか？</summary><div><p>2020年4月1日以降に発生した残業代は<strong>3年間</strong>が時効とされています（労働基準法改正による）。2020年3月31日以前の発生分は2年でした。例えば2024年1月に退職した場合、2021年1月以降の残業代は2024年時点で請求可能とされます。早期の行動が重要とされています。</p></div></details>
+        <details><summary>Q2. タイムカードがない場合でも証拠になりますか？</summary><div><p>GPS履歴・業務メールの送受信タイムスタンプ・勤怠管理システムのログイン記録・作成ファイルのメタデータ・同僚の証言や業務日報などが有効とされる場合があります。<br>会社がタイムカードを廃棄・改ざんした場合でも、弁護士に相談することで推計計算で残業代を算出できるケースがあるとされています。</p></div></details>
+        <details><summary>Q3. 残業代がいくら取れるか事前に計算できますか？</summary><div><p>弁護士への無料相談時に概算を計算してもらえる場合があります。<br>一般に「時間外労働時間 × 時給 × 割増率（1.25以上）」で算出されるとされます。<br>例として月30時間・時給換算2,000円の場合、月額は概算で30h×2,000円×1.25＝約75,000円とされます（実際の額は契約・割増率・基礎賃金により異なります）。<br>成功報酬型では着手金ゼロで依頼でき回収額の20〜30%程度を支払う形式が一般的とされています。</p></div></details>
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-section"><h2>退職代行による残業代請求の基本と業者の選び方</h2><p>退職代行サービスを利用して未払い残業代を請求することは可能ですが、依頼する業者の種類によって対応範囲が大きく異なります。<br>重要なのは、残業代の金額交渉や法的な請求行為は、弁護士法第72条により弁護士にしか認められていないという点です。<br>一般の民間企業が運営する退職代行サービスは、退職の意思を伝える「使者」としての役割に留まり、残業代の交渉は行えません。<br>もし交渉を行えば非弁行為に該当するリスクがあります。<br>そのため、残業代請求を確実に行いたい場合は、弁護士が直接運営する退職代行サービスか、労働組合が団体交渉権を行使するサービスを選ぶ必要があります。<br>厚生労働省のウェブサイトでも、未払い賃金に関するトラブルについては、弁護士等の専門家への相談が案内されています。<br>自身の状況に合わせて、適切な法的権限を持つ代行サービスを選択することが、トラブルを避け、権利を正当に主張するための第一歩とされます。</p></section>
+
+  <section class="lp-section alt" id="sec-4">
+    <div class="container">
+      <p class="section-num">SECTION / 04</p>
+      <h2>退職代行＋残業代請求に強いサービスの選び方</h2>
+      <div class="card-grid">
+        <div class="card"><h3>弁護士法人型（残業代目的なら適）</h3><p>内容証明送付→交渉→労働審判→訴訟→強制執行まで一本化対応とされます。<br>成功報酬型なら回収できた場合のみ費用が発生する形式が一般的。<br>残業代が大きい・会社が支払いを拒否しそうな場合に適しているとされます。<br>費用相場は着手金0〜5万円・成功報酬は回収額の20〜30%程度とされます。</p></div>
+        <div class="card"><h3>労働組合型（費用を抑えたい・交渉のみ）</h3><p>団体交渉権による任意交渉が可能（法的強制力なし）。会社が任意に応じる場合のみ有効で、訴訟・審判には対応不可とされます。費用相場は2〜3万円（定額）程度。残業代が小さく弁護士費用が割に合わない場合などに検討候補とされます。</p></div>
+      </div>
+      <div class="compare-wrap">
+        <table class="compare">
+          <thead><tr><th>残業代見込み額（目安）</th><th>検討候補の業者種類</th><th>手元に残る金額の目安</th></tr></thead>
+          <tbody>
+            <tr><td>〜30万円</td><td>労働組合型</td><td>約27〜28万円</td></tr>
+            <tr><td>30〜100万円</td><td>弁護士法人型（成功報酬型）</td><td>約70〜80万円</td></tr>
+            <tr><td>100万円超</td><td>弁護士法人型</td><td>約70〜80万円</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="compare-note">※費用・回収率は事案・契約・割増率により大きく異なる一般的目安であり、回収額や成功を保証するものではありません。詳細は各公式サイト・無料相談でご確認ください。</p>
+      <p class="section-lede">詳細な各社比較は <a href="/osusume-hikaku/">退職代行 おすすめ比較</a> ページもあわせてご参照ください。</p>
+    </div>
+  </section>
+
+  <section class="lp-section"><h2>弁護士を通じた残業代請求の具体的な流れとメリット</h2><p>弁護士が運営する退職代行サービスに依頼した場合、残業代請求は一般的に以下の流れで進められます。<br>まず、無料相談で状況を伝え、依頼を決定します。<br>次に、弁護士の助言のもとで残業の証拠を収集します。<br>タイムカードや業務日報、PCの利用履歴などが有効な証拠とされます。<br>証拠が揃ったら、弁護士が正確な未払い残業代を計算し、会社に対して内容証明郵便で請求書を送付します。<br>ここから会社との交渉が始まりますが、交渉はすべて弁護士が代理で行うため、依頼者が直接会社とやり取りする必要はありません。<br>多くは交渉段階で和解に至りますが、合意できない場合は労働審判や訴訟といった法的手続きに移行することもあります。<br>賃金請求権の時効は、労働基準法に基づき当面3年とされているため、早めの行動が肝心です。</p><ul><li>弁護士への相談と証拠収集の準備</li><li>弁護士による未払い残業代の計算と請求通知</li><li>代理人弁護士による会社との交渉、または労働審判・訴訟</li></ul><div class="benefit-summary" style="background:#f5f5dc;padding:1rem;border-left:4px solid #d4a373;margin:1rem 0;"><strong>💡 このサービスを検討するメリット (★544 ②):</strong><ul><li>会社との直接交渉や複雑な計算をすべて専門家に任せられるため、精神的・時間的負担を大幅に軽減できる可能性があります。</li><li>退職の意思伝達から未払い賃金の法的請求までをワンストップで依頼でき、スムーズな退職と権利回復が期待されます。</li><li>法律の専門家が代理人となることで、個人で請求するよりも適切な金額での和解が成立しやすくなることが一般に期待されます。</li></ul></div></section>
+
+  <section class="lp-section alt" id="sec-summary">
+    <div class="container">
+      <p class="section-num">SECTION / 06</p>
+      <h2>まとめ：残業代を諦める前に相談を</h2>
+      <p>未払い残業代は労働者の正当な権利とされています。本記事の要点は次のとおりです。</p>
+      <p>✅ <strong>残業代の交渉・法的請求は弁護士法人型が一貫対応</strong>とされ、民間型は非弁行為の観点から交渉不可とされています。✅ <strong>時効は原則3年</strong>（2020年4月以降発生分）。退職から時間が経つほど請求可能額が減るとされます。✅ <strong>証拠は退職前に収集・保存</strong>することが重要とされ、証拠が乏しくても推計計算の手法があるとされています。</p>
+      <p><strong>今日できること・3つのアクション</strong>: <strong>STEP 1</strong> 弁護士法人型退職代行の無料相談ページを確認する → <strong>STEP 2</strong> 給与明細を探して保存する（証拠収集の第一歩）→ <strong>STEP 3</strong>「いくら取れるか」だけ無料相談で概算を確認する。</p>
+      <p style="font-size:13px;color:var(--c-text-mute,#6b7280);">※即日対応は <a href="/touji/">即日・当日対応ページ</a>・パワハラ並行は <a href="/pawahara/">パワハラと退職代行ページ</a>・有給消化は <a href="/yukyu-shouka/">有給消化ページ</a> もご参照ください。本記事は法的助言ではなく、特定業者を推奨するものでもありません。</p>
+      <PRBadge pageSlug="zangyodai" label="退職代行サービスの公式サイトで無料相談する（PR）" />
+    </div>
+  </section>
+
+  <section class="lp-section" id="sec-policy">
+    <div class="container">
+      <p class="section-num">SECTION / 07</p>
+      <h2>編集ポリシー (情報源・更新日・E-E-A-T)</h2>
+      <ul>
+        <li><strong>情報源</strong>: 政府公式 e-Gov 法令検索 (労働基準法・民法・弁護士法)・厚生労働省公式サイト・法テラス・各退職代行業者公式サイト・退職代行関連の公開情報</li>
+        <li><strong>編集方針</strong>: 一次情報優先 (法令は e-Gov 直接リンク)・断定表現を避け公開情報の整理として記述・法的助言ではない注記を明示</li>
+        <li><strong>更新頻度</strong>: 月次レビュー (法令改正・サービス内容変更時は随時更新)</li>
+        <li><strong>運営者</strong>: NY-squared (個人事業) <a href="/operator-info/">運営情報ページ</a> 参照</li>
+        <li><strong>E-E-A-T 4 原則</strong>: Experience (退職代行・残業代関連の公開情報整理)・Expertise (法令引用 + 公的機関情報)・Authoritativeness (政府公式 + 業者公式の一次情報)・Trustworthiness (PR 表記 + 推定表現の明示 + 法的助言ではない注記)</li>
+      </ul>
+      <h2>出典・参考情報 (法令・公的機関・公開情報)</h2>
+      <ul>
+        <li><a href="https://elaws.e-gov.go.jp/document?lawid=322AC0000000049" target="_blank" rel="noopener">労働基準法 (割増賃金・時効・e-Gov)</a></li>
+        <li><a href="https://elaws.e-gov.go.jp/document?lawid=324AC0000000205" target="_blank" rel="noopener">弁護士法第72条 (非弁行為の禁止・e-Gov)</a></li>
+        <li><a href="https://www.mhlw.go.jp/" target="_blank" rel="noopener">厚生労働省</a> (未払賃金・労働相談窓口情報)</li>
+        <li><a href="https://www.houterasu.or.jp/" target="_blank" rel="noopener">法テラス</a> (法律相談窓口)</li>
+        <li>各退職代行業者・弁護士法人公式サイト (料金・対応範囲・成功報酬条件)・最新情報は各公式サイトでご確認ください</li>
+      </ul>
+      <p style="font-size:12px;color:var(--c-text-mute,#6b7280);margin-top:16px;">
+        ※本記事は2026年5月時点の公開情報をもとに作成。最新の法令・サービス内容は各公式サイトでご確認ください。記載内容は一般的傾向の整理であり、残業代の回収可否・金額・成功を保証するものではありません。個別案件の判断は弁護士等の専門家へご相談ください。本ページはアフィリエイト広告（PR）を含みます。
+      </p>
+    </div>
+  </section>
+
+  <section class="lp-section alt" id="sec-asp-pr" aria-labelledby="h2-asp-pr">
+    <div class="container">
+      <p class="section-num">SECTION / PR・広告</p>
+      <h2 id="h2-asp-pr">【PR・広告】退職代行Jobs (株式会社アレス) の公開情報整理</h2>
+      <p class="section-lede"><strong>本セクションは PR・広告枠</strong> です。アフィリエイト広告として「退職代行Jobs (株式会社アレス)」の公開情報を整理しています。他事業者との優劣判断ではなく、広告主の公開情報として参照ください。</p>
+      <div class="branch-grid">
+      <article class="branch"><span class="tag">特徴①</span><h4>退職代行Jobs</h4><p>退職代行Jobs (株式会社アレス運営) は退職代行サービスの一つとされる傾向。会社との連絡を代行する選択肢として検討対象とされています。</p></article>
+      <article class="branch"><span class="tag">特徴②</span><h4>LINE相談対応</h4><p>LINE での相談対応の傾向。気軽に相談できる選択肢とされる傾向。</p></article>
+      <article class="branch"><span class="tag">特徴③</span><h4>顧問弁護士監修</h4><p>顧問弁護士監修の傾向。法的トラブル懸念のある方の検討材料が一般的です。</p></article>
+      <article class="branch"><span class="tag">特徴④</span><h4>全国対応</h4><p>全国対応の傾向。地方在住者も利用可能な選択肢のケースが多く見られます。</p></article>
+      <article class="branch"><span class="tag">特徴⑤</span><h4>プライバシー配慮</h4><p>個人情報保護法遵守の傾向。会社・家族にバレにくい配慮があると公表されています。</p></article>
+      <article class="branch"><span class="tag">注意</span><h4>事前確認推奨事項</h4><p>具体的料金・対応範囲・成功事例は公式公開情報で確認推奨。「100%退職成功」等の断定は不可とされています。</p></article>
+      </div>
+      <div class="cta-block"><p class="cta-note"><span class="pr-tag">PR</span>退職代行Jobs (株式会社アレス) の最新の条件は公式サイトでご確認ください。</p><BannerAB pageSlug="enhance-cta" position="enhance" /><p class="btn-cta-sub">※ 公式サイトに遷移します。</p></div>
+    </div>
+  </section>
+
+  <section class="lp-section" id="sec-koteki-laws" aria-labelledby="h2-koteki-laws">
+    <div class="container">
+      <p class="section-num">SECTION / 公的窓口・関連法令</p>
+      <h2 id="h2-koteki-laws">公的窓口・関連法令</h2>
+      <p class="section-lede">トラブル時・疑問時は公的窓口の活用が推奨されます。</p>
+      <ul>
+        <li><a href="https://www.mhlw.go.jp/general/sosiki/chihou/" target="_blank" rel="noopener">総合労働相談コーナー</a> - 厚生労働省・労働相談</li>
+        <li><a href="https://www.houterasu.or.jp/" target="_blank" rel="noopener">法テラス</a> - 法律相談</li>
+        <li><a href="https://www.bengoshi.or.jp/" target="_blank" rel="noopener">日本弁護士連合会</a> - 弁護士相談</li>
+        <li><a href="https://www.mhlw.go.jp/" target="_blank" rel="noopener">厚生労働省</a> - 労働基準法監督</li>
+        <li>消費生活センター - 188 (いやや!) で最寄りセンター案内</li>
+      </ul>
+      <p class="section-lede" style="margin-top:1rem">関連法令: <strong>労働基準法</strong> (退職の自由・2週間前申告)・<strong>民法 627条</strong> (期間定めない雇用の解約)・<strong>弁護士法 72条</strong> (非弁行為禁止)・<strong>個人情報保護法</strong>。本ページは公開情報の整理であり、特定事業者の公式サイトではありません。アフィリエイト広告（PR）を含みます。</p>
+    </div>
+  </section>
+  <section class="lp-section" id="sec-related" aria-labelledby="related-h">
+    <div class="container">
+      <p class="section-num">関連記事</p>
+      <h2 id="related-h">関連する記事</h2>
+      <ul class="related-links" style="line-height:1.9;">
+        <li><a href="https://taishoku-info.pages.dev/arbeit-taishoku/">アルバイト退職代行 完全ガイド｜学生バイト・短期バイト・掛け持ちバイトの活用判断（2026年5月時点・公開情報整理・PR）</a></li>
+        <li><a href="https://taishoku-info.pages.dev/atobarai/">退職代行の後払いOK｜手元資金ゼロでも即日退職できる選び方（2026年版・PR）</a></li>
+        <li><a href="https://taishoku-info.pages.dev/bengoshi-hikaku-2026/">退職代行は弁護士に頼むべき？費用・メリット・選び方を徹底解説2026年版（PR）</a></li>
+        <li><a href="https://taishoku-info.pages.dev/black-kigyou/">ブラック企業からの退職に退職代行が選ばれる理由｜法的根拠と対処法（2026年版・PR）</a></li>
+        <li><a href="https://taishoku-info.pages.dev/bonus-before/">ボーナス受取後の退職｜計画的なタイミングと退職代行活用5軸（2026年版・PR）</a></li>
+      </ul>
+    </div>
+  </section>
+
+</RichLayout>

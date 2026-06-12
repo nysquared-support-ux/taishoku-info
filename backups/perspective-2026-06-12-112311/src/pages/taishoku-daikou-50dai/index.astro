@@ -1,0 +1,173 @@
+---
+import RichLayout from '../../layouts/RichLayout.astro';
+import PRBadge from '../../components/PRBadge.astro';
+import BannerAB from '../../components/BannerAB.astro';
+
+const title = '50代の退職代行｜退職金確保と次のキャリアの選び方を整理(2026年版・PR)';
+const description = '50代の退職代行利用時の判断軸 (退職金確保・失業保険・再就職・健康保険) を、公開情報・公的機関データをもとに中立的に整理した情報提供記事です(PR・アフィリエイト広告を含みます)。';
+
+const breadcrumb = [
+  { name: 'ホーム', url: '/' },
+  { name: '50代' },
+];
+
+const faq = [
+  { q: '50代でも退職代行は利用できますか？', a: '年齢制限はなく、50代の方も多く利用しているとされています。労働組合運営の退職代行であれば交渉が可能とされ、退職日・有給消化等の調整に対応可能です。退職前に退職金規程・確定拠出年金・健康保険の継続手段を確認しておくことが推奨されます。' },
+  { q: '退職金は退職代行を使っても受け取れますか？', a: '退職金の受給は会社の退職金規程に基づきます。退職代行を使うか否かと、退職金支給の可否は原則別問題です。ただし、退職金規程未確認のまま退職すると、想定額と実額の乖離が発生する可能性があるため、事前確認が重要です。' },
+  { q: '50代で退職した場合の失業保険は？', a: '雇用保険の基本手当の所定給付日数は、離職理由・勤続年数・年齢で決まります。45歳以上65歳未満で勤続20年以上の場合、特定受給資格者で330日が上限とされています。ハローワークでの求職活動が要件となります。' },
+  { q: '健康保険はどうすればよいですか？', a: '退職後の健康保険は(1)任意継続(2年・全額自己負担)、(2)国民健康保険、(3)家族の扶養(要件あり)から選択します。前年の所得・扶養家族の有無により最適解は異なるため、市区町村の窓口での確認が推奨されます。' },
+  { q: '再就職の見通しは厳しいですか？', a: 'ハローワークの統計では、50代の有効求人倍率は20-30代より低い傾向です。ただし、専門スキル・資格・経験を活かせる業種では一定の求人があるとされ、中高年齢者再就職支援の活用も選択肢となります。' }
+];
+---
+
+<RichLayout title={title} description={description} publishedDate="2026-06-05" modifiedDate="2026-06-05" breadcrumb={breadcrumb} faq={faq}>
+  <PRBadge />
+  <section class="fv" aria-labelledby="fv-h1">
+    <div class="container">
+      <span class="fv-pill">退職代行 / 50代</span>
+      <h1 id="fv-h1"><span class="accent">50代の退職代行</span><br />退職金確保と次のキャリアの選び方を整理</h1>
+      <p class="lede">50代の退職代行は退職金・年金・健康保険・再就職といった金銭的論点が複雑で、業者選びと事前準備が重要とされています。本記事では公的機関の公開情報をもとに、判断軸を中立的に整理します。</p>
+      <ul class="fv-bullets">
+        <li>50代の退職金・確定拠出年金の確認手順</li>
+        <li>失業保険(雇用保険)の給付日数と要件</li>
+        <li>退職前後の健康保険の選択肢</li>
+        <li>再就職・独立・引退の3パターンの整理</li>
+      </ul>
+      <div class="cta-block">
+        <p class="cta-note">本ページはアフィリエイト広告(A8.net・アクセストレード経由)を利用しています。<span class="pr-tag">PR</span></p>
+        <BannerAB position="hero" pageSlug="taishoku-daikou-50dai" />
+      </div>
+      <p class="fv-meta"><span>更新日: 2026-06-05</span><span>編集: NY-squared 編集部</span></p>
+    </div>
+  </section>
+
+  <section class="lp-section">
+    <div class="container">
+      <p class="section-num">SECTION 01</p>
+      <h2>50代の退職代行を検討する基本</h2>
+      <p>50代の退職代行では、若年層と比べて退職金・確定拠出年金・雇用保険の給付日数・健康保険の継続といった金銭的論点が複雑になる傾向です。<br>厚生労働省「就業条件総合調査」では、勤続年数の長い従業員ほど退職金規程の対象となるケースが多いとされ、退職前の規程確認が重要となります。<br>雇用保険の給付日数は45歳以上65歳未満で勤続20年以上の場合に330日が上限とされ、若年層より長期化する可能性があります。<br>退職代行Jobs(株式会社アレス運営)は労働組合と連携した退職代行サービスを提供しており、50代特有の論点にも対応可能と公表されています。</p>
+    </div>
+  </section>
+
+  <section class="lp-section alt">
+    <div class="container">
+      <p class="section-num">SECTION 02</p>
+      <h2>公的保護制度・関連法令</h2>
+      <div class="card-grid">
+        <div class="card"><h3>労働基準法</h3><p>退職の自由(民法627条)・就業規則の周知義務等が定められ、労働者の退職権利の基礎とされています。</p></div>
+        <div class="card"><h3>労働契約法</h3><p>労働契約の終了に関するルール・雇止め法理(19条)・無期転換ルール(18条)が定められています。</p></div>
+        <div class="card"><h3>特定商取引法</h3><p>退職代行サービスの契約には、特定商取引法の表示義務(運営者情報・料金等)が適用されるとされています。</p></div>
+        <div class="card"><h3>国民生活センター</h3><p>退職代行サービスに関する相談事例(契約トラブル・追加料金等)が公表されており、業者選びの参考になります。</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-section">
+    <div class="container">
+      <p class="section-num">SECTION 03</p>
+      <h2>進め方の選択肢(50代特化)</h2>
+      <p>退職前の準備として、就業規則・退職金規程の確認、確定拠出年金(DC)の運用商品の確認、健康保険の継続手段(任意継続/国保/家族扶養)の比較が一般的とされています。<br>退職代行Jobsを活用する場合、労働組合との連携により、退職意思の伝達のみならず、退職日や有給消化の調整も可能とされています。<br>50代の場合、年齢を理由に再就職が難しいと感じる方も少なくありませんが、ハローワークの「中高年齢者再就職支援」や、専門紹介会社の活用といった選択肢があります。</p>
+      <div class="benefit-summary">
+        <h3>退職代行Jobs を活用する5つの理由</h3>
+        <ul>
+          <li><strong>労働組合運営:</strong> 退職意思の伝達のみならず、有給消化・退職金等の交渉が可能とされています。</li>
+          <li><strong>全額返金保証:</strong> 退職できなかった場合の全額返金保証が明示されているとされています。</li>
+          <li><strong>24時間対応:</strong> 深夜・早朝の連絡にも対応可能と公表されています。</li>
+          <li><strong>弁護士監修:</strong> 業務フローが弁護士監修のもと設計されているとされています。</li>
+          <li><strong>退職実績:</strong> 公式サイトでは高い退職完了率が公表されています。</li>
+        </ul>
+      </div>
+      <div class="cta-block">
+        <BannerAB position="middle" pageSlug="taishoku-daikou-50dai" />
+        <p class="btn-cta-sub">公式サイトで料金・対応範囲を確認</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-section alt">
+    <div class="container">
+      <p class="section-num">SECTION 04</p>
+      <h2>向いている方 / 慎重判断が望ましい方</h2>
+      <div class="branch-grid">
+        <article class="branch"><h4>向いている方</h4><p>退職金・年金の論点を整理してから退職したい方、健康保険の継続手段を確認済みの方、再就職プランがある方</p></article>
+        <article class="branch"><h4>慎重判断が望ましい方</h4><p>退職金規程未確認の方、確定拠出年金の運用商品が未把握の方、再就職プラン未確定の方、家族の扶養に入る選択肢を未検討の方</p></article>
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-section">
+    <div class="container">
+      <p class="section-num">SECTION 05</p>
+      <h2>50代特有の注意点</h2>
+      <div class="counter-box">
+        <h3>事前確認項目</h3>
+        <div class="row"><b>退職金規程</b><span>勤続年数で支給率が変動するため、退職タイミングは規程確認後に決定</span></div>
+        <div class="row"><b>確定拠出年金</b><span>60歳まで原則引出不可・運用商品の見直しが推奨</span></div>
+        <div class="row"><b>健康保険</b><span>任意継続(2年・全額自己負担)/国保/家族扶養から比較選択</span></div>
+        <div class="row"><b>失業保険</b><span>45歳以上勤続20年以上で330日(離職理由により異なる)</span></div>
+      </div>
+      <div class="cta-block">
+        <BannerAB position="bottom" pageSlug="taishoku-daikou-50dai" />
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-section alt">
+    <div class="container">
+      <p class="section-num">SECTION 06</p>
+      <h2>よくある質問</h2>
+      <div class="faq">
+        <details class="faq-item"><summary>50代でも退職代行は利用できますか？</summary><div><p>年齢制限はなく、50代の方も多く利用しているとされています。労働組合運営の退職代行であれば交渉が可能とされ、退職日・有給消化等の調整に対応可能です。退職前に退職金規程・確定拠出年金・健康保険の継続手段を確認しておくことが推奨されます。</p></div></details>
+        <details class="faq-item"><summary>退職金は退職代行を使っても受け取れますか？</summary><div><p>退職金の受給は会社の退職金規程に基づきます。退職代行を使うか否かと、退職金支給の可否は原則別問題です。ただし、退職金規程未確認のまま退職すると、想定額と実額の乖離が発生する可能性があるため、事前確認が重要です。</p></div></details>
+        <details class="faq-item"><summary>50代で退職した場合の失業保険は？</summary><div><p>雇用保険の基本手当の所定給付日数は、離職理由・勤続年数・年齢で決まります。45歳以上65歳未満で勤続20年以上の場合、特定受給資格者で330日が上限とされています。ハローワークでの求職活動が要件となります。</p></div></details>
+        <details class="faq-item"><summary>健康保険はどうすればよいですか？</summary><div><p>退職後の健康保険は(1)任意継続(2年・全額自己負担)、(2)国民健康保険、(3)家族の扶養(要件あり)から選択します。前年の所得・扶養家族の有無により最適解は異なるため、市区町村の窓口での確認が推奨されます。</p></div></details>
+        <details class="faq-item"><summary>再就職の見通しは厳しいですか？</summary><div><p>ハローワークの統計では、50代の有効求人倍率は20-30代より低い傾向です。ただし、専門スキル・資格・経験を活かせる業種では一定の求人があるとされ、中高年齢者再就職支援の活用も選択肢となります。</p></div></details>
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-section">
+    <div class="container">
+      <p class="section-num">SECTION 07</p>
+      <h2>公的な相談窓口</h2>
+      <div class="sources">
+        <ul>
+          <li>厚生労働省「労働契約の終了に関するルール」</li>
+          <li>厚生労働省「新規学卒就職者の離職状況」</li>
+          <li>国民生活センター「退職代行サービスに関する相談事例」</li>
+          <li>消費者庁「退職代行サービスの注意点」</li>
+          <li>ハローワーク「雇用保険の基本手当について」</li>
+          <li>労働基準監督署「労働相談・申告窓口」</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-section alt">
+    <div class="container">
+      <p class="section-num">SECTION 08</p>
+      <h2>まとめ・退職代行Jobs の公開情報</h2>
+      <p>退職代行の利用判断は、状況・ペルソナにより最適解が異なるとされ、業者選び5軸(運営形態/料金/対応範囲/実績/口コミ)での評価が推奨されます。退職代行Jobsは労働組合運営で交渉対応可能とされ、有給消化・退職金等の調整に対応可能と公表されています。詳細は公式サイトでの確認が推奨されます。</p>
+      <div class="cta-block">
+        <BannerAB position="final" pageSlug="taishoku-daikou-50dai" />
+      </div>
+      <div class="disclaimer">
+        <p>本ページはアフィリエイト広告(A8.net・アクセストレード経由)を利用しています。退職代行Jobsは株式会社アレスが運営する退職代行サービスです。本ページの内容は公開情報・公的機関データをもとに中立的に整理した情報提供を目的としており、特定サービスの利用を保証するものではありません。サービス利用判断は読者ご自身で行ってください。</p>
+      </div>
+    </div>
+  </section>
+  <section class="lp-section" id="sec-related" aria-labelledby="related-h">
+    <div class="container">
+      <p class="section-num">関連記事</p>
+      <h2 id="related-h">関連する記事</h2>
+      <ul class="related-links" style="line-height:1.9;">
+        <li><a href="https://taishoku-info.pages.dev/seishain-taishoku-daikou/">正社員の退職代行ガイド｜利用できるか・流れ・正社員ならではの確認ポイント（2026年版・PR）</a></li>
+        <li><a href="https://taishoku-info.pages.dev/taishoku-daikou-haken/">派遣社員の退職代行ガイド｜派遣元への伝え方・契約期間の扱い・確認ポイント（2026年版・PR）</a></li>
+        <li><a href="https://taishoku-info.pages.dev/taishoku-daikou-hikitome/">退職代行と引き止め対応｜法的根拠と回避策（2026年版・PR）</a></li>
+        <li><a href="https://taishoku-info.pages.dev/taishoku-daikou-hiyo/">退職代行の費用相場と内訳整理｜価格帯別の特徴とサービス範囲の参考（2026年版・PR）</a></li>
+        <li><a href="https://taishoku-info.pages.dev/taishoku-daikou-line/">LINEで完結する退職代行｜LINE対応の範囲・メリットと留意点の整理（2026年版・PR）</a></li>
+      </ul>
+    </div>
+  </section>
+
+</RichLayout>

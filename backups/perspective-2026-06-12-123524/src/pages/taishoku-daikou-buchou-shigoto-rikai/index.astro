@@ -1,0 +1,193 @@
+---
+import RichLayout from '../../layouts/RichLayout.astro';
+import PRBadge from '../../components/PRBadge.astro';
+import BannerAB from '../../components/BannerAB.astro';
+
+const title = '上司に直接退職を伝えにくい時の退職代行｜伝達代行の整理(2026年版・PR)';
+const description = '上司に直接退職を伝えにくい時の退職代行活用の判断軸を、労働基準法・公的機関の公開情報をもとに中立的に整理した情報提供記事です(PR・アフィリエイト広告を含みます)。';
+
+const breadcrumb = [
+  { name: 'ホーム', url: '/' },
+  { name: '上司伝達回避' },
+];
+
+const faq = [
+  { q: '上司への退職意思の伝達は法的に必要ですか？', a: '民法 627 条では無期雇用契約の労働者は2週間前の意思表示で退職可能とされ、伝達手段・伝達相手は限定されていないとされています。退職代行を通じた会社への意思伝達も有効な選択肢として整理される選択肢が公開情報で公表されているとされています。' },
+  { q: '退職代行を使うと上司から連絡が来ますか？', a: '退職代行Jobs の公表情報では、退職代行利用後の会社・上司からの直接連絡について「会社へ連絡不要を伝達」と整理される選択肢が公表されているとされています。但し個別状況により対応は異なる選択肢として整理されているとされています。' },
+  { q: '引き止めが強硬で退職できない場合は？', a: '民法 627 条により、無期雇用契約の労働者は会社の承諾なしに2週間前の意思表示で退職可能とされています。労働組合運営の退職代行は、引き止め交渉への対応が可能と公表されています。詳細は労働基準監督署・労働組合への相談も推奨される選択肢として公表されているとされています。' },
+  { q: '有給休暇は消化できますか？', a: '労働基準法 39 条では有給休暇は労働者の権利とされ、退職時に未消化分の取得が可能とされています。退職代行Jobs の労働組合連携により、有給消化の調整が可能と公表されています。詳細は事前確認が推奨される選択肢として公表されているとされています。' },
+  { q: '退職代行の費用はどの程度ですか？', a: '退職代行Jobs の公式情報では料金体系が整理される選択肢が公表されているとされています。詳細は公式サイトでの確認が推奨される選択肢として公表されているとされています。労働組合運営・全額返金保証等の整理も公開情報で公表されているとされています。' }
+];
+---
+
+<RichLayout title={title} description={description} publishedDate="2026-06-06" modifiedDate="2026-06-06" breadcrumb={breadcrumb} faq={faq}>
+<!-- PERSPECTIVE_LEAD_BOX_START -->
+<aside class="perspective-lead" style="background:#f8fafc;border-left:4px solid #0ea5e9;padding:16px 20px;margin:24px 0;border-radius:6px;">
+  <div style="display:flex;align-items:center;gap:8px;margin-bottom:8px;">
+    <span style="font-size:1.4em;">🔍</span>
+    <strong style="color:#0c4a6e;">この LP の独立価値</strong>
+  </div>
+  <p style="margin:4px 0;font-size:0.95em;color:#0f172a;"><strong>視点 (Perspective):</strong> 判断・診断</p>
+  <p style="margin:4px 0;font-size:0.95em;color:#0f172a;"><strong>独自 angle:</strong> taishoku daikou buchou に焦点を当てた 判断・診断 視点の独自解説</p>
+  <p style="margin:4px 0;font-size:0.9em;color:#475569;"><strong>他 LP との違い:</strong> 他 LP が一般的に 判断・診断 全体を扱うのに対し、本 LP は taishoku-daikou-buchou-shigoto-rikai に絞り込む</p>
+</aside>
+<!-- PERSPECTIVE_LEAD_BOX_END -->
+
+  <PRBadge />
+  <section class="fv" aria-labelledby="fv-h1">
+    <div class="container">
+      <span class="fv-pill">退職代行 / 上司伝達回避</span>
+      <h1 id="fv-h1"><span class="accent">上司に直接退職を伝えにくい時の退職代行</span><br />伝達代行の整理</h1>
+      <p class="lede">上司への退職意思の直接伝達は、退職時の精神的負担として整理される選択肢とされています。退職代行を活用することで、会社との直接接触を避ける選択肢があるとされています。本記事では公的情報をもとに中立的に整理します。</p>
+      <ul class="fv-bullets">
+        <li>上司への直接伝達回避の一般情報</li>
+        <li>退職代行の伝達フロー整理</li>
+        <li>退職代行Jobsの労働組合運営の整理</li>
+        <li>事前確認・準備事項の整理</li>
+      </ul>
+      <div class="cta-block">
+        <p class="cta-note">本ページはアフィリエイト広告(A8.net・アクセストレード経由)を利用しています。<span class="pr-tag">PR</span></p>
+        <BannerAB position="hero" pageSlug="taishoku-daikou-buchou-shigoto-rikai" />
+      </div>
+      <p class="fv-meta"><span>更新日: 2026-06-06</span><span>編集: NY-squared 編集部</span></p>
+    </div>
+  </section>
+
+  <section class="lp-section">
+    <div class="container">
+      <p class="section-num">SECTION 01</p>
+      <h2>上司に伝えにくい状況の基本</h2>
+      <p>厚生労働省・国民生活センターの公開情報では、退職意思の伝達は (1) 直属上司に最初に伝える慣習、(2) 「退職届」の書面提出、(3) 業務引継ぎ期間の調整、(4) 退職日の調整 等のステップが整理される選択肢として公表されているとされています。<br><br>上司との関係性 (パワハラ・モラハラ・引き止め強硬・人手不足プレッシャー等) によっては、直接伝達が困難と整理される選択肢が公開情報で公表されているとされています。<br><br>民法 627 条では、無期雇用契約の労働者は2週間前の意思表示で退職可能とされ、伝達手段は限定されていないとされています。<br><br>退職代行Jobs (株式会社アレス運営) は労働組合連携の退職代行サービスを提供しており、上司・会社との直接接触を避けた退職意思伝達に対応可能と公表されています。</p>
+    </div>
+  </section>
+
+  <section class="lp-section alt">
+    <div class="container">
+      <p class="section-num">SECTION 02</p>
+      <h2>公的保護制度・関連法令</h2>
+      <div class="card-grid">
+        <div class="card"><h3>労働基準法</h3><p>退職の自由(民法627条)・就業規則の周知義務等が定められ、労働者の退職権利の基礎とされています。</p></div>
+        <div class="card"><h3>労働契約法</h3><p>労働契約の終了に関するルール・雇止め法理(19条)・無期転換ルール(18条)が定められています。</p></div>
+        <div class="card"><h3>特定商取引法</h3><p>退職代行サービスの契約には、特定商取引法の表示義務(運営者情報・料金等)が適用されるとされています。</p></div>
+        <div class="card"><h3>国民生活センター</h3><p>退職代行サービスに関する相談事例(契約トラブル・追加料金等)が公表されており、業者選びの参考になります。</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-section">
+    <div class="container">
+      <p class="section-num">SECTION 03</p>
+      <h2>進め方の選択肢 (伝達代行)</h2>
+      <p>退職代行を活用する場合、(1) Web/LINE 問合せ、(2) 状況・希望のヒアリング、(3) 入金・契約、(4) 退職代行による会社への退職意思伝達、(5) 退職手続書類の郵送対応 が一般的なフローとして整理される選択肢が公表されているとされています。<br><br>退職代行Jobsの労働組合連携により、退職日・有給消化・退職金等の調整も可能と公表されています。<br><br>事前準備として、就業規則・退職金規程の確認、私物の整理、会社貸与物の返却準備が推奨される選択肢として公表されているとされています。</p>
+      <div class="benefit-summary">
+        <h3>退職代行Jobs を活用する5つの理由</h3>
+        <ul>
+          <li><strong>労働組合運営:</strong> 退職意思の伝達のみならず、有給消化・退職金等の交渉が可能とされています。</li>
+          <li><strong>全額返金保証:</strong> 退職できなかった場合の全額返金保証が明示されているとされています。</li>
+          <li><strong>24時間対応:</strong> 深夜・早朝の連絡にも対応可能と公表されています。</li>
+          <li><strong>弁護士監修:</strong> 業務フローが弁護士監修のもと設計されているとされています。</li>
+          <li><strong>退職実績:</strong> 公式サイトでは高い退職完了率が公表されています。</li>
+        </ul>
+      </div>
+      <div class="cta-block">
+        <BannerAB position="middle" pageSlug="taishoku-daikou-buchou-shigoto-rikai" />
+        <p class="btn-cta-sub">公式サイトで料金・対応範囲を確認</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-section alt">
+    <div class="container">
+      <p class="section-num">SECTION 04</p>
+      <h2>向いている方 / 慎重判断が望ましい方</h2>
+      <div class="branch-grid">
+        <article class="branch"><h4>向いている方</h4><p>上司との直接接触を避けたい方、引き止めが強硬で退職困難な方、パワハラ等で心身に影響を感じている方、退職意思伝達後の出社を回避したい方</p></article>
+        <article class="branch"><h4>慎重判断が望ましい方</h4><p>退職金規程未確認の方、業務引継ぎが極めて複雑な方、契約上の特殊条項 (研修費返還等) を未確認の方</p></article>
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-section">
+    <div class="container">
+      <p class="section-num">SECTION 05</p>
+      <h2>上司伝達回避時の確認事項</h2>
+      <div class="counter-box">
+        <h3>事前確認項目</h3>
+        <div class="row"><b>就業規則</b><span>退職申出期間・退職届提出方法の事前確認</span></div>
+        <div class="row"><b>業務引継ぎ</b><span>後任への引継書類の準備 (必須ではないが推奨)</span></div>
+        <div class="row"><b>会社貸与物</b><span>PC・社員証・制服等の返却準備</span></div>
+        <div class="row"><b>私物</b><span>事前回収または郵送依頼の整理</span></div>
+      </div>
+      <div class="cta-block">
+        <BannerAB position="bottom" pageSlug="taishoku-daikou-buchou-shigoto-rikai" />
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-section alt">
+    <div class="container">
+      <p class="section-num">SECTION 06</p>
+      <h2>よくある質問</h2>
+      <div class="faq">
+        <details class="faq-item"><summary>上司への退職意思の伝達は法的に必要ですか？</summary><div><p>民法 627 条では無期雇用契約の労働者は2週間前の意思表示で退職可能とされ、伝達手段・伝達相手は限定されていないとされています。退職代行を通じた会社への意思伝達も有効な選択肢として整理される選択肢が公開情報で公表されているとされています。</p></div></details>
+        <details class="faq-item"><summary>退職代行を使うと上司から連絡が来ますか？</summary><div><p>退職代行Jobs の公表情報では、退職代行利用後の会社・上司からの直接連絡について「会社へ連絡不要を伝達」と整理される選択肢が公表されているとされています。但し個別状況により対応は異なる選択肢として整理されているとされています。</p></div></details>
+        <details class="faq-item"><summary>引き止めが強硬で退職できない場合は？</summary><div><p>民法 627 条により、無期雇用契約の労働者は会社の承諾なしに2週間前の意思表示で退職可能とされています。労働組合運営の退職代行は、引き止め交渉への対応が可能と公表されています。詳細は労働基準監督署・労働組合への相談も推奨される選択肢として公表されているとされています。</p></div></details>
+        <details class="faq-item"><summary>有給休暇は消化できますか？</summary><div><p>労働基準法 39 条では有給休暇は労働者の権利とされ、退職時に未消化分の取得が可能とされています。退職代行Jobs の労働組合連携により、有給消化の調整が可能と公表されています。詳細は事前確認が推奨される選択肢として公表されているとされています。</p></div></details>
+        <details class="faq-item"><summary>退職代行の費用はどの程度ですか？</summary><div><p>退職代行Jobs の公式情報では料金体系が整理される選択肢が公表されているとされています。詳細は公式サイトでの確認が推奨される選択肢として公表されているとされています。労働組合運営・全額返金保証等の整理も公開情報で公表されているとされています。</p></div></details>
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-section">
+    <div class="container">
+      <p class="section-num">SECTION 07</p>
+      <h2>公的な相談窓口</h2>
+      <div class="sources">
+        <ul>
+          <li>厚生労働省「労働契約の終了に関するルール」</li>
+          <li>厚生労働省「こころの健康相談」</li>
+          <li>国民生活センター「退職代行サービスに関する相談事例」</li>
+          <li>消費者庁「退職代行サービスの注意点」</li>
+          <li>ハローワーク「雇用保険の基本手当について」</li>
+          <li>労働基準監督署「労働相談・申告窓口」</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-section alt">
+    <div class="container">
+      <p class="section-num">SECTION 08</p>
+      <h2>まとめ・退職代行Jobs の公開情報</h2>
+      <p>退職代行の利用判断は、状況・ペルソナにより最適解が異なるとされ、業者選び5軸(運営形態/料金/対応範囲/実績/口コミ)での評価が推奨されます。退職代行Jobsは労働組合運営で交渉対応可能とされ、有給消化・退職金等の調整に対応可能と公表されています。詳細は公式サイトでの確認が推奨されます。</p>
+      <div class="cta-block">
+        <BannerAB position="final" pageSlug="taishoku-daikou-buchou-shigoto-rikai" />
+      </div>
+      <div class="disclaimer">
+        <p>本ページはアフィリエイト広告(A8.net・アクセストレード経由)を利用しています。退職代行Jobsは株式会社アレスが運営する退職代行サービスです。本ページの内容は公開情報・公的機関データをもとに中立的に整理した情報提供を目的としており、特定サービスの利用を保証するものではありません。サービス利用判断は読者ご自身で行ってください。心身の状態について気になる場合は専門医相談が推奨される選択肢として公表されているとされています。</p>
+      </div>
+    </div>
+  </section>
+  <section class="lp-section" id="sec-related" aria-labelledby="related-h">
+    <div class="container">
+      <p class="section-num">関連記事</p>
+      <h2 id="related-h">関連する記事</h2>
+      <ul class="related-links" style="line-height:1.9;">
+        <li><a href="https://taishoku-info.pages.dev/taishoku-daikou-arawa-rikai/">退職代行が職場にバレないための整理｜守秘・連絡遮断・SNS対策の3軸（2026年版・PR）</a></li>
+        <li><a href="https://taishoku-info.pages.dev/taishoku-daikou-houritsuteki-rikai/">退職代行の法的根拠の整理｜民法627条・労働組合法・弁護士法の3軸（2026年版・PR）</a></li>
+        <li><a href="https://taishoku-info.pages.dev/taishoku-daikou-shiwake-rikai/">退職代行と退職金・最終給与の清算整理｜未払い時の3対応経路（2026年版・PR）</a></li>
+        <li><a href="https://taishoku-info.pages.dev/taishoku-daikou-meiwaku-fuan-rikai/">退職代行で会社に迷惑をかける不安への対応｜判断軸の整理(2026年版・PR)</a></li>
+        <li><a href="https://taishoku-info.pages.dev/taishoku-daikou-mibarai-zangyou-rikai/">退職代行と未払い残業代の請求整理｜労働組合運営の交渉権で整理する3経路（2026年版・PR）</a></li>
+      </ul>
+    </div>
+  </section>
+
+
+<!-- PERSPECTIVE_SOURCE_BOX_START -->
+<aside class="perspective-source" style="background:#fffbeb;border:1px solid #fde68a;padding:14px 18px;margin:24px 0;border-radius:6px;">
+  <div style="font-weight:600;color:#92400e;margin-bottom:6px;">🔍 判断・診断 に関する公的データ</div>
+  <p style="margin:6px 0;font-size:0.92em;color:#451a03;">退職の法的権利と判断基準</p>
+  <p style="margin:4px 0;font-size:0.85em;"><a href="https://www.mhlw.go.jp/" rel="noopener" target="_blank" style="color:#0369a1;">出典: 厚生労働省 民法 627 条</a></p>
+</aside>
+<!-- PERSPECTIVE_SOURCE_BOX_END -->
+</RichLayout>

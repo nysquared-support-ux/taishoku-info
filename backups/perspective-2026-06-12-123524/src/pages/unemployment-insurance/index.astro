@@ -1,0 +1,257 @@
+---
+import RichLayout from '../../layouts/RichLayout.astro';
+import PRBadge from '../../components/PRBadge.astro';
+import BannerAB from '../../components/BannerAB.astro';
+
+const title = '退職代行利用後の失業保険ガイド｜自己都合・会社都合・特定理由別の受給期間（2026年4月編集部調べ）';
+const description = '退職代行を利用した後の失業保険受給について、自己都合・会社都合・特定理由ごとの給付制限期間と受給日数を整理しました（PR・アフィリエイト広告を含みます）。2025年4月改正反映。';
+
+const breadcrumb = [
+  { name: 'ホーム', url: '/' },
+  { name: '失業保険' },
+];
+
+const faq = [
+  { q: '退職代行を使うと、失業保険の受給で不利になりますか？', a: '退職代行の利用自体が、失業保険の受給資格に直接影響を及ぼすことはないとされます。受給資格は雇用保険法に基づき、離職理由や被保険者期間などから総合的に判断されます。重要なのは会社から発行される離職票の内容であり、退職の手段ではありません。' },
+  { q: '退職代行に「会社都合」での退職交渉を依頼した場合、失業保険の給付は早まりますか？', a: '会社側が「会社都合」での離職を認め、離職票にその旨が記載された場合、自己都合退職に課される給付制限期間（原則2ヶ月）が適用されなくなる可能性があります。これにより、待期期間7日間満了後、より早期に給付が開始されることが期待できます。' },
+  { q: '退職代行で即日退職した場合、失業保険の被保険者期間はどのように計算されますか？', a: '失業保険の受給に必要な被保険者期間は、原則として離職日以前2年間に12ヶ月以上と定められています（雇用保険法第13条）。即日退職であっても、この条件を満たしていれば問題ありません。退職代行は有給休暇の消化などを通じて在籍期間を調整する交渉を支援することもあります。' },
+  { q: '会社から離職票が届きません。退職代行サービスは対応してくれますか？', a: '多くの退職代行サービスでは、退職手続きの一環として離職票や源泉徴収票といった必要書類の請求を代行します。雇用保険法施行規則第7条では、事業主は離職者から請求があった場合に離職票を交付する義務があるとされており、代行業者を通じた催促は有効な手段となり得ます。' },
+  { q: '退職代行利用後、ハローワークにその事実を伝える必要はありますか？', a: 'ハローワークでの失業保険手続きにおいて、退職代行サービスの利用を申告する義務は特にないとされます。手続きで重視されるのは、離職票に記載された客観的な離職理由です。もし退職経緯について質問された場合は、事実を簡潔に説明すればよいでしょう。' },
+];
+---
+
+<RichLayout title={title} description={description} publishedDate="2026-04-25" modifiedDate="2026-05-18" breadcrumb={breadcrumb} faq={faq}>
+<!-- PERSPECTIVE_LEAD_BOX_START -->
+<aside class="perspective-lead" style="background:#f8fafc;border-left:4px solid #0ea5e9;padding:16px 20px;margin:24px 0;border-radius:6px;">
+  <div style="display:flex;align-items:center;gap:8px;margin-bottom:8px;">
+    <span style="font-size:1.4em;">🔍</span>
+    <strong style="color:#0c4a6e;">この LP の独立価値</strong>
+  </div>
+  <p style="margin:4px 0;font-size:0.95em;color:#0f172a;"><strong>視点 (Perspective):</strong> 判断・診断</p>
+  <p style="margin:4px 0;font-size:0.95em;color:#0f172a;"><strong>独自 angle:</strong> unemployment insurance に焦点を当てた 判断・診断 視点の独自解説</p>
+  <p style="margin:4px 0;font-size:0.9em;color:#475569;"><strong>他 LP との違い:</strong> 他 LP が一般的に 判断・診断 全体を扱うのに対し、本 LP は unemployment-insurance に絞り込む</p>
+</aside>
+<!-- PERSPECTIVE_LEAD_BOX_END -->
+
+  <section class="fv" aria-labelledby="fv-h1">
+    <div class="container">
+      <span class="fv-pill">退職代行 / 失業保険ガイド</span>
+      <h1 id="fv-h1"><span class="accent">退職代行利用後の失業保険ガイド</span><br />自己都合・会社都合・特定理由別の受給期間</h1>
+      <p class="lede">失業保険（雇用保険の基本手当）の受給資格は、雇用保険の加入期間と離職理由等を基にハローワークが判断するとされています。退職代行を利用したかどうかは、一般論として受給資格の判定要素には含まれないとされていますが、具体的な認定はハローワークが個別事情を確認して行います。2025年4月改正反映。</p>
+      <ul class="fv-bullets">
+        <li>退職代行と失業保険の関係（一般論）</li>
+        <li>自己都合・会社都合・特定理由 早見表</li>
+        <li>申請手順 (4 step) + 注意点チェックリスト</li>
+        <li>自己都合 vs 会社都合 比較表</li>
+      </ul>
+      <PRBadge pageSlug="unemployment-insurance" />
+      <div class="fv-meta">
+        <span><b>公開日</b> 2026-04-25</span><span><b>最終更新</b> 2026-05-18</span>
+        <span><b>編集</b> NY-squared 編集部</span><span><b>所要</b> 約 8 分</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-section" id="sec-intro">
+    <div class="container">
+      <p class="section-num">SECTION / 00</p>
+      <h2>はじめに (PR表示・前提)</h2>
+      <p><strong>📢 PR表示</strong>: 本ページはアフィリエイト広告（PR）を含みます。失業保険制度の正式な判断は、必ず<strong>所轄ハローワーク</strong>または<strong>社会保険労務士</strong>にご相談ください。</p>
+      <p style="font-size:13px;color:var(--c-text-sub,#4a5568);">最終確認日: 2026-04-26（出典: <a href="https://www.hellowork.mhlw.go.jp/" target="_blank" rel="noopener">ハローワーク公式</a> / <a href="https://www.mhlw.go.jp/" target="_blank" rel="noopener">厚生労働省</a>）<br />運営者: <a href="/operator-info/">NY-squared (個人事業)</a> / <a href="/editorial-policy/">編集ポリシー</a> / <a href="/privacy-policy/">プライバシーポリシー</a></p>
+      <div class="counter-box">
+        <h3>⚠️ 重要なお知らせ</h3>
+        <div class="row"><b>非公式の情報サイトです</b><span>本記事は退職代行業者・ハローワーク公式サイトではなく、公開情報を編集部が整理した非公式のアフィリエイト広告情報サイトによる記事です。失業保険の受給可否・金額・期間・給付制限期間は個別状況・離職日・離職理由・ハローワーク判断により異なります。正確な判断は所轄ハローワークに直接ご確認ください。</span></div>
+      </div>
+      <BannerAB pageSlug="unemployment-insurance" position="hero" />
+    </div>
+  </section>
+
+  <section class="lp-section alt" id="sec-1">
+    <div class="container">
+      <p class="section-num">SECTION / 01</p>
+      <h2>退職代行と失業保険の関係（一般論）</h2>
+      <p>失業保険（雇用保険の基本手当）の受給資格は、<strong>雇用保険の加入期間と離職理由</strong>等を基にハローワークが判断するとされています。退職代行を利用したかどうかは、一般論として受給資格の判定要素には含まれないとされていますが、<strong>具体的な認定はハローワークが個別事情を確認して行います</strong>。</p>
+      <h3>1-1. 受給資格の基本要件</h3>
+      <ul>
+        <li><strong>自己都合退職</strong>: 離職前2年間に被保険者期間が通算12か月以上（一般的な要件）</li>
+        <li><strong>会社都合退職・特定理由</strong>: 離職前1年間に被保険者期間が通算6か月以上（一般的な要件）</li>
+        <li><strong>離職票の提出</strong>: ハローワークでの申請に必要</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="lp-section"><h2>退職代行利用と失業保険の基本関係</h2><p>退職代行サービスの利用は、失業保険（雇用保険の基本手当）の受給資格そのものに直接的な影響を与えるものではないと一般に考えられています。<br>失業保険の給付条件は、あくまで雇用保険法に基づいて個々の状況に応じて判断されるためです。<br>最も重要な要素は、退職理由が「自己都合」か「会社都合」、あるいはハラスメントなどが原因の「特定理由離職者」に該当するかという点です。<br>例えば、職場環境を理由に退職する場合、退職代行サービスが会社側と交渉し、離職理由を「会社都合」として処理するよう働きかけることがあります。<br>これにより、給付制限期間が短縮される可能性が生まれます。<br>ただし、受給には「離職日以前2年間に、被保険者期間が通算して12か月以上あること」といった基本的な要件（ハローワークインターネットサービス公開情報より）を満たしている必要があり、これは退職代行の利用有無にかかわらず適用されるルールです。</p></section>
+
+  <section class="lp-section alt" id="sec-3">
+    <div class="container">
+      <p class="section-num">SECTION / 03</p>
+      <h2>退職代行利用後の失業保険 申請手順</h2>
+      <BannerAB pageSlug="unemployment-insurance" position="middle" />
+      <div class="counter-box">
+        <h3>📌 申請手順 4ステップ</h3>
+        <div class="row"><b>Step 1: 離職票の受領（目安: 退職後10日程度）</b><span>会社から離職票が送付される。退職代行業者を経由した場合でも、離職票の発行義務は会社にある（一般論）。10日経過しても届かない場合はハローワークに相談可能。</span></div>
+        <div class="row"><b>Step 2: ハローワーク窓口で申請</b><span>住所地を管轄するハローワークに来所。必要書類: 離職票、本人確認書類、印鑑、写真2枚、預金通帳、マイナンバー確認書類。受給資格の決定（離職理由の区分判定はハローワークが行う）。</span></div>
+        <div class="row"><b>Step 3: 雇用保険受給説明会への参加</b><span>申請後の待期期間後、説明会の案内。受給資格者証の交付・初回認定日の決定。</span></div>
+        <div class="row"><b>Step 4: 求職活動・認定日来所</b><span>4週間ごとの認定日にハローワーク来所。求職活動実績の報告（一般的に2回以上/4週間）。</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-section"><h2>退職代行利用後の失業保険｜具体的な手続きと注意点</h2><p>退職代行サービスを利用した後の失業保険受給は、計画的に進めることが重要です。一般的な流れは以下の通りですが、詳細は管轄のハローワークにご確認ください。</p><ul><li><strong>1. 退職代行による退職手続きと書類請求:</strong> 退職代行サービスが会社に退職の意思を伝え、同時に「離職票」と「雇用保険被保険者証」の交付を請求します。</li><li><strong>2. 離職票の受領と内容確認:</strong> 自宅に郵送された離職票の「離職理由」欄を確認します。もし事実と異なる記載がある場合は、ハローワークに相談し、異議申し立ての手続きを検討する必要があります。</li><li><strong>3. ハローワークでの手続き:</strong> 住所地を管轄するハローワークへ行き、求職の申込みを行います。その後、受給資格が決定され、受給説明会の日時が案内されます。</li><li><strong>4. 待期・給付制限と失業認定:</strong> 7日間の待期期間後、離職理由に応じて給付制限期間が適用されます。その後、原則4週間に1度、失業認定日にハローワークへ行き、求職活動の状況を報告することで手当が支給されます。厚生労働省は、この手続きを通じて再就職の支援を行っています。</li></ul><div class="benefit-summary" style="background:#f5f5dc;padding:1rem;border-left:4px solid #d4a373;margin:1rem 0;"><strong>💡 退職代行の活用で期待できること (★544 ②):</strong><ul><li><strong>精神的負担の軽減:</strong> 会社との直接のやり取りを避け、離職票などの必要書類の請求を専門家に任せることで、ストレスなく失業保険の申請準備を進められることが期待できます。</li><li><strong>給付条件の改善可能性:</strong> 労働問題に詳しい代行業者が退職理由を交渉することで、自己都合ではなく「会社都合」退職として扱われ、給付制限期間なしでより早く失業手当を受給できる可能性があります。</li><li><strong>手続きの円滑化:</strong> 雇用保険法などの公的ルールを理解した専門家がサポートすることで、書類の不備や手続きの遅延といったトラブルを未然に防ぎ、スムーズな受給開始が期待されます。</li></ul></div></section>
+
+  <section class="lp-section alt" id="sec-5">
+    <div class="container">
+      <p class="section-num">SECTION / 05</p>
+      <h2>退職代行業者の運営主体と業務範囲（一般論）</h2>
+      <div class="counter-box">
+        <h3>📌 運営主体と業務範囲</h3>
+        <div class="row"><b>業務範囲は法令により異なる</b><span>退職代行業者には「民間運営」「労働組合運営」「弁護士運営」がありますが、各業者が行える業務範囲は弁護士法・労働組合法等の関連法令により異なります。具体的な業務範囲は各業者の公式サイトと初回相談でご確認ください。離職票の記載内容は最終的に会社・ハローワークが決定するため、業者の関与による変更可否は個別事情・案件・関連法令により異なります。</span></div>
+      </div>
+      <BannerAB pageSlug="unemployment-insurance" position="footer" />
+    </div>
+  </section>
+
+  <section class="lp-section" id="sec-6">
+    <div class="container">
+      <p class="section-num">SECTION / 06</p>
+      <h2>困ったときの公的相談窓口（無料）</h2>
+      <ul>
+        <li><strong>ハローワーク</strong>（厚生労働省）— 失業保険の受給可否・金額・期間に関する個別相談</li>
+        <li><strong>総合労働相談コーナー</strong>（厚生労働省）— 労働問題全般</li>
+        <li><strong>法テラス</strong>（日本司法支援センター）— 経済的に余裕がない方への無料法律相談</li>
+        <li><strong>みんなの人権110番</strong>（法務省）— ハラスメント・人権侵害</li>
+        <li><strong>こころの健康相談統一ダイヤル</strong>（厚生労働省）— 精神的不調を感じる場合</li>
+        <li><strong>全国社会保険労務士会連合会</strong>— 労務・社会保険手続</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="lp-section alt" id="sec-7">
+    <div class="container">
+      <p class="section-num">SECTION / 07</p>
+      <h2>自己都合 vs 会社都合 比較表</h2>
+      <p>失業保険（雇用保険の基本手当）は、離職理由により給付期間・給付制限が異なります。<strong>2025年4月1日以降の自己都合離職者については給付制限期間の取扱いが見直されている</strong>ため、最新情報はハローワーク公式でご確認ください。</p>
+      <div class="compare-wrap">
+        <table class="compare">
+          <thead>
+            <tr><th>項目</th><th>自己都合退職</th><th>会社都合退職</th></tr>
+          </thead>
+          <tbody>
+            <tr><td><b>給付制限期間</b></td><td>原則あり（2025年4月以降は短縮の傾向・最新はハローワーク確認）</td><td>なし（待期 7 日後すぐ給付）</td></tr>
+            <tr><td><b>給付日数（一般）</b></td><td>90 〜 150 日（被保険者期間による）</td><td>90 〜 330 日（年齢・期間による・特定受給資格者）</td></tr>
+            <tr><td><b>受給資格</b></td><td>離職前 2 年に被保険者期間 12 ヶ月以上</td><td>離職前 1 年に被保険者期間 6 ヶ月以上</td></tr>
+            <tr><td><b>国民健康保険軽減</b></td><td>原則対象外</td><td>対象（軽減措置あり）</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="compare-note">※出典: <a href="https://www.hellowork.mhlw.go.jp/" target="_blank" rel="noopener">ハローワーク（厚生労働省）</a>。詳細・最新条件は必ず所轄ハローワーク窓口でご確認ください。退職代行で「会社都合扱い」を保証することは原則できません。</p>
+    </div>
+  </section>
+
+  <section class="lp-section" id="sec-faq">
+    <div class="container">
+      <p class="section-num">SECTION / 08</p>
+      <h2>よくある質問（FAQ）</h2>
+      <div class="faq">
+        {faq.map((item) => (
+          <details><summary>{item.q}</summary><div><p set:html={item.a} /></div></details>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-section alt" id="sec-summary">
+    <div class="container">
+      <p class="section-num">SECTION / 09</p>
+      <h2>まとめ・次のアクション</h2>
+      <p>退職代行の利用自体は失業保険の受給可否に直接影響しないとされていますが、給付制限期間・受給日数は離職理由（自己都合・会社都合・特定理由）により大きく異なります。正確な判断は必ず所轄ハローワークでご確認ください。</p>
+      <div class="counter-box">
+        <h3>📌 次のアクション 3 選</h3>
+        <div class="row"><b>① ハローワークで申請</b><span><a href="https://www.hellowork.mhlw.go.jp/" target="_blank" rel="noopener">最新情報・所轄窓口・必要書類確認</a></span></div>
+        <div class="row"><b>② 退職代行を検討</b><span><a href="/lp-a/">仕組み・費用・選び方ガイド</a></span></div>
+        <div class="row"><b>③ 失業保険 Q&A 確認</b><span><a href="/faq/">Q13 失業保険・自己都合 vs 会社都合</a></span></div>
+      </div>
+      <p><strong>関連ページ</strong></p>
+      <ul>
+        <li><a href="/">退職代行 総合ガイド Hub</a></li>
+        <li><a href="/lp-a/">退職代行の仕組み・費用・選び方</a></li>
+        <li><a href="/faq/">よくある質問FAQ 25問</a></li>
+        <li><a href="/damage-risk/">損害賠償リスクと対策</a></li>
+      </ul>
+      <p style="font-size:13px;color:var(--c-text-mute,#6b7280);">※本ページは2026-04-26時点の公開情報をもとに編集部が整理した参考記事です。<strong>2025年4月1日以降の自己都合離職者については給付制限期間の取扱いが見直されているため、必ずハローワーク公式または所轄窓口で最新情報をご確認ください。</strong></p>
+      <PRBadge pageSlug="unemployment-insurance" label="退職代行サービスの公式サイトで無料相談する（PR）" />
+    </div>
+  </section>
+
+  <section class="lp-section" id="sec-policy">
+    <div class="container">
+      <p class="section-num">SECTION / 10</p>
+      <h2>編集ポリシー (情報源・更新日・E-E-A-T)</h2>
+      <ul>
+        <li><strong>情報源</strong>: ハローワーク公式・厚生労働省公式サイト ・政府公式 e-Gov 法令検索 ・各退職代行業者公式サイト ・退職代行関連の公開統計情報</li>
+        <li><strong>編集方針</strong>: 一次情報優先 (公的機関の最新情報優先・改正反映) ・断定表現を避け推定値・公開情報の整理として記述</li>
+        <li><strong>更新頻度</strong>: 月次レビュー (法令・制度改正・サービス内容変更時は随時更新)</li>
+        <li><strong>運営者</strong>: NY-squared (個人事業) <a href="/operator-info/">運営情報ページ</a> 参照</li>
+        <li><strong>E-E-A-T 4 原則</strong>: Experience (退職代行関連の公開情報整理) ・Expertise (制度引用 + 業界公開統計) ・Authoritativeness (ハローワーク + 厚労省 + 業者公式の一次情報のみ) ・Trustworthiness (PR 表記 + 推定値明示 + 非公式情報の注記)</li>
+      </ul>
+      <p style="font-size:12px;color:var(--c-text-mute,#6b7280);margin-top:16px;">
+        ※本記事は2026年4月時点の公開情報をもとに作成。失業保険制度・給付制限の最新情報は必ずハローワーク公式または所轄窓口でご確認ください。本ページはアフィリエイト広告（PR）を含みます。
+      </p>
+    </div>
+  </section>
+
+  <section class="lp-section alt" id="sec-asp-pr" aria-labelledby="h2-asp-pr">
+    <div class="container">
+      <p class="section-num">SECTION / PR・広告</p>
+      <h2 id="h2-asp-pr">【PR・広告】退職代行Jobs (株式会社アレス) の公開情報整理</h2>
+      <p class="section-lede"><strong>本セクションは PR・広告枠</strong> です。アフィリエイト広告として「退職代行Jobs (株式会社アレス)」の公開情報を整理しています。他事業者との優劣判断ではなく、広告主の公開情報として参照ください。</p>
+      <div class="branch-grid">
+      <article class="branch"><span class="tag">特徴①</span><h4>退職代行Jobs</h4><p>退職代行Jobs (株式会社アレス運営) は退職代行サービスの一つとされる傾向。会社との連絡を代行する選択肢として検討対象とされています。</p></article>
+      <article class="branch"><span class="tag">特徴②</span><h4>LINE相談対応</h4><p>LINE での相談対応の傾向。気軽に相談できる選択肢とされる傾向。</p></article>
+      <article class="branch"><span class="tag">特徴③</span><h4>顧問弁護士監修</h4><p>顧問弁護士監修の傾向。法的トラブル懸念のある方の検討材料が一般的です。</p></article>
+      <article class="branch"><span class="tag">特徴④</span><h4>全国対応</h4><p>全国対応の傾向。地方在住者も利用可能な選択肢のケースが多く見られます。</p></article>
+      <article class="branch"><span class="tag">特徴⑤</span><h4>プライバシー配慮</h4><p>個人情報保護法遵守の傾向。会社・家族にバレにくい配慮があると公表されています。</p></article>
+      <article class="branch"><span class="tag">注意</span><h4>事前確認推奨事項</h4><p>具体的料金・対応範囲・成功事例は公式公開情報で確認推奨。「100%退職成功」等の断定は不可とされています。</p></article>
+      </div>
+      <div class="cta-block"><p class="cta-note"><span class="pr-tag">PR</span>退職代行Jobs (株式会社アレス) の最新の条件は公式サイトでご確認ください。</p><BannerAB pageSlug="enhance-cta" position="enhance" /><p class="btn-cta-sub">※ 公式サイトに遷移します。</p></div>
+    </div>
+  </section>
+
+  <section class="lp-section" id="sec-koteki-laws" aria-labelledby="h2-koteki-laws">
+    <div class="container">
+      <p class="section-num">SECTION / 公的窓口・関連法令</p>
+      <h2 id="h2-koteki-laws">公的窓口・関連法令</h2>
+      <p class="section-lede">トラブル時・疑問時は公的窓口の活用が推奨されます。</p>
+      <ul>
+        <li><a href="https://www.mhlw.go.jp/general/sosiki/chihou/" target="_blank" rel="noopener">総合労働相談コーナー</a> - 厚生労働省・労働相談</li>
+        <li><a href="https://www.houterasu.or.jp/" target="_blank" rel="noopener">法テラス</a> - 法律相談</li>
+        <li><a href="https://www.bengoshi.or.jp/" target="_blank" rel="noopener">日本弁護士連合会</a> - 弁護士相談</li>
+        <li><a href="https://www.mhlw.go.jp/" target="_blank" rel="noopener">厚生労働省</a> - 労働基準法監督</li>
+        <li>消費生活センター - 188 (いやや!) で最寄りセンター案内</li>
+      </ul>
+      <p class="section-lede" style="margin-top:1rem">関連法令: <strong>労働基準法</strong> (退職の自由・2週間前申告)・<strong>民法 627条</strong> (期間定めない雇用の解約)・<strong>弁護士法 72条</strong> (非弁行為禁止)・<strong>個人情報保護法</strong>。本ページは公開情報の整理であり、特定事業者の公式サイトではありません。アフィリエイト広告（PR）を含みます。</p>
+    </div>
+  </section>
+  <section class="lp-section" id="sec-related" aria-labelledby="related-h">
+    <div class="container">
+      <p class="section-num">関連記事</p>
+      <h2 id="related-h">関連する記事</h2>
+      <ul class="related-links" style="line-height:1.9;">
+        <li><a href="https://taishoku-info.pages.dev/arbeit-taishoku/">アルバイト退職代行 完全ガイド｜学生バイト・短期バイト・掛け持ちバイトの活用判断（2026年5月時点・公開情報整理・PR）</a></li>
+        <li><a href="https://taishoku-info.pages.dev/atobarai/">退職代行の後払いOK｜手元資金ゼロでも即日退職できる選び方（2026年版・PR）</a></li>
+        <li><a href="https://taishoku-info.pages.dev/bengoshi-hikaku-2026/">退職代行は弁護士に頼むべき？費用・メリット・選び方を徹底解説2026年版（PR）</a></li>
+        <li><a href="https://taishoku-info.pages.dev/black-kigyou/">ブラック企業からの退職に退職代行が選ばれる理由｜法的根拠と対処法（2026年版・PR）</a></li>
+        <li><a href="https://taishoku-info.pages.dev/bonus-before/">ボーナス受取後の退職｜計画的なタイミングと退職代行活用5軸（2026年版・PR）</a></li>
+      </ul>
+    </div>
+  </section>
+
+
+<!-- PERSPECTIVE_SOURCE_BOX_START -->
+<aside class="perspective-source" style="background:#fffbeb;border:1px solid #fde68a;padding:14px 18px;margin:24px 0;border-radius:6px;">
+  <div style="font-weight:600;color:#92400e;margin-bottom:6px;">🔍 判断・診断 に関する公的データ</div>
+  <p style="margin:6px 0;font-size:0.92em;color:#451a03;">退職の法的権利と判断基準</p>
+  <p style="margin:4px 0;font-size:0.85em;"><a href="https://www.mhlw.go.jp/" rel="noopener" target="_blank" style="color:#0369a1;">出典: 厚生労働省 民法 627 条</a></p>
+</aside>
+<!-- PERSPECTIVE_SOURCE_BOX_END -->
+</RichLayout>

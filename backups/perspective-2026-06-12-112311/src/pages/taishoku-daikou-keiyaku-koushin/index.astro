@@ -1,0 +1,173 @@
+---
+import RichLayout from '../../layouts/RichLayout.astro';
+import PRBadge from '../../components/PRBadge.astro';
+import BannerAB from '../../components/BannerAB.astro';
+
+const title = '契約更新を断る退職代行｜契約期間満了時の対応を整理(2026年版・PR)';
+const description = '契約社員・有期雇用契約者が契約更新を断る際の退職代行活用時の判断軸を、労働基準法・公的機関の公開情報をもとに中立的に整理した情報提供記事です(PR・アフィリエイト広告を含みます)。';
+
+const breadcrumb = [
+  { name: 'ホーム', url: '/' },
+  { name: '契約更新' },
+];
+
+const faq = [
+  { q: '契約更新を断ることに退職代行は使えますか？', a: '労働者からの更新拒否は原則自由とされており、退職代行を通じて意思表示が可能です。退職代行Jobsは労働組合運営で交渉対応可能とされ、契約終了日・有給消化等の調整にも対応可能です。' },
+  { q: '更新拒否はいつまでに伝えるべきですか？', a: '労働契約書・就業規則に「更新拒否は◯ヶ月前までに通知」等の規定がある場合は、その規程に従う必要があります。規定がない場合でも、契約期間満了の1ヶ月前を目安に伝達することが推奨されます。' },
+  { q: '有期契約でも失業保険はもらえますか？', a: '雇用保険の被保険者期間が一定以上あり、求職活動の意思がある場合は受給可能とされています。契約期間満了による離職は「特定理由離職者」に該当する可能性があり、給付制限なしで受給開始となる場合があります。詳細はハローワークで確認することが推奨されます。' },
+  { q: '無期転換ルール(5年超)の権利は失われますか？', a: '通算契約期間が5年を超えた有期雇用労働者は、無期転換申込権を持つとされています(労働契約法18条)。更新を断ると以降の契約は発生しないため、無期転換権の行使を希望する場合は、慎重な判断が必要です。' },
+  { q: '更新拒否時のトラブルはありますか？', a: '国民生活センターには、更新拒否時に会社から強い引き留めを受けたという相談例があるとされています。退職代行を活用することで、直接の交渉を避けられる選択肢があるとされています。' }
+];
+---
+
+<RichLayout title={title} description={description} publishedDate="2026-06-05" modifiedDate="2026-06-05" breadcrumb={breadcrumb} faq={faq}>
+  <PRBadge />
+  <section class="fv" aria-labelledby="fv-h1">
+    <div class="container">
+      <span class="fv-pill">退職代行 / 契約更新</span>
+      <h1 id="fv-h1"><span class="accent">契約更新を断る退職代行</span><br />契約期間満了時の対応を整理</h1>
+      <p class="lede">有期雇用契約の更新拒否は労働者の権利として認められており、退職代行を活用することで会社との直接交渉を避けられる選択肢があります。本記事では契約満了時の対応を中立的に整理します。</p>
+      <ul class="fv-bullets">
+        <li>契約期間満了による退職と中途退職の違い</li>
+        <li>更新拒否を伝えるタイミング(1ヶ月前ルール等)</li>
+        <li>雇止め法理と無期転換ルール(5年超)</li>
+        <li>失業保険の取り扱い(特定理由離職者)</li>
+      </ul>
+      <div class="cta-block">
+        <p class="cta-note">本ページはアフィリエイト広告(A8.net・アクセストレード経由)を利用しています。<span class="pr-tag">PR</span></p>
+        <BannerAB position="hero" pageSlug="taishoku-daikou-keiyaku-koushin" />
+      </div>
+      <p class="fv-meta"><span>更新日: 2026-06-05</span><span>編集: NY-squared 編集部</span></p>
+    </div>
+  </section>
+
+  <section class="lp-section">
+    <div class="container">
+      <p class="section-num">SECTION 01</p>
+      <h2>契約更新を断る退職代行の基本</h2>
+      <p>有期雇用契約者の契約更新は労働者・使用者双方の合意が必要であり、労働者が更新を希望しない場合は契約期間満了で雇用関係が終了するとされています。<br>厚生労働省「労働契約の終了に関するルール」では、雇止め法理として一定要件下で雇止めが無効となる場合がある一方、労働者からの更新拒否は原則自由と整理されています。<br>退職代行Jobsを活用する場合、契約更新の意思表示を会社に伝達するのみならず、最終日の調整・有給消化等の手続きも対応可能とされています。</p>
+    </div>
+  </section>
+
+  <section class="lp-section alt">
+    <div class="container">
+      <p class="section-num">SECTION 02</p>
+      <h2>公的保護制度・関連法令</h2>
+      <div class="card-grid">
+        <div class="card"><h3>労働基準法</h3><p>退職の自由(民法627条)・就業規則の周知義務等が定められ、労働者の退職権利の基礎とされています。</p></div>
+        <div class="card"><h3>労働契約法</h3><p>労働契約の終了に関するルール・雇止め法理(19条)・無期転換ルール(18条)が定められています。</p></div>
+        <div class="card"><h3>特定商取引法</h3><p>退職代行サービスの契約には、特定商取引法の表示義務(運営者情報・料金等)が適用されるとされています。</p></div>
+        <div class="card"><h3>国民生活センター</h3><p>退職代行サービスに関する相談事例(契約トラブル・追加料金等)が公表されており、業者選びの参考になります。</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-section">
+    <div class="container">
+      <p class="section-num">SECTION 03</p>
+      <h2>進め方の選択肢(契約更新拒否)</h2>
+      <p>契約期間満了の1ヶ月前を目安に、更新を希望しない旨を会社へ伝達するのが一般的とされています。<br>就業規則・労働契約書に「更新拒否は◯ヶ月前までに通知」等の規定がある場合は、その規程に従う必要があります。<br>退職代行Jobsを活用する場合、労働組合との連携により、契約終了時期の調整・未払い賃金の確認・有給消化等の交渉も可能です。</p>
+      <div class="benefit-summary">
+        <h3>退職代行Jobs を活用する5つの理由</h3>
+        <ul>
+          <li><strong>労働組合運営:</strong> 退職意思の伝達のみならず、有給消化・退職金等の交渉が可能とされています。</li>
+          <li><strong>全額返金保証:</strong> 退職できなかった場合の全額返金保証が明示されているとされています。</li>
+          <li><strong>24時間対応:</strong> 深夜・早朝の連絡にも対応可能と公表されています。</li>
+          <li><strong>弁護士監修:</strong> 業務フローが弁護士監修のもと設計されているとされています。</li>
+          <li><strong>退職実績:</strong> 公式サイトでは高い退職完了率が公表されています。</li>
+        </ul>
+      </div>
+      <div class="cta-block">
+        <BannerAB position="middle" pageSlug="taishoku-daikou-keiyaku-koushin" />
+        <p class="btn-cta-sub">公式サイトで料金・対応範囲を確認</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-section alt">
+    <div class="container">
+      <p class="section-num">SECTION 04</p>
+      <h2>向いている方 / 慎重判断が望ましい方</h2>
+      <div class="branch-grid">
+        <article class="branch"><h4>向いている方</h4><p>更新拒否を会社に直接伝えることに不安がある方、引き留め交渉を回避したい方、契約終了日と有給消化を調整したい方</p></article>
+        <article class="branch"><h4>慎重判断が望ましい方</h4><p>契約期間途中での退職(中途退職)を希望する方、無期転換ルール(5年超)の権利を行使したい方、未払い賃金の請求を含めて交渉したい方</p></article>
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-section">
+    <div class="container">
+      <p class="section-num">SECTION 05</p>
+      <h2>契約更新拒否の注意点</h2>
+      <div class="counter-box">
+        <h3>事前確認項目</h3>
+        <div class="row"><b>通知タイミング</b><span>契約期間満了の1ヶ月前を目安(就業規則確認)</span></div>
+        <div class="row"><b>無期転換ルール</b><span>通算5年超で無期転換申込権が発生(労働契約法18条)</span></div>
+        <div class="row"><b>失業保険</b><span>契約期間満了は特定理由離職者となる可能性あり</span></div>
+        <div class="row"><b>雇止め法理</b><span>一定要件下で雇止めが無効となる場合あり(労契法19条)</span></div>
+      </div>
+      <div class="cta-block">
+        <BannerAB position="bottom" pageSlug="taishoku-daikou-keiyaku-koushin" />
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-section alt">
+    <div class="container">
+      <p class="section-num">SECTION 06</p>
+      <h2>よくある質問</h2>
+      <div class="faq">
+        <details class="faq-item"><summary>契約更新を断ることに退職代行は使えますか？</summary><div><p>労働者からの更新拒否は原則自由とされており、退職代行を通じて意思表示が可能です。退職代行Jobsは労働組合運営で交渉対応可能とされ、契約終了日・有給消化等の調整にも対応可能です。</p></div></details>
+        <details class="faq-item"><summary>更新拒否はいつまでに伝えるべきですか？</summary><div><p>労働契約書・就業規則に「更新拒否は◯ヶ月前までに通知」等の規定がある場合は、その規程に従う必要があります。規定がない場合でも、契約期間満了の1ヶ月前を目安に伝達することが推奨されます。</p></div></details>
+        <details class="faq-item"><summary>有期契約でも失業保険はもらえますか？</summary><div><p>雇用保険の被保険者期間が一定以上あり、求職活動の意思がある場合は受給可能とされています。契約期間満了による離職は「特定理由離職者」に該当する可能性があり、給付制限なしで受給開始となる場合があります。詳細はハローワークで確認することが推奨されます。</p></div></details>
+        <details class="faq-item"><summary>無期転換ルール(5年超)の権利は失われますか？</summary><div><p>通算契約期間が5年を超えた有期雇用労働者は、無期転換申込権を持つとされています(労働契約法18条)。更新を断ると以降の契約は発生しないため、無期転換権の行使を希望する場合は、慎重な判断が必要です。</p></div></details>
+        <details class="faq-item"><summary>更新拒否時のトラブルはありますか？</summary><div><p>国民生活センターには、更新拒否時に会社から強い引き留めを受けたという相談例があるとされています。退職代行を活用することで、直接の交渉を避けられる選択肢があるとされています。</p></div></details>
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-section">
+    <div class="container">
+      <p class="section-num">SECTION 07</p>
+      <h2>公的な相談窓口</h2>
+      <div class="sources">
+        <ul>
+          <li>厚生労働省「労働契約の終了に関するルール」</li>
+          <li>厚生労働省「新規学卒就職者の離職状況」</li>
+          <li>国民生活センター「退職代行サービスに関する相談事例」</li>
+          <li>消費者庁「退職代行サービスの注意点」</li>
+          <li>ハローワーク「雇用保険の基本手当について」</li>
+          <li>労働基準監督署「労働相談・申告窓口」</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-section alt">
+    <div class="container">
+      <p class="section-num">SECTION 08</p>
+      <h2>まとめ・退職代行Jobs の公開情報</h2>
+      <p>退職代行の利用判断は、状況・ペルソナにより最適解が異なるとされ、業者選び5軸(運営形態/料金/対応範囲/実績/口コミ)での評価が推奨されます。退職代行Jobsは労働組合運営で交渉対応可能とされ、有給消化・退職金等の調整に対応可能と公表されています。詳細は公式サイトでの確認が推奨されます。</p>
+      <div class="cta-block">
+        <BannerAB position="final" pageSlug="taishoku-daikou-keiyaku-koushin" />
+      </div>
+      <div class="disclaimer">
+        <p>本ページはアフィリエイト広告(A8.net・アクセストレード経由)を利用しています。退職代行Jobsは株式会社アレスが運営する退職代行サービスです。本ページの内容は公開情報・公的機関データをもとに中立的に整理した情報提供を目的としており、特定サービスの利用を保証するものではありません。サービス利用判断は読者ご自身で行ってください。</p>
+      </div>
+    </div>
+  </section>
+  <section class="lp-section" id="sec-related" aria-labelledby="related-h">
+    <div class="container">
+      <p class="section-num">関連記事</p>
+      <h2 id="related-h">関連する記事</h2>
+      <ul class="related-links" style="line-height:1.9;">
+        <li><a href="https://taishoku-info.pages.dev/taishoku-daikou-keiyaku-shain/">契約社員の退職代行ガイド｜期間満了前の退職 / 契約途中の退職と確認ポイント（2026年版・PR）</a></li>
+        <li><a href="https://taishoku-info.pages.dev/seishain-taishoku-daikou/">正社員の退職代行ガイド｜利用できるか・流れ・正社員ならではの確認ポイント（2026年版・PR）</a></li>
+        <li><a href="https://taishoku-info.pages.dev/taishoku-daikou-50dai/">50代の退職代行｜退職金確保と次のキャリアの選び方を整理(2026年版・PR)</a></li>
+        <li><a href="https://taishoku-info.pages.dev/taishoku-daikou-haken/">派遣社員の退職代行ガイド｜派遣元への伝え方・契約期間の扱い・確認ポイント（2026年版・PR）</a></li>
+        <li><a href="https://taishoku-info.pages.dev/taishoku-daikou-hikitome/">退職代行と引き止め対応｜法的根拠と回避策（2026年版・PR）</a></li>
+      </ul>
+    </div>
+  </section>
+
+</RichLayout>

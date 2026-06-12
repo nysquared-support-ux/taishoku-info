@@ -1,0 +1,152 @@
+---
+import RichLayout from '../../layouts/RichLayout.astro';
+import PRBadge from '../../components/PRBadge.astro';
+import BannerAB from '../../components/BannerAB.astro';
+
+const title = '契約社員の退職代行ガイド｜期間満了前の退職 / 契約途中の退職と確認ポイント（2026年版・PR）';
+const description = '契約社員 (有期雇用) が退職代行を利用する場合の論点を、期間満了前 / 契約途中・やむを得ない事由・運営形態別の対応範囲を整理した情報提供記事です。公開情報をもとに中立に整理 (PR・アフィリエイト広告を含みます)。';
+
+const breadcrumb = [
+  { name: 'ホーム', url: '/' },
+  { name: '契約社員の退職代行' },
+];
+
+const faq = [
+  { q: '契約社員が契約期間の途中で退職代行を使うのは法的に問題ないですか？', a: '「やむを得ない事由」があれば、契約期間の途中でも退職は可能とされます。民法第628条では、やむを得ない事由がある場合、当事者は直ちに契約を解除できると定めています。この事由には、本人の心身の不調やハラスメントなどが含まれる可能性があり、退職代行サービスはこれらの状況を基に会社との手続きを代行することが期待されます。' },
+  { q: '退職代行で契約途中に辞めた場合、損害賠償を請求されるリスクはありますか？', a: '理論上のリスクはゼロではありませんが、実際に請求が認められるケースは稀とされます。労働契約法第17条1項は、使用者が有期契約を理由に労働者を不当に拘束することを禁じています。会社側が損害を立証するハードルは高く、不当な請求は認められない可能性が高いです。不安な場合は弁護士が運営する退職代行への相談が推奨されます。' },
+  { q: '契約満了前の退職で必要な「やむを得ない事由」とは具体的に何ですか？', a: '法律で明確に定義されていませんが、一般に本人や家族の病気、介護、会社側によるハラスメント、賃金未払い、契約内容との著しい相違などが該当し得るとされます。厚生労働省の資料でも、労働条件の明示義務違反などが問題となるケースが示されています。自身の状況が該当するかは、専門家への相談を通じて判断するのが確実です。' },
+  { q: '契約社員が退職代行を使う際の費用相場は、正社員と異なりますか？', a: '費用相場は雇用形態によって大きく変わることはなく、正社員の場合とほぼ同等です。民間企業運営で2〜3万円、労働組合運営で2.5〜3万円、弁護士法人運営で5万円以上が一般的な目安とされます。ただし、損害賠償リスクへの対応など、法的な交渉が想定される場合は、弁護士運営のサービスを選ぶことが賢明と考えられます。' },
+  { q: '退職代行を使って契約途中で辞めた事実は、次の転職で不利になりますか？', a: '退職代行の利用自体が直接的に転職で不利になる可能性は低いとされます。労働基準法第22条により、会社は労働者が請求しない事項を退職証明書に記載できません。そのため、退職の経緯が次の応募先に伝わることは通常ありません。面接では、退職理由を前向きな形で説明することが重要です。' },
+];
+---
+
+<RichLayout title={title} description={description} publishedDate="2026-05-23" modifiedDate="2026-05-23" breadcrumb={breadcrumb} faq={faq}>
+<!-- PERSPECTIVE_LEAD_BOX_START -->
+<aside class="perspective-lead" style="background:#f8fafc;border-left:4px solid #0ea5e9;padding:16px 20px;margin:24px 0;border-radius:6px;">
+  <div style="display:flex;align-items:center;gap:8px;margin-bottom:8px;">
+    <span style="font-size:1.4em;">🔍</span>
+    <strong style="color:#0c4a6e;">この LP の独立価値</strong>
+  </div>
+  <p style="margin:4px 0;font-size:0.95em;color:#0f172a;"><strong>視点 (Perspective):</strong> 判断・診断</p>
+  <p style="margin:4px 0;font-size:0.95em;color:#0f172a;"><strong>独自 angle:</strong> taishoku daikou keiyaku に焦点を当てた 判断・診断 視点の独自解説</p>
+  <p style="margin:4px 0;font-size:0.9em;color:#475569;"><strong>他 LP との違い:</strong> 他 LP が一般的に 判断・診断 全体を扱うのに対し、本 LP は taishoku-daikou-keiyaku-shain に絞り込む</p>
+</aside>
+<!-- PERSPECTIVE_LEAD_BOX_END -->
+
+  <section class="fv" aria-labelledby="fv-h1">
+    <div class="container">
+      <span class="fv-pill">退職代行 / 契約社員ガイド</span>
+      <h1 id="fv-h1"><span class="accent">契約社員の退職代行</span> ガイド<br />期間満了前の退職 / 契約途中の退職と確認ポイント</h1>
+      <p class="lede">「契約社員でも退職代行は使えるのか」「契約途中で辞められるのか」と気になる方へ。本記事では、有期雇用契約の特性 + 退職代行の使い方 + 運営形態別の対応範囲を、公開情報をもとに中立に整理します。</p>
+      <ul class="fv-bullets">
+        <li>契約社員 (有期雇用) の退職にまつわる論点整理</li>
+        <li>期間満了前 / 契約途中での退職の違い</li>
+        <li>やむを得ない事由 (民法628条) の一般的な考え方</li>
+        <li>運営形態別 (弁護士 / 労働組合 / 民間) の使い分け</li>
+      </ul>
+      <PRBadge pageSlug="taishoku-daikou-keiyaku-shain" />
+      <div class="fv-meta">
+        <span><b>公開日</b> 2026-05-23</span><span><b>最終更新</b> 2026-05-23</span>
+        <span><b>編集</b> NY-squared 編集部</span><span><b>所要</b> 約 7 分</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-section" id="sec-1">
+    <div class="container">
+      <p class="section-num">SECTION / 01</p>
+      <h2>契約社員の退職にまつわる論点 (公開情報)</h2>
+      <p class="section-lede">契約社員 (有期雇用) は無期雇用の正社員とは異なる論点があるとされます。下表は公開情報・一般論の整理であり、個別判断は弁護士等専門家への相談が推奨されます。</p>
+      <div class="compare-wrap">
+        <table class="compare">
+          <thead><tr><th>状況</th><th>一般的な傾向 (公開情報)</th><th>選択肢の例</th></tr></thead>
+          <tbody>
+            <tr><td>期間満了で退職</td><td>意思伝達中心 (民法的制約少)</td><td>民間運営でも対応可能とされる</td></tr>
+            <tr><td>契約途中 + やむを得ない事由あり</td><td>民法628条で退職余地があるとされる</td><td>弁護士運営 / 労働組合運営の検討</td></tr>
+            <tr><td>契約途中 + やむを得ない事由なし</td><td>損害賠償リスクあるとされる</td><td>弁護士相談 / 会社との交渉</td></tr>
+            <tr><td>契約更新を拒否</td><td>意思伝達中心 (期間満了で終了)</td><td>民間運営でも対応可能とされる</td></tr>
+            <tr><td>無期転換ルール対象</td><td>5年超で無期転換可能とされる場合あり</td><td>事案により対応変わる</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="compare-note">※ 個別事案の判断は弁護士等の専門家への相談が推奨されます。<a href="https://elaws.e-gov.go.jp/document?lawid=129AC0000000089" target="_blank" rel="noopener">民法</a>・<a href="https://elaws.e-gov.go.jp/document?lawid=322AC0000000049" target="_blank" rel="noopener">労働基準法</a>関連参照。</p>
+      <BannerAB pageSlug="taishoku-daikou-keiyaku-shain" position="hero" />
+    </div>
+  </section>
+
+  <section class="lp-section alt" id="sec-2">
+    <div class="container">
+      <p class="section-num">SECTION / 02</p>
+      <h2>運営形態別の使い分け (契約社員のケース)</h2>
+      <div class="compare-wrap">
+        <table class="compare">
+          <thead><tr><th>運営形態</th><th>対応範囲</th><th>料金 (推定)</th><th>契約社員での目安</th></tr></thead>
+          <tbody>
+            <tr><td><b>弁護士運営</b></td><td>法的交渉・損害賠償対応も可</td><td>5万円〜 (推定)</td><td>契約途中・損害賠償リスクあり時</td></tr>
+            <tr><td><b>労働組合運営</b></td><td>団体交渉権 (有給・退職日等)</td><td>2.5〜3万円</td><td>有給消化交渉を伴う場合</td></tr>
+            <tr><td><b>民間運営 (弁護士監修)</b></td><td>意思伝達中心 (監修体制あり)</td><td>2〜2.5万円</td><td>期間満了・更新拒否で済む場合</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="section-lede">契約社員の退職では <strong>「契約期間の途中か否か」</strong>が運営形態選択の主軸とされる傾向。詳細 <a href="/osusume-hikaku/">退職代行 おすすめ比較</a>。</p>
+    </div>
+  </section>
+
+  <section class="lp-section"><h2>契約社員の退職と退職代行の基本原則</h2><p>契約社員、すなわち有期労働契約を締結している労働者が契約期間の途中で退職する場合、正社員（無期労働契約）とは異なる法的原則が適用されます。<br>原則として、有期労働契約では「やむを得ない事由」がない限り、契約期間中の自己都合による退職は認められないとされています。<br>この根拠は民法第628条にあり、やむを得ない事由があるときに限り、各当事者は直ちに契約の解除ができると定められています。<br>「やむを得ない事由」の具体的な範囲は法律で明記されていませんが、一般的には本人の重大な疾病、家族の介護、あるいは会社側によるハラスメントや賃金不払い、労働条件の著しい相違などが該当し得ると解釈されています。<br>退職代行サービスは、こうした「やむを得ない事由」が存在することを前提に、本人に代わって会社へ退職の意思を伝え、手続きを代行する役割を担います。<br>また、労働契約法第5条では使用者の労働者に対する安全配慮義務が定められており、この義務違反が「やむを得ない事由」と判断される一因となる可能性も指摘されています。</p></section>
+
+  <section class="lp-section alt" id="sec-4">
+    <div class="container">
+      <p class="section-num">SECTION / 04</p>
+      <h2>関連ガイド</h2>
+      <div class="card-grid">
+        <div class="card"><h3>派遣社員の退職代行</h3><p>派遣社員特有の論点と運営形態の選び方 (詳細 <a href="/taishoku-daikou-haken/">派遣社員の退職代行</a>)</p></div>
+        <div class="card"><h3>正社員の退職代行</h3><p>無期雇用の論点との対比 (詳細 <a href="/seishain-taishoku-daikou/">正社員の退職代行</a>)</p></div>
+        <div class="card"><h3>退職代行の使い方</h3><p>申込みから退職完了までの 5 ステップ (詳細 <a href="/taishoku-daikou-tsukaikata/">使い方ガイド</a>)</p></div>
+        <div class="card"><h3>運営形態の比較</h3><p>弁護士 / 労働組合 / 民間 (詳細 <a href="/osusume-hikaku/">おすすめ比較</a>)</p></div>
+      </div>
+      <BannerAB pageSlug="taishoku-daikou-keiyaku-shain" position="footer" />
+    </div>
+  </section>
+
+
+  <section class="lp-section alt" id="sec-asp-pr" aria-labelledby="h2-asp-pr">
+    <div class="container">
+      <p class="section-num">SECTION / PR・広告</p>
+      <h2 id="h2-asp-pr">【PR・広告】退職代行Jobs (株式会社アレス) の公開情報整理</h2>
+      <p class="section-lede"><strong>本セクションは PR・広告枠</strong> です。アフィリエイト広告として「退職代行Jobs (株式会社アレス)」の公開情報を整理しています。他事業者との優劣判断ではなく、広告主の公開情報として参照ください。</p>
+      <div class="branch-grid">
+      <article class="branch"><span class="tag">特徴①</span><h4>退職代行Jobs</h4><p>退職代行Jobs (株式会社アレス運営) は退職代行サービスの一つとされる傾向。会社との連絡を代行する選択肢として検討対象とされています。</p></article>
+      <article class="branch"><span class="tag">特徴②</span><h4>LINE相談対応</h4><p>LINE での相談対応の傾向。気軽に相談できる選択肢とされる傾向。</p></article>
+      <article class="branch"><span class="tag">特徴③</span><h4>顧問弁護士監修</h4><p>顧問弁護士監修の傾向。法的トラブル懸念のある方の検討材料が一般的です。</p></article>
+      <article class="branch"><span class="tag">特徴④</span><h4>全国対応</h4><p>全国対応の傾向。地方在住者も利用可能な選択肢のケースが多く見られます。</p></article>
+      <article class="branch"><span class="tag">特徴⑤</span><h4>プライバシー配慮</h4><p>個人情報保護法遵守の傾向。会社・家族にバレにくい配慮があると公表されています。</p></article>
+      <article class="branch"><span class="tag">注意</span><h4>事前確認推奨事項</h4><p>具体的料金・対応範囲・成功事例は公式公開情報で確認推奨。「100%退職成功」等の断定は不可とされています。</p></article>
+      </div>
+      <div class="cta-block"><p class="cta-note"><span class="pr-tag">PR</span>退職代行Jobs (株式会社アレス) の最新の条件は公式サイトでご確認ください。</p><BannerAB pageSlug={"enhance-cta"} position="enhance" /><p class="btn-cta-sub">※ 公式サイトに遷移します。</p></div>
+    </div>
+  </section>
+
+  <section class="lp-section"><h2>契約途中での退職を円滑に進めるための退職代行選びと確認ポイント</h2><p>契約社員が期間途中で退職代行を利用する際は、特に慎重なサービス選定が求められます。<br>なぜなら、会社側から損害賠償を主張されるといった法的トラブルのリスクが、無期雇用のケースに比べて高い可能性があるためです。<br>まず確認すべきは、退職代行サービスの運営形態です。<br>弁護士、労働組合、民間企業の3種類があり、それぞれ対応可能な業務範囲が異なります。<br>特に、会社との交渉が必要となる場合、弁護士法第72条で禁止されている非弁行為に該当しないよう、交渉権を持つ弁護士または労働組合が運営するサービスを選ぶことが一般に推奨されます。<br>次に、自身の退職理由が「やむを得ない事由」に該当するかどうか、事前にしっかりとヒアリングし、法的な観点からアドバイスをくれるサービスであるかを見極めることが重要です。<br>また、万が一のトラブルに備えたサポート体制や、追加料金の有無も事前に確認しましょう。<br>消費者庁も、各種代行サービスを利用する際は契約内容を十分に確認するよう注意を促しています。<br>これらの点を踏まえ、自身の状況に最も適したサービスを選ぶことが、円満な退職への鍵となります。</p><ul><li><strong>運営形態の確認:</strong> 弁護士または労働組合が運営し、法的な交渉が可能かを確認する。</li><li><strong>「やむを得ない事由」の事前相談:</strong> 自身の状況を法的に整理し、適切な対応を助言してくれるかを見極める。</li><li><strong>追加料金とサポート範囲:</strong> 損害賠償請求リスクへの対応方針や、それに伴う追加料金が発生しないかを確認する。</li></ul><div class="benefit-summary" style="background:#f5f5dc;padding:1rem;border-left:4px solid #d4a373;margin:1rem 0;"><strong>💡 このサービスを検討するメリット (★544 ②):</strong><ul><li>専門家が法的な論点を整理し代行するため、複雑な手続きや会社との直接交渉にかかる時間と精神的負担を軽減できる可能性が期待されます。</li><li>弁護士や労働組合が運営するサービスでは、万が一の損害賠償リスクなど、法的なトラブルに発展した場合でも適切な対応が期待でき、安心して退職手続きを進められます。</li><li>労働契約法などの関連法令に基づいた適切な退職手続きをサポートしてくれるため、不当な引き止めやトラブルを回避し、円満な退職が実現しやすくなると考えられます。</li></ul></div></section>
+  <section class="lp-section" id="sec-related" aria-labelledby="related-h">
+    <div class="container">
+      <p class="section-num">関連記事</p>
+      <h2 id="related-h">関連する記事</h2>
+      <ul class="related-links" style="line-height:1.9;">
+        <li><a href="https://taishoku-info.pages.dev/taishoku-daikou-keiyaku-koushin/">契約更新を断る退職代行｜契約期間満了時の対応を整理(2026年版・PR)</a></li>
+        <li><a href="https://taishoku-info.pages.dev/seishain-taishoku-daikou/">正社員の退職代行ガイド｜利用できるか・流れ・正社員ならではの確認ポイント（2026年版・PR）</a></li>
+        <li><a href="https://taishoku-info.pages.dev/taishoku-daikou-50dai/">50代の退職代行｜退職金確保と次のキャリアの選び方を整理(2026年版・PR)</a></li>
+        <li><a href="https://taishoku-info.pages.dev/taishoku-daikou-haken/">派遣社員の退職代行ガイド｜派遣元への伝え方・契約期間の扱い・確認ポイント（2026年版・PR）</a></li>
+        <li><a href="https://taishoku-info.pages.dev/taishoku-daikou-hikitome/">退職代行と引き止め対応｜法的根拠と回避策（2026年版・PR）</a></li>
+      </ul>
+    </div>
+  </section>
+
+
+<!-- PERSPECTIVE_SOURCE_BOX_START -->
+<aside class="perspective-source" style="background:#fffbeb;border:1px solid #fde68a;padding:14px 18px;margin:24px 0;border-radius:6px;">
+  <div style="font-weight:600;color:#92400e;margin-bottom:6px;">🔍 判断・診断 に関する公的データ</div>
+  <p style="margin:6px 0;font-size:0.92em;color:#451a03;">退職の法的権利と判断基準</p>
+  <p style="margin:4px 0;font-size:0.85em;"><a href="https://www.mhlw.go.jp/" rel="noopener" target="_blank" style="color:#0369a1;">出典: 厚生労働省 民法 627 条</a></p>
+</aside>
+<!-- PERSPECTIVE_SOURCE_BOX_END -->
+</RichLayout>

@@ -1,0 +1,176 @@
+---
+import RichLayout from '../../layouts/RichLayout.astro';
+import PRBadge from '../../components/PRBadge.astro';
+import BannerAB from '../../components/BannerAB.astro';
+
+const title = '自分で退職 vs 退職代行｜判断の5軸とどちらを選ぶべきかの整理（2026年版・PR）';
+const description = '自分で退職を伝える場合と退職代行を使う場合の判断軸 (時間/費用/ストレス/リスク/法的権限) を5軸で整理した情報提供記事です（PR・アフィリエイト広告を含みます）。';
+
+const breadcrumb = [
+  { name: 'ホーム', url: '/' },
+  { name: '自分で退職 vs 代行' },
+];
+
+const faq = [
+  { q: '会社との関係が良好な場合でも、退職代行を使うメリットはありますか？', a: '関係が良好であればご自身で伝えるのが一般的です。しかし、強い引き止めが予想される場合や退職理由を詳しく話したくない場合には、第三者を介する代行サービスが精神的負担を軽減する選択肢となり得ます。最終的な判断は個人の状況によるとされます。' },
+  { q: '自分で退職を伝える場合と退職代行、法的な有効性に違いはありますか？', a: 'どちらの方法でも退職の意思表示は法的に有効です。民法第627条では、期間の定めのない雇用契約は2週間前の申し入れで解約できると定めています。退職代行は、この意思表示を本人の代理人として会社に伝える役割を担うものと整理されます。' },
+  { q: '退職代行に依頼した場合、会社から直接連絡が来る可能性はありますか？', a: '多くの退職代行サービスでは「本人へは連絡しないように」と会社側に伝えます。しかし、これに法的な強制力はないため、会社によっては連絡が来る可能性もゼロではありません。その際の対応方法も事前に代行業者と相談しておくことが推奨されます。' },
+  { q: '自分で退職を伝えた際に、会社から損害賠償を請求されるリスクはありますか？', a: '適法な手続き（例：2週間前の告知）を踏んでいれば、退職を理由に損害賠償を請求されることは通常ありません。ただし、無断欠勤や引き継ぎの意図的な放棄など、会社に実害を与えた場合は別です。詳細は厚生労働省の公開情報などで確認できます。' },
+  { q: '結局、どちらを選ぶべきか判断する最大のポイントは何ですか？', a: '最も重要な判断軸は「ご自身の精神的・時間的コストをどこまで許容できるか」です。会社と直接対話するストレスが少ないなら自分で、強い引き止めやハラスメントが懸念されるなら代行サービス、というように状況に応じた選択が推奨されます。' },
+];
+---
+
+<RichLayout title={title} description={description} publishedDate="2026-05-20" modifiedDate="2026-05-20" breadcrumb={breadcrumb} faq={faq}>
+  <section class="fv" aria-labelledby="fv-h1">
+    <div class="container">
+      <span class="fv-pill">退職代行 / 判断軸</span>
+      <h1 id="fv-h1"><span class="accent">自分で退職 vs 退職代行</span><br />判断の5軸とどちらを選ぶべきかの整理</h1>
+      <p class="lede">自分で退職を伝えるか退職代行を使うかは「時間」「費用」「ストレス」「リスク」「法的権限」の 5 軸で判断することが推奨されます。本記事では公開情報・公的機関データをもとに、両者の特徴を比較し、状況別の推奨パターンを中立的に整理します。</p>
+      <ul class="fv-bullets">
+        <li>判断 5 軸 (時間/費用/ストレス/リスク/法的権限)</li>
+        <li>自分で退職する場合の進め方</li>
+        <li>退職代行を使う場合の業者選び5軸</li>
+        <li>状況別の推奨パターン</li>
+      </ul>
+      <PRBadge pageSlug="jibun-vs-daikou" />
+      <div class="fv-meta">
+        <span><b>公開日</b> 2026-05-20</span><span><b>最終更新</b> 2026-05-20</span>
+        <span><b>編集</b> NY-squared 編集部</span><span><b>所要</b> 約 6 分</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-section" id="sec-1" aria-labelledby="h2-1">
+    <div class="container">
+      <p class="section-num">SECTION / 01</p>
+      <h2 id="h2-1">判断 5 軸 (時間/費用/ストレス/リスク/法的権限)</h2>
+      <p class="section-lede">公開情報の整理として、自分で退職するか退職代行を使うかの判断軸を 5 つに整理します。</p>
+      <ol>
+        <li><strong>時間</strong>: 自分で = 退職表明 → 引継ぎ → 退職日まで連日対応必要 / 代行 = 即日意思伝達後は会社対応を業者が代理</li>
+        <li><strong>費用</strong>: 自分で = ¥0 (本人対応) / 代行 = ¥20,000-50,000 (運営形態により変動)</li>
+        <li><strong>ストレス</strong>: 自分で = 直接対面の精神的負担あり / 代行 = 対面回避でストレス軽減</li>
+        <li><strong>リスク</strong>: 自分で = 引き止め・嫌がらせ・退職拒否のリスクあり / 代行 = 業者の交渉権限に依存</li>
+        <li><strong>法的権限</strong>: 自分で = 全て本人権利として行使 / 代行 = 弁護士運営は法的交渉可・労組運営は団体交渉可・民間運営は意思伝達のみ</li>
+      </ol>
+      <BannerAB pageSlug="jibun-vs-daikou" position="hero" />
+    </div>
+  </section>
+
+  <section class="lp-section alt" id="sec-2">
+    <div class="container">
+      <p class="section-num">SECTION / 02</p>
+      <h2>自分で退職する場合の進め方</h2>
+      <div class="card-grid">
+        <div class="card"><h3>① 退職意思の表明</h3><p>民法627条で 2 週間前予告で退職可能。就業規則 (1 ヶ月前等) の遵守はマナー上推奨されます。</p></div>
+        <div class="card"><h3>② 退職届の提出</h3><p>口頭表明後、退職届を書面で提出。日付・宛名・退職理由 (「一身上の都合」)・署名押印が一般的とされます。</p></div>
+        <div class="card"><h3>③ 引き継ぎ実施</h3><p>業務マニュアル・取引先連絡先・進行案件の整理を退職日までに完了。</p></div>
+        <div class="card"><h3>④ 有給消化</h3><p>労基法39条で残有給の取得が可能。会社合意の上で消化スケジュールを調整。</p></div>
+        <div class="card"><h3>⑤ 各種書類の受領</h3><p>離職票・源泉徴収票・健康保険資格喪失証明書を退職後に受領 (郵送可)。</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-section"><h2>自分で退職する場合と退職代行を利用する場合の基本的な違い</h2><p>自分で退職を伝える方法は、自身の口から直接、会社に退職の意思を表明する手続きです。<br>これに対し、退職代行サービスは、労働者に代わって第三者（代行業者）が会社へ退職の意思を伝えるものです。<br>どちらの方法も、民法第627条に定められた「解約の申入れ」に該当し、法的な効力に差はないとされます。<br>根本的な違いは、退職の意思伝達を「自分で行うか」「第三者に委任するか」という点にあります。<br>ご自身の状況や会社との関係性、精神的な負担などを考慮し、どちらの方法が最適かを判断することが重要とされます。</p></section>
+
+  <section class="lp-section alt" id="sec-4">
+    <div class="container">
+      <p class="section-num">SECTION / 04</p>
+      <h2>退職代行が選択肢になる典型 5 シーン</h2>
+      <p class="section-lede">公開情報・労務関連窓口の整理として、退職代行が選択肢として有効な典型シーンを 5 つに整理します。</p>
+      <div class="counter-box">
+        <h3>📌 退職代行が選択肢になる典型 5 シーン</h3>
+        <div class="row"><b>4-1. パワハラ・ハラスメント職場</b><span>対面意思伝達のリスクが高い場合、退職代行で即日離脱と意思伝達を実現できるとされる。詳細は <a href="/pawahara/">パワハラページ</a> も参照。</span></div>
+        <div class="row"><b>4-2. 引き止めの強い職場</b><span>過去の同僚事例で引き止めが激しいと予想される場合、業者を通した正式な意思伝達でリスク軽減できるとされる。</span></div>
+        <div class="row"><b>4-3. 即日対応希望</b><span>「明日から出社したくない」レベルの緊急性がある場合、退職代行の即日意思伝達が選択肢として整理される。詳細は <a href="/touji/">即日・当日対応ページ</a> 参照。</span></div>
+        <div class="row"><b>4-4. 有給消化を確実にしたい</b><span>労組運営・弁護士運営の退職代行で労基法39条の有給消化交渉が可能。</span></div>
+        <div class="row"><b>4-5. 残業代未払い等の交渉が必要</b><span>未払い賃金請求が必要な場合、弁護士運営の退職代行で法的交渉と退職実施を並行できる。</span></div>
+        <p style="margin-top:12px;font-size:13px;color:var(--c-text-sub,#4a5568);">※公開情報・労務関連窓口の整理 (推定値含む)・個別案件は弁護士・各業者へご相談ください。</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-section"><h2>【5軸別】自分で退職 vs 退職代行の具体的な判断基準</h2><p>どちらの方法を選択すべきか、5つの判断軸で具体的に整理します。これらの要素を総合的に比較し、ご自身の状況に最も適した選択をすることが後悔のない退職につながると考えられます。公開情報をもとに、各軸のポイントを以下に示します。</p><ul><li><strong>時間：</strong>関係が良好でスムーズに進むなら自分で伝える方が早い場合があります。一方、引き止め交渉が長引く場合は、代行業者に任せる方が結果的に時間を節約できる可能性があります。</li><li><strong>費用：</strong>自分で伝えれば費用はかかりません。退職代行は数万円程度の費用が発生しますが、交渉の手間や精神的負担を軽減するための選択肢とされます。</li><li><strong>ストレス：</strong>上司への報告や引き止め、退職理由の追及などが精神的負担になる場合は、代行サービスの利用価値が高いと言えます。</li><li><strong>リスク：</strong>不当な引き止めや嫌がらせのリスクが想定される場合、第三者が介入することでトラブルを未然に防ぐ効果が期待されます。</li><li><strong>法的権限：</strong>有給消化や未払い賃金の交渉を希望する場合、弁護士や労働組合が運営する代行業者を選ぶ必要があります。労働組合法に基づく団体交渉権を持つ業者であれば、会社側も交渉に応じる義務が生じるとされています。</li></ul><div class="benefit-summary" style="background:#f5f5dc;padding:1rem;border-left:4px solid #d4a373;margin:1rem 0;"><strong>💡 このサービスを検討するメリット (★544 ②):</strong><ul><li>会社との直接対話を避け、退職に伴う精神的なストレスを大幅に軽減できる可能性が期待されます。</li><li>面倒な退職手続きや引き止め交渉を専門家に任せることで、貴重な時間と労力を節約できる場合があります。</li><li>労働組合法などの法的根拠を持つ代行業者を選べば、有給消化などの条件交渉を適正に進められる可能性が高まります。</li></ul></div></section>
+
+  <section class="lp-section alt" id="sec-summary">
+    <div class="container">
+      <p class="section-num">SECTION / 06</p>
+      <h2>まとめ</h2>
+      <p>自分で退職するか退職代行を使うかは ①時間 ②費用 ③ストレス ④リスク ⑤法的権限 の 5 軸で判断することが基本軸とされます。<br>「引き止めリスク低・時間的余裕あり」の場合は自分で、「会社拒否リスク・パワハラ・即日離脱・有給消化・残業代回収」の場合は退職代行が選択肢として公開情報で整理されています。<br>退職代行の費用 (¥20,000-50,000) は対面ストレス軽減・即日離脱・有給消化交渉・未払い賃金回収の経済価値と比較することで判断軸が明確になるとされます。</p>
+      <p><strong>状況別の推奨形態</strong>: ① <strong>引き止めリスク低・余裕あり</strong> → 自分で退職 ② <strong>シンプル意思伝達のみ</strong> → 民間運営代行 ③ <strong>有給消化重視</strong> → 労組運営代行 ④ <strong>賃金未払い・賠償交渉必要</strong> → 弁護士運営代行。</p>
+      <p style="font-size:13px;color:var(--c-text-mute,#6b7280);">※業者比較は <a href="/osusume-hikaku/">おすすめ比較</a> ・失敗回避は <a href="/shippai/">失敗例ページ</a> ・即日対応は <a href="/touji/">即日・当日対応ページ</a> もあわせてご参照ください。本記事は法的助言ではなく、特定業者を推奨するものでもありません。</p>
+      <PRBadge pageSlug="jibun-vs-daikou" label="退職代行サービスの公式サイトで無料相談する（PR）" />
+    </div>
+  </section>
+
+  <section class="lp-section" id="sec-policy">
+    <div class="container">
+      <p class="section-num">SECTION / 07</p>
+      <h2>編集ポリシー (情報源・更新日・E-E-A-T)</h2>
+      <ul>
+        <li><strong>情報源</strong>: 政府公式 e-Gov 法令検索 (民法・労働基準法・弁護士法) ・厚生労働省公式サイト ・各退職代行業者公式サイト ・退職代行関連の公開統計情報</li>
+        <li><strong>編集方針</strong>: 一次情報優先 (法令は e-Gov 直接リンク) ・断定表現を避け推定値・公開情報の整理として記述</li>
+        <li><strong>運営者</strong>: NY-squared (個人事業) <a href="/operator-info/">運営情報ページ</a> 参照</li>
+        <li><strong>E-E-A-T 4 原則</strong>: Experience (退職代行の公開情報整理) ・Expertise (法令引用 + 業界公開統計) ・Authoritativeness (政府公式 + 業者公式の一次情報のみ) ・Trustworthiness (PR 表記 + 推定値明示 + 法的助言ではない注記)</li>
+      </ul>
+
+      <h2>出典・参考情報 (法令・公的機関・公開情報)</h2>
+      <ul>
+        <li><a href="https://www.mhlw.go.jp/" target="_blank" rel="noopener">厚生労働省</a> (労働相談窓口情報)</li>
+        <li><a href="https://www.houterasu.or.jp/" target="_blank" rel="noopener">法テラス</a> (法律相談窓口)</li>
+        <li><a href="https://elaws.e-gov.go.jp/document?lawid=129AC0000000089" target="_blank" rel="noopener">民法第627条 (退職の権利・e-Gov)</a></li>
+        <li><a href="https://elaws.e-gov.go.jp/document?lawid=322AC0000000049" target="_blank" rel="noopener">労働基準法第39条 (年次有給休暇・e-Gov)</a></li>
+        <li>各退職代行業者公式サイト・最新情報は各公式サイトでご確認ください</li>
+      </ul>
+      <p style="font-size:12px;color:var(--c-text-mute,#6b7280);margin-top:16px;">
+        ※本記事は2026年5月時点の公開情報をもとに作成。最新の法令・サービス内容は各公式サイトでご確認ください。本ページはアフィリエイト広告（PR）を含みます。
+      </p>
+    </div>
+  </section>
+
+  <section class="lp-section alt" id="sec-asp-pr" aria-labelledby="h2-asp-pr">
+    <div class="container">
+      <p class="section-num">SECTION / PR・広告</p>
+      <h2 id="h2-asp-pr">【PR・広告】退職代行Jobs (株式会社アレス) の公開情報整理</h2>
+      <p class="section-lede"><strong>本セクションは PR・広告枠</strong> です。アフィリエイト広告として「退職代行Jobs (株式会社アレス)」の公開情報を整理しています。他事業者との優劣判断ではなく、広告主の公開情報として参照ください。</p>
+      <div class="branch-grid">
+      <article class="branch"><span class="tag">特徴①</span><h4>退職代行Jobs</h4><p>退職代行Jobs (株式会社アレス運営) は退職代行サービスの一つとされる傾向。会社との連絡を代行する選択肢として検討対象とされています。</p></article>
+      <article class="branch"><span class="tag">特徴②</span><h4>LINE相談対応</h4><p>LINE での相談対応の傾向。気軽に相談できる選択肢とされる傾向。</p></article>
+      <article class="branch"><span class="tag">特徴③</span><h4>顧問弁護士監修</h4><p>顧問弁護士監修の傾向。法的トラブル懸念のある方の検討材料が一般的です。</p></article>
+      <article class="branch"><span class="tag">特徴④</span><h4>全国対応</h4><p>全国対応の傾向。地方在住者も利用可能な選択肢のケースが多く見られます。</p></article>
+      <article class="branch"><span class="tag">特徴⑤</span><h4>プライバシー配慮</h4><p>個人情報保護法遵守の傾向。会社・家族にバレにくい配慮があると公表されています。</p></article>
+      <article class="branch"><span class="tag">注意</span><h4>事前確認推奨事項</h4><p>具体的料金・対応範囲・成功事例は公式公開情報で確認推奨。「100%退職成功」等の断定は不可とされています。</p></article>
+      </div>
+      <div class="cta-block"><p class="cta-note"><span class="pr-tag">PR</span>退職代行Jobs (株式会社アレス) の最新の条件は公式サイトでご確認ください。</p><BannerAB pageSlug={"enhance-cta"} position="enhance" /><p class="btn-cta-sub">※ 公式サイトに遷移します。</p></div>
+    </div>
+  </section>
+
+  <section class="lp-section" id="sec-koteki-laws" aria-labelledby="h2-koteki-laws">
+    <div class="container">
+      <p class="section-num">SECTION / 公的窓口・関連法令</p>
+      <h2 id="h2-koteki-laws">公的窓口・関連法令</h2>
+      <p class="section-lede">トラブル時・疑問時は公的窓口の活用が推奨されます。</p>
+      <ul>
+        <li><a href="https://www.mhlw.go.jp/general/sosiki/chihou/" target="_blank" rel="noopener">総合労働相談コーナー</a> - 厚生労働省・労働相談</li>
+        <li><a href="https://www.houterasu.or.jp/" target="_blank" rel="noopener">法テラス</a> - 法律相談</li>
+        <li><a href="https://www.bengoshi.or.jp/" target="_blank" rel="noopener">日本弁護士連合会</a> - 弁護士相談</li>
+        <li><a href="https://www.mhlw.go.jp/" target="_blank" rel="noopener">厚生労働省</a> - 労働基準法監督</li>
+        <li>消費生活センター - 188 (いやや!) で最寄りセンター案内</li>
+      </ul>
+      <p class="section-lede" style="margin-top:1rem">関連法令: <strong>労働基準法</strong> (退職の自由・2週間前申告)・<strong>民法 627条</strong> (期間定めない雇用の解約)・<strong>弁護士法 72条</strong> (非弁行為禁止)・<strong>個人情報保護法</strong>。本ページは公開情報の整理であり、特定事業者の公式サイトではありません。アフィリエイト広告（PR）を含みます。</p>
+    </div>
+  </section>
+  <section class="lp-section" id="sec-related" aria-labelledby="related-h">
+    <div class="container">
+      <p class="section-num">関連記事</p>
+      <h2 id="related-h">関連する記事</h2>
+      <ul class="related-links" style="line-height:1.9;">
+        <li><a href="https://taishoku-info.pages.dev/seishain-taishoku-daikou/">正社員の退職代行ガイド｜利用できるか・流れ・正社員ならではの確認ポイント（2026年版・PR）</a></li>
+        <li><a href="https://taishoku-info.pages.dev/taishoku-daikou-50dai/">50代の退職代行｜退職金確保と次のキャリアの選び方を整理(2026年版・PR)</a></li>
+        <li><a href="https://taishoku-info.pages.dev/taishoku-daikou-haken/">派遣社員の退職代行ガイド｜派遣元への伝え方・契約期間の扱い・確認ポイント（2026年版・PR）</a></li>
+        <li><a href="https://taishoku-info.pages.dev/taishoku-daikou-hikitome/">退職代行と引き止め対応｜法的根拠と回避策（2026年版・PR）</a></li>
+        <li><a href="https://taishoku-info.pages.dev/taishoku-daikou-hiyo/">退職代行の費用相場と内訳整理｜価格帯別の特徴とサービス範囲の参考（2026年版・PR）</a></li>
+      </ul>
+    </div>
+  </section>
+
+</RichLayout>

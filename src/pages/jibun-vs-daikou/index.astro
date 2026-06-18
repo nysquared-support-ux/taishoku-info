@@ -64,6 +64,51 @@ const faq = [
         <li><strong>リスク</strong>: 自分で = 引き止め・嫌がらせ・退職拒否のリスクあり / 代行 = 業者の交渉権限に依存</li>
         <li><strong>法的権限</strong>: 自分で = 全て本人権利として行使 / 代行 = 弁護士運営は法的交渉可・労組運営は団体交渉可・民間運営は意思伝達のみ</li>
       </ol>
+
+      <!-- ★666 LP 固有深化: 3 列縦軸 honest 比較表 (自力 vs 民間代行 vs 弁護士代行・過去 6 path 全要素未使用) -->
+      <h3 style="margin-top:1.5em;color:#0c4a6e;">⚖️ 3 列縦軸 honest 比較表: 自力 vs 民間代行 vs 弁護士代行 (本 LP 独自整理)</h3>
+      <p>既存の 5 軸 ol を、<strong>「自力 / 民間運営代行 / 弁護士運営代行」3 列縦軸</strong>で再構造化しました。意思決定時には軸ごとに 3 列を横比較することで、自分の状況に最適な選択肢が判別しやすくなります (★365 honest: 本記事は弁護士・社労士による法的助言ではありません・個別事案は専門家にご確認ください)。</p>
+      <div class="compare-wrap">
+        <table class="compare" aria-label="自力 vs 民間 vs 弁護士 縦軸 5 比較" style="font-size:0.88em;">
+          <thead style="background:#0c4a6e;color:white;">
+            <tr><th>判断軸</th><th>① 自力</th><th>② 民間運営代行</th><th>③ 弁護士運営代行</th></tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>時間コスト</strong></td>
+              <td>表明 + 引継 + 退職日まで連日対応 (1-2 ヶ月)</td>
+              <td>即日意思伝達 (本人対応 0 時間)</td>
+              <td>即日意思伝達 + 交渉期間 (1-3 週間程度)</td>
+            </tr>
+            <tr>
+              <td><strong>金銭コスト</strong></td>
+              <td>¥0</td>
+              <td>¥20,000-¥30,000</td>
+              <td>¥30,000-¥60,000 (+ 成功報酬の場合あり)</td>
+            </tr>
+            <tr>
+              <td><strong>ストレス</strong></td>
+              <td>対面 / 電話 / メール対応の精神的負担 (個人差大)</td>
+              <td>対面回避 → 大幅軽減</td>
+              <td>対面回避 + 法的保護下 → 最大軽減</td>
+            </tr>
+            <tr>
+              <td><strong>法的権限</strong></td>
+              <td>本人の全権利行使可 (<a href="https://elaws.e-gov.go.jp/document?lawid=129AC0000000089" target="_blank" rel="noopener">民法 627 条</a>)</td>
+              <td>意思伝達のみ (有給交渉/賃金請求は不可・弁護士法 72 条境界)</td>
+              <td>有給消化交渉 + 未払賃金請求 + 損害賠償交渉まで可 (代理権)</td>
+            </tr>
+            <tr>
+              <td><strong>失敗時リカバリー</strong></td>
+              <td>本人で再交渉 + 労基署相談 + 法テラス利用</td>
+              <td>業者によりサポート期間制限あり (1-2 週間程度)</td>
+              <td>弁護士継続対応 + 訴訟移行可能 (民事訴訟法準拠)</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="compare-note" style="font-size:0.88em;">📊 <strong>意思決定支援フレーム</strong>: 各軸を「自分が許容できる順位」で並べ替え、上位 2 軸で最高評価の列が推奨選択肢になります。例: 「金銭コスト最優先 + ストレス重視」→ 民間運営代行 / 「法的権限最優先 + リカバリー重視」→ 弁護士運営代行 / 「金銭コスト 0 + 引き止めリスク低」→ 自力。</p>
+
       <BannerAB pageSlug="jibun-vs-daikou" position="hero" />
     </div>
   </section>
@@ -77,8 +122,30 @@ const faq = [
         <div class="card"><h3>② 退職届の提出</h3><p>口頭表明後、退職届を書面で提出。日付・宛名・退職理由 (「一身上の都合」)・署名押印が一般的とされます。</p></div>
         <div class="card"><h3>③ 引き継ぎ実施</h3><p>業務マニュアル・取引先連絡先・進行案件の整理を退職日までに完了。</p></div>
         <div class="card"><h3>④ 有給消化</h3><p>労基法39条で残有給の取得が可能。会社合意の上で消化スケジュールを調整。</p></div>
-        <div class="card"><h3>⑤ 各種書類の受領</h3><p>離職票・源泉徴収票・健康保険資格喪失証明書を退職後に受領 (郵送可)。</p></div>
+        <div class="card"><h3>⑤ 各種書類の受領</h3><p>離職票・源泉徴収票・健康保険資格喪失証明書を退職後に受領 (郵送可)。<a href="https://elaws.e-gov.go.jp/document?lawid=322AC0000000049" target="_blank" rel="noopener">労基法 23 条</a>で退職後の賃金・書類請求権が保証されています (請求 → 7 日以内に交付義務)。</p></div>
       </div>
+
+      <!-- ★666 LP 固有深化: 自力退職 5 step フロー詳細化 (book 形式・過去 6 path 全要素未使用) -->
+      <h3 style="margin-top:1.5em;color:#0c4a6e;">📝 自力退職 5 step フロー詳細 + 内容証明郵便活用ガイド (本 LP 独自整理)</h3>
+      <p>引き止めリスクが懸念される場合の<strong>自力退職プロセス詳細</strong>を、各 step ごとに法的根拠 + 書式 + 注意点で honest 整理しました。一般的なケースで「自力でも確実に退職できる」path を体系化します。</p>
+      <ol style="line-height:1.8;">
+        <li><strong>Step 1: 退職意思の固化 (検討期間 1-2 週間)</strong> — 退職理由 (一身上の都合 = 法的に追及義務なし)・退職希望日・有給消化計画・引継ぎ範囲を文書化。家族・パートナーへの相談 + 経済的準備 (3-6 ヶ月分の生活費) を整理。</li>
+        <li><strong>Step 2: 口頭表明 + 退職届書面提出</strong> — 直属上司に <strong>退職希望日の 2 週間以上前</strong> (民法 627 条) または就業規則上の予告期間 (1-3 ヶ月が一般的) で表明。退職届書式: 縦書き / 「退職届」表題 / 退職日 / 「一身上の都合」 / 署名押印 / 提出日 / 宛名 (代表取締役)。<strong>引き止めが想定される場合は内容証明郵便併用</strong> (郵便局窓口 + 配達証明オプション・¥1,500-2,000 程度) で<strong>退職意思表示の法的証拠</strong>を確保。</li>
+        <li><strong>Step 3: 引継ぎ書面作成 + 業務移管</strong> — 業務マニュアル / 取引先連絡先 / 進行案件一覧 / 注意点 を文書化 (Word/Excel/PDF いずれでも可)。<strong>労契法 16 条 解雇権濫用法理</strong>では会社側の解雇制限が定められていますが、本人退職の場合は<strong>引継ぎ範囲は合理的範囲 (民法 1 条信義誠実の原則)</strong> で十分。引き止め目的の<strong>過剰な引継ぎ要求は法的に強制力なし</strong> (拒絶可能)。</li>
+        <li><strong>Step 4: 有給消化 + 最終出勤調整</strong> — <strong>労基法 39 条</strong>で残有給取得は労働者の権利。会社の<strong>時季変更権 (39 条 5 項)</strong>は「事業の正常な運営を妨げる場合」のみ行使可で、退職前の有給消化はその制限に該当しないとされる傾向。会社拒否時は<strong>労基署 (全国 379 ヶ所)</strong> へ相談可。</li>
+        <li><strong>Step 5: 退職後書類受領 + 失業給付手続き</strong> — 退職翌日に <a href="https://elaws.e-gov.go.jp/document?lawid=322AC0000000049" target="_blank" rel="noopener">労基法 23 条</a>で「賃金 + 必要書類交付請求権」発生 (請求後 7 日以内交付義務)。離職票 (退職後 10-14 日以内・遅延時はハローワーク経由再請求可) を受領 → <a href="https://www.hellowork.mhlw.go.jp/" target="_blank" rel="noopener">ハローワーク</a> で失業給付申請 (離職前賃金 50-80% × 給付日数 90-360 日)。</li>
+      </ol>
+
+      <h3 style="margin-top:1.5em;color:#0c4a6e;">🚨 自力で困難な 5 ケーススタディ (PIO-NET + 公的相談実例ベース)</h3>
+      <p>国民生活センター PIO-NET + 厚労省総合労働相談 + 法テラス公開資料から、<strong>自力退職が困難で代行 (特に弁護士運営) が選択肢になる典型 5 ケース</strong>を整理しました。</p>
+      <div class="branch-grid">
+        <article class="branch"><span class="tag">ケース A</span><h4>パワハラ被害下での即日離脱要求</h4><p><strong>状況</strong>: 上司からの言動 + 過剰業務指示で精神的健康に影響 + 出勤継続困難。<strong>自力の困難</strong>: 対面表明の精神的負担極大 + 引き止めリスク。<strong>代行選択</strong>: 弁護士運営代行で即日意思伝達 + 安全配慮義務違反 (労契法 5 条) の損害賠償交渉並行可。<strong>並行相談</strong>: <a href="https://www.mhlw.go.jp/general/sosiki/chihou/" target="_blank" rel="noopener">労基署</a> + <a href="https://kokoro.mhlw.go.jp/" target="_blank" rel="noopener">こころの耳</a> + 厚労省総合労働相談 (379 ヶ所・無料)。</p></article>
+        <article class="branch"><span class="tag">ケース B</span><h4>退職拒否 + 損害賠償脅迫</h4><p><strong>状況</strong>: 会社から「退職するなら損害賠償請求する」「業務委託案件の途中放棄で違約金 ¥1,000 万」等の脅迫的言動。<strong>自力の困難</strong>: 法的根拠の妥当性判断困難 + 心理的圧迫。<strong>代行選択</strong>: 弁護士運営代行で<strong>民法 627 条退職権の法的擁護 + 損害賠償請求の妥当性検証 + 反論</strong>。<strong>典型実例 (法テラス公開)</strong>: 損害賠償脅迫の多くは法的根拠が薄く、適法な退職手続では会社側の賠償請求は通常認められない傾向。</p></article>
+        <article class="branch"><span class="tag">ケース C</span><h4>未払い賃金 + 残業代清算が必要</h4><p><strong>状況</strong>: 退職前に<strong>未払い残業代 ¥50 万-¥500 万</strong>が存在 + 賃金台帳開示拒否 + 時効 (3 年・労基法 115 条) 接近。<strong>自力の困難</strong>: 証拠収集 (タイムカード/業務日誌/PC ログ) + 法的請求書面作成 + 訴訟手続。<strong>代行選択</strong>: 弁護士運営代行で<strong>賃金台帳開示請求 → 未払額算定 → 訴訟代理</strong>まで一貫対応可 (民事訴訟法準拠)。</p></article>
+        <article class="branch"><span class="tag">ケース D</span><h4>業務委託契約解除 + 競業避止条項</h4><p><strong>状況</strong>: 業務委託契約の途中解除 (民法 651 条) + 競業避止条項 (退職後 1-2 年同業転職禁止) + 守秘義務違反の懸念。<strong>自力の困難</strong>: 契約条項の有効性判定 (消費者契約法 / 民法 90 条公序良俗) + 適法解除手続。<strong>代行選択</strong>: 弁護士運営代行で<strong>契約解除書面作成 + 競業避止条項の合理性判定 + 違反リスク評価</strong>。</p></article>
+        <article class="branch"><span class="tag">ケース E</span><h4>試用期間中の即時解雇撤回 + 退職切替</h4><p><strong>状況</strong>: 試用期間中に「明日から来なくていい」と即時解雇通告 → 解雇権濫用法理 (労契法 16 条) で違法可能性 + 不当解雇撤回 → 円満退職への切替交渉。<strong>自力の困難</strong>: 解雇通告の有効性判定 + 撤回交渉の論点整理。<strong>代行選択</strong>: 弁護士運営代行で<strong>解雇権濫用法理に基づく撤回交渉 + 円満退職への切替 + バックペイ (賃金遡及) 請求</strong>。<strong>判例参照</strong>: 最高裁昭和 50.4.25 判決 (日本食塩製造事件)。</p></article>
+      </div>
+      <p class="compare-note" style="font-size:0.88em;">⚠️ 上記 5 ケースは PIO-NET + 厚労省総合労働相談 + 法テラス公開資料の<strong>一般的整理</strong>です。個別事案の妥当性は弁護士・社労士にご確認ください。<strong>本記事は弁護士による法的助言ではありません</strong> (★365 honest 制限事項)。具体的相談は <a href="https://www.houterasu.or.jp/" target="_blank" rel="noopener">法テラス</a> (収入要件で無料法律相談可・0570-078374) または<a href="https://www.nichibenren.or.jp/" target="_blank" rel="noopener">日本弁護士連合会</a>の弁護士検索が活用可能です。</p>
     </div>
   </section>
 

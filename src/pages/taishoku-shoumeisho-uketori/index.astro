@@ -1,53 +1,53 @@
-﻿---
+---
 import RichLayout from '../../layouts/RichLayout.astro';
 import PRBadge from '../../components/PRBadge.astro';
 import BannerAB from '../../components/BannerAB.astro';
 
-const title = '騾閨ｷ險ｼ譏取嶌縺ｮ蜿怜叙譁ｹ豕包ｽ憺屬閨ｷ逾ｨ縺ｨ縺ｮ驕輔＞縺ｨ騾閨ｷ莉｣陦梧ｴｻ逕ｨ・・026蟷ｴ迚医・PR・・;
-const description = '騾閨ｷ險ｼ譏取嶌 (蜉ｴ蜒榊渕貅匁ｳ・2譚｡) 縺ｨ髮｢閨ｷ逾ｨ縺ｮ驕輔＞繝ｻ隲区ｱよ婿豕輔・騾閨ｷ莉｣陦後ｒ騾壹§縺溷女蜿匁婿豕輔ｒ謨ｴ逅・＠縺滓ュ蝣ｱ謠蝉ｾ幄ｨ倅ｺ九〒縺呻ｼ・R繝ｻ繧｢繝輔ぅ繝ｪ繧ｨ繧､繝亥ｺ・相繧貞性縺ｿ縺ｾ縺呻ｼ峨・;
+const title = '退職証明書の受取方法｜離職票との違いと退職代行活用（2026年版・PR）';
+const description = '退職証明書 (労働基準法22条) と離職票の違い・請求方法・退職代行を通じた受取方法を整理した情報提供記事です（PR・アフィリエイト広告を含みます）。';
 
 const breadcrumb = [
-  { name: '繝帙・繝', url: '/' },
-  { name: '騾閨ｷ險ｼ譏取嶌 蜿怜叙譁ｹ豕・ },
+  { name: 'ホーム', url: '/' },
+  { name: '退職証明書 受取方法' },
 ];
 
 const faq = [
-  { q: '騾閨ｷ險ｼ譏取嶌縺ｯ縲∽ｼ夂､ｾ縺ｫ隲区ｱゅ☆繧後・蠢・★逋ｺ陦後＠縺ｦ繧ゅｉ縺医∪縺吶°・・, a: '縺ｯ縺・∝感蜒榊渕貅匁ｳ慕ｬｬ22譚｡縺ｫ蝓ｺ縺･縺阪・閨ｷ閠・′隲区ｱゅ＠縺溷ｴ蜷医∽ｽｿ逕ｨ閠・・驕・ｻ槭↑縺丈ｺ､莉倥☆繧狗ｾｩ蜍吶′縺ゅｋ縺ｨ螳壹ａ繧峨ｌ縺ｦ縺・∪縺吶よｭ｣蠖薙↑逅・罰縺ｪ縺冗匱陦後ｒ諡貞凄縺吶ｋ縺薙→縺ｯ豕穂ｻ､驕募渚縺ｫ縺ゅ◆繧句庄閭ｽ諤ｧ縺後≠繧翫∪縺吶りｫ区ｱゅ・騾閨ｷ蠕後＞縺､縺ｧ繧ょ庄閭ｽ縺ｧ縺吶・ },
-  { q: '騾閨ｷ險ｼ譏取嶌繧帝Ψ騾√〒蜿励￠蜿悶ｋ蝣ｴ蜷医√←縺ｮ繧医≧縺ｪ謇矩・′蠢・ｦ√〒縺吶°・・, a: '縺ｾ縺壹・閨ｷ險ｼ譏取嶌縺ｮ逋ｺ陦後ｒ萓晞ｼ縺吶ｋ縲瑚ｫ区ｱよ嶌縲阪ｒ菴懈・縺励∪縺吶よｬ｡縺ｫ縲∬ｿ秘∫畑縺ｮ蛻・焔繧定ｲｼ莉倥＠縺溯ｿ比ｿ｡逕ｨ蟆∫ｭ偵ｒ蜷悟ｰ√＠縲∽ｼ夂､ｾ縺ｮ莠ｺ莠矩Κ縺ｪ縺ｩ諡・ｽ馴Κ鄂ｲ螳帙↓驛ｵ騾√☆繧九・縺御ｸ闊ｬ逧・〒縺吶りｫ区ｱよ嶌縺ｫ縺ｯ縲∵ｰ丞錐縲∝惠邀肴悄髢薙∝ｸ梧悍縺吶ｋ險倩ｼ我ｺ矩・ｒ譏手ｨ倥＠縺ｾ縺吶・ },
-  { q: '莨夂､ｾ縺碁閨ｷ險ｼ譏取嶌縺ｮ逋ｺ陦後ｒ諡貞凄縺励∪縺吶ゅ←縺薙↓逶ｸ隲・☆繧後・繧医＞縺ｧ縺吶°・・, a: '莨夂､ｾ縺梧ｭ｣蠖薙↑逅・罰縺ｪ縺冗匱陦後ｒ諡貞凄縺吶ｋ蝣ｴ蜷医∫ｮ｡霓・・蜉ｴ蜒榊渕貅也屮逹｣鄂ｲ縺ｫ逶ｸ隲・☆繧九％縺ｨ縺悟庄閭ｽ縺ｧ縺吶ょｰる摩縺ｮ逶ｸ隲・藤縺梧ｳ穂ｻ､縺ｫ蝓ｺ縺･縺阪∽ｼ夂､ｾ縺ｸ縺ｮ蜉ｩ險繧・欠蟆弱ｒ陦後▲縺ｦ縺上ｌ繧句ｴ蜷医′縺ゅｊ縺ｾ縺吶ゅ∪縺溘・閨ｷ莉｣陦後し繝ｼ繝薙せ縺ｫ譖ｸ鬘櫁ｫ区ｱゅ・莉｣陦後ｒ萓晞ｼ縺吶ｋ譁ｹ豕輔ｂ閠・∴繧峨ｌ縺ｾ縺吶・ },
-  { q: '騾閨ｷ莉｣陦後し繝ｼ繝薙せ縺ｧ騾閨ｷ險ｼ譏取嶌繧貞女縺大叙繧矩圀縺ｮ豕ｨ諢冗せ縺ｯ縺ゅｊ縺ｾ縺吶°・・, a: '騾閨ｷ莉｣陦後し繝ｼ繝薙せ繧貞茜逕ｨ縺吶ｋ髫帙・縲∵怙蛻昴・逶ｸ隲・ｮｵ髫弱〒縲碁閨ｷ險ｼ譏取嶌縺悟ｿ・ｦ√〒縺ゅｋ縺薙→縲阪→縲瑚ｨ倩ｼ峨＠縺ｦ縺ｻ縺励＞鬆・岼縲阪ｒ譏守｢ｺ縺ｫ莨昴∴繧九％縺ｨ縺碁㍾隕√〒縺吶ゅ∪縺溘∵嶌鬘槭・隲区ｱゅ′蝓ｺ譛ｬ繧ｵ繝ｼ繝薙せ縺ｫ蜷ｫ縺ｾ繧後ｋ縺九∬ｿｽ蜉譁咎≡縺檎匱逕溘＠縺ｪ縺・°繧剃ｺ句燕縺ｫ遒ｺ隱阪☆繧九％縺ｨ繧偵♀蜍ｧ繧√＠縺ｾ縺吶・ },
-  { q: '騾閨ｷ險ｼ譏取嶌縺ｨ髮｢閨ｷ逾ｨ縺ｮ蜿励￠蜿悶ｊ譁ｹ縺ｧ縲∽ｸ逡ｪ螟ｧ縺阪↑驕輔＞縺ｯ菴輔〒縺吶°・・, a: '荳逡ｪ縺ｮ驕輔＞縺ｯ隲区ｱょ・縺ｧ縺吶る閨ｷ險ｼ譏取嶌縺ｯ騾閨ｷ縺励◆莨夂､ｾ縺ｫ逶ｴ謗･隲区ｱゅ＠縺ｦ蜿励￠蜿悶ｊ縺ｾ縺吶ゆｸ譁ｹ縲・屬閨ｷ逾ｨ縺ｯ莨夂､ｾ縺後ワ繝ｭ繝ｼ繝ｯ繝ｼ繧ｯ・亥・蜈ｱ閨ｷ讌ｭ螳牙ｮ壽園・峨〒謇狗ｶ壹″繧定｡後＞縲√◎縺ｮ蠕後ワ繝ｭ繝ｼ繝ｯ繝ｼ繧ｯ縺九ｉ莠､莉倥＆繧後ｋ譖ｸ鬘槭〒縺ゅｊ縲∽ｸｻ縺ｫ螟ｱ讌ｭ菫晞匱縺ｮ蜿礼ｵｦ謇狗ｶ壹″縺ｫ逕ｨ縺・∪縺吶・ },
+  { q: '退職証明書は、会社に請求すれば必ず発行してもらえますか？', a: 'はい、労働基準法第22条に基づき、退職者が請求した場合、使用者は遅滞なく交付する義務があると定められています。正当な理由なく発行を拒否することは法令違反にあたる可能性があります。請求は退職後いつでも可能です。' },
+  { q: '退職証明書を郵送で受け取る場合、どのような手順が必要ですか？', a: 'まず、退職証明書の発行を依頼する「請求書」を作成します。次に、返送用の切手を貼付した返信用封筒を同封し、会社の人事部など担当部署宛に郵送するのが一般的です。請求書には、氏名、在籍期間、希望する記載事項を明記します。' },
+  { q: '会社が退職証明書の発行を拒否します。どこに相談すればよいですか？', a: '会社が正当な理由なく発行を拒否する場合、管轄の労働基準監督署に相談することが可能です。専門の相談員が法令に基づき、会社への助言や指導を行ってくれる場合があります。また、退職代行サービスに書類請求の代行を依頼する方法も考えられます。' },
+  { q: '退職代行サービスで退職証明書を受け取る際の注意点はありますか？', a: '退職代行サービスを利用する際は、最初の相談段階で「退職証明書が必要であること」と「記載してほしい項目」を明確に伝えることが重要です。また、書類の請求が基本サービスに含まれるか、追加料金が発生しないかを事前に確認することをお勧めします。' },
+  { q: '退職証明書と離職票の受け取り方で、一番大きな違いは何ですか？', a: '一番の違いは請求先です。退職証明書は退職した会社に直接請求して受け取ります。一方、離職票は会社がハローワーク（公共職業安定所）で手続きを行い、その後ハローワークから交付される書類であり、主に失業保険の受給手続きに用います。' },
 ];
 ---
 
-<RichLayout title={title} description={description} publishedDate="2026-05-24" breadcrumb={breadcrumb} faq={faq}>
+<RichLayout title={title} description={description} publishedDate="2026-05-24" modifiedDate="2026-05-24" breadcrumb={breadcrumb} faq={faq}>
 <!-- PERSPECTIVE_LEAD_BOX_START -->
 <aside class="perspective-lead" style="background:#f8fafc;border-left:4px solid #0ea5e9;padding:16px 20px;margin:24px 0;border-radius:6px;">
   <div style="display:flex;align-items:center;gap:8px;margin-bottom:8px;">
-    <span style="font-size:1.4em;">剥</span>
-    <strong style="color:#0c4a6e;">縺薙・ LP 縺ｮ迢ｬ遶倶ｾ｡蛟､</strong>
+    <span style="font-size:1.4em;">🔍</span>
+    <strong style="color:#0c4a6e;">この LP の独立価値</strong>
   </div>
-  <p style="margin:4px 0;font-size:0.95em;color:#0f172a;"><strong>隕也せ (Perspective):</strong> 蛻､譁ｭ繝ｻ險ｺ譁ｭ</p>
-  <p style="margin:4px 0;font-size:0.95em;color:#0f172a;"><strong>迢ｬ閾ｪ angle:</strong> taishoku shoumeisho uketori 縺ｫ辟ｦ轤ｹ繧貞ｽ薙※縺・蛻､譁ｭ繝ｻ險ｺ譁ｭ 隕也せ縺ｮ迢ｬ閾ｪ隗｣隱ｬ</p>
-  <p style="margin:4px 0;font-size:0.9em;color:#475569;"><strong>莉・LP 縺ｨ縺ｮ驕輔＞:</strong> 莉・LP 縺御ｸ闊ｬ逧・↓ 蛻､譁ｭ繝ｻ險ｺ譁ｭ 蜈ｨ菴薙ｒ謇ｱ縺・・縺ｫ蟇ｾ縺励∵悽 LP 縺ｯ taishoku-shoumeisho-uketori 縺ｫ邨槭ｊ霎ｼ繧</p>
+  <p style="margin:4px 0;font-size:0.95em;color:#0f172a;"><strong>視点 (Perspective):</strong> 判断・診断</p>
+  <p style="margin:4px 0;font-size:0.95em;color:#0f172a;"><strong>独自 angle:</strong> taishoku shoumeisho uketori に焦点を当てた 判断・診断 視点の独自解説</p>
+  <p style="margin:4px 0;font-size:0.9em;color:#475569;"><strong>他 LP との違い:</strong> 他 LP が一般的に 判断・診断 全体を扱うのに対し、本 LP は taishoku-shoumeisho-uketori に絞り込む</p>
 </aside>
 <!-- PERSPECTIVE_LEAD_BOX_END -->
 
   <section class="fv" aria-labelledby="fv-h1">
     <div class="container">
-      <span class="fv-pill">騾閨ｷ險ｼ譏取嶌 / 蜿怜叙繧ｬ繧､繝・/span>
-      <h1 id="fv-h1">騾閨ｷ險ｼ譏取嶌縺ｮ<span class="accent">蜿怜叙譁ｹ豕・/span><br />髮｢閨ｷ逾ｨ縺ｨ縺ｮ驕輔＞縺ｨ騾閨ｷ莉｣陦梧ｴｻ逕ｨ</h1>
-      <p class="lede">騾閨ｷ險ｼ譏取嶌 (蜉ｴ蜒榊渕貅匁ｳ・22 譚｡) 縺ｯ霆｢閨ｷ蜈医∈縺ｮ謠仙・遲峨〒蠢・ｦ√→縺ｪ繧句ｴ蜷医′縺ゅｋ譖ｸ鬘槭〒縺吶・strong>髮｢閨ｷ逾ｨ縺ｨ縺ｮ驕輔＞繝ｻ隲区ｱよ婿豕輔・騾閨ｷ莉｣陦後ｒ騾壹§縺溷女蜿・/strong> 繧貞・髢区ュ蝣ｱ繧偵ｂ縺ｨ縺ｫ謨ｴ逅・・/p>
+      <span class="fv-pill">退職証明書 / 受取ガイド</span>
+      <h1 id="fv-h1">退職証明書の<span class="accent">受取方法</span><br />離職票との違いと退職代行活用</h1>
+      <p class="lede">退職証明書 (労働基準法 22 条) は転職先への提出等で必要となる場合がある書類です。<strong>離職票との違い・請求方法・退職代行を通じた受取</strong> を公開情報をもとに整理。</p>
       <ul class="fv-bullets">
-        <li>騾閨ｷ險ｼ譏取嶌縺ｨ髮｢閨ｷ逾ｨ縺ｮ 4 縺､縺ｮ驕輔＞</li>
-        <li>蜉ｴ蝓ｺ豕・22 譚｡縺ｮ險倩ｼ我ｺ矩・/li>
-        <li>隲区ｱよ婿豕・3 繝代ち繝ｼ繝ｳ</li>
-        <li>騾閨ｷ莉｣陦檎ｵ檎罰縺ｮ蜿門ｾ玲焔鬆・/li>
+        <li>退職証明書と離職票の 4 つの違い</li>
+        <li>労基法 22 条の記載事項</li>
+        <li>請求方法 3 パターン</li>
+        <li>退職代行経由の取得手順</li>
       </ul>
       <PRBadge pageSlug="taishoku-shoumeisho-uketori" />
       <div class="fv-meta">
-        <span><b>蜈ｬ髢区律</b> 2026-05-24</span><span><b>譛邨よ峩譁ｰ</b> 2026-05-24</span>
-        <span><b>邱ｨ髮・/b> NY-squared 邱ｨ髮・Κ</span><span><b>謇隕・/b> 邏・6 蛻・/span>
+        <span><b>公開日</b> 2026-05-24</span><span><b>最終更新</b> 2026-05-24</span>
+        <span><b>編集</b> NY-squared 編集部</span><span><b>所要</b> 約 6 分</span>
       </div>
     </div>
   </section>
@@ -55,20 +55,20 @@ const faq = [
   <section class="lp-section" id="sec-1" aria-labelledby="h2-1">
     <div class="container">
       <p class="section-num">SECTION / 01</p>
-      <h2 id="h2-1">騾閨ｷ險ｼ譏取嶌縺ｨ髮｢閨ｷ逾ｨ縺ｮ 4 縺､縺ｮ驕輔＞</h2>
+      <h2 id="h2-1">退職証明書と離職票の 4 つの違い</h2>
       <div class="compare-wrap">
         <table class="compare">
-          <thead><tr><th>鬆・岼</th><th>騾閨ｷ險ｼ譏取嶌</th><th>髮｢閨ｷ逾ｨ</th></tr></thead>
+          <thead><tr><th>項目</th><th>退職証明書</th><th>離職票</th></tr></thead>
           <tbody>
-            <tr><td>譬ｹ諡豕・/td><td>蜉ｴ蜒榊渕貅匁ｳ・22 譚｡</td><td>髮・畑菫晞匱豕・/td></tr>
-            <tr><td>逋ｺ陦御ｸｻ菴・/td><td>莨夂､ｾ (逶ｴ謗･)</td><td>繝上Ο繝ｼ繝ｯ繝ｼ繧ｯ邨檎罰莨夂､ｾ</td></tr>
-            <tr><td>荳ｻ逕ｨ騾・/td><td>霆｢閨ｷ蜈域署蜃ｺ繝ｻ蝗ｽ豌大▼蠎ｷ菫晞匱蛻・崛</td><td>螟ｱ讌ｭ菫晞匱逕ｳ隲・/td></tr>
-            <tr><td>逋ｺ陦梧凾譛・/td><td>騾閨ｷ閠・ｫ区ｱよ凾 (譎よ悄蝠上ｏ縺・</td><td>騾閨ｷ蠕・10-14 譌･縺御ｸ闊ｬ逧・/td></tr>
-            <tr><td>險倩ｼ我ｺ矩・/td><td>菴ｿ逕ｨ譛滄俣/讌ｭ蜍・閨ｷ菴・雉・≡/騾閨ｷ逅・罰</td><td>雉・≡謾ｯ謇慕憾豕・髮｢閨ｷ逅・罰遲・/td></tr>
+            <tr><td>根拠法</td><td>労働基準法 22 条</td><td>雇用保険法</td></tr>
+            <tr><td>発行主体</td><td>会社 (直接)</td><td>ハローワーク経由会社</td></tr>
+            <tr><td>主用途</td><td>転職先提出・国民健康保険切替</td><td>失業保険申請</td></tr>
+            <tr><td>発行時期</td><td>退職者請求時 (時期問わず)</td><td>退職後 10-14 日が一般的</td></tr>
+            <tr><td>記載事項</td><td>使用期間/業務/職位/賃金/退職理由</td><td>賃金支払状況/離職理由等</td></tr>
           </tbody>
         </table>
       </div>
-      <p class="compare-note">窶ｻ 蜈ｬ髢区ュ蝣ｱ縺ｮ荳闊ｬ蛯ｾ蜷代りｩｳ邏ｰ縺ｯ繝上Ο繝ｼ繝ｯ繝ｼ繧ｯ繝ｻ蜉ｴ蜒榊渕貅也屮逹｣鄂ｲ縺ｧ遒ｺ隱肴耳螂ｨ縲・/p>
+      <p class="compare-note">※ 公開情報の一般傾向。詳細はハローワーク・労働基準監督署で確認推奨。</p>
       <BannerAB pageSlug="taishoku-shoumeisho-uketori" position="hero" />
     </div>
   </section>
@@ -76,90 +76,90 @@ const faq = [
   <section class="lp-section alt" id="sec-2" aria-labelledby="h2-2">
     <div class="container">
       <p class="section-num">SECTION / 02</p>
-      <h2 id="h2-2">蜉ｴ蝓ｺ豕・22 譚｡縺ｮ險倩ｼ我ｺ矩・/h2>
+      <h2 id="h2-2">労基法 22 条の記載事項</h2>
       <div class="counter-box">
-        <h3>東 騾閨ｷ閠・′隲区ｱゅ〒縺阪ｋ險倩ｼ我ｺ矩・(蜉ｴ蝓ｺ豕・22 譚｡)</h3>
-        <div class="row"><b>2-1. 菴ｿ逕ｨ譛滄俣</b><span>蜈･遉ｾ譌･縲憺閨ｷ譌･縺ｮ髮・畑譛滄俣縲・/span></div>
-        <div class="row"><b>2-2. 讌ｭ蜍吶・遞ｮ鬘・/b><span>諡・ｽ捺･ｭ蜍吶・閨ｷ遞ｮ縺ｮ險倩ｼ峨・/span></div>
-        <div class="row"><b>2-3. 縺昴・莠区･ｭ縺ｫ縺翫￠繧句慍菴・/b><span>蠖ｹ閨ｷ繝ｻ閨ｷ菴阪・險倩ｼ峨・/span></div>
-        <div class="row"><b>2-4. 雉・≡</b><span>邨ｦ荳朱｡阪・險倩ｼ峨・/span></div>
-        <div class="row"><b>2-5. 騾閨ｷ縺ｮ莠狗罰 (逅・罰蜷ｫ繧)</b><span>騾閨ｷ莠狗罰 (閾ｪ蟾ｱ驛ｽ蜷・莨夂､ｾ驛ｽ蜷・ 繝ｻ隗｣髮・・蝣ｴ蜷医・縺昴・逅・罰縲・/span></div>
-        <div class="row"><b>2-6. 驕ｸ謚櫁ｫ区ｱょ庄</b><span>蜉ｴ蜒崎・′隲区ｱゅ＠縺ｪ縺・ｺ矩・・險倩ｼ峨＆繧後↑縺・(蜉ｴ蝓ｺ豕・22 譚｡ 3 鬆・縲・/span></div>
+        <h3>📌 退職者が請求できる記載事項 (労基法 22 条)</h3>
+        <div class="row"><b>2-1. 使用期間</b><span>入社日〜退職日の雇用期間。</span></div>
+        <div class="row"><b>2-2. 業務の種類</b><span>担当業務・職種の記載。</span></div>
+        <div class="row"><b>2-3. その事業における地位</b><span>役職・職位の記載。</span></div>
+        <div class="row"><b>2-4. 賃金</b><span>給与額の記載。</span></div>
+        <div class="row"><b>2-5. 退職の事由 (理由含む)</b><span>退職事由 (自己都合/会社都合) ・解雇の場合はその理由。</span></div>
+        <div class="row"><b>2-6. 選択請求可</b><span>労働者が請求しない事項は記載されない (労基法 22 条 3 項)。</span></div>
       </div>
     </div>
   </section>
 
-  <section class="lp-section"><h2>騾閨ｷ險ｼ譏取嶌縺ｮ蜿怜叙譁ｹ豕輔・蝓ｺ譛ｬ縺ｨ豕慕噪譬ｹ諡</h2><p>騾閨ｷ險ｼ譏取嶌縺ｨ縺ｯ縲∝感蜒崎・′縺昴・莨夂､ｾ縺ｫ蝨ｨ邀阪＠縺ｦ縺・◆莠句ｮ溘ｒ險ｼ譏弱☆繧九◆繧√・遘∵枚譖ｸ縺ｧ縺吶・br>荳ｻ縺ｫ縲∬ｻ｢閨ｷ蜈医・莨∵･ｭ縺九ｉ謠仙・繧呈ｱゅａ繧峨ｌ縺溘ｊ縲∝嵜豌大▼蠎ｷ菫晞匱繧・嵜豌大ｹｴ驥代・蜉蜈･謇狗ｶ壹″縺ｧ菴ｿ逕ｨ縺輔ｌ縺溘ｊ縺励∪縺吶・br>縺薙・險ｼ譏取嶌縺ｮ逋ｺ陦後↓縺､縺・※縺ｯ縲∝感蜒榊渕貅匁ｳ慕ｬｬ22譚｡隨ｬ1鬆・〒縲悟感蜒崎・′縲・閨ｷ縺ｮ蝣ｴ蜷医↓縺翫＞縺ｦ縲∽ｽｿ逕ｨ譛滄俣縲∵･ｭ蜍吶・遞ｮ鬘槭√◎縺ｮ莠区･ｭ縺ｫ縺翫￠繧句慍菴阪∬ｳ・≡蜿医・騾閨ｷ縺ｮ莠狗罰・磯閨ｷ縺ｮ莠狗罰縺瑚ｧ｣髮・・蝣ｴ蜷医↓縺ゅ▽縺ｦ縺ｯ縲√◎縺ｮ逅・罰繧貞性繧縲・br>・峨↓縺､縺・※險ｼ譏取嶌繧定ｫ区ｱゅ＠縺溷ｴ蜷医↓縺翫＞縺ｦ縺ｯ縲∽ｽｿ逕ｨ閠・・縲・≦貊槭↑縺上％繧後ｒ莠､莉倥＠縺ｪ縺代ｌ縺ｰ縺ｪ繧峨↑縺・・br>縲阪→螳壹ａ繧峨ｌ縺ｦ縺・∪縺吶・br>縺､縺ｾ繧翫・閨ｷ閠・°繧峨・隲区ｱゅ′縺ゅｌ縺ｰ縲∽ｼ∵･ｭ蛛ｴ縺ｫ縺ｯ逋ｺ陦檎ｾｩ蜍吶′縺ゅｋ縺ｨ隗｣驥医＆繧後∪縺吶・br>蜿励￠蜿悶ｊ譁ｹ豕輔・縲∫峩謗･莨夂､ｾ縺ｫ蜃ｺ蜷代￥縲・Ψ騾√ｒ萓晞ｼ縺吶ｋ縲√∪縺溘・蠑∬ｭｷ螢ｫ繧・感蜒咲ｵ・粋縺碁°蝟ｶ縺吶ｋ騾閨ｷ莉｣陦後し繝ｼ繝薙せ縺ｪ縺ｩ縺ｮ莉｣逅・ｺｺ繧帝壹§縺ｦ隲区ｱゅ☆繧九→縺・▲縺滓婿豕輔′荳闊ｬ縺ｫ閠・∴繧峨ｌ縺ｾ縺吶・/p></section>
+  <section class="lp-section"><h2>退職証明書の受取方法の基本と法的根拠</h2><p>退職証明書とは、労働者がその会社に在籍していた事実を証明するための私文書です。<br>主に、転職先の企業から提出を求められたり、国民健康保険や国民年金の加入手続きで使用されたりします。<br>この証明書の発行については、労働基準法第22条第1項で「労働者が、退職の場合において、使用期間、業務の種類、その事業における地位、賃金又は退職の事由（退職の事由が解雇の場合にあつては、その理由を含む。<br>）について証明書を請求した場合においては、使用者は、遅滞なくこれを交付しなければならない。<br>」と定められています。<br>つまり、退職者からの請求があれば、企業側には発行義務があると解釈されます。<br>受け取り方法は、直接会社に出向く、郵送を依頼する、または弁護士や労働組合が運営する退職代行サービスなどの代理人を通じて請求するといった方法が一般に考えられます。</p></section>
 
   <section class="lp-section alt" id="sec-4" aria-labelledby="h2-4">
     <div class="container">
       <p class="section-num">SECTION / 04</p>
-      <h2 id="h2-4">騾閨ｷ莉｣陦檎ｵ檎罰縺ｮ蜿門ｾ玲焔鬆・/h2>
+      <h2 id="h2-4">退職代行経由の取得手順</h2>
       <div class="counter-box">
-        <h3>東 騾閨ｷ莉｣陦後ｒ騾壹§縺滄閨ｷ險ｼ譏取嶌蜿門ｾ・/h3>
-        <div class="row"><b>4-1. 諡・ｽ楢・∈萓晞ｼ</b><span>騾閨ｷ莉｣陦後・謇灘粋縺帶凾縺ｫ縲碁閨ｷ險ｼ譏取嶌繧りｫ区ｱゅ＠縺ｦ縺ｻ縺励＞縲阪→萓晞ｼ縲・/span></div>
-        <div class="row"><b>4-2. 讌ｭ閠・′莨夂､ｾ縺ｸ隲区ｱ・/b><span>讌ｭ閠・′騾閨ｷ騾夂衍縺ｨ蜷梧凾縺ｫ騾閨ｷ險ｼ譏取嶌莠､莉倩ｫ区ｱゅｒ莨晞＃縲・/span></div>
-        <div class="row"><b>4-3. 險倩ｼ我ｺ矩・・謖・ｮ・/b><span>霆｢閨ｷ蜈域署蜃ｺ逕ｨ縺ｪ繧蛾閨ｷ莠狗罰繝ｻ閨ｷ菴咲ｭ峨・險倩ｼ画欠螳壹・/span></div>
-        <div class="row"><b>4-4. 驛ｵ騾∝女蜿・/b><span>莨夂､ｾ縺九ｉ譛ｬ莠ｺ螳・(or 莉｣陦梧･ｭ閠・ｵ檎罰) 縺ｧ驛ｵ騾・∽ｻ倥・/span></div>
-        <div class="row"><b>4-5. 蜿鈴倡｢ｺ隱・/b><span>險倩ｼ牙・螳ｹ縺ｮ遒ｺ隱阪・隱､險倥≠繧後・蜀崎ｫ区ｱゆｾ晞ｼ縲・/span></div>
+        <h3>📌 退職代行を通じた退職証明書取得</h3>
+        <div class="row"><b>4-1. 担当者へ依頼</b><span>退職代行の打合せ時に「退職証明書も請求してほしい」と依頼。</span></div>
+        <div class="row"><b>4-2. 業者が会社へ請求</b><span>業者が退職通知と同時に退職証明書交付請求を伝達。</span></div>
+        <div class="row"><b>4-3. 記載事項の指定</b><span>転職先提出用なら退職事由・職位等の記載指定。</span></div>
+        <div class="row"><b>4-4. 郵送受取</b><span>会社から本人宛 (or 代行業者経由) で郵送送付。</span></div>
+        <div class="row"><b>4-5. 受領確認</b><span>記載内容の確認・誤記あれば再請求依頼。</span></div>
       </div>
     </div>
   </section>
 
-  <section class="lp-section"><h2>騾閨ｷ莉｣陦後ｒ豢ｻ逕ｨ縺励◆騾閨ｷ險ｼ譏取嶌縺ｮ蜈ｷ菴鍋噪縺ｪ蜿怜叙謇矩・/h2><p>蠢・ｺｫ縺ｮ荳崎ｪｿ繧・ｼ夂､ｾ縺ｨ縺ｮ髢｢菫よｧ縺九ｉ縲∬・霄ｫ縺ｧ騾閨ｷ險ｼ譏取嶌繧定ｫ区ｱゅ☆繧九％縺ｨ縺ｫ蝗ｰ髮｣繧呈─縺倥ｋ蝣ｴ蜷医・閨ｷ莉｣陦後し繝ｼ繝薙せ縺ｮ蛻ｩ逕ｨ縺梧怏蜉ｹ縺ｪ驕ｸ謚櫁い縺ｨ縺ｪ繧雁ｾ励∪縺吶・br>蜈ｬ髢区ュ蝣ｱ繧偵ｂ縺ｨ縺ｫ縲∽ｸ闊ｬ逧・↑謇矩・ｒ莉･荳九↓謨ｴ逅・＠縺ｾ縺吶・br>縺ｾ縺壹∝ｼ∬ｭｷ螢ｫ縺ｾ縺溘・蜉ｴ蜒咲ｵ・粋縺碁°蝟ｶ縺吶ｋ菫｡鬆ｼ諤ｧ縺ｮ鬮倥＞騾閨ｷ莉｣陦後し繝ｼ繝薙せ繧帝∈螳壹＠縺ｾ縺吶・br>蝗ｽ豌醍函豢ｻ繧ｻ繝ｳ繧ｿ繝ｼ繧ゅ・閨ｷ莉｣陦後↓髢｢縺吶ｋ逶ｸ隲・ｺ倶ｾ九ｒ蜈ｬ髢九＠縺ｦ縺翫ｊ縲∵･ｭ閠・∈螳壹・蜿り・→縺吶ｋ縺薙→縺梧耳螂ｨ縺輔ｌ縺ｾ縺吶・br>谺｡縺ｫ縲∫┌譁咏嶌隲・↑縺ｩ繧貞茜逕ｨ縺励※縲・閨ｷ縺ｮ諢乗昴→蜈ｱ縺ｫ縲碁閨ｷ險ｼ譏取嶌縲阪・蜿門ｾ怜ｸ梧悍繧呈・遒ｺ縺ｫ莨昴∴縺ｾ縺吶・br>縺昴・髫帙∬ｨｼ譏取嶌縺ｫ蠢・ｦ√↑險倩ｼ蛾・岼・井ｾ具ｼ壼惠邀肴悄髢薙∵･ｭ蜍吝・螳ｹ縲∝ｽｹ閨ｷ縺ｪ縺ｩ・峨ｂ蜈ｷ菴鍋噪縺ｫ謖・ｮ壹☆繧九％縺ｨ縺碁㍾隕√〒縺吶・br>萓晞ｼ蠕後・縲∽ｻ｣陦梧･ｭ閠・′譛ｬ莠ｺ縺ｫ莉｣繧上▲縺ｦ莨夂､ｾ縺ｮ莠ｺ莠区球蠖楢・→騾｣邨｡繧貞叙繧翫・閨ｷ謇狗ｶ壹″縺ｨ荳ｦ陦後＠縺ｦ譖ｸ鬘槭・逋ｺ陦後ｒ隲区ｱゅ＠縺ｾ縺吶・br>騾壼ｸｸ縲∫匱陦後＆繧後◆騾閨ｷ險ｼ譏取嶌縺ｯ縲∽ｼ夂､ｾ縺九ｉ逶ｴ謗･譛ｬ莠ｺ縺ｮ閾ｪ螳・ｽ乗園縺ｸ驛ｵ騾√＆繧後ｋ豬√ｌ縺ｨ縺ｪ繧翫∪縺吶・/p><ul><li>謇矩・: 菫｡鬆ｼ縺ｧ縺阪ｋ騾閨ｷ莉｣陦後し繝ｼ繝薙せ・亥ｼ∬ｭｷ螢ｫ繝ｻ蜉ｴ蜒咲ｵ・粋驕句霧遲会ｼ峨ｒ驕ｸ螳壹☆繧・/li><li>謇矩・: 逶ｸ隲・凾縺ｫ縲碁閨ｷ險ｼ譏取嶌縲阪・蜿門ｾ怜ｸ梧悍縺ｨ險倩ｼ蛾・岼繧呈・遒ｺ縺ｫ莨昴∴繧・/li><li>謇矩・: 萓晞ｼ蠕後∽ｻ｣陦梧･ｭ閠・′莨夂､ｾ縺ｸ縺ｮ騾｣邨｡繝ｻ譖ｸ鬘櫁ｫ区ｱゅｒ縺吶∋縺ｦ莉｣陦後☆繧・/li></ul><div class="benefit-summary" style="background:#f5f5dc;padding:1rem;border-left:4px solid #d4a373;margin:1rem 0;"><strong>庁 縺薙・繧ｵ繝ｼ繝薙せ繧呈､懆ｨ弱☆繧九Γ繝ｪ繝・ヨ (笘・44 竭｡):</strong><ul><li>莨夂､ｾ縺ｨ逶ｴ謗･騾｣邨｡繧貞叙繧狗ｲｾ逾樒噪雋諡・ｄ譎る俣逧・さ繧ｹ繝医ｒ霆ｽ貂帙〒縺阪ｋ蜿ｯ閭ｽ諤ｧ縺梧悄蠕・＆繧後∪縺吶・/li><li>蟆る摩螳ｶ縺悟感蜒榊渕貅匁ｳ慕ｭ峨・豕穂ｻ､遏･隴倥ｒ閭梧勹縺ｫ隲区ｱゅ☆繧九◆繧√∝倶ｺｺ縺ｧ萓晞ｼ縺吶ｋ繧医ｊ繧ょ・貊代↑譖ｸ鬘槫女鬆倥′隕玖ｾｼ縺ｾ繧後∪縺吶・/li><li>蠢・ｦ√↑險倩ｼ我ｺ矩・ｒ貍上ｌ縺ｪ縺丈ｼ昴∴縺ｦ繧ゅｉ縺・％縺ｨ縺ｧ縲∬ｻ｢閨ｷ繧・・逧・焔邯壹″縺ｧ荳榊ｙ縺ｮ縺ｪ縺・ｨｼ譏取嶌繧貞女縺大叙繧後ｋ螳牙ｿ・─縺悟ｾ励ｉ繧後∪縺吶・/li></ul></div></section>
+  <section class="lp-section"><h2>退職代行を活用した退職証明書の具体的な受取手順</h2><p>心身の不調や会社との関係性から、自身で退職証明書を請求することに困難を感じる場合、退職代行サービスの利用が有効な選択肢となり得ます。<br>公開情報をもとに、一般的な手順を以下に整理します。<br>まず、弁護士または労働組合が運営する信頼性の高い退職代行サービスを選定します。<br>国民生活センターも、退職代行に関する相談事例を公開しており、業者選定の参考とすることが推奨されます。<br>次に、無料相談などを利用して、退職の意思と共に「退職証明書」の取得希望を明確に伝えます。<br>その際、証明書に必要な記載項目（例：在籍期間、業務内容、役職など）も具体的に指定することが重要です。<br>依頼後は、代行業者が本人に代わって会社の人事担当者と連絡を取り、退職手続きと並行して書類の発行を請求します。<br>通常、発行された退職証明書は、会社から直接本人の自宅住所へ郵送される流れとなります。</p><ul><li>手順1: 信頼できる退職代行サービス（弁護士・労働組合運営等）を選定する</li><li>手順2: 相談時に「退職証明書」の取得希望と記載項目を明確に伝える</li><li>手順3: 依頼後、代行業者が会社への連絡・書類請求をすべて代行する</li></ul><div class="benefit-summary" style="background:#f5f5dc;padding:1rem;border-left:4px solid #d4a373;margin:1rem 0;"><strong>💡 このサービスを検討するメリット (★544 ②):</strong><ul><li>会社と直接連絡を取る精神的負担や時間的コストを軽減できる可能性が期待されます。</li><li>専門家が労働基準法等の法令知識を背景に請求するため、個人で依頼するよりも円滑な書類受領が見込まれます。</li><li>必要な記載事項を漏れなく伝えてもらうことで、転職や公的手続きで不備のない証明書を受け取れる安心感が得られます。</li></ul></div></section>
 
   <section class="lp-section alt" id="sec-6" aria-labelledby="h2-6">
     <div class="container">
       <p class="section-num">SECTION / 06</p>
-      <h2 id="h2-6">縺ｾ縺ｨ繧√・髢｢騾｣繧ｬ繧､繝・/h2>
-      <p>騾閨ｷ險ｼ譏取嶌縺ｮ蜿怜叙縺ｯ <strong>蜉ｴ蝓ｺ豕・22 譚｡縺ｮ讓ｩ蛻ｩ</strong> + 髮｢閨ｷ逾ｨ縺ｨ縺ｮ 4 縺､縺ｮ驕輔＞逅・ｧ｣ + 隲区ｱよ婿豕・3 繝代ち繝ｼ繝ｳ縺御ｸ闊ｬ逧・→縺輔ｌ縺ｾ縺吶る閨ｷ莉｣陦檎ｵ檎罰縺ｮ蜿門ｾ励ｂ蜿ｯ閭ｽ縺ｨ縺輔ｌ縺ｦ縺・∪縺吶りｩｳ邏ｰ縺ｯ蜉ｴ蜒榊渕貅也屮逹｣鄂ｲ繝ｻ繝上Ο繝ｼ繝ｯ繝ｼ繧ｯ縺ｮ蜈ｬ逧・ｪ灘哨繧貞盾辣ｧ縺励※縺上□縺輔＞縲・/p>
+      <h2 id="h2-6">まとめ・関連ガイド</h2>
+      <p>退職証明書の受取は <strong>労基法 22 条の権利</strong> + 離職票との 4 つの違い理解 + 請求方法 3 パターンが一般的とされます。退職代行経由の取得も可能とされています。詳細は労働基準監督署・ハローワークの公的窓口を参照してください。</p>
       <BannerAB pageSlug="taishoku-shoumeisho-uketori" position="footer" />
-      <p class="compare-note">髢｢騾｣: <a href="/taishoku-daikou-nagare/">7繧ｹ繝・ャ繝励・豬√ｌ</a> / <a href="/taishokukin-uketori/">騾閨ｷ驥大女蜿・/a> / <a href="/unemployment-insurance/">螟ｱ讌ｭ菫晞匱</a> / <a href="/taishoku-go-tenshoku/">騾閨ｷ蠕後・霆｢閨ｷ</a></p>
+      <p class="compare-note">関連: <a href="/taishoku-daikou-nagare/">7ステップの流れ</a> / <a href="/taishokukin-uketori/">退職金受取</a> / <a href="/unemployment-insurance/">失業保険</a> / <a href="/taishoku-go-tenshoku/">退職後の転職</a></p>
     </div>
   </section>
 
   <section class="lp-section alt" id="sec-asp-pr" aria-labelledby="h2-asp-pr">
     <div class="container">
-      <p class="section-num">SECTION / PR繝ｻ蠎・相</p>
-      <h2 id="h2-asp-pr">縲娠R繝ｻ蠎・相縲鷹閨ｷ莉｣陦繰obs (譬ｪ蠑丈ｼ夂､ｾ繧｢繝ｬ繧ｹ) 縺ｮ蜈ｬ髢区ュ蝣ｱ謨ｴ逅・/h2>
-      <p class="section-lede"><strong>譛ｬ繧ｻ繧ｯ繧ｷ繝ｧ繝ｳ縺ｯ PR繝ｻ蠎・相譫</strong> 縺ｧ縺吶ゅい繝輔ぅ繝ｪ繧ｨ繧､繝亥ｺ・相縺ｨ縺励※縲碁閨ｷ莉｣陦繰obs (譬ｪ蠑丈ｼ夂､ｾ繧｢繝ｬ繧ｹ)縲阪・蜈ｬ髢区ュ蝣ｱ繧呈紛逅・＠縺ｦ縺・∪縺吶ゆｻ紋ｺ区･ｭ閠・→縺ｮ蜆ｪ蜉｣蛻､譁ｭ縺ｧ縺ｯ縺ｪ縺上∝ｺ・相荳ｻ縺ｮ蜈ｬ髢区ュ蝣ｱ縺ｨ縺励※蜿ら・縺上□縺輔＞縲・/p>
+      <p class="section-num">SECTION / PR・広告</p>
+      <h2 id="h2-asp-pr">【PR・広告】退職代行Jobs (株式会社アレス) の公開情報整理</h2>
+      <p class="section-lede"><strong>本セクションは PR・広告枠</strong> です。アフィリエイト広告として「退職代行Jobs (株式会社アレス)」の公開情報を整理しています。他事業者との優劣判断ではなく、広告主の公開情報として参照ください。</p>
       <div class="branch-grid">
-      <article class="branch"><span class="tag">迚ｹ蠕ｴ竭</span><h4>騾閨ｷ莉｣陦繰obs</h4><p>騾閨ｷ莉｣陦繰obs (譬ｪ蠑丈ｼ夂､ｾ繧｢繝ｬ繧ｹ驕句霧) 縺ｯ騾閨ｷ莉｣陦後し繝ｼ繝薙せ縺ｮ荳縺､縺ｨ縺輔ｌ繧句だ蜷代ゆｼ夂､ｾ縺ｨ縺ｮ騾｣邨｡繧剃ｻ｣陦後☆繧矩∈謚櫁い縺ｨ縺励※讀懆ｨ主ｯｾ雎｡縺御ｸ闊ｬ逧・〒縺吶・/p></article>
-      <article class="branch"><span class="tag">迚ｹ蠕ｴ竭｡</span><h4>LINE逶ｸ隲・ｯｾ蠢・/h4><p>LINE 縺ｧ縺ｮ逶ｸ隲・ｯｾ蠢懊・蛯ｾ蜷代よｰ苓ｻｽ縺ｫ逶ｸ隲・〒縺阪ｋ驕ｸ謚櫁い縺ｨ縺輔ｌ繧句だ蜷代・/p></article>
-      <article class="branch"><span class="tag">迚ｹ蠕ｴ竭｢</span><h4>鬘ｧ蝠丞ｼ∬ｭｷ螢ｫ逶｣菫ｮ</h4><p>鬘ｧ蝠丞ｼ∬ｭｷ螢ｫ逶｣菫ｮ縺ｮ蛯ｾ蜷代よｳ慕噪繝医Λ繝悶Ν諛ｸ蠢ｵ縺ｮ縺ゅｋ譁ｹ縺ｮ讀懆ｨ取攝譁吶・繧ｱ繝ｼ繧ｹ縺悟､壹￥隕九ｉ繧後∪縺吶・/p></article>
-      <article class="branch"><span class="tag">迚ｹ蠕ｴ竭｣</span><h4>蜈ｨ蝗ｽ蟇ｾ蠢・/h4><p>蜈ｨ蝗ｽ蟇ｾ蠢懊・蛯ｾ蜷代ょ慍譁ｹ蝨ｨ菴剰・ｂ蛻ｩ逕ｨ蜿ｯ閭ｽ縺ｪ驕ｸ謚櫁い縺ｨ蜈ｬ陦ｨ縺輔ｌ縺ｦ縺・∪縺吶・/p></article>
-      <article class="branch"><span class="tag">迚ｹ蠕ｴ竭､</span><h4>繝励Λ繧､繝舌す繝ｼ驟肴・</h4><p>蛟倶ｺｺ諠・ｱ菫晁ｭｷ豕暮・螳医・蛯ｾ蜷代ゆｼ夂､ｾ繝ｻ螳ｶ譌上↓繝舌Ξ縺ｫ縺上＞驟肴・縺後≠繧九→遉ｺ縺輔ｌ縺ｦ縺・∪縺吶・/p></article>
-      <article class="branch"><span class="tag">豕ｨ諢・/span><h4>莠句燕遒ｺ隱肴耳螂ｨ莠矩・/h4><p>蜈ｷ菴鍋噪譁咎≡繝ｻ蟇ｾ蠢懃ｯ・峇繝ｻ謌仙粥莠倶ｾ九・蜈ｬ蠑丞・髢区ュ蝣ｱ縺ｧ遒ｺ隱肴耳螂ｨ縲ゅ・00%騾閨ｷ謌仙粥縲咲ｭ峨・譁ｭ螳壹・荳榊庄縺ｨ縺輔ｌ縺ｦ縺・∪縺吶・/p></article>
+      <article class="branch"><span class="tag">特徴①</span><h4>退職代行Jobs</h4><p>退職代行Jobs (株式会社アレス運営) は退職代行サービスの一つとされる傾向。会社との連絡を代行する選択肢として検討対象が一般的です。</p></article>
+      <article class="branch"><span class="tag">特徴②</span><h4>LINE相談対応</h4><p>LINE での相談対応の傾向。気軽に相談できる選択肢とされる傾向。</p></article>
+      <article class="branch"><span class="tag">特徴③</span><h4>顧問弁護士監修</h4><p>顧問弁護士監修の傾向。法的トラブル懸念のある方の検討材料のケースが多く見られます。</p></article>
+      <article class="branch"><span class="tag">特徴④</span><h4>全国対応</h4><p>全国対応の傾向。地方在住者も利用可能な選択肢と公表されています。</p></article>
+      <article class="branch"><span class="tag">特徴⑤</span><h4>プライバシー配慮</h4><p>個人情報保護法遵守の傾向。会社・家族にバレにくい配慮があると示されています。</p></article>
+      <article class="branch"><span class="tag">注意</span><h4>事前確認推奨事項</h4><p>具体的料金・対応範囲・成功事例は公式公開情報で確認推奨。「100%退職成功」等の断定は不可とされています。</p></article>
       </div>
-      <div class="cta-block"><p class="cta-note"><span class="pr-tag">PR</span>騾閨ｷ莉｣陦繰obs (譬ｪ蠑丈ｼ夂､ｾ繧｢繝ｬ繧ｹ) 縺ｮ譛譁ｰ縺ｮ譚｡莉ｶ縺ｯ蜈ｬ蠑上し繧､繝医〒縺皮｢ｺ隱阪￥縺縺輔＞縲・/p><BannerAB pageSlug={"enhance-cta"} position="enhance" /><p class="btn-cta-sub">窶ｻ 蜈ｬ蠑上し繧､繝医↓驕ｷ遘ｻ縺励∪縺吶・/p></div>
+      <div class="cta-block"><p class="cta-note"><span class="pr-tag">PR</span>退職代行Jobs (株式会社アレス) の最新の条件は公式サイトでご確認ください。</p><BannerAB pageSlug={"enhance-cta"} position="enhance" /><p class="btn-cta-sub">※ 公式サイトに遷移します。</p></div>
     </div>
   </section>
 
   <section class="lp-section" id="sec-koteki-laws" aria-labelledby="h2-koteki-laws">
     <div class="container">
-      <p class="section-num">SECTION / 蜈ｬ逧・ｪ灘哨繝ｻ髢｢騾｣豕穂ｻ､</p>
-      <h2 id="h2-koteki-laws">蜈ｬ逧・ｪ灘哨繝ｻ髢｢騾｣豕穂ｻ､</h2>
-      <p class="section-lede">繝医Λ繝悶Ν譎ゅ・逍大撫譎ゅ・蜈ｬ逧・ｪ灘哨縺ｮ豢ｻ逕ｨ縺梧耳螂ｨ縺輔ｌ縺ｾ縺吶・/p>
+      <p class="section-num">SECTION / 公的窓口・関連法令</p>
+      <h2 id="h2-koteki-laws">公的窓口・関連法令</h2>
+      <p class="section-lede">トラブル時・疑問時は公的窓口の活用が推奨されます。</p>
       <ul>
-        <li><a href="https://www.mhlw.go.jp/general/sosiki/chihou/" target="_blank" rel="noopener">邱丞粋蜉ｴ蜒咲嶌隲・さ繝ｼ繝翫・</a> - 蜴夂函蜉ｴ蜒咲怐繝ｻ蜉ｴ蜒咲嶌隲・/li>
-        <li><a href="https://www.houterasu.or.jp/" target="_blank" rel="noopener">豕輔ユ繝ｩ繧ｹ</a> - 豕募ｾ狗嶌隲・/li>
-        <li><a href="https://www.bengoshi.or.jp/" target="_blank" rel="noopener">譌･譛ｬ蠑∬ｭｷ螢ｫ騾｣蜷井ｼ・/a> - 蠑∬ｭｷ螢ｫ逶ｸ隲・/li>
-        <li><a href="https://www.mhlw.go.jp/" target="_blank" rel="noopener">蜴夂函蜉ｴ蜒咲怐</a> - 蜉ｴ蜒榊渕貅匁ｳ慕屮逹｣</li>
-        <li>豸郁ｲｻ逕滓ｴｻ繧ｻ繝ｳ繧ｿ繝ｼ - 188 (縺・ｄ繧・) 縺ｧ譛蟇・ｊ繧ｻ繝ｳ繧ｿ繝ｼ譯亥・</li>
+        <li><a href="https://www.mhlw.go.jp/general/sosiki/chihou/" target="_blank" rel="noopener">総合労働相談コーナー</a> - 厚生労働省・労働相談</li>
+        <li><a href="https://www.houterasu.or.jp/" target="_blank" rel="noopener">法テラス</a> - 法律相談</li>
+        <li><a href="https://www.bengoshi.or.jp/" target="_blank" rel="noopener">日本弁護士連合会</a> - 弁護士相談</li>
+        <li><a href="https://www.mhlw.go.jp/" target="_blank" rel="noopener">厚生労働省</a> - 労働基準法監督</li>
+        <li>消費生活センター - 188 (いやや!) で最寄りセンター案内</li>
       </ul>
-      <p class="section-lede" style="margin-top:1rem">髢｢騾｣豕穂ｻ､: <strong>蜉ｴ蜒榊渕貅匁ｳ・/strong> (騾閨ｷ縺ｮ閾ｪ逕ｱ繝ｻ2騾ｱ髢灘燕逕ｳ蜻・繝ｻ<strong>豌第ｳ・627譚｡</strong> (譛滄俣螳壹ａ縺ｪ縺・寐逕ｨ縺ｮ隗｣邏・繝ｻ<strong>蠑∬ｭｷ螢ｫ豕・72譚｡</strong> (髱槫ｼ∬｡檎ぜ遖∵ｭ｢)繝ｻ<strong>蛟倶ｺｺ諠・ｱ菫晁ｭｷ豕・/strong>縲よ悽繝壹・繧ｸ縺ｯ蜈ｬ髢区ュ蝣ｱ縺ｮ謨ｴ逅・〒縺ゅｊ縲∫音螳壻ｺ区･ｭ閠・・蜈ｬ蠑上し繧､繝医〒縺ｯ縺ゅｊ縺ｾ縺帙ｓ縲ゅい繝輔ぅ繝ｪ繧ｨ繧､繝亥ｺ・相・・R・峨ｒ蜷ｫ縺ｿ縺ｾ縺吶・/p>
+      <p class="section-lede" style="margin-top:1rem">関連法令: <strong>労働基準法</strong> (退職の自由・2週間前申告)・<strong>民法 627条</strong> (期間定めない雇用の解約)・<strong>弁護士法 72条</strong> (非弁行為禁止)・<strong>個人情報保護法</strong>。本ページは公開情報の整理であり、特定事業者の公式サイトではありません。アフィリエイト広告（PR）を含みます。</p>
     </div>
   </section>
   <section class="lp-section" id="sec-related" aria-labelledby="related-h">
     <div class="container">
-      <p class="section-num">髢｢騾｣險倅ｺ・/p>
-      <h2 id="related-h">髢｢騾｣縺吶ｋ險倅ｺ・/h2>
+      <p class="section-num">関連記事</p>
+      <h2 id="related-h">関連する記事</h2>
       <ul class="related-links" style="line-height:1.9;">
-        <li><a href="https://taishoku-info.pages.dev/arbeit-taishoku/">繧｢繝ｫ繝舌う繝磯閨ｷ莉｣陦・螳悟・繧ｬ繧､繝会ｽ懷ｭｦ逕溘ヰ繧､繝医・遏ｭ譛溘ヰ繧､繝医・謗帙￠謖√■繝舌う繝医・豢ｻ逕ｨ蛻､譁ｭ・・026蟷ｴ5譛域凾轤ｹ繝ｻ蜈ｬ髢区ュ蝣ｱ謨ｴ逅・・PR・・/a></li>
-        <li><a href="https://taishoku-info.pages.dev/hoiku-taishoku/">菫晁ご螢ｫ縺ｮ騾閨ｷ莉｣陦鯉ｽ應ｿ晁ご蝨偵・蟷ｼ遞壼恍縺ｮ莠ｺ謇倶ｸ崎ｶｳ繝ｻ蟷ｴ蠎ｦ騾比ｸｭ騾閨ｷ縺ｨ讌ｭ閠・∈縺ｳ5霆ｸ・・026蟷ｴ迚医・PR・・/a></li>
-        <li><a href="https://taishoku-info.pages.dev/shiyoukikan-taishoku/">隧ｦ逕ｨ譛滄俣荳ｭ縺ｮ騾閨ｷ莉｣陦後ぎ繧､繝会ｽ懷茜逕ｨ縺ｧ縺阪ｋ縺九・豬√ｌ繝ｻ隧ｦ逕ｨ譛滄俣縺ｪ繧峨〒縺ｯ縺ｮ遒ｺ隱咲せ・・026蟷ｴ迚医・PR・・/a></li>
-        <li><a href="https://taishoku-info.pages.dev/sokujitsu-taishoku/">蜊ｳ譌･騾閨ｷ縺ｯ譛ｬ蠖薙↓蜿ｯ閭ｽ・滄閨ｷ莉｣陦後〒縲梧・譌･縺九ｉ蜃ｺ遉ｾ縺励↑縺・阪ｒ螳溽樟縺吶ｋ4邨瑚ｷｯ縺ｨ讌ｭ閠・∈縺ｳ・・026蟷ｴ迚医・PR・・/a></li>
-        <li><a href="https://taishoku-info.pages.dev/taishokukin-uketori/">騾閨ｷ莉｣陦後→騾閨ｷ驥代・蜿励￠蜿悶ｊ・憺閨ｷ驥代・蝓ｺ譛ｬ繝ｻ蜿励￠蜿悶ｊ縺ｮ豬√ｌ縺ｨ遒ｺ隱阪・繧､繝ｳ繝茨ｼ・026蟷ｴ迚医・PR・・/a></li>
+        <li><a href="https://taishoku-info.pages.dev/arbeit-taishoku/">アルバイト退職代行 完全ガイド｜学生バイト・短期バイト・掛け持ちバイトの活用判断（2026年5月時点・公開情報整理・PR）</a></li>
+        <li><a href="https://taishoku-info.pages.dev/hoiku-taishoku/">保育士の退職代行｜保育園・幼稚園の人手不足・年度途中退職と業者選び5軸（2026年版・PR）</a></li>
+        <li><a href="https://taishoku-info.pages.dev/shiyoukikan-taishoku/">試用期間中の退職代行ガイド｜利用できるか・流れ・試用期間ならではの確認点（2026年版・PR）</a></li>
+        <li><a href="https://taishoku-info.pages.dev/sokujitsu-taishoku/">即日退職は本当に可能？退職代行で「明日から出社しない」を実現する4経路と業者選び（2026年版・PR）</a></li>
+        <li><a href="https://taishoku-info.pages.dev/taishokukin-uketori/">退職代行と退職金の受け取り｜退職金の基本・受け取りの流れと確認ポイント（2026年版・PR）</a></li>
       </ul>
     </div>
   </section>
@@ -167,32 +167,32 @@ const faq = [
 
 <!-- PERSPECTIVE_SOURCE_BOX_START -->
 <aside class="perspective-source" style="background:#fffbeb;border:1px solid #fde68a;padding:14px 18px;margin:24px 0;border-radius:6px;">
-  <div style="font-weight:600;color:#92400e;margin-bottom:6px;">剥 蛻､譁ｭ繝ｻ險ｺ譁ｭ 縺ｫ髢｢縺吶ｋ蜈ｬ逧・ョ繝ｼ繧ｿ</div>
-  <p style="margin:6px 0;font-size:0.92em;color:#451a03;">騾閨ｷ蛻､譁ｭ譎ゅ・豕慕噪逶ｸ隲・ｪ灘哨</p>
-  <p style="margin:4px 0;font-size:0.85em;"><a href="https://www.mhlw.go.jp/" rel="noopener" target="_blank" style="color:#0369a1;">蜃ｺ蜈ｸ: 蜉ｴ蜒榊渕貅也屮逹｣鄂ｲ</a></p>
+  <div style="font-weight:600;color:#92400e;margin-bottom:6px;">🔍 判断・診断 に関する公的データ</div>
+  <p style="margin:6px 0;font-size:0.92em;color:#451a03;">退職判断時の法的相談窓口</p>
+  <p style="margin:4px 0;font-size:0.85em;"><a href="https://www.mhlw.go.jp/" rel="noopener" target="_blank" style="color:#0369a1;">出典: 労働基準監督署</a></p>
 </aside>
 <!-- PERSPECTIVE_SOURCE_BOX_END -->
 
 <!-- PERSPECTIVE_DEEP_SECTION_START -->
 <aside class="perspective-deep" style="background:#f0f9ff;border:1px solid #93c5fd;padding:20px 24px;margin:32px 0;border-radius:8px;font-size:0.95em;line-height:1.7;">
-<div style="white-space:pre-wrap;">識 騾閨ｷ繝ｻ騾閨ｷ莉｣陦・繧堤炊隗｣縺吶ｋ: 險ｼ譏取嶌 縺ｮ譛ｬ雉ｪ
+<div style="white-space:pre-wrap;">🎯 退職・退職代行 を理解する: 証明書 の本質
 
-縲千峡閾ｪ蛻・梵: 騾閨ｷ繝ｻ騾閨ｷ莉｣陦・縺ｮ蛻､譁ｭ霆ｸ縲・
-騾閨ｷ繝ｻ騾閨ｷ莉｣陦・縺ｮ蛻ｩ逕ｨ縺ｯ縲∬ｨｼ譏取嶌 霆ｸ縺ｧ縺ｮ驕ｩ諤ｧ蛻､譁ｭ縺碁㍾隕√〒縺吶る閨ｷ讓ｩ蛻ｩ繝ｻ蜉ｴ蜒肴ｳ輔・蜈ｬ逧・嶌隲・ｪ灘哨縺ｧ縺ｮ邱丞粋蛻､譁ｭ縺後〒縺阪∪縺吶・
+【独自分析: 退職・退職代行 の判断軸】
+退職・退職代行 の利用は、証明書 軸での適性判断が重要です。退職権利・労働法・公的相談窓口での総合判断ができます。
 
-縲仙愛譁ｭ縺ｮ驥崎ｦ・3 隕ｳ轤ｹ縲・
-1. **驕ｩ蜷域ｧ**: 險ｼ譏取嶌 縺ｨ 騾閨ｷ繝ｻ騾閨ｷ莉｣陦・縺ｮ迚ｹ諤ｧ荳閾ｴ
-2. **繧ｿ繧､繝溘Φ繧ｰ**: 騾閨ｷ繝ｻ騾閨ｷ莉｣陦・蛻ｩ逕ｨ縺ｮ繝吶せ繝医ち繧､繝溘Φ繧ｰ
-3. **莉｣譖ｿ讀懆ｨ・*: 莉夜∈謚櫁い縺ｨ縺ｮ豈碑ｼ・紛逅・
+【判断の重要 3 観点】
+1. **適合性**: 証明書 と 退職・退職代行 の特性一致
+2. **タイミング**: 退職・退職代行 利用のベストタイミング
+3. **代替検討**: 他選択肢との比較整理
 
-縲色AQ: 騾閨ｷ繝ｻ騾閨ｷ莉｣陦・/ 險ｼ譏取嶌 / Uketori 縺ｮ蛻､譁ｭ縲・
-- Q. 騾閨ｷ繝ｻ騾閨ｷ莉｣陦・縺ｯ 險ｼ譏取嶌 縺ｫ譛驕ｩ縺・
-- Q. 蛻ｩ逕ｨ繝吶せ繝医ち繧､繝溘Φ繧ｰ縺ｯ?
-- Q. 莉悶↓讀懆ｨ弱☆縺ｹ縺埼∈謚櫁い縺ｯ?
+【FAQ: 退職・退職代行 / 証明書 / Uketori の判断】
+- Q. 退職・退職代行 は 証明書 に最適か?
+- Q. 利用ベストタイミングは?
+- Q. 他に検討すべき選択肢は?
 
-縲仙・逧・ョ繝ｼ繧ｿ陬懷ｼｷ縲・
-騾閨ｷ蛻､譁ｭ譎ゅ・豕慕噪逶ｸ隲・ｪ灘哨
-[蜃ｺ蜈ｸ](https://www.mhlw.go.jp/)</div>
+【公的データ補強】
+退職判断時の法的相談窓口
+[出典](https://www.mhlw.go.jp/)</div>
 </aside>
 <!-- PERSPECTIVE_DEEP_SECTION_END -->
 </RichLayout>

@@ -1,53 +1,53 @@
-﻿---
+---
 import RichLayout from '../../layouts/RichLayout.astro';
 import PRBadge from '../../components/PRBadge.astro';
 import BannerAB from '../../components/BannerAB.astro';
 
-const title = '騾閨ｷ莉｣陦後・豬√ｌ・懃筏霎ｼ縺九ｉ騾閨ｷ螳御ｺ・∪縺ｧ縺ｮ7繧ｹ繝・ャ繝暦ｼ・026蟷ｴ迚医・PR・・;
-const description = '騾閨ｷ莉｣陦後し繝ｼ繝薙せ縺ｮ蛻ｩ逕ｨ繝輔Ο繝ｼ (逶ｸ隲・・逕ｳ霎ｼ竊貞・驥鯛・謇灘粋縺帚・騾｣邨｡螳溯｡娯・譖ｸ鬘槫女蜿問・騾閨ｷ螳御ｺ・ 繧・繧ｹ繝・ャ繝励〒謨ｴ逅・＠縺滓ュ蝣ｱ謠蝉ｾ幄ｨ倅ｺ九〒縺呻ｼ・R繝ｻ繧｢繝輔ぅ繝ｪ繧ｨ繧､繝亥ｺ・相繧貞性縺ｿ縺ｾ縺呻ｼ峨・;
+const title = '退職代行の流れ｜申込から退職完了までの7ステップ（2026年版・PR）';
+const description = '退職代行サービスの利用フロー (相談→申込→入金→打合せ→連絡実行→書類受取→退職完了) を7ステップで整理した情報提供記事です（PR・アフィリエイト広告を含みます）。';
 
 const breadcrumb = [
-  { name: '繝帙・繝', url: '/' },
-  { name: '騾閨ｷ莉｣陦後・豬√ｌ' },
+  { name: 'ホーム', url: '/' },
+  { name: '退職代行の流れ' },
 ];
 
 const faq = [
-  { q: '騾閨ｷ莉｣陦後・豬√ｌ縺ｧ譛繧る㍾隕√↑繧ｹ繝・ャ繝励・縺ｩ繧後〒縺吶°・・, a: '縲御ｻ｣陦梧･ｭ閠・↓繧医ｋ騾閨ｷ騾｣邨｡縺ｮ螳溯｡後阪′譛繧る㍾隕√→縺輔ｌ縺ｾ縺吶ゅ％縺ｮ谿ｵ髫弱〒蛻ｩ逕ｨ閠・・騾閨ｷ諢乗昴′豁｣蠑上↓莨夂､ｾ縺ｸ莨晞＃縺輔ｌ繧九◆繧√〒縺吶よｰ第ｳ慕ｬｬ627譚｡縺ｧ縺ｯ騾閨ｷ縺ｮ閾ｪ逕ｱ縺瑚ｪ阪ａ繧峨ｌ縺ｦ縺・∪縺吶′縲∵э諤昜ｼ晞＃縺ｮ豁｣遒ｺ諤ｧ縺悟・貊代↑騾閨ｷ謇狗ｶ壹″縺ｮ骰ｵ縺ｨ縺ｪ繧翫∪縺吶・ },
-  { q: '逕ｳ縺苓ｾｼ縺ｿ縺九ｉ騾閨ｷ螳御ｺ・∪縺ｧ縲∝ｹｳ蝮・〒縺ｩ縺ｮ縺上ｉ縺・・譛滄俣縺後°縺九ｊ縺ｾ縺吶°・・, a: '逕ｳ霎ｼ縺ｿ蠖捺律縺ｫ莨夂､ｾ縺ｸ騾｣邨｡縺悟ｮ御ｺ・☆繧九こ繝ｼ繧ｹ繧ょ､壹＞縺ｧ縺吶′縲・屬閨ｷ逾ｨ縺ｪ縺ｩ縺ｮ譖ｸ鬘槫女蜿悶ｊ縺ｾ縺ｧ蜷ｫ繧√ｋ縺ｨ縲∽ｸ闊ｬ逧・↓2騾ｱ髢薙°繧・繝ｶ譛育ｨ句ｺｦ縺檎岼螳峨〒縺吶ゅ％繧後・縲∵ｳ募ｾ九〒螳壹ａ繧峨ｌ縺滄閨ｷ縺ｮ逕ｳ縺怜・繧梧悄髢難ｼ磯壼ｸｸ2騾ｱ髢難ｼ峨ｄ縲∽ｼ夂､ｾ縺ｮ莠句漁謇狗ｶ壹″縺ｫ縺九°繧区凾髢薙ｒ閠・・縺励◆繧ゅ・縺ｧ縺吶・ },
-  { q: '騾閨ｷ莉｣陦後・雋ｻ逕ｨ縺ｯ縺ｩ縺ｮ繧ｿ繧､繝溘Φ繧ｰ縺ｧ謾ｯ謇輔≧縺ｮ縺御ｸ闊ｬ逧・〒縺吶°・・, a: '辟｡譁咏嶌隲・ｄ繝偵い繝ｪ繝ｳ繧ｰ縺ｮ蠕後∵ｭ｣蠑上↓萓晞ｼ繧呈ｱｺ螳壹＠縲∵･ｭ閠・′莨夂､ｾ縺ｸ騾｣邨｡縺吶ｋ縲悟燕縲阪↓謾ｯ謇輔≧縺ｮ縺御ｸ闊ｬ逧・〒縺吶ょ､壹￥縺ｮ蝣ｴ蜷医∝・驥醍｢ｺ隱阪ｒ繧ゅ▲縺ｦ豁｣蠑上↑螂醍ｴ・・遶九→縺輔ｌ縲∝・菴鍋噪縺ｪ莉｣陦梧･ｭ蜍吶′髢句ｧ九＆繧後∪縺吶りｩｳ邏ｰ縺ｯ蜷・し繝ｼ繝薙せ縺ｮ譁咎≡繝壹・繧ｸ繧偵＃遒ｺ隱阪￥縺縺輔＞縲・ },
-  { q: '騾閨ｷ莉｣陦後・豬√ｌ縺ｮ荳ｭ縺ｧ縲∽ｼ夂､ｾ縺九ｉ逶ｴ謗･騾｣邨｡縺梧擂繧句庄閭ｽ諤ｧ縺ｯ縺ゅｊ縺ｾ縺吶°・・, a: '莉｣陦梧･ｭ閠・・縲碁｣邨｡縺ｯ譛ｬ莠ｺ縺ｫ縺励↑縺・ｈ縺・↓縲阪→莨昴∴縺ｾ縺吶′縲∽ｼ夂､ｾ蛛ｴ縺檎峩謗･騾｣邨｡縺励※縺上ｋ蜿ｯ閭ｽ諤ｧ縺ｯ繧ｼ繝ｭ縺ｧ縺ｯ縺ゅｊ縺ｾ縺帙ｓ縲ゅ◎縺ｮ髫帙・蠢懃ｭ斐○縺壹∽ｻ｣陦梧･ｭ閠・↓蝣ｱ蜻翫☆繧九・縺悟渕譛ｬ縺ｧ縺吶ょ嵜豌醍函豢ｻ繧ｻ繝ｳ繧ｿ繝ｼ繧ゅ・閨ｷ莉｣陦後↓髢｢縺吶ｋ繝医Λ繝悶Ν縺ｫ縺､縺・※豕ｨ諢丞繭襍ｷ繧定｡後▲縺ｦ縺・∪縺吶・ },
-  { q: '騾閨ｷ莉｣陦後・荳騾｣縺ｮ豬√ｌ繧貞茜逕ｨ縺吶ｋ譛螟ｧ縺ｮ繝｡繝ｪ繝・ヨ縺ｯ菴輔〒縺吶°・・, a: '譛螟ｧ縺ｮ繝｡繝ｪ繝・ヨ縺ｯ縲∽ｼ夂､ｾ縺ｮ荳雁昇繧・酔蜒壹→荳蛻・｡斐ｒ蜷医ｏ縺帙◆繧翫∫峩謗･隧ｱ縺励◆繧翫☆繧九％縺ｨ縺ｪ縺上・閨ｷ謇狗ｶ壹″繧帝ｲ繧√ｉ繧後ｋ轤ｹ縺ｧ縺吶ゅ％繧後↓繧医ｊ縲∫ｲｾ逾樒噪縺ｪ雋諡・′螟ｧ蟷・↓霆ｽ貂帙＆繧後∵ｬ｡縺ｮ繧ｹ繝・ャ繝励↓髮・ｸｭ縺励ｄ縺吶￥縺ｪ繧九％縺ｨ縺梧悄蠕・＆繧後∪縺吶・ },
+  { q: '退職代行の流れで最も重要なステップはどれですか？', a: '「代行業者による退職連絡の実行」が最も重要とされます。この段階で利用者の退職意思が正式に会社へ伝達されるためです。民法第627条では退職の自由が認められていますが、意思伝達の正確性が円滑な退職手続きの鍵となります。' },
+  { q: '申し込みから退職完了まで、平均でどのくらいの期間がかかりますか？', a: '申込み当日に会社へ連絡が完了するケースも多いですが、離職票などの書類受取りまで含めると、一般的に2週間から1ヶ月程度が目安です。これは、法律で定められた退職の申し入れ期間（通常2週間）や、会社の事務手続きにかかる時間を考慮したものです。' },
+  { q: '退職代行の費用はどのタイミングで支払うのが一般的ですか？', a: '無料相談やヒアリングの後、正式に依頼を決定し、業者が会社へ連絡する「前」に支払うのが一般的です。多くの場合、入金確認をもって正式な契約成立とされ、具体的な代行業務が開始されます。詳細は各サービスの料金ページをご確認ください。' },
+  { q: '退職代行の流れの中で、会社から直接連絡が来る可能性はありますか？', a: '代行業者は「連絡は本人にしないように」と伝えますが、会社側が直接連絡してくる可能性はゼロではありません。その際は応答せず、代行業者に報告するのが基本です。国民生活センターも、退職代行に関するトラブルについて注意喚起を行っています。' },
+  { q: '退職代行の一連の流れを利用する最大のメリットは何ですか？', a: '最大のメリットは、会社の上司や同僚と一切顔を合わせたり、直接話したりすることなく、退職手続きを進められる点です。これにより、精神的な負担が大幅に軽減され、次のステップに集中しやすくなることが期待されます。' },
 ];
 ---
 
-<RichLayout title={title} description={description} publishedDate="2026-05-24" breadcrumb={breadcrumb} faq={faq}>
+<RichLayout title={title} description={description} publishedDate="2026-05-24" modifiedDate="2026-05-24" breadcrumb={breadcrumb} faq={faq}>
 <!-- PERSPECTIVE_LEAD_BOX_START -->
 <aside class="perspective-lead" style="background:#f8fafc;border-left:4px solid #0ea5e9;padding:16px 20px;margin:24px 0;border-radius:6px;">
   <div style="display:flex;align-items:center;gap:8px;margin-bottom:8px;">
-    <span style="font-size:1.4em;">剥</span>
-    <strong style="color:#0c4a6e;">縺薙・ LP 縺ｮ迢ｬ遶倶ｾ｡蛟､</strong>
+    <span style="font-size:1.4em;">🔍</span>
+    <strong style="color:#0c4a6e;">この LP の独立価値</strong>
   </div>
-  <p style="margin:4px 0;font-size:0.95em;color:#0f172a;"><strong>隕也せ (Perspective):</strong> 蛻､譁ｭ繝ｻ險ｺ譁ｭ</p>
-  <p style="margin:4px 0;font-size:0.95em;color:#0f172a;"><strong>迢ｬ閾ｪ angle:</strong> taishoku daikou nagare 縺ｫ辟ｦ轤ｹ繧貞ｽ薙※縺・蛻､譁ｭ繝ｻ險ｺ譁ｭ 隕也せ縺ｮ迢ｬ閾ｪ隗｣隱ｬ</p>
-  <p style="margin:4px 0;font-size:0.9em;color:#475569;"><strong>莉・LP 縺ｨ縺ｮ驕輔＞:</strong> 莉・LP 縺御ｸ闊ｬ逧・↓ 蛻､譁ｭ繝ｻ險ｺ譁ｭ 蜈ｨ菴薙ｒ謇ｱ縺・・縺ｫ蟇ｾ縺励∵悽 LP 縺ｯ taishoku-daikou-nagare 縺ｫ邨槭ｊ霎ｼ繧</p>
+  <p style="margin:4px 0;font-size:0.95em;color:#0f172a;"><strong>視点 (Perspective):</strong> 判断・診断</p>
+  <p style="margin:4px 0;font-size:0.95em;color:#0f172a;"><strong>独自 angle:</strong> taishoku daikou nagare に焦点を当てた 判断・診断 視点の独自解説</p>
+  <p style="margin:4px 0;font-size:0.9em;color:#475569;"><strong>他 LP との違い:</strong> 他 LP が一般的に 判断・診断 全体を扱うのに対し、本 LP は taishoku-daikou-nagare に絞り込む</p>
 </aside>
 <!-- PERSPECTIVE_LEAD_BOX_END -->
 
   <section class="fv" aria-labelledby="fv-h1">
     <div class="container">
-      <span class="fv-pill">騾閨ｷ莉｣陦・/ 蛻ｩ逕ｨ繝輔Ο繝ｼ</span>
-      <h1 id="fv-h1">騾閨ｷ莉｣陦後・豬√ｌ<br /><span class="accent">逕ｳ霎ｼ縺九ｉ騾閨ｷ螳御ｺ・∪縺ｧ縺ｮ7繧ｹ繝・ャ繝・/span></h1>
-      <p class="lede">騾閨ｷ莉｣陦後ｒ蛻昴ａ縺ｦ讀懆ｨ弱☆繧句ｴ蜷医・蛻ｩ逕ｨ繝輔Ο繝ｼ繧・<strong>縲檎嶌隲・・逕ｳ霎ｼ竊貞・驥鯛・謇灘粋縺帚・騾｣邨｡螳溯｡娯・譖ｸ鬘槫女蜿問・騾閨ｷ螳御ｺ・阪・7繧ｹ繝・ャ繝・/strong> 縺ｧ蜈ｬ髢区ュ蝣ｱ繧偵ｂ縺ｨ縺ｫ謨ｴ逅・ょ推繧ｹ繝・ャ繝励・謇隕∵律謨ｰ繝ｻ貅門ｙ莠矩・・逡呎э轤ｹ繧剃ｸｭ遶狗噪縺ｫ邏ｹ莉九＠縺ｾ縺吶・/p>
+      <span class="fv-pill">退職代行 / 利用フロー</span>
+      <h1 id="fv-h1">退職代行の流れ<br /><span class="accent">申込から退職完了までの7ステップ</span></h1>
+      <p class="lede">退職代行を初めて検討する場合の利用フローを <strong>「相談→申込→入金→打合せ→連絡実行→書類受取→退職完了」の7ステップ</strong> で公開情報をもとに整理。各ステップの所要日数・準備事項・留意点を中立的に紹介します。</p>
       <ul class="fv-bullets">
-        <li>7繧ｹ繝・ャ繝励・蜈ｨ菴灘ワ縺ｨ謇隕∵律謨ｰ</li>
-        <li>蜷・せ繝・ャ繝励〒縺ｮ貅門ｙ莠矩・/li>
-        <li>譛臥ｵｦ豸亥喧繝ｻ譖ｸ鬘槫女蜿悶・繧ｿ繧､繝溘Φ繧ｰ</li>
-        <li>讌ｭ閠・∈縺ｳ縺ｧ遒ｺ隱阪☆縺ｹ縺・轤ｹ</li>
+        <li>7ステップの全体像と所要日数</li>
+        <li>各ステップでの準備事項</li>
+        <li>有給消化・書類受取のタイミング</li>
+        <li>業者選びで確認すべき3点</li>
       </ul>
       <PRBadge pageSlug="taishoku-daikou-nagare" />
       <div class="fv-meta">
-        <span><b>蜈ｬ髢区律</b> 2026-05-24</span><span><b>譛邨よ峩譁ｰ</b> 2026-05-24</span>
-        <span><b>邱ｨ髮・/b> NY-squared 邱ｨ髮・Κ</span><span><b>謇隕・/b> 邏・6 蛻・/span>
+        <span><b>公開日</b> 2026-05-24</span><span><b>最終更新</b> 2026-05-24</span>
+        <span><b>編集</b> NY-squared 編集部</span><span><b>所要</b> 約 6 分</span>
       </div>
     </div>
   </section>
@@ -55,16 +55,16 @@ const faq = [
   <section class="lp-section" id="sec-1" aria-labelledby="h2-1">
     <div class="container">
       <p class="section-num">SECTION / 01</p>
-      <h2 id="h2-1">騾閨ｷ莉｣陦・7繧ｹ繝・ャ繝励・蜈ｨ菴灘ワ</h2>
-      <p class="section-lede">騾閨ｷ莉｣陦後し繝ｼ繝薙せ縺ｮ荳闊ｬ逧・↑蛻ｩ逕ｨ繝輔Ο繝ｼ繧貞・髢区ュ蝣ｱ縺ｮ謨ｴ逅・→縺励※ 7 谿ｵ髫弱〒邏ｹ莉九＠縺ｾ縺吶・/p>
+      <h2 id="h2-1">退職代行 7ステップの全体像</h2>
+      <p class="section-lede">退職代行サービスの一般的な利用フローを公開情報の整理として 7 段階で紹介します。</p>
       <ol>
-        <li><strong>1. 辟｡譁咏嶌隲・/strong> (蜊ｳ譌･縲・: LINE/髮ｻ隧ｱ/繝｡繝ｼ繝ｫ縺ｧ逶ｸ隲・よ侭驥・蟇ｾ蠢懃ｯ・峇遒ｺ隱阪・/li>
-        <li><strong>2. 逕ｳ霎ｼ</strong> (逶ｸ隲・ｾ後☆縺・: 逕ｳ霎ｼ譖ｸ/繝輔か繝ｼ繝險伜・縲ゆｼ夂､ｾ諠・ｱ繝ｻ騾閨ｷ蟶梧悍譌･繧剃ｼ晞＃縲・/li>
-        <li><strong>3. 蜈･驥・/strong> (逕ｳ霎ｼ蠕・: 荳闊ｬ逧・↓驫陦梧険霎ｼ/繧ｯ繝ｬ繧ｸ繝・ヨ/繧ｳ繝ｳ繝薙ル謇輔＞遲峨・謾ｯ謇墓婿豕輔ょ・驥醍｢ｺ隱榊ｾ後↓逹謇九☆繧区･ｭ閠・′螟壹＞縲・/li>
-        <li><strong>4. 諡・ｽ楢・→謇灘粋縺・/strong>: 騾閨ｷ逅・罰繝ｻ譛臥ｵｦ谿九・騾閨ｷ驥題ｦ丞ｮ壹・遘∫黄縺ｮ謇蝨ｨ遲峨・繝偵い繝ｪ繝ｳ繧ｰ縲・/li>
-        <li><strong>5. 讌ｭ閠・′莨夂､ｾ縺ｸ騾｣邨｡螳溯｡・/strong>: 蜊ｳ譌･蟇ｾ蠢懈･ｭ閠・↑繧臥筏霎ｼ蠖捺律縺ｫ莨夂､ｾ縺ｸ髮ｻ隧ｱ/繝｡繝ｼ繝ｫ縲・/li>
-        <li><strong>6. 騾閨ｷ譖ｸ鬘槭・繧・ｊ蜿悶ｊ</strong>: 騾閨ｷ螻翫・髮｢閨ｷ逾ｨ繝ｻ貅先ｳ牙ｾｴ蜿守･ｨ繝ｻ蛛･蠎ｷ菫晞匱險ｼ遲峨・驛ｵ騾√ｄ繧雁叙繧翫・/li>
-        <li><strong>7. 騾閨ｷ螳御ｺ・/strong>: 譛邨ょ・遉ｾ譌･繝ｻ髮｢閨ｷ逾ｨ蜿鈴倥〒騾閨ｷ螳御ｺ・よｬ｡縺ｮ繧ｹ繝・ャ繝・(霆｢閨ｷ豢ｻ蜍・螟ｱ讌ｭ菫晞匱逕ｳ隲狗ｭ・ 縺ｸ縲・/li>
+        <li><strong>1. 無料相談</strong> (即日〜): LINE/電話/メールで相談。料金/対応範囲確認。</li>
+        <li><strong>2. 申込</strong> (相談後すぐ): 申込書/フォーム記入。会社情報・退職希望日を伝達。</li>
+        <li><strong>3. 入金</strong> (申込後): 一般的に銀行振込/クレジット/コンビニ払い等の支払方法。入金確認後に着手する業者が多い。</li>
+        <li><strong>4. 担当者と打合せ</strong>: 退職理由・有給残・退職金規定・私物の所在等のヒアリング。</li>
+        <li><strong>5. 業者が会社へ連絡実行</strong>: 即日対応業者なら申込当日に会社へ電話/メール。</li>
+        <li><strong>6. 退職書類のやり取り</strong>: 退職届・離職票・源泉徴収票・健康保険証等の郵送やり取り。</li>
+        <li><strong>7. 退職完了</strong>: 最終出社日・離職票受領で退職完了。次のステップ (転職活動/失業保険申請等) へ。</li>
       </ol>
       <BannerAB pageSlug="taishoku-daikou-nagare" position="hero" />
     </div>
@@ -73,85 +73,85 @@ const faq = [
   <section class="lp-section alt" id="sec-2" aria-labelledby="h2-2">
     <div class="container">
       <p class="section-num">SECTION / 02</p>
-      <h2 id="h2-2">蜷・せ繝・ャ繝励・謇隕∵律謨ｰ縺ｨ貅門ｙ莠矩・/h2>
+      <h2 id="h2-2">各ステップの所要日数と準備事項</h2>
       <div class="counter-box">
-        <h3>東 謇隕∵律謨ｰ縺ｮ逶ｮ螳・(蜈ｬ髢区ュ蝣ｱ)</h3>
-        <div class="row"><b>繧ｹ繝・ャ繝・1-3</b><span>逶ｸ隲・懷・驥代・ 1 譌･莉･蜀・↓螳檎ｵ舌☆繧九％縺ｨ縺悟､壹＞縺ｨ縺輔ｌ繧句だ蜷代ょ叉譌･蟇ｾ蠢懈･ｭ閠・↑繧画焚譎る俣縺ｧ谺｡縺ｸ縲・/span></div>
-        <div class="row"><b>繧ｹ繝・ャ繝・4-5</b><span>謇灘粋縺帙應ｼ夂､ｾ騾｣邨｡縺ｯ蜷梧律蟇ｾ蠢懊′螟壹＞縺ｨ縺輔ｌ繧九ょ叉譌･騾閨ｷ蟶梧悍縺ｪ繧臥筏霎ｼ蠖捺律荳ｭ縺ｫ莨夂､ｾ騾｣邨｡螳溯｡後・/span></div>
-        <div class="row"><b>繧ｹ繝・ャ繝・6</b><span>譖ｸ鬘槭・繧・ｊ蜿悶ｊ縺ｯ 2-4 騾ｱ髢鍋ｨ句ｺｦ縲る屬閨ｷ逾ｨ縺ｯ騾閨ｷ譌･蠕・10-14 譌･縺ｧ逋ｺ陦後′荳闊ｬ逧・→縺輔ｌ繧句だ蜷代・/span></div>
-        <div class="row"><b>繧ｹ繝・ャ繝・7</b><span>騾閨ｷ譌･遒ｺ螳壼ｾ後・屬閨ｷ逾ｨ蜿鈴倥〒螳御ｺ・ゅヨ繝ｼ繧ｿ繝ｫ 2-4 騾ｱ髢薙′荳闊ｬ逧・→縺輔ｌ繧句だ蜷代・/span></div>
+        <h3>📌 所要日数の目安 (公開情報)</h3>
+        <div class="row"><b>ステップ 1-3</b><span>相談〜入金は 1 日以内に完結することが多いとされる傾向。即日対応業者なら数時間で次へ。</span></div>
+        <div class="row"><b>ステップ 4-5</b><span>打合せ〜会社連絡は同日対応が多いとされる。即日退職希望なら申込当日中に会社連絡実行。</span></div>
+        <div class="row"><b>ステップ 6</b><span>書類のやり取りは 2-4 週間程度。離職票は退職日後 10-14 日で発行が一般的とされる傾向。</span></div>
+        <div class="row"><b>ステップ 7</b><span>退職日確定後、離職票受領で完了。トータル 2-4 週間が一般的とされる傾向。</span></div>
       </div>
     </div>
   </section>
 
-  <section class="lp-section"><h2>騾閨ｷ莉｣陦後↓縺翫￠繧九梧ｵ√ｌ縲阪・蝓ｺ譛ｬ讒矩</h2><p>騾閨ｷ莉｣陦後↓縺翫￠繧九梧ｵ√ｌ縲阪→縺ｯ縲∝茜逕ｨ閠・′繧ｵ繝ｼ繝薙せ縺ｫ逶ｸ隲・・逕ｳ霎ｼ繧偵＠縺ｦ縺九ｉ縲∝ｮ滄圀縺ｫ騾閨ｷ縺悟ｮ御ｺ・☆繧九∪縺ｧ縺ｮ荳騾｣縺ｮ謇狗ｶ壹″繧剃ｽ鍋ｳｻ蛹悶＠縺溘ｂ縺ｮ縺ｧ縺吶・br>縺薙・繝励Ο繧ｻ繧ｹ縺ｯ縲∝茜逕ｨ閠・・縲碁閨ｷ縺励◆縺・阪→縺・≧諢乗昴ｒ縲∝ｰる摩縺ｮ莉｣陦梧･ｭ閠・′莉｣逅・ｺｺ縺ｾ縺溘・菴ｿ閠・→縺励※莨夂､ｾ縺ｫ莨晞＃縺励∝ｿ・ｦ√↑莠句漁謇狗ｶ壹″繧貞・貊代↓騾ｲ繧√ｋ縺薙→繧堤岼逧・→縺励※縺・∪縺吶・br>縺薙・繧ｵ繝ｼ繝薙せ縺ｮ譬ｹ蠎輔↓縺ｯ縲∝感蜒崎・・騾閨ｷ縺ｮ閾ｪ逕ｱ繧剃ｿ晞囿縺吶ｋ豌第ｳ慕ｬｬ627譚｡縺ｮ隕丞ｮ壹′縺ゅｊ縺ｾ縺吶・br>蜴夂函蜉ｴ蜒咲怐縺ｮ繧ｦ繧ｧ繝悶し繧､繝医〒繧ゅ∝感蜒榊･醍ｴ・・邨ゆｺ・↓髢｢縺吶ｋ繝ｫ繝ｼ繝ｫ縺梧・險倥＆繧後※縺翫ｊ縲・閨ｷ莉｣陦後し繝ｼ繝薙せ縺ｯ縺薙ｌ繧峨・豕慕噪縺ｪ譫邨・∩縺ｮ荳ｭ縺ｧ縲∝茜逕ｨ閠・・讓ｩ蛻ｩ陦御ｽｿ繧偵し繝昴・繝医☆繧九ｂ縺ｮ縺ｨ菴咲ｽｮ縺･縺代ｉ繧後※縺・∪縺吶・br>蝓ｺ譛ｬ逧・↑讒矩縺ｯ縲檎嶌隲・・螂醍ｴ・・螳溯｡娯・螳御ｺ・阪・4谿ｵ髫弱↓螟ｧ蛻･縺輔ｌ縲∝推繧ｹ繝・ャ繝励〒蛻ｩ逕ｨ閠・・荳榊ｮ峨ｒ蜿悶ｊ髯､縺阪↑縺後ｉ騾ｲ繧√ｉ繧後ｋ縺ｮ縺御ｸ闊ｬ逧・〒縺吶・/p></section>
+  <section class="lp-section"><h2>退職代行における「流れ」の基本構造</h2><p>退職代行における「流れ」とは、利用者がサービスに相談・申込をしてから、実際に退職が完了するまでの一連の手続きを体系化したものです。<br>このプロセスは、利用者の「退職したい」という意思を、専門の代行業者が代理人または使者として会社に伝達し、必要な事務手続きを円滑に進めることを目的としています。<br>このサービスの根底には、労働者の退職の自由を保障する民法第627条の規定があります。<br>厚生労働省のウェブサイトでも、労働契約の終了に関するルールが明記されており、退職代行サービスはこれらの法的な枠組みの中で、利用者の権利行使をサポートするものと位置づけられています。<br>基本的な構造は「相談→契約→実行→完了」の4段階に大別され、各ステップで利用者の不安を取り除きながら進められるのが一般的です。</p></section>
 
   <section class="lp-section alt" id="sec-4" aria-labelledby="h2-4">
     <div class="container">
       <p class="section-num">SECTION / 04</p>
-      <h2 id="h2-4">讌ｭ閠・∈縺ｳ 3 轤ｹ遒ｺ隱・/h2>
+      <h2 id="h2-4">業者選び 3 点確認</h2>
       <ol>
-        <li><strong>驕句霧荳ｻ菴・/strong>: 豌鷹俣驕句霧 (騾｣邨｡莉｣陦後・縺ｿ) / 蜉ｴ邨・°蝟ｶ (莠､貂牙庄) / 蠑∬ｭｷ螢ｫ驕句霧 (豕慕噪莉｣逅・庄) 縺ｮ驕輔＞繧堤炊隗｣縲ょｸ梧悍蟇ｾ蠢懃ｯ・峇縺ｧ驕ｸ謚槭・/li>
-        <li><strong>譁咎≡騾乗・諤ｧ</strong>: 蝓ｺ譛ｬ譁咎≡莉･螟悶・霑ｽ蜉雋ｻ逕ｨ (譛臥ｵｦ莠､貂・譛ｪ謇輔＞隲区ｱらｭ・ 縺ｮ譛臥┌繧剃ｺ句燕遒ｺ隱阪・/li>
-        <li><strong>繧ｵ繝昴・繝育ｯ・峇</strong>: 騾閨ｷ螳御ｺ・ｾ後・繝輔か繝ｭ繝ｼ (霆｢閨ｷ繧ｵ繝昴・繝・螟ｱ讌ｭ菫晞匱謇狗ｶ壽｡亥・遲・ 縺ｮ譛臥┌縲・/li>
+        <li><strong>運営主体</strong>: 民間運営 (連絡代行のみ) / 労組運営 (交渉可) / 弁護士運営 (法的代理可) の違いを理解。希望対応範囲で選択。</li>
+        <li><strong>料金透明性</strong>: 基本料金以外の追加費用 (有給交渉/未払い請求等) の有無を事前確認。</li>
+        <li><strong>サポート範囲</strong>: 退職完了後のフォロー (転職サポート/失業保険手続案内等) の有無。</li>
       </ol>
     </div>
   </section>
 
-  <section class="lp-section"><h2>逕ｳ霎ｼ縺九ｉ騾閨ｷ螳御ｺ・∪縺ｧ縺ｮ蜈ｷ菴鍋噪縺ｪ7繧ｹ繝・ャ繝・/h2><p>騾閨ｷ莉｣陦後し繝ｼ繝薙せ縺ｮ蛻ｩ逕ｨ縺ｯ縲∽ｸ闊ｬ逧・↓莉･荳九・7縺､縺ｮ繧ｹ繝・ャ繝励〒騾ｲ陦後＠縺ｾ縺吶・br>蜷・ｮｵ髫弱〒菴輔′陦後ｏ繧後ｋ縺九ｒ逅・ｧ｣縺励※縺翫￥縺薙→縺ｧ縲∝ｮ牙ｿ・＠縺ｦ繧ｵ繝ｼ繝薙せ繧貞茜逕ｨ縺吶ｋ縺薙→縺悟庄閭ｽ縺ｫ縺ｪ繧翫∪縺吶・br>迚ｹ縺ｫ縲∽ｺ句燕縺ｮ繝偵い繝ｪ繝ｳ繧ｰ縺ｧ莨昴∴繧九∋縺肴ュ蝣ｱ繧呈紛逅・＠縺ｦ縺翫￥縺薙→縺後√せ繝繝ｼ繧ｺ縺ｪ騾閨ｷ縺ｮ骰ｵ縺ｨ縺ｪ繧翫∪縺吶・br>蝗ｽ豌醍函豢ｻ繧ｻ繝ｳ繧ｿ繝ｼ縺ｸ縺ｮ逶ｸ隲・ｺ倶ｾ九〒繧ゅ∵･ｭ閠・→縺ｮ繧ｳ繝溘Η繝九こ繝ｼ繧ｷ繝ｧ繝ｳ荳崎ｶｳ縺後ヨ繝ｩ繝悶Ν縺ｮ荳蝗縺ｨ縺ｪ繧九こ繝ｼ繧ｹ縺悟ｱ蜻翫＆繧後※縺・ｋ縺溘ａ縲∝推繧ｹ繝・ャ繝励・遒ｺ隱阪・驥崎ｦ√〒縺吶・/p><ul><li><strong>繧ｹ繝・ャ繝・: 逶ｸ隲・・讌ｭ閠・∈螳・</strong> 隍・焚縺ｮ繧ｵ繝ｼ繝薙せ繧呈ｯ碑ｼ・＠縲´INE繧・Γ繝ｼ繝ｫ縺ｧ辟｡譁咏嶌隲・ｒ陦後＞縺ｾ縺吶・/li><li><strong>繧ｹ繝・ャ繝・: 逕ｳ霎ｼ縺ｿ:</strong> 蛻ｩ逕ｨ隕冗ｴ・↓蜷梧э縺励∫筏霎ｼ繝輔か繝ｼ繝縺ｫ蠢・ｦ∵ュ蝣ｱ繧貞・蜉帙＠縺ｾ縺吶・/li><li><strong>繧ｹ繝・ャ繝・: 譁咎≡縺ｮ謾ｯ謇輔＞:</strong> 驫陦梧険霎ｼ繧・け繝ｬ繧ｸ繝・ヨ繧ｫ繝ｼ繝峨〒繧ｵ繝ｼ繝薙せ譁咎≡繧呈髪謇輔＞縺ｾ縺吶・/li><li><strong>繧ｹ繝・ャ繝・: 繝偵い繝ｪ繝ｳ繧ｰ繝ｻ謇灘粋縺・</strong> 諡・ｽ楢・→騾閨ｷ譌･縲∽ｼ晞＃莠矩・∬ｿ泌唆迚ｩ縺ｪ縺ｩ譛邨ら｢ｺ隱阪ｒ陦後＞縺ｾ縺吶・/li><li><strong>繧ｹ繝・ャ繝・: 騾閨ｷ騾｣邨｡縺ｮ螳溯｡・</strong> 莉｣陦梧･ｭ閠・′莨夂､ｾ縺ｸ騾｣邨｡縺励・閨ｷ縺ｮ諢乗昴→蠢・ｦ∽ｺ矩・ｒ莨昴∴縺ｾ縺吶・/li><li><strong>繧ｹ繝・ャ繝・: 莨夂､ｾ縺ｨ縺ｮ繧・ｊ蜿悶ｊ莉｣陦・</strong> 騾閨ｷ螻翫・謠仙・繧・ｲｸ荳主刀縺ｮ霑泌唆縺ｪ縺ｩ繧剃ｻ｣陦梧･ｭ閠・ｵ檎罰縺ｧ陦後＞縺ｾ縺吶・/li><li><strong>繧ｹ繝・ャ繝・: 譖ｸ鬘槫女蜿悶・騾閨ｷ螳御ｺ・</strong> 髮｢閨ｷ逾ｨ繧・ｺ先ｳ牙ｾｴ蜿守･ｨ縺ｪ縺ｩ縺ｮ驥崎ｦ∵嶌鬘槭ｒ蜿励￠蜿悶ｊ縲∝・縺ｦ縺ｮ謇狗ｶ壹″縺悟ｮ御ｺ・＠縺ｾ縺吶・/li></ul><div class="benefit-summary" style="background:#f5f5dc;padding:1rem;border-left:4px solid #d4a373;margin:1rem 0;"><strong>庁 縺薙・繧ｵ繝ｼ繝薙せ繧呈､懆ｨ弱☆繧九Γ繝ｪ繝・ヨ (笘・44 竭｡):</strong><ul><li>邊ｾ逾樒噪縺ｪ雋諡・ｒ霆ｽ貂帙＠縲∝叉譌･騾閨ｷ縺ｫ蜷代￠縺滓焔邯壹″繧定ｿ・溘↓騾ｲ繧√ｉ繧後ｋ蜿ｯ閭ｽ諤ｧ縺梧悄蠕・〒縺阪∪縺吶・/li><li>蟆る摩螳ｶ縺御ｻ句惠縺吶ｋ縺薙→縺ｧ縲∽ｼ夂､ｾ縺ｨ縺ｮ逶ｴ謗･逧・↑繧・ｊ蜿悶ｊ繧帝∩縺代∵焔邯壹″縺ｮ騾乗・諤ｧ繧堤｢ｺ菫昴＠繧・☆縺上↑繧翫∪縺吶・/li><li>蜉ｴ蜒埼未騾｣豕穂ｻ､縺ｫ蝓ｺ縺･縺・◆驕ｩ蛻・↑騾閨ｷ謇狗ｶ壹″縺ｮ繧ｵ繝昴・繝医ｒ蜿励￠繧九％縺ｨ縺ｧ縲∝ｮ牙ｿ・＠縺ｦ谺｡縺ｮ繧ｭ繝｣繝ｪ繧｢縺ｸ騾ｲ繧貅門ｙ縺後〒縺阪∪縺吶・/li></ul></div></section>
+  <section class="lp-section"><h2>申込から退職完了までの具体的な7ステップ</h2><p>退職代行サービスの利用は、一般的に以下の7つのステップで進行します。<br>各段階で何が行われるかを理解しておくことで、安心してサービスを利用することが可能になります。<br>特に、事前のヒアリングで伝えるべき情報を整理しておくことが、スムーズな退職の鍵となります。<br>国民生活センターへの相談事例でも、業者とのコミュニケーション不足がトラブルの一因となるケースが報告されているため、各ステップの確認は重要です。</p><ul><li><strong>ステップ1: 相談・業者選定:</strong> 複数のサービスを比較し、LINEやメールで無料相談を行います。</li><li><strong>ステップ2: 申込み:</strong> 利用規約に同意し、申込フォームに必要情報を入力します。</li><li><strong>ステップ3: 料金の支払い:</strong> 銀行振込やクレジットカードでサービス料金を支払います。</li><li><strong>ステップ4: ヒアリング・打合せ:</strong> 担当者と退職日、伝達事項、返却物など最終確認を行います。</li><li><strong>ステップ5: 退職連絡の実行:</strong> 代行業者が会社へ連絡し、退職の意思と必要事項を伝えます。</li><li><strong>ステップ6: 会社とのやり取り代行:</strong> 退職届の提出や貸与品の返却などを代行業者経由で行います。</li><li><strong>ステップ7: 書類受取・退職完了:</strong> 離職票や源泉徴収票などの重要書類を受け取り、全ての手続きが完了します。</li></ul><div class="benefit-summary" style="background:#f5f5dc;padding:1rem;border-left:4px solid #d4a373;margin:1rem 0;"><strong>💡 このサービスを検討するメリット (★544 ②):</strong><ul><li>精神的な負担を軽減し、即日退職に向けた手続きを迅速に進められる可能性が期待できます。</li><li>専門家が介在することで、会社との直接的なやり取りを避け、手続きの透明性を確保しやすくなります。</li><li>労働関連法令に基づいた適切な退職手続きのサポートを受けることで、安心して次のキャリアへ進む準備ができます。</li></ul></div></section>
 
   <section class="lp-section alt" id="sec-6" aria-labelledby="h2-6">
     <div class="container">
       <p class="section-num">SECTION / 06</p>
-      <h2 id="h2-6">縺ｾ縺ｨ繧√・髢｢騾｣繧ｬ繧､繝・/h2>
-      <p>騾閨ｷ莉｣陦後・豬√ｌ縺ｯ <strong>7繧ｹ繝・ャ繝・(逶ｸ隲・・逕ｳ霎ｼ竊貞・驥鯛・謇灘粋縺帚・騾｣邨｡螳溯｡娯・譖ｸ鬘槫女蜿問・騾閨ｷ螳御ｺ・</strong> + 蜷・せ繝・ャ繝励〒縺ｮ貅門ｙ莠矩・+ 讌ｭ閠・∈縺ｳ 3 轤ｹ縺御ｸ闊ｬ逧・↑騾ｲ繧∵婿縺ｨ縺輔ｌ縺ｾ縺吶りｩｳ邏ｰ縺ｯ蜷・･ｭ閠・・蜈ｬ蠑丞・髢区ュ蝣ｱ繝ｻ豕慕噪逶ｸ隲・・豕輔ユ繝ｩ繧ｹ繧貞盾辣ｧ縺励※縺上□縺輔＞縲・/p>
+      <h2 id="h2-6">まとめ・関連ガイド</h2>
+      <p>退職代行の流れは <strong>7ステップ (相談→申込→入金→打合せ→連絡実行→書類受取→退職完了)</strong> + 各ステップでの準備事項 + 業者選び 3 点が一般的な進め方とされます。詳細は各業者の公式公開情報・法的相談は法テラスを参照してください。</p>
       <BannerAB pageSlug="taishoku-daikou-nagare" position="footer" />
-      <p class="compare-note">髢｢騾｣: <a href="/taishoku-daikou-hikitome/">蠑輔″豁｢繧∝ｯｾ蠢・/a> / <a href="/taishoku-daikou-gyousha-erabikata/">讌ｭ閠・∈縺ｳ譁ｹ</a> / <a href="/taishoku-shoumeisho-uketori/">騾閨ｷ險ｼ譏取嶌 蜿怜叙</a> / <a href="/shippai/">螟ｱ謨嶺ｾ・7 繝代ち繝ｼ繝ｳ</a></p>
+      <p class="compare-note">関連: <a href="/taishoku-daikou-hikitome/">引き止め対応</a> / <a href="/taishoku-daikou-gyousha-erabikata/">業者選び方</a> / <a href="/taishoku-shoumeisho-uketori/">退職証明書 受取</a> / <a href="/shippai/">失敗例 7 パターン</a></p>
     </div>
   </section>
 
   <section class="lp-section alt" id="sec-asp-pr" aria-labelledby="h2-asp-pr">
     <div class="container">
-      <p class="section-num">SECTION / PR繝ｻ蠎・相</p>
-      <h2 id="h2-asp-pr">縲娠R繝ｻ蠎・相縲鷹閨ｷ莉｣陦繰obs (譬ｪ蠑丈ｼ夂､ｾ繧｢繝ｬ繧ｹ) 縺ｮ蜈ｬ髢区ュ蝣ｱ謨ｴ逅・/h2>
-      <p class="section-lede"><strong>譛ｬ繧ｻ繧ｯ繧ｷ繝ｧ繝ｳ縺ｯ PR繝ｻ蠎・相譫</strong> 縺ｧ縺吶ゅい繝輔ぅ繝ｪ繧ｨ繧､繝亥ｺ・相縺ｨ縺励※縲碁閨ｷ莉｣陦繰obs (譬ｪ蠑丈ｼ夂､ｾ繧｢繝ｬ繧ｹ)縲阪・蜈ｬ髢区ュ蝣ｱ繧呈紛逅・＠縺ｦ縺・∪縺吶ゆｻ紋ｺ区･ｭ閠・→縺ｮ蜆ｪ蜉｣蛻､譁ｭ縺ｧ縺ｯ縺ｪ縺上∝ｺ・相荳ｻ縺ｮ蜈ｬ髢区ュ蝣ｱ縺ｨ縺励※蜿ら・縺上□縺輔＞縲・/p>
+      <p class="section-num">SECTION / PR・広告</p>
+      <h2 id="h2-asp-pr">【PR・広告】退職代行Jobs (株式会社アレス) の公開情報整理</h2>
+      <p class="section-lede"><strong>本セクションは PR・広告枠</strong> です。アフィリエイト広告として「退職代行Jobs (株式会社アレス)」の公開情報を整理しています。他事業者との優劣判断ではなく、広告主の公開情報として参照ください。</p>
       <div class="branch-grid">
-      <article class="branch"><span class="tag">迚ｹ蠕ｴ竭</span><h4>騾閨ｷ莉｣陦繰obs</h4><p>騾閨ｷ莉｣陦繰obs (譬ｪ蠑丈ｼ夂､ｾ繧｢繝ｬ繧ｹ驕句霧) 縺ｯ騾閨ｷ莉｣陦後し繝ｼ繝薙せ縺ｮ荳縺､縺ｨ縺輔ｌ繧句だ蜷代ゆｼ夂､ｾ縺ｨ縺ｮ騾｣邨｡繧剃ｻ｣陦後☆繧矩∈謚櫁い縺ｨ縺励※讀懆ｨ主ｯｾ雎｡縺ｨ縺輔ｌ縺ｦ縺・∪縺吶・/p></article>
-      <article class="branch"><span class="tag">迚ｹ蠕ｴ竭｡</span><h4>LINE逶ｸ隲・ｯｾ蠢・/h4><p>LINE 縺ｧ縺ｮ逶ｸ隲・ｯｾ蠢懊・蛯ｾ蜷代よｰ苓ｻｽ縺ｫ逶ｸ隲・〒縺阪ｋ驕ｸ謚櫁い縺ｨ縺輔ｌ繧句だ蜷代・/p></article>
-      <article class="branch"><span class="tag">迚ｹ蠕ｴ竭｢</span><h4>鬘ｧ蝠丞ｼ∬ｭｷ螢ｫ逶｣菫ｮ</h4><p>鬘ｧ蝠丞ｼ∬ｭｷ螢ｫ逶｣菫ｮ縺ｮ蛯ｾ蜷代よｳ慕噪繝医Λ繝悶Ν諛ｸ蠢ｵ縺ｮ縺ゅｋ譁ｹ縺ｮ讀懆ｨ取攝譁吶′荳闊ｬ逧・〒縺吶・/p></article>
-      <article class="branch"><span class="tag">迚ｹ蠕ｴ竭｣</span><h4>蜈ｨ蝗ｽ蟇ｾ蠢・/h4><p>蜈ｨ蝗ｽ蟇ｾ蠢懊・蛯ｾ蜷代ょ慍譁ｹ蝨ｨ菴剰・ｂ蛻ｩ逕ｨ蜿ｯ閭ｽ縺ｪ驕ｸ謚櫁い縺ｮ繧ｱ繝ｼ繧ｹ縺悟､壹￥隕九ｉ繧後∪縺吶・/p></article>
-      <article class="branch"><span class="tag">迚ｹ蠕ｴ竭､</span><h4>繝励Λ繧､繝舌す繝ｼ驟肴・</h4><p>蛟倶ｺｺ諠・ｱ菫晁ｭｷ豕暮・螳医・蛯ｾ蜷代ゆｼ夂､ｾ繝ｻ螳ｶ譌上↓繝舌Ξ縺ｫ縺上＞驟肴・縺後≠繧九→蜈ｬ陦ｨ縺輔ｌ縺ｦ縺・∪縺吶・/p></article>
-      <article class="branch"><span class="tag">豕ｨ諢・/span><h4>莠句燕遒ｺ隱肴耳螂ｨ莠矩・/h4><p>蜈ｷ菴鍋噪譁咎≡繝ｻ蟇ｾ蠢懃ｯ・峇繝ｻ謌仙粥莠倶ｾ九・蜈ｬ蠑丞・髢区ュ蝣ｱ縺ｧ遒ｺ隱肴耳螂ｨ縲ゅ・00%騾閨ｷ謌仙粥縲咲ｭ峨・譁ｭ螳壹・荳榊庄縺ｨ縺輔ｌ縺ｦ縺・∪縺吶・/p></article>
+      <article class="branch"><span class="tag">特徴①</span><h4>退職代行Jobs</h4><p>退職代行Jobs (株式会社アレス運営) は退職代行サービスの一つとされる傾向。会社との連絡を代行する選択肢として検討対象とされています。</p></article>
+      <article class="branch"><span class="tag">特徴②</span><h4>LINE相談対応</h4><p>LINE での相談対応の傾向。気軽に相談できる選択肢とされる傾向。</p></article>
+      <article class="branch"><span class="tag">特徴③</span><h4>顧問弁護士監修</h4><p>顧問弁護士監修の傾向。法的トラブル懸念のある方の検討材料が一般的です。</p></article>
+      <article class="branch"><span class="tag">特徴④</span><h4>全国対応</h4><p>全国対応の傾向。地方在住者も利用可能な選択肢のケースが多く見られます。</p></article>
+      <article class="branch"><span class="tag">特徴⑤</span><h4>プライバシー配慮</h4><p>個人情報保護法遵守の傾向。会社・家族にバレにくい配慮があると公表されています。</p></article>
+      <article class="branch"><span class="tag">注意</span><h4>事前確認推奨事項</h4><p>具体的料金・対応範囲・成功事例は公式公開情報で確認推奨。「100%退職成功」等の断定は不可とされています。</p></article>
       </div>
-      <div class="cta-block"><p class="cta-note"><span class="pr-tag">PR</span>騾閨ｷ莉｣陦繰obs (譬ｪ蠑丈ｼ夂､ｾ繧｢繝ｬ繧ｹ) 縺ｮ譛譁ｰ縺ｮ譚｡莉ｶ縺ｯ蜈ｬ蠑上し繧､繝医〒縺皮｢ｺ隱阪￥縺縺輔＞縲・/p><BannerAB pageSlug={"enhance-cta"} position="enhance" /><p class="btn-cta-sub">窶ｻ 蜈ｬ蠑上し繧､繝医↓驕ｷ遘ｻ縺励∪縺吶・/p></div>
+      <div class="cta-block"><p class="cta-note"><span class="pr-tag">PR</span>退職代行Jobs (株式会社アレス) の最新の条件は公式サイトでご確認ください。</p><BannerAB pageSlug={"enhance-cta"} position="enhance" /><p class="btn-cta-sub">※ 公式サイトに遷移します。</p></div>
     </div>
   </section>
 
   <section class="lp-section" id="sec-koteki-laws" aria-labelledby="h2-koteki-laws">
     <div class="container">
-      <p class="section-num">SECTION / 蜈ｬ逧・ｪ灘哨繝ｻ髢｢騾｣豕穂ｻ､</p>
-      <h2 id="h2-koteki-laws">蜈ｬ逧・ｪ灘哨繝ｻ髢｢騾｣豕穂ｻ､</h2>
-      <p class="section-lede">繝医Λ繝悶Ν譎ゅ・逍大撫譎ゅ・蜈ｬ逧・ｪ灘哨縺ｮ豢ｻ逕ｨ縺梧耳螂ｨ縺輔ｌ縺ｾ縺吶・/p>
+      <p class="section-num">SECTION / 公的窓口・関連法令</p>
+      <h2 id="h2-koteki-laws">公的窓口・関連法令</h2>
+      <p class="section-lede">トラブル時・疑問時は公的窓口の活用が推奨されます。</p>
       <ul>
-        <li><a href="https://www.mhlw.go.jp/general/sosiki/chihou/" target="_blank" rel="noopener">邱丞粋蜉ｴ蜒咲嶌隲・さ繝ｼ繝翫・</a> - 蜴夂函蜉ｴ蜒咲怐繝ｻ蜉ｴ蜒咲嶌隲・/li>
-        <li><a href="https://www.houterasu.or.jp/" target="_blank" rel="noopener">豕輔ユ繝ｩ繧ｹ</a> - 豕募ｾ狗嶌隲・/li>
-        <li><a href="https://www.bengoshi.or.jp/" target="_blank" rel="noopener">譌･譛ｬ蠑∬ｭｷ螢ｫ騾｣蜷井ｼ・/a> - 蠑∬ｭｷ螢ｫ逶ｸ隲・/li>
-        <li><a href="https://www.mhlw.go.jp/" target="_blank" rel="noopener">蜴夂函蜉ｴ蜒咲怐</a> - 蜉ｴ蜒榊渕貅匁ｳ慕屮逹｣</li>
-        <li>豸郁ｲｻ逕滓ｴｻ繧ｻ繝ｳ繧ｿ繝ｼ - 188 (縺・ｄ繧・) 縺ｧ譛蟇・ｊ繧ｻ繝ｳ繧ｿ繝ｼ譯亥・</li>
+        <li><a href="https://www.mhlw.go.jp/general/sosiki/chihou/" target="_blank" rel="noopener">総合労働相談コーナー</a> - 厚生労働省・労働相談</li>
+        <li><a href="https://www.houterasu.or.jp/" target="_blank" rel="noopener">法テラス</a> - 法律相談</li>
+        <li><a href="https://www.bengoshi.or.jp/" target="_blank" rel="noopener">日本弁護士連合会</a> - 弁護士相談</li>
+        <li><a href="https://www.mhlw.go.jp/" target="_blank" rel="noopener">厚生労働省</a> - 労働基準法監督</li>
+        <li>消費生活センター - 188 (いやや!) で最寄りセンター案内</li>
       </ul>
-      <p class="section-lede" style="margin-top:1rem">髢｢騾｣豕穂ｻ､: <strong>蜉ｴ蜒榊渕貅匁ｳ・/strong> (騾閨ｷ縺ｮ閾ｪ逕ｱ繝ｻ2騾ｱ髢灘燕逕ｳ蜻・繝ｻ<strong>豌第ｳ・627譚｡</strong> (譛滄俣螳壹ａ縺ｪ縺・寐逕ｨ縺ｮ隗｣邏・繝ｻ<strong>蠑∬ｭｷ螢ｫ豕・72譚｡</strong> (髱槫ｼ∬｡檎ぜ遖∵ｭ｢)繝ｻ<strong>蛟倶ｺｺ諠・ｱ菫晁ｭｷ豕・/strong>縲よ悽繝壹・繧ｸ縺ｯ蜈ｬ髢区ュ蝣ｱ縺ｮ謨ｴ逅・〒縺ゅｊ縲∫音螳壻ｺ区･ｭ閠・・蜈ｬ蠑上し繧､繝医〒縺ｯ縺ゅｊ縺ｾ縺帙ｓ縲ゅい繝輔ぅ繝ｪ繧ｨ繧､繝亥ｺ・相・・R・峨ｒ蜷ｫ縺ｿ縺ｾ縺吶・/p>
+      <p class="section-lede" style="margin-top:1rem">関連法令: <strong>労働基準法</strong> (退職の自由・2週間前申告)・<strong>民法 627条</strong> (期間定めない雇用の解約)・<strong>弁護士法 72条</strong> (非弁行為禁止)・<strong>個人情報保護法</strong>。本ページは公開情報の整理であり、特定事業者の公式サイトではありません。アフィリエイト広告（PR）を含みます。</p>
     </div>
   </section>
   <section class="lp-section" id="sec-related" aria-labelledby="related-h">
     <div class="container">
-      <p class="section-num">髢｢騾｣險倅ｺ・/p>
-      <h2 id="related-h">髢｢騾｣縺吶ｋ險倅ｺ・/h2>
+      <p class="section-num">関連記事</p>
+      <h2 id="related-h">関連する記事</h2>
       <ul class="related-links" style="line-height:1.9;">
-        <li><a href="https://taishoku-info.pages.dev/seishain-taishoku-daikou/">豁｣遉ｾ蜩｡縺ｮ騾閨ｷ莉｣陦後ぎ繧､繝会ｽ懷茜逕ｨ縺ｧ縺阪ｋ縺九・豬√ｌ繝ｻ豁｣遉ｾ蜩｡縺ｪ繧峨〒縺ｯ縺ｮ遒ｺ隱阪・繧､繝ｳ繝茨ｼ・026蟷ｴ迚医・PR・・/a></li>
-        <li><a href="https://taishoku-info.pages.dev/taishoku-daikou-50dai/">50莉｣縺ｮ騾閨ｷ莉｣陦鯉ｽ憺閨ｷ驥醍｢ｺ菫昴→谺｡縺ｮ繧ｭ繝｣繝ｪ繧｢縺ｮ驕ｸ縺ｳ譁ｹ繧呈紛逅・2026蟷ｴ迚医・PR)</a></li>
-        <li><a href="https://taishoku-info.pages.dev/taishoku-daikou-haken/">豢ｾ驕｣遉ｾ蜩｡縺ｮ騾閨ｷ莉｣陦後ぎ繧､繝会ｽ懈ｴｾ驕｣蜈・∈縺ｮ莨昴∴譁ｹ繝ｻ螂醍ｴ・悄髢薙・謇ｱ縺・・遒ｺ隱阪・繧､繝ｳ繝茨ｼ・026蟷ｴ迚医・PR・・/a></li>
-        <li><a href="https://taishoku-info.pages.dev/taishoku-daikou-hikitome/">騾閨ｷ莉｣陦後→蠑輔″豁｢繧∝ｯｾ蠢懶ｽ懈ｳ慕噪譬ｹ諡縺ｨ蝗樣∩遲厄ｼ・026蟷ｴ迚医・PR・・/a></li>
-        <li><a href="https://taishoku-info.pages.dev/taishoku-daikou-hiyo/">騾閨ｷ莉｣陦後・雋ｻ逕ｨ逶ｸ蝣ｴ縺ｨ蜀・ｨｳ謨ｴ逅・ｽ應ｾ｡譬ｼ蟶ｯ蛻･縺ｮ迚ｹ蠕ｴ縺ｨ繧ｵ繝ｼ繝薙せ遽・峇縺ｮ蜿り・ｼ・026蟷ｴ迚医・PR・・/a></li>
+        <li><a href="https://taishoku-info.pages.dev/seishain-taishoku-daikou/">正社員の退職代行ガイド｜利用できるか・流れ・正社員ならではの確認ポイント（2026年版・PR）</a></li>
+        <li><a href="https://taishoku-info.pages.dev/taishoku-daikou-50dai/">50代の退職代行｜退職金確保と次のキャリアの選び方を整理(2026年版・PR)</a></li>
+        <li><a href="https://taishoku-info.pages.dev/taishoku-daikou-haken/">派遣社員の退職代行ガイド｜派遣元への伝え方・契約期間の扱い・確認ポイント（2026年版・PR）</a></li>
+        <li><a href="https://taishoku-info.pages.dev/taishoku-daikou-hikitome/">退職代行と引き止め対応｜法的根拠と回避策（2026年版・PR）</a></li>
+        <li><a href="https://taishoku-info.pages.dev/taishoku-daikou-hiyo/">退職代行の費用相場と内訳整理｜価格帯別の特徴とサービス範囲の参考（2026年版・PR）</a></li>
       </ul>
     </div>
   </section>
@@ -159,32 +159,32 @@ const faq = [
 
 <!-- PERSPECTIVE_SOURCE_BOX_START -->
 <aside class="perspective-source" style="background:#fffbeb;border:1px solid #fde68a;padding:14px 18px;margin:24px 0;border-radius:6px;">
-  <div style="font-weight:600;color:#92400e;margin-bottom:6px;">剥 蛻､譁ｭ繝ｻ險ｺ譁ｭ 縺ｫ髢｢縺吶ｋ蜈ｬ逧・ョ繝ｼ繧ｿ</div>
-  <p style="margin:6px 0;font-size:0.92em;color:#451a03;">騾閨ｷ蛻､譁ｭ譎ゅ・豕慕噪逶ｸ隲・ｪ灘哨</p>
-  <p style="margin:4px 0;font-size:0.85em;"><a href="https://www.mhlw.go.jp/" rel="noopener" target="_blank" style="color:#0369a1;">蜃ｺ蜈ｸ: 蜉ｴ蜒榊渕貅也屮逹｣鄂ｲ</a></p>
+  <div style="font-weight:600;color:#92400e;margin-bottom:6px;">🔍 判断・診断 に関する公的データ</div>
+  <p style="margin:6px 0;font-size:0.92em;color:#451a03;">退職判断時の法的相談窓口</p>
+  <p style="margin:4px 0;font-size:0.85em;"><a href="https://www.mhlw.go.jp/" rel="noopener" target="_blank" style="color:#0369a1;">出典: 労働基準監督署</a></p>
 </aside>
 <!-- PERSPECTIVE_SOURCE_BOX_END -->
 
 <!-- PERSPECTIVE_DEEP_SECTION_START -->
 <aside class="perspective-deep" style="background:#f0f9ff;border:1px solid #93c5fd;padding:20px 24px;margin:32px 0;border-radius:8px;font-size:0.95em;line-height:1.7;">
-<div style="white-space:pre-wrap;">識 騾閨ｷ繝ｻ騾閨ｷ莉｣陦・繧堤炊隗｣縺吶ｋ: 莉｣陦後し繝ｼ繝薙せ 縺ｮ譛ｬ雉ｪ
+<div style="white-space:pre-wrap;">🎯 退職・退職代行 を理解する: 代行サービス の本質
 
-縲千峡閾ｪ蛻・梵: 騾閨ｷ繝ｻ騾閨ｷ莉｣陦・縺ｮ蛻､譁ｭ霆ｸ縲・
-騾閨ｷ繝ｻ騾閨ｷ莉｣陦・縺ｮ蛻ｩ逕ｨ縺ｯ縲∽ｻ｣陦後し繝ｼ繝薙せ 霆ｸ縺ｧ縺ｮ驕ｩ諤ｧ蛻､譁ｭ縺碁㍾隕√〒縺吶る閨ｷ讓ｩ蛻ｩ繝ｻ蜉ｴ蜒肴ｳ輔・蜈ｬ逧・嶌隲・ｪ灘哨縺ｧ縺ｮ邱丞粋蛻､譁ｭ縺後〒縺阪∪縺吶・
+【独自分析: 退職・退職代行 の判断軸】
+退職・退職代行 の利用は、代行サービス 軸での適性判断が重要です。退職権利・労働法・公的相談窓口での総合判断ができます。
 
-縲仙愛譁ｭ縺ｮ驥崎ｦ・3 隕ｳ轤ｹ縲・
-1. **驕ｩ蜷域ｧ**: 莉｣陦後し繝ｼ繝薙せ 縺ｨ 騾閨ｷ繝ｻ騾閨ｷ莉｣陦・縺ｮ迚ｹ諤ｧ荳閾ｴ
-2. **繧ｿ繧､繝溘Φ繧ｰ**: 騾閨ｷ繝ｻ騾閨ｷ莉｣陦・蛻ｩ逕ｨ縺ｮ繝吶せ繝医ち繧､繝溘Φ繧ｰ
-3. **莉｣譖ｿ讀懆ｨ・*: 莉夜∈謚櫁い縺ｨ縺ｮ豈碑ｼ・紛逅・
+【判断の重要 3 観点】
+1. **適合性**: 代行サービス と 退職・退職代行 の特性一致
+2. **タイミング**: 退職・退職代行 利用のベストタイミング
+3. **代替検討**: 他選択肢との比較整理
 
-縲色AQ: 騾閨ｷ繝ｻ騾閨ｷ莉｣陦・/ 莉｣陦後し繝ｼ繝薙せ / 豬√ｌ 縺ｮ蛻､譁ｭ縲・
-- Q. 騾閨ｷ繝ｻ騾閨ｷ莉｣陦・縺ｯ 莉｣陦後し繝ｼ繝薙せ 縺ｫ譛驕ｩ縺・
-- Q. 蛻ｩ逕ｨ繝吶せ繝医ち繧､繝溘Φ繧ｰ縺ｯ?
-- Q. 莉悶↓讀懆ｨ弱☆縺ｹ縺埼∈謚櫁い縺ｯ?
+【FAQ: 退職・退職代行 / 代行サービス / 流れ の判断】
+- Q. 退職・退職代行 は 代行サービス に最適か?
+- Q. 利用ベストタイミングは?
+- Q. 他に検討すべき選択肢は?
 
-縲仙・逧・ョ繝ｼ繧ｿ陬懷ｼｷ縲・
-騾閨ｷ蛻､譁ｭ譎ゅ・豕慕噪逶ｸ隲・ｪ灘哨
-[蜃ｺ蜈ｸ](https://www.mhlw.go.jp/)</div>
+【公的データ補強】
+退職判断時の法的相談窓口
+[出典](https://www.mhlw.go.jp/)</div>
 </aside>
 <!-- PERSPECTIVE_DEEP_SECTION_END -->
 </RichLayout>

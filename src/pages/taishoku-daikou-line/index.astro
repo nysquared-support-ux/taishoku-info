@@ -1,53 +1,53 @@
----
+﻿---
 import RichLayout from '../../layouts/RichLayout.astro';
 import PRBadge from '../../components/PRBadge.astro';
 import BannerAB from '../../components/BannerAB.astro';
 
-const title = 'LINEで完結する退職代行｜LINE対応の範囲・メリットと留意点の整理（2026年版・PR）';
-const description = 'LINEで相談・申込みができる退職代行サービスについて、LINE対応の一般的な範囲・メリットと留意点・運営形態ごとの対応範囲を、公開情報をもとに中立的に整理した情報提供記事です（PR・アフィリエイト広告を含みます）。';
+const title = 'LINE縺ｧ螳檎ｵ舌☆繧矩閨ｷ莉｣陦鯉ｽ廰INE蟇ｾ蠢懊・遽・峇繝ｻ繝｡繝ｪ繝・ヨ縺ｨ逡呎э轤ｹ縺ｮ謨ｴ逅・ｼ・026蟷ｴ迚医・PR・・;
+const description = 'LINE縺ｧ逶ｸ隲・・逕ｳ霎ｼ縺ｿ縺後〒縺阪ｋ騾閨ｷ莉｣陦後し繝ｼ繝薙せ縺ｫ縺､縺・※縲´INE蟇ｾ蠢懊・荳闊ｬ逧・↑遽・峇繝ｻ繝｡繝ｪ繝・ヨ縺ｨ逡呎э轤ｹ繝ｻ驕句霧蠖｢諷九＃縺ｨ縺ｮ蟇ｾ蠢懃ｯ・峇繧偵∝・髢区ュ蝣ｱ繧偵ｂ縺ｨ縺ｫ荳ｭ遶狗噪縺ｫ謨ｴ逅・＠縺滓ュ蝣ｱ謠蝉ｾ幄ｨ倅ｺ九〒縺呻ｼ・R繝ｻ繧｢繝輔ぅ繝ｪ繧ｨ繧､繝亥ｺ・相繧貞性縺ｿ縺ｾ縺呻ｼ峨・;
 
 const breadcrumb = [
-  { name: 'ホーム', url: '/' },
-  { name: 'LINEで完結する退職代行' },
+  { name: '繝帙・繝', url: '/' },
+  { name: 'LINE縺ｧ螳檎ｵ舌☆繧矩閨ｷ莉｣陦・ },
 ];
 
 const faq = [
-  { q: 'LINEのやり取りだけで、本当に退職は成立しますか？', a: 'はい、LINEでのやり取りのみで退職手続きが完結するサービスは存在します。労働契約の解約（退職）の意思表示は、法律上、特定の形式を要求されていません（民法第522条第2項参照）。そのため、代行業者を介したLINEでの通知も有効な意思表示となり得ると解されています。ただし、業者との契約内容は事前にしっかり確認することが重要です。' },
-  { q: 'LINEでの相談は無料ですか？どこから料金が発生しますか？', a: '多くの退職代行サービスでは、LINEでの初期相談や見積もりは無料で提供されています。料金は、正式に退職代行を依頼し、契約が成立した時点から発生するのが一般的です。通常、入金確認後に代行業務が開始されます。料金体系はサービスごとに異なるため、依頼前に必ず確認しましょう。' },
-  { q: 'LINEでのやり取りの記録は、トラブルの際に証拠として使えますか？', a: 'LINEでのやり取りは、スクリーンショット等で保存することで、サービス内容や合意事項の証拠として機能する可能性があります。万が一のトラブルに備え、重要なやり取りは記録しておくことが推奨されます。国民生活センターも、契約内容を記録として残すことの重要性を指摘しています。' },
-  { q: 'LINEで退職代行を依頼する際の注意点はありますか？', a: '手軽な反面、なりすましや情報漏洩のリスクもゼロではありません。公式アカウントであることを確認し、個人情報の送信には注意が必要です。また、弁護士法に抵触しないよう、非弁護士の業者が交渉事を行わないかなど、運営元が法令を遵守しているかを確認することが肝要です（弁護士法第72条）。' },
-  { q: '会社からの連絡もすべてLINEで代行してもらえますか？', a: '退職の意思伝達や事務的な連絡はLINE経由で代行されることが多いです。しかし、会社側が本人との直接対話を強く求めた場合や、貸与物の返却など物理的な手続きが必要な場合は、一部本人対応が必要になることもあります。対応範囲は業者によって異なるため、契約前に詳細を確認することが推奨されます。' },
+  { q: 'LINE縺ｮ繧・ｊ蜿悶ｊ縺縺代〒縲∵悽蠖薙↓騾閨ｷ縺ｯ謌千ｫ九＠縺ｾ縺吶°・・, a: '縺ｯ縺・´INE縺ｧ縺ｮ繧・ｊ蜿悶ｊ縺ｮ縺ｿ縺ｧ騾閨ｷ謇狗ｶ壹″縺悟ｮ檎ｵ舌☆繧九し繝ｼ繝薙せ縺ｯ蟄伜惠縺励∪縺吶ょ感蜒榊･醍ｴ・・隗｣邏・ｼ磯閨ｷ・峨・諢乗晁｡ｨ遉ｺ縺ｯ縲∵ｳ募ｾ倶ｸ翫∫音螳壹・蠖｢蠑上ｒ隕∵ｱゅ＆繧後※縺・∪縺帙ｓ・域ｰ第ｳ慕ｬｬ522譚｡隨ｬ2鬆・盾辣ｧ・峨ゅ◎縺ｮ縺溘ａ縲∽ｻ｣陦梧･ｭ閠・ｒ莉九＠縺櫚INE縺ｧ縺ｮ騾夂衍繧よ怏蜉ｹ縺ｪ諢乗晁｡ｨ遉ｺ縺ｨ縺ｪ繧雁ｾ励ｋ縺ｨ隗｣縺輔ｌ縺ｦ縺・∪縺吶ゅ◆縺縺励∵･ｭ閠・→縺ｮ螂醍ｴ・・螳ｹ縺ｯ莠句燕縺ｫ縺励▲縺九ｊ遒ｺ隱阪☆繧九％縺ｨ縺碁㍾隕√〒縺吶・ },
+  { q: 'LINE縺ｧ縺ｮ逶ｸ隲・・辟｡譁吶〒縺吶°・溘←縺薙°繧画侭驥代′逋ｺ逕溘＠縺ｾ縺吶°・・, a: '螟壹￥縺ｮ騾閨ｷ莉｣陦後し繝ｼ繝薙せ縺ｧ縺ｯ縲´INE縺ｧ縺ｮ蛻晄悄逶ｸ隲・ｄ隕狗ｩ阪ｂ繧翫・辟｡譁吶〒謠蝉ｾ帙＆繧後※縺・∪縺吶よ侭驥代・縲∵ｭ｣蠑上↓騾閨ｷ莉｣陦後ｒ萓晞ｼ縺励∝･醍ｴ・′謌千ｫ九＠縺滓凾轤ｹ縺九ｉ逋ｺ逕溘☆繧九・縺御ｸ闊ｬ逧・〒縺吶る壼ｸｸ縲∝・驥醍｢ｺ隱榊ｾ後↓莉｣陦梧･ｭ蜍吶′髢句ｧ九＆繧後∪縺吶よ侭驥台ｽ鍋ｳｻ縺ｯ繧ｵ繝ｼ繝薙せ縺斐→縺ｫ逡ｰ縺ｪ繧九◆繧√∽ｾ晞ｼ蜑阪↓蠢・★遒ｺ隱阪＠縺ｾ縺励ｇ縺・・ },
+  { q: 'LINE縺ｧ縺ｮ繧・ｊ蜿悶ｊ縺ｮ險倬鹸縺ｯ縲√ヨ繝ｩ繝悶Ν縺ｮ髫帙↓險ｼ諡縺ｨ縺励※菴ｿ縺医∪縺吶°・・, a: 'LINE縺ｧ縺ｮ繧・ｊ蜿悶ｊ縺ｯ縲√せ繧ｯ繝ｪ繝ｼ繝ｳ繧ｷ繝ｧ繝・ヨ遲峨〒菫晏ｭ倥☆繧九％縺ｨ縺ｧ縲√し繝ｼ繝薙せ蜀・ｮｹ繧・粋諢丈ｺ矩・・險ｼ諡縺ｨ縺励※讖溯・縺吶ｋ蜿ｯ閭ｽ諤ｧ縺後≠繧翫∪縺吶ゆｸ・′荳縺ｮ繝医Λ繝悶Ν縺ｫ蛯吶∴縲・㍾隕√↑繧・ｊ蜿悶ｊ縺ｯ險倬鹸縺励※縺翫￥縺薙→縺梧耳螂ｨ縺輔ｌ縺ｾ縺吶ょ嵜豌醍函豢ｻ繧ｻ繝ｳ繧ｿ繝ｼ繧ゅ∝･醍ｴ・・螳ｹ繧定ｨ倬鹸縺ｨ縺励※谿九☆縺薙→縺ｮ驥崎ｦ∵ｧ繧呈欠鞫倥＠縺ｦ縺・∪縺吶・ },
+  { q: 'LINE縺ｧ騾閨ｷ莉｣陦後ｒ萓晞ｼ縺吶ｋ髫帙・豕ｨ諢冗せ縺ｯ縺ゅｊ縺ｾ縺吶°・・, a: '謇玖ｻｽ縺ｪ蜿埼擇縲√↑繧翫☆縺ｾ縺励ｄ諠・ｱ貍乗ｴｩ縺ｮ繝ｪ繧ｹ繧ｯ繧ゅぞ繝ｭ縺ｧ縺ｯ縺ゅｊ縺ｾ縺帙ｓ縲ょ・蠑上い繧ｫ繧ｦ繝ｳ繝医〒縺ゅｋ縺薙→繧堤｢ｺ隱阪＠縲∝倶ｺｺ諠・ｱ縺ｮ騾∽ｿ｡縺ｫ縺ｯ豕ｨ諢上′蠢・ｦ√〒縺吶ゅ∪縺溘∝ｼ∬ｭｷ螢ｫ豕輔↓謚ｵ隗ｦ縺励↑縺・ｈ縺・・撼蠑∬ｭｷ螢ｫ縺ｮ讌ｭ閠・′莠､貂我ｺ九ｒ陦後ｏ縺ｪ縺・°縺ｪ縺ｩ縲・°蝟ｶ蜈・′豕穂ｻ､繧帝・螳医＠縺ｦ縺・ｋ縺九ｒ遒ｺ隱阪☆繧九％縺ｨ縺瑚・隕√〒縺呻ｼ亥ｼ∬ｭｷ螢ｫ豕慕ｬｬ72譚｡・峨・ },
+  { q: '莨夂､ｾ縺九ｉ縺ｮ騾｣邨｡繧ゅ☆縺ｹ縺ｦLINE縺ｧ莉｣陦後＠縺ｦ繧ゅｉ縺医∪縺吶°・・, a: '騾閨ｷ縺ｮ諢乗昜ｼ晞＃繧・ｺ句漁逧・↑騾｣邨｡縺ｯLINE邨檎罰縺ｧ莉｣陦後＆繧後ｋ縺薙→縺悟､壹＞縺ｧ縺吶ゅ＠縺九＠縲∽ｼ夂､ｾ蛛ｴ縺梧悽莠ｺ縺ｨ縺ｮ逶ｴ謗･蟇ｾ隧ｱ繧貞ｼｷ縺乗ｱゅａ縺溷ｴ蜷医ｄ縲∬ｲｸ荳守黄縺ｮ霑泌唆縺ｪ縺ｩ迚ｩ逅・噪縺ｪ謇狗ｶ壹″縺悟ｿ・ｦ√↑蝣ｴ蜷医・縲∽ｸ驛ｨ譛ｬ莠ｺ蟇ｾ蠢懊′蠢・ｦ√↓縺ｪ繧九％縺ｨ繧ゅ≠繧翫∪縺吶ょｯｾ蠢懃ｯ・峇縺ｯ讌ｭ閠・↓繧医▲縺ｦ逡ｰ縺ｪ繧九◆繧√∝･醍ｴ・燕縺ｫ隧ｳ邏ｰ繧堤｢ｺ隱阪☆繧九％縺ｨ縺梧耳螂ｨ縺輔ｌ縺ｾ縺吶・ },
 ];
 ---
 
-<RichLayout title={title} description={description} publishedDate="2026-05-23" modifiedDate="2026-05-23" breadcrumb={breadcrumb} faq={faq}>
+<RichLayout title={title} description={description} publishedDate="2026-05-23" breadcrumb={breadcrumb} faq={faq}>
 <!-- PERSPECTIVE_LEAD_BOX_START -->
 <aside class="perspective-lead" style="background:#f8fafc;border-left:4px solid #0ea5e9;padding:16px 20px;margin:24px 0;border-radius:6px;">
   <div style="display:flex;align-items:center;gap:8px;margin-bottom:8px;">
-    <span style="font-size:1.4em;">🔍</span>
-    <strong style="color:#0c4a6e;">この LP の独立価値</strong>
+    <span style="font-size:1.4em;">剥</span>
+    <strong style="color:#0c4a6e;">縺薙・ LP 縺ｮ迢ｬ遶倶ｾ｡蛟､</strong>
   </div>
-  <p style="margin:4px 0;font-size:0.95em;color:#0f172a;"><strong>視点 (Perspective):</strong> 判断・診断</p>
-  <p style="margin:4px 0;font-size:0.95em;color:#0f172a;"><strong>独自 angle:</strong> taishoku daikou line に焦点を当てた 判断・診断 視点の独自解説</p>
-  <p style="margin:4px 0;font-size:0.9em;color:#475569;"><strong>他 LP との違い:</strong> 他 LP が一般的に 判断・診断 全体を扱うのに対し、本 LP は taishoku-daikou-line に絞り込む</p>
+  <p style="margin:4px 0;font-size:0.95em;color:#0f172a;"><strong>隕也せ (Perspective):</strong> 蛻､譁ｭ繝ｻ險ｺ譁ｭ</p>
+  <p style="margin:4px 0;font-size:0.95em;color:#0f172a;"><strong>迢ｬ閾ｪ angle:</strong> taishoku daikou line 縺ｫ辟ｦ轤ｹ繧貞ｽ薙※縺・蛻､譁ｭ繝ｻ險ｺ譁ｭ 隕也せ縺ｮ迢ｬ閾ｪ隗｣隱ｬ</p>
+  <p style="margin:4px 0;font-size:0.9em;color:#475569;"><strong>莉・LP 縺ｨ縺ｮ驕輔＞:</strong> 莉・LP 縺御ｸ闊ｬ逧・↓ 蛻､譁ｭ繝ｻ險ｺ譁ｭ 蜈ｨ菴薙ｒ謇ｱ縺・・縺ｫ蟇ｾ縺励∵悽 LP 縺ｯ taishoku-daikou-line 縺ｫ邨槭ｊ霎ｼ繧</p>
 </aside>
 <!-- PERSPECTIVE_LEAD_BOX_END -->
 
   <section class="fv" aria-labelledby="fv-h1">
     <div class="container">
-      <span class="fv-pill">退職代行 / LINE完結の整理</span>
-      <h1 id="fv-h1"><span class="accent">LINEで完結する退職代行</span><br />LINE対応の範囲・メリットと留意点</h1>
-      <p class="lede">「電話が苦手」「文面でやり取りしたい」方へ。本記事では、LINEで相談・申込みができる退職代行について、LINE対応の一般的な範囲・メリットと留意点・運営形態ごとの対応範囲を、公開情報をもとに中立的に整理します。連絡手段と対応の質は別の要素として理解しておくことが推奨されます。</p>
+      <span class="fv-pill">騾閨ｷ莉｣陦・/ LINE螳檎ｵ舌・謨ｴ逅・/span>
+      <h1 id="fv-h1"><span class="accent">LINE縺ｧ螳檎ｵ舌☆繧矩閨ｷ莉｣陦・/span><br />LINE蟇ｾ蠢懊・遽・峇繝ｻ繝｡繝ｪ繝・ヨ縺ｨ逡呎э轤ｹ</h1>
+      <p class="lede">縲碁崕隧ｱ縺瑚協謇九阪梧枚髱｢縺ｧ繧・ｊ蜿悶ｊ縺励◆縺・肴婿縺ｸ縲よ悽險倅ｺ九〒縺ｯ縲´INE縺ｧ逶ｸ隲・・逕ｳ霎ｼ縺ｿ縺後〒縺阪ｋ騾閨ｷ莉｣陦後↓縺､縺・※縲´INE蟇ｾ蠢懊・荳闊ｬ逧・↑遽・峇繝ｻ繝｡繝ｪ繝・ヨ縺ｨ逡呎э轤ｹ繝ｻ驕句霧蠖｢諷九＃縺ｨ縺ｮ蟇ｾ蠢懃ｯ・峇繧偵∝・髢区ュ蝣ｱ繧偵ｂ縺ｨ縺ｫ荳ｭ遶狗噪縺ｫ謨ｴ逅・＠縺ｾ縺吶る｣邨｡謇区ｮｵ縺ｨ蟇ｾ蠢懊・雉ｪ縺ｯ蛻･縺ｮ隕∫ｴ縺ｨ縺励※逅・ｧ｣縺励※縺翫￥縺薙→縺梧耳螂ｨ縺輔ｌ縺ｾ縺吶・/p>
       <ul class="fv-bullets">
-        <li>LINE対応の一般的な範囲</li>
-        <li>LINE完結のメリットと留意点</li>
-        <li>運営形態別の対応範囲</li>
-        <li>利用前に確認したい3つのポイント</li>
+        <li>LINE蟇ｾ蠢懊・荳闊ｬ逧・↑遽・峇</li>
+        <li>LINE螳檎ｵ舌・繝｡繝ｪ繝・ヨ縺ｨ逡呎э轤ｹ</li>
+        <li>驕句霧蠖｢諷句挨縺ｮ蟇ｾ蠢懃ｯ・峇</li>
+        <li>蛻ｩ逕ｨ蜑阪↓遒ｺ隱阪＠縺溘＞3縺､縺ｮ繝昴う繝ｳ繝・/li>
       </ul>
       <PRBadge pageSlug="taishoku-daikou-line" />
       <div class="fv-meta">
-        <span><b>公開日</b> 2026-05-23</span><span><b>最終更新</b> 2026-05-23</span>
-        <span><b>編集</b> NY-squared 編集部</span><span><b>所要</b> 約 6 分</span>
+        <span><b>蜈ｬ髢区律</b> 2026-05-23</span><span><b>譛邨よ峩譁ｰ</b> 2026-05-23</span>
+        <span><b>邱ｨ髮・/b> NY-squared 邱ｨ髮・Κ</span><span><b>謇隕・/b> 邏・6 蛻・/span>
       </div>
     </div>
   </section>
@@ -55,13 +55,13 @@ const faq = [
   <section class="lp-section" id="sec-1" aria-labelledby="h2-1">
     <div class="container">
       <p class="section-num">SECTION / 01</p>
-      <h2 id="h2-1">LINE対応の一般的な範囲</h2>
-      <p class="section-lede">退職代行サービスのLINE対応は範囲がさまざまです。以下は公開情報の一般的整理です。</p>
+      <h2 id="h2-1">LINE蟇ｾ蠢懊・荳闊ｬ逧・↑遽・峇</h2>
+      <p class="section-lede">騾閨ｷ莉｣陦後し繝ｼ繝薙せ縺ｮLINE蟇ｾ蠢懊・遽・峇縺後＆縺ｾ縺悶∪縺ｧ縺吶ゆｻ･荳九・蜈ｬ髢区ュ蝣ｱ縺ｮ荳闊ｬ逧・紛逅・〒縺吶・/p>
       <div class="card-grid">
-        <div class="card"><h3>無料相談</h3><p>多くのサービスがLINEでの無料相談に対応しているとされ、状況の相談・料金や対応範囲の確認をLINE上で行えるとされています。</p></div>
-        <div class="card"><h3>申込み・打ち合わせ</h3><p>申込みや、退職希望日・要望の打ち合わせをLINEで進められるとされるサービスがあるとされています。</p></div>
-        <div class="card"><h3>進捗の連絡</h3><p>退職代行の実行状況や会社とのやり取りの結果を、LINEで連絡してもらえるとされるケースが一般的とされています。</p></div>
-        <div class="card"><h3>併用される手段</h3><p>支払い・本人確認・書類のやり取りなどで、LINE以外の手段を併用するケースもあるとされています。対応範囲は各サービスで異なります。</p></div>
+        <div class="card"><h3>辟｡譁咏嶌隲・/h3><p>螟壹￥縺ｮ繧ｵ繝ｼ繝薙せ縺鍬INE縺ｧ縺ｮ辟｡譁咏嶌隲・↓蟇ｾ蠢懊＠縺ｦ縺・ｋ縺ｨ縺輔ｌ縲∫憾豕√・逶ｸ隲・・譁咎≡繧・ｯｾ蠢懃ｯ・峇縺ｮ遒ｺ隱阪ｒLINE荳翫〒陦後∴繧九→縺輔ｌ縺ｦ縺・∪縺吶・/p></div>
+        <div class="card"><h3>逕ｳ霎ｼ縺ｿ繝ｻ謇薙■蜷医ｏ縺・/h3><p>逕ｳ霎ｼ縺ｿ繧・・閨ｷ蟶梧悍譌･繝ｻ隕∵悍縺ｮ謇薙■蜷医ｏ縺帙ｒLINE縺ｧ騾ｲ繧√ｉ繧後ｋ縺ｨ縺輔ｌ繧九し繝ｼ繝薙せ縺後≠繧九→縺輔ｌ縺ｦ縺・∪縺吶・/p></div>
+        <div class="card"><h3>騾ｲ謐励・騾｣邨｡</h3><p>騾閨ｷ莉｣陦後・螳溯｡檎憾豕√ｄ莨夂､ｾ縺ｨ縺ｮ繧・ｊ蜿悶ｊ縺ｮ邨先棡繧偵´INE縺ｧ騾｣邨｡縺励※繧ゅｉ縺医ｋ縺ｨ縺輔ｌ繧九こ繝ｼ繧ｹ縺御ｸ闊ｬ逧・→縺輔ｌ縺ｦ縺・∪縺吶・/p></div>
+        <div class="card"><h3>菴ｵ逕ｨ縺輔ｌ繧区焔谿ｵ</h3><p>謾ｯ謇輔＞繝ｻ譛ｬ莠ｺ遒ｺ隱阪・譖ｸ鬘槭・繧・ｊ蜿悶ｊ縺ｪ縺ｩ縺ｧ縲´INE莉･螟悶・謇区ｮｵ繧剃ｽｵ逕ｨ縺吶ｋ繧ｱ繝ｼ繧ｹ繧ゅ≠繧九→縺輔ｌ縺ｦ縺・∪縺吶ょｯｾ蠢懃ｯ・峇縺ｯ蜷・し繝ｼ繝薙せ縺ｧ逡ｰ縺ｪ繧翫∪縺吶・/p></div>
       </div>
       <BannerAB pageSlug="taishoku-daikou-line" position="hero" />
     </div>
@@ -70,110 +70,110 @@ const faq = [
   <section class="lp-section alt" id="sec-2">
     <div class="container">
       <p class="section-num">SECTION / 02</p>
-      <h2>LINE完結のメリットと留意点</h2>
+      <h2>LINE螳檎ｵ舌・繝｡繝ｪ繝・ヨ縺ｨ逡呎э轤ｹ</h2>
       <div class="card-grid">
-        <div class="card"><h3>メリット① 文面で落ち着いて相談できる</h3><p>電話が苦手な方でも、自分のペースで状況を整理しながら相談しやすいとされています。</p></div>
-        <div class="card"><h3>メリット② やり取りが記録に残る</h3><p>トーク履歴が残るため、相談内容や依頼事項を後から確認しやすいとされています。</p></div>
-        <div class="card"><h3>留意点① 重要事項は文面で確認</h3><p>料金の総額や対応範囲など重要な事項は、口頭ではなく文面で確認・記録しておくと認識のずれを防ぎやすいとされています。</p></div>
-        <div class="card"><h3>留意点② 連絡手段だけで判断しない</h3><p>LINE対応の有無は利便性の観点であり、運営形態や対応範囲とは別の要素として整理することが推奨されます。</p></div>
+        <div class="card"><h3>繝｡繝ｪ繝・ヨ竭 譁・擇縺ｧ關ｽ縺｡逹縺・※逶ｸ隲・〒縺阪ｋ</h3><p>髮ｻ隧ｱ縺瑚協謇九↑譁ｹ縺ｧ繧ゅ∬・蛻・・繝壹・繧ｹ縺ｧ迥ｶ豕√ｒ謨ｴ逅・＠縺ｪ縺後ｉ逶ｸ隲・＠繧・☆縺・→縺輔ｌ縺ｦ縺・∪縺吶・/p></div>
+        <div class="card"><h3>繝｡繝ｪ繝・ヨ竭｡ 繧・ｊ蜿悶ｊ縺瑚ｨ倬鹸縺ｫ谿九ｋ</h3><p>繝医・繧ｯ螻･豁ｴ縺梧ｮ九ｋ縺溘ａ縲∫嶌隲・・螳ｹ繧・ｾ晞ｼ莠矩・ｒ蠕後°繧臥｢ｺ隱阪＠繧・☆縺・→縺輔ｌ縺ｦ縺・∪縺吶・/p></div>
+        <div class="card"><h3>逡呎э轤ｹ竭 驥崎ｦ∽ｺ矩・・譁・擇縺ｧ遒ｺ隱・/h3><p>譁咎≡縺ｮ邱城｡阪ｄ蟇ｾ蠢懃ｯ・峇縺ｪ縺ｩ驥崎ｦ√↑莠矩・・縲∝哨鬆ｭ縺ｧ縺ｯ縺ｪ縺乗枚髱｢縺ｧ遒ｺ隱阪・險倬鹸縺励※縺翫￥縺ｨ隱崎ｭ倥・縺壹ｌ繧帝亟縺弱ｄ縺吶＞縺ｨ縺輔ｌ縺ｦ縺・∪縺吶・/p></div>
+        <div class="card"><h3>逡呎э轤ｹ竭｡ 騾｣邨｡謇区ｮｵ縺縺代〒蛻､譁ｭ縺励↑縺・/h3><p>LINE蟇ｾ蠢懊・譛臥┌縺ｯ蛻ｩ萓ｿ諤ｧ縺ｮ隕ｳ轤ｹ縺ｧ縺ゅｊ縲・°蝟ｶ蠖｢諷九ｄ蟇ｾ蠢懃ｯ・峇縺ｨ縺ｯ蛻･縺ｮ隕∫ｴ縺ｨ縺励※謨ｴ逅・☆繧九％縺ｨ縺梧耳螂ｨ縺輔ｌ縺ｾ縺吶・/p></div>
       </div>
-      <p class="compare-note">※ 上記は公開情報の一般的整理です。対応範囲・利便性はサービスにより異なります。</p>
+      <p class="compare-note">窶ｻ 荳願ｨ倥・蜈ｬ髢区ュ蝣ｱ縺ｮ荳闊ｬ逧・紛逅・〒縺吶ょｯｾ蠢懃ｯ・峇繝ｻ蛻ｩ萓ｿ諤ｧ縺ｯ繧ｵ繝ｼ繝薙せ縺ｫ繧医ｊ逡ｰ縺ｪ繧翫∪縺吶・/p>
     </div>
   </section>
 
-  <section class="lp-section"><h2>LINEで完結する退職代行の基本と仕組み</h2><p>LINEで完結する退職代行とは、相談から申し込み、会社への連絡、そして退職完了の報告まで、一連の手続きをLINEアプリ上で行うサービスを指します。<br>この手軽さは、電話や対面でのコミュニケーションに苦手意識がある方や、時間や場所を選ばずに手続きを進めたい方にとって大きな利点とされます。<br>法的な観点からは、労働者には退職の自由が保障されており、退職の意思表示に特定の方式は定められていません（民法第627条）。<br>そのため、代行業者が労働者の代理または使者としてLINEを通じて会社に意思表示を行うことも、原則として有効と解されています。<br>ただし、重要なのは代行業者の運営形態です。<br>弁護士が運営するサービスであれば会社との交渉も可能ですが、民間企業が運営する場合はこれらの「法律事務」を行うことは弁護士法で禁じられています。<br>利用を検討する際は、まず自身の状況を整理し、それに合った運営形態のサービスを選ぶことが重要であると、公開情報をもとに整理されます。</p></section>
+  <section class="lp-section"><h2>LINE縺ｧ螳檎ｵ舌☆繧矩閨ｷ莉｣陦後・蝓ｺ譛ｬ縺ｨ莉慕ｵ・∩</h2><p>LINE縺ｧ螳檎ｵ舌☆繧矩閨ｷ莉｣陦後→縺ｯ縲∫嶌隲・°繧臥筏縺苓ｾｼ縺ｿ縲∽ｼ夂､ｾ縺ｸ縺ｮ騾｣邨｡縲√◎縺励※騾閨ｷ螳御ｺ・・蝣ｱ蜻翫∪縺ｧ縲∽ｸ騾｣縺ｮ謇狗ｶ壹″繧鱈INE繧｢繝励Μ荳翫〒陦後≧繧ｵ繝ｼ繝薙せ繧呈欠縺励∪縺吶・br>縺薙・謇玖ｻｽ縺輔・縲・崕隧ｱ繧・ｯｾ髱｢縺ｧ縺ｮ繧ｳ繝溘Η繝九こ繝ｼ繧ｷ繝ｧ繝ｳ縺ｫ闍ｦ謇区э隴倥′縺ゅｋ譁ｹ繧・∵凾髢薙ｄ蝣ｴ謇繧帝∈縺ｰ縺壹↓謇狗ｶ壹″繧帝ｲ繧√◆縺・婿縺ｫ縺ｨ縺｣縺ｦ螟ｧ縺阪↑蛻ｩ轤ｹ縺ｨ縺輔ｌ縺ｾ縺吶・br>豕慕噪縺ｪ隕ｳ轤ｹ縺九ｉ縺ｯ縲∝感蜒崎・↓縺ｯ騾閨ｷ縺ｮ閾ｪ逕ｱ縺御ｿ晞囿縺輔ｌ縺ｦ縺翫ｊ縲・閨ｷ縺ｮ諢乗晁｡ｨ遉ｺ縺ｫ迚ｹ螳壹・譁ｹ蠑上・螳壹ａ繧峨ｌ縺ｦ縺・∪縺帙ｓ・域ｰ第ｳ慕ｬｬ627譚｡・峨・br>縺昴・縺溘ａ縲∽ｻ｣陦梧･ｭ閠・′蜉ｴ蜒崎・・莉｣逅・∪縺溘・菴ｿ閠・→縺励※LINE繧帝壹§縺ｦ莨夂､ｾ縺ｫ諢乗晁｡ｨ遉ｺ繧定｡後≧縺薙→繧ゅ∝次蜑・→縺励※譛牙柑縺ｨ隗｣縺輔ｌ縺ｦ縺・∪縺吶・br>縺溘□縺励・㍾隕√↑縺ｮ縺ｯ莉｣陦梧･ｭ閠・・驕句霧蠖｢諷九〒縺吶・br>蠑∬ｭｷ螢ｫ縺碁°蝟ｶ縺吶ｋ繧ｵ繝ｼ繝薙せ縺ｧ縺ゅｌ縺ｰ莨夂､ｾ縺ｨ縺ｮ莠､貂峨ｂ蜿ｯ閭ｽ縺ｧ縺吶′縲∵ｰ鷹俣莨∵･ｭ縺碁°蝟ｶ縺吶ｋ蝣ｴ蜷医・縺薙ｌ繧峨・縲梧ｳ募ｾ倶ｺ句漁縲阪ｒ陦後≧縺薙→縺ｯ蠑∬ｭｷ螢ｫ豕輔〒遖√§繧峨ｌ縺ｦ縺・∪縺吶・br>蛻ｩ逕ｨ繧呈､懆ｨ弱☆繧矩圀縺ｯ縲√∪縺夊・霄ｫ縺ｮ迥ｶ豕√ｒ謨ｴ逅・＠縲√◎繧後↓蜷医▲縺滄°蝟ｶ蠖｢諷九・繧ｵ繝ｼ繝薙せ繧帝∈縺ｶ縺薙→縺碁㍾隕√〒縺ゅｋ縺ｨ縲∝・髢区ュ蝣ｱ繧偵ｂ縺ｨ縺ｫ謨ｴ逅・＆繧後∪縺吶・/p></section>
 
   <section class="lp-section alt" id="sec-4">
     <div class="container">
       <p class="section-num">SECTION / 04</p>
-      <h2>利用前に確認したい3つのポイント</h2>
+      <h2>蛻ｩ逕ｨ蜑阪↓遒ｺ隱阪＠縺溘＞3縺､縺ｮ繝昴う繝ｳ繝・/h2>
       <div class="counter-box">
-        <h3>📌 申込み前のチェック（公開情報整理）</h3>
-        <div class="row"><b>4-1. LINE対応の範囲</b><span>相談のみか、申込み・打ち合わせ・進捗連絡までLINEで進められるかを確認します。</span></div>
-        <div class="row"><b>4-2. 運営形態と対応範囲</b><span>希望する対応（交渉の有無）が、その運営形態で可能かを確認します（<a href="https://elaws.e-gov.go.jp/document?lawid=324AC0000000205" target="_blank" rel="noopener">弁護士法第72条</a>関連）。</span></div>
-        <div class="row"><b>4-3. 料金総額の文面確認</b><span>「一律料金」でも追加費用が生じる場合があるとされます。総額をLINEの文面等で確認・記録することが推奨されます。</span></div>
-        <p style="margin-top:12px;font-size:13px;color:var(--c-text-sub,#4a5568);">※公開情報の整理です。実際の対応・料金は各サービス・時期で変動します。</p>
+        <h3>東 逕ｳ霎ｼ縺ｿ蜑阪・繝√ぉ繝・け・亥・髢区ュ蝣ｱ謨ｴ逅・ｼ・/h3>
+        <div class="row"><b>4-1. LINE蟇ｾ蠢懊・遽・峇</b><span>逶ｸ隲・・縺ｿ縺九∫筏霎ｼ縺ｿ繝ｻ謇薙■蜷医ｏ縺帙・騾ｲ謐鈴｣邨｡縺ｾ縺ｧLINE縺ｧ騾ｲ繧√ｉ繧後ｋ縺九ｒ遒ｺ隱阪＠縺ｾ縺吶・/span></div>
+        <div class="row"><b>4-2. 驕句霧蠖｢諷九→蟇ｾ蠢懃ｯ・峇</b><span>蟶梧悍縺吶ｋ蟇ｾ蠢懶ｼ井ｺ､貂峨・譛臥┌・峨′縲√◎縺ｮ驕句霧蠖｢諷九〒蜿ｯ閭ｽ縺九ｒ遒ｺ隱阪＠縺ｾ縺呻ｼ・a href="https://elaws.e-gov.go.jp/document?lawid=324AC0000000205" target="_blank" rel="noopener">蠑∬ｭｷ螢ｫ豕慕ｬｬ72譚｡</a>髢｢騾｣・峨・/span></div>
+        <div class="row"><b>4-3. 譁咎≡邱城｡阪・譁・擇遒ｺ隱・/b><span>縲御ｸ蠕区侭驥代阪〒繧りｿｽ蜉雋ｻ逕ｨ縺檎函縺倥ｋ蝣ｴ蜷医′縺ゅｋ縺ｨ縺輔ｌ縺ｾ縺吶らｷ城｡阪ｒLINE縺ｮ譁・擇遲峨〒遒ｺ隱阪・險倬鹸縺吶ｋ縺薙→縺梧耳螂ｨ縺輔ｌ縺ｾ縺吶・/span></div>
+        <p style="margin-top:12px;font-size:13px;color:var(--c-text-sub,#4a5568);">窶ｻ蜈ｬ髢区ュ蝣ｱ縺ｮ謨ｴ逅・〒縺吶ょｮ滄圀縺ｮ蟇ｾ蠢懊・譁咎≡縺ｯ蜷・し繝ｼ繝薙せ繝ｻ譎よ悄縺ｧ螟牙虚縺励∪縺吶・/p>
       </div>
     </div>
   </section>
 
-  <section class="lp-section"><h2>LINE退職代行の具体的な利用手順と留意点</h2><p>LINEで退職代行を利用する際の一般的な流れは、まず公式サイトからLINEの「友だち追加」を行うことから始まります。<br>その後、チャット形式で無料相談を行い、サービス内容や料金に納得できれば正式に申し込み、料金を支払います。<br>入金確認後、担当者が依頼者に代わって会社へ退職の意思を伝達します。<br>進捗状況はLINEで随時報告され、退職届の提出や貸与物の返却といった事務手続きの案内もLINE上で行われることが一般的です。<br>このプロセスにおける留意点として、本人確認の徹底、会社への伝達事項の正確な入力、そしてサービス対応範囲の事前確認が挙げられます。<br>特に契約内容については、後々のトラブルを避けるためにも、消費者庁が注意喚起するように、サービス利用前に十分に確認することが求められます。</p><ul><li>公式サイトからLINEアカウントを「友だち追加」する</li><li>無料相談で状況を伝え、見積もりやサービス内容を確認する</li><li>契約・支払いを済ませ、ヒアリングシート等に必要事項を記入する</li></ul><div class="benefit-summary" style="background:#f5f5dc;padding:1rem;border-left:4px solid #d4a373;margin:1rem 0;"><strong>💡 このサービスを検討するメリット (★544 ②):</strong><ul><li><strong>時間と場所の制約からの解放:</strong> 通勤中や休憩時間など、隙間時間を利用してスマホ一つで相談から依頼まで進められるため、多忙な方でもスムーズに退職準備ができる可能性が高まります。</li><li><strong>心理的負担の軽減:</strong> 上司と直接話す必要がなく、テキストベースでのやり取りが中心となるため、精神的なストレスを大幅に軽減することが期待されます。</li><li><strong>明確な記録の保持:</strong> やり取りがすべてテキストで残るため、「言った・言わない」のトラブルを避けやすく、安心して手続きを任せられるというメリットが考えられます。</li></ul></div></section>
+  <section class="lp-section"><h2>LINE騾閨ｷ莉｣陦後・蜈ｷ菴鍋噪縺ｪ蛻ｩ逕ｨ謇矩・→逡呎э轤ｹ</h2><p>LINE縺ｧ騾閨ｷ莉｣陦後ｒ蛻ｩ逕ｨ縺吶ｋ髫帙・荳闊ｬ逧・↑豬√ｌ縺ｯ縲√∪縺壼・蠑上し繧､繝医°繧鵜INE縺ｮ縲悟暑縺縺｡霑ｽ蜉縲阪ｒ陦後≧縺薙→縺九ｉ蟋九∪繧翫∪縺吶・br>縺昴・蠕後√メ繝｣繝・ヨ蠖｢蠑上〒辟｡譁咏嶌隲・ｒ陦後＞縲√し繝ｼ繝薙せ蜀・ｮｹ繧・侭驥代↓邏榊ｾ励〒縺阪ｌ縺ｰ豁｣蠑上↓逕ｳ縺苓ｾｼ縺ｿ縲∵侭驥代ｒ謾ｯ謇輔＞縺ｾ縺吶・br>蜈･驥醍｢ｺ隱榊ｾ後∵球蠖楢・′萓晞ｼ閠・↓莉｣繧上▲縺ｦ莨夂､ｾ縺ｸ騾閨ｷ縺ｮ諢乗昴ｒ莨晞＃縺励∪縺吶・br>騾ｲ謐礼憾豕√・LINE縺ｧ髫乗凾蝣ｱ蜻翫＆繧後・閨ｷ螻翫・謠仙・繧・ｲｸ荳守黄縺ｮ霑泌唆縺ｨ縺・▲縺滉ｺ句漁謇狗ｶ壹″縺ｮ譯亥・繧・INE荳翫〒陦後ｏ繧後ｋ縺薙→縺御ｸ闊ｬ逧・〒縺吶・br>縺薙・繝励Ο繧ｻ繧ｹ縺ｫ縺翫￠繧狗蕗諢冗せ縺ｨ縺励※縲∵悽莠ｺ遒ｺ隱阪・蠕ｹ蠎輔∽ｼ夂､ｾ縺ｸ縺ｮ莨晞＃莠矩・・豁｣遒ｺ縺ｪ蜈･蜉帙√◎縺励※繧ｵ繝ｼ繝薙せ蟇ｾ蠢懃ｯ・峇縺ｮ莠句燕遒ｺ隱阪′謖吶￡繧峨ｌ縺ｾ縺吶・br>迚ｹ縺ｫ螂醍ｴ・・螳ｹ縺ｫ縺､縺・※縺ｯ縲∝ｾ後・・繝医Λ繝悶Ν繧帝∩縺代ｋ縺溘ａ縺ｫ繧ゅ∵ｶ郁ｲｻ閠・ｺ√′豕ｨ諢丞繭襍ｷ縺吶ｋ繧医≧縺ｫ縲√し繝ｼ繝薙せ蛻ｩ逕ｨ蜑阪↓蜊∝・縺ｫ遒ｺ隱阪☆繧九％縺ｨ縺梧ｱゅａ繧峨ｌ縺ｾ縺吶・/p><ul><li>蜈ｬ蠑上し繧､繝医°繧鵜INE繧｢繧ｫ繧ｦ繝ｳ繝医ｒ縲悟暑縺縺｡霑ｽ蜉縲阪☆繧・/li><li>辟｡譁咏嶌隲・〒迥ｶ豕√ｒ莨昴∴縲∬ｦ狗ｩ阪ｂ繧翫ｄ繧ｵ繝ｼ繝薙せ蜀・ｮｹ繧堤｢ｺ隱阪☆繧・/li><li>螂醍ｴ・・謾ｯ謇輔＞繧呈ｸ医∪縺帙√ヲ繧｢繝ｪ繝ｳ繧ｰ繧ｷ繝ｼ繝育ｭ峨↓蠢・ｦ∽ｺ矩・ｒ險伜・縺吶ｋ</li></ul><div class="benefit-summary" style="background:#f5f5dc;padding:1rem;border-left:4px solid #d4a373;margin:1rem 0;"><strong>庁 縺薙・繧ｵ繝ｼ繝薙せ繧呈､懆ｨ弱☆繧九Γ繝ｪ繝・ヨ (笘・44 竭｡):</strong><ul><li><strong>譎る俣縺ｨ蝣ｴ謇縺ｮ蛻ｶ邏・°繧峨・隗｣謾ｾ:</strong> 騾壼共荳ｭ繧・ｼ第・譎る俣縺ｪ縺ｩ縲・囮髢捺凾髢薙ｒ蛻ｩ逕ｨ縺励※繧ｹ繝槭・荳縺､縺ｧ逶ｸ隲・°繧我ｾ晞ｼ縺ｾ縺ｧ騾ｲ繧√ｉ繧後ｋ縺溘ａ縲∝､壼ｿ吶↑譁ｹ縺ｧ繧ゅせ繝繝ｼ繧ｺ縺ｫ騾閨ｷ貅門ｙ縺後〒縺阪ｋ蜿ｯ閭ｽ諤ｧ縺碁ｫ倥∪繧翫∪縺吶・/li><li><strong>蠢・炊逧・ｲ諡・・霆ｽ貂・</strong> 荳雁昇縺ｨ逶ｴ謗･隧ｱ縺吝ｿ・ｦ√′縺ｪ縺上√ユ繧ｭ繧ｹ繝医・繝ｼ繧ｹ縺ｧ縺ｮ繧・ｊ蜿悶ｊ縺御ｸｭ蠢・→縺ｪ繧九◆繧√∫ｲｾ逾樒噪縺ｪ繧ｹ繝医Ξ繧ｹ繧貞､ｧ蟷・↓霆ｽ貂帙☆繧九％縺ｨ縺梧悄蠕・＆繧後∪縺吶・/li><li><strong>譏守｢ｺ縺ｪ險倬鹸縺ｮ菫晄戟:</strong> 繧・ｊ蜿悶ｊ縺後☆縺ｹ縺ｦ繝・く繧ｹ繝医〒谿九ｋ縺溘ａ縲√瑚ｨ縺｣縺溘・險繧上↑縺・阪・繝医Λ繝悶Ν繧帝∩縺代ｄ縺吶￥縲∝ｮ牙ｿ・＠縺ｦ謇狗ｶ壹″繧剃ｻｻ縺帙ｉ繧後ｋ縺ｨ縺・≧繝｡繝ｪ繝・ヨ縺瑚・∴繧峨ｌ縺ｾ縺吶・/li></ul></div></section>
 
   <section class="lp-section alt" id="sec-summary">
     <div class="container">
       <p class="section-num">SECTION / 06</p>
-      <h2>まとめ</h2>
-      <p>LINEで完結する退職代行は、無料相談・申込み・打ち合わせ・進捗連絡をLINE中心に進められるとされるサービスがある一方、支払いや本人確認で別手段を併用するケースもあり、対応範囲は各サービスにより異なります。<br>LINE対応は「文面で落ち着いて相談できる」「やり取りが記録に残る」といったメリットがあるとされますが、連絡手段の使いやすさとサービスの対応範囲は別の要素です。<br>運営形態（弁護士・労働組合・民間）により対応できる範囲が異なるため、LINEの利便性と希望する対応範囲の両方を踏まえて選ぶことが推奨されます。</p>
-      <p><strong>検討の行動3ステップ</strong>: <strong>STEP 1</strong> LINEで完結したい範囲（相談のみ／申込みまで）を整理 → <strong>STEP 2</strong> <a href="/osusume-hikaku/">比較ページ</a>で運営形態とLINE対応を確認し候補を絞込 → <strong>STEP 3</strong> 各社の無料相談（LINE可）で対応範囲・料金総額を確認し最終判断。</p>
-      <p style="font-size:13px;color:var(--c-text-mute,#6b7280);">※本記事は法的助言ではなく、特定業者を推奨するものでもありません。即日対応は <a href="/touji/">即日対応ページ</a>・会社からの連絡は <a href="/kaisha-renraku/">会社からの連絡ページ</a> もご参照ください。</p>
-      <PRBadge pageSlug="taishoku-daikou-line" label="退職代行サービスの公式サイトで無料相談する（PR）" />
+      <h2>縺ｾ縺ｨ繧・/h2>
+      <p>LINE縺ｧ螳檎ｵ舌☆繧矩閨ｷ莉｣陦後・縲∫┌譁咏嶌隲・・逕ｳ霎ｼ縺ｿ繝ｻ謇薙■蜷医ｏ縺帙・騾ｲ謐鈴｣邨｡繧鱈INE荳ｭ蠢・↓騾ｲ繧√ｉ繧後ｋ縺ｨ縺輔ｌ繧九し繝ｼ繝薙せ縺後≠繧倶ｸ譁ｹ縲∵髪謇輔＞繧・悽莠ｺ遒ｺ隱阪〒蛻･謇区ｮｵ繧剃ｽｵ逕ｨ縺吶ｋ繧ｱ繝ｼ繧ｹ繧ゅ≠繧翫∝ｯｾ蠢懃ｯ・峇縺ｯ蜷・し繝ｼ繝薙せ縺ｫ繧医ｊ逡ｰ縺ｪ繧翫∪縺吶・br>LINE蟇ｾ蠢懊・縲梧枚髱｢縺ｧ關ｽ縺｡逹縺・※逶ｸ隲・〒縺阪ｋ縲阪後ｄ繧雁叙繧翫′險倬鹸縺ｫ谿九ｋ縲阪→縺・▲縺溘Γ繝ｪ繝・ヨ縺後≠繧九→縺輔ｌ縺ｾ縺吶′縲・｣邨｡謇区ｮｵ縺ｮ菴ｿ縺・ｄ縺吶＆縺ｨ繧ｵ繝ｼ繝薙せ縺ｮ蟇ｾ蠢懃ｯ・峇縺ｯ蛻･縺ｮ隕∫ｴ縺ｧ縺吶・br>驕句霧蠖｢諷具ｼ亥ｼ∬ｭｷ螢ｫ繝ｻ蜉ｴ蜒咲ｵ・粋繝ｻ豌鷹俣・峨↓繧医ｊ蟇ｾ蠢懊〒縺阪ｋ遽・峇縺檎焚縺ｪ繧九◆繧√´INE縺ｮ蛻ｩ萓ｿ諤ｧ縺ｨ蟶梧悍縺吶ｋ蟇ｾ蠢懃ｯ・峇縺ｮ荳｡譁ｹ繧定ｸ上∪縺医※驕ｸ縺ｶ縺薙→縺梧耳螂ｨ縺輔ｌ縺ｾ縺吶・/p>
+      <p><strong>讀懆ｨ弱・陦悟虚3繧ｹ繝・ャ繝・/strong>: <strong>STEP 1</strong> LINE縺ｧ螳檎ｵ舌＠縺溘＞遽・峇・育嶌隲・・縺ｿ・冗筏霎ｼ縺ｿ縺ｾ縺ｧ・峨ｒ謨ｴ逅・竊・<strong>STEP 2</strong> <a href="/osusume-hikaku/">豈碑ｼ・・繝ｼ繧ｸ</a>縺ｧ驕句霧蠖｢諷九→LINE蟇ｾ蠢懊ｒ遒ｺ隱阪＠蛟呵｣懊ｒ邨櫁ｾｼ 竊・<strong>STEP 3</strong> 蜷・､ｾ縺ｮ辟｡譁咏嶌隲・ｼ・INE蜿ｯ・峨〒蟇ｾ蠢懃ｯ・峇繝ｻ譁咎≡邱城｡阪ｒ遒ｺ隱阪＠譛邨ょ愛譁ｭ縲・/p>
+      <p style="font-size:13px;color:var(--c-text-mute,#6b7280);">窶ｻ譛ｬ險倅ｺ九・豕慕噪蜉ｩ險縺ｧ縺ｯ縺ｪ縺上∫音螳壽･ｭ閠・ｒ謗ｨ螂ｨ縺吶ｋ繧ゅ・縺ｧ繧ゅ≠繧翫∪縺帙ｓ縲ょ叉譌･蟇ｾ蠢懊・ <a href="/touji/">蜊ｳ譌･蟇ｾ蠢懊・繝ｼ繧ｸ</a>繝ｻ莨夂､ｾ縺九ｉ縺ｮ騾｣邨｡縺ｯ <a href="/kaisha-renraku/">莨夂､ｾ縺九ｉ縺ｮ騾｣邨｡繝壹・繧ｸ</a> 繧ゅ＃蜿ら・縺上□縺輔＞縲・/p>
+      <PRBadge pageSlug="taishoku-daikou-line" label="騾閨ｷ莉｣陦後し繝ｼ繝薙せ縺ｮ蜈ｬ蠑上し繧､繝医〒辟｡譁咏嶌隲・☆繧具ｼ・R・・ />
     </div>
   </section>
 
   <section class="lp-section" id="sec-policy">
     <div class="container">
       <p class="section-num">SECTION / 07</p>
-      <h2>編集ポリシー（情報源・更新日・E-E-A-T）</h2>
+      <h2>邱ｨ髮・・繝ｪ繧ｷ繝ｼ・域ュ蝣ｱ貅舌・譖ｴ譁ｰ譌･繝ｻE-E-A-T・・/h2>
       <ul>
-        <li><strong>情報源</strong>: 政府公式 e-Gov 法令検索（民法・労働基準法・弁護士法）・厚生労働省公式サイト・各退職代行業者公式サイト</li>
-        <li><strong>編集方針</strong>: 一次情報優先・断定表現を避け推定値・公開情報の整理として記述</li>
-        <li><strong>更新頻度</strong>: 月次レビュー（法令改正・サービス内容変更時は随時更新）</li>
-        <li><strong>運営者</strong>: NY-squared（個人事業）<a href="/operator-info/">運営情報ページ</a> 参照</li>
-        <li><strong>E-E-A-T 4 原則</strong>: Experience（退職代行関連の公開情報整理）・Expertise（法令引用）・Authoritativeness（政府公式 + 業者公式の一次情報）・Trustworthiness（PR 表記 + 推定値明示 + 法的助言ではない注記）</li>
+        <li><strong>諠・ｱ貅・/strong>: 謾ｿ蠎懷・蠑・e-Gov 豕穂ｻ､讀懃ｴ｢・域ｰ第ｳ輔・蜉ｴ蜒榊渕貅匁ｳ輔・蠑∬ｭｷ螢ｫ豕包ｼ峨・蜴夂函蜉ｴ蜒咲怐蜈ｬ蠑上し繧､繝医・蜷・閨ｷ莉｣陦梧･ｭ閠・・蠑上し繧､繝・/li>
+        <li><strong>邱ｨ髮・婿驥・/strong>: 荳谺｡諠・ｱ蜆ｪ蜈医・譁ｭ螳夊｡ｨ迴ｾ繧帝∩縺第耳螳壼､繝ｻ蜈ｬ髢区ュ蝣ｱ縺ｮ謨ｴ逅・→縺励※險倩ｿｰ</li>
+        <li><strong>譖ｴ譁ｰ鬆ｻ蠎ｦ</strong>: 譛域ｬ｡繝ｬ繝薙Η繝ｼ・域ｳ穂ｻ､謾ｹ豁｣繝ｻ繧ｵ繝ｼ繝薙せ蜀・ｮｹ螟画峩譎ゅ・髫乗凾譖ｴ譁ｰ・・/li>
+        <li><strong>驕句霧閠・/strong>: NY-squared・亥倶ｺｺ莠区･ｭ・・a href="/operator-info/">驕句霧諠・ｱ繝壹・繧ｸ</a> 蜿ら・</li>
+        <li><strong>E-E-A-T 4 蜴溷援</strong>: Experience・磯閨ｷ莉｣陦碁未騾｣縺ｮ蜈ｬ髢区ュ蝣ｱ謨ｴ逅・ｼ峨・Expertise・域ｳ穂ｻ､蠑慕畑・峨・Authoritativeness・域帆蠎懷・蠑・+ 讌ｭ閠・・蠑上・荳谺｡諠・ｱ・峨・Trustworthiness・・R 陦ｨ險・+ 謗ｨ螳壼､譏守､ｺ + 豕慕噪蜉ｩ險縺ｧ縺ｯ縺ｪ縺・ｳｨ險假ｼ・/li>
       </ul>
-      <h2>出典・参考情報</h2>
+      <h2>蜃ｺ蜈ｸ繝ｻ蜿り・ュ蝣ｱ</h2>
       <ul>
-        <li><a href="https://www.mhlw.go.jp/" target="_blank" rel="noopener">厚生労働省</a>（労働相談窓口情報）</li>
-        <li><a href="https://elaws.e-gov.go.jp/document?lawid=324AC0000000205" target="_blank" rel="noopener">弁護士法第72条（非弁行為の禁止・e-Gov）</a></li>
-        <li><a href="https://elaws.e-gov.go.jp/document?lawid=129AC0000000089" target="_blank" rel="noopener">民法第627条（退職の権利・e-Gov）</a></li>
-        <li>各退職代行業者公式サイト・最新情報は各公式サイトでご確認ください</li>
+        <li><a href="https://www.mhlw.go.jp/" target="_blank" rel="noopener">蜴夂函蜉ｴ蜒咲怐</a>・亥感蜒咲嶌隲・ｪ灘哨諠・ｱ・・/li>
+        <li><a href="https://elaws.e-gov.go.jp/document?lawid=324AC0000000205" target="_blank" rel="noopener">蠑∬ｭｷ螢ｫ豕慕ｬｬ72譚｡・磯撼蠑∬｡檎ぜ縺ｮ遖∵ｭ｢繝ｻe-Gov・・/a></li>
+        <li><a href="https://elaws.e-gov.go.jp/document?lawid=129AC0000000089" target="_blank" rel="noopener">豌第ｳ慕ｬｬ627譚｡・磯閨ｷ縺ｮ讓ｩ蛻ｩ繝ｻe-Gov・・/a></li>
+        <li>蜷・閨ｷ莉｣陦梧･ｭ閠・・蠑上し繧､繝医・譛譁ｰ諠・ｱ縺ｯ蜷・・蠑上し繧､繝医〒縺皮｢ｺ隱阪￥縺縺輔＞</li>
       </ul>
-      <p style="font-size:12px;color:var(--c-text-mute,#6b7280);margin-top:16px;">※本記事は2026年5月時点の公開情報をもとに作成。最新の法令・サービス内容は各公式サイトでご確認ください。本ページはアフィリエイト広告（PR）を含みます。</p>
+      <p style="font-size:12px;color:var(--c-text-mute,#6b7280);margin-top:16px;">窶ｻ譛ｬ險倅ｺ九・2026蟷ｴ5譛域凾轤ｹ縺ｮ蜈ｬ髢区ュ蝣ｱ繧偵ｂ縺ｨ縺ｫ菴懈・縲よ怙譁ｰ縺ｮ豕穂ｻ､繝ｻ繧ｵ繝ｼ繝薙せ蜀・ｮｹ縺ｯ蜷・・蠑上し繧､繝医〒縺皮｢ｺ隱阪￥縺縺輔＞縲よ悽繝壹・繧ｸ縺ｯ繧｢繝輔ぅ繝ｪ繧ｨ繧､繝亥ｺ・相・・R・峨ｒ蜷ｫ縺ｿ縺ｾ縺吶・/p>
     </div>
   </section>
 
   <section class="lp-section alt" id="sec-asp-pr" aria-labelledby="h2-asp-pr">
     <div class="container">
-      <p class="section-num">SECTION / PR・広告</p>
-      <h2 id="h2-asp-pr">【PR・広告】退職代行Jobs (株式会社アレス) の公開情報整理</h2>
-      <p class="section-lede"><strong>本セクションは PR・広告枠</strong> です。アフィリエイト広告として「退職代行Jobs (株式会社アレス)」の公開情報を整理しています。他事業者との優劣判断ではなく、広告主の公開情報として参照ください。</p>
+      <p class="section-num">SECTION / PR繝ｻ蠎・相</p>
+      <h2 id="h2-asp-pr">縲娠R繝ｻ蠎・相縲鷹閨ｷ莉｣陦繰obs (譬ｪ蠑丈ｼ夂､ｾ繧｢繝ｬ繧ｹ) 縺ｮ蜈ｬ髢区ュ蝣ｱ謨ｴ逅・/h2>
+      <p class="section-lede"><strong>譛ｬ繧ｻ繧ｯ繧ｷ繝ｧ繝ｳ縺ｯ PR繝ｻ蠎・相譫</strong> 縺ｧ縺吶ゅい繝輔ぅ繝ｪ繧ｨ繧､繝亥ｺ・相縺ｨ縺励※縲碁閨ｷ莉｣陦繰obs (譬ｪ蠑丈ｼ夂､ｾ繧｢繝ｬ繧ｹ)縲阪・蜈ｬ髢区ュ蝣ｱ繧呈紛逅・＠縺ｦ縺・∪縺吶ゆｻ紋ｺ区･ｭ閠・→縺ｮ蜆ｪ蜉｣蛻､譁ｭ縺ｧ縺ｯ縺ｪ縺上∝ｺ・相荳ｻ縺ｮ蜈ｬ髢区ュ蝣ｱ縺ｨ縺励※蜿ら・縺上□縺輔＞縲・/p>
       <div class="branch-grid">
-      <article class="branch"><span class="tag">特徴①</span><h4>退職代行Jobs</h4><p>退職代行Jobs (株式会社アレス運営) は退職代行サービスの一つとされる傾向。会社との連絡を代行する選択肢として検討対象とされています。</p></article>
-      <article class="branch"><span class="tag">特徴②</span><h4>LINE相談対応</h4><p>LINE での相談対応の傾向。気軽に相談できる選択肢とされる傾向。</p></article>
-      <article class="branch"><span class="tag">特徴③</span><h4>顧問弁護士監修</h4><p>顧問弁護士監修の傾向。法的トラブル懸念のある方の検討材料が一般的です。</p></article>
-      <article class="branch"><span class="tag">特徴④</span><h4>全国対応</h4><p>全国対応の傾向。地方在住者も利用可能な選択肢のケースが多く見られます。</p></article>
-      <article class="branch"><span class="tag">特徴⑤</span><h4>プライバシー配慮</h4><p>個人情報保護法遵守の傾向。会社・家族にバレにくい配慮があると公表されています。</p></article>
-      <article class="branch"><span class="tag">注意</span><h4>事前確認推奨事項</h4><p>具体的料金・対応範囲・成功事例は公式公開情報で確認推奨。「100%退職成功」等の断定は不可とされています。</p></article>
+      <article class="branch"><span class="tag">迚ｹ蠕ｴ竭</span><h4>騾閨ｷ莉｣陦繰obs</h4><p>騾閨ｷ莉｣陦繰obs (譬ｪ蠑丈ｼ夂､ｾ繧｢繝ｬ繧ｹ驕句霧) 縺ｯ騾閨ｷ莉｣陦後し繝ｼ繝薙せ縺ｮ荳縺､縺ｨ縺輔ｌ繧句だ蜷代ゆｼ夂､ｾ縺ｨ縺ｮ騾｣邨｡繧剃ｻ｣陦後☆繧矩∈謚櫁い縺ｨ縺励※讀懆ｨ主ｯｾ雎｡縺ｨ縺輔ｌ縺ｦ縺・∪縺吶・/p></article>
+      <article class="branch"><span class="tag">迚ｹ蠕ｴ竭｡</span><h4>LINE逶ｸ隲・ｯｾ蠢・/h4><p>LINE 縺ｧ縺ｮ逶ｸ隲・ｯｾ蠢懊・蛯ｾ蜷代よｰ苓ｻｽ縺ｫ逶ｸ隲・〒縺阪ｋ驕ｸ謚櫁い縺ｨ縺輔ｌ繧句だ蜷代・/p></article>
+      <article class="branch"><span class="tag">迚ｹ蠕ｴ竭｢</span><h4>鬘ｧ蝠丞ｼ∬ｭｷ螢ｫ逶｣菫ｮ</h4><p>鬘ｧ蝠丞ｼ∬ｭｷ螢ｫ逶｣菫ｮ縺ｮ蛯ｾ蜷代よｳ慕噪繝医Λ繝悶Ν諛ｸ蠢ｵ縺ｮ縺ゅｋ譁ｹ縺ｮ讀懆ｨ取攝譁吶′荳闊ｬ逧・〒縺吶・/p></article>
+      <article class="branch"><span class="tag">迚ｹ蠕ｴ竭｣</span><h4>蜈ｨ蝗ｽ蟇ｾ蠢・/h4><p>蜈ｨ蝗ｽ蟇ｾ蠢懊・蛯ｾ蜷代ょ慍譁ｹ蝨ｨ菴剰・ｂ蛻ｩ逕ｨ蜿ｯ閭ｽ縺ｪ驕ｸ謚櫁い縺ｮ繧ｱ繝ｼ繧ｹ縺悟､壹￥隕九ｉ繧後∪縺吶・/p></article>
+      <article class="branch"><span class="tag">迚ｹ蠕ｴ竭､</span><h4>繝励Λ繧､繝舌す繝ｼ驟肴・</h4><p>蛟倶ｺｺ諠・ｱ菫晁ｭｷ豕暮・螳医・蛯ｾ蜷代ゆｼ夂､ｾ繝ｻ螳ｶ譌上↓繝舌Ξ縺ｫ縺上＞驟肴・縺後≠繧九→蜈ｬ陦ｨ縺輔ｌ縺ｦ縺・∪縺吶・/p></article>
+      <article class="branch"><span class="tag">豕ｨ諢・/span><h4>莠句燕遒ｺ隱肴耳螂ｨ莠矩・/h4><p>蜈ｷ菴鍋噪譁咎≡繝ｻ蟇ｾ蠢懃ｯ・峇繝ｻ謌仙粥莠倶ｾ九・蜈ｬ蠑丞・髢区ュ蝣ｱ縺ｧ遒ｺ隱肴耳螂ｨ縲ゅ・00%騾閨ｷ謌仙粥縲咲ｭ峨・譁ｭ螳壹・荳榊庄縺ｨ縺輔ｌ縺ｦ縺・∪縺吶・/p></article>
       </div>
-      <div class="cta-block"><p class="cta-note"><span class="pr-tag">PR</span>退職代行Jobs (株式会社アレス) の最新の条件は公式サイトでご確認ください。</p><BannerAB pageSlug={"enhance-cta"} position="enhance" /><p class="btn-cta-sub">※ 公式サイトに遷移します。</p></div>
+      <div class="cta-block"><p class="cta-note"><span class="pr-tag">PR</span>騾閨ｷ莉｣陦繰obs (譬ｪ蠑丈ｼ夂､ｾ繧｢繝ｬ繧ｹ) 縺ｮ譛譁ｰ縺ｮ譚｡莉ｶ縺ｯ蜈ｬ蠑上し繧､繝医〒縺皮｢ｺ隱阪￥縺縺輔＞縲・/p><BannerAB pageSlug={"enhance-cta"} position="enhance" /><p class="btn-cta-sub">窶ｻ 蜈ｬ蠑上し繧､繝医↓驕ｷ遘ｻ縺励∪縺吶・/p></div>
     </div>
   </section>
 
   <section class="lp-section" id="sec-koteki-laws" aria-labelledby="h2-koteki-laws">
     <div class="container">
-      <p class="section-num">SECTION / 公的窓口・関連法令</p>
-      <h2 id="h2-koteki-laws">公的窓口・関連法令</h2>
-      <p class="section-lede">トラブル時・疑問時は公的窓口の活用が推奨されます。</p>
+      <p class="section-num">SECTION / 蜈ｬ逧・ｪ灘哨繝ｻ髢｢騾｣豕穂ｻ､</p>
+      <h2 id="h2-koteki-laws">蜈ｬ逧・ｪ灘哨繝ｻ髢｢騾｣豕穂ｻ､</h2>
+      <p class="section-lede">繝医Λ繝悶Ν譎ゅ・逍大撫譎ゅ・蜈ｬ逧・ｪ灘哨縺ｮ豢ｻ逕ｨ縺梧耳螂ｨ縺輔ｌ縺ｾ縺吶・/p>
       <ul>
-        <li><a href="https://www.mhlw.go.jp/general/sosiki/chihou/" target="_blank" rel="noopener">総合労働相談コーナー</a> - 厚生労働省・労働相談</li>
-        <li><a href="https://www.houterasu.or.jp/" target="_blank" rel="noopener">法テラス</a> - 法律相談</li>
-        <li><a href="https://www.bengoshi.or.jp/" target="_blank" rel="noopener">日本弁護士連合会</a> - 弁護士相談</li>
-        <li><a href="https://www.mhlw.go.jp/" target="_blank" rel="noopener">厚生労働省</a> - 労働基準法監督</li>
-        <li>消費生活センター - 188 (いやや!) で最寄りセンター案内</li>
+        <li><a href="https://www.mhlw.go.jp/general/sosiki/chihou/" target="_blank" rel="noopener">邱丞粋蜉ｴ蜒咲嶌隲・さ繝ｼ繝翫・</a> - 蜴夂函蜉ｴ蜒咲怐繝ｻ蜉ｴ蜒咲嶌隲・/li>
+        <li><a href="https://www.houterasu.or.jp/" target="_blank" rel="noopener">豕輔ユ繝ｩ繧ｹ</a> - 豕募ｾ狗嶌隲・/li>
+        <li><a href="https://www.bengoshi.or.jp/" target="_blank" rel="noopener">譌･譛ｬ蠑∬ｭｷ螢ｫ騾｣蜷井ｼ・/a> - 蠑∬ｭｷ螢ｫ逶ｸ隲・/li>
+        <li><a href="https://www.mhlw.go.jp/" target="_blank" rel="noopener">蜴夂函蜉ｴ蜒咲怐</a> - 蜉ｴ蜒榊渕貅匁ｳ慕屮逹｣</li>
+        <li>豸郁ｲｻ逕滓ｴｻ繧ｻ繝ｳ繧ｿ繝ｼ - 188 (縺・ｄ繧・) 縺ｧ譛蟇・ｊ繧ｻ繝ｳ繧ｿ繝ｼ譯亥・</li>
       </ul>
-      <p class="section-lede" style="margin-top:1rem">関連法令: <strong>労働基準法</strong> (退職の自由・2週間前申告)・<strong>民法 627条</strong> (期間定めない雇用の解約)・<strong>弁護士法 72条</strong> (非弁行為禁止)・<strong>個人情報保護法</strong>。本ページは公開情報の整理であり、特定事業者の公式サイトではありません。アフィリエイト広告（PR）を含みます。</p>
+      <p class="section-lede" style="margin-top:1rem">髢｢騾｣豕穂ｻ､: <strong>蜉ｴ蜒榊渕貅匁ｳ・/strong> (騾閨ｷ縺ｮ閾ｪ逕ｱ繝ｻ2騾ｱ髢灘燕逕ｳ蜻・繝ｻ<strong>豌第ｳ・627譚｡</strong> (譛滄俣螳壹ａ縺ｪ縺・寐逕ｨ縺ｮ隗｣邏・繝ｻ<strong>蠑∬ｭｷ螢ｫ豕・72譚｡</strong> (髱槫ｼ∬｡檎ぜ遖∵ｭ｢)繝ｻ<strong>蛟倶ｺｺ諠・ｱ菫晁ｭｷ豕・/strong>縲よ悽繝壹・繧ｸ縺ｯ蜈ｬ髢区ュ蝣ｱ縺ｮ謨ｴ逅・〒縺ゅｊ縲∫音螳壻ｺ区･ｭ閠・・蜈ｬ蠑上し繧､繝医〒縺ｯ縺ゅｊ縺ｾ縺帙ｓ縲ゅい繝輔ぅ繝ｪ繧ｨ繧､繝亥ｺ・相・・R・峨ｒ蜷ｫ縺ｿ縺ｾ縺吶・/p>
     </div>
   </section>
   <section class="lp-section" id="sec-related" aria-labelledby="related-h">
     <div class="container">
-      <p class="section-num">関連記事</p>
-      <h2 id="related-h">関連する記事</h2>
+      <p class="section-num">髢｢騾｣險倅ｺ・/p>
+      <h2 id="related-h">髢｢騾｣縺吶ｋ險倅ｺ・/h2>
       <ul class="related-links" style="line-height:1.9;">
-        <li><a href="https://taishoku-info.pages.dev/seishain-taishoku-daikou/">正社員の退職代行ガイド｜利用できるか・流れ・正社員ならではの確認ポイント（2026年版・PR）</a></li>
-        <li><a href="https://taishoku-info.pages.dev/taishoku-daikou-50dai/">50代の退職代行｜退職金確保と次のキャリアの選び方を整理(2026年版・PR)</a></li>
-        <li><a href="https://taishoku-info.pages.dev/taishoku-daikou-haken/">派遣社員の退職代行ガイド｜派遣元への伝え方・契約期間の扱い・確認ポイント（2026年版・PR）</a></li>
-        <li><a href="https://taishoku-info.pages.dev/taishoku-daikou-hikitome/">退職代行と引き止め対応｜法的根拠と回避策（2026年版・PR）</a></li>
-        <li><a href="https://taishoku-info.pages.dev/taishoku-daikou-hiyo/">退職代行の費用相場と内訳整理｜価格帯別の特徴とサービス範囲の参考（2026年版・PR）</a></li>
+        <li><a href="https://taishoku-info.pages.dev/seishain-taishoku-daikou/">豁｣遉ｾ蜩｡縺ｮ騾閨ｷ莉｣陦後ぎ繧､繝会ｽ懷茜逕ｨ縺ｧ縺阪ｋ縺九・豬√ｌ繝ｻ豁｣遉ｾ蜩｡縺ｪ繧峨〒縺ｯ縺ｮ遒ｺ隱阪・繧､繝ｳ繝茨ｼ・026蟷ｴ迚医・PR・・/a></li>
+        <li><a href="https://taishoku-info.pages.dev/taishoku-daikou-50dai/">50莉｣縺ｮ騾閨ｷ莉｣陦鯉ｽ憺閨ｷ驥醍｢ｺ菫昴→谺｡縺ｮ繧ｭ繝｣繝ｪ繧｢縺ｮ驕ｸ縺ｳ譁ｹ繧呈紛逅・2026蟷ｴ迚医・PR)</a></li>
+        <li><a href="https://taishoku-info.pages.dev/taishoku-daikou-haken/">豢ｾ驕｣遉ｾ蜩｡縺ｮ騾閨ｷ莉｣陦後ぎ繧､繝会ｽ懈ｴｾ驕｣蜈・∈縺ｮ莨昴∴譁ｹ繝ｻ螂醍ｴ・悄髢薙・謇ｱ縺・・遒ｺ隱阪・繧､繝ｳ繝茨ｼ・026蟷ｴ迚医・PR・・/a></li>
+        <li><a href="https://taishoku-info.pages.dev/taishoku-daikou-hikitome/">騾閨ｷ莉｣陦後→蠑輔″豁｢繧∝ｯｾ蠢懶ｽ懈ｳ慕噪譬ｹ諡縺ｨ蝗樣∩遲厄ｼ・026蟷ｴ迚医・PR・・/a></li>
+        <li><a href="https://taishoku-info.pages.dev/taishoku-daikou-hiyo/">騾閨ｷ莉｣陦後・雋ｻ逕ｨ逶ｸ蝣ｴ縺ｨ蜀・ｨｳ謨ｴ逅・ｽ應ｾ｡譬ｼ蟶ｯ蛻･縺ｮ迚ｹ蠕ｴ縺ｨ繧ｵ繝ｼ繝薙せ遽・峇縺ｮ蜿り・ｼ・026蟷ｴ迚医・PR・・/a></li>
       </ul>
     </div>
   </section>
@@ -181,32 +181,32 @@ const faq = [
 
 <!-- PERSPECTIVE_SOURCE_BOX_START -->
 <aside class="perspective-source" style="background:#fffbeb;border:1px solid #fde68a;padding:14px 18px;margin:24px 0;border-radius:6px;">
-  <div style="font-weight:600;color:#92400e;margin-bottom:6px;">🔍 判断・診断 に関する公的データ</div>
-  <p style="margin:6px 0;font-size:0.92em;color:#451a03;">退職判断時の法的相談窓口</p>
-  <p style="margin:4px 0;font-size:0.85em;"><a href="https://www.mhlw.go.jp/" rel="noopener" target="_blank" style="color:#0369a1;">出典: 労働基準監督署</a></p>
+  <div style="font-weight:600;color:#92400e;margin-bottom:6px;">剥 蛻､譁ｭ繝ｻ險ｺ譁ｭ 縺ｫ髢｢縺吶ｋ蜈ｬ逧・ョ繝ｼ繧ｿ</div>
+  <p style="margin:6px 0;font-size:0.92em;color:#451a03;">騾閨ｷ蛻､譁ｭ譎ゅ・豕慕噪逶ｸ隲・ｪ灘哨</p>
+  <p style="margin:4px 0;font-size:0.85em;"><a href="https://www.mhlw.go.jp/" rel="noopener" target="_blank" style="color:#0369a1;">蜃ｺ蜈ｸ: 蜉ｴ蜒榊渕貅也屮逹｣鄂ｲ</a></p>
 </aside>
 <!-- PERSPECTIVE_SOURCE_BOX_END -->
 
 <!-- PERSPECTIVE_DEEP_SECTION_START -->
 <aside class="perspective-deep" style="background:#f0f9ff;border:1px solid #93c5fd;padding:20px 24px;margin:32px 0;border-radius:8px;font-size:0.95em;line-height:1.7;">
-<div style="white-space:pre-wrap;">🎯 退職・退職代行 を理解する: 代行サービス の本質
+<div style="white-space:pre-wrap;">識 騾閨ｷ繝ｻ騾閨ｷ莉｣陦・繧堤炊隗｣縺吶ｋ: 莉｣陦後し繝ｼ繝薙せ 縺ｮ譛ｬ雉ｪ
 
-【独自分析: 退職・退職代行 の判断軸】
-退職・退職代行 の利用は、代行サービス 軸での適性判断が重要です。退職権利・労働法・公的相談窓口での総合判断ができます。
+縲千峡閾ｪ蛻・梵: 騾閨ｷ繝ｻ騾閨ｷ莉｣陦・縺ｮ蛻､譁ｭ霆ｸ縲・
+騾閨ｷ繝ｻ騾閨ｷ莉｣陦・縺ｮ蛻ｩ逕ｨ縺ｯ縲∽ｻ｣陦後し繝ｼ繝薙せ 霆ｸ縺ｧ縺ｮ驕ｩ諤ｧ蛻､譁ｭ縺碁㍾隕√〒縺吶る閨ｷ讓ｩ蛻ｩ繝ｻ蜉ｴ蜒肴ｳ輔・蜈ｬ逧・嶌隲・ｪ灘哨縺ｧ縺ｮ邱丞粋蛻､譁ｭ縺後〒縺阪∪縺吶・
 
-【判断の重要 3 観点】
-1. **適合性**: 代行サービス と 退職・退職代行 の特性一致
-2. **タイミング**: 退職・退職代行 利用のベストタイミング
-3. **代替検討**: 他選択肢との比較整理
+縲仙愛譁ｭ縺ｮ驥崎ｦ・3 隕ｳ轤ｹ縲・
+1. **驕ｩ蜷域ｧ**: 莉｣陦後し繝ｼ繝薙せ 縺ｨ 騾閨ｷ繝ｻ騾閨ｷ莉｣陦・縺ｮ迚ｹ諤ｧ荳閾ｴ
+2. **繧ｿ繧､繝溘Φ繧ｰ**: 騾閨ｷ繝ｻ騾閨ｷ莉｣陦・蛻ｩ逕ｨ縺ｮ繝吶せ繝医ち繧､繝溘Φ繧ｰ
+3. **莉｣譖ｿ讀懆ｨ・*: 莉夜∈謚櫁い縺ｨ縺ｮ豈碑ｼ・紛逅・
 
-【FAQ: 退職・退職代行 / 代行サービス / Line の判断】
-- Q. 退職・退職代行 は 代行サービス に最適か?
-- Q. 利用ベストタイミングは?
-- Q. 他に検討すべき選択肢は?
+縲色AQ: 騾閨ｷ繝ｻ騾閨ｷ莉｣陦・/ 莉｣陦後し繝ｼ繝薙せ / Line 縺ｮ蛻､譁ｭ縲・
+- Q. 騾閨ｷ繝ｻ騾閨ｷ莉｣陦・縺ｯ 莉｣陦後し繝ｼ繝薙せ 縺ｫ譛驕ｩ縺・
+- Q. 蛻ｩ逕ｨ繝吶せ繝医ち繧､繝溘Φ繧ｰ縺ｯ?
+- Q. 莉悶↓讀懆ｨ弱☆縺ｹ縺埼∈謚櫁い縺ｯ?
 
-【公的データ補強】
-退職判断時の法的相談窓口
-[出典](https://www.mhlw.go.jp/)</div>
+縲仙・逧・ョ繝ｼ繧ｿ陬懷ｼｷ縲・
+騾閨ｷ蛻､譁ｭ譎ゅ・豕慕噪逶ｸ隲・ｪ灘哨
+[蜃ｺ蜈ｸ](https://www.mhlw.go.jp/)</div>
 </aside>
 <!-- PERSPECTIVE_DEEP_SECTION_END -->
 </RichLayout>

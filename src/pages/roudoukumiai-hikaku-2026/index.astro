@@ -1,69 +1,69 @@
----
+﻿---
 import RichLayout from '../../layouts/RichLayout.astro';
 import PRBadge from '../../components/PRBadge.astro';
 import BannerAB from '../../components/BannerAB.astro';
 
-const title = '退職代行の労働組合タイプとは？弁護士・民間との違いと選び方を完全解説2026年版（PR）';
-const description = '退職代行の労働組合タイプ（団体交渉権・即日加入・即日対応）の仕組みと5ケース別の使うべき判断基準・弁護士/民間との料金/対応範囲比較・法的根拠を公開情報ベースで整理した情報提供記事です（PR・アフィリエイト広告を含みます）。';
+const title = '騾閨ｷ莉｣陦後・蜉ｴ蜒咲ｵ・粋繧ｿ繧､繝励→縺ｯ・溷ｼ∬ｭｷ螢ｫ繝ｻ豌鷹俣縺ｨ縺ｮ驕輔＞縺ｨ驕ｸ縺ｳ譁ｹ繧貞ｮ悟・隗｣隱ｬ2026蟷ｴ迚茨ｼ・R・・;
+const description = '騾閨ｷ莉｣陦後・蜉ｴ蜒咲ｵ・粋繧ｿ繧､繝暦ｼ亥屮菴謎ｺ､貂画ｨｩ繝ｻ蜊ｳ譌･蜉蜈･繝ｻ蜊ｳ譌･蟇ｾ蠢懶ｼ峨・莉慕ｵ・∩縺ｨ5繧ｱ繝ｼ繧ｹ蛻･縺ｮ菴ｿ縺・∋縺榊愛譁ｭ蝓ｺ貅悶・蠑∬ｭｷ螢ｫ/豌鷹俣縺ｨ縺ｮ譁咎≡/蟇ｾ蠢懃ｯ・峇豈碑ｼ・・豕慕噪譬ｹ諡繧貞・髢区ュ蝣ｱ繝吶・繧ｹ縺ｧ謨ｴ逅・＠縺滓ュ蝣ｱ謠蝉ｾ幄ｨ倅ｺ九〒縺呻ｼ・R繝ｻ繧｢繝輔ぅ繝ｪ繧ｨ繧､繝亥ｺ・相繧貞性縺ｿ縺ｾ縺呻ｼ峨・;
 
 const breadcrumb = [
-  { name: 'ホーム', url: '/' },
-  { name: '退職代行', url: '/' },
-  { name: '労働組合比較2026' },
+  { name: '繝帙・繝', url: '/' },
+  { name: '騾閨ｷ莉｣陦・, url: '/' },
+  { name: '蜉ｴ蜒咲ｵ・粋豈碑ｼ・026' },
 ];
 
 const faq = [
-  { q: '労働組合の退職代行は本当に合法なのですか？', a: 'はい、労働組合による退職代行は、労働組合法で保障された「団体交渉権」を根拠としており、適法な活動とされます。労働者の代理として会社と交渉することは、同法で認められた組合の正当な活動です。ただし、訴訟対応など弁護士のみに許された業務は行えません。' },
-  { q: '労働組合に即日加入して、すぐに退職代行を依頼することは可能ですか？', a: '多くの労働組合型退職代行サービスでは、オンラインで加入手続きが完結し、即日での代行依頼が可能な体制を整えています。一般的には、ウェブサイトから申し込み後、担当者との簡単なヒアリングを経て、組合への加入と同時に会社への連絡を開始する流れとなります。' },
-  { q: '労働組合の退職代行では、どこまでの交渉が可能ですか？', a: '団体交渉権に基づき、退職の意思伝達、退職日の調整、有給休暇の消化、未払い給与の請求といった交渉が可能です。しかし、会社への損害賠償請求や、交渉が決裂した場合の法廷闘争といった裁判手続きは弁護士の独占業務であり、労働組合では対応できません。' },
-  { q: '会社から労働組合への加入を理由に不利益な扱いを受けませんか？', a: '労働組合法第7条では、労働者が労働組合の組合員であることを理由として解雇その他の不利益な取扱いをすることを「不当労働行為」として禁止しています。そのため、組合加入を理由に会社が不利益な扱いをすることは法律で禁じられており、労働者は保護されます。' },
-  { q: '弁護士や民間業者と比べ、労働組合を選ぶメリットは何ですか？', a: '最大のメリットは、弁護士に依頼するより費用を抑えつつ、民間業者にはない「団体交渉権」を行使できる点です。これにより、単なる意思伝達に留まらず、有給消化や未払い賃金に関する交渉が法的な後ろ盾をもって可能になります。コストと対応範囲のバランスを重視する場合に適した選択肢と言えるでしょう。' },
+  { q: '蜉ｴ蜒咲ｵ・粋縺ｮ騾閨ｷ莉｣陦後・譛ｬ蠖薙↓蜷域ｳ輔↑縺ｮ縺ｧ縺吶°・・, a: '縺ｯ縺・∝感蜒咲ｵ・粋縺ｫ繧医ｋ騾閨ｷ莉｣陦後・縲∝感蜒咲ｵ・粋豕輔〒菫晞囿縺輔ｌ縺溘悟屮菴謎ｺ､貂画ｨｩ縲阪ｒ譬ｹ諡縺ｨ縺励※縺翫ｊ縲・←豕輔↑豢ｻ蜍輔→縺輔ｌ縺ｾ縺吶ょ感蜒崎・・莉｣逅・→縺励※莨夂､ｾ縺ｨ莠､貂峨☆繧九％縺ｨ縺ｯ縲∝酔豕輔〒隱阪ａ繧峨ｌ縺溽ｵ・粋縺ｮ豁｣蠖薙↑豢ｻ蜍輔〒縺吶ゅ◆縺縺励∬ｨｴ險溷ｯｾ蠢懊↑縺ｩ蠑∬ｭｷ螢ｫ縺ｮ縺ｿ縺ｫ險ｱ縺輔ｌ縺滓･ｭ蜍吶・陦後∴縺ｾ縺帙ｓ縲・ },
+  { q: '蜉ｴ蜒咲ｵ・粋縺ｫ蜊ｳ譌･蜉蜈･縺励※縲√☆縺舌↓騾閨ｷ莉｣陦後ｒ萓晞ｼ縺吶ｋ縺薙→縺ｯ蜿ｯ閭ｽ縺ｧ縺吶°・・, a: '螟壹￥縺ｮ蜉ｴ蜒咲ｵ・粋蝙矩閨ｷ莉｣陦後し繝ｼ繝薙せ縺ｧ縺ｯ縲√が繝ｳ繝ｩ繧､繝ｳ縺ｧ蜉蜈･謇狗ｶ壹″縺悟ｮ檎ｵ舌＠縲∝叉譌･縺ｧ縺ｮ莉｣陦御ｾ晞ｼ縺悟庄閭ｽ縺ｪ菴灘宛繧呈紛縺医※縺・∪縺吶ゆｸ闊ｬ逧・↓縺ｯ縲√え繧ｧ繝悶し繧､繝医°繧臥筏縺苓ｾｼ縺ｿ蠕後∵球蠖楢・→縺ｮ邁｡蜊倥↑繝偵い繝ｪ繝ｳ繧ｰ繧堤ｵ後※縲∫ｵ・粋縺ｸ縺ｮ蜉蜈･縺ｨ蜷梧凾縺ｫ莨夂､ｾ縺ｸ縺ｮ騾｣邨｡繧帝幕蟋九☆繧区ｵ√ｌ縺ｨ縺ｪ繧翫∪縺吶・ },
+  { q: '蜉ｴ蜒咲ｵ・粋縺ｮ騾閨ｷ莉｣陦後〒縺ｯ縲√←縺薙∪縺ｧ縺ｮ莠､貂峨′蜿ｯ閭ｽ縺ｧ縺吶°・・, a: '蝗｣菴謎ｺ､貂画ｨｩ縺ｫ蝓ｺ縺･縺阪・閨ｷ縺ｮ諢乗昜ｼ晞＃縲・閨ｷ譌･縺ｮ隱ｿ謨ｴ縲∵怏邨ｦ莨第嚊縺ｮ豸亥喧縲∵悴謇輔＞邨ｦ荳弱・隲区ｱゅ→縺・▲縺滉ｺ､貂峨′蜿ｯ閭ｽ縺ｧ縺吶ゅ＠縺九＠縲∽ｼ夂､ｾ縺ｸ縺ｮ謳榊ｮｳ雉蜆溯ｫ区ｱゅｄ縲∽ｺ､貂峨′豎ｺ陬ゅ＠縺溷ｴ蜷医・豕募ｻｷ髣倅ｺ峨→縺・▲縺溯｣∝愛謇狗ｶ壹″縺ｯ蠑∬ｭｷ螢ｫ縺ｮ迢ｬ蜊讌ｭ蜍吶〒縺ゅｊ縲∝感蜒咲ｵ・粋縺ｧ縺ｯ蟇ｾ蠢懊〒縺阪∪縺帙ｓ縲・ },
+  { q: '莨夂､ｾ縺九ｉ蜉ｴ蜒咲ｵ・粋縺ｸ縺ｮ蜉蜈･繧堤炊逕ｱ縺ｫ荳榊茜逶翫↑謇ｱ縺・ｒ蜿励￠縺ｾ縺帙ｓ縺具ｼ・, a: '蜉ｴ蜒咲ｵ・粋豕慕ｬｬ7譚｡縺ｧ縺ｯ縲∝感蜒崎・′蜉ｴ蜒咲ｵ・粋縺ｮ邨・粋蜩｡縺ｧ縺ゅｋ縺薙→繧堤炊逕ｱ縺ｨ縺励※隗｣髮・◎縺ｮ莉悶・荳榊茜逶翫↑蜿匁桶縺・ｒ縺吶ｋ縺薙→繧偵御ｸ榊ｽ灘感蜒崎｡檎ぜ縲阪→縺励※遖∵ｭ｢縺励※縺・∪縺吶ゅ◎縺ｮ縺溘ａ縲∫ｵ・粋蜉蜈･繧堤炊逕ｱ縺ｫ莨夂､ｾ縺御ｸ榊茜逶翫↑謇ｱ縺・ｒ縺吶ｋ縺薙→縺ｯ豕募ｾ九〒遖√§繧峨ｌ縺ｦ縺翫ｊ縲∝感蜒崎・・菫晁ｭｷ縺輔ｌ縺ｾ縺吶・ },
+  { q: '蠑∬ｭｷ螢ｫ繧・ｰ鷹俣讌ｭ閠・→豈斐∋縲∝感蜒咲ｵ・粋繧帝∈縺ｶ繝｡繝ｪ繝・ヨ縺ｯ菴輔〒縺吶°・・, a: '譛螟ｧ縺ｮ繝｡繝ｪ繝・ヨ縺ｯ縲∝ｼ∬ｭｷ螢ｫ縺ｫ萓晞ｼ縺吶ｋ繧医ｊ雋ｻ逕ｨ繧呈椛縺医▽縺､縲∵ｰ鷹俣讌ｭ閠・↓縺ｯ縺ｪ縺・悟屮菴謎ｺ､貂画ｨｩ縲阪ｒ陦御ｽｿ縺ｧ縺阪ｋ轤ｹ縺ｧ縺吶ゅ％繧後↓繧医ｊ縲∝腰縺ｪ繧区э諤昜ｼ晞＃縺ｫ逡吶∪繧峨★縲∵怏邨ｦ豸亥喧繧・悴謇輔＞雉・≡縺ｫ髢｢縺吶ｋ莠､貂峨′豕慕噪縺ｪ蠕後ｍ逶ｾ繧偵ｂ縺｣縺ｦ蜿ｯ閭ｽ縺ｫ縺ｪ繧翫∪縺吶ゅさ繧ｹ繝医→蟇ｾ蠢懃ｯ・峇縺ｮ繝舌Λ繝ｳ繧ｹ繧帝㍾隕悶☆繧句ｴ蜷医↓驕ｩ縺励◆驕ｸ謚櫁い縺ｨ險縺医ｋ縺ｧ縺励ｇ縺・・ },
 ];
 
-// ★441-EXT 強化: 労働組合タイプ 3 サービス Service 構造化
+// 笘・41-EXT 蠑ｷ蛹・ 蜉ｴ蜒咲ｵ・粋繧ｿ繧､繝・3 繧ｵ繝ｼ繝薙せ Service 讒矩蛹・
 const itemListSchema = {
   '@context': 'https://schema.org',
   '@type': 'ItemList',
-  'name': '退職代行 労働組合タイプ 主要サービス比較',
-  'description': '労働組合運営または提携の退職代行サービス 3 件 (公開情報整理)',
+  'name': '騾閨ｷ莉｣陦・蜉ｴ蜒咲ｵ・粋繧ｿ繧､繝・荳ｻ隕√し繝ｼ繝薙せ豈碑ｼ・,
+  'description': '蜉ｴ蜒咲ｵ・粋驕句霧縺ｾ縺溘・謠先声縺ｮ騾閨ｷ莉｣陦後し繝ｼ繝薙せ 3 莉ｶ (蜈ｬ髢区ュ蝣ｱ謨ｴ逅・',
   'itemListOrder': 'https://schema.org/ItemListUnordered',
   'itemListElement': [
-    {'@type': 'ListItem', 'position': 1, 'item': {'@type': 'Service', 'name': '退職代行Jobs', 'serviceType': '合同労組 + 弁護士監修退職代行', 'description': '料金 ¥27,000・有給/残業代交渉対応・LINE 24h・全額返金保証', 'audience': {'@type': 'Audience', 'audienceType': '有給消化・残業代交渉が必要な正社員/契約社員'}}},
-    {'@type': 'ListItem', 'position': 2, 'item': {'@type': 'Service', 'name': '退職代行モームリ', 'serviceType': '労組提携 + 弁護士監修退職代行', 'description': '料金 ¥22,000 (正社員) / ¥12,000 (パート/アルバイト)・最安帯', 'audience': {'@type': 'Audience', 'audienceType': '料金重視・基本的な退職通知が必要なユーザー'}}},
-    {'@type': 'ListItem', 'position': 3, 'item': {'@type': 'Service', 'name': '退職代行ニコイチ', 'serviceType': '民間 + 弁護士監修退職代行', 'description': '料金 ¥27,000・創業 18 年実績豊富 (民間タイプだが比較対象)', 'audience': {'@type': 'Audience', 'audienceType': 'シンプル退職を希望するユーザー'}}},
+    {'@type': 'ListItem', 'position': 1, 'item': {'@type': 'Service', 'name': '騾閨ｷ莉｣陦繰obs', 'serviceType': '蜷亥酔蜉ｴ邨・+ 蠑∬ｭｷ螢ｫ逶｣菫ｮ騾閨ｷ莉｣陦・, 'description': '譁咎≡ ﾂ･27,000繝ｻ譛臥ｵｦ/谿区･ｭ莉｣莠､貂牙ｯｾ蠢懊・LINE 24h繝ｻ蜈ｨ鬘崎ｿ秘≡菫晁ｨｼ', 'audience': {'@type': 'Audience', 'audienceType': '譛臥ｵｦ豸亥喧繝ｻ谿区･ｭ莉｣莠､貂峨′蠢・ｦ√↑豁｣遉ｾ蜩｡/螂醍ｴ・､ｾ蜩｡'}}},
+    {'@type': 'ListItem', 'position': 2, 'item': {'@type': 'Service', 'name': '騾閨ｷ莉｣陦後Δ繝ｼ繝繝ｪ', 'serviceType': '蜉ｴ邨・署謳ｺ + 蠑∬ｭｷ螢ｫ逶｣菫ｮ騾閨ｷ莉｣陦・, 'description': '譁咎≡ ﾂ･22,000 (豁｣遉ｾ蜩｡) / ﾂ･12,000 (繝代・繝・繧｢繝ｫ繝舌う繝・繝ｻ譛螳牙ｸｯ', 'audience': {'@type': 'Audience', 'audienceType': '譁咎≡驥崎ｦ悶・蝓ｺ譛ｬ逧・↑騾閨ｷ騾夂衍縺悟ｿ・ｦ√↑繝ｦ繝ｼ繧ｶ繝ｼ'}}},
+    {'@type': 'ListItem', 'position': 3, 'item': {'@type': 'Service', 'name': '騾閨ｷ莉｣陦後ル繧ｳ繧､繝・, 'serviceType': '豌鷹俣 + 蠑∬ｭｷ螢ｫ逶｣菫ｮ騾閨ｷ莉｣陦・, 'description': '譁咎≡ ﾂ･27,000繝ｻ蜑ｵ讌ｭ 18 蟷ｴ螳溽ｸｾ雎雁ｯ・(豌鷹俣繧ｿ繧､繝励□縺梧ｯ碑ｼ・ｯｾ雎｡)', 'audience': {'@type': 'Audience', 'audienceType': '繧ｷ繝ｳ繝励Ν騾閨ｷ繧貞ｸ梧悍縺吶ｋ繝ｦ繝ｼ繧ｶ繝ｼ'}}},
   ],
 };
 ---
 
-<RichLayout title={title} description={description} publishedDate="2026-05-12" modifiedDate="2026-05-18" breadcrumb={breadcrumb} faq={faq}>
+<RichLayout title={title} description={description} publishedDate="2026-05-12" breadcrumb={breadcrumb} faq={faq}>
 <!-- PERSPECTIVE_LEAD_BOX_START -->
 <aside class="perspective-lead" style="background:#f8fafc;border-left:4px solid #0ea5e9;padding:16px 20px;margin:24px 0;border-radius:6px;">
   <div style="display:flex;align-items:center;gap:8px;margin-bottom:8px;">
-    <span style="font-size:1.4em;">⚖️</span>
-    <strong style="color:#0c4a6e;">この LP の独立価値</strong>
+    <span style="font-size:1.4em;">笞厄ｸ・/span>
+    <strong style="color:#0c4a6e;">縺薙・ LP 縺ｮ迢ｬ遶倶ｾ｡蛟､</strong>
   </div>
-  <p style="margin:4px 0;font-size:0.95em;color:#0f172a;"><strong>視点 (Perspective):</strong> 比較・選択</p>
-  <p style="margin:4px 0;font-size:0.95em;color:#0f172a;"><strong>独自 angle:</strong> roudoukumiai hikaku 2026 に焦点を当てた 比較・選択 視点の独自解説</p>
-  <p style="margin:4px 0;font-size:0.9em;color:#475569;"><strong>他 LP との違い:</strong> 他 LP が一般的に 比較・選択 全体を扱うのに対し、本 LP は roudoukumiai-hikaku-2026 に絞り込む</p>
+  <p style="margin:4px 0;font-size:0.95em;color:#0f172a;"><strong>隕也せ (Perspective):</strong> 豈碑ｼ・・驕ｸ謚・/p>
+  <p style="margin:4px 0;font-size:0.95em;color:#0f172a;"><strong>迢ｬ閾ｪ angle:</strong> roudoukumiai hikaku 2026 縺ｫ辟ｦ轤ｹ繧貞ｽ薙※縺・豈碑ｼ・・驕ｸ謚・隕也せ縺ｮ迢ｬ閾ｪ隗｣隱ｬ</p>
+  <p style="margin:4px 0;font-size:0.9em;color:#475569;"><strong>莉・LP 縺ｨ縺ｮ驕輔＞:</strong> 莉・LP 縺御ｸ闊ｬ逧・↓ 豈碑ｼ・・驕ｸ謚・蜈ｨ菴薙ｒ謇ｱ縺・・縺ｫ蟇ｾ縺励∵悽 LP 縺ｯ roudoukumiai-hikaku-2026 縺ｫ邨槭ｊ霎ｼ繧</p>
 </aside>
 <!-- PERSPECTIVE_LEAD_BOX_END -->
 
   <script type="application/ld+json" set:html={JSON.stringify(itemListSchema)}></script>
   <section class="fv" aria-labelledby="fv-h1">
     <div class="container">
-      <span class="fv-pill">退職代行 / 労働組合比較2026</span>
-      <h1 id="fv-h1"><span class="accent">退職代行の労働組合タイプとは？</span><br />弁護士・民間との違いと選び方を完全解説2026年版</h1>
-      <p class="lede">退職代行の労働組合タイプは <strong>団体交渉権 (労組法第6条) で有給消化・残業代交渉が可能</strong>・即日加入/対応・料金 2〜3 万円が特徴です。民間運営 (1〜3 万円・交渉権なし) と弁護士運営 (3〜6 万円・全範囲対応) のバランス型として推奨されます。</p>
+      <span class="fv-pill">騾閨ｷ莉｣陦・/ 蜉ｴ蜒咲ｵ・粋豈碑ｼ・026</span>
+      <h1 id="fv-h1"><span class="accent">騾閨ｷ莉｣陦後・蜉ｴ蜒咲ｵ・粋繧ｿ繧､繝励→縺ｯ・・/span><br />蠑∬ｭｷ螢ｫ繝ｻ豌鷹俣縺ｨ縺ｮ驕輔＞縺ｨ驕ｸ縺ｳ譁ｹ繧貞ｮ悟・隗｣隱ｬ2026蟷ｴ迚・/h1>
+      <p class="lede">騾閨ｷ莉｣陦後・蜉ｴ蜒咲ｵ・粋繧ｿ繧､繝励・ <strong>蝗｣菴謎ｺ､貂画ｨｩ (蜉ｴ邨・ｳ慕ｬｬ6譚｡) 縺ｧ譛臥ｵｦ豸亥喧繝ｻ谿区･ｭ莉｣莠､貂峨′蜿ｯ閭ｽ</strong>繝ｻ蜊ｳ譌･蜉蜈･/蟇ｾ蠢懊・譁咎≡ 2縲・ 荳・・縺檎音蠕ｴ縺ｧ縺吶よｰ鷹俣驕句霧 (1縲・ 荳・・繝ｻ莠､貂画ｨｩ縺ｪ縺・ 縺ｨ蠑∬ｭｷ螢ｫ驕句霧 (3縲・ 荳・・繝ｻ蜈ｨ遽・峇蟇ｾ蠢・ 縺ｮ繝舌Λ繝ｳ繧ｹ蝙九→縺励※謗ｨ螂ｨ縺輔ｌ縺ｾ縺吶・/p>
       <ul class="fv-bullets">
-        <li>労働組合タイプの仕組みと法的根拠</li>
-        <li>3 タイプ比較 (労働組合・弁護士・民間)</li>
-        <li>使うべき 5 つのケース</li>
-        <li>限界とデメリット + 代表サービス比較</li>
+        <li>蜉ｴ蜒咲ｵ・粋繧ｿ繧､繝励・莉慕ｵ・∩縺ｨ豕慕噪譬ｹ諡</li>
+        <li>3 繧ｿ繧､繝玲ｯ碑ｼ・(蜉ｴ蜒咲ｵ・粋繝ｻ蠑∬ｭｷ螢ｫ繝ｻ豌鷹俣)</li>
+        <li>菴ｿ縺・∋縺・5 縺､縺ｮ繧ｱ繝ｼ繧ｹ</li>
+        <li>髯千阜縺ｨ繝・Γ繝ｪ繝・ヨ + 莉｣陦ｨ繧ｵ繝ｼ繝薙せ豈碑ｼ・/li>
       </ul>
       <PRBadge pageSlug="roudoukumiai-hikaku-2026" />
       <div class="fv-meta">
-        <span><b>公開日</b> 2026-05-12</span><span><b>最終更新</b> 2026-05-18</span>
-        <span><b>編集</b> NY-squared 編集部</span><span><b>所要</b> 約 7 分</span>
+        <span><b>蜈ｬ髢区律</b> 2026-05-12</span><span><b>譛邨よ峩譁ｰ</b> 2026-05-18</span>
+        <span><b>邱ｨ髮・/b> NY-squared 邱ｨ髮・Κ</span><span><b>謇隕・/b> 邏・7 蛻・/span>
       </div>
     </div>
   </section>
@@ -71,15 +71,15 @@ const itemListSchema = {
   <section class="lp-section" id="sec-intro">
     <div class="container">
       <p class="section-num">SECTION / 00</p>
-      <h2>はじめに (PR表示・前提)</h2>
-      <p style="font-size:13px;color:var(--c-text-sub,#4a5568);">※本記事は公的機関・各退職代行サービス公式の公開情報整理であり、特定サービスを推奨するものではありません。<br /><strong>情報源</strong>: <a href="https://www.mhlw.go.jp/" target="_blank" rel="noopener">厚生労働省</a> ・<a href="https://elaws.e-gov.go.jp/document?lawid=324AC0000000174" target="_blank" rel="noopener">労組法 (e-Gov)</a> ・<a href="https://www.kokusen.go.jp/" target="_blank" rel="noopener">国民生活センター</a> ・各退職代行サービス公式 / <strong>最終レビュー日</strong>: 2026-05-12 / <strong>編集体制</strong>: NY-squared 編集部・公的機関一次情報優先 (<a href="/editorial-policy/">編集ポリシー</a> 参照)</p>
-      <p><strong>📢 PR表示</strong>: 本ページはアフィリエイト広告（PR）を含みます。本サイトは退職代行業者の公式サイトではなく、公開情報を整理した一般論ベースの情報提供サイトです。本記事は法的助言・効果保証ではなく、個別案件の判断は<strong>必ず弁護士・各業者にご相談ください</strong>。</p>
-      <p style="font-size:13px;color:var(--c-text-sub,#4a5568);">最終確認日: 2026-05-12 / 公開情報の整理であり、特定サービスを推奨するものではありません。<br />運営者: <a href="/operator-info/">NY-squared (個人事業)</a> / <a href="/editorial-policy/">編集ポリシー</a> / <a href="/privacy-policy/">プライバシーポリシー</a></p>
-      <p><strong>結論</strong>: 退職代行の労働組合タイプは <strong>団体交渉権 (労組法第6条) で有給消化・残業代交渉が可能</strong>・即日加入/対応・料金 2〜3 万円が特徴です。民間運営 (1〜3 万円・交渉権なし) と弁護士運営 (3〜6 万円・全範囲対応) のバランス型として推奨されます。</p>
-      <p>本記事では仕組みと法的根拠・5 ケース別の使うべき判断基準・3 タイプ比較・限界とデメリットを整理します。</p>
+      <h2>縺ｯ縺倥ａ縺ｫ (PR陦ｨ遉ｺ繝ｻ蜑肴署)</h2>
+      <p style="font-size:13px;color:var(--c-text-sub,#4a5568);">窶ｻ譛ｬ險倅ｺ九・蜈ｬ逧・ｩ滄未繝ｻ蜷・閨ｷ莉｣陦後し繝ｼ繝薙せ蜈ｬ蠑上・蜈ｬ髢区ュ蝣ｱ謨ｴ逅・〒縺ゅｊ縲∫音螳壹し繝ｼ繝薙せ繧呈耳螂ｨ縺吶ｋ繧ゅ・縺ｧ縺ｯ縺ゅｊ縺ｾ縺帙ｓ縲・br /><strong>諠・ｱ貅・/strong>: <a href="https://www.mhlw.go.jp/" target="_blank" rel="noopener">蜴夂函蜉ｴ蜒咲怐</a> 繝ｻ<a href="https://elaws.e-gov.go.jp/document?lawid=324AC0000000174" target="_blank" rel="noopener">蜉ｴ邨・ｳ・(e-Gov)</a> 繝ｻ<a href="https://www.kokusen.go.jp/" target="_blank" rel="noopener">蝗ｽ豌醍函豢ｻ繧ｻ繝ｳ繧ｿ繝ｼ</a> 繝ｻ蜷・閨ｷ莉｣陦後し繝ｼ繝薙せ蜈ｬ蠑・/ <strong>譛邨ゅΞ繝薙Η繝ｼ譌･</strong>: 2026-05-12 / <strong>邱ｨ髮・ｽ灘宛</strong>: NY-squared 邱ｨ髮・Κ繝ｻ蜈ｬ逧・ｩ滄未荳谺｡諠・ｱ蜆ｪ蜈・(<a href="/editorial-policy/">邱ｨ髮・・繝ｪ繧ｷ繝ｼ</a> 蜿ら・)</p>
+      <p><strong>討 PR陦ｨ遉ｺ</strong>: 譛ｬ繝壹・繧ｸ縺ｯ繧｢繝輔ぅ繝ｪ繧ｨ繧､繝亥ｺ・相・・R・峨ｒ蜷ｫ縺ｿ縺ｾ縺吶よ悽繧ｵ繧､繝医・騾閨ｷ莉｣陦梧･ｭ閠・・蜈ｬ蠑上し繧､繝医〒縺ｯ縺ｪ縺上∝・髢区ュ蝣ｱ繧呈紛逅・＠縺滉ｸ闊ｬ隲悶・繝ｼ繧ｹ縺ｮ諠・ｱ謠蝉ｾ帙し繧､繝医〒縺吶よ悽險倅ｺ九・豕慕噪蜉ｩ險繝ｻ蜉ｹ譫應ｿ晁ｨｼ縺ｧ縺ｯ縺ｪ縺上∝句挨譯井ｻｶ縺ｮ蛻､譁ｭ縺ｯ<strong>蠢・★蠑∬ｭｷ螢ｫ繝ｻ蜷・･ｭ閠・↓縺皮嶌隲・￥縺縺輔＞</strong>縲・/p>
+      <p style="font-size:13px;color:var(--c-text-sub,#4a5568);">譛邨ら｢ｺ隱肴律: 2026-05-12 / 蜈ｬ髢区ュ蝣ｱ縺ｮ謨ｴ逅・〒縺ゅｊ縲∫音螳壹し繝ｼ繝薙せ繧呈耳螂ｨ縺吶ｋ繧ゅ・縺ｧ縺ｯ縺ゅｊ縺ｾ縺帙ｓ縲・br />驕句霧閠・ <a href="/operator-info/">NY-squared (蛟倶ｺｺ莠区･ｭ)</a> / <a href="/editorial-policy/">邱ｨ髮・・繝ｪ繧ｷ繝ｼ</a> / <a href="/privacy-policy/">繝励Λ繧､繝舌す繝ｼ繝昴Μ繧ｷ繝ｼ</a></p>
+      <p><strong>邨占ｫ・/strong>: 騾閨ｷ莉｣陦後・蜉ｴ蜒咲ｵ・粋繧ｿ繧､繝励・ <strong>蝗｣菴謎ｺ､貂画ｨｩ (蜉ｴ邨・ｳ慕ｬｬ6譚｡) 縺ｧ譛臥ｵｦ豸亥喧繝ｻ谿区･ｭ莉｣莠､貂峨′蜿ｯ閭ｽ</strong>繝ｻ蜊ｳ譌･蜉蜈･/蟇ｾ蠢懊・譁咎≡ 2縲・ 荳・・縺檎音蠕ｴ縺ｧ縺吶よｰ鷹俣驕句霧 (1縲・ 荳・・繝ｻ莠､貂画ｨｩ縺ｪ縺・ 縺ｨ蠑∬ｭｷ螢ｫ驕句霧 (3縲・ 荳・・繝ｻ蜈ｨ遽・峇蟇ｾ蠢・ 縺ｮ繝舌Λ繝ｳ繧ｹ蝙九→縺励※謗ｨ螂ｨ縺輔ｌ縺ｾ縺吶・/p>
+      <p>譛ｬ險倅ｺ九〒縺ｯ莉慕ｵ・∩縺ｨ豕慕噪譬ｹ諡繝ｻ5 繧ｱ繝ｼ繧ｹ蛻･縺ｮ菴ｿ縺・∋縺榊愛譁ｭ蝓ｺ貅悶・3 繧ｿ繧､繝玲ｯ碑ｼ・・髯千阜縺ｨ繝・Γ繝ｪ繝・ヨ繧呈紛逅・＠縺ｾ縺吶・/p>
       <div class="counter-box">
-        <h3>🎯 労働組合タイプ 退職代行を確認</h3>
-        <div class="row"><b>サービス特性</b><span>完全無料相談 / LINE 24h 対応 / 即日加入・即日対応可</span></div>
+        <h3>識 蜉ｴ蜒咲ｵ・粋繧ｿ繧､繝・騾閨ｷ莉｣陦後ｒ遒ｺ隱・/h3>
+        <div class="row"><b>繧ｵ繝ｼ繝薙せ迚ｹ諤ｧ</b><span>螳悟・辟｡譁咏嶌隲・/ LINE 24h 蟇ｾ蠢・/ 蜊ｳ譌･蜉蜈･繝ｻ蜊ｳ譌･蟇ｾ蠢懷庄</span></div>
       </div>
       <BannerAB pageSlug="roudoukumiai-hikaku-2026" position="hero" />
     </div>
@@ -88,53 +88,53 @@ const itemListSchema = {
   <section class="lp-section alt" id="sec-1">
     <div class="container">
       <p class="section-num">SECTION / 01</p>
-      <h2>退職代行「労働組合タイプ」とは何か（仕組みと法的根拠）</h2>
-      <h3>1-1. 即日加入・即日対応の仕組み</h3>
-      <p>一般的に労働組合運営または提携の退職代行サービスでは、申し込み時にユーザーが <strong>労働組合に即日加入</strong> し、組合員として団体交渉権を行使する仕組みとされています。これにより民間運営では対応不可な交渉が可能になります。</p>
-      <h3>1-2. 団体交渉権でできること・できないこと</h3>
+      <h2>騾閨ｷ莉｣陦後悟感蜒咲ｵ・粋繧ｿ繧､繝励阪→縺ｯ菴輔°・井ｻ慕ｵ・∩縺ｨ豕慕噪譬ｹ諡・・/h2>
+      <h3>1-1. 蜊ｳ譌･蜉蜈･繝ｻ蜊ｳ譌･蟇ｾ蠢懊・莉慕ｵ・∩</h3>
+      <p>荳闊ｬ逧・↓蜉ｴ蜒咲ｵ・粋驕句霧縺ｾ縺溘・謠先声縺ｮ騾閨ｷ莉｣陦後し繝ｼ繝薙せ縺ｧ縺ｯ縲∫筏縺苓ｾｼ縺ｿ譎ゅ↓繝ｦ繝ｼ繧ｶ繝ｼ縺・<strong>蜉ｴ蜒咲ｵ・粋縺ｫ蜊ｳ譌･蜉蜈･</strong> 縺励∫ｵ・粋蜩｡縺ｨ縺励※蝗｣菴謎ｺ､貂画ｨｩ繧定｡御ｽｿ縺吶ｋ莉慕ｵ・∩縺ｨ縺輔ｌ縺ｦ縺・∪縺吶ゅ％繧後↓繧医ｊ豌鷹俣驕句霧縺ｧ縺ｯ蟇ｾ蠢應ｸ榊庄縺ｪ莠､貂峨′蜿ｯ閭ｽ縺ｫ縺ｪ繧翫∪縺吶・/p>
+      <h3>1-2. 蝗｣菴謎ｺ､貂画ｨｩ縺ｧ縺ｧ縺阪ｋ縺薙→繝ｻ縺ｧ縺阪↑縺・％縺ｨ</h3>
       <ul>
-        <li><strong>できること</strong>: 有給消化交渉・残業代未払い交渉・会社との退職条件交渉・組合員としての法的保護</li>
-        <li><strong>できないこと</strong>: 訴訟対応・損害賠償請求の法律行為・労働審判 (これらは弁護士運営必須)</li>
+        <li><strong>縺ｧ縺阪ｋ縺薙→</strong>: 譛臥ｵｦ豸亥喧莠､貂峨・谿区･ｭ莉｣譛ｪ謇輔＞莠､貂峨・莨夂､ｾ縺ｨ縺ｮ騾閨ｷ譚｡莉ｶ莠､貂峨・邨・粋蜩｡縺ｨ縺励※縺ｮ豕慕噪菫晁ｭｷ</li>
+        <li><strong>縺ｧ縺阪↑縺・％縺ｨ</strong>: 險ｴ險溷ｯｾ蠢懊・謳榊ｮｳ雉蜆溯ｫ区ｱゅ・豕募ｾ玖｡檎ぜ繝ｻ蜉ｴ蜒榊ｯｩ蛻､ (縺薙ｌ繧峨・蠑∬ｭｷ螢ｫ驕句霧蠢・・</li>
       </ul>
-      <p>法的根拠は <a href="https://elaws.e-gov.go.jp/document?lawid=324AC0000000174" target="_blank" rel="noopener">労働組合法 第6条</a> の団体交渉権・<a href="https://elaws.e-gov.go.jp/document?lawid=322AC0000000049" target="_blank" rel="noopener">労働基準法 第39条</a> の有給休暇取得権に基づくとされています。</p>
+      <p>豕慕噪譬ｹ諡縺ｯ <a href="https://elaws.e-gov.go.jp/document?lawid=324AC0000000174" target="_blank" rel="noopener">蜉ｴ蜒咲ｵ・粋豕・隨ｬ6譚｡</a> 縺ｮ蝗｣菴謎ｺ､貂画ｨｩ繝ｻ<a href="https://elaws.e-gov.go.jp/document?lawid=322AC0000000049" target="_blank" rel="noopener">蜉ｴ蜒榊渕貅匁ｳ・隨ｬ39譚｡</a> 縺ｮ譛臥ｵｦ莨第嚊蜿門ｾ玲ｨｩ縺ｫ蝓ｺ縺･縺上→縺輔ｌ縺ｦ縺・∪縺吶・/p>
     </div>
   </section>
 
-  <section class="lp-section"><h2>退職代行における労働組合の役割と法的根拠</h2><p>退職代行サービスにおける「労働組合タイプ」とは、労働組合法に基づき設立された労働組合が、組合員となった依頼者の代理人として会社側と退職に関する交渉を行うサービスを指します。<br>労働者が個人で会社と対等に交渉することは、心理的な負担や知識の面で困難な場合があります。<br>そこで、労働者の地位向上を目的とする労働組合が、憲法で保障された団結権や団体交渉権を背景に、本人に代わって退職手続きを進めます。<br>この「団体交渉権」が労働組合タイプの退職代行の核心であり、会社側は正当な理由なくこの交渉を拒否できないと労働組合法第7条で定められています。<br>これにより、単に退職の意思を伝えるだけでなく、有給休暇の取得や未払い賃金の支払いといった、労働条件に関する具体的な交渉を行うことが可能になると一般に解されています。<br>これは、あくまで「使者」として意思伝達を行う民間業者との大きな違いです。</p></section>
+  <section class="lp-section"><h2>騾閨ｷ莉｣陦後↓縺翫￠繧句感蜒咲ｵ・粋縺ｮ蠖ｹ蜑ｲ縺ｨ豕慕噪譬ｹ諡</h2><p>騾閨ｷ莉｣陦後し繝ｼ繝薙せ縺ｫ縺翫￠繧九悟感蜒咲ｵ・粋繧ｿ繧､繝励阪→縺ｯ縲∝感蜒咲ｵ・粋豕輔↓蝓ｺ縺･縺崎ｨｭ遶九＆繧後◆蜉ｴ蜒咲ｵ・粋縺後∫ｵ・粋蜩｡縺ｨ縺ｪ縺｣縺滉ｾ晞ｼ閠・・莉｣逅・ｺｺ縺ｨ縺励※莨夂､ｾ蛛ｴ縺ｨ騾閨ｷ縺ｫ髢｢縺吶ｋ莠､貂峨ｒ陦後≧繧ｵ繝ｼ繝薙せ繧呈欠縺励∪縺吶・br>蜉ｴ蜒崎・′蛟倶ｺｺ縺ｧ莨夂､ｾ縺ｨ蟇ｾ遲峨↓莠､貂峨☆繧九％縺ｨ縺ｯ縲∝ｿ・炊逧・↑雋諡・ｄ遏･隴倥・髱｢縺ｧ蝗ｰ髮｣縺ｪ蝣ｴ蜷医′縺ゅｊ縺ｾ縺吶・br>縺昴％縺ｧ縲∝感蜒崎・・蝨ｰ菴榊髄荳翫ｒ逶ｮ逧・→縺吶ｋ蜉ｴ蜒咲ｵ・粋縺後∵・豕輔〒菫晞囿縺輔ｌ縺溷屮邨先ｨｩ繧・屮菴謎ｺ､貂画ｨｩ繧定レ譎ｯ縺ｫ縲∵悽莠ｺ縺ｫ莉｣繧上▲縺ｦ騾閨ｷ謇狗ｶ壹″繧帝ｲ繧√∪縺吶・br>縺薙・縲悟屮菴謎ｺ､貂画ｨｩ縲阪′蜉ｴ蜒咲ｵ・粋繧ｿ繧､繝励・騾閨ｷ莉｣陦後・譬ｸ蠢・〒縺ゅｊ縲∽ｼ夂､ｾ蛛ｴ縺ｯ豁｣蠖薙↑逅・罰縺ｪ縺上％縺ｮ莠､貂峨ｒ諡貞凄縺ｧ縺阪↑縺・→蜉ｴ蜒咲ｵ・粋豕慕ｬｬ7譚｡縺ｧ螳壹ａ繧峨ｌ縺ｦ縺・∪縺吶・br>縺薙ｌ縺ｫ繧医ｊ縲∝腰縺ｫ騾閨ｷ縺ｮ諢乗昴ｒ莨昴∴繧九□縺代〒縺ｪ縺上∵怏邨ｦ莨第嚊縺ｮ蜿門ｾ励ｄ譛ｪ謇輔＞雉・≡縺ｮ謾ｯ謇輔＞縺ｨ縺・▲縺溘∝感蜒肴擅莉ｶ縺ｫ髢｢縺吶ｋ蜈ｷ菴鍋噪縺ｪ莠､貂峨ｒ陦後≧縺薙→縺悟庄閭ｽ縺ｫ縺ｪ繧九→荳闊ｬ縺ｫ隗｣縺輔ｌ縺ｦ縺・∪縺吶・br>縺薙ｌ縺ｯ縲√≠縺上∪縺ｧ縲御ｽｿ閠・阪→縺励※諢乗昜ｼ晞＃繧定｡後≧豌鷹俣讌ｭ閠・→縺ｮ螟ｧ縺阪↑驕輔＞縺ｧ縺吶・/p></section>
 
   <section class="lp-section alt" id="sec-3">
     <div class="container">
       <p class="section-num">SECTION / 03</p>
-      <h2>労働組合タイプの退職代行を使うべき 5 つのケース</h2>
-      <h3>ケース①: 未消化有給が 5 日以上ある</h3>
-      <p>団体交渉権で有給消化交渉が可能。日給 1 万円 × 5 日 = 5 万円の実質回収可能性があり、労組料金 2〜3 万円との費用対効果が高いとされています。</p>
-      <h3>ケース②: 残業代・深夜手当の未払いがある</h3>
-      <p>タイムカード等の証拠があれば、団体交渉で未払い分の請求が可能とされています。但し訴訟対応は弁護士運営に切り替えが必要です。</p>
-      <h3>ケース③: 「損害賠償請求する」と脅されている</h3>
-      <p>団体交渉で会社に対する圧力をかけることが可能。但し本格的な訴訟対応が予想される場合は弁護士運営併用が推奨されます。</p>
-      <h3>ケース④: 民間業者の「交渉不可」に不安</h3>
-      <p>民間運営は団体交渉権がなく、会社が拒否した場合に対応できないリスクがあります。労組運営なら交渉継続が可能です。</p>
-      <h3>ケース⑤: ハラスメント加害者と直接話したくない</h3>
-      <p>団体交渉で組合員として保護されながら、加害者と直接接触せずに退職手続きを進めることが可能です。</p>
+      <h2>蜉ｴ蜒咲ｵ・粋繧ｿ繧､繝励・騾閨ｷ莉｣陦後ｒ菴ｿ縺・∋縺・5 縺､縺ｮ繧ｱ繝ｼ繧ｹ</h2>
+      <h3>繧ｱ繝ｼ繧ｹ竭: 譛ｪ豸亥喧譛臥ｵｦ縺・5 譌･莉･荳翫≠繧・/h3>
+      <p>蝗｣菴謎ｺ､貂画ｨｩ縺ｧ譛臥ｵｦ豸亥喧莠､貂峨′蜿ｯ閭ｽ縲よ律邨ｦ 1 荳・・ ﾃ・5 譌･ = 5 荳・・縺ｮ螳溯ｳｪ蝗槫庶蜿ｯ閭ｽ諤ｧ縺後≠繧翫∝感邨・侭驥・2縲・ 荳・・縺ｨ縺ｮ雋ｻ逕ｨ蟇ｾ蜉ｹ譫懊′鬮倥＞縺ｨ縺輔ｌ縺ｦ縺・∪縺吶・/p>
+      <h3>繧ｱ繝ｼ繧ｹ竭｡: 谿区･ｭ莉｣繝ｻ豺ｱ螟懈焔蠖薙・譛ｪ謇輔＞縺後≠繧・/h3>
+      <p>繧ｿ繧､繝繧ｫ繝ｼ繝臥ｭ峨・險ｼ諡縺後≠繧後・縲∝屮菴謎ｺ､貂峨〒譛ｪ謇輔＞蛻・・隲区ｱゅ′蜿ｯ閭ｽ縺ｨ縺輔ｌ縺ｦ縺・∪縺吶ゆｽ・＠險ｴ險溷ｯｾ蠢懊・蠑∬ｭｷ螢ｫ驕句霧縺ｫ蛻・ｊ譖ｿ縺医′蠢・ｦ√〒縺吶・/p>
+      <h3>繧ｱ繝ｼ繧ｹ竭｢: 縲梧錐螳ｳ雉蜆溯ｫ区ｱゅ☆繧九阪→閼・＆繧後※縺・ｋ</h3>
+      <p>蝗｣菴謎ｺ､貂峨〒莨夂､ｾ縺ｫ蟇ｾ縺吶ｋ蝨ｧ蜉帙ｒ縺九￠繧九％縺ｨ縺悟庄閭ｽ縲ゆｽ・＠譛ｬ譬ｼ逧・↑險ｴ險溷ｯｾ蠢懊′莠域Φ縺輔ｌ繧句ｴ蜷医・蠑∬ｭｷ螢ｫ驕句霧菴ｵ逕ｨ縺梧耳螂ｨ縺輔ｌ縺ｾ縺吶・/p>
+      <h3>繧ｱ繝ｼ繧ｹ竭｣: 豌鷹俣讌ｭ閠・・縲御ｺ､貂我ｸ榊庄縲阪↓荳榊ｮ・/h3>
+      <p>豌鷹俣驕句霧縺ｯ蝗｣菴謎ｺ､貂画ｨｩ縺後↑縺上∽ｼ夂､ｾ縺梧拠蜷ｦ縺励◆蝣ｴ蜷医↓蟇ｾ蠢懊〒縺阪↑縺・Μ繧ｹ繧ｯ縺後≠繧翫∪縺吶ょ感邨・°蝟ｶ縺ｪ繧我ｺ､貂臥ｶ咏ｶ壹′蜿ｯ閭ｽ縺ｧ縺吶・/p>
+      <h3>繧ｱ繝ｼ繧ｹ竭､: 繝上Λ繧ｹ繝｡繝ｳ繝亥刈螳ｳ閠・→逶ｴ謗･隧ｱ縺励◆縺上↑縺・/h3>
+      <p>蝗｣菴謎ｺ､貂峨〒邨・粋蜩｡縺ｨ縺励※菫晁ｭｷ縺輔ｌ縺ｪ縺後ｉ縲∝刈螳ｳ閠・→逶ｴ謗･謗･隗ｦ縺帙★縺ｫ騾閨ｷ謇狗ｶ壹″繧帝ｲ繧√ｋ縺薙→縺悟庄閭ｽ縺ｧ縺吶・/p>
       <BannerAB pageSlug="roudoukumiai-hikaku-2026" position="middle" />
     </div>
   </section>
 
-  <section class="lp-section"><h2>労働組合タイプ退職代行の選び方と具体的な交渉範囲</h2><p>労働組合が運営する退職代行サービスを選ぶ際は、いくつかの点を比較検討することが重要です。<br>まず料金体系です。<br>追加料金なしの一律価格か、交渉内容によってオプション料金が発生するかを確認しましょう。<br>次に対応速度や営業時間も重要です。<br>深夜や早朝でも相談可能か、即日対応を明言しているかなど、ご自身の状況に合ったサービスを選びましょう。<br>また、労働組合としての活動実績や、過去の退職代行事例の豊富さも信頼性を判断する材料になります。<br>国民生活センターによれば、退職代行に関する相談も寄せられているため、運営元が明確で信頼できる組合を選ぶことが不可欠です。<br>労働組合タイプは、弁護士に依頼するよりも費用を抑えられ、かつ民間業者にはない団体交渉権を持つ点が特徴です。<br>具体的に可能な交渉範囲は以下の通りです。</p><ul><li>退職届の提出代行と退職日の調整交渉</li><li>未消化の有給休暇の取得に関する交渉</li><li>未払いの給与や残業代の支払い請求に関する交渉</li><li>会社からの貸与物の返却に関する手続きの調整</li></ul><p>ただし、会社側が交渉に一切応じない場合や、損害賠償請求などの法的な紛争に発展した場合は、弁護士でなければ対応できない点も理解しておく必要があります。</p><div class="benefit-summary" style="background:#f5f5dc;padding:1rem;border-left:4px solid #d4a373;margin:1rem 0;"><strong>💡 このサービスを検討するメリット (★544 ②):</strong><ul><li>弁護士に依頼するよりも費用を抑えつつ、労働組合法に守られた形で退職交渉を進められる可能性が期待されます。</li><li>民間業者では難しいとされる未払い給与や有給消化の「交渉」を、団体交渉権を背景に行える点が特徴です。</li><li>労働組合法という明確な法的根拠に基づいて活動するため、非弁行為のリスクを避け、適法な手続きで退職を進める安心感が得られます。</li></ul></div></section>
+  <section class="lp-section"><h2>蜉ｴ蜒咲ｵ・粋繧ｿ繧､繝鈴閨ｷ莉｣陦後・驕ｸ縺ｳ譁ｹ縺ｨ蜈ｷ菴鍋噪縺ｪ莠､貂臥ｯ・峇</h2><p>蜉ｴ蜒咲ｵ・粋縺碁°蝟ｶ縺吶ｋ騾閨ｷ莉｣陦後し繝ｼ繝薙せ繧帝∈縺ｶ髫帙・縲√＞縺上▽縺九・轤ｹ繧呈ｯ碑ｼ・､懆ｨ弱☆繧九％縺ｨ縺碁㍾隕√〒縺吶・br>縺ｾ縺壽侭驥台ｽ鍋ｳｻ縺ｧ縺吶・br>霑ｽ蜉譁咎≡縺ｪ縺励・荳蠕倶ｾ｡譬ｼ縺九∽ｺ､貂牙・螳ｹ縺ｫ繧医▲縺ｦ繧ｪ繝励す繝ｧ繝ｳ譁咎≡縺檎匱逕溘☆繧九°繧堤｢ｺ隱阪＠縺ｾ縺励ｇ縺・・br>谺｡縺ｫ蟇ｾ蠢憺溷ｺｦ繧・霧讌ｭ譎る俣繧る㍾隕√〒縺吶・br>豺ｱ螟懊ｄ譌ｩ譛昴〒繧ら嶌隲・庄閭ｽ縺九∝叉譌･蟇ｾ蠢懊ｒ譏手ｨ縺励※縺・ｋ縺九↑縺ｩ縲√＃閾ｪ霄ｫ縺ｮ迥ｶ豕√↓蜷医▲縺溘し繝ｼ繝薙せ繧帝∈縺ｳ縺ｾ縺励ｇ縺・・br>縺ｾ縺溘∝感蜒咲ｵ・粋縺ｨ縺励※縺ｮ豢ｻ蜍募ｮ溽ｸｾ繧・・℃蜴ｻ縺ｮ騾閨ｷ莉｣陦御ｺ倶ｾ九・雎雁ｯ後＆繧ゆｿ｡鬆ｼ諤ｧ繧貞愛譁ｭ縺吶ｋ譚先侭縺ｫ縺ｪ繧翫∪縺吶・br>蝗ｽ豌醍函豢ｻ繧ｻ繝ｳ繧ｿ繝ｼ縺ｫ繧医ｌ縺ｰ縲・閨ｷ莉｣陦後↓髢｢縺吶ｋ逶ｸ隲・ｂ蟇・○繧峨ｌ縺ｦ縺・ｋ縺溘ａ縲・°蝟ｶ蜈・′譏守｢ｺ縺ｧ菫｡鬆ｼ縺ｧ縺阪ｋ邨・粋繧帝∈縺ｶ縺薙→縺御ｸ榊庄谺縺ｧ縺吶・br>蜉ｴ蜒咲ｵ・粋繧ｿ繧､繝励・縲∝ｼ∬ｭｷ螢ｫ縺ｫ萓晞ｼ縺吶ｋ繧医ｊ繧りｲｻ逕ｨ繧呈椛縺医ｉ繧後√°縺､豌鷹俣讌ｭ閠・↓縺ｯ縺ｪ縺・屮菴謎ｺ､貂画ｨｩ繧呈戟縺､轤ｹ縺檎音蠕ｴ縺ｧ縺吶・br>蜈ｷ菴鍋噪縺ｫ蜿ｯ閭ｽ縺ｪ莠､貂臥ｯ・峇縺ｯ莉･荳九・騾壹ｊ縺ｧ縺吶・/p><ul><li>騾閨ｷ螻翫・謠仙・莉｣陦後→騾閨ｷ譌･縺ｮ隱ｿ謨ｴ莠､貂・/li><li>譛ｪ豸亥喧縺ｮ譛臥ｵｦ莨第嚊縺ｮ蜿門ｾ励↓髢｢縺吶ｋ莠､貂・/li><li>譛ｪ謇輔＞縺ｮ邨ｦ荳弱ｄ谿区･ｭ莉｣縺ｮ謾ｯ謇輔＞隲区ｱゅ↓髢｢縺吶ｋ莠､貂・/li><li>莨夂､ｾ縺九ｉ縺ｮ雋ｸ荳守黄縺ｮ霑泌唆縺ｫ髢｢縺吶ｋ謇狗ｶ壹″縺ｮ隱ｿ謨ｴ</li></ul><p>縺溘□縺励∽ｼ夂､ｾ蛛ｴ縺御ｺ､貂峨↓荳蛻・ｿ懊§縺ｪ縺・ｴ蜷医ｄ縲∵錐螳ｳ雉蜆溯ｫ区ｱゅ↑縺ｩ縺ｮ豕慕噪縺ｪ邏帑ｺ峨↓逋ｺ螻輔＠縺溷ｴ蜷医・縲∝ｼ∬ｭｷ螢ｫ縺ｧ縺ｪ縺代ｌ縺ｰ蟇ｾ蠢懊〒縺阪↑縺・せ繧ら炊隗｣縺励※縺翫￥蠢・ｦ√′縺ゅｊ縺ｾ縺吶・/p><div class="benefit-summary" style="background:#f5f5dc;padding:1rem;border-left:4px solid #d4a373;margin:1rem 0;"><strong>庁 縺薙・繧ｵ繝ｼ繝薙せ繧呈､懆ｨ弱☆繧九Γ繝ｪ繝・ヨ (笘・44 竭｡):</strong><ul><li>蠑∬ｭｷ螢ｫ縺ｫ萓晞ｼ縺吶ｋ繧医ｊ繧りｲｻ逕ｨ繧呈椛縺医▽縺､縲∝感蜒咲ｵ・粋豕輔↓螳医ｉ繧後◆蠖｢縺ｧ騾閨ｷ莠､貂峨ｒ騾ｲ繧√ｉ繧後ｋ蜿ｯ閭ｽ諤ｧ縺梧悄蠕・＆繧後∪縺吶・/li><li>豌鷹俣讌ｭ閠・〒縺ｯ髮｣縺励＞縺ｨ縺輔ｌ繧区悴謇輔＞邨ｦ荳弱ｄ譛臥ｵｦ豸亥喧縺ｮ縲御ｺ､貂峨阪ｒ縲∝屮菴謎ｺ､貂画ｨｩ繧定レ譎ｯ縺ｫ陦後∴繧狗せ縺檎音蠕ｴ縺ｧ縺吶・/li><li>蜉ｴ蜒咲ｵ・粋豕輔→縺・≧譏守｢ｺ縺ｪ豕慕噪譬ｹ諡縺ｫ蝓ｺ縺･縺・※豢ｻ蜍輔☆繧九◆繧√・撼蠑∬｡檎ぜ縺ｮ繝ｪ繧ｹ繧ｯ繧帝∩縺代・←豕輔↑謇狗ｶ壹″縺ｧ騾閨ｷ繧帝ｲ繧√ｋ螳牙ｿ・─縺悟ｾ励ｉ繧後∪縺吶・/li></ul></div></section>
 
   <section class="lp-section alt" id="sec-5">
     <div class="container">
       <p class="section-num">SECTION / 05</p>
-      <h2>労働組合タイプ 代表サービス比較表（2026年版）</h2>
+      <h2>蜉ｴ蜒咲ｵ・粋繧ｿ繧､繝・莉｣陦ｨ繧ｵ繝ｼ繝薙せ豈碑ｼ・｡ｨ・・026蟷ｴ迚茨ｼ・/h2>
       <div class="compare-wrap">
         <table class="compare">
           <thead>
-            <tr><th>サービス</th><th>運営形態</th><th>料金</th><th>特徴 (公開情報)</th></tr>
+            <tr><th>繧ｵ繝ｼ繝薙せ</th><th>驕句霧蠖｢諷・/th><th>譁咎≡</th><th>迚ｹ蠕ｴ (蜈ｬ髢区ュ蝣ｱ)</th></tr>
           </thead>
           <tbody>
-            <tr><td><b>退職代行Jobs</b></td><td>合同労組 + 弁護士監修</td><td><b>¥27,000</b></td><td>有給/残業代交渉対応・LINE 24h・全額返金保証</td></tr>
-            <tr><td><b>退職代行モームリ</b></td><td>労組提携 + 弁護士監修</td><td>¥22,000 (正社員)</td><td>最安帯・パート/アルバイト ¥12,000</td></tr>
-            <tr><td><b>退職代行ニコイチ</b></td><td>民間 + 弁護士監修</td><td>¥27,000</td><td>創業 18 年実績 (民間タイプ・比較対象)</td></tr>
+            <tr><td><b>騾閨ｷ莉｣陦繰obs</b></td><td>蜷亥酔蜉ｴ邨・+ 蠑∬ｭｷ螢ｫ逶｣菫ｮ</td><td><b>ﾂ･27,000</b></td><td>譛臥ｵｦ/谿区･ｭ莉｣莠､貂牙ｯｾ蠢懊・LINE 24h繝ｻ蜈ｨ鬘崎ｿ秘≡菫晁ｨｼ</td></tr>
+            <tr><td><b>騾閨ｷ莉｣陦後Δ繝ｼ繝繝ｪ</b></td><td>蜉ｴ邨・署謳ｺ + 蠑∬ｭｷ螢ｫ逶｣菫ｮ</td><td>ﾂ･22,000 (豁｣遉ｾ蜩｡)</td><td>譛螳牙ｸｯ繝ｻ繝代・繝・繧｢繝ｫ繝舌う繝・ﾂ･12,000</td></tr>
+            <tr><td><b>騾閨ｷ莉｣陦後ル繧ｳ繧､繝・/b></td><td>豌鷹俣 + 蠑∬ｭｷ螢ｫ逶｣菫ｮ</td><td>ﾂ･27,000</td><td>蜑ｵ讌ｭ 18 蟷ｴ螳溽ｸｾ (豌鷹俣繧ｿ繧､繝励・豈碑ｼ・ｯｾ雎｡)</td></tr>
           </tbody>
         </table>
       </div>
@@ -144,16 +144,16 @@ const itemListSchema = {
   <section class="lp-section" id="sec-faq">
     <div class="container">
       <p class="section-num">SECTION / 06</p>
-      <h2>よくある質問（FAQ）</h2>
+      <h2>繧医￥縺ゅｋ雉ｪ蝠擾ｼ・AQ・・/h2>
       <div class="faq">
         {faq.map((item) => (
           <details><summary>{item.q}</summary><div><p set:html={item.a} /></div></details>
         ))}
       </div>
       <div class="counter-box">
-        <h3>🎯 労働組合タイプ 退職代行を確認 (再掲)</h3>
-        <div class="row"><b>向いている人</b><span>有給消化 / 残業代交渉が必要・即日対応希望</span></div>
-        <div class="row"><b>サービス特性</b><span>完全無料相談 / LINE 24h 対応 / 即日加入・即日対応可</span></div>
+        <h3>識 蜉ｴ蜒咲ｵ・粋繧ｿ繧､繝・騾閨ｷ莉｣陦後ｒ遒ｺ隱・(蜀肴軸)</h3>
+        <div class="row"><b>蜷代＞縺ｦ縺・ｋ莠ｺ</b><span>譛臥ｵｦ豸亥喧 / 谿区･ｭ莉｣莠､貂峨′蠢・ｦ√・蜊ｳ譌･蟇ｾ蠢懷ｸ梧悍</span></div>
+        <div class="row"><b>繧ｵ繝ｼ繝薙せ迚ｹ諤ｧ</b><span>螳悟・辟｡譁咏嶌隲・/ LINE 24h 蟇ｾ蠢・/ 蜊ｳ譌･蜉蜈･繝ｻ蜊ｳ譌･蟇ｾ蠢懷庄</span></div>
       </div>
     </div>
   </section>
@@ -161,84 +161,84 @@ const itemListSchema = {
   <section class="lp-section alt" id="sec-summary">
     <div class="container">
       <p class="section-num">SECTION / 07</p>
-      <h2>まとめ</h2>
-      <p>退職代行の労働組合タイプは <strong>団体交渉権 (労組法第6条) で有給消化・残業代交渉が可能</strong> な点が最大の特徴です。料金 2〜3 万円で民間運営 (1〜3 万円・交渉権なし) と弁護士運営 (3〜6 万円・全範囲対応) のバランス型として推奨されます。</p>
-      <p><strong>使うべき 5 ケース</strong>: ① 未消化有給 5 日以上 ② 残業代未払い ③ 損害賠償の脅し ④ 民間の交渉不可不安 ⑤ ハラスメント加害者回避。</p>
-      <p><strong>選び方 3 ステップ</strong>: <strong>STEP 1</strong> 有給消化/残業代交渉の必要性確認 → <strong>STEP 2</strong> 訴訟リスク有無 (有なら弁護士併用) → <strong>STEP 3</strong> 料金 + 対応範囲 + サポート時間で比較 → <a href="/osusume-hikaku/">退職代行 比較ページ</a> も参考に最終判断。</p>
-      <p style="font-size:13px;color:var(--c-text-mute,#6b7280);">※業者選びは <a href="/osusume-hikaku/">退職代行 比較ページ</a> ・弁護士タイプは <a href="/bengoshi-hikaku-2026/">弁護士比較2026年版</a> ・料金相場は <a href="/ryokin-hikaku-2026/">料金相場2026年版</a> もあわせてご参照ください。本記事は退職成功保証・効果保証ではなく、特定業者を推奨するものでもありません。</p>
-      <PRBadge pageSlug="roudoukumiai-hikaku-2026" label="退職代行サービスの公式サイトで無料相談する（PR）" />
+      <h2>縺ｾ縺ｨ繧・/h2>
+      <p>騾閨ｷ莉｣陦後・蜉ｴ蜒咲ｵ・粋繧ｿ繧､繝励・ <strong>蝗｣菴謎ｺ､貂画ｨｩ (蜉ｴ邨・ｳ慕ｬｬ6譚｡) 縺ｧ譛臥ｵｦ豸亥喧繝ｻ谿区･ｭ莉｣莠､貂峨′蜿ｯ閭ｽ</strong> 縺ｪ轤ｹ縺梧怙螟ｧ縺ｮ迚ｹ蠕ｴ縺ｧ縺吶よ侭驥・2縲・ 荳・・縺ｧ豌鷹俣驕句霧 (1縲・ 荳・・繝ｻ莠､貂画ｨｩ縺ｪ縺・ 縺ｨ蠑∬ｭｷ螢ｫ驕句霧 (3縲・ 荳・・繝ｻ蜈ｨ遽・峇蟇ｾ蠢・ 縺ｮ繝舌Λ繝ｳ繧ｹ蝙九→縺励※謗ｨ螂ｨ縺輔ｌ縺ｾ縺吶・/p>
+      <p><strong>菴ｿ縺・∋縺・5 繧ｱ繝ｼ繧ｹ</strong>: 竭 譛ｪ豸亥喧譛臥ｵｦ 5 譌･莉･荳・竭｡ 谿区･ｭ莉｣譛ｪ謇輔＞ 竭｢ 謳榊ｮｳ雉蜆溘・閼・＠ 竭｣ 豌鷹俣縺ｮ莠､貂我ｸ榊庄荳榊ｮ・竭､ 繝上Λ繧ｹ繝｡繝ｳ繝亥刈螳ｳ閠・屓驕ｿ縲・/p>
+      <p><strong>驕ｸ縺ｳ譁ｹ 3 繧ｹ繝・ャ繝・/strong>: <strong>STEP 1</strong> 譛臥ｵｦ豸亥喧/谿区･ｭ莉｣莠､貂峨・蠢・ｦ∵ｧ遒ｺ隱・竊・<strong>STEP 2</strong> 險ｴ險溘Μ繧ｹ繧ｯ譛臥┌ (譛峨↑繧牙ｼ∬ｭｷ螢ｫ菴ｵ逕ｨ) 竊・<strong>STEP 3</strong> 譁咎≡ + 蟇ｾ蠢懃ｯ・峇 + 繧ｵ繝昴・繝域凾髢薙〒豈碑ｼ・竊・<a href="/osusume-hikaku/">騾閨ｷ莉｣陦・豈碑ｼ・・繝ｼ繧ｸ</a> 繧ょ盾閠・↓譛邨ょ愛譁ｭ縲・/p>
+      <p style="font-size:13px;color:var(--c-text-mute,#6b7280);">窶ｻ讌ｭ閠・∈縺ｳ縺ｯ <a href="/osusume-hikaku/">騾閨ｷ莉｣陦・豈碑ｼ・・繝ｼ繧ｸ</a> 繝ｻ蠑∬ｭｷ螢ｫ繧ｿ繧､繝励・ <a href="/bengoshi-hikaku-2026/">蠑∬ｭｷ螢ｫ豈碑ｼ・026蟷ｴ迚・/a> 繝ｻ譁咎≡逶ｸ蝣ｴ縺ｯ <a href="/ryokin-hikaku-2026/">譁咎≡逶ｸ蝣ｴ2026蟷ｴ迚・/a> 繧ゅ≠繧上○縺ｦ縺泌盾辣ｧ縺上□縺輔＞縲よ悽險倅ｺ九・騾閨ｷ謌仙粥菫晁ｨｼ繝ｻ蜉ｹ譫應ｿ晁ｨｼ縺ｧ縺ｯ縺ｪ縺上∫音螳壽･ｭ閠・ｒ謗ｨ螂ｨ縺吶ｋ繧ゅ・縺ｧ繧ゅ≠繧翫∪縺帙ｓ縲・/p>
+      <PRBadge pageSlug="roudoukumiai-hikaku-2026" label="騾閨ｷ莉｣陦後し繝ｼ繝薙せ縺ｮ蜈ｬ蠑上し繧､繝医〒辟｡譁咏嶌隲・☆繧具ｼ・R・・ />
     </div>
   </section>
 
   <section class="lp-section" id="sec-policy">
     <div class="container">
       <p class="section-num">SECTION / 08</p>
-      <h2>編集ポリシー (情報源・更新日・E-E-A-T)</h2>
+      <h2>邱ｨ髮・・繝ｪ繧ｷ繝ｼ (諠・ｱ貅舌・譖ｴ譁ｰ譌･繝ｻE-E-A-T)</h2>
       <ul>
-        <li><strong>情報源</strong>: 厚生労働省「労働基準法解釈例規」・労働組合法・JILPT (労働政策研究・研修機構)・国民生活センター・各退職代行サービス公式サイト</li>
-        <li><strong>編集方針</strong>: 一次情報優先 (公的機関 + 業界統計)・断定表現を避け推定値・公開情報の整理として記述</li>
-        <li><strong>更新頻度</strong>: 月次レビュー (退職代行業界動向変化時は随時更新)</li>
-        <li><strong>運営者</strong>: NY-squared (個人事業) <a href="/operator-info/">運営情報ページ</a> 参照</li>
-        <li><strong>E-E-A-T 4 原則</strong>: Experience / Expertise (業界公開統計 + 法令データ) / Authoritativeness (公的機関 + 業界公式の一次情報) / Trustworthiness (PR 表記 + 推定値明示 + 効果保証ではない注記)</li>
+        <li><strong>諠・ｱ貅・/strong>: 蜴夂函蜉ｴ蜒咲怐縲悟感蜒榊渕貅匁ｳ戊ｧ｣驥井ｾ玖ｦ上阪・蜉ｴ蜒咲ｵ・粋豕輔・JILPT (蜉ｴ蜒肴帆遲也皮ｩｶ繝ｻ遐比ｿｮ讖滓ｧ・繝ｻ蝗ｽ豌醍函豢ｻ繧ｻ繝ｳ繧ｿ繝ｼ繝ｻ蜷・閨ｷ莉｣陦後し繝ｼ繝薙せ蜈ｬ蠑上し繧､繝・/li>
+        <li><strong>邱ｨ髮・婿驥・/strong>: 荳谺｡諠・ｱ蜆ｪ蜈・(蜈ｬ逧・ｩ滄未 + 讌ｭ逡檎ｵｱ險・繝ｻ譁ｭ螳夊｡ｨ迴ｾ繧帝∩縺第耳螳壼､繝ｻ蜈ｬ髢区ュ蝣ｱ縺ｮ謨ｴ逅・→縺励※險倩ｿｰ</li>
+        <li><strong>譖ｴ譁ｰ鬆ｻ蠎ｦ</strong>: 譛域ｬ｡繝ｬ繝薙Η繝ｼ (騾閨ｷ莉｣陦梧･ｭ逡悟虚蜷大､牙喧譎ゅ・髫乗凾譖ｴ譁ｰ)</li>
+        <li><strong>驕句霧閠・/strong>: NY-squared (蛟倶ｺｺ莠区･ｭ) <a href="/operator-info/">驕句霧諠・ｱ繝壹・繧ｸ</a> 蜿ら・</li>
+        <li><strong>E-E-A-T 4 蜴溷援</strong>: Experience / Expertise (讌ｭ逡悟・髢狗ｵｱ險・+ 豕穂ｻ､繝・・繧ｿ) / Authoritativeness (蜈ｬ逧・ｩ滄未 + 讌ｭ逡悟・蠑上・荳谺｡諠・ｱ) / Trustworthiness (PR 陦ｨ險・+ 謗ｨ螳壼､譏守､ｺ + 蜉ｹ譫應ｿ晁ｨｼ縺ｧ縺ｯ縺ｪ縺・ｳｨ險・</li>
       </ul>
 
-      <h2>出典・参考情報 (公的機関・公開情報)</h2>
+      <h2>蜃ｺ蜈ｸ繝ｻ蜿り・ュ蝣ｱ (蜈ｬ逧・ｩ滄未繝ｻ蜈ｬ髢区ュ蝣ｱ)</h2>
       <ul>
-        <li><a href="https://www.mhlw.go.jp/" target="_blank" rel="noopener">厚生労働省公式サイト</a> — 労働基準法解釈例規・労働市場分析</li>
-        <li><a href="https://elaws.e-gov.go.jp/document?lawid=324AC0000000174" target="_blank" rel="noopener">労働組合法 (e-Gov)</a> — 団体交渉権の法的根拠</li>
-        <li><a href="https://elaws.e-gov.go.jp/document?lawid=322AC0000000049" target="_blank" rel="noopener">労働基準法 (e-Gov)</a> — 有給休暇取得権の法的根拠</li>
-        <li><a href="https://www.jil.go.jp/" target="_blank" rel="noopener">JILPT</a> — 退職動向分析・労使紛争統計</li>
-        <li><a href="https://www.kokusen.go.jp/" target="_blank" rel="noopener">国民生活センター</a> — 退職代行関連の消費者相談情報 (★435 体現)</li>
-        <li>各退職代行サービス公式サイト — 料金・対応範囲・サポート時間の一次情報</li>
+        <li><a href="https://www.mhlw.go.jp/" target="_blank" rel="noopener">蜴夂函蜉ｴ蜒咲怐蜈ｬ蠑上し繧､繝・/a> 窶・蜉ｴ蜒榊渕貅匁ｳ戊ｧ｣驥井ｾ玖ｦ上・蜉ｴ蜒榊ｸょｴ蛻・梵</li>
+        <li><a href="https://elaws.e-gov.go.jp/document?lawid=324AC0000000174" target="_blank" rel="noopener">蜉ｴ蜒咲ｵ・粋豕・(e-Gov)</a> 窶・蝗｣菴謎ｺ､貂画ｨｩ縺ｮ豕慕噪譬ｹ諡</li>
+        <li><a href="https://elaws.e-gov.go.jp/document?lawid=322AC0000000049" target="_blank" rel="noopener">蜉ｴ蜒榊渕貅匁ｳ・(e-Gov)</a> 窶・譛臥ｵｦ莨第嚊蜿門ｾ玲ｨｩ縺ｮ豕慕噪譬ｹ諡</li>
+        <li><a href="https://www.jil.go.jp/" target="_blank" rel="noopener">JILPT</a> 窶・騾閨ｷ蜍募髄蛻・梵繝ｻ蜉ｴ菴ｿ邏帑ｺ臥ｵｱ險・/li>
+        <li><a href="https://www.kokusen.go.jp/" target="_blank" rel="noopener">蝗ｽ豌醍函豢ｻ繧ｻ繝ｳ繧ｿ繝ｼ</a> 窶・騾閨ｷ莉｣陦碁未騾｣縺ｮ豸郁ｲｻ閠・嶌隲・ュ蝣ｱ (笘・35 菴鍋樟)</li>
+        <li>蜷・閨ｷ莉｣陦後し繝ｼ繝薙せ蜈ｬ蠑上し繧､繝・窶・譁咎≡繝ｻ蟇ｾ蠢懃ｯ・峇繝ｻ繧ｵ繝昴・繝域凾髢薙・荳谺｡諠・ｱ</li>
       </ul>
       <p style="font-size:12px;color:var(--c-text-mute,#6b7280);margin-top:16px;">
-        ※本記事は 2026 年 5 月時点の公開情報をもとに作成。最新の退職代行サービス情報は各業者公式サイトでご確認ください。本記事は退職成功保証ではなく、特定業者を推奨するものでもありません。本ページはアフィリエイト広告（PR）を含みます。
+        窶ｻ譛ｬ險倅ｺ九・ 2026 蟷ｴ 5 譛域凾轤ｹ縺ｮ蜈ｬ髢区ュ蝣ｱ繧偵ｂ縺ｨ縺ｫ菴懈・縲よ怙譁ｰ縺ｮ騾閨ｷ莉｣陦後し繝ｼ繝薙せ諠・ｱ縺ｯ蜷・･ｭ閠・・蠑上し繧､繝医〒縺皮｢ｺ隱阪￥縺縺輔＞縲よ悽險倅ｺ九・騾閨ｷ謌仙粥菫晁ｨｼ縺ｧ縺ｯ縺ｪ縺上∫音螳壽･ｭ閠・ｒ謗ｨ螂ｨ縺吶ｋ繧ゅ・縺ｧ繧ゅ≠繧翫∪縺帙ｓ縲よ悽繝壹・繧ｸ縺ｯ繧｢繝輔ぅ繝ｪ繧ｨ繧､繝亥ｺ・相・・R・峨ｒ蜷ｫ縺ｿ縺ｾ縺吶・
       </p>
     </div>
   </section>
 
   <section class="lp-section alt" id="sec-asp-pr" aria-labelledby="h2-asp-pr">
     <div class="container">
-      <p class="section-num">SECTION / PR・広告</p>
-      <h2 id="h2-asp-pr">【PR・広告】退職代行Jobs (株式会社アレス) の公開情報整理</h2>
-      <p class="section-lede"><strong>本セクションは PR・広告枠</strong> です。アフィリエイト広告として「退職代行Jobs (株式会社アレス)」の公開情報を整理しています。他事業者との優劣判断ではなく、広告主の公開情報として参照ください。</p>
+      <p class="section-num">SECTION / PR繝ｻ蠎・相</p>
+      <h2 id="h2-asp-pr">縲娠R繝ｻ蠎・相縲鷹閨ｷ莉｣陦繰obs (譬ｪ蠑丈ｼ夂､ｾ繧｢繝ｬ繧ｹ) 縺ｮ蜈ｬ髢区ュ蝣ｱ謨ｴ逅・/h2>
+      <p class="section-lede"><strong>譛ｬ繧ｻ繧ｯ繧ｷ繝ｧ繝ｳ縺ｯ PR繝ｻ蠎・相譫</strong> 縺ｧ縺吶ゅい繝輔ぅ繝ｪ繧ｨ繧､繝亥ｺ・相縺ｨ縺励※縲碁閨ｷ莉｣陦繰obs (譬ｪ蠑丈ｼ夂､ｾ繧｢繝ｬ繧ｹ)縲阪・蜈ｬ髢区ュ蝣ｱ繧呈紛逅・＠縺ｦ縺・∪縺吶ゆｻ紋ｺ区･ｭ閠・→縺ｮ蜆ｪ蜉｣蛻､譁ｭ縺ｧ縺ｯ縺ｪ縺上∝ｺ・相荳ｻ縺ｮ蜈ｬ髢区ュ蝣ｱ縺ｨ縺励※蜿ら・縺上□縺輔＞縲・/p>
       <div class="branch-grid">
-      <article class="branch"><span class="tag">特徴①</span><h4>退職代行Jobs</h4><p>退職代行Jobs (株式会社アレス運営) は退職代行サービスの一つとされる傾向。会社との連絡を代行する選択肢として検討対象とされています。</p></article>
-      <article class="branch"><span class="tag">特徴②</span><h4>LINE相談対応</h4><p>LINE での相談対応の傾向。気軽に相談できる選択肢とされる傾向。</p></article>
-      <article class="branch"><span class="tag">特徴③</span><h4>顧問弁護士監修</h4><p>顧問弁護士監修の傾向。法的トラブル懸念のある方の検討材料が一般的です。</p></article>
-      <article class="branch"><span class="tag">特徴④</span><h4>全国対応</h4><p>全国対応の傾向。地方在住者も利用可能な選択肢のケースが多く見られます。</p></article>
-      <article class="branch"><span class="tag">特徴⑤</span><h4>プライバシー配慮</h4><p>個人情報保護法遵守の傾向。会社・家族にバレにくい配慮があると公表されています。</p></article>
-      <article class="branch"><span class="tag">注意</span><h4>事前確認推奨事項</h4><p>具体的料金・対応範囲・成功事例は公式公開情報で確認推奨。「100%退職成功」等の断定は不可とされています。</p></article>
+      <article class="branch"><span class="tag">迚ｹ蠕ｴ竭</span><h4>騾閨ｷ莉｣陦繰obs</h4><p>騾閨ｷ莉｣陦繰obs (譬ｪ蠑丈ｼ夂､ｾ繧｢繝ｬ繧ｹ驕句霧) 縺ｯ騾閨ｷ莉｣陦後し繝ｼ繝薙せ縺ｮ荳縺､縺ｨ縺輔ｌ繧句だ蜷代ゆｼ夂､ｾ縺ｨ縺ｮ騾｣邨｡繧剃ｻ｣陦後☆繧矩∈謚櫁い縺ｨ縺励※讀懆ｨ主ｯｾ雎｡縺ｨ縺輔ｌ縺ｦ縺・∪縺吶・/p></article>
+      <article class="branch"><span class="tag">迚ｹ蠕ｴ竭｡</span><h4>LINE逶ｸ隲・ｯｾ蠢・/h4><p>LINE 縺ｧ縺ｮ逶ｸ隲・ｯｾ蠢懊・蛯ｾ蜷代よｰ苓ｻｽ縺ｫ逶ｸ隲・〒縺阪ｋ驕ｸ謚櫁い縺ｨ縺輔ｌ繧句だ蜷代・/p></article>
+      <article class="branch"><span class="tag">迚ｹ蠕ｴ竭｢</span><h4>鬘ｧ蝠丞ｼ∬ｭｷ螢ｫ逶｣菫ｮ</h4><p>鬘ｧ蝠丞ｼ∬ｭｷ螢ｫ逶｣菫ｮ縺ｮ蛯ｾ蜷代よｳ慕噪繝医Λ繝悶Ν諛ｸ蠢ｵ縺ｮ縺ゅｋ譁ｹ縺ｮ讀懆ｨ取攝譁吶′荳闊ｬ逧・〒縺吶・/p></article>
+      <article class="branch"><span class="tag">迚ｹ蠕ｴ竭｣</span><h4>蜈ｨ蝗ｽ蟇ｾ蠢・/h4><p>蜈ｨ蝗ｽ蟇ｾ蠢懊・蛯ｾ蜷代ょ慍譁ｹ蝨ｨ菴剰・ｂ蛻ｩ逕ｨ蜿ｯ閭ｽ縺ｪ驕ｸ謚櫁い縺ｮ繧ｱ繝ｼ繧ｹ縺悟､壹￥隕九ｉ繧後∪縺吶・/p></article>
+      <article class="branch"><span class="tag">迚ｹ蠕ｴ竭､</span><h4>繝励Λ繧､繝舌す繝ｼ驟肴・</h4><p>蛟倶ｺｺ諠・ｱ菫晁ｭｷ豕暮・螳医・蛯ｾ蜷代ゆｼ夂､ｾ繝ｻ螳ｶ譌上↓繝舌Ξ縺ｫ縺上＞驟肴・縺後≠繧九→蜈ｬ陦ｨ縺輔ｌ縺ｦ縺・∪縺吶・/p></article>
+      <article class="branch"><span class="tag">豕ｨ諢・/span><h4>莠句燕遒ｺ隱肴耳螂ｨ莠矩・/h4><p>蜈ｷ菴鍋噪譁咎≡繝ｻ蟇ｾ蠢懃ｯ・峇繝ｻ謌仙粥莠倶ｾ九・蜈ｬ蠑丞・髢区ュ蝣ｱ縺ｧ遒ｺ隱肴耳螂ｨ縲ゅ・00%騾閨ｷ謌仙粥縲咲ｭ峨・譁ｭ螳壹・荳榊庄縺ｨ縺輔ｌ縺ｦ縺・∪縺吶・/p></article>
       </div>
-      <div class="cta-block"><p class="cta-note"><span class="pr-tag">PR</span>退職代行Jobs (株式会社アレス) の最新の条件は公式サイトでご確認ください。</p><BannerAB pageSlug="enhance-cta" position="enhance" /><p class="btn-cta-sub">※ 公式サイトに遷移します。</p></div>
+      <div class="cta-block"><p class="cta-note"><span class="pr-tag">PR</span>騾閨ｷ莉｣陦繰obs (譬ｪ蠑丈ｼ夂､ｾ繧｢繝ｬ繧ｹ) 縺ｮ譛譁ｰ縺ｮ譚｡莉ｶ縺ｯ蜈ｬ蠑上し繧､繝医〒縺皮｢ｺ隱阪￥縺縺輔＞縲・/p><BannerAB pageSlug="enhance-cta" position="enhance" /><p class="btn-cta-sub">窶ｻ 蜈ｬ蠑上し繧､繝医↓驕ｷ遘ｻ縺励∪縺吶・/p></div>
     </div>
   </section>
 
   <section class="lp-section" id="sec-koteki-laws" aria-labelledby="h2-koteki-laws">
     <div class="container">
-      <p class="section-num">SECTION / 公的窓口・関連法令</p>
-      <h2 id="h2-koteki-laws">公的窓口・関連法令</h2>
-      <p class="section-lede">トラブル時・疑問時は公的窓口の活用が推奨されます。</p>
+      <p class="section-num">SECTION / 蜈ｬ逧・ｪ灘哨繝ｻ髢｢騾｣豕穂ｻ､</p>
+      <h2 id="h2-koteki-laws">蜈ｬ逧・ｪ灘哨繝ｻ髢｢騾｣豕穂ｻ､</h2>
+      <p class="section-lede">繝医Λ繝悶Ν譎ゅ・逍大撫譎ゅ・蜈ｬ逧・ｪ灘哨縺ｮ豢ｻ逕ｨ縺梧耳螂ｨ縺輔ｌ縺ｾ縺吶・/p>
       <ul>
-        <li><a href="https://www.mhlw.go.jp/general/sosiki/chihou/" target="_blank" rel="noopener">総合労働相談コーナー</a> - 厚生労働省・労働相談</li>
-        <li><a href="https://www.houterasu.or.jp/" target="_blank" rel="noopener">法テラス</a> - 法律相談</li>
-        <li><a href="https://www.bengoshi.or.jp/" target="_blank" rel="noopener">日本弁護士連合会</a> - 弁護士相談</li>
-        <li><a href="https://www.mhlw.go.jp/" target="_blank" rel="noopener">厚生労働省</a> - 労働基準法監督</li>
-        <li>消費生活センター - 188 (いやや!) で最寄りセンター案内</li>
+        <li><a href="https://www.mhlw.go.jp/general/sosiki/chihou/" target="_blank" rel="noopener">邱丞粋蜉ｴ蜒咲嶌隲・さ繝ｼ繝翫・</a> - 蜴夂函蜉ｴ蜒咲怐繝ｻ蜉ｴ蜒咲嶌隲・/li>
+        <li><a href="https://www.houterasu.or.jp/" target="_blank" rel="noopener">豕輔ユ繝ｩ繧ｹ</a> - 豕募ｾ狗嶌隲・/li>
+        <li><a href="https://www.bengoshi.or.jp/" target="_blank" rel="noopener">譌･譛ｬ蠑∬ｭｷ螢ｫ騾｣蜷井ｼ・/a> - 蠑∬ｭｷ螢ｫ逶ｸ隲・/li>
+        <li><a href="https://www.mhlw.go.jp/" target="_blank" rel="noopener">蜴夂函蜉ｴ蜒咲怐</a> - 蜉ｴ蜒榊渕貅匁ｳ慕屮逹｣</li>
+        <li>豸郁ｲｻ逕滓ｴｻ繧ｻ繝ｳ繧ｿ繝ｼ - 188 (縺・ｄ繧・) 縺ｧ譛蟇・ｊ繧ｻ繝ｳ繧ｿ繝ｼ譯亥・</li>
       </ul>
-      <p class="section-lede" style="margin-top:1rem">関連法令: <strong>労働基準法</strong> (退職の自由・2週間前申告)・<strong>民法 627条</strong> (期間定めない雇用の解約)・<strong>弁護士法 72条</strong> (非弁行為禁止)・<strong>個人情報保護法</strong>。本ページは公開情報の整理であり、特定事業者の公式サイトではありません。アフィリエイト広告（PR）を含みます。</p>
+      <p class="section-lede" style="margin-top:1rem">髢｢騾｣豕穂ｻ､: <strong>蜉ｴ蜒榊渕貅匁ｳ・/strong> (騾閨ｷ縺ｮ閾ｪ逕ｱ繝ｻ2騾ｱ髢灘燕逕ｳ蜻・繝ｻ<strong>豌第ｳ・627譚｡</strong> (譛滄俣螳壹ａ縺ｪ縺・寐逕ｨ縺ｮ隗｣邏・繝ｻ<strong>蠑∬ｭｷ螢ｫ豕・72譚｡</strong> (髱槫ｼ∬｡檎ぜ遖∵ｭ｢)繝ｻ<strong>蛟倶ｺｺ諠・ｱ菫晁ｭｷ豕・/strong>縲よ悽繝壹・繧ｸ縺ｯ蜈ｬ髢区ュ蝣ｱ縺ｮ謨ｴ逅・〒縺ゅｊ縲∫音螳壻ｺ区･ｭ閠・・蜈ｬ蠑上し繧､繝医〒縺ｯ縺ゅｊ縺ｾ縺帙ｓ縲ゅい繝輔ぅ繝ｪ繧ｨ繧､繝亥ｺ・相・・R・峨ｒ蜷ｫ縺ｿ縺ｾ縺吶・/p>
     </div>
   </section>
   <section class="lp-section" id="sec-related" aria-labelledby="related-h">
     <div class="container">
-      <p class="section-num">関連記事</p>
-      <h2 id="related-h">関連する記事</h2>
+      <p class="section-num">髢｢騾｣險倅ｺ・/p>
+      <h2 id="related-h">髢｢騾｣縺吶ｋ險倅ｺ・/h2>
       <ul class="related-links" style="line-height:1.9;">
-        <li><a href="https://taishoku-info.pages.dev/bengoshi-hikaku-2026/">退職代行は弁護士に頼むべき？費用・メリット・選び方を徹底解説2026年版（PR）</a></li>
-        <li><a href="https://taishoku-info.pages.dev/ryokin-hikaku-2026/">退職代行の料金相場2026年版｜弁護士・労働組合・民間の3タイプ料金比較と選び方（PR）</a></li>
-        <li><a href="https://taishoku-info.pages.dev/hyoban-hikaku/">退職代行の評判比較｜口コミ・料金・対応範囲から見る主要4社の選び方（2026年版・PR）</a></li>
-        <li><a href="https://taishoku-info.pages.dev/osusume-hikaku/">退職代行 おすすめ 5社比較｜失敗しない選び方と料金・即日対応の徹底ガイド（2026年版・PR）</a></li>
-        <li><a href="https://taishoku-info.pages.dev/arbeit-taishoku/">アルバイト退職代行 完全ガイド｜学生バイト・短期バイト・掛け持ちバイトの活用判断（2026年5月時点・公開情報整理・PR）</a></li>
+        <li><a href="https://taishoku-info.pages.dev/bengoshi-hikaku-2026/">騾閨ｷ莉｣陦後・蠑∬ｭｷ螢ｫ縺ｫ鬆ｼ繧縺ｹ縺搾ｼ溯ｲｻ逕ｨ繝ｻ繝｡繝ｪ繝・ヨ繝ｻ驕ｸ縺ｳ譁ｹ繧貞ｾｹ蠎戊ｧ｣隱ｬ2026蟷ｴ迚茨ｼ・R・・/a></li>
+        <li><a href="https://taishoku-info.pages.dev/ryokin-hikaku-2026/">騾閨ｷ莉｣陦後・譁咎≡逶ｸ蝣ｴ2026蟷ｴ迚茨ｽ懷ｼ∬ｭｷ螢ｫ繝ｻ蜉ｴ蜒咲ｵ・粋繝ｻ豌鷹俣縺ｮ3繧ｿ繧､繝玲侭驥第ｯ碑ｼ・→驕ｸ縺ｳ譁ｹ・・R・・/a></li>
+        <li><a href="https://taishoku-info.pages.dev/hyoban-hikaku/">騾閨ｷ莉｣陦後・隧募愛豈碑ｼ・ｽ懷哨繧ｳ繝溘・譁咎≡繝ｻ蟇ｾ蠢懃ｯ・峇縺九ｉ隕九ｋ荳ｻ隕・遉ｾ縺ｮ驕ｸ縺ｳ譁ｹ・・026蟷ｴ迚医・PR・・/a></li>
+        <li><a href="https://taishoku-info.pages.dev/osusume-hikaku/">騾閨ｷ莉｣陦・縺翫☆縺吶ａ 5遉ｾ豈碑ｼ・ｽ懷､ｱ謨励＠縺ｪ縺・∈縺ｳ譁ｹ縺ｨ譁咎≡繝ｻ蜊ｳ譌･蟇ｾ蠢懊・蠕ｹ蠎輔ぎ繧､繝会ｼ・026蟷ｴ迚医・PR・・/a></li>
+        <li><a href="https://taishoku-info.pages.dev/arbeit-taishoku/">繧｢繝ｫ繝舌う繝磯閨ｷ莉｣陦・螳悟・繧ｬ繧､繝会ｽ懷ｭｦ逕溘ヰ繧､繝医・遏ｭ譛溘ヰ繧､繝医・謗帙￠謖√■繝舌う繝医・豢ｻ逕ｨ蛻､譁ｭ・・026蟷ｴ5譛域凾轤ｹ繝ｻ蜈ｬ髢区ュ蝣ｱ謨ｴ逅・・PR・・/a></li>
       </ul>
     </div>
   </section>
@@ -246,32 +246,32 @@ const itemListSchema = {
 
 <!-- PERSPECTIVE_SOURCE_BOX_START -->
 <aside class="perspective-source" style="background:#fffbeb;border:1px solid #fde68a;padding:14px 18px;margin:24px 0;border-radius:6px;">
-  <div style="font-weight:600;color:#92400e;margin-bottom:6px;">⚖️ 比較・選択 に関する公的データ</div>
-  <p style="margin:6px 0;font-size:0.92em;color:#451a03;">退職代行業者選択時のトラブル事例</p>
-  <p style="margin:4px 0;font-size:0.85em;"><a href="https://www.kokusen.go.jp/" rel="noopener" target="_blank" style="color:#0369a1;">出典: 国民生活センター 退職代行苦情事例</a></p>
+  <div style="font-weight:600;color:#92400e;margin-bottom:6px;">笞厄ｸ・豈碑ｼ・・驕ｸ謚・縺ｫ髢｢縺吶ｋ蜈ｬ逧・ョ繝ｼ繧ｿ</div>
+  <p style="margin:6px 0;font-size:0.92em;color:#451a03;">騾閨ｷ莉｣陦梧･ｭ閠・∈謚樊凾縺ｮ繝医Λ繝悶Ν莠倶ｾ・/p>
+  <p style="margin:4px 0;font-size:0.85em;"><a href="https://www.kokusen.go.jp/" rel="noopener" target="_blank" style="color:#0369a1;">蜃ｺ蜈ｸ: 蝗ｽ豌醍函豢ｻ繧ｻ繝ｳ繧ｿ繝ｼ 騾閨ｷ莉｣陦瑚協諠・ｺ倶ｾ・/a></p>
 </aside>
 <!-- PERSPECTIVE_SOURCE_BOX_END -->
 
 <!-- PERSPECTIVE_DEEP_SECTION_START -->
 <aside class="perspective-deep" style="background:#f0f9ff;border:1px solid #93c5fd;padding:20px 24px;margin:32px 0;border-radius:8px;font-size:0.95em;line-height:1.7;">
-<div style="white-space:pre-wrap;">🎯 Roudoukumiai の 比較・選択 業者比較
+<div style="white-space:pre-wrap;">識 Roudoukumiai 縺ｮ 豈碑ｼ・・驕ｸ謚・讌ｭ閠・ｯ碑ｼ・
 
-【独自分析: Roudoukumiai と他社の違い】
-Roudoukumiai は 退職代行 業界で 比較・選択 軸で独自のポジションを持ちます。退職権利・労働法・公的相談窓口での比較が選択の鍵です。
+縲千峡閾ｪ蛻・梵: Roudoukumiai 縺ｨ莉也､ｾ縺ｮ驕輔＞縲・
+Roudoukumiai 縺ｯ 騾閨ｷ莉｣陦・讌ｭ逡後〒 豈碑ｼ・・驕ｸ謚・霆ｸ縺ｧ迢ｬ閾ｪ縺ｮ繝昴ず繧ｷ繝ｧ繝ｳ繧呈戟縺｡縺ｾ縺吶る閨ｷ讓ｩ蛻ｩ繝ｻ蜉ｴ蜒肴ｳ輔・蜈ｬ逧・嶌隲・ｪ灘哨縺ｧ縺ｮ豈碑ｼ・′驕ｸ謚槭・骰ｵ縺ｧ縺吶・
 
-【比較の重要 3 基準】
-1. **専門性**: 比較・選択 領域での実績
-2. **サポート品質**: 24h 対応・専門家連携の有無
-3. **実績数値**: 公開されている成功率・件数
+縲先ｯ碑ｼ・・驥崎ｦ・3 蝓ｺ貅悶・
+1. **蟆る摩諤ｧ**: 豈碑ｼ・・驕ｸ謚・鬆伜沺縺ｧ縺ｮ螳溽ｸｾ
+2. **繧ｵ繝昴・繝亥刀雉ｪ**: 24h 蟇ｾ蠢懊・蟆る摩螳ｶ騾｣謳ｺ縺ｮ譛臥┌
+3. **螳溽ｸｾ謨ｰ蛟､**: 蜈ｬ髢九＆繧後※縺・ｋ謌仙粥邇・・莉ｶ謨ｰ
 
-【FAQ: Roudoukumiai / 比較・選択 / 2026 年最新版 の比較】
-- Q. Roudoukumiai と他社の決定的な違いは?
-- Q. 比較・選択 に最適な業者の選び方は?
-- Q. 比較時の重要チェック項目は?
+縲色AQ: Roudoukumiai / 豈碑ｼ・・驕ｸ謚・/ 2026 蟷ｴ譛譁ｰ迚・縺ｮ豈碑ｼ・・
+- Q. Roudoukumiai 縺ｨ莉也､ｾ縺ｮ豎ｺ螳夂噪縺ｪ驕輔＞縺ｯ?
+- Q. 豈碑ｼ・・驕ｸ謚・縺ｫ譛驕ｩ縺ｪ讌ｭ閠・・驕ｸ縺ｳ譁ｹ縺ｯ?
+- Q. 豈碑ｼ・凾縺ｮ驥崎ｦ√メ繧ｧ繝・け鬆・岼縺ｯ?
 
-【公的データ補強】
-退職代行業者選択時のトラブル事例
-[出典](https://www.kokusen.go.jp/)</div>
+縲仙・逧・ョ繝ｼ繧ｿ陬懷ｼｷ縲・
+騾閨ｷ莉｣陦梧･ｭ閠・∈謚樊凾縺ｮ繝医Λ繝悶Ν莠倶ｾ・
+[蜃ｺ蜈ｸ](https://www.kokusen.go.jp/)</div>
 </aside>
 <!-- PERSPECTIVE_DEEP_SECTION_END -->
 </RichLayout>

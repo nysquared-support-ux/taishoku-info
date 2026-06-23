@@ -33,7 +33,7 @@ const {
   title,
   description = '退職代行サービスを運営主体タイプ別（弁護士／労働組合／民間）に公開情報で整理。料金目安・対応範囲・契約前の判断軸をまとめた比較情報です（PR）。',
   publishedDate = '2026-04-25',
-  modifiedDate = '2026-05-18',
+  modifiedDate = new Date().toISOString().split('T')[0],
   breadcrumb = [{ name: 'ホーム', url: '/' }],
   faq = [],
 } = Astro.props;

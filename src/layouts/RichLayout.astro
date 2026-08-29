@@ -6,7 +6,7 @@
  * ★365: ABC lp-implementation/RichLayout.astro 構造踏襲 + taishoku-info 固有基盤を verbatim 保持
  *   (GSC token / Article+FAQPage+BreadcrumbList+Organization schema / CookieBanner / Analytics / OGP)
  * ★365 訂正: 既存 Layout.astro siteUrl default の 'tenshoku-compare-info' 誤copy を
- *   astro.config 準拠の 'taishoku-info.pages.dev' に修正 (退職代行サイト)
+ *   astro.config 準拠の 'taishoku.trypromptguard.com' に修正 (退職代行サイト)
  *
  * 使用例 (各 LP の index.astro):
  *   import RichLayout from '../../layouts/RichLayout.astro';
@@ -38,7 +38,7 @@ const {
   faq = [],
 } = Astro.props;
 
-const siteUrl = import.meta.env.PUBLIC_SITE_URL || 'https://taishoku-info.pages.dev';
+const siteUrl = import.meta.env.PUBLIC_SITE_URL || 'https://taishoku.trypromptguard.com';
 const gscVerification = import.meta.env.PUBLIC_GSC_VERIFICATION || 'HRlkPakHcDHZPrhT1QR0bRiJrajC2-TjyqlvBl3gDsA';
 const canonical = Astro.url.href;
 ---
